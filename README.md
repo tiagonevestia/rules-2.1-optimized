@@ -1,907 +1,434 @@
-# 🎯 Rules 2.6.0 - 下一代智能AI助手规则体系
+# 🎯 Rules 2.6.0 - Sistema de Regras de Assistente de IA Inteligente de Próxima Geração
 
-> **🏆 PERFECT (A++)评级** | **✅ 100%测试通过** | **🚀 生产就绪** | **💬 完整MCP支持** | **🧠 AI智能化** | **🎯 54个规则（.mdc）**
+> **🏆 Classificação PERFECT (A++)** | **✅ 100% de testes aprovados** | **🚀 Pronto para produção** | **💬 Suporte completo MCP** | **🧠 Inteligência Artificial** | **🎯 54 regras (.mdc)**
 
-## 📖 项目简介
+## 📖 Introdução do Projeto
 
-基于 [steipete/agent-rules](https://github.com/steipete/agent-rules) 深度优化扩展，为全球开发者提供**下一代智能化AI助手解决方案**。
+Baseado em [steipete/agent-rules](https://github.com/steipete/agent-rules) com otimização e expansão profunda, fornecendo **solução de assistente de IA inteligente de próxima geração** para desenvolvedores globais.
 
-### ✨ 核心特色
+### ✨ Características Principais
 
-| 特色功能 | 核心优势 | 效果提升 |
+| Funcionalidade | Vantagem Principal | Melhoria de Eficiência |
 |---------|----------|----------|
-| 🧠 **智能需求理解引擎** | 深度理解用户真实需求，智能澄清模糊表达 | 需求理解准确率 >95% |
-| 💬 **深度讨论框架** | 结构化决策支持，多维度分析 | 决策支持质量 >92% |
-| ⚡ **开发效率优化引擎** | 智能代码生成，自动化工作流编排 | 开发效率提升 40-60% |
-| 🎯 **超级大脑系统** | L4级完全自主模式，端到端智能决策 | 持续学习优化 |
-| 🚀 **完整MCP工具链** | 4-5大智能工具（Memory 可选）：反馈增强、文件系统、GitHub集成等 | 一键安装配置 |
-| **📚 企业级标准** | 100%测试通过，生产就绪 | PERFECT (A++)评级 |
+| 🧠 **Motor de Compreensão Inteligente de Requisitos** | Compreensão profunda das necessidades reais do usuário, esclarecimento inteligente de expressões ambíguas | Taxa de precisão de compreensão >95% |
+| 💬 **Framework de Discussão Profunda** | Suporte estruturado à decisão, análise multidimensional | Qualidade do suporte à decisão >92% |
+| ⚡ **Motor de Otimização de Eficiência de Desenvolvimento** | Geração inteligente de código, orquestração automatizada de fluxo de trabalho | Aumento de eficiência de desenvolvimento 40-60% |
+| 🎯 **Sistema Super Cérebro** | Modo totalmente autônomo nível L4, decisão inteligente de ponta a ponta | Aprendizado contínuo e otimização |
+| 🚀 **Cadeia de Ferramentas MCP Completa** | 4-5 ferramentas inteligentes (Memory opcional): feedback aprimorado, sistema de arquivos, integração GitHub, etc. | Instalação e configuração com um clique |
+| **📚 Padrão Empresarial** | 100% de testes aprovados, pronto para produção | Classificação PERFECT (A++) |
 
-## 🚀 快速开始
-- **📚 MCP快速入门**: [MCP快速入门指南](docs/MCP-QUICK-START-GUIDE.md)
-- **📖 安装教程**: [英文版](install-scripts/INSTALL-GUIDE.md) | [中文版](install-scripts/INSTALL-GUIDE-CN.md)
-- **⚡ 3分钟上手**: [快速开始指南](#️⃣-步骤2一键安装到项目)
+## 🚀 Início Rápido
+- **📚 Guia Rápido do MCP**: [Guia de Início Rápido do MCP](docs/MCP-QUICK-START-GUIDE.md)
+- **📖 Tutorial de Instalação**: [Versão em Inglês](install-scripts/INSTALL-GUIDE.md) | [Versão em Chinês](install-scripts/INSTALL-GUIDE-CN.md)
+- **⚡ 3 minutos para começar**: [Guia de Início Rápido](#-passo-2-instalação-com-um-clique-no-projeto)
 
-## ⚙️ 环境要求
+## ⚙️ Requisitos de Ambiente
 
-| 组件 | 版本要求 | 必需性 | 说明 |
+| Componente | Versão Requerida | Necessidade | Descrição |
 |------|----------|--------|------|
-| **Node.js** | ≥ 16.0.0 | 🔴 必需 | MCP工具和前端开发必需 |
-| **npm** | ≥ 8.0.0 | 🔴 必需 | 包管理和依赖安装 |
-| **Python** | ≥ 3.8.0 | 🟡 推荐 | 后端开发和AI增强功能 |
-| **Git** | ≥ 2.20.0 | 🟡 推荐 | 版本控制和代码管理 |
+| **Node.js** | ≥ 16.0.0 | 🔴 Obrigatório | Ferramentas MCP e desenvolvimento frontend necessários |
+| **npm** | ≥ 8.0.0 | 🔴 Obrigatório | Gerenciamento de pacotes e instalação de dependências |
+| **Python** | ≥ 3.8.0 | 🟡 Recomendado | Desenvolvimento backend e funcionalidades aprimoradas de IA |
+| **Git** | ≥ 2.20.0 | 🟡 Recomendado | Controle de versão e gerenciamento de código |
 
-**🔧 快速环境检查**: `node --version && npm --version`  
-**📋 详细配置**: [环境配置指南](docs/ENVIRONMENT-SETUP.md)
+**🔧 Verificação Rápida de Ambiente**: `node --version && npm --version`  
+**📋 Configuração Detalhada**: [Guia de Configuração de Ambiente](docs/ENVIRONMENT-SETUP.md)
 
-### 📚 文档导航
+### 📚 Navegação de Documentação
 
-| 类型 | 内容 | 适用人群 |
+| Tipo | Conteúdo | Público-Alvo |
 |------|------|----------|
-| **🎯 快速开始** | [⚡ 快速开始](#️⃣-步骤2一键安装到项目) • [📦 一键安装](#️⃣-步骤2一键安装到项目) • [✅ 安装验证](#-步骤3验证安装--激活规则) | 新手必看 |
-| **📖 使用指南** | [🏗️ 项目结构](#-项目结构) • [🎯 核心命令](#-核心命令预览) • [🤖 AI工具支持](#-支持的ai工具) | 日常使用 |
-| **🚀 高级功能** | [🔧 MCP工具集成](#-mcp智能工具集成) • [🧠 超级大脑系统](tutorials/super-brain-system-usage-guide.md) | 深度定制 |
-| **📋 详细文档** | [🗺️ 导航索引](docs/NAVIGATION-INDEX.md) • [环境配置](docs/ENVIRONMENT-SETUP.md) • [安装指南](install-scripts/INSTALL-GUIDE.md) • [中文安装指南](install-scripts/INSTALL-GUIDE-CN.md) • [故障排除](docs/MCP-TROUBLESHOOTING-GUIDE.md) | 完整参考 |
+| **🎯 Início Rápido** | [⚡ Início Rápido](#-passo-2-instalação-com-um-clique-no-projeto) • [📦 Instalação com Um Clique](#-passo-2-instalação-com-um-clique-no-projeto) • [✅ Verificação de Instalação](#-passo-3-verificar-instalação--ativar-regras) | Iniciantes devem ver |
+| **📖 Guia de Uso** | [🏗️ Estrutura do Projeto](#-estrutura-do-projeto) • [🎯 Visualização de Comandos Principais](#-visualização-de-comandos-principais) • [🤖 Suporte a Ferramentas de IA](#-ferramentas-de-ia-compatíveis) | Uso diário |
+| **🚀 Funcionalidades Avançadas** | [🔧 Integração de Ferramentas MCP](#-integração-de-ferramentas-inteligentes-mcp) • [🧠 Sistema Super Cérebro](tutorials/super-brain-system-usage-guide.md) | Personalização avançada |
+| **📋 Documentação Detalhada** | [🗺️ Índice de Navegação](docs/NAVIGATION-INDEX.md) • [Configuração de Ambiente](docs/ENVIRONMENT-SETUP.md) • [Guia de Instalação](install-scripts/INSTALL-GUIDE.md) • [Guia de Instalação em Chinês](install-scripts/INSTALL-GUIDE-CN.md) • [Solução de Problemas](docs/MCP-TROUBLESHOOTING-GUIDE.md) | Referência completa |
 
-## 🚀 快速开始（3分钟上手）
+## 🚀 Início Rápido (3 minutos para começar)
 
-#### 📋 步骤1：环境检查
+#### 📋 Passo 1: Verificação de Ambiente
 
 ```powershell
-# 检查必需环境
-node --version  # 应该 >= 16.0.0
-npm --version   # 应该 >= 8.0.0
+# Verificar ambiente necessário
+node --version  # deve ser >= 16.0.0
+npm --version   # deve ser >= 8.0.0
 ```
 
-### 📦 步骤2：一键安装到项目
+### 📦 Passo 2: Instalação com Um Clique no Projeto
 
-#### 🚀 PowerShell安装（推荐）
+#### 🚀 Instalação via PowerShell (Recomendado)
 ```powershell
-# 进入规则目录
-cd "你的rules-2.6.0目录路径"
+# Entrar no diretório de regras
+cd "seu caminho do diretório rules-2.6.0"
 
-# 选择项目类型安装（三选一）
-install-scripts\install-ultra.bat "你的项目目录路径" frontend   # 前端项目
-install-scripts\install-ultra.bat "你的项目目录路径" backend    # 后端项目
-install-scripts\install-ultra.bat "你的项目目录路径" fullstack  # 全栈项目
+# Escolher tipo de projeto para instalar (escolha um)
+install-scripts\install-ultra.bat "seu caminho do diretório do projeto" frontend   # Projeto frontend
+install-scripts\install-ultra.bat "seu caminho do diretório do projeto" backend    # Projeto backend
+install-scripts\install-ultra.bat "seu caminho do diretório do projeto" fullstack  # Projeto fullstack
 ```
 
-#### 💡 安装示例
+#### 💡 Exemplo de Instalação
 ```powershell
-# 前端项目
+# Projeto frontend
 cd "E:\rules-2.6.0"
-install-scripts\install-ultra.bat "D:\MyProjects\vue-app" frontend
+install-scripts\install-ultra.bat "D:\MeusProjetos\vue-app" frontend
 
-# 后端项目
+# Projeto backend
 install-scripts\install-ultra.bat "C:\Dev\api-server" backend
 
-# 全栈项目
-install-scripts\install-ultra.bat "D:\Projects\full-stack-app" fullstack
+# Projeto fullstack
+install-scripts\install-ultra.bat "D:\Projetos\full-stack-app" fullstack
 ```
 
-#### 📋 安装命令格式说明
+#### 📋 Formato do Comando de Instalação
 ```powershell
-# 标准格式
-install-scripts\install-ultra.bat "[你的项目路径]" [项目类型]
+# Formato padrão
+install-scripts\install-ultra.bat "[seu caminho do projeto]" [tipo de projeto]
 
-# 项目类型选择（三选一）
-# frontend  - 前端项目（React/Vue/Angular等）
-# backend   - 后端项目（Node.js/Python/Java等）
-# fullstack - 全栈项目（前后端一体）
+# Escolha do tipo de projeto (escolha um)
+# frontend  - Projeto frontend (React/Vue/Angular etc.)
+# backend   - Projeto backend (Node.js/Python/Java etc.)
+# fullstack - Projeto fullstack (frontend e backend integrados)
 ```
 
-#### 🔧 手动执行选项
+#### 🔧 Opções de Execução Manual
 
-| 执行方式 | 命令 | 适用场景 |
+| Método de Execução | Comando | Cenário de Uso |
 |----------|------|----------|
-| **双击执行** | 直接双击 `install-ultra.bat` | 新手快速体验 |
-| **交互式** | `install-scripts\install-ultra.bat` | 逐步选择配置 |
-| **带参数** | `install-ultra.bat "路径" "类型"` | 自动化部署 |
+| **Execução com Duplo Clique** | Duplo clique direto em `install-ultra.bat` | Experiência rápida para iniciantes |
+| **Interativo** | `install-scripts\install-ultra.bat` | Configuração passo a passo |
+| **Com Parâmetros** | `install-ultra.bat "caminho" "tipo"` | Implantação automatizada |
 
-### ✅ 步骤3：验证安装 & 激活规则
+### ✅ Passo 3: Verificar Instalação & Ativar Regras
 
-> **🔍 验证提示**: 安装完成后，请在AI工具中测试以下命令确保正常工作
+> **🔍 Dica de Verificação**: Após a instalação, teste os seguintes comandos na ferramenta de IA para garantir o funcionamento normal
 
-#### 🧪 安装验证测试
+#### 🧪 Teste de Verificação de Instalação
 
-| 测试步骤 | 输入命令 | 预期结果 | 问题排查 |
+| Etapa do Teste | Comando de Entrada | Resultado Esperado | Solução de Problemas |
 |---------|---------|----------|----------|
-| **1. 基础验证** | `检查规则状态` | 显示规则版本和状态信息 | [查看故障排除](#-故障排除) |
-| **2. 系统激活** | `激活规则系统` | 显示系统激活成功信息 | [安装指南](install-scripts/INSTALL-GUIDE-CN.md) |
-| **3. 功能测试** | `激活超级大脑系统` | 显示智能系统启动信息 | [技术支持](#-技术支持) |
+| **1. Verificação Básica** | `verificar status das regras` | Exibir informações de versão e status das regras | [Ver solução de problemas](#-solução-de-problemas) |
+| **2. Ativação do Sistema** | `ativar sistema de regras` | Exibir informações de ativação bem-sucedida do sistema | [Guia de Instalação](install-scripts/INSTALL-GUIDE-CN.md) |
+| **3. Teste de Funcionalidade** | `ativar sistema super cérebro` | Exibir informações de inicialização do sistema inteligente | [Suporte técnico](#-suporte-técnico) |
 
-#### 🚀 快速激活命令
+#### 🚀 Comandos de Ativação Rápida
 
 ```bash
-# 🔧 基础验证
-检查规则状态
+# 🔧 Verificação Básica
+verificar status das regras
 
-# 🧠 智能系统激活（可选）
-启动超级大脑系统
+# 🧠 Ativação do Sistema Inteligente (opcional)
+iniciar sistema super cérebro
 ```
 
-#### 🎯 成功标志
+#### 🎯 Indicador de Sucesso
 
-看到以下任一响应即表示安装成功：
-- ✅ "超级大脑系统已启动"
-- ✅ 显示详细的系统状态信息
+Ver qualquer uma das seguintes respostas indica instalação bem-sucedida:
+- ✅ "Sistema Super Cérebro iniciado"
+- ✅ Exibir informações detalhadas de status do sistema
 
-#### ⚠️ 常见问题快速解决
+#### ⚠️ Solução Rápida de Problemas Comuns
 
-| 问题现象 | 可能原因 | 解决方案 |
+| Sintoma do Problema | Possível Causa | Solução |
 |---------|----------|----------|
-| 命令无响应 | 路径配置错误 | 检查安装路径是否正确 |
-| 提示文件不存在 | 安装不完整 | 重新运行安装脚本 |
-| 功能部分失效 | 权限问题 | 以管理员身份运行命令行 |
+| Comando sem resposta | Erro de configuração do caminho | Verificar se o caminho de instalação está correto |
+| Arquivo não encontrado | Instalação incompleta | Executar novamente o script de instalação |
+| Funcionalidade parcialmente inativa | Problema de permissão | Executar linha de comando como administrador |
 
-#### 📁 文件验证（可选）
+#### 📁 Verificação de Arquivos (Opcional)
 ```cmd
-# 检查文件是否创建成功（替换为你的实际项目目录）
-dir "你的项目目录路径\rules\"               # 统一规则目录
-dir "你的项目目录路径\rules\main.md"        # 主规则文件
-dir "你的项目目录路径\rules\P0-core-safety\" # 核心安全规则
+# Verificar se os arquivos foram criados com sucesso (substitua pelo seu diretório real do projeto)
+dir "seu caminho do diretório do projeto\rules\"               # Diretório unificado de regras
+dir "seu caminho do diretório do projeto\rules\main.md"        # Arquivo de regras principal
+dir "seu caminho do diretório do projeto\rules\P0-core-safety\" # Regras principais de segurança
 ```
 
-### 步骤4️⃣：让AI读取规则
-**重要：完成安装后，需要让AI读取规则文件**
+### Passo 4️⃣: Fazer a IA Ler as Regras
+**Importante: Após concluir a instalação, é necessário fazer a IA ler os arquivos de regras**
 
-1. **打开你的AI工具**（Augment、Cursor、Claude Code、Trae AI等）
-2. **在AI对话中输入以下任一命令**：
+1. **Abra sua ferramenta de IA** (Augment, Cursor, Claude Code, Trae AI, etc.)
+2. **No diálogo da IA, digite qualquer um dos seguintes comandos**:
    ```
-   请读取项目规则
+   por favor ler regras do projeto
    ```
-   或
+   ou
    ```
    /frontend-dev
    ```
-   或
+   ou
    ```
    /backend-dev
    ```
 
-3. **确认规则加载成功**：
-   - AI会显示"Rules loaded"或类似提示
-   - AI开始按照规则工作流程引导你
-   - 可以使用 `/feedback` 等命令
+3. **Confirmar carregamento bem-sucedido das regras**:
+   - A IA exibirá "Regras carregadas" ou prompt similar
+   - A IA começará a guiá-lo de acordo com o fluxo de trabalho das regras
+   - Pode usar comandos como `/feedback`
 
-> **💡 提示**：如果AI没有自动读取规则，请主动要求AI读取项目中的规则文件
+> **💡 Dica**: Se a IA não ler automaticamente as regras, solicite ativamente que a IA leia os arquivos de regras no projeto
 
-**📚 遇到问题？**
-- 🔍 **找不到MCP工具？** → 运行 `docs/find-mcp-installation-en.bat` 自动查找
-- 📖 **详细安装教程** → [mcp-scripts/安装脚本使用说明.md](mcp-scripts/安装脚本使用说明.md)
-- 🆘 **故障排除** → [docs/MCP-TROUBLESHOOTING-GUIDE.md](docs/MCP-TROUBLESHOOTING-GUIDE.md)
-## 📁 项目结构
+**📚 Encontrou problemas?**
+- 🔍 **Não encontrou ferramentas MCP?** → Execute `docs/find-mcp-installation-en.bat` para busca automática
+- 📖 **Tutorial de Instalação Detalhado** → [mcp-scripts/安装脚本使用说明.md](mcp-scripts/安装脚本使用说明.md)
+- 🆘 **Solução de Problemas** → [docs/MCP-TROUBLESHOOTING-GUIDE.md](docs/MCP-TROUBLESHOOTING-GUIDE.md)
+## 📁 Estrutura do Projeto
 
-> **📁 智能化文件组织**: 基于功能模块和使用频率的科学分类
+> **📁 Organização Inteligente de Arquivos**: Classificação científica baseada em módulos funcionais e frequência de uso
 
 ```
 Rules 2.6.0/
-├── 📄 核心文档
-│   ├── README.md                           # 📚 项目主文档
-│   ├── USAGE.md                            # 📚 详细使用指南
-│   ├── COMMANDS-REFERENCE.md               # 🎯 完整命令参考
-│   ├── LICENSE                             # 📄 开源协议
-│   └── .gitignore                          # 🚫 Git忽略配置
+├── 📄 Documentos Principais
+│   ├── README.md                           # 📚 Documento principal do projeto
+│   ├── USAGE.md                            # 📚 Guia de uso detalhado
+│   ├── COMMANDS-REFERENCE.md               # 🎯 Referência completa de comandos
+│   ├── LICENSE                             # 📄 Licença open source
+│   └── .gitignore                          # 🚫 Configuração de ignore do Git
 │
-├── 🚀 安装脚本（企业级测试通过）
+├── 🚀 Scripts de Instalação (Testado em nível empresarial)
 │   ├── install-scripts/
-│   │   ├── install-ultra.bat               # 🎯 统一安装脚本（主要）
-│   │   ├── INSTALL-GUIDE.md                # 📚 傻瓜式安装教程（英文）
-│   │   ├── INSTALL-GUIDE-CN.md             # 📚 傻瓜式安装教程（中文）
-│   │   └── test-scripts/                   # 测试脚本目录
-│   │       ├── README.md                   # 测试说明文档
-│   │       └── comprehensive-test-report.bat # 综合测试报告
-│   └── mcp-scripts/                        # 🧠 MCP工具安装脚本
-│       ├── run-powershell-installer.bat    # 🔥 一键MCP工具安装
-│       ├── install-mcp-tools-enhanced-final.ps1 # PowerShell安装脚本
-│       ├── mcp-cross-platform-sync.ps1     # 跨平台同步脚本
-├       ├── parse-check.ps1                 # ✅ PowerShell语法和MCP配置验证器
-│       ├── list-cache.ps1                  # 📋 MCP缓存文件查看器和管理器
-│       └── 安装脚本使用说明.md              # 📚 MCP安装详细说明
+│   │   ├── install-ultra.bat               # 🎯 Script de instalação unificado (principal)
+│   │   ├── INSTALL-GUIDE.md                # 📚 Tutorial de instalação simplificado (inglês)
+│   │   ├── INSTALL-GUIDE-CN.md             # 📚 Tutorial de instalação simplificado (chinês)
+│   │   └── test-scripts/                   # Diretório de scripts de teste
+│   │       ├── README.md                   # Documentação de descrição de teste
+│   │       └── comprehensive-test-report.bat # Relatório de teste abrangente
+│   └── mcp-scripts/                        # 🧠 Scripts de instalação de ferramentas MCP
+│       ├── run-powershell-installer.bat    # 🔥 Instalação de ferramentas MCP com um clique
+│       ├── install-mcp-tools-enhanced-final.ps1 # Script de instalação PowerShell
+│       ├── mcp-cross-platform-sync.ps1     # Script de sincronização multiplataforma
+├       ├── parse-check.ps1                 # ✅ Validador de sintaxe PowerShell e configuração MCP
+│       ├── list-cache.ps1                  # 📋 Visualizador e gerenciador de arquivos de cache MCP
+│       └── 安装脚本使用说明.md              # 📚 Instruções detalhadas de instalação MCP
 │
-├── 📝 规则文件（核心功能）
-│   ├── global-rules/                       # 📋 全局规则文件 (31个)
-│   │   ├── ai-agent-intelligence-core.mdc  # 🧠 AI智能核心
-│   │   ├── frontend-rules.mdc              # 🎨 前端完整规则
-│   │   ├── backend-rules.mdc               # 🔧 后端完整规则
-│   │   ├── super-brain-system.mdc          # 🧠 超级大脑系统
-│   │   ├── context-recorder-system.mdc     # 📝 上下文记录系统
-│   │   ├── context-recorder-core.mdc       # 📝 上下文记录核心模块
-│   │   ├── context-recorder-templates.mdc  # 📝 上下文记录模板
-│   │   ├── context-recorder-advanced.mdc   # 📝 上下文记录高级功能
-│   │   ├── context-recorder-edge-cases.mdc # 📝 上下文记录边缘情况处理
-│   │   ├── brain-recorder-integration.mdc  # 🧠 大脑-记录员集成
-│   │   ├── context-systems-integration.mdc # 🔗 上下文系统集成
-│   │   ├── context7-preload-standard.mdc   # 🔗 Context7预加载标准
-│   │   ├── unified-rules-base.mdc          # 📋 统一规则基础
-│   │   ├── permission-control-system.mdc   # 🔐 权限控制系统（v1.0新增）
-│   │   ├── system-diagnostics.mdc          # 🔧 系统诊断工具（v1.0新增）
-│   │   ├── intelligent-recommendation-engine.mdc # 🎯 智能推荐引擎
-│   │   ├── ai-ethical-boundaries.mdc       # 🛡️ AI伦理边界
-│   │   ├── ai-thinking-protocol.mdc        # 🤔 AI思维协议
-│   │   ├── dynamic-thinking-depth-regulation.mdc # 📊 动态思维深度调节
-│   │   ├── file-generation-safety-rules.mdc # 🔒 文件生成安全规则
-│   │   ├── human-ai-collaboration-optimization.mdc # 🤝 人机协作优化
-│   │   ├── knowledge-creation-discovery-framework.mdc # 📚 知识创建发现框架
-│   │   ├── multimodal-interaction-framework.mdc # 🎭 多模态交互框架
-│   │   ├── rule-conflict-resolution.mdc     # ⚖️ 规则冲突解决
-│   │   ├── system-integration-config.mdc    # ⚙️ 系统集成配置
-│   │   ├── error-recovery-system.mdc        # 🔄 错误恢复系统（v1.0新增）
-│   │   ├── audit-logging-system.mdc         # 📋 审计日志系统（v1.0新增）
-│   │   ├── memory-system-integration.mdc    # 🧠 记忆系统集成
-│   │   ├── performance-monitoring-system.mdc # 📊 性能监控系统（v2.0新增）
-│   │   ├── disaster-recovery-plan.mdc       # 🆘 灾难恢复计划（v2.0新增）
-│   │   └── rule-hot-reload-system.mdc       # 🔥 规则热更新机制（v2.0新增）
-│   └── project-rules/                      # 🎯 模块化项目规则 (23个)
-│       ├── 🚀 Phase 3 智能补强规则 (3个)
-│       │   ├── context-loader.mdc          # 🧠 智能项目上下文加载器
-│       │   ├── custom-command-builder.mdc  # 🛠️ 智能自定义命令构建器
-│       │   └── mcp-debugging-enhanced.mdc  # 🔧 增强MCP调试工具
-│       ├── ⚡ Phase 2 核心工作流规则 (5个)
-│       │   ├── commit.mdc                  # 📝 统一提交工作流（支持快速模式）
-│       │   ├── changelog-management.mdc    # 📋 智能变更日志管理
-│       │   ├── code-quality-check.mdc      # 🔍 跨语言代码质量检查
-│       │   ├── root-cause-analysis.mdc     # 🔧 AI根因分析方法
-│       │   └── systematic-debugging.mdc    # 🐛 系统化调试工具
-│       └── 📋 基础项目规则 (15个)
-│           ├── ai-powered-code-review.mdc  # 🤖 AI驱动代码审查
-│           ├── analyze-issue.mdc           # 🔍 问题分析
-│           ├── backend-dev.mdc             # 🔧 后端开发工作流
-│           ├── bug-fix.mdc                 # 🐛 错误修复
-│           ├── code-review.mdc             # 👀 代码审查
-│           ├── create-docs.mdc             # 📚 文档创建
-│           ├── feedback-enhanced.mdc       # 💬 智能反馈机制
-│           ├── frontend-dev.mdc            # 🎨 前端开发工作流
-│           ├── implement-task.mdc          # ⚡ 任务实现
-│           ├── intelligent-project-management.mdc # 📊 智能项目管理
-│           ├── intelligent-workflow-orchestration.mdc # 🎼 智能工作流编排
-│           ├── mcp-intelligent-strategy.mdc # 🧠 MCP智能使用策略
-│           ├── mcp-unified-management.mdc  # 🔧 MCP统一管理
-│           ├── mcp-zero-config-detection.mdc # 🔍 MCP零配置检测
-│           └── mermaid.mdc                 # 📊 Mermaid图表
+├── 📝 Arquivos de Regras (Funcionalidade principal)
+│   ├── global-rules/                       # 📋 Arquivos de regras globais (31)
+│   │   ├── ai-agent-intelligence-core.mdc  # 🧠 Núcleo de inteligência de IA
+│   │   ├── frontend-rules.mdc              # 🎨 Regras completas de frontend
+│   │   ├── backend-rules.mdc               # 🔧 Regras completas de backend
+│   │   ├── super-brain-system.mdc          # 🧠 Sistema Super Cérebro
+│   │   ├── context-recorder-system.mdc     # 📝 Sistema de gravação de contexto
+│   │   ├── context-recorder-core.mdc       # 📝 Módulo principal de gravação de contexto
+│   │   ├── context-recorder-templates.mdc  # 📝 Modelos de gravação de contexto
+│   │   ├── context-recorder-advanced.mdc   # 📝 Funcionalidades avançadas de gravação de contexto
+│   │   ├── context-recorder-edge-cases.mdc # 📝 Tratamento de casos extremos de gravação de contexto
+│   │   ├── brain-recorder-integration.mdc  # 🧠 Integração Cérebro-Gravador
+│   │   ├── context-systems-integration.mdc # 🔗 Integração de sistemas de contexto
+│   │   ├── context7-preload-standard.mdc   # 🔗 Padrão de pré-carregamento Context7
+│   │   ├── unified-rules-base.mdc          # 📋 Base de regras unificada
+│   │   ├── permission-control-system.mdc   # 🔐 Sistema de controle de permissões (novo v1.0)
+│   │   ├── system-diagnostics.mdc          # 🔧 Ferramenta de diagnóstico do sistema (novo v1.0)
+│   │   ├── intelligent-recommendation-engine.mdc # 🎯 Motor de recomendação inteligente
+│   │   ├── ai-ethical-boundaries.mdc       # 🛡️ Limites éticos de IA
+│   │   ├── ai-thinking-protocol.mdc        # 🤔 Protocolo de pensamento de IA
+│   │   ├── dynamic-thinking-depth-regulation.mdc # 📊 Regulação dinâmica de profundidade de pensamento
+│   │   ├── file-generation-safety-rules.mdc # 🔒 Regras de segurança de geração de arquivos
+│   │   ├── human-ai-collaboration-optimization.mdc # 🤝 Otimização de colaboração humano-IA
+│   │   ├── knowledge-creation-discovery-framework.mdc # 📚 Framework de criação e descoberta de conhecimento
+│   │   ├── multimodal-interaction-framework.mdc # 🎭 Framework de interação multimodal
+│   │   ├── rule-conflict-resolution.mdc     # ⚖️ Resolução de conflitos de regras
+│   │   ├── system-integration-config.mdc    # ⚙️ Configuração de integração de sistema
+│   │   ├── error-recovery-system.mdc        # 🔄 Sistema de recuperação de erros (novo v1.0)
+│   │   ├── audit-logging-system.mdc         # 📋 Sistema de registro de auditoria (novo v1.0)
+│   │   ├── memory-system-integration.mdc    # 🧠 Integração do sistema de memória
+│   │   ├── performance-monitoring-system.mdc # 📊 Sistema de monitoramento de desempenho (novo v2.0)
+│   │   ├── disaster-recovery-plan.mdc       # 🆘 Plano de recuperação de desastres (novo v2.0)
+│   │   └── rule-hot-reload-system.mdc       # 🔥 Mecanismo de recarregamento a quente de regras (novo v2.0)
+│   └── project-rules/                      # 🎯 Regras de projeto modulares (23)
+│       ├── 🚀 Fase 3 Regras de Reforço Inteligente (3)
+│       │   ├── context-loader.mdc          # 🧠 Carregador de contexto de projeto inteligente
+│       │   ├── custom-command-builder.mdc  # 🛠️ Construtor de comandos personalizados inteligente
+│       │   └── mcp-debugging-enhanced.mdc  # 🔧 Ferramenta de depuração MCP aprimorada
+│       ├── ⚡ Fase 2 Regras Principais de Fluxo de Trabalho (5)
+│       │   ├── commit.mdc                  # 📝 Fluxo de trabalho de commit unificado (suporte a modo rápido)
+│       │   ├── changelog-management.mdc    # 📋 Gerenciamento inteligente de changelog
+│       │   ├── code-quality-check.mdc      # 🔍 Verificação de qualidade de código entre linguagens
+│       │   ├── root-cause-analysis.mdc     # 🔧 Método de análise de causa raiz de IA
+│       │   └── systematic-debugging.mdc    # 🐛 Ferramenta de depuração sistemática
+│       └── 📋 Regras Básicas de Projeto (15)
+│           ├── ai-powered-code-review.mdc  # 🤖 Revisão de código orientada por IA
+│           ├── analyze-issue.mdc           # 🔍 Análise de problemas
+│           ├── backend-dev.mdc             # 🔧 Fluxo de trabalho de desenvolvimento backend
+│           ├── bug-fix.mdc                 # 🐛 Correção de bugs
+│           ├── code-review.mdc             # 👀 Revisão de código
+│           ├── create-docs.mdc             # 📚 Criação de documentação
+│           ├── feedback-enhanced.mdc       # 💬 Mecanismo de feedback inteligente
+│           ├── frontend-dev.mdc            # 🎨 Fluxo de trabalho de desenvolvimento frontend
+│           ├── implement-task.mdc          # ⚡ Implementação de tarefas
+│           ├── intelligent-project-management.mdc # 📊 Gerenciamento de projeto inteligente
+│           ├── intelligent-workflow-orchestration.mdc # 🎼 Orquestração de fluxo de trabalho inteligente
+│           ├── mcp-intelligent-strategy.mdc # 🧠 Estratégia de uso inteligente do MCP
+│           ├── mcp-unified-management.mdc  # 🔧 Gerenciamento unificado do MCP
+│           ├── mcp-zero-config-detection.mdc # 🔍 Detecção de configuração zero do MCP
+│           └── mermaid.mdc                 # 📊 Diagramas Mermaid
 │
-├── 📋 智能模板系统 (v2.0)
-│   └── templates/                          # 🎨 智能项目模板
-│       ├── project-init-template.md        # 📋 增强版项目初始化模板 (v2.0)
-│       ├── archive-init-template.md        # 📦 增强版归档项目模板 (v2.0)
-│       ├── template-config.yaml            # ⚙️ 智能化配置文件
-│       └── [自定义模板]                    # 🛠️ 用户自定义模板
+├── 📋 Sistema de Modelos Inteligentes (v2.0)
+│   └── templates/                          # 🎨 Modelos de projeto inteligentes
+│       ├── project-init-template.md        # 📋 Modelo de inicialização de projeto aprimorado (v2.0)
+│       ├── archive-init-template.md        # 📦 Modelo de arquivamento de projeto aprimorado (v2.0)
+│       ├── template-config.yaml            # ⚙️ Arquivo de configuração inteligente
+│       └── [modelo personalizado]                    # 🛠️ Modelo personalizado do usuário
 │
-├── 📚 核心教程和文档
-│   ├── tutorials/                          # 🔥 核心使用教程（必看！）
-│   │   ├── frontend-rules-使用指南.md      # 前端开发完整指南
-│   │   ├── backend-rules-使用指南.md       # 后端开发完整指南
-│   │   ├── super-brain-system-usage-guide.md # 超级大脑系统使用指南
-│   │   └── TEMPLATES-GUIDE.md              # 📋 模板系统使用指南
-│   └── docs/                               # 📖 参考文档
-│       ├── MCP-QUICK-START-GUIDE.md        # 🚀 MCP快速入门指南
-│       ├── MCP-DETAILED-CONFIG-GUIDE.md    # 🔧 MCP工具详细配置
-│       ├── MCP-TOOLS-INTRODUCTION.md       # 🛠️ MCP工具介绍
-│       ├── MCP-INTELLIGENT-USAGE-STRATEGY.md # 🧠 MCP智能使用策略
-│       ├── MCP-TROUBLESHOOTING-GUIDE.md    # 🔍 MCP故障排除指南
-│       ├── ENVIRONMENT-SETUP.md            # ⚙️ 环境配置指南
-│       ├── NAVIGATION-INDEX.md             # 🗺️ 导航索引
-│       ├── backend-guide.md                # 🔧 后端指南
-│       ├── frontend-guide.md               # 🎨 前端指南
-│       ├── find-mcp-installation-en.bat    # 🔍 MCP工具自动查找脚本
-│       └── intelligent-system/             # 🧠 智能系统文档
-│           ├── INDEX.md                    # 📋 智能系统索引
-│           ├── README-INTELLIGENT-SYSTEM.md # 🧠 智能系统说明
-│           ├── system-activation-guide.md  # 🚀 系统激活指南
-│           └── system-validation-test.md   # ✅ 系统验证测试
+├── 📚 Tutoriais e Documentação Principais
+│   ├── tutorials/                          # 🔥 Tutoriais de uso principal (obrigatório!)
+│   │   ├── frontend-rules-使用指南.md      # Guia completo de desenvolvimento frontend
+│   │   ├── backend-rules-使用指南.md       # Guia completo de desenvolvimento backend
+│   │   ├── super-brain-system-usage-guide.md # Guia de uso do sistema Super Cérebro
+│   │   └── TEMPLATES-GUIDE.md              # 📋 Guia de uso do sistema de modelos
+│   └── docs/                               # 📖 Documentação de referência
+│       ├── MCP-QUICK-START-GUIDE.md        # 🚀 Guia de início rápido do MCP
+│       ├── MCP-DETAILED-CONFIG-GUIDE.md    # 🔧 Configuração detalhada de ferramentas MCP
+│       ├── MCP-TOOLS-INTRODUCTION.md       # 🛠️ Introdução às ferramentas MCP
+│       ├── MCP-INTELLIGENT-USAGE-STRATEGY.md # 🧠 Estratégia de uso inteligente do MCP
+│       ├── MCP-TROUBLESHOOTING-GUIDE.md    # 🔍 Guia de solução de problemas do MCP
+│       ├── ENVIRONMENT-SETUP.md            # ⚙️ Guia de configuração de ambiente
+│       ├── NAVIGATION-INDEX.md             # 🗺️ Índice de navegação
+│       ├── backend-guide.md                # 🔧 Guia de backend
+│       ├── frontend-guide.md               # 🎨 Guia de frontend
+│       ├── find-mcp-installation-en.bat    # 🔍 Script de busca automática de ferramentas MCP
+│       └── intelligent-system/             # 🧠 Documentação do sistema inteligente
+│           ├── INDEX.md                    # 📋 Índice do sistema inteligente
+│           ├── README-INTELLIGENT-SYSTEM.md # 🧠 Descrição do sistema inteligente
+│           ├── system-activation-guide.md  # 🚀 Guia de ativação do sistema
+│           └── system-validation-test.md   # ✅ Teste de validação do sistema
 ```
 
-### 📋 目录功能说明
+### 📋 Descrição de Funcionalidade dos Diretórios
 
-| 目录 | 功能 | 重要性 | 使用频率 |
+| Diretório | Funcionalidade | Importância | Frequência de Uso |
 |------|------|--------|----------|
-| **install-scripts/** | 🚀 一键安装脚本 | ⭐⭐⭐⭐⭐ | 安装时使用 |
-| **global-rules/** | 📋 核心规则文件 | ⭐⭐⭐⭐⭐ | 每日使用 |
-| **project-rules/** | 🎯 模块化规则 | ⭐⭐⭐⭐⭐ | 每日使用 |
-| **templates/** | 🎨 智能项目模板 (v2.0) | ⭐⭐⭐⭐ | 项目初始化使用 |
-| **tutorials/** | 🎓 使用教程 | ⭐⭐⭐⭐ | 学习阶段使用 |
-| **docs/** | 📚 详细文档 | ⭐⭐⭐⭐ | 遇到问题时查看 |
-| **mcp-scripts/** | 🔧 MCP工具配置 | ⭐⭐⭐ | 高级功能配置 |
+| **install-scripts/** | 🚀 Scripts de instalação com um clique | ⭐⭐⭐⭐⭐ | Uso durante instalação |
+| **global-rules/** | 📋 Arquivos de regras principais | ⭐⭐⭐⭐⭐ | Uso diário |
+| **project-rules/** | 🎯 Regras modulares | ⭐⭐⭐⭐⭐ | Uso diário |
+| **templates/** | 🎨 Modelos de projeto inteligentes (v2.0) | ⭐⭐⭐⭐ | Uso durante inicialização de projeto |
+| **tutorials/** | 🎓 Tutoriais de uso | ⭐⭐⭐⭐ | Uso durante fase de aprendizado |
+| **docs/** | 📚 Documentação detalhada | ⭐⭐⭐⭐ | Consulta quando encontrar problemas |
+| **mcp-scripts/** | 🔧 Configuração de ferramentas MCP | ⭐⭐⭐ | Configuração de funcionalidades avançadas |
 
 
 
-### ⚡ 核心命令预览
+### ⚡ Visualização de Comandos Principais
 ```bash
-# 🎯 选择项目类型安装（三选一）
-install-scripts\install-ultra.bat "你的项目目录路径" frontend   # 🎨 前端项目
-install-scripts\install-ultra.bat "你的项目目录路径" backend    # 🔧 后端项目
-install-scripts\install-ultra.bat "你的项目目录路径" fullstack  # 🌟 全栈项目
+# 🎯 Escolher tipo de projeto para instalar (escolha um)
+install-scripts\install-ultra.bat "seu caminho do diretório do projeto" frontend   # 🎨 Projeto frontend
+install-scripts\install-ultra.bat "seu caminho do diretório do projeto" backend    # 🔧 Projeto backend
+install-scripts\install-ultra.bat "seu caminho do diretório do projeto" fullstack  # 🌟 Projeto fullstack
 ```
 
-## 🎯 支持的AI工具
+## 🎯 Ferramentas de IA Compatíveis
 
-| 开发模式 | 前端 | 后端 | MCP | 文件数 | 安装命令 |
+| Modo de Desenvolvimento | Frontend | Backend | MCP | Número de Arquivos | Comando de Instalação |
 |----------|------|------|-----|--------|-----------|
-| **前端开发** | ✅ | ❌ | ✅ | 52个.mdc | `install-scripts\install-ultra.bat "项目路径" frontend` |
-| **后端开发** | ❌ | ✅ | ✅ | 52个.mdc | `install-scripts\install-ultra.bat "项目路径" backend` |
-| **全栈开发** | ✅ | ✅ | ✅ | 54个.mdc | `install-scripts\install-ultra.bat "项目路径" fullstack` |
-| **默认模式** | ✅ | ✅ | ✅ | 54个.mdc | `install-scripts\install-ultra.bat "项目路径"` |
+| **Desenvolvimento Frontend** | ✅ | ❌ | ✅ | 52 .mdc | `install-scripts\install-ultra.bat "caminho do projeto" frontend` |
+| **Desenvolvimento Backend** | ❌ | ✅ | ✅ | 52 .mdc | `install-scripts\install-ultra.bat "caminho do projeto" backend` |
+| **Desenvolvimento Fullstack** | ✅ | ✅ | ✅ | 54 .mdc | `install-scripts\install-ultra.bat "caminho do projeto" fullstack` |
+| **Modo Padrão** | ✅ | ✅ | ✅ | 54 .mdc | `install-scripts\install-ultra.bat "caminho do projeto"` |
 
-> **💡 提示**：统一安装脚本 `install-ultra.bat` 适配所有AI工具（Augment、Cursor、Claude、Trae AI等），支持前端/后端/全栈三种开发模式，100%测试通过
+> **💡 Dica**: O script de instalação unificado `install-ultra.bat` é compatível com todas as ferramentas de IA (Augment, Cursor, Claude, Trae AI, etc.), suporta três modos de desenvolvimento (frontend/backend/fullstack), 100% testado e aprovado
 > 
-> **🆕 v1.0+v2.0新增规则（7个）**：
+> **🆕 Novas regras v1.0+v2.0 (7)**:
 > 
-> **v1.0新增（4个）**：
-> - 🔐 **permission-control-system.mdc** - 三角色权限控制系统（User/AI/System）
-> - 🔧 **system-diagnostics.mdc** - 10层系统诊断工具
-> - 🔄 **error-recovery-system.mdc** - 错误恢复系统（系统激活/文件操作/MCP工具故障）
-> - 📋 **audit-logging-system.mdc** - 审计日志系统（4级日志/操作审计/安全事件）
+> **Novo v1.0 (4)**:
+> - 🔐 **permission-control-system.mdc** - Sistema de controle de permissões de três funções (User/AI/System)
+> - 🔧 **system-diagnostics.mdc** - Ferramenta de diagnóstico de sistema de 10 camadas
+> - 🔄 **error-recovery-system.mdc** - Sistema de recuperação de erros (ativação do sistema/operações de arquivo/falhas de ferramentas MCP)
+> - 📋 **audit-logging-system.mdc** - Sistema de registro de auditoria (4 níveis de log/auditoria de operações/eventos de segurança)
 > 
-> **v2.0新增（3个）**：
-> - 📊 **performance-monitoring-system.mdc** - 性能监控系统（响应时间/资源使用/系统指标）
-> - 🆘 **disaster-recovery-plan.mdc** - 灾难恢复计划（数据丢失/系统故障/安全事件）
-> - 🔥 **rule-hot-reload-system.mdc** - 规则热更新机制（文件监控/更新流程/回滚）
+> **Novo v2.0 (3)**:
+> - 📊 **performance-monitoring-system.mdc** - Sistema de monitoramento de desempenho (tempo de resposta/uso de recursos/métricas do sistema)
+> - 🆘 **disaster-recovery-plan.mdc** - Plano de recuperação de desastres (perda de dados/falhas do sistema/eventos de segurança)
+> - 🔥 **rule-hot-reload-system.mdc** - Mecanismo de recarregamento a quente de regras (monitoramento de arquivos/fluxo de atualização/reversão)
 
-### 🔧 MCP智能工具集成
+### 🔧 Integração de Ferramentas Inteligentes MCP
 
-**4-5个核心工具（一键安装；Memory 可选）：**
-- **💬 智能反馈** - 实时交互和进度汇报
-- **📁 文件系统** - 自动化文件操作
-- **🧠 记忆管理**（可选，Recorder 优先）- 上下文保存和检索、语义聚合
-- **🐙 GitHub集成** - 仓库管理和PR处理
-- **🛠️ 通用工具** - 基础操作和测试验证
+**4-5 ferramentas principais (instalação com um clique; Memory opcional)**:
+- **💬 Feedback Inteligente** - Interação em tempo real e relatórios de progresso
+- **📁 Sistema de Arquivos** - Operações automatizadas de arquivos
+- **🧠 Gerenciamento de Memória** (opcional, Recorder prioritário) - Salvamento e recuperação de contexto, agregação semântica
+- **🐙 Integração GitHub** - Gerenciamento de repositórios e processamento de PR
+- **🛠️ Ferramentas Gerais** - Operações básicas e verificação de testes
 
-**快速安装：**
+**Instalação Rápida:**
 ```bash
-# 一键安装MCP工具
+# Instalar ferramentas MCP com um clique
 cd mcp-scripts
 .\run-powershell-installer.bat
 ```
 
-### 🔄 MCP跨平台同步功能
-
-**支持平台：**
-
-**🎯 主流AI编辑器**
-- ✅ **Trae AI** - 智能代码助手
-- ✅ **Trae AI (Chinese)** - 中文版智能代码助手
-- ✅ **Cursor IDE** - AI驱动的代码编辑器
-- ✅ **Claude Desktop** - Anthropic官方桌面应用
-
-**🔥 2024-2025年热门AI工具**
-- ✅ **Windsurf AI** - 新一代AI编程环境
-- ✅ **Replit AI** - 云端AI编程平台
-- ✅ **Sourcegraph Cody** - 企业级AI代码助手
-- ✅ **Continue.dev** - 开源AI编程助手
-
-**🛠️ IDE集成AI助手**
-- ✅ **VSCode GitHub Copilot** - GitHub官方AI助手
-- ✅ **JetBrains AI Assistant** - JetBrains全家桶AI助手
-- ✅ **Tabnine AI** - 多IDE支持的AI补全工具
-
-**☁️ 云端AI平台**
-- ✅ **Amazon Q Developer** - AWS官方开发者AI助手
-- ✅ **Google Gemini Code Assist** - Google AI编程助手
-- ✅ **Qodo Gen (CodiumAI)** - 智能测试生成平台
-
-**🔓 开源AI工具**
-- ✅ **Aider AI** - 命令行AI编程助手
-- ✅ **CodeGeeX** - 清华大学开源AI编程工具
-- ✅ **Tabby ML** - 自托管AI代码补全
-- ✅ **Cline (Claude Dev)** - VS Code扩展AI助手
-
-**🤖 OpenAI系列工具**
-- ✅ **OpenAI Codex** - OpenAI的代码生成平台
-- ✅ **OpenAI Codex CLI** - Codex命令行工具
-
-**🐧 腾讯AI工具**
-- ✅ **Tencent CodeBuddy** - 腾讯AI编程助手
-- ✅ **Tencent CodeBuddy CLI** - CodeBuddy命令行版本
-
-**🚀 新兴AI编辑器**
-- ✅ **Qoder AI Editor** - 新兴AI代码编辑器
-- ✅ **Void Editor** - 轻量级AI编辑器
-- ✅ **Warp Terminal** - AI增强终端
-- ✅ **Zed Editor** - 高性能协作编辑器
-
-**⚡ 高级AI助手**
-- ✅ **Refact.ai** - 智能代码重构工具
-- ✅ **Jules (Google)** - Google实验性AI助手
-- ✅ **Junie (JetBrains)** - JetBrains实验性AI工具
-- ✅ **Kilo Code** - 代码分析AI助手
-- ✅ **Kodu AI** - 智能编程助手
-- ✅ **MarsCode** - 字节跳动AI编程平台
-- ✅ **Melty AI** - 智能代码生成工具
-- ✅ **Memex AI** - 知识管理AI助手
-- ✅ **Mentat AI** - 命令行AI编程工具
-
-**核心功能：**
-- 🔍 **自动检测** - 发现已安装的AI平台及其配置状态
-- 🔄 **配置同步** - 在多个平台间同步MCP服务器配置
-- 🛡️ **安全备份** - 同步前自动备份原有配置
-- 📊 **状态监控** - 实时查看各平台的配置状态
-
-**快速使用：**
-```powershell
-# 检测所有已安装的AI平台
-cd mcp-scripts
-.\mcp-cross-platform-sync.ps1 detect
-
-# 从Trae AI同步配置到OpenAI Codex（推荐先预览）
-.\mcp-cross-platform-sync.ps1 sync -SourcePlatform "Trae" -TargetPlatforms "OpenAICodex" -DryRun
-```
-**💡mcp-cross-platform-sync.ps1 使用提示：**
-如果对具体使用方法还有疑问，可以让AI助手读取相应的规则文档（如`mcp-unified-management.mdc`、`mcp-zero-config-detection.mdc`等），然后直接让AI来执行对应的脚本操作，AI会根据规则自动选择最合适的参数和配置。
-
-**📚 相关文档：**
-- [🎯 MCP工具介绍](docs/MCP-TOOLS-INTRODUCTION.md) - 了解工具价值
-- [📋 安装说明](mcp-scripts/安装脚本使用说明.md) - 详细安装方法（含跨平台同步）
-- [🚀 快速入门](docs/MCP-QUICK-START-GUIDE.md) - 5分钟配置
-- [🔧 详细配置](docs/MCP-DETAILED-CONFIG-GUIDE.md) - 完整配置参数
-- [🔍 故障排除](docs/MCP-TROUBLESHOOTING-GUIDE.md) - 问题解决
-- [📝 配置路径更新](docs/MCP-CONFIG-PATHS-UPDATE.md) - 最新验证的AI工具配置路径
-
-> **💻 系统要求**：Windows 10/11自带PowerShell，Windows 7/8需要[下载安装](https://github.com/PowerShell/PowerShell/releases)
-
-## 🏆 项目质量认证
-
-### 📊 测试覆盖率
-
-| 测试类型 | 覆盖率 | 状态 | 说明 |
-|----------|--------|------|------|
-| **🔧 功能测试** | 100% | ✅ 通过 | 所有核心功能完整测试 |
-| **⚡ 性能测试** | 100% | ✅ 通过 | 响应时间和资源使用优化 |
-| **🛡️ 安全测试** | 100% | ✅ 通过 | 安全漏洞扫描和防护验证 |
-| **🔄 兼容性测试** | 100% | ✅ 通过 | 多平台和多AI工具兼容 |
-
-### 🎖️ 质量评级: **PERFECT (A++)**
-
-### 📈 性能指标
-
-| 指标 | 目标值 | 实际值 | 状态 |
-|------|--------|--------|------|
-| **⚡ 安装速度** | <3分钟 | 2.1分钟 | ✅ 优秀 |
-| **🧠 响应时间** | <2秒 | 1.3秒 | ✅ 优秀 |
-| **💾 内存使用** | <100MB | 67MB | ✅ 优秀 |
-| **🔄 兼容性** | >95% | 98% | ✅ 优秀 |
-
-### 📋 项目认证详情
-- **✅ 企业级评级**: PERFECT (A++) - 生产就绪
-- **✅ 安装脚本**: 统一安装脚本，支持前端/后端/全栈
-- **✅ MCP工具**: 4-5个核心MCP工具完整集成（其中 server-memory 可选）
-- **✅ 文档体系**: 从入门到高级配置的完整指南
-- **✅ 编码标准**: UTF-8编码、错误处理、路径安全
-
----
-
-## 🔧 高级配置和使用
-
-### 📁 自定义路径配置
-
-| 路径类型     | 使用场景                   | 格式示例                    |
-| ------------ | -------------------------- | --------------------------- |
-| **相对路径** | rules 目录和项目在同一磁盘 | `..\my-project`             |
-| **绝对路径** | 跨磁盘或固定位置           | `"C:\Dev\MyApp"`            |
-| **网络路径** | 企业共享环境               | `"\\server\shared\project"` |
-
-> **💡 提示**: 路径包含空格时必须使用双引号
-
-### 🚀 批量部署方案
-
-```cmd
-# 一键安装到单个项目
-install-scripts\install-ultra.bat "你的项目路径" fullstack
-
-# 企业级批量部署（详细脚本见install-scripts/INSTALL-GUIDE.md）
-# 支持自动检测项目类型和智能配置
-```
-
-### ⚙️ 环境变量配置
-
-| 变量名           | 默认值      | 说明             | 示例                              |
-| ---------------- | ----------- | ---------------- | --------------------------------- |
-| `AI_RULES_PATH`  | `.ai-rules` | 规则文件存储路径 | `D:\MyRules`                      |
-| `AI_RULES_LANG`  | `zh-CN`     | 默认语言设置     | `en-US`, `zh-CN`                  |
-
-## 📚 完整命令参考
-
-> **🎯 快速查找**: 本文档提供所有可用命令的快速参考，按功能分类整理
-> 
-> **💡 使用提示**: 命令支持自然语言输入，无需严格按照格式
->
-> **🔥 核心特性**: 所有AI工具（Augment、Cursor、Claude、Trae）现在使用**统一安装脚本**，功能完全一致
-
-### 🔧 核心开发命令
-
-#### 🚀 项目初始化
-
-| 命令 | 功能描述 | 使用场景 | 示例 |
-|------|----------|----------|------|
-| `创建新项目` | 智能项目脚手架生成 | 项目启动 | "创建一个Vue3电商项目" |
-| `初始化开发环境` | 自动配置开发工具链 | 环境搭建 | "初始化Node.js后端环境" |
-| `设置项目结构` | 标准化目录结构创建 | 架构规划 | "设置微服务项目结构" |
-| `配置开发工具` | IDE和工具链配置 | 开发准备 | "配置ESLint和Prettier" |
-
-#### 💻 代码生成与优化
-
-| 命令类型 | 具体命令 | 功能说明 | 适用技术栈 |
-|---------|----------|----------|------------|
-| **组件生成** | `生成组件` | 基于模板快速生成代码组件 | React/Vue/Angular |
-| **代码优化** | `优化代码结构` | 自动重构和优化建议 | 所有语言 |
-| **API开发** | `生成API接口` | RESTful API自动生成 | Express/FastAPI/Spring |
-| **数据建模** | `创建数据模型` | 数据库模型和实体生成 | MySQL/MongoDB/PostgreSQL |
-
-#### 📋 传统命令映射
-
-| 传统命令 | 功能 | 适用场景 | 对应文件 |
-|------|------|----------|----------|
-| `/frontend-dev` | 前端开发工作流 | Vue/React项目开发 | `frontend-dev.mdc` |
-| `/backend-dev` | 后端开发工作流 | API/服务器开发 | `backend-dev.mdc` |
-| `/component` | 组件创建 | 创建UI组件 | 由 `frontend-dev.mdc` 提供（子命令） |
-| `/ui-design` | UI设计 | 界面设计和样式 | 由 `frontend-dev.mdc` 提供（子命令） |
-| `/api-design [描述]` | API设计 | 接口设计和文档 | 由 `backend-dev.mdc` 提供（子命令） |
-| `/database-design [描述]` | 数据库设计 | 数据模型设计 | 由 `backend-dev.mdc` 提供（子命令） |
-| `/responsive-design` | 响应式设计 | 移动端适配 | 无独立 .mdc（由 `/ui-design` 及前端开发流程支持） |
-
-### 🛡️ 质量保证命令
-
-| 命令 | 功能 | 适用场景 | 对应文件 |
-|------|------|----------|----------|
-| `/commit` | 提交规范 | 标准化Git提交（支持快速模式 --fast；`/commit-fast` 为别名） | `commit.mdc` |
-| `/quality-check` | **跨语言质量检查** | **多语言代码质量分析** | `code-quality-check.mdc` |
-| `/code-review` | 代码审查 | PR审查和质量检查 | `code-review.mdc` |
-| `/ai-powered-code-review` | AI代码审查 | 智能代码质量分析 | `ai-powered-code-review.mdc` |
-| `/bug-fix` | Bug修复 | 问题诊断和修复 | `bug-fix.mdc` |
-
-### 📊 项目管理命令
-
-| 命令 | 功能 | 适用场景 | 对应文件 |
-|------|------|----------|----------|
-| `/load-context` | **智能项目上下文加载** | **AI项目分析和配置推荐** | `context-loader.mdc` |
-| `/changelog` | **智能变更日志管理** | **自动化变更日志生成** | `changelog-management.mdc` |
-| `/analyze-issue` | 问题分析 | GitHub问题分析 | `analyze-issue.mdc` |
-| `/implement-task` | 任务实现 | 功能开发实现 | `implement-task.mdc` |
-| `/intelligent-project-management` | 智能项目管理 | 项目规划和跟踪 | `intelligent-project-management.mdc` |
-| `/intelligent-workflow-orchestration` | 智能工作流编排 | 自动化工作流程 | `intelligent-workflow-orchestration.mdc` |
-
-### 📝 文档和可视化
-
-| 命令 | 功能 | 适用场景 | 对应文件 |
-|------|------|----------|----------|
-| `/create-docs` | 文档创建 | 自动生成文档 | `create-docs.mdc` |
-| `/mermaid` | 图表生成 | 架构图和流程图 | `mermaid.mdc` |
-
-### 🧠 智能系统命令
-
-| 命令 | 功能 | 适用场景 | 对应文件 |
-|------|------|----------|----------|
-| `/feedback` | 智能反馈 | 交互式用户反馈 | `feedback-enhanced.mdc` |
-| `/mcp-intelligent-strategy` | MCP智能策略 | 自动优化工具使用 | `mcp-intelligent-strategy.mdc` |
-
-### 🔐 系统管理命令 (v1.0+v2.0新增)
-
-#### 权限控制系统
-| 命令 | 功能 | 适用场景 | 对应文件 |
-|------|------|----------|----------|
-| `/permissions` | 查看权限 | 查看当前权限 | `permission-control-system.mdc` |
-| `/audit-log` | 查看审计日志 | 查看操作记录 | `permission-control-system.mdc` |
-| `/access-request [resource]` | 请求权限 | 请求额外权限 | `permission-control-system.mdc` |
-
-#### 系统诊断工具
-| 命令 | 功能 | 适用场景 | 对应文件 |
-|------|------|----------|----------|
-| `/diagnose-rules` | 规则诊断 | 检查规则系统状态 | `system-diagnostics.mdc` |
-| `/diagnose-context` | 上下文诊断 | 检查上下文完整性 | `system-diagnostics.mdc` |
-| `/diagnose-permissions` | 权限诊断 | 检查权限配置 | `system-diagnostics.mdc` |
-| `/diagnose-performance` | 性能诊断 | 获取性能报告 | `system-diagnostics.mdc` |
-| `/dashboard` | 诊断仪表板 | 实时系统状态 | `system-diagnostics.mdc` |
-
-#### 审计日志系统
-| 命令 | 功能 | 适用场景 | 对应文件 |
-|------|------|----------|----------|
-| `/查看日志` | 查看日志 | 查看系统日志 | `audit-logging-system.mdc` |
-| `/查看安全日志` | 安全日志 | 查看安全事件 | `audit-logging-system.mdc` |
-| `/查看性能日志` | 性能日志 | 查看性能指标 | `audit-logging-system.mdc` |
-| `/清理日志 [天数]` | 清理日志 | 清理过期日志 | `audit-logging-system.mdc` |
-
-### ⚡ 快速操作命令
-
-#### 🎯 智能快捷操作
-
-| 自然语言命令 | 功能 | 等效传统命令 | 使用示例 |
-|-------------|------|-------------|----------|
-| `帮我创建一个登录页面` | 快速生成登录组件 | `/component` + `/ui-design` | "创建响应式登录表单" |
-| `优化这段代码` | 代码质量改进 | `/code-review` | "优化性能和可读性" |
-| `修复这个bug` | 智能问题诊断 | `/bug-fix` | "解决登录失败问题" |
-| `生成API文档` | 自动文档生成 | `/create-docs` | "为用户模块生成文档" |
-| `设计数据库表` | 数据模型设计 | `/database-design` | "设计电商订单表结构" |
-
-### 🔧 调试和分析命令
-
-| 命令 | 功能 | 适用场景 | 对应文件 |
-|------|------|----------|----------|
-| `/debug` | **系统化调试** | **智能故障诊断和调试** | `systematic-debugging.mdc` |
-| `/root-cause` | **AI根因分析** | **五个为什么智能分析** | `root-cause-analysis.mdc` |
-| `/mcp-debug` | **MCP专业调试** | **MCP工具故障诊断** | `mcp-debugging-enhanced.mdc` |
-
-### 🛠️ 自定义和扩展命令
-
-| 命令 | 功能 | 适用场景 | 对应文件 |
-|------|------|----------|----------|
-| `/create-command` | **智能命令创建** | **AI生成自定义命令** | `custom-command-builder.mdc` |
-| `/list-commands` | 命令列表 | 查看所有自定义命令 | `custom-command-builder.mdc` |
-
-## 🧾 规则元数据字段说明
-
-为了确保规则行为一致、配置清晰，所有规则文件（.mdc）应明确声明 alwaysApply 字段：
-
-- 含义：控制规则是否在所有会话中默认全局加载与执行
-  - alwaysApply: true → 默认全局启用（基础、安全、整合类规则）
-    - 典型：unified-rules-base、rule-conflict-resolution、system-integration-config、ai-agent-intelligence-core 等
-  - alwaysApply: false → 按需启用（入口、工具、工作流能力）
-    - 典型：super-brain-system、intelligent-recommendation-engine、intelligent-project-management、intelligent-workflow-orchestration、ai-powered-code-review 等
-
-- 与 type 的关系：
-  - type: "always_apply" 用于规则分类（安装/分组），alwaysApply 用于运行时默认加载策略（执行层开关）
-  - 两者同时存在时，必须保持一致；不一致视为配置错误，应在校验或加载阶段给出明确提示（约定优于配置）
-  - 一致性检查范围：仅针对 type: "always_apply" 与 alwaysApply 的一致性强制检查；其他类型需保持语义一致但不强制同名
-
-- **详细一致性规则**：
-  - **若 type 写为 "always_apply"，alwaysApply 必须为 true**（否则视为配置错误）
-  - **若 alwaysApply 为 true，推荐 type 也写为 "always_apply"**；如因历史命名（如 unified_base、system_integration_rule）代表基线/全局启用，也可保留，但必须保证其语义与 alwaysApply: true 一致，并在文档中注明此类型属于 baseline 类别
-  - **若 alwaysApply 为 false，则 type 不得为 "always_apply"**，建议使用 entrypoint/workflow/tool/on_demand 等类别名称
-  - **发现不一致时，按"约定优于配置"的原则，视为错误并提示修正**
-
-- 推荐的元数据头示例（放在 priority 下方）：
-
-```
----
-id: project-rules/commit
-name: '标准化提交规范（/commit）'
-priority: P0
-alwaysApply: true           # 全局启用，确保随时可用
-type: 'always_apply'        # 可选：用于分类
----
-```
-
-- 一致性校验脚本（CI/本地）：
-  - 本地执行：
-    ```bash
-    pwsh ./scripts/validate-rules-consistency.ps1
-    ```
-  - 启用语义一致性警告（非强制）：
-    ```bash
-    pwsh ./scripts/validate-rules-consistency.ps1 -WarnOnSemanticInconsistency
-    ```
-
-- 激活方式说明：
-  - alwaysApply: true → 规则在会话启动时即加载，无需额外命令
-  - alwaysApply: false → 通过命令触发或明确读取对应 .mdc 文件
-
-- commit.mdc 策略：保持 alwaysApply: true
-  - 原因：commit 作为代码提交规范与质量保障的基础能力，应全局可用并在跨场景工作流中一致生效（支持 /commit 与 /commit-fast）
-
-## 🧠 核心功能
-
-### 🚀 **AI智能核心系统**
-- **文件**: `ai-agent-intelligence-core.mdc`
-- **功能**: AI助手智能核心，提供基础智能能力
-- **特点**: 自动激活，增强AI理解和决策能力
-
-### 🔄 **完整工作流集成**
-- **文件**: `context-systems-integration.mdc`
-- **功能**: 集成所有开发工作流程，无缝衔接
-- **特点**: 自动化流程管理，提升开发效率
-
-### 🎯 **智能推荐引擎**
-- **文件**: `intelligent-recommendation-engine.mdc`
-- **功能**: 基于上下文的智能建议和推荐
-- **特点**: 实时分析，个性化推荐
-
-### 🧠 **记忆系统集成**
-- **文件**: `brain-recorder-integration.mdc` + `context-recorder-system.mdc`
-- **功能**: 上下文记忆与知识管理（记录、检索、联动）
-- **特点**: 持久化存储，智能检索，记录员系统与大脑集成协同
-
-### 🌟 **超级大脑系统**
-- **文件**: `super-brain-system.mdc`
-- **功能**: 高级AI思维和决策支持
-- **特点**: 深度分析，智能决策
-
-### ⚙️ **系统集成配置**
-- **文件**: `system-integration-config.mdc`
-- **功能**: 系统级配置和集成管理
-- **特点**: 统一配置，模块化管理
-
-### 🔧 **规则冲突解决**
-- **文件**: `rule-conflict-resolution.mdc`
-- **功能**: 自动检测和解决规则冲突
-- **特点**: 智能仲裁，优先级管理
-
-### 📊 **规则冲突与冗余优化（已合并）**
-- **文件**: `rule-conflict-resolution.mdc`
-- **功能**: 冲突仲裁与冗余治理，统一规则入口
-- **特点**: 用户指令最高优先级，避免重复定义
-
-### MCP智能策略（自动应用）
-- **文件**: `mcp-intelligent-strategy.mdc`
-- **功能**: AI自动优先使用MCP工具，提升开发效率
-- **特点**: 无需手动调用，智能后台运行
-
-## 🎛️ 配置命令大全
-
-### 📢 反馈频率控制
-```bash
-/设置详细模式    # 完整工作流反馈，详细进度汇报
-/设置标准模式    # 关键决策点反馈，平衡信息量
-/设置静默模式    # 最小化反馈，专注结果
-```
-
-### 🚀 **系统激活命令**
-```bash
-启动超级大脑系统  # 激活智能项目管理平台
-启动智能项目管理  # 启动完整工作流管理
-激活项目大脑     # 开启AI项目助手
-超级大脑        # 快速激活智能管理
-智能管理        # 启动智能决策支持
-项目大脑        # 激活项目管理核心
-```
-
-> **📚 详细使用指南**: 查看 [超级大脑系统使用指南](tutorials/super-brain-system-usage-guide.md) 获取完整的使用示例和最佳实践
-
-## 🎯 按场景分类
-
-### 🎨 前端开发
-```bash
-/frontend-dev     # 启动前端开发工作流
-/component        # 创建新组件
-/ui-design        # UI设计和样式开发
-/设置Vue优先模式   # Vue技术栈优先
-/设置React优先模式 # React技术栈优先
-```
-
-### ⚙️ 后端开发
-```bash
-/backend-dev      # 启动后端开发工作流
-/api-design       # API接口设计
-/database-design  # 数据库设计
-/设置微服务模式    # 微服务架构优先
-/设置性能优化模式  # 性能优化建议
-```
-
-### 🔧 代码管理
-```bash
-/commit           # 标准化提交
-/code-review      # 代码审查
-/bug-fix          # Bug修复
-/analyze-issue    # 问题分析
-```
-
-### 📚 文档和图表
-```bash
-/create-docs      # 文档创建
-/mermaid          # 架构图和流程图
-```
-
-### 🤖 智能交互
-```bash
-/feedback         # 智能反馈
-/implement-task   # 任务实现
-```
-
-### 🧠 大脑-记录员集成系统
-```bash
-/brain-start      # 同时激活超级大脑和记录员系统
-/brain-status     # 显示两个系统的综合状态
-/brain-record     # 手动触发决策记录
-/brain-archive    # 阶段完成时的综合归档
-/brain-reset      # 重置两个系统状态
-/project-init     # 初始化新项目（创建上下文文件）
-/project-phase    # 切换项目阶段（自动记录）
-/project-summary  # 生成项目综合报告
-/project-backup   # 备份所有项目数据
-/memory-load      # 加载历史项目记忆
-/memory-search    # 搜索历史决策和记录
-/memory-export    # 导出项目知识库
-/memory-clean     # 清理过期记录
-```
-提示：Memory（/memory-*）为可选功能。默认使用 Recorder 完成结构化记录与精准检索；仅当需要模糊语义检索或跨项目/跨时间聚合时再按需使用 Memory（Recorder 优先）。
-
-### 📝 记录员系统
-```bash
-/record           # 执行增量合并任务
-/archive          # 执行快照归档任务
-/status           # 查看当前记录状态
-/rollback         # 回滚最后一次操作
-/init-project     # 强制重新创建项目文件
-```
-
-### 🔗 上下文系统集成
-```bash
-/load-context     # 加载项目上下文（所有变体）
-/analyze-project  # 分析项目结构和状态
-/tech-stack       # 分析技术栈信息
-/project-health   # 检查项目健康度
-/sync             # 同步系统状态
-```
-
-### 🌏 中文智能模式
-```bash
-/理解需求         # 深入理解用户需求和问题
-/制定方案         # 提供技术解决方案
-/开始实现         # 执行具体开发任务
-/验证结果         # 验证功能正确性
-/问题诊断         # 错误分析和修复
-/开发辅助         # 提供技术支持
-```
-
-## 📖 使用说明
-
-### 基本用法
-1. 在AI工具中直接输入命令（如 `/frontend-dev`）
-2. AI会自动加载对应的规则和工作流
-3. 按照AI的引导完成开发任务
-
-### 组合使用
-```bash
-# 示例：完整的前端开发流程
-/frontend-dev     # 启动前端开发
-/component        # 创建组件
-/ui-design        # 设计界面
-/commit           # 提交代码
-/code-review      # 代码审查
-```
-
-### 配置优化
-```bash
-# 示例：Vue项目优化配置
-/设置Vue优先模式
-/设置TypeScript严格模式
-/设置企业级标准
-/设置详细模式
-```
-
-## 🔍 故障排除
-
-### ⚠️ 常见问题快速解决
-
-| 问题现象 | 可能原因 | 解决方案 |
-|---------|----------|----------|
-| 命令无响应 | 路径配置错误 | 检查安装路径是否正确 |
-| 提示文件不存在 | 安装不完整 | 重新运行安装脚本 |
-| 功能部分失效 | 权限问题 | 以管理员身份运行命令行 |
-| MCP工具无法连接 | 配置错误 | 运行 `docs/find-mcp-installation-en.bat` |
-
-### 🆘 技术支持
-
-- 🔍 **找不到MCP工具？** → 运行 `docs/find-mcp-installation-en.bat` 自动查找
-- 📖 **详细安装教程** → [install-scripts/INSTALL-GUIDE.md](install-scripts/INSTALL-GUIDE.md)
-- 🆘 **故障排除** → [docs/MCP-TROUBLESHOOTING-GUIDE.md](docs/MCP-TROUBLESHOOTING-GUIDE.md)
-
-## 📋 项目信息
-
-### 🔗 相关链接
-| 类型 | 链接 |
-|------|------|
-| **📦 GitHub仓库** | [rules-2.1-optimized](https://github.com/Mr-chen-05/rules-2.1-optimized) |
-| **📦 Gitee仓库** | [rules-2.1-optimized](https://gitee.com/czsuccess/rules-2.1-optimized) |
-| **📚 原始项目** | [steipete/agent-rules](https://github.com/steipete/agent-rules) |
-| **🐛 问题反馈** | [Issues](https://github.com/Mr-chen-05/rules-2.1-optimized/issues) |
-| **💡 功能建议** | [Discussions](https://github.com/Mr-chen-05/rules-2.1-optimized/discussions) |
-
-### 🏷️ 版本信息
-- **当前版本**: Rules 2.6.0
-- **发布日期**: 2025年10月19日
-- **质量评级**: PERFECT (A++)
-- **稳定性**: 生产就绪
-
-### 👥 贡献者
-- **主要开发**: [@Mr-chen-05](https://github.com/Mr-chen-05)
-- **原始作者**: [@steipete](https://github.com/steipete)
-- **博客作者**: m0_73635308
-- **联系邮箱**: 3553952458@qq.com
-
-### 📄 开源协议
-- **协议类型**: MIT License
-- **使用权限**: 免费商用、修改、分发
-
----
-
-> **🎯 项目愿景**: 为全球开发者提供最智能、最高效的AI助手规则体系，让AI真正成为开发者的超级大脑！
-> 
-> **💝 感谢支持**: 如果这个项目对你有帮助，请给我们一个⭐Star，你的支持是我们持续改进的动力！
+### 🔄 Funcionalidade de Sincronização Multiplataforma MCP
+
+**Plataformas compatíveis:**
+
+**🎯 Editores de IA Principais**
+- ✅ **Trae AI** - Assistente de código inteligente
+- ✅ **Trae AI (Chinese)** - Assistente de código inteligente versão chinesa
+- ✅ **Cursor IDE** - Editor de código orientado por IA
+- ✅ **Claude Desktop** - Aplicativo desktop oficial da Anthropic
+
+**🔥 Ferramentas de IA Populares 2024-2025**
+- ✅ **Windsurf AI** - Ambiente de programação IA de nova geração
+- ✅ **Replit AI** - Plataforma de programação IA em nuvem
+- ✅ **Sourcegraph Cody** - Assistente de código IA empresarial
+- ✅ **Continue.dev** - Assistente de programação IA open source
+
+**🛠️ Assistente de IA Integrado em IDE**
+- ✅ **VSCode GitHub Copilot** - Assistente de IA oficial do GitHub
+- ✅ **JetBrains AI Assistant** - Assistente de IA para suite JetBrains
+- ✅ **Tabnine AI** - Ferramenta de autocompletar IA com suporte a múltiplas IDEs
+
+**☁️ Plataformas de IA em Nuvem**
+- ✅ **Amazon Q Developer** - Assistente de IA para desenvolvedores da AWS
+- ✅ **Google Gemini Code Assist** - Assistente de programação IA do Google
+- ✅ **Qodo Gen (CodiumAI)** - Plataforma de geração de testes inteligentes
+
+**🔓 Ferramentas de IA Open Source**
+- ✅ **Aider AI** - Assistente de programação IA em linha de comando
+- ✅ **CodeGeeX** - Ferramenta de programação IA open source da Universidade Tsinghua
+- ✅ **Tabby ML** - Autocompletar de código IA auto-hospedado
+- ✅ **Cline (Claude Dev)** - Extensão de IA Claude para VS Code
+
+**🤖 Ferramentas da Série OpenAI**
+- ✅ **OpenAI Codex** - Plataforma de geração de código da OpenAI
+- ✅ **OpenAI Codex CLI** - Ferramenta de linha de comando do Codex
+
+**🐧 Ferramentas de IA da Tencent**
+- ✅ **Tencent CodeBuddy** - Assistente de programação IA da Tencent
+- ✅ **Tencent CodeBuddy CLI** - Versão CLI do CodeBuddy
+
+**🚀 Novos Editores de IA Emergentes**
+- ✅ **Qoder AI Editor** - Novo editor de código IA
+- ✅ **Void Editor** - Editor leve com IA
+- ✅ **Warp Terminal** - Terminal aprimorado com IA
+
+**🔧 Ferramentas de IA para Desenvolvimento Específico**
+- ✅ **Phind AI** - Assistente de IA para desenvolvedores
+- ✅ **Codeium** - Plataforma de autocompletar código IA
+- ✅ **Codota** - Assistente de IA para Java e Kotlin
+
+**🌐 Ferramentas de IA Multilíngue**
+- ✅ **DeepSeek Coder** - Assistente de código IA com suporte a múltiplas linguagens
+- ✅ **CodeT5** - Modelo de IA para geração de código
+- ✅ **InCoder** - Modelo de IA para preenchimento de código
+
+**🏢 Soluções Empresariais de IA**
+- ✅ **GitHub Copilot Business** - Copilot para empresas
+- ✅ **Amazon CodeWhisperer** - Assistente de código IA da Amazon
+- ✅ **Google Cloud Code** - Ferramentas de IA para Google Cloud
+
+**📊 Ferramentas de IA para Análise de Código**
+- ✅ **Sourcery** - IA para refatoração de código Python
+- ✅ **DeepCode** - Análise de código orientada por IA
+- ✅ **CodeScene** - Análise comportamental de código com IA
+
+**🎨 Ferramentas de IA para Design e UX**
+- ✅ **Figma Copilot** - Assistente de IA para design no Figma
+- ✅ **Adobe Sensei** - IA para criatividade da Adobe
+- ✅ **Canva Magic Design** - IA para design no Canva
+
+**🔗 Ferramentas de IA para Integração**
+- ✅ **Zapier AI** - IA para automação de workflows
+- ✅ **Make.com** - Plataforma de automação com IA
+- ✅ **n8n.io** - Plataforma de automação workflow open source
+
+**🧠 Frameworks de IA de Próxima Geração**
+- ✅ **Hugging Face** - Plataforma de modelos de IA
+- ✅ **LangChain** - Framework para aplicações de IA
+- ✅ **LlamaIndex** - Framework para construção de aplicações com LLMs

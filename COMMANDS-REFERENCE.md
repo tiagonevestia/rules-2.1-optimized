@@ -1,50 +1,50 @@
-# 📚 命令快速参考 → README.md
+# 📚 Referência Rápida de Comandos → README.md
 
-> **📢 重要**: 所有命令已整合到 [README.md](README.md)，请直接查看主文档获取最新信息
+> **📢 Importante**: Todos os comandos foram integrados ao [README.md](README.md), consulte o documento principal para obter as informações mais recentes
 
-> **🎯 当前版本**: Rules 2.6.0 · 54个.mdc规则文件 · 100%集成测试通过
+> **🎯 Versão Atual**: Rules 2.6.0 · 54 arquivos de regras .mdc · 100% de testes de integração aprovados
 
-## 🔗 快速导航
+## 🔗 Navegação Rápida
 
-### 🚀 **立即开始**
-- [🚀 快速开始（3分钟上手）](README.md#-快速开始3分钟上手)
-- [⚡ 一键安装](README.md#-一键安装)
+### 🚀 **Comece Agora**
+- [🚀 Início Rápido (3 minutos para começar)](README.md#-início-rápido3-minutos-para-começar)
+- [⚡ Instalação com Um Clique](README.md#-instalação-com-um-clique)
 
-### 🔧 **核心功能**
-- [🔧 核心开发命令](README.md#-核心开发命令) - 项目创建、环境配置
-- [🛡️ 质量保证命令](README.md#️-质量保证命令) - 代码审查、测试验证
-- [📊 项目管理命令](README.md#-项目管理命令) - 分析监控、任务管理
-- [🧠 智能系统命令](README.md#-智能系统命令) - AI助手、超级大脑
+### 🔧 **Funcionalidades Principais**
+- [🔧 Comandos Principais de Desenvolvimento](README.md#-comandos-principais-de-desenvolvimento) - Criação de projetos, configuração de ambiente
+- [🛡️ Comandos de Garantia de Qualidade](README.md#️-comandos-de-garantia-de-qualidade) - Revisão de código, verificação de testes
+- [📊 Comandos de Gerenciamento de Projetos](README.md#-comandos-de-gerenciamento-de-projetos) - Análise e monitoramento, gerenciamento de tarefas
+- [🧠 Comandos de Sistema Inteligente](README.md#-comandos-de-sistema-inteligente) - Assistente de IA, Super Cérebro
 
-### 📖 **详细文档**
-- [📚 完整命令参考](README.md#-完整命令参考) - 所有命令详细说明
-- [🧾 规则元数据说明](README.md#-规则元数据字段说明) - 规则配置指南
-- [🧠 超级大脑系统](tutorials/super-brain-system-usage-guide.md) - 高级AI功能
+### 📖 **Documentação Detalhada**
+- [📚 Referência Completa de Comandos](README.md#-referência-completa-de-comandos) - Descrição detalhada de todos os comandos
+- [🧾 Explicação dos Metadados das Regras](README.md#-explicação-dos-campos-de-metadados-das-regras) - Guia de configuração de regras
+- [🧠 Sistema Super Cérebro](tutorials/super-brain-system-usage-guide.md) - Funcionalidades avançadas de IA
 
-### 🛠️ **故障排除**
-- [🔧 MCP故障排除](docs/MCP-TROUBLESHOOTING-GUIDE.md) - 常见问题解决
-- [📋 安装指南](install-scripts/INSTALL-GUIDE.md) - 详细安装步骤
-
----
-
-## 💡 使用提示
-
-### 🔍 **快速搜索**
-在 [README.md](README.md) 中使用 `Ctrl+F` 搜索：
-- 搜索 `@create` 查找创建命令
-- 搜索 `@test` 查找测试命令  
-- 搜索 `@analyze` 查找分析命令
-- 搜索 `@optimize` 查找优化命令
-
-### 📱 **移动端友好**
-所有链接都经过优化，支持移动设备快速访问
-
-### 🎯 **按需查看**
-- **新手用户** → [快速开始](README.md#-快速开始3分钟上手)
-- **开发者** → [核心开发命令](README.md#-核心开发命令)
-- **项目经理** → [项目管理命令](README.md#-项目管理命令)
-- **高级用户** → [超级大脑系统](tutorials/super-brain-system-usage-guide.md)
+### 🛠️ **Solução de Problemas**
+- [🔧 Solução de Problemas do MCP](docs/MCP-TROUBLESHOOTING-GUIDE.md) - Resolução de problemas comuns
+- [📋 Guia de Instalação](install-scripts/INSTALL-GUIDE.md) - Etapas detalhadas de instalação
 
 ---
 
-> **💡 提示**: 本文档作为快速索引，所有详细内容请查看 [README.md](README.md)
+## 💡 Dicas de Uso
+
+### 🔍 **Pesquisa Rápida**
+No [README.md](README.md) use `Ctrl+F` para pesquisar:
+- Pesquise `@create` para encontrar comandos de criação
+- Pesquise `@test` para encontrar comandos de teste  
+- Pesquise `@analyze` para encontrar comandos de análise
+- Pesquise `@optimize` para encontrar comandos de otimização
+
+### 📱 **Compatível com Dispositivos Móveis**
+Todos os links são otimizados para acesso rápido em dispositivos móveis
+
+### 🎯 **Visualização Sob Demanda**
+- **Usuários Iniciantes** → [Início Rápido](README.md#-início-rápido3-minutos-para-começar)
+- **Desenvolvedores** → [Comandos Principais de Desenvolvimento](README.md#-comandos-principais-de-desenvolvimento)
+- **Gerentes de Projeto** → [Comandos de Gerenciamento de Projetos](README.md#-comandos-de-gerenciamento-de-projetos)
+- **Usuários Avançados** → [Sistema Super Cérebro](tutorials/super-brain-system-usage-guide.md)
+
+---
+
+> **💡 Dica**: Este documento serve como um índice rápido, todo o conteúdo detalhado está disponível no [README.md](README.md)

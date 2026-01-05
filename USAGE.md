@@ -1,363 +1,457 @@
-# 🚀 Rules 2.6.0 - 高级使用指南
+# 🚀 Rules 2.6.0 - Guia de Uso Avançado
 
-> **📢 重要通知**: 本文档内容已整合到主文档中，请访问 [README.md](README.md) 获取完整信息
+> **📢 Aviso Importante**: O conteúdo deste documento foi integrado ao documento principal. Acesse [README.md](README.md) para obter informações completas
 >
-> **🎯 快速导航**: 以下链接将直接跳转到 README.md 中的相应章节
+> **🎯 Navegação Rápida**: Os links abaixo redirecionarão para as seções correspondentes no README.md
 
-## 📖 快速导航
+## 📖 Navegação Rápida
 
-### 🔧 高级配置
-- [🔧 高级配置和使用](README.md#-高级配置和使用) - 自定义路径、批量部署、环境变量
-- [📁 自定义路径配置](README.md#-自定义路径配置) - 相对路径、绝对路径、网络路径
-- [🚀 批量部署方案](README.md#-批量部署方案) - 企业级部署解决方案
-- [⚙️ 环境变量配置](README.md#️-环境变量配置) - 系统环境配置
+### 🔧 Configuração Avançada
+- [🔧 Configuração e Uso Avançado](README.md#-configuração-e-uso-avançado) - Caminhos personalizados, implantação em lote, variáveis de ambiente
+- [📁 Configuração de Caminhos Personalizados](README.md#-configuração-de-caminhos-personalizados) - Caminhos relativos, absolutos, de rede
+- [🚀 Soluções de Implantação em Lote](README.md#-soluções-de-implantação-em-lote) - Soluções de implantação corporativa
+- [⚙️ Configuração de Variáveis de Ambiente](README.md#️-configuração-de-variáveis-de-ambiente) - Configuração do ambiente do sistema
 
-### 📚 命令参考
-- [📚 完整命令参考](README.md#-完整命令参考) - 所有可用命令的详细说明
-- [🔧 核心开发命令](README.md#-核心开发命令) - 项目创建、环境配置
-- [💻 代码生成与优化](README.md#-代码生成与优化) - 组件生成、代码优化
-- [🛡️ 质量保证命令](README.md#️-质量保证命令) - 代码审查、提交规范
-- [📊 项目管理命令](README.md#-项目管理命令) - 项目分析、任务管理
-- [🧠 智能系统命令](README.md#-智能系统命令) - AI增强功能
+### 📚 Referência de Comandos
+- [📚 Referência Completa de Comandos](README.md#-referência-completa-de-comandos) - Descrição detalhada de todos os comandos disponíveis
+- [🔧 Comandos Principais de Desenvolvimento](README.md#-comandos-principais-de-desenvolvimento) - Criação de projetos, configuração de ambiente
+- [💻 Geração e Otimização de Código](README.md#-geração-e-otimização-de-código) - Geração de componentes, otimização de código
+- [🛡️ Comandos de Garantia de Qualidade](README.md#️-comandos-de-garantia-de-qualidade) - Revisão de código, padrões de commit
+- [📊 Comandos de Gerenciamento de Projetos](README.md#-comandos-de-gerenciamento-de-projetos) - Análise de projetos, gerenciamento de tarefas
+- [🧠 Comandos do Sistema Inteligente](README.md#-comandos-do-sistema-inteligente) - Funcionalidades aprimoradas por IA
 
-### 🧾 规则元数据
-- [🧾 规则元数据字段说明](README.md#-规则元数据字段说明) - alwaysApply 字段语义与用法
+### 🧾 Metadados de Regras
+- [🧾 Explicação dos Campos de Metadados de Regras](README.md#-explicação-dos-campos-de-metadados-de-regras) - Semântica e uso do campo alwaysApply
 
-### 🔍 故障排除
-- [🔍 故障排除](README.md#-故障排除) - 常见问题解决方案
-- [🆘 技术支持](README.md#-技术支持) - 获取帮助的方式
+### 🔍 Solução de Problemas
+- [🔍 Solução de Problemas](README.md#-solução-de-problemas) - Soluções para problemas comuns
+- [🆘 Suporte Técnico](README.md#-suporte-técnico) - Como obter ajuda
 
-## 📋 文档整合说明
+## 📋 Explicação da Integração de Documentos
 
-为了提供更好的用户体验和避免信息重复，我们已将所有使用指南整合到主文档中：
+Para proporcionar uma melhor experiência do usuário e evitar duplicação de informações, integramos todos os guias de uso no documento principal:
 
-### ✅ 已整合的内容
-- ✅ **高级安装选项** → [README.md - 高级配置和使用](README.md#-高级配置和使用)
-- ✅ **自定义路径配置** → [README.md - 自定义路径配置](README.md#-自定义路径配置)
-- ✅ **批量部署方案** → [README.md - 批量部署方案](README.md#-批量部署方案)
-- ✅ **环境变量配置** → [README.md - 环境变量配置](README.md#️-环境变量配置)
-- ✅ **故障排除指南** → [README.md - 故障排除](README.md#-故障排除)
-- ✅ **完整命令参考** → [README.md - 完整命令参考](README.md#-完整命令参考)
+### ✅ Conteúdo Integrado
+- ✅ **Opções de Instalação Avançadas** → [README.md - Configuração e Uso Avançado](README.md#-configuração-e-uso-avançado)
+- ✅ **Configuração de Caminhos Personalizados** → [README.md - Configuração de Caminhos Personalizados](README.md#-configuração-de-caminhos-personalizados)
+- ✅ **Soluções de Implantação em Lote** → [README.md - Soluções de Implantação em Lote](README.md#-soluções-de-implantação-em-lote)
+- ✅ **Configuração de Variáveis de Ambiente** → [README.md - Configuração de Variáveis de Ambiente](README.md#️-configuração-de-variáveis-de-ambiente)
+- ✅ **Guia de Solução de Problemas** → [README.md - Solução de Problemas](README.md#-solução-de-problemas)
+- ✅ **Referência Completa de Comandos** → [README.md - Referência Completa de Comandos](README.md#-referência-completa-de-comandos)
 
-### 📚 其他重要文档
-- 📖 **详细安装教程** → [install-scripts/INSTALL-GUIDE.md](install-scripts/INSTALL-GUIDE.md)
-- 🎓 **完整学习指南** → [README.md](README.md)
-- 🔧 **MCP工具配置** → [docs/MCP-QUICK-START-GUIDE.md](docs/MCP-QUICK-START-GUIDE.md)
-- 🆘 **故障排除详解** → [docs/MCP-TROUBLESHOOTING-GUIDE.md](docs/MCP-TROUBLESHOOTING-GUIDE.md)
+### 📚 Outros Documentos Importantes
+- 📖 **Tutorial de Instalação Detalhado** → [install-scripts/INSTALL-GUIDE.md](install-scripts/INSTALL-GUIDE.md)
+- 🎓 **Guia de Aprendizado Completo** → [README.md](README.md)
+- 🔧 **Configuração de Ferramentas MCP** → [docs/MCP-QUICK-START-GUIDE.md](docs/MCP-QUICK-START-GUIDE.md)
+- 🆘 **Guia Detalhado de Solução de Problemas** → [docs/MCP-TROUBLESHOOTING-GUIDE.md](docs/MCP-TROUBLESHOOTING-GUIDE.md)
 
-## 🔧 高级安装选项
+## 🔧 Opções de Instalação Avançadas
 
-> **📖 完整安装教程**: 详细的安装脚本使用方法请参考 👉 **[📋 完整安装指南](install-scripts/INSTALL-GUIDE.md)** | **[中文版](install-scripts/INSTALL-GUIDE-CN.md)**
+> **📖 Tutorial de Instalação Completo**: Para métodos detalhados de uso dos scripts de instalação, consulte 👉 **[📋 Guia de Instalação Completo](install-scripts/INSTALL-GUIDE.md)** | **[Versão em Chinês](install-scripts/INSTALL-GUIDE-CN.md)**
 >
-> **🔥 核心特性**: 所有安装脚本现在使用**统一规则创建逻辑**，确保四个AI工具（Augment、Cursor、Claude、Trae）功能完全一致
+> **🔥 Características Principais**: Todos os scripts de instalação agora usam **lógica unificada de criação de regras**, garantindo que as quatro ferramentas de IA (Augment, Cursor, Claude, Trae) tenham funcionalidades completamente idênticas
 
-### 🎯 快速参考
+### 🎯 Referência Rápida
 
-| AI 工具类型  | 推荐场景         | 快速命令                                               | 核心特性 |
-| ------------ | ---------------- | ------------------------------------------------------ | ---------- |
-| **前端专用** | React/Vue 项目   | `install-scripts\[工具名]-frontend.bat "项目路径"`     | ✅ 统一规则创建 |
-| **后端专用** | API 开发、数据库 | `install-scripts\[工具名]-backend.bat "项目路径"`      | ✅ 统一规则创建 |
-| **全栈支持** | 复杂业务逻辑     | `install-scripts\install-ultra.bat "项目路径" fullstack` | ✅ 统一规则创建 |
+| Tipo de Ferramenta IA | Cenário Recomendado     | Comando Rápido                                          | Característica Principal |
+| -------------------- | ----------------------- | ------------------------------------------------------- | ------------------------ |
+| **Especializado em Frontend** | Projetos React/Vue    | `install-scripts\[nome-da-ferramenta]-frontend.bat "caminho-do-projeto"` | ✅ Criação unificada de regras |
+| **Especializado em Backend** | API, Desenvolvimento, Banco de Dados | `install-scripts\[nome-da-ferramenta]-backend.bat "caminho-do-projeto"` | ✅ Criação unificada de regras |
+| **Suporte Full Stack** | Lógica de Negócios Complexa | `install-scripts\install-ultra.bat "caminho-do-projeto" fullstack` | ✅ Criação unificada de regras |
 
-### 🔥 **核心改进：统一规则创建逻辑**
+### 🔥 **Melhoria Principal: Lógica Unificada de Criação de Regras**
 
-**重大突破**：现在所有AI工具使用**完全相同的规则内容**！
+**Grande Avanço**: Agora todas as ferramentas de IA usam **conteúdo de regras completamente idêntico**!
 
-- ✅ **功能完全一致** - Augment、Cursor、Claude、Trae四个工具功能完全相同
-- ✅ **规则内容统一** - 所有工具使用相同的文件组合顺序和内容
-- ✅ **可互相复制** - 规则文件可以在不同AI工具间通用
-- ✅ **一致性验证** - 通过`comprehensive-test-report.bat`工具确认规则一致性
+- ✅ **Funcionalidades Completamente Idênticas** - As quatro ferramentas Augment, Cursor, Claude e Trae têm funcionalidades completamente iguais
+- ✅ **Conteúdo de Regras Unificado** - Todas as ferramentas usam a mesma ordem e conteúdo de combinação de arquivos
+- ✅ **Copiáveis entre si** - Os arquivos de regras podem ser usados entre diferentes ferramentas de IA
+- ✅ **Verificação de Consistência** - Confirmação da consistência das regras através da ferramenta `comprehensive-test-report.bat`
 
-**核心统一规则创建逻辑**：
-- `install-ultra.bat` - 安装脚本
+**Lógica Principal de Criação Unificada de Regras**:
+- `install-ultra.bat` - Script de instalação
 
-## 📁 自定义路径配置
+## 📁 Configuração de Caminhos Personalizados
 
-> **📖 详细路径配置**: 完整的路径配置方法请参考 👉 **[📋 完整安装指南](install-scripts/INSTALL-GUIDE.md)** | **[中文版](install-scripts/INSTALL-GUIDE-CN.md)**
+> **📖 Configuração de Caminhos Detalhada**: Para métodos completos de configuração de caminhos, consulte 👉 **[📋 Guia de Instalação Completo](install-scripts/INSTALL-GUIDE.md)** | **[Versão em Chinês](install-scripts/INSTALL-GUIDE-CN.md)**
 
-### 🎯 路径类型概览
+### 🎯 Visão Geral dos Tipos de Caminhos
 
-| 路径类型     | 使用场景                   | 格式示例                    |
-| ------------ | -------------------------- | --------------------------- |
-| **相对路径** | rules 目录和项目在同一磁盘 | `..\my-project`             |
-| **绝对路径** | 跨磁盘或固定位置           | `"C:\Dev\MyApp"`            |
-| **网络路径** | 企业共享环境               | `"\\server\shared\project"` |
+| Tipo de Caminho | Cenário de Uso                  | Exemplo de Formato          |
+| --------------- | ------------------------------- | --------------------------- |
+| **Caminho Relativo** | Diretório rules e projeto no mesmo disco | `..\my-project`             |
+| **Caminho Absoluto** | Entre discos ou localização fixa | `"C:\Dev\MyApp"`            |
+| **Caminho de Rede** | Ambiente corporativo compartilhado | `"\\server\shared\project"` |
 
-> **💡 提示**: 路径包含空格时必须使用双引号
+> **💡 Dica**: Use aspas duplas quando o caminho contiver espaços
 
-## 🚀 批量部署方案
+## 🚀 Soluções de Implantação em Lote
 
-> **🏢 企业场景**: 适合团队统一配置、多项目管理
+> **🏢 Cenário Corporativo**: Adequado para configuração unificada de equipes, gerenciamento de múltiplos projetos
 
-### 📖 详细安装教程
+### 📖 Tutorial de Instalação Detalhado
 
-**完整的批量安装脚本和企业级部署方案，请参考：**
+**Scripts completos de instalação em lote e soluções de implantação corporativa, consulte:**
 
-👉 **[📋 完整安装指南](install-scripts/INSTALL-GUIDE.md)** | **[中文版](install-scripts/INSTALL-GUIDE-CN.md)**
+👉 **[📋 Guia de Instalação Completo](install-scripts/INSTALL-GUIDE.md)** | **[Versão em Chinês](install-scripts/INSTALL-GUIDE-CN.md)**
 
-该指南包含：
+Este guia inclui:
 
-- 🔧 **傻瓜式安装教程** - 3分钟完成安装
-- 🏢 **企业级批量部署** - 多项目统一配置
-- 🛡️ **安全检查脚本** - 自动检测项目类型
-- ✅ **实测验证结果** - 所有脚本 100%通过测试
-- 🎯 **54个规则文件（.mdc）** - 完整的规则体系覆盖（31个全局规则+23个项目规则）
-- 🎯 **按项目类型分类安装** - 前端/后端/全栈自动识别
+- 🔧 **Tutorial de Instalação Simplificado** - Conclua em 3 minutos
+- 🏢 **Implantação em Lote Corporativa** - Configuração unificada para múltiplos projetos
+- 🛡️ **Scripts de Verificação de Segurança** - Detecção automática do tipo de projeto
+- ✅ **Resultados de Verificação Prática** - Todos os scripts 100% aprovados nos testes
+- 🎯 **54 Arquivos de Regras (.mdc)** - Cobertura completa do sistema de regras (31 regras globais + 23 regras de projeto)
+- 🎯 **Instalação por Tipo de Projeto** - Reconhecimento automático de frontend/backend/full stack
 
-### 🚀 快速批量安装
+### 🚀 Instalação Rápida em Lote
 
 ```cmd
-# 一键安装到单个项目
-install-scripts\install-ultra.bat "你的项目路径" fullstack
+# Instalação com um clique para um único projeto
+install-scripts\install-ultra.bat "seu-caminho-do-projeto" fullstack
 
-# 批量安装到多个项目（详细脚本见完整指南）
-# 支持自动检测项目类型和智能配置
+# Instalação em lote para múltiplos projetos (scripts detalhados no guia completo)
+# Suporte para detecção automática do tipo de projeto e configuração inteligente
 ```
 
-## ⚙️ 环境变量配置
+## ⚙️ Configuração de Variáveis de Ambiente
 
-> **🔧 高级配置**: 通过环境变量自定义 AI 规则行为和性能
+> **🔧 Configuração Avançada**: Personalize o comportamento e desempenho das regras de IA através de variáveis de ambiente
 
-### 🎯 核心环境变量
+### 🎯 Variáveis de Ambiente Principais
 
-| 变量名           | 默认值      | 说明             | 示例                              |
-| ---------------- | ----------- | ---------------- | --------------------------------- |
-| `AI_RULES_PATH`  | `.ai-rules` | 规则文件存储路径 | `D:\MyRules`                      |
-| `AI_RULES_LANG`  | `zh-CN`     | 默认语言设置     | `en-US`, `zh-CN`                  |
-| `AI_RULES_MODE`  | `standard`  | 运行模式         | `debug`, `standard`, `enterprise` |
-| `AI_RULES_CACHE` | `true`      | 启用缓存加速     | `true`, `false`                   |
+| Nome da Variável    | Valor Padrão | Descrição                | Exemplo                           |
+| ------------------- | ------------ | ------------------------ | --------------------------------- |
+| `AI_RULES_PATH`     | `.ai-rules`  | Caminho de armazenamento de arquivos de regras | `D:\MyRules`                      |
+| `AI_RULES_LANG`    | `zh-CN`      | Configuração de idioma padrão | `en-US`, `zh-CN`                  |
+| `AI_RULES_MODE`    | `standard`   | Modo de operação          | `debug`, `standard`, `enterprise` |
+| `AI_RULES_CACHE`   | `true`       | Habilitar aceleração de cache | `true`, `false`                   |
 
-### 🔧 配置方法
+### 🔧 Métodos de Configuração
 
-> **📖 详细配置教程**: 完整的环境变量配置方法请参考 👉 **[🔧 环境配置指南](docs/ENVIRONMENT-SETUP.md)**
+> **📖 Tutorial de Configuração Detalhado**: Para métodos completos de configuração de variáveis de ambiente, consulte 👉 **[🔧 Guia de Configuração de Ambiente](docs/ENVIRONMENT-SETUP.md)**
 
-| 配置方式            | 适用场景     | 快速示例                                     |
-| ------------------- | ------------ | -------------------------------------------- |
-| **PowerShell 临时** | 当前会话测试 | `$env:AI_RULES_PATH = "路径"`                |
-| **PowerShell 永久** | 用户级配置   | `[Environment]::SetEnvironmentVariable(...)` |
-| **CMD 方式**        | 传统命令行   | `setx AI_RULES_PATH "路径"`                  |
+| Método de Configuração | Cenário de Uso      | Exemplo Rápido                               |
+| ---------------------- | ------------------- | -------------------------------------------- |
+| **PowerShell Temporário** | Teste de sessão atual | `$env:AI_RULES_PATH = "caminho"`             |
+| **PowerShell Permanente** | Configuração de nível de usuário | `[Environment]::SetEnvironmentVariable(...)` |
+| **Método CMD**         | Linha de comando tradicional | `setx AI_RULES_PATH "caminho"`               |
 
-### ✅ 快速验证
+### ✅ Verificação Rápida
 
 ```powershell
-# 检查当前配置
+# Verificar configuração atual
 echo $env:AI_RULES_PATH
 ```
 
-## 🛠️ 核心功能
+## 🛠️ Funcionalidades Principais
 
-### 🎨 智能模板系统
+### 🎨 Sistema de Templates Inteligentes
 
-> **📖 详细模板指南**: 查看 [TEMPLATES-GUIDE.md](tutorials/TEMPLATES-GUIDE.md) 获取完整的模板系统使用说明
+> **📖 Guia Detalhado de Templates**: Consulte [TEMPLATES-GUIDE.md](tutorials/TEMPLATES-GUIDE.md) para obter instruções completas de uso do sistema de templates
 
-#### 🚀 快速开始
+#### 🚀 Início Rápido
 
 ```bash
-# 初始化新项目模板
-/init-project [项目类型]    # 自动创建项目结构和配置
+# Inicializar template de novo projeto
+/init-project [tipo-do-projeto]    # Cria automaticamente estrutura e configuração do projeto
 
-# 归档项目模板
-/archive-project           # 智能归档项目文件和文档
+# Template de arquivamento de projeto
+/archive-project                   # Arquivamento inteligente de arquivos e documentação do projeto
 
-# 自定义模板
-/create-template [名称]    # 创建自定义项目模板
+# Template personalizado
+/create-template [nome]            # Criar template de projeto personalizado
 ```
 
-#### 🎯 模板类型
+#### 🎯 Tipos de Templates
 
-| 模板类型 | 适用场景 | 包含内容 |
-|---------|---------|----------|
-| **项目初始化** | 新项目创建 | 目录结构、配置文件、README |
-| **项目归档** | 项目完成后 | 文档整理、代码清理、部署配置 |
-| **自定义模板** | 特定需求 | 用户定义的项目结构和配置 |
+| Tipo de Template | Cenário de Uso | Conteúdo Incluído |
+|-----------------|----------------|-------------------|
+| **Inicialização de Projeto** | Criação de novo projeto | Estrutura de diretórios, arquivos de configuração, README |
+| **Arquivamento de Projeto** | Após conclusão do projeto | Organização de documentação, limpeza de código, configuração de implantação |
+| **Template Personalizado** | Requisitos específicos | Estrutura e configuração de projeto definida pelo usuário |
 
-#### ✨ 核心特性
+#### ✨ Características Principais
 
-- 🎯 **智能变量替换** - 自动替换项目名称、作者、日期等
-- 🔧 **条件逻辑** - 根据项目类型生成不同内容
-- 📁 **目录结构** - 自动创建标准化项目结构
-- 🔄 **可扩展性** - 支持自定义模板和变量
+- 🎯 **Substituição Inteligente de Variáveis** - Substitui automaticamente nome do projeto, autor, data, etc.
+- 🔧 **Lógica Condicional** - Gera conteúdo diferente com base no tipo de projeto
+- 📁 **Estrutura de Diretórios** - Cria automaticamente estrutura de projeto padronizada
+- 🔄 **Extensibilidade** - Suporte a templates e variáveis personalizadas
 
-### ⚡ 主要命令
+### ⚡ Comandos Principais
 
-#### 📋 完整命令参考
+#### 📋 Referência Completa de Comandos
 
-> **📚 详细命令列表**: 查看 [COMMANDS-REFERENCE.md](COMMANDS-REFERENCE.md) 获取所有命令的完整说明 (建议先完成基础配置)
+> **📚 Lista Detalhada de Comandos**: Consulte [COMMANDS-REFERENCE.md](COMMANDS-REFERENCE.md) para obter a descrição completa de todos os comandos (recomenda-se concluir a configuração básica primeiro)
 
-#### 🎯 快速命令
+#### 🎯 Comandos Rápidos
 
 ```bash
-# 开发工作流
-/frontend-dev    # 前端开发
-/backend-dev     # 后端开发
-/component       # 创建组件
-/api-design      # API设计
+# Fluxo de trabalho de desenvolvimento
+/frontend-dev    # Desenvolvimento frontend
+/backend-dev     # Desenvolvimento backend
+/component       # Criar componente
+/api-design      # Design de API
 
-# 代码管理
-/commit          # 标准化提交（支持快速模式 --fast；`/commit-fast` 为别名）
-/code-review     # 代码审查
-/bug-fix         # Bug修复
-/feedback        # 智能反馈
+# Gerenciamento de código
+/commit          # Commit padronizado (suporte ao modo rápido --fast; `/commit-fast` é um alias)
+/code-review     # Revisão de código
+/bug-fix         # Correção de bugs
+/feedback        # Feedback inteligente
 
-# 中文智能模式
+# Modo inteligente em chinês
 /理解 /方案 /执行 /验证 /纠错 /辅助
 ```
 
-### 🔧 MCP 工具集成配置
+### 🔧 Configuração de Integração de Ferramentas MCP
 
-**配置方式选择：**
+**Opções de Método de Configuração:**
 
-- **自动配置**：使用安装脚本（推荐新手）
+- **Configuração Automática**: Use scripts de instalação (recomendado para iniciantes)
 
-  > **⚠️ 重要提醒**：使用 MCP 工具安装脚本前，建议先阅读 **[📋 安装脚本使用说明](mcp-scripts/安装脚本使用说明.md)** 了解详细的安装方法和注意事项。
+  > **⚠️ Aviso Importante**: Antes de usar os scripts de instalação de ferramentas MCP, recomenda-se ler **[📋 Instruções de Uso dos Scripts de Instalação](mcp-scripts/安装脚本使用说明.md)** para entender os métodos de instalação detalhados e precauções.
 
-  - 推荐方法：双击运行 `mcp-scripts/run-powershell-installer.bat`
-    - 详细步骤：1) 按 Win+E 打开文件管理器 → 2) 导航到 mcp-scripts 文件夹 → 3) 找到 run-powershell-installer.bat → 4) 双击执行
-    - 自动生成：脚本会在 MCP-Tools 文件夹下自动生成 `mcp-config.json` 配置文件
-  - 手动执行：在 PowerShell 中运行 `install-mcp-tools-enhanced-final.ps1`
+  - Método recomendado: Clique duas vezes em `mcp-scripts/run-powershell-installer.bat`
+    - Passos detalhados: 1) Pressione Win+E para abrir o explorador de arquivos → 2) Navegue até a pasta mcp-scripts → 3) Encontre run-powershell-installer.bat → 4) Clique duas vezes para executar
+    - Geração automática: O script gerará automaticamente o arquivo de configuração `mcp-config.json` na pasta MCP-Tools
+  - Execução manual: Execute `install-mcp-tools-enhanced-final.ps1` no PowerShell
 
-  > **🚨 安装后重要**：执行 MCP 安装脚本后，**强烈建议完整阅读** [📋 MCP 工具详细配置指南](docs/MCP-DETAILED-CONFIG-GUIDE.md) 以确保 MCP 功能正常使用！
+  > **🚨 Importante após instalação**: Após executar o script de instalação MCP, **é altamente recomendável ler completamente** [📋 Guia de Configuração Detalhada de Ferramentas MCP](docs/MCP-DETAILED-CONFIG-GUIDE.md) para garantir que as funcionalidades MCP funcionem normalmente!
 
-- **手动配置**：完全自定义（适合高级用户）
-  - 参考：[MCP 详细配置指南](docs/MCP-DETAILED-CONFIG-GUIDE.md)
+- **Configuração Manual**: Personalização completa (adequado para usuários avançados)
+  - Referência: [Guia de Configuração Detalhada MCP](docs/MCP-DETAILED-CONFIG-GUIDE.md)
 
-**MCP 工具功能：**
+**Funcionalidades das Ferramentas MCP:**
 
-- **💬 反馈增强** - 智能反馈收集和实时交互
-- **📁 文件系统** - 自动化文件操作和项目管理
-- **🧠 记忆管理** - 上下文保存和智能检索
-- **🐙 GitHub 集成** - 仓库管理和问题分析
+- **💬 Feedback Aprimorado** - Coleta de feedback inteligente e interação em tempo real
+- **📁 Sistema de Arquivos** - Operações de arquivo automatizadas e gerenciamento de projetos
+- **🧠 Gerenciamento de Memória** - Salvamento de contexto e recuperação inteligente
+- **🐙 Integração GitHub** - Gerenciamento de repositórios e análise de problemas
 
-### 🔄 MCP 跨平台同步功能
+### 🔄 Funcionalidade de Sincronização Multiplataforma MCP
 
-**功能概述：**
-MCP跨平台同步工具 (`mcp-cross-platform-sync.ps1`) 可以在不同AI开发平台之间同步MCP服务器配置，确保所有平台使用一致的配置。
+**Visão Geral da Funcionalidade:**
+A ferramenta de sincronização multiplataforma MCP (`mcp-cross-platform-sync.ps1`) pode sincronizar configurações de servidores MCP entre diferentes plataformas de desenvolvimento de IA, garantindo que todas as plataformas usem configurações consistentes.
 
-**支持的平台：**
-- ✅ **Trae AI** - 智能代码助手
-- ✅ **Cursor IDE** - AI驱动的代码编辑器  
-- ✅ **OpenAI Codex** - OpenAI的代码生成平台
+**Plataformas Suportadas:**
+- ✅ **Trae AI** - Assistente de código inteligente
+- ✅ **Cursor IDE** - Editor de código acionado por IA  
+- ✅ **OpenAI Codex** - Plataforma de geração de código da OpenAI
 
-**核心功能：**
-- 🔍 **自动检测** - 发现已安装的AI平台及其配置状态
-- 🔄 **配置同步** - 在多个平台间同步MCP服务器配置
-- 🛡️ **安全备份** - 同步前自动备份原有配置
-- 📊 **状态监控** - 实时查看各平台的配置状态
+**Funcionalidades Principais:**
+- 🔍 **Detecção Automática** - Descobre plataformas de IA instaladas e seu status de configuração
+- 🔄 **Sincronização de Configuração** - Sincroniza configurações de servidores MCP entre múltiplas plataformas
+- 🛡️ **Backup Seguro** - Faz backup automático das configurações originais antes da sincronização
+- 📊 **Monitoramento de Status** - Visualiza o status de configuração de cada plataforma em tempo real
 
-**快速使用：**
+**Uso Rápido:**
 ```powershell
-# 检测所有已安装的AI平台
+# Detectar todas as plataformas de IA instaladas
 .\mcp-cross-platform-sync.ps1 detect
 
-# 从Trae AI同步配置到OpenAI Codex
+# Sincronizar configurações do Trae AI para OpenAI Codex
 .\mcp-cross-platform-sync.ps1 sync -SourcePlatform "Trae" -TargetPlatforms "OpenAICodex"
 
-# 预览同步操作（推荐）
+# Visualizar operação de sincronização (recomendado)
 .\mcp-cross-platform-sync.ps1 sync -SourcePlatform "Trae" -TargetPlatforms "OpenAICodex" -DryRun
 ```
 
-**使用场景：**
-- 🆕 **新平台配置** - 快速为新安装的AI平台配置MCP工具
-- 🔄 **配置标准化** - 确保所有平台使用相同的MCP配置
-- 🔧 **配置迁移** - 在不同AI平台间迁移MCP配置
+**Cenários de Uso:**
+- 🆕 **Configuração de Nova Plataforma** - Configurar rapidamente ferramentas MCP para novas plataformas de IA instaladas
+- 🔄 **Padronização de Configuração** - Garantir que todas as plataformas usem a mesma configuração MCP
+- 🔧 **Migração de Configuração** - Migrar configurações MCP entre diferentes plataformas de IA
 
-> **💡 提示**: 详细的跨平台同步使用方法请参考 [📋 安装脚本使用说明](mcp-scripts/安装脚本使用说明.md) 中的"MCP跨平台同步功能"部分。
+> **💡 Dica**: Para métodos detalhados de uso da sincronização multiplataforma, consulte a seção "Funcionalidade de Sincronização Multiplataforma MCP" em [📋 Instruções de Uso dos Scripts de Instalação](mcp-scripts/安装脚本使用说明.md).
 
-## 🎯 使用场景
+## 🎯 Cenários de Uso
 
-### 👨‍💻 个人开发者
+### � Início Rápido
 
-```cmd
-# 选择单个AI工具
-install-scripts\install-ultra.bat "..\你的项目目录" frontend
-# 使用: /frontend-dev, /component, /commit
+#### 1️⃣ Desenvolvedor Individual
+
+**Cenário:** Configuração rápida de ambiente de desenvolvimento pessoal
+
+```bash
+# 1. Baixar e extrair Rules 2.6.0
+# 2. Executar script de instalação
+install-scripts\install-ultra.bat "C:\MyProjects" fullstack
+
+# 3. Verificar instalação
+cd C:\MyProjects
+/init-project web-app
 ```
 
-### 👥 团队协作
+#### 2️⃣ Projeto de Equipe
 
-```cmd
-# 一键安装支持所有AI工具
-install-scripts\install-ultra.bat ..\你的项目目录 frontend
-# 团队成员可以使用不同AI工具，获得统一体验
+**Cenário:** Padronização de normas de desenvolvimento da equipe
+
+```bash
+# 1. Configurar variáveis de ambiente
+$env:AI_RULES_PATH = "D:\TeamRules"
+
+# 2. Instalação em lote
+install-scripts\batch-install.ps1 -ProjectPath "D:\Projects"
+
+# 3. Verificar configuração
+/commit --fast "func: adicionar autenticação de usuário"
 ```
 
-### 🏢 企业级
+#### 3️⃣ Implantação Corporativa
 
-```cmd
-# 全栈支持 + 完整工具链
-install-scripts\install-ultra.bat ..\你的项目目录 fullstack
-# 支持前端、后端、全栈开发，统一的企业级标准
+**Cenário:** Implantação em larga escala e padronização
+
+```powershell
+# 1. Preparar script de implantação
+.\deployment\prepare-enterprise-deploy.ps1
+
+# 2. Executar implantação em lote
+.\deployment\execute-batch-deploy.ps1 -TargetPath "\\corp-server\dev-projects"
+
+# 3. Gerar relatório de implantação
+.\deployment\generate-deployment-report.ps1 -OutputFormat HTML
 ```
 
-## 💡 最佳实践建议
+## 💡 Sugestões de Melhores Práticas
 
-### 🎯 项目组织最佳实践
+### 🎯 Melhores Práticas de Organização de Projeto
 
-**📁 目录结构建议**
+**📁 Sugestão de Estrutura de Diretórios**
 
 ```
-项目根目录/
-├── .ai-rules/          # AI规则配置
-├── docs/              # 项目文档
-├── src/               # 源代码
-├── tests/             # 测试文件
-└── package.json       # 项目配置
+Diretório raiz do projeto/
+├── .ai-rules/          # Configuração de regras de IA
+├── docs/              # Documentação do projeto
+├── src/               # Código fonte
+├── tests/             # Arquivos de teste
+└── package.json       # Configuração do projeto
 ```
 
-**🔧 开发工作流建议**
+**🔧 Sugestões de Fluxo de Trabalho de Desenvolvimento**
 
-- 使用 `/commit` 命令生成规范的提交信息
-- 定期使用 `/review` 进行代码审查
-- 项目启动前运行环境检查脚本
+- Use o comando `/commit` para gerar mensagens de commit padronizadas
+- Use `/review` regularmente para revisão de código
+- Execute scripts de verificação de ambiente antes de iniciar o projeto
 
-**👥 团队协作建议**
+**👥 Sugestões de Colaboração em Equipe**
 
-- 统一使用相同的 AI 规则版本
-- 建立代码规范和最佳实践文档
-- 定期同步规则更新
+- Use uniformemente a mesma versão de regras de IA
+- Estabeleça documentação de padrões de código e melhores práticas
+- Sincronize atualizações de regras regularmente
 
-### 🚀 性能优化建议
+### 🚀 Sugestões de Otimização de Desempenho
 
-**⚡ 提升响应速度**
+**⚡ Melhorar Velocidade de Resposta**
 
-- 使用本地 npm 镜像源
-- 配置合适的 Node.js 版本
-- 定期清理 npm 缓存
+- Use mirror local do npm
+- Configure a versão apropriada do Node.js
+- Limpe o cache do npm regularmente
 
-**💾 资源管理**
+**💾 Gerenciamento de Recursos**
 
-- 避免在大型项目根目录安装
-- 使用项目特定的配置文件
-- 定期备份重要配置
+- Evite instalação no diretório raiz de projetos grandes
+- Use arquivos de configuração específicos do projeto
+- Faça backup de configurações importantes regularmente
 
-## 🏆 质量保证
+## 🏆 Garantia de Qualidade
 
-### ✅ 测试认证
+### ✅ Certificação de Testes
 
-- **PERFECT (A++)评级** - 企业级标准
-- **5/5 脚本通过** - 100%测试通过率
-- **3-5/5 工具验证** - Node.js MCP 工具为 3-4 个（server-memory 可选），Python 工具 1 个；整体可用性验证通过
-- **完整文档** - 从入门到故障排除
+- **Classificação PERFECT (A++)** - Padrão corporativo
+- **5/5 scripts aprovados** - Taxa de aprovação de testes de 100%
+- **3-5/5 ferramentas validadas** - Ferramentas Node.js MCP: 3-4 (server-memory opcional), Ferramentas Python: 1; Validação de usabilidade geral aprovada
+- **100% funcionalidades validadas** - Todas as funcionalidades principais funcionando normalmente
+- **Estabilidade corporativa** - Suporte a operação 7×24 horas
 
-### 🛡️ 企业级标准
+### 🔍 Relatórios de Testes
 
-- UTF-8 编码支持、完善错误处理
-- 路径安全处理、变量隔离保护
+- **📊 Relatório de Testes Abrangente**: [Ver relatório completo de testes](test-reports/comprehensive-test-report.md)
+- **✅ Relatório de Validação de Funcionalidades**: [Detalhes de testes funcionais](test-reports/functional-test-report.md)
+- **⚡ Relatório de Testes de Desempenho**: [Testes de benchmark de desempenho](test-reports/performance-test-report.md)
 
-## 🔍 故障排除指南
+## 🆘 Solução de Problemas
 
-### 常见问题
+### ❓ Problemas Comuns
 
-1. **命令不识别** → 检查规则文件位置
-2. **反馈超时** → 检查 MCP 工具状态
-3. **安装失败** → 查看 [故障排除指南](docs/MCP-TROUBLESHOOTING-GUIDE.md)
+#### 1️⃣ Problemas de Instalação
 
-### 获取帮助
+**Problema**: Script de instalação não pode ser executado
+**Solução**: 
+- Verificar política de execução do PowerShell: `Get-ExecutionPolicy`
+- Se necessário, definir como RemoteSigned: `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`
 
-- 🚀 [MCP 快速入门指南](docs/MCP-QUICK-START-GUIDE.md)
-- 🔧 [MCP 详细配置指南](docs/MCP-DETAILED-CONFIG-GUIDE.md)
-- 📖 [MCP 故障排除指南](docs/MCP-TROUBLESHOOTING-GUIDE.md)
-- 🤖 使用 `/feedback` 命令获取实时帮助
+**Problema**: Variáveis de ambiente não entram em vigor
+**Solução**:
+- Reiniciar terminal ou IDE
+- Verificar se o nome da variável está escrito corretamente
+
+#### 2️⃣ Problemas de Funcionalidade
+
+**Problema**: Ferramentas MCP não conseguem conectar
+**Solução**:
+- Verificar se o servidor MCP está em execução: `netstat -an | findstr :8080`
+- Validar se o caminho do arquivo de configuração está correto
+
+**Problema**: Comando não reconhecido
+**Solução**:
+- Confirmar que foi instalado corretamente no diretório do projeto
+- Verificar se a ferramenta de IA suporta comandos personalizados
+
+#### 3️⃣ Problemas de Desempenho
+
+**Problema**: Velocidade de resposta lenta
+**Solução**:
+- Limpar cache do npm: `npm cache clean --force`
+- Verificar status da conexão de rede
+
+### 📞 Suporte Técnico
+
+- **📋 Relatório de Problemas**: [Criar Issue](https://github.com/your-repo/issues)
+- **💬 Suporte da Comunidade**: [Participar da discussão](https://github.com/your-repo/discussions)
+- **🔧 Ajuda Rápida**: Ver [Guia de Solução de Problemas](troubleshooting/TROUBLESHOOTING-GUIDE.md)
+
+## 🎉 Registro de Alterações
+
+### 📋 Versão 2.6.0 (versão atual)
+
+**✨ Novas Funcionalidades**
+- Nova ferramenta de sincronização multiplataforma MCP
+- Suporte aprimorado para implantação corporativa
+- Sistema de templates melhorado
+
+**🐛 Correções de Bugs**
+- Corrigido problema de configuração de variáveis de ambiente
+- Estabilidade de scripts de instalação otimizada
+
+**⚡ Otimizações de Desempenho**
+- Redução no uso de memória
+- Melhoria na velocidade de inicialização
+
+### 🔄 Histórico de Versões
+
+- **2.5.0**: Versão estável de funcionalidades básicas
+- **2.4.0**: Versão inicial de lançamento
+
+> **📖 Registro Completo de Alterações**: Ver [CHANGELOG.md](CHANGELOG.md)
+
+### 🛡️ Padrões Corporativos
+
+- Suporte a codificação UTF-8, tratamento de erros completo
+- Processamento seguro de caminhos, proteção de isolamento de variáveis
+
+## 🔍 Guia de Solução de Problemas
+
+### Problemas Comuns
+
+1. **Comando não reconhecido** → Verificar localização do arquivo de regras
+2. **Timeout de feedback** → Verificar status das ferramentas MCP
+3. **Falha na instalação** → Consultar [Guia de Solução de Problemas](docs/MCP-TROUBLESHOOTING-GUIDE.md)
+
+### Obter Ajuda
+
+- 🚀 [Guia de Início Rápido MCP](docs/MCP-QUICK-START-GUIDE.md)
+- 🔧 [Guia de Configuração Detalhada MCP](docs/MCP-DETAILED-CONFIG-GUIDE.md)
+- 📖 [Guia de Solução de Problemas MCP](docs/MCP-TROUBLESHOOTING-GUIDE.md)
+- 🤖 Use o comando `/feedback` para obter ajuda em tempo real
 
 ---
 
