@@ -1,12 +1,12 @@
 ---
 type: "always_apply"
-description: "Enhanced feedback mechanism with 1-hour timeout - 增强反馈机制，1小时超时"
+description: "Mecanismo de feedback aprimorado com timeout de 1 hora"
 globs: ["**/*"]
 alwaysApply: true
 enforcement: mandatory
 priority: 961
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -17,244 +17,244 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adição do sistema de gerenciamento de versão"
+      - "Padronização da estrutura do arquivo de regras"
 ---
 
-# 🤖 Enhanced Feedback Mechanism - 增强反馈机制
+# 🤖 Mecanismo de Feedback Aprimorado
 
-专为复杂开发任务设计的智能反馈系统，支持1小时超时的深度交互。
+Sistema de feedback inteligente projetado para tarefas de desenvolvimento complexas, suportando interação profunda com timeout de 1 hora.
 
-## 🎯 核心原则
+## 🎯 Princípios Fundamentais
 
-1. **统一调用方法** - 只使用 `mcp_mcp-feedback-enhanced_interactive_feedback` 工具
-2. **简化触发机制** - 明确的触发条件，避免过度复杂化
-3. **用户体验优先** - 确保反馈界面能够正常启动和使用
-4. **持续迭代** - 根据反馈持续改进和优化
+1. **Método de Chamada Unificado** - Usar apenas a ferramenta `mcp_mcp-feedback-enhanced_interactive_feedback`
+2. **Mecanismo de Disparo Simplificado** - Condições de disparo claras, evitando complexidade excessiva
+3. **Experiência do Usuário em Primeiro Lugar** - Garantir que a interface de feedback possa ser iniciada e usada normalmente
+4. **Iteração Contínua** - Melhoria e otimização contínuas baseadas no feedback
 
-## 🚀 Commands - 命令
+## 🚀 Comandos
 
-- `/feedback` - 手动触发反馈
-- `/feedback-config` - 配置反馈设置
-- `/feedback-history` - 查看反馈历史
-- `/feedback-summary` - 生成工作摘要
+- `/feedback` - Acionar feedback manualmente
+- `/feedback-config` - Configurar definições de feedback
+- `/feedback-history` - Ver histórico de feedback
+- `/feedback-summary` - Gerar resumo de trabalho
 
-### 用户语言触发命令
-当用户使用以下自然语言时，自动调用 `mcp_mcp-feedback-enhanced_interactive_feedback`：
-- "调用反馈程序"
-- "打开反馈界面"
-- "启动反馈系统"
-- "开启反馈功能"
+### Comandos de Disparo por Linguagem Natural
+Chamar automaticamente `mcp_mcp-feedback-enhanced_interactive_feedback` quando o usuário usar a seguinte linguagem natural:
+- "Chamar programa de feedback"
+- "Abrir interface de feedback"
+- "Iniciar sistema de feedback"
+- "Ativar função de feedback"
 
-## ✨ Features - 功能特性
+## ✨ Funcionalidades
 
-### 🕐 Extended Timeout - 扩展超时
-- **1小时超时** - 充足时间进行复杂架构讨论
-- **自动保存** - 防止长时间讨论中的数据丢失
-- **断点续传** - 支持中断后继续讨论
+### 🕐 Timeout Estendido (Extended Timeout)
+- **Timeout de 1 hora** - Tempo suficiente para discussões de arquitetura complexas
+- **Salvamento Automático** - Prevenção de perda de dados durante longas discussões
+- **Retomada de Ponto de Interrupção** - Suporte para continuar a discussão após interrupção
 
-### 📝 Rich Text Support - 富文本支持
-- **代码片段** - 语法高亮的代码展示
-- **架构图** - Mermaid图表支持
-- **配置文件** - 格式化的配置展示
-- **截图支持** - 图片和截图集成
+### 📝 Suporte a Rich Text
+- **Snippets de Código** - Exibição de código com destaque de sintaxe
+- **Diagramas de Arquitetura** - Suporte a diagramas Mermaid
+- **Arquivos de Configuração** - Exibição de configuração formatada
+- **Suporte a Capturas de Tela** - Integração de imagens e capturas de tela
 
-### 🔄 Real-time Interaction - 实时交互
-- **双向沟通** - AI与用户的实时对话
-- **进度跟踪** - 任务进度实时更新
-- **决策记录** - 重要决策自动记录
+### 🔄 Interação em Tempo Real
+- **Comunicação Bidirecional** - Diálogo em tempo real entre AI e usuário
+- **Rastreamento de Progresso** - Atualização de progresso da tarefa em tempo real
+- **Registro de Decisões** - Registro automático de decisões importantes
 
-## 📋 Trigger Conditions - 触发条件
+## 📋 Condições de Disparo
 
-### 🔍 详细模式特殊规则
-当用户设置了详细模式时，每次会话开始时自动调用反馈增强界面，确保用户对每个开发步骤都有充分的参与和确认。
+### 🔍 Regra Especial de Modo Detalhado
+Quando o usuário define o modo detalhado, a interface de feedback aprimorado é chamada automaticamente no início de cada sessão, garantindo participação e confirmação total do usuário em cada etapa do desenvolvimento.
 
-### 自动触发场景
+### Cenários de Disparo Automático
 
-#### 🔍 需求不明确
-**触发条件**: 用户描述模糊或存在歧义
-**示例**: "帮我做个网站" (缺少具体需求)
-**反馈内容**: 
-- 项目类型和规模
-- 技术栈偏好
-- 功能需求清单
-- 时间和预算约束
+#### 🔍 Requisitos Pouco Claros
+**Condição de Disparo**: Descrição do usuário é vaga ou ambígua
+**Exemplo**: "Faça um site para mim" (falta de requisitos específicos)
+**Conteúdo do Feedback**: 
+- Tipo e escala do projeto
+- Preferência de stack tecnológica
+- Lista de requisitos funcionais
+- Restrições de tempo e orçamento
 
-#### 🎯 重大决策
-**触发条件**: 架构选择、技术栈选型等关键决策
-**示例**: 微服务 vs 单体架构选择
-**反馈内容**:
-- 项目规模和团队大小
-- 性能和扩展性要求
-- 运维能力和经验
-- 长期维护考虑
+#### 🎯 Decisões Importantes
+**Condição de Disparo**: Decisões chave como escolha de arquitetura, seleção de stack tecnológica
+**Exemplo**: Escolha entre Microsserviços vs Arquitetura Monolítica
+**Conteúdo do Feedback**:
+- Escala do projeto e tamanho da equipe
+- Requisitos de desempenho e escalabilidade
+- Capacidade e experiência de operações
+- Considerações de manutenção a longo prazo
 
-#### ✅ 方案完成
-**触发条件**: 技术方案设计完成，需用户确认
-**示例**: 数据库设计方案完成
-**反馈内容**:
-- 表结构设计审查
-- 索引策略确认
-- 性能预期评估
-- 扩展性考虑
+#### ✅ Conclusão de Projeto
+**Condição de Disparo**: Design da solução técnica concluído, requer confirmação do usuário
+**Exemplo**: Design de banco de dados concluído
+**Conteúdo do Feedback**:
+- Revisão do design da estrutura da tabela
+- Confirmação da estratégia de índice
+- Avaliação de expectativa de desempenho
+- Considerações de escalabilidade
 
-#### 🎉 执行完成
-**触发条件**: 代码实现完成，需用户验收
-**示例**: API接口开发完成
-**反馈内容**:
-- 功能测试结果
-- 性能指标达成
-- 安全检查通过
-- 文档完整性
+#### 🎉 Execução Concluída
+**Condição de Disparo**: Implementação de código concluída, requer aceitação do usuário
+**Exemplo**: Desenvolvimento de interface da API concluído
+**Conteúdo do Feedback**:
+- Resultados de testes funcionais
+- Atingimento de indicadores de desempenho
+- Verificação de segurança aprovada
+- Integridade da documentação
 
-#### 🚨 错误发生
-**触发条件**: 遇到无法自动解决的问题
-**示例**: 依赖冲突或环境问题
-**反馈内容**:
-- 错误详细信息
-- 可能的解决方案
-- 需要的用户操作
-- 替代方案建议
+#### 🚨 Ocorrência de Erro
+**Condição de Disparo**: Encontro de problemas que não podem ser resolvidos automaticamente
+**Exemplo**: Conflito de dependência ou problema de ambiente
+**Conteúdo do Feedback**:
+- Informações detalhadas do erro
+- Possíveis soluções
+- Ação do usuário necessária
+- Sugestão de solução alternativa
 
-## 🖥️ MCP Desktop Feedback Invocation - 桌面反馈程序调用
+## 🖥️ Chamada do Programa de Feedback de Desktop MCP
 
-### 统一调用方法
+### Método de Chamada Unificado
 
-**唯一正确的调用方式**: 使用 `mcp_mcp-feedback-enhanced_interactive_feedback` 工具
+**Única maneira correta de chamar**: Usar a ferramenta `mcp_mcp-feedback-enhanced_interactive_feedback`
 
-#### 调用规范
-1. **工具名称**: `mcp_mcp-feedback-enhanced_interactive_feedback`
-2. **必需参数**:
-   - `project_directory`: 当前工作区路径
-   - `summary`: 当前状态与需要用户确认的要点
-   - `timeout`: 超时时间（推荐3600秒，即1小时）
+#### Especificação de Chamada
+1. **Nome da Ferramenta**: `mcp_mcp-feedback-enhanced_interactive_feedback`
+2. **Parâmetros Obrigatórios**:
+   - `project_directory`: Caminho do workspace atual
+   - `summary`: Estado atual e pontos que precisam de confirmação do usuário
+   - `timeout`: Tempo limite (recomendado 3600 segundos, ou seja, 1 hora)
 
-#### 标准调用示例
+#### Exemplo de Chamada Padrão
 ```javascript
-// 正确的调用方式
+// Maneira correta de chamar
 mcp_mcp-feedback-enhanced_interactive_feedback({
   project_directory: "e:\\AgentRules\\English\\rules-2.1-optimized",
-  summary: "已启动 MCP 桌面反馈程序。请在窗口中填写意见或上传截图，提交后我将根据反馈继续迭代。",
+  summary: "Programa de feedback de desktop MCP iniciado. Por favor, preencha seus comentários ou faça upload de capturas de tela na janela. Após o envio, continuarei a iterar com base no feedback.",
   timeout: 3600
 })
 ```
 
-#### 触发时机
-- 用户输入 `/feedback` 命令
-- 用户说"调用反馈程序"、"打开反馈界面"等自然语言命令
-- 需求不明确时
-- 重大技术决策前
-- 方案设计完成后
-- 代码实现完成后
-- 遇到错误需要用户指导时
+#### Momento de Disparo
+- Usuário insere comando `/feedback`
+- Usuário diz comandos em linguagem natural como "chamar programa de feedback", "abrir interface de feedback"
+- Quando os requisitos não estão claros
+- Antes de decisões técnicas importantes
+- Após a conclusão do design da solução
+- Após a conclusão da implementação do código
+- Ao encontrar erros que requerem orientação do usuário
 
-#### 持续反馈机制
-收到用户反馈后，如果反馈内容不是"结束"或"end"，应该再次调用该工具继续收集反馈，直到用户明确表示结束。
+#### Mecanismo de Feedback Contínuo
+Após receber o feedback do usuário, se o conteúdo do feedback não for "encerrar" ou "end", a ferramenta deve ser chamada novamente para continuar coletando feedback até que o usuário indique explicitamente o fim.
 
-#### 故障排除
-如果桌面窗口未弹出：
-1. 确认 MCP 工具已正确安装
-2. 检查系统权限设置
-3. 尝试降低 timeout 值进行测试
-4. 确认工具名称拼写正确
+#### Solução de Problemas
+Se a janela da área de trabalho não aparecer:
+1. Confirme se a ferramenta MCP está instalada corretamente
+2. Verifique as configurações de permissão do sistema
+3. Tente reduzir o valor de timeout para teste
+4. Confirme se o nome da ferramenta está escrito corretamente
 
-## 🎯 Specialized Feedback Scenarios - 专业反馈场景
+## 🎯 Cenários de Feedback Especializados
 
-### 🏗️ 架构设计确认
+### 🏗️ Confirmação de Design de Arquitetura
 ```markdown
-## 系统架构方案确认
+## Confirmação de Solução de Arquitetura do Sistema
 
-### 当前方案
-- **架构模式**: 微服务架构
-- **技术栈**: Spring Boot + Docker + Kubernetes
-- **数据库**: PostgreSQL + Redis
-- **消息队列**: RabbitMQ
+### Solução Atual
+- **Padrão de Arquitetura**: Arquitetura de Microsserviços
+- **Stack Tecnológica**: Spring Boot + Docker + Kubernetes
+- **Banco de Dados**: PostgreSQL + Redis
+- **Fila de Mensagens**: RabbitMQ
 
-### 需要确认的要点
-1. **服务拆分粒度** - 是否合理？
-2. **数据一致性** - 如何处理分布式事务？
-3. **服务通信** - REST vs gRPC选择？
-4. **监控策略** - 日志和指标收集方案？
+### Pontos a Confirmar
+1. **Granularidade da Divisão de Serviços** - É razoável?
+2. **Consistência de Dados** - Como lidar com transações distribuídas?
+3. **Comunicação de Serviços** - Escolha entre REST vs gRPC?
+4. **Estratégia de Monitoramento** - Solução de coleta de logs e métricas?
 
-### 请提供反馈
-- 团队规模和技术水平
-- 预期并发量和数据量
-- 运维能力和基础设施
-- 项目时间线和里程碑
+### Por favor, forneça feedback
+- Tamanho da equipe e nível técnico
+- Volume de concorrência e dados esperado
+- Capacidade de operações e infraestrutura
+- Cronograma e marcos do projeto
 ```
 
-### ⚡ API设计确认
+### ⚡ Confirmação de Design de API
 ```markdown
-## API接口设计完成
+## Design de Interface da API Concluído
 
-### 接口概览
-- **用户管理**: 15个接口
-- **认证授权**: 8个接口  
-- **数据操作**: 23个接口
-- **文件处理**: 6个接口
+### Visão Geral da Interface
+- **Gerenciamento de Usuário**: 15 interfaces
+- **Autenticação e Autorização**: 8 interfaces  
+- **Operação de Dados**: 23 interfaces
+- **Processamento de Arquivos**: 6 interfaces
 
-### 设计特点
-- RESTful风格，统一响应格式
-- JWT认证 + RBAC权限控制
-- 请求限流和参数验证
-- 完整的错误处理机制
+### Características do Design
+- Estilo RESTful, formato de resposta unificado
+- Autenticação JWT + Controle de permissão RBAC
+- Limitação de taxa de requisição e validação de parâmetros
+- Mecanismo completo de tratamento de erros
 
-### 需要确认
-1. **接口粒度** - 是否符合业务需求？
-2. **权限设计** - 角色和权限划分是否合理？
-3. **性能考虑** - 是否需要缓存和优化？
-4. **版本管理** - API版本策略是否合适？
+### Precisa Confirmar
+1. **Granularidade da Interface** - Atende aos requisitos de negócios?
+2. **Design de Permissão** - A divisão de funções e permissões é razoável?
+3. **Considerações de Desempenho** - Precisa de cache e otimização?
+4. **Gerenciamento de Versão** - A estratégia de versão da API é adequada?
 ```
 
-### 🗄️ 数据库设计确认
+### 🗄️ Confirmação de Design de Banco de Dados
 ```markdown
-## 数据库表结构设计
+## Design de Estrutura de Tabela de Banco de Dados
 
-### 核心表设计
-- **users**: 用户基础信息 (12字段)
-- **roles**: 角色权限管理 (8字段)
-- **products**: 产品信息 (15字段)
-- **orders**: 订单数据 (18字段)
+### Design de Tabela Principal
+- **users**: Informações básicas do usuário (12 campos)
+- **roles**: Gerenciamento de permissão de função (8 campos)
+- **products**: Informações do produto (15 campos)
+- **orders**: Dados do pedido (18 campos)
 
-### 关系设计
-- 用户-角色: 多对多关系
-- 产品-分类: 一对多关系
-- 订单-产品: 多对多关系
+### Design de Relacionamento
+- Usuário-Função: Relacionamento muitos-para-muitos
+- Produto-Categoria: Relacionamento um-para-muitos
+- Pedido-Produto: Relacionamento muitos-para-muitos
 
-### 索引策略
-- 主键索引: 所有表
-- 唯一索引: email, phone
-- 复合索引: (user_id, created_at)
-- 全文索引: product_name, description
+### Estratégia de Índice
+- Índice de chave primária: Todas as tabelas
+- Índice único: email, phone
+- Índice composto: (user_id, created_at)
+- Índice de texto completo: product_name, description
 
-### 需要确认
-1. **数据类型** - 字段类型选择是否合适？
-2. **索引设计** - 查询性能是否满足要求？
-3. **扩展性** - 是否考虑了未来的数据增长？
-4. **备份策略** - 数据备份和恢复方案？
+### Precisa Confirmar
+1. **Tipo de Dados** - A escolha do tipo de campo é adequada?
+2. **Design de Índice** - O desempenho da consulta atende aos requisitos?
+3. **Escalabilidade** - O crescimento futuro dos dados foi considerado?
+4. **Estratégia de Backup** - Solução de backup e recuperação de dados?
 ```
 
-## 🔧 Configuration - 配置
+## 🔧 Configuração
 
-### Environment Variables - 环境变量
+### Variáveis de Ambiente
 ```bash
-# 反馈超时设置 (秒)
+# Configuração de timeout de feedback (segundos)
 FEEDBACK_TIMEOUT=3600
 
-# 日志级别
+# Nível de log
 FEEDBACK_LOG_LEVEL=info
 
-# 存储路径
+# Caminho de armazenamento
 FEEDBACK_STORAGE_PATH=./feedback-logs
 
-# 自动保存间隔 (秒)
+# Intervalo de salvamento automático (segundos)
 FEEDBACK_AUTOSAVE_INTERVAL=300
 
-# 最大历史记录数
+# Número máximo de histórico
 FEEDBACK_MAX_HISTORY=100
 ```
 
-### Advanced Settings - 高级设置
+### Configurações Avançadas
 ```json
 {
   "feedback": {
@@ -270,16 +270,16 @@ FEEDBACK_MAX_HISTORY=100
 }
 ```
 
-## 📊 Feedback Analytics - 反馈分析
+## 📊 Análise de Feedback
 
-### Metrics Tracking - 指标跟踪
+### Rastreamento de Métricas
 ```javascript
-// 反馈会话统计
+// Estatísticas de sessão de feedback
 {
   "sessionId": "fb-2025-01-31-001",
   "startTime": "2025-01-31T10:00:00Z",
   "endTime": "2025-01-31T10:45:00Z",
-  "duration": 2700, // 45分钟
+  "duration": 2700, // 45 minutos
   "messageCount": 15,
   "decisionPoints": 3,
   "issuesResolved": 2,
@@ -287,24 +287,24 @@ FEEDBACK_MAX_HISTORY=100
 }
 ```
 
-### Quality Metrics - 质量指标
-- **响应时间** - AI响应的平均时间
-- **解决率** - 问题解决的成功率
-- **用户满意度** - 反馈质量评分
-- **会话完成率** - 完整完成的会话比例
+### Métricas de Qualidade
+- **Tempo de Resposta** - Tempo médio de resposta da IA
+- **Taxa de Resolução** - Taxa de sucesso na resolução de problemas
+- **Satisfação do Usuário** - Pontuação de qualidade do feedback
+- **Taxa de Conclusão de Sessão** - Proporção de sessões completadas
 
-## 🛠️ Integration Examples - 集成示例
+## 🛠️ Exemplos de Integração
 
-### Frontend Integration - 前端集成
+### Integração Frontend
 ```javascript
-// Vue.js组件中使用反馈
+// Usando feedback em componente Vue.js
 export default {
   methods: {
     async requestFeedback(context) {
       const feedback = await this.$mcp.feedback({
         type: 'architecture-review',
         context: context,
-        timeout: 3600000 // 1小时
+        timeout: 3600000 // 1 hora
       });
       
       return feedback;
@@ -313,9 +313,9 @@ export default {
 }
 ```
 
-### Backend Integration - 后端集成
+### Integração Backend
 ```python
-# Python中使用反馈机制
+# Usando mecanismo de feedback em Python
 from mcp_feedback import FeedbackClient
 
 async def design_review(design_doc):
@@ -325,63 +325,63 @@ async def design_review(design_doc):
         type="database-design",
         content=design_doc,
         questions=[
-            "表结构设计是否合理？",
-            "索引策略是否优化？",
-            "扩展性如何保证？"
+            "O design da estrutura da tabela é razoável?",
+            "A estratégia de índice está otimizada?",
+            "Como a escalabilidade é garantida?"
         ]
     )
     
     return feedback
 ```
 
-## ✅ Best Practices - 最佳实践
+## ✅ Melhores Práticas
 
-### For AI Assistants - AI助手
-- **及时触发** - 在关键决策点主动请求反馈
-- **清晰描述** - 详细说明当前状态和需要确认的内容
-- **结构化输出** - 使用清晰的格式和标记
-- **保存记录** - 重要决策和反馈要保存记录
+### Para Assistentes de IA (For AI Assistants)
+- **Disparo Oportuno** - Solicitar feedback proativamente em pontos de decisão chave
+- **Descrição Clara** - Explicar detalhadamente o estado atual e o conteúdo que precisa de confirmação
+- **Saída Estruturada** - Usar formato e marcação claros
+- **Manter Registros** - Salvar registros de decisões e feedbacks importantes
 
-### For Users - 用户
-- **详细反馈** - 提供具体、详细的反馈信息
-- **及时响应** - 在超时前及时回复
-- **明确决策** - 清楚表达决策和偏好
-- **记录原因** - 说明决策的原因和考虑
+### Para Usuários (For Users)
+- **Feedback Detalhado** - Fornecer informações de feedback específicas e detalhadas
+- **Resposta Oportuna** - Responder a tempo antes do timeout
+- **Decisão Clara** - Expressar claramente decisões e preferências
+- **Registrar Motivos** - Explicar as razões e considerações das decisões
 
-### For Teams - 团队
-- **统一标准** - 建立团队反馈标准和流程
-- **知识共享** - 分享反馈经验和最佳实践
-- **持续改进** - 定期回顾和优化反馈机制
-- **工具集成** - 与现有工具和流程集成
+### Para Equipes (For Teams)
+- **Padrão Unificado** - Estabelecer padrões e processos de feedback da equipe
+- **Compartilhamento de Conhecimento** - Compartilhar experiências de feedback e melhores práticas
+- **Melhoria Contínua** - Revisar e otimizar regularmente o mecanismo de feedback
+- **Integração de Ferramentas** - Integrar com ferramentas e processos existentes
 
-## 📋 Troubleshooting - 故障排除
+## 📋 Solução de Problemas (Troubleshooting)
 
-### Common Issues - 常见问题
+### Problemas Comuns
 
-#### 超时问题
+#### Problema de Timeout
 ```
-问题: 反馈会话超时
-原因: 网络不稳定或服务器负载高
-解决: 检查网络连接，重新发起反馈
-```
-
-#### 保存失败
-```
-问题: 反馈内容保存失败
-原因: 存储空间不足或权限问题
-解决: 检查磁盘空间和文件权限
+Problema: Sessão de feedback expirou
+Causa: Instabilidade da rede ou alta carga do servidor
+Solução: Verificar conexão de rede, iniciar feedback novamente
 ```
 
-#### 格式错误
+#### Falha ao Salvar
 ```
-问题: 富文本格式显示异常
-原因: Markdown解析错误
-解决: 检查Markdown语法，使用标准格式
+Problema: Falha ao salvar conteúdo do feedback
+Causa: Espaço de armazenamento insuficiente ou problema de permissão
+Solução: Verificar espaço em disco e permissões de arquivo
 ```
 
-#### 工具调用失败
+#### Erro de Formato
 ```
-问题: MCP工具调用失败
-原因: 工具名称错误或参数缺失
-解决: 确认使用正确的工具名称 mcp_mcp-feedback-enhanced_interactive_feedback
+Problema: Exibição anormal de formato rich text
+Causa: Erro de análise de Markdown
+Solução: Verificar sintaxe Markdown, usar formato padrão
+```
+
+#### Falha na Chamada da Ferramenta
+```
+Problema: Falha na chamada da ferramenta MCP
+Causa: Nome da ferramenta incorreto ou parâmetro ausente
+Solução: Confirmar o uso do nome correto da ferramenta mcp_mcp-feedback-enhanced_interactive_feedback
 ```

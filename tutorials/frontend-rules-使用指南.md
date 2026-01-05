@@ -1,134 +1,136 @@
-# 🎨 前端开发 AI 助手规则使用指南 v2.6.0
-## 📖 概述
+# 🎨 Guia de Uso de Regras do Assistente de IA para Desenvolvimento Frontend v2.6.0
+## 📖 Visão geral
 
-本指南专门针对前端开发，**手把手教你**如何配置和使用前端开发 AI 助手规则。
+Este guia é voltado especificamente para desenvolvimento frontend e **ensina passo a passo** como configurar e usar as regras do assistente de IA para frontend.
 
-**🎯 适合人群：**
-- ✅ **完全新手** - 从未接触过 MCP 工具的用户
-- ✅ **前端开发者** - 想要 AI 助手帮助开发 Vue/React 项目
-- ✅ **学习者** - 想要学习现代前端开发工具链
+**🎯 Para quem é este guia:**
+- ✅ **Iniciantes completos** - Usuários que nunca tiveram contato com ferramentas MCP
+- ✅ **Desenvolvedores frontend** - Querem ajuda de IA para desenvolver projetos Vue/React
+- ✅ **Aprendizes** - Querem aprender uma cadeia de ferramentas moderna de frontend
 
-**📚 你将学会：**
-- 🔧 如何安装和配置 Node.js（包括 NVM 版本管理）
-- 📦 如何安装和配置 5 个 MCP 工具
-- 🤖 如何使用智能反馈机制与 AI 深度交互
-- 🎨 如何让 AI 帮你开发前端项目
+**📚 Você vai aprender:**
+- 🔧 Como instalar e configurar Node.js (incluindo gerenciamento de versões com NVM)
+- 📦 Como instalar e configurar 5 ferramentas MCP
+- 🤖 Como usar o mecanismo de feedback inteligente para interagir profundamente com a IA
+- 🎨 Como deixar a IA ajudar você a desenvolver projetos frontend
 
-**⏱️ 预计时间：** 30-60 分钟（取决于网络速度和电脑配置）
+**⏱️ Tempo estimado:** 30–60 minutos (dependendo da velocidade da rede e da configuração do computador)
 
-## 🎯 什么是前端规则？
+## 🎯 O que são regras frontend?
 
-**⚠️ 新手必读：** 在开始之前，请先了解这个项目能为你做什么！
+**⚠️ Leitura obrigatória para iniciantes:** Antes de começar, entenda primeiro o que este projeto faz por você.
 
-### 🔥 **Phase 3 + v1.0+v2.0 重大升级：AI智能化生态系统**
+### 🔥 **Phase 3 + v1.0+v2.0: grande atualização do ecossistema inteligente de IA**
 
-**历史性突破**：Rules 2.6.0 实现了完整的AI智能化规则生态系统！
+**Marco histórico:** o Rules 2.6.0 implementa um ecossistema completo de regras inteligentes de IA.
 
-- ✅ **54个智能规则（.mdc）** - 从33个增长到54个规则 (+64%)
-- ✅ **15个全新AI规则** - Phase 2+3新增8个 + v1.0新增4个 + v2.0新增3个
-- ✅ **100%AI驱动** - 所有规则集成AI智能分析和推荐
-- ✅ **完美集成测试** - 100/100满分的集成测试验证
-- ✅ **超越steipete** - 在所有主要功能领域实现超越
+- ✅ **54 regras inteligentes (.mdc)** - De 33 para 54 regras (+64%)
+- ✅ **15 novas regras de IA** - Phase 2+3 (+8) + v1.0 (+4) + v2.0 (+3)
+- ✅ **100% orientado por IA** - Todos os conjuntos de regras integram análise e recomendação inteligentes
+- ✅ **Testes de integração perfeitos** - Validação com 100/100 pontos
+- ✅ **Supera steipete** - Superação em todas as áreas principais de funcionalidade
 
-### 🚀 **Phase 2+3 新增核心功能**
-- ⚡ **AI智能快速提交**（使用 `/commit --fast`，`/commit-fast` 为别名） - 智能提交信息生成
-- 🔍 **跨语言质量检查** (`/quality-check`) - 多语言代码质量分析
-- 🧠 **智能项目上下文** (`/load-context`) - AI项目分析和配置推荐
-- 🛠️ **自定义命令构建** (`/create-command`) - AI生成用户自定义命令
-- 🔧 **AI根因分析** (`/root-cause`) - 五个为什么智能分析方法
-- 🐛 **系统化调试** (`/debug`) - 智能故障诊断和调试
-- 📋 **智能变更日志** (`/changelog`) - 自动化变更日志生成
-- 🔧 **MCP专业调试** (`/mcp-debug`) - MCP工具专业故障诊断
-- ✅ **一致性验证** - `comprehensive-test-report.bat`确保持续一致
+### 🚀 **Funcionalidades principais adicionadas no Phase 2+3**
+- ⚡ **Commit rápido inteligente com IA** (use `/commit --fast`; alias: `/commit-fast`) - Geração inteligente de mensagem de commit
+- 🔍 **Verificação de qualidade entre linguagens** (`/quality-check`) - Análise de qualidade de código multi-linguagem
+- 🧠 **Contexto inteligente do projeto** (`/load-context`) - Análise do projeto e recomendação de configuração
+- 🛠️ **Construção de comandos personalizados** (`/create-command`) - A IA gera comandos definidos pelo usuário
+- 🔧 **Análise de causa raiz com IA** (`/root-cause`) - Método dos 5 porquês com análise inteligente
+- 🐛 **Depuração sistemática** (`/debug`) - Diagnóstico e depuração inteligentes
+- 📋 **Changelog inteligente** (`/changelog`) - Geração automatizada de changelog
+- 🔧 **Depuração profissional de MCP** (`/mcp-debug`) - Diagnóstico profissional de problemas de MCP
+- ✅ **Validação de consistência** - `comprehensive-test-report.bat` garante consistência contínua
 
-### 📋 项目核心功能
-本项目会为你的开发环境安装以下组件：
+### 📋 Funcionalidades principais do projeto
 
-1. **🤖 AI助手规则** - 让AI更懂前端开发，提供专业的UI/UX建议
-2. **🔧 MCP工具链** - 5个强大的工具，让AI能够直接操作文件、记忆、GitHub等
-3. **📚 智能反馈系统** - AI会主动询问需求，提供个性化建议
-4. **🎯 多AI工具支持** - 同时支持Augment、Cursor、Claude Code、Trae AI
-5. **🔄 统一规则创建** - 确保所有AI工具功能完全一致
+Este projeto instala os seguintes componentes no seu ambiente de desenvolvimento:
 
-### 🎯 你将获得什么能力？
-前端规则是专门为 Vue/React/TypeScript 开发优化的 AI 助手规则，包含：
+1. **🤖 Regras do assistente de IA** - Faz a IA entender melhor o desenvolvimento frontend e oferecer sugestões profissionais de UI/UX
+2. **🔧 Cadeia de ferramentas MCP** - 5 ferramentas poderosas para a IA operar diretamente arquivos, memória e GitHub
+3. **📚 Sistema de feedback inteligente** - A IA solicita feedback ativamente e oferece sugestões personalizadas
+4. **🎯 Suporte a múltiplas ferramentas de IA** - Suporte simultâneo a Augment, Cursor, Claude Code, Trae AI
+5. **🔄 Criação unificada de regras** - Garante que todas as ferramentas de IA tenham funcionalidades idênticas
 
-- 🎨 **UI 设计模式** - 界面和交互设计
-- ⚡ **组件开发模式** - Vue/React 组件实现
-- 🔧 **工程化模式** - 构建配置和工具链
-- 🧪 **测试模式** - 单元测试和 E2E 测试
-- 🚀 **优化模式** - 性能和 SEO 优化
+### 🎯 Quais capacidades você vai adquirir?
 
-## 📁 第一步：安装前端规则
+As regras frontend são regras de assistente de IA otimizadas para desenvolvimento com Vue/React/TypeScript e incluem:
 
-> **💡 快速安装**: 参考 [README.md](../README.md) 的快速开始部分
+- 🎨 **Modo de design de UI** - Design de interface e interação
+- ⚡ **Modo de desenvolvimento de componentes** - Implementação de componentes Vue/React
+- 🔧 **Modo de engenharia** - Configuração de build e cadeia de ferramentas
+- 🧪 **Modo de testes** - Testes unitários e testes E2E
+- 🚀 **Modo de otimização** - Otimização de performance e SEO
+
+## 📁 Passo 1: instalar regras frontend
+
+> **💡 Instalação rápida**: veja a seção de início rápido em [README.md](../README.md)
 >
-> **📚 详细安装**: 参考 [傻瓜式安装指南](../install-scripts/INSTALL-GUIDE.md) | [中文版](../install-scripts/INSTALL-GUIDE-CN.md)
+> **📚 Instalação detalhada**: veja [Guia de Instalação para Iniciantes](../install-scripts/INSTALL-GUIDE.md) | [Versão em chinês](../install-scripts/INSTALL-GUIDE-CN.md)
 >
-> **🎯 安装命令**: 
+> **🎯 Comando de instalação**:
 > ```cmd
-> # 注意：如果规则目录在非C盘，需要先切换盘符
-> E:                                    # 先切换到E盘（根据你的实际盘符）
-> cd "你的rules-2.4.1-optimized目录路径"
-> install-scripts\install-ultra.bat ..\你的项目目录 frontend
+> # Observação: se o diretório de regras não estiver no drive C, mude o drive primeiro
+> E:                                    # Mude para o drive E (ajuste conforme seu caso)
+> cd "seu caminho do diretório rules-2.6.0-optimized"
+> install-scripts\install-ultra.bat ..\seu-diretório-do-projeto frontend
 > ```
 
-**💡 单工具安装**: 如需安装特定AI工具，请参考 [USAGE.md](../USAGE.md) 中的单工具安装选项。
+**💡 Instalação de ferramenta única:** se você precisa instalar uma ferramenta de IA específica, consulte as opções de instalação de ferramenta única em [USAGE.md](../USAGE.md).
 
-## 🔧 第二步：环境配置
+## 🔧 Passo 2: configurar o ambiente
 
-> **💡 快速检查**: 大部分问题都出现在环境配置阶段，请仔细按照步骤操作
+> **💡 Checagem rápida:** a maioria dos problemas aparece nesta etapa. Siga os passos com atenção.
 
-### ✅ 环境检查与诊断
+### ✅ Checagem e diagnóstico de ambiente
 
-**🔍 一键检查脚本：**
+**🔍 Script de verificação com um clique:**
 ```bash
-# Windows用户（推荐）
-node --version && npm --version && echo "✅ 环境检查完成"
+# Usuários Windows (recomendado)
+node --version && npm --version && echo "✅ Verificação de ambiente concluída"
 
-# 详细检查
-echo "Node.js版本:" && node --version
-echo "npm版本:" && npm --version
-echo "当前目录:" && pwd
-echo "npm全局路径:" && npm root -g
+# Verificação detalhada
+echo "Versão do Node.js:" && node --version
+echo "Versão do npm:" && npm --version
+echo "Diretório atual:" && pwd
+echo "Caminho global do npm:" && npm root -g
 ```
 
-**📊 版本要求对照表：**
-| 工具 | 最低版本 | 推荐版本 | 检查命令 | 状态 |
+**📊 Tabela de requisitos de versão:**
+| Ferramenta | Versão mínima | Versão recomendada | Comando de verificação | Status |
 |------|----------|----------|----------|------|
-| Node.js | 16.0.0+ | 18.17.0+ | `node --version` | ⚠️ 必需 |
-| npm | 8.0.0+ | 9.6.0+ | `npm --version` | ⚠️ 必需 |
-| Git | 2.20.0+ | 最新版 | `git --version` | 🔧 推荐 |
-| VS Code | 1.70.0+ | 最新版 | 查看帮助→关于 | 🎯 推荐 |
+| Node.js | 16.0.0+ | 18.17.0+ | `node --version` | ⚠️ Obrigatório |
+| npm | 8.0.0+ | 9.6.0+ | `npm --version` | ⚠️ Obrigatório |
+| Git | 2.20.0+ | Versão mais recente | `git --version` | 🔧 Recomendado |
+| VS Code | 1.70.0+ | Versão mais recente | Ajuda → Sobre | 🎯 Recomendado |
 
-**🚨 常见问题快速解决：**
+**🚨 Soluções rápidas para problemas comuns:**
 ```bash
-# 问题1：Node.js版本过低
-# 解决：访问 https://nodejs.org 下载LTS版本
+# Problema 1: versão do Node.js muito baixa
+# Solução: visite https://nodejs.org e baixe a versão LTS
 
-# 问题2：npm命令不存在
-# 解决：重新安装Node.js，确保勾选"Add to PATH"
+# Problema 2: comando npm não existe
+# Solução: reinstale o Node.js e marque a opção "Add to PATH"
 
-# 问题3：权限错误
-# Windows解决：以管理员身份运行PowerShell
-# macOS/Linux解决：使用sudo或配置npm全局目录
+# Problema 3: erro de permissão
+# Windows: execute o PowerShell como administrador
+# macOS/Linux: use sudo ou configure o diretório global do npm
 
-# 问题4：网络连接问题
+# Problema 4: problema de conexão de rede
 npm config set registry https://registry.npmmirror.com
 ```
 
-### 🛠️ 前端开发环境配置
+### 🛠️ Configuração do ambiente de desenvolvimento frontend
 
-#### 🎯 VS Code（强烈推荐）
+#### 🎯 VS Code (altamente recomendado)
 
-**📥 安装VS Code：**
-1. 访问：https://code.visualstudio.com/
-2. 下载对应系统版本
-3. 安装时勾选"Add to PATH"选项
+**📥 Instalar VS Code:**
+1. Acesse: https://code.visualstudio.com/
+2. Baixe a versão correspondente ao seu sistema
+3. Durante a instalação, marque a opção "Add to PATH"
 
-**🔌 必装插件清单：**
+**🔌 Lista de extensões essenciais:**
 ```bash
-# 一键安装所有推荐插件（复制到VS Code终端）
+# Instale todas as extensões recomendadas com um clique (copie para o terminal do VS Code)
 code --install-extension Vue.volar
 code --install-extension Vue.vscode-typescript-vue-plugin
 code --install-extension dbaeumer.vscode-eslint
@@ -138,9 +140,9 @@ code --install-extension bradlc.vscode-tailwindcss
 code --install-extension ms-vscode.vscode-typescript-next
 ```
 
-**⚙️ VS Code配置优化：**
+**⚙️ Otimização da configuração do VS Code:**
 ```json
-// 在VS Code中按Ctrl+Shift+P，输入"settings json"，添加以下配置
+// No VS Code pressione Ctrl+Shift+P, digite "settings json" e adicione a configuração abaixo
 {
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
@@ -154,115 +156,115 @@ code --install-extension ms-vscode.vscode-typescript-next
 }
 ```
 
-#### 🚀 包管理器配置
+#### 🚀 Configuração do gerenciador de pacotes
 
-**📦 npm优化配置：**
+**📦 Configuração otimizada do npm:**
 ```bash
-# 🇨🇳 国内用户必做：设置淘宝镜像
+# 🇨🇳 Usuários na China: configure o mirror do Taobao
 npm config set registry https://registry.npmmirror.com
 
-# 🔧 其他优化配置
-npm config set save-exact true          # 精确版本号
-npm config set init-author-name "你的名字"
-npm config set init-author-email "你的邮箱"
+# 🔧 Outras configurações úteis
+npm config set save-exact true          # Números de versão exatos
+npm config set init-author-name "seu nome"
+npm config set init-author-email "seu email"
 npm config set init-license "MIT"
 
-# ✅ 验证配置
+# ✅ Validar configuração
 npm config list
 ```
 
-**⚡ 高性能包管理器（可选）：**
+**⚡ Gerenciadores de pacotes de alto desempenho (opcional):**
 ```bash
-# pnpm（推荐，速度快，节省空间）
+# pnpm (recomendado, rápido, economiza espaço)
 npm install -g pnpm
 pnpm --version
 
-# yarn（经典选择，生态成熟）
+# yarn (escolha clássica, ecossistema maduro)
 npm install -g yarn
 yarn --version
 
-# 使用示例
-pnpm create vue@latest my-project  # 创建Vue项目
-yarn create react-app my-app       # 创建React项目
+# Exemplos de uso
+pnpm create vue@latest my-project  # Criar projeto Vue
+yarn create react-app my-app       # Criar projeto React
 ```
 
-#### 🌐 浏览器开发工具
+#### 🌐 Ferramentas de desenvolvimento do navegador
 
-**🔧 Chrome DevTools扩展：**
-- **Vue.js devtools** - Vue应用调试
-- **React Developer Tools** - React应用调试
-- **Redux DevTools** - 状态管理调试
-- **Lighthouse** - 性能分析（Chrome内置）
+**🔧 Extensões do Chrome DevTools:**
+- **Vue.js devtools** - Depuração de apps Vue
+- **React Developer Tools** - Depuração de apps React
+- **Redux DevTools** - Depuração de gerenciamento de estado
+- **Lighthouse** - Análise de performance (embutido no Chrome)
 
-**🦊 Firefox开发者版本：**
-- 下载：https://www.mozilla.org/firefox/developer/
-- 内置强大的CSS Grid和Flexbox调试工具
+**🦊 Firefox Developer Edition:**
+- Download: https://www.mozilla.org/firefox/developer/
+- Inclui ferramentas poderosas de depuração de CSS Grid e Flexbox
 
-## 🔧 第三步：MCP工具配置（可选但推荐）
+## 🔧 Passo 3: configurar ferramentas MCP (opcional, mas recomendado)
 
-> **💡 什么是MCP工具？** MCP（Model Context Protocol）工具让AI助手能够直接操作文件、记忆项目信息、连接GitHub等，大幅提升开发效率。
+> **💡 O que são ferramentas MCP?** MCP (Model Context Protocol) permite que o assistente de IA opere diretamente arquivos, memorize informações do projeto, conecte-se ao GitHub etc., melhorando muito a produtividade.
 
-**🎯 MCP工具能为前端开发带来什么？**
-- 📁 **文件操作** - AI直接读写项目文件，无需手动复制粘贴
-- 🧠 **项目记忆** - AI记住项目结构、技术栈、开发进度
-- 🔗 **GitHub集成** - 自动提交代码、创建PR、管理Issues
-- 💬 **智能反馈** - AI主动询问需求，提供个性化建议
-- 🔄 **上下文保持** - 跨会话保持项目状态和开发历史
+**🎯 O que o MCP traz para o desenvolvimento frontend?**
+- 📁 **Operações em arquivos** - A IA lê e escreve arquivos do projeto sem você ter que copiar/colar manualmente
+- 🧠 **Memória do projeto** - A IA lembra estrutura, stack e progresso de desenvolvimento
+- 🔗 **Integração com GitHub** - Commit automático, criação de PR e gestão de issues
+- 💬 **Feedback inteligente** - A IA pede esclarecimentos e oferece sugestões personalizadas
+- 🔄 **Manutenção de contexto** - Mantém estado e histórico do projeto entre sessões
 
-### **3.1 快速安装（推荐新手）**
+### **3.1 Instalação rápida (recomendado para iniciantes)**
 
-**🚀 一键安装脚本：**
+**🚀 Script de instalação com um clique:**
 ```bash
-# 方法1：双击运行（最简单）
-# 找到项目目录下的文件并双击：
+# Método 1: executar com duplo clique (mais simples)
+# Encontre o arquivo no diretório do projeto e dê duplo clique:
 mcp-scripts/run-powershell-installer.bat
 
-# 方法2：PowerShell命令行
-# 在项目根目录打开PowerShell，执行：
+# Método 2: via PowerShell
+# Abra o PowerShell na raiz do projeto e execute:
 powershell -ExecutionPolicy Bypass -File "mcp-scripts\install-mcp-tools-enhanced-final.ps1"
 ```
 
-**📋 安装脚本功能清单：**
-- ✅ **环境检测** - 自动检查Node.js、Python、Git环境
-- ✅ **依赖安装** - 自动安装5个核心MCP工具
-- ✅ **配置生成** - 生成基础配置文件模板
-- ✅ **路径设置** - 自动配置工具路径和环境变量
-- ✅ **安装验证** - 测试所有工具是否正常工作
-- ✅ **详细报告** - 提供完整的安装日志和结果
+**📋 O que o script faz:**
+- ✅ **Detecção de ambiente** - Verifica Node.js, Python e Git automaticamente
+- ✅ **Instalação de dependências** - Instala 5 ferramentas MCP essenciais
+- ✅ **Geração de configuração** - Cria um template de configuração base
+- ✅ **Configuração de caminhos** - Ajusta caminhos e variáveis de ambiente
+- ✅ **Validação de instalação** - Testa se todas as ferramentas funcionam
+- ✅ **Relatório detalhado** - Fornece logs completos de instalação e resultado
 
-**⚠️ 安装后必做事项：**
-1. **阅读配置指南** - 查看 [MCP详细配置指南](../docs/MCP-DETAILED-CONFIG-GUIDE.md)
-2. **修改配置文件** - 生成的 `mcp-config.json` 是模板，需要个性化修改
-3. **测试功能** - 确保所有MCP工具正常工作
+**⚠️ Itens obrigatórios após instalar:**
+1. **Leia o guia de configuração** - Veja [Guia detalhado de configuração do MCP](../docs/MCP-DETAILED-CONFIG-GUIDE.md)
+2. **Edite o arquivo de configuração** - O `mcp-config.json` gerado é um template e precisa ser personalizado
+3. **Teste as funcionalidades** - Garanta que todas as ferramentas MCP estejam funcionando
 
-### **3.2 手动安装（备选）**
+### **3.2 Instalação manual (alternativa)**
 
-如果自动脚本无法使用，可以手动安装：
+Se o script automático não funcionar, você pode instalar manualmente:
 
 ```bash
-# 创建MCP工具目录
+# Criar diretório de ferramentas MCP
 mkdir C:\MCP-Tools
 cd C:\MCP-Tools
 
-# 初始化项目
+# Inicializar projeto
 npm init -y
 
-# 安装Node.js MCP工具（本地安装，路径清晰）
+# Instalar ferramentas MCP em Node.js (instalação local, caminho claro)
 npm install @modelcontextprotocol/server-filesystem
-npm install @modelcontextprotocol/server-memory  # 可选（Recorder 优先）
+npm install @modelcontextprotocol/server-memory  # Opcional (Recorder tem prioridade)
 npm install @modelcontextprotocol/server-github
 npm install @modelcontextprotocol/server-everything
 
-# 安装Python MCP工具
+# Instalar ferramenta MCP em Python
 pip install uv
-# mcp-feedback-enhanced 通过 uvx 运行，无需预安装
+# mcp-feedback-enhanced roda via uvx, sem necessidade de pré-instalação
 ```
 
-### **3.3 配置文件**
+### **3.3 Arquivo de configuração**
 
-**⚠️ 重要提醒：** 下面的配置文件是**模板**，你需要根据自己的实际情况修改，否则可能无法正常工作！
+**⚠️ Aviso importante:** o arquivo abaixo é um **template**. Você precisa ajustá-lo conforme o seu ambiente, caso contrário pode não funcionar.
 
-创建 `mcp-config.json`：
+Crie o arquivo `mcp-config.json`:
 ```json
 {
   "mcpServers": {
@@ -281,7 +283,7 @@ pip install uv
       ],
       "env": {}
     },
-    // 提示：Memory（server-memory）为可选，如不需要可删除该条目（Recorder 优先）。
+    // Dica: o Memory (server-memory) é opcional. Se não precisar, remova a entrada (Recorder tem prioridade).
     "github": {
       "command": "npx",
       "args": [
@@ -317,183 +319,185 @@ pip install uv
 }
 ```
 
-**🚨 需要修改的内容：**
-1. **前端项目路径**：将 `C:\\your-frontend-projects` 改为实际路径
-2. **GitHub Token**：将 `your_github_token_here` 改为真实Token
+**🚨 O que você precisa mudar:**
+1. **Caminho dos projetos frontend:** troque `C:\\your-frontend-projects` pelo caminho real
+2. **Token do GitHub:** troque `your_github_token_here` por um token real
 
-**📂 前端项目路径示例：**
+**📂 Exemplos de caminho para projetos frontend:**
 ```json
-// Vue项目
-"D:\\前端\\Vue3项目"
+// Projeto Vue
+"D:\\frontend\\projetos-vue3"
 
-// React项目
-"E:\\React\\我的应用"
+// Projeto React
+"E:\\react\\minha-aplicacao"
 
-// 学习项目
-"C:\\Users\\用户名\\Desktop\\前端学习"
+// Projetos de estudo
+"C:\\Users\\seu-usuario\\Desktop\\estudos-frontend"
 
-// 工作项目
+// Projetos de trabalho
 "F:\\work\\frontend-projects"
 ```
 
-**📝 如何修改配置文件：**
+**📝 Como editar o arquivo de configuração:**
 
-**步骤 1：创建配置文件**
-1. 在你的MCP工具安装目录下创建新文件
-2. 文件名：`mcp-config.json`
-3. 复制上面的模板内容到文件中
+**Passo 1: crie o arquivo**
+1. No diretório onde você instalou as ferramentas MCP, crie um arquivo novo
+2. Nome: `mcp-config.json`
+3. Copie o conteúdo do template acima
 
-**步骤 2：修改前端项目路径**
-1. 找到 `"C:\\your-frontend-projects"` 这一行
-2. 替换为你的实际前端项目路径
-3. 注意使用双反斜杠：`"D:\\前端\\项目"`
+**Passo 2: ajuste o caminho dos projetos frontend**
+1. Encontre a linha `"C:\\your-frontend-projects"`
+2. Substitua pelo caminho real dos seus projetos
+3. Use barra invertida dupla: `"D:\\frontend\\projetos"`
 
-**步骤 3：修改 GitHub Token**
-1. 找到 `"your_github_token_here"` 这一行
-2. 替换为你的实际 GitHub Token
-3. 保持双引号格式
+**Passo 3: ajuste o token do GitHub**
+1. Encontre `"your_github_token_here"`
+2. Substitua pelo seu token do GitHub
+3. Mantenha o formato com aspas
 
-**✅ 配置完成检查清单：**
-- [ ] 前端项目路径已改为实际项目路径
-- [ ] GitHub Token 已替换为真实 Token
-- [ ] 所有路径使用双反斜杠格式
-- [ ] JSON 格式正确（逗号、括号完整）
-- [ ] 文件已保存为 `mcp-config.json`
+**✅ Checklist de configuração pronta:**
+- [ ] Caminho dos projetos frontend foi ajustado para o caminho real
+- [ ] GitHub Token foi substituído por um token real
+- [ ] Todos os caminhos usam barra invertida dupla
+- [ ] O JSON está válido (vírgulas e chaves ok)
+- [ ] O arquivo foi salvo como `mcp-config.json`
 
-## 🚀 第四步：开始使用
+## 🚀 Passo 4: começar a usar
 
-### **4.1 基本命令**
+### **4.1 Comandos básicos**
 ```bash
-# 启动前端开发工作流
+# Iniciar workflow de desenvolvimento frontend
 /frontend-dev
 
-# 创建新组件
+# Criar novo componente
 /component
 
-# UI设计和样式开发
+# Design de UI e desenvolvimento de estilos
 /ui-design
 
-# 运行测试
+# Rodar testes
 /test-frontend
 
-# 构建优化
+# Build e otimização
 /build-frontend
 ```
 
-### **4.2 模式切换**
+### **4.2 Troca de modo**
 ```bash
-# 手动切换模式
-/ui设计      # UI设计模式
-/组件开发    # 组件开发模式
-/工程化      # 工程化模式
-/测试        # 测试模式
-/优化        # 优化模式
+# Trocar modo manualmente
+/ui设计      # Modo de design de UI
+/组件开发    # Modo de desenvolvimento de componentes
+/工程化      # Modo de engenharia
+/测试        # Modo de testes
+/优化        # Modo de otimização
 ```
 
-### **4.3 前端专用配置模式**
+### **4.3 Modos de configuração específicos de frontend**
 ```bash
-# 框架优先配置
-/设置Vue优先模式        # 优先使用 Vue 3 技术栈
-/设置React优先模式      # 优先使用 React 18+ 技术栈
+# Configuração com prioridade por framework
+/设置Vue优先模式        # Prioriza stack Vue 3
+/设置React优先模式      # Prioriza stack React 18+
 
-# 开发配置
-/设置TypeScript严格模式 # 启用最严格的类型检查
-/设置性能优化模式       # 自动应用前端性能优化建议
+# Configuração de desenvolvimento
+/设置TypeScript严格模式 # Habilita checagem de tipos no nível mais estrito
+/设置性能优化模式       # Aplica automaticamente recomendações de performance
 ```
 
-### **4.4 智能反馈**
-当遇到以下情况时，AI会自动请求反馈：
-- 🔍 **需求不明确** - 描述模糊时
-- 🎯 **重大决策** - 技术栈选择时
-- ✅ **方案完成** - 设计完成需确认时
-- 🎉 **执行完成** - 代码完成需验收时
+### **4.4 Feedback inteligente**
 
-## 📋 第五步：实际使用示例
+Em situações como estas, a IA vai solicitar feedback automaticamente:
 
-> **💡 学习提示**: 以下示例展示了真实的开发场景，建议按顺序尝试，逐步掌握AI助手的使用技巧。
+- 🔍 **Requisitos pouco claros** - Quando a descrição estiver vaga
+- 🎯 **Decisões importantes** - Quando for necessário escolher stack/abordagem
+- ✅ **Proposta concluída** - Quando um design/plano estiver pronto e precisar de confirmação
+- 🎉 **Execução concluída** - Quando o código estiver pronto e precisar de validação
 
-### **🎯 示例1：从零创建Vue 3项目**
+## 📋 Passo 5: exemplos de uso real
 
-**👤 用户输入：**
+> **💡 Dica de aprendizado:** os exemplos abaixo mostram cenários reais. Recomenda-se seguir na ordem para dominar gradualmente o uso do assistente.
+
+### **🎯 Exemplo 1: criar um projeto Vue 3 do zero**
+
+**👤 Entrada do usuário:**
 ```
-帮我创建一个Vue 3的个人博客项目，要求：
-- 使用TypeScript
-- 集成Tailwind CSS
-- 支持Markdown文章
-- 响应式设计
-```
-
-**🤖 AI智能响应流程：**
-```
-[模式：项目初始化] [角色：全栈架构师]
-
-✅ 需求分析完成，我来为你创建Vue 3博客项目
-
-📋 技术栈选择：
-- 框架：Vue 3 + Composition API
-- 语言：TypeScript
-- 样式：Tailwind CSS
-- 构建：Vite
-- 路由：Vue Router 4
-- Markdown：@vueuse/markdown
-
-🔄 [触发智能反馈] 是否需要添加以下功能？
-1. 评论系统（Giscus/Disqus）
-2. 搜索功能（本地/Algolia）
-3. 深色模式切换
-4. RSS订阅
-5. SEO优化
-
-请选择需要的功能编号，或直接说"继续"开始创建基础版本。
+Crie um projeto de blog pessoal em Vue 3, com:
+- TypeScript
+- Tailwind CSS
+- Suporte a artigos em Markdown
+- Design responsivo
 ```
 
-**📁 项目结构生成：**
+**🤖 Fluxo de resposta inteligente da IA:**
+```
+[Modo: inicialização do projeto] [Papel: arquiteto fullstack]
+
+✅ Análise de requisitos concluída. Vou criar seu projeto de blog em Vue 3.
+
+📋 Escolha de stack:
+- Framework: Vue 3 + Composition API
+- Linguagem: TypeScript
+- Estilos: Tailwind CSS
+- Build: Vite
+- Rotas: Vue Router 4
+- Markdown: @vueuse/markdown
+
+🔄 [Feedback inteligente acionado] Deseja adicionar alguma funcionalidade?
+1. Sistema de comentários (Giscus/Disqus)
+2. Busca (local/Algolia)
+3. Alternância de tema escuro
+4. Assinatura RSS
+5. Otimização de SEO
+
+Escolha os números desejados ou diga "continuar" para criar a versão base.
+```
+
+**📁 Estrutura do projeto gerada:**
 ```
 blog-project/
 ├── src/
-│   ├── components/          # 可复用组件
-│   │   ├── BlogCard.vue    # 文章卡片
-│   │   ├── Navigation.vue  # 导航栏
-│   │   └── Footer.vue      # 页脚
-│   ├── views/              # 页面组件
-│   │   ├── Home.vue        # 首页
-│   │   ├── Article.vue     # 文章详情
-│   │   └── About.vue       # 关于页面
-│   ├── composables/        # 组合式函数
-│   │   ├── useMarkdown.ts  # Markdown处理
-│   │   └── useDarkMode.ts  # 深色模式
-│   └── types/              # TypeScript类型
-│       └── blog.ts         # 博客相关类型
+│   ├── components/          # Componentes reutilizáveis
+│   │   ├── BlogCard.vue     # Card de artigo
+│   │   ├── Navigation.vue   # Barra de navegação
+│   │   └── Footer.vue       # Rodapé
+│   ├── views/               # Componentes de página
+│   │   ├── Home.vue         # Página inicial
+│   │   ├── Article.vue      # Detalhe do artigo
+│   │   └── About.vue        # Sobre
+│   ├── composables/         # Funções composables
+│   │   ├── useMarkdown.ts   # Processamento de Markdown
+│   │   └── useDarkMode.ts   # Tema escuro
+│   └── types/               # Tipos TypeScript
+│       └── blog.ts          # Tipos do blog
 ├── public/
-│   └── articles/           # Markdown文章
+│   └── articles/            # Artigos em Markdown
 └── package.json
 ```
 
-### **🧩 示例2：开发可复用组件**
+### **🧩 Exemplo 2: desenvolver um componente reutilizável**
 
-**👤 用户输入：**
+**👤 Entrada do usuário:**
 ```
-/component 创建一个用户头像组件，支持：
-- 显示用户头像和姓名
-- 在线状态指示器
-- 点击显示用户信息卡片
-- 支持不同尺寸
-```
-
-**🤖 AI组件开发流程：**
-```
-[模式：组件开发] [角色：前端组件工程师]
-
-🎯 组件设计分析：
-- 组件名：UserAvatar
-- 属性：user, size, showStatus, clickable
-- 事件：click, hover
-- 插槽：default（自定义内容）
-
-📝 生成组件代码...
+/component Crie um componente de avatar de usuário, com:
+- Exibição do avatar e do nome
+- Indicador de status online
+- Clique para exibir um cartão com informações do usuário
+- Suporte a tamanhos diferentes
 ```
 
-**📄 生成的组件代码：**
+**🤖 Fluxo de desenvolvimento do componente pela IA:**
+```
+[Modo: desenvolvimento de componentes] [Papel: engenheiro de componentes frontend]
+
+🎯 Análise do design do componente:
+- Nome do componente: UserAvatar
+- Props: user, size, showStatus, clickable
+- Eventos: click, hover
+- Slots: default (conteúdo customizado)
+
+📝 Gerando o código do componente...
+```
+
+**📄 Código do componente gerado:**
 ```vue
 <!-- UserAvatar.vue -->
 <template>
@@ -503,20 +507,20 @@ blog-project/
     @mouseenter="showCard = true"
     @mouseleave="showCard = false"
   >
-    <!-- 头像图片 -->
+    <!-- Imagem do avatar -->
     <img 
       :src="user.avatar || defaultAvatar" 
       :alt="user.name"
       :class="imageClasses"
     />
     
-    <!-- 在线状态指示器 -->
+    <!-- Indicador de status online -->
     <div 
       v-if="showStatus" 
       :class="statusClasses"
     ></div>
     
-    <!-- 用户信息卡片 -->
+    <!-- Cartão de informações do usuário -->
     <Transition name="fade">
       <UserInfoCard 
         v-if="showCard && clickable"
@@ -531,7 +535,7 @@ blog-project/
 import { computed, ref } from 'vue'
 import type { User } from '@/types/user'
 
-// 组件属性定义
+// Definição das props do componente
 interface Props {
   user: User
   size?: 'sm' | 'md' | 'lg' | 'xl'
@@ -545,16 +549,16 @@ const props = withDefaults(defineProps<Props>(), {
   clickable: true
 })
 
-// 组件事件定义
+// Definição dos eventos do componente
 const emit = defineEmits<{
   click: [user: User]
 }>()
 
-// 响应式数据
+// Dados reativos
 const showCard = ref(false)
 const defaultAvatar = '/images/default-avatar.png'
 
-// 计算属性：样式类
+// Propriedades computadas: classes de estilo
 const avatarClasses = computed(() => [
   'relative inline-flex items-center justify-center',
   'rounded-full overflow-hidden transition-all duration-200',
@@ -583,7 +587,7 @@ const statusClasses = computed(() => [
   }
 ])
 
-// 事件处理
+// Tratamento de eventos
 const handleClick = () => {
   if (props.clickable) {
     emit('click', props.user)
@@ -592,155 +596,156 @@ const handleClick = () => {
 </script>
 ```
 
-**🔄 AI后续询问：**
+**🔄 Perguntas de follow-up da IA:**
 ```
-✅ UserAvatar组件已生成！
+✅ Componente UserAvatar gerado!
 
-🤔 接下来需要：
-1. 创建UserInfoCard子组件？
-2. 添加组件单元测试？
-3. 创建Storybook文档？
-4. 生成使用示例？
+🤔 Próximos passos possíveis:
+1. Criar o subcomponente UserInfoCard?
+2. Adicionar testes unitários do componente?
+3. Criar documentação no Storybook?
+4. Gerar exemplos de uso?
 
-请告诉我下一步需要什么。
-```
-
-### **⚡ 示例3：性能优化诊断**
-
-**👤 用户输入：**
-```
-/优化 我的Vue应用首页加载很慢，用户反馈体验不好
+Me diga qual é o próximo passo.
 ```
 
-**🤖 AI性能优化流程：**
+### **⚡ Exemplo 3: diagnóstico de performance**
+
+**👤 Entrada do usuário:**
 ```
-[模式：性能优化] [角色：前端性能工程师]
-
-🔍 开始性能诊断...
-
-📊 请提供以下信息以便精准分析：
-1. 当前首页加载时间？（秒）
-2. 主要包含哪些内容？（图片、视频、数据等）
-3. 用户网络环境？（4G、WiFi、宽带）
-4. 目标设备？（手机、桌面、平板）
-
-💡 同时我会分析常见性能问题：
+/优化 A home do meu app Vue está carregando muito lenta, e usuários reclamaram da experiência
 ```
 
-**🔧 AI自动分析结果：**
+**🤖 Fluxo de otimização de performance da IA:**
 ```
-📈 性能分析报告：
+[Modo: otimização de performance] [Papel: engenheiro de performance frontend]
 
-❌ 发现的问题：
-1. Bundle体积过大（2.3MB）
-   - 未使用的依赖包：moment.js, lodash
-   - 图片资源未压缩：hero-banner.jpg (1.2MB)
+🔍 Iniciando diagnóstico de performance...
 
-2. 渲染阻塞
-   - 首屏组件过多（12个）
-   - 同步加载第三方脚本
+📊 Para uma análise precisa, me diga:
+1. Qual é o tempo atual de carregamento da home? (segundos)
+2. O que a página contém principalmente? (imagens, vídeo, dados etc.)
+3. Ambiente de rede do usuário? (4G, Wi-Fi, banda larga)
+4. Dispositivo alvo? (celular, desktop, tablet)
 
-3. 网络请求优化
-   - API请求未合并（6个独立请求）
-   - 缺少资源预加载
-
-✅ 优化方案：
-
-🎯 立即优化（预期提升60%）：
-1. 代码分割和懒加载
-2. 图片压缩和WebP格式
-3. 移除未使用依赖
-
-🚀 进阶优化（预期再提升30%）：
-1. 服务端渲染（SSR）
-2. CDN加速
-3. 缓存策略优化
-
-需要我开始实施哪个优化方案？
+💡 Enquanto isso, vou analisar problemas comuns de performance:
 ```
 
-## 🛠️ 第六步：高级配置与个性化
+**🔧 Resultado da análise automática da IA:**
+```
+📈 Relatório de análise de performance:
 
-> **🎯 个性化提示**: 根据你的开发习惯和项目需求，调整AI助手的行为模式，获得最佳开发体验。
+❌ Problemas encontrados:
+1. Bundle muito grande (2,3MB)
+   - Dependências não utilizadas: moment.js, lodash
+   - Imagens não comprimidas: hero-banner.jpg (1,2MB)
 
-### **6.1 AI助手行为模式配置**
+2. Bloqueio de renderização
+   - Muitos componentes no primeiro paint (12)
+   - Carregamento síncrono de scripts de terceiros
 
-**🔄 反馈频率控制：**
+3. Otimização de requests
+   - Requests de API não agregadas (6 requests independentes)
+   - Falta de preload de recursos
+
+✅ Plano de otimização:
+
+🎯 Otimizações imediatas (ganho esperado de 60%):
+1. Code splitting e lazy loading
+2. Compressão de imagens e formato WebP
+3. Remoção de dependências não utilizadas
+
+🚀 Otimizações avançadas (ganho adicional esperado de 30%):
+1. Server-side rendering (SSR)
+2. CDN
+3. Estratégia de cache
+
+Em qual plano você quer que eu comece?
+```
+
+## 🛠️ Passo 6: configurações avançadas e personalização
+
+> **🎯 Dica de personalização:** ajuste o comportamento do assistente de IA ao seu estilo e às necessidades do projeto para obter a melhor experiência.
+
+### **6.1 Configurar modos de comportamento do assistente**
+
+**🔄 Controle de frequência de feedback:**
 ```bash
-# 新手模式（推荐初学者）
+# Modo iniciante (recomendado para quem está começando)
 /设置详细模式
-# 特点：每个步骤都有详细说明和确认
-# 适合：第一次使用、学习新技术、复杂项目
+# Características: explicação detalhada e confirmação a cada etapa
+# Ideal para: primeiro uso, aprender tecnologias novas, projetos complexos
 
-# 标准模式（默认推荐）
-/设置标准模式  
-# 特点：关键决策点反馈，平衡效率和安全
-# 适合：日常开发、中等复杂度项目
+# Modo padrão (recomendado por padrão)
+/设置标准模式
+# Características: feedback em pontos de decisão; equilíbrio entre eficiência e segurança
+# Ideal para: desenvolvimento diário, projetos de complexidade média
 
-# 专家模式（熟练用户）
+# Modo especialista (usuários experientes)
 /设置静默模式
-# 特点：仅在错误或重大决策时反馈
-# 适合：经验丰富、快速原型开发
+# Características: feedback apenas em erros ou grandes decisões
+# Ideal para: alta experiência, prototipação rápida
 ```
 
-**⚙️ 工作流配置：**
+**⚙️ Configuração de workflow:**
 ```bash
-# 严格模式（企业级项目）
+# Modo estrito (projetos corporativos)
 /设置严格模式
-# 特点：严格按顺序执行，完整的代码审查
-# 适合：生产环境、团队协作、高质量要求
+# Características: execução estritamente sequencial e revisão completa de código
+# Ideal para: produção, colaboração em equipe, alta exigência de qualidade
 
-# 灵活模式（默认推荐）
+# Modo flexível (recomendado por padrão)
 /设置灵活模式
-# 特点：允许跳转和调整，适应性强
-# 适合：敏捷开发、需求变化频繁
+# Características: permite pular/ajustar etapas com mais adaptabilidade
+# Ideal para: desenvolvimento ágil, requisitos que mudam com frequência
 
-# 快速模式（原型开发）
+# Modo rápido (prototipação)
 /设置快捷模式
-# 特点：简化步骤，快速验证想法
-# 适合：概念验证、快速原型、学习实验
+# Características: simplifica etapas para validar ideias rapidamente
+# Ideal para: prova de conceito, protótipos rápidos, experimentos de aprendizado
 ```
 
-### **6.2 前端技术栈偏好设置**
+### **6.2 Preferências de stack frontend**
 
-**🎨 框架优先级配置：**
+**🎨 Configuração de prioridade de framework:**
 ```bash
-# Vue生态系统优先
+# Prioridade para o ecossistema Vue
 /设置Vue优先模式
-# 自动选择：Vue 3 + Vite + Pinia + Vue Router + Element Plus
+# Seleção automática: Vue 3 + Vite + Pinia + Vue Router + Element Plus
 
-# React生态系统优先  
+# Prioridade para o ecossistema React
 /设置React优先模式
-# 自动选择：React 18 + Next.js + Zustand + React Router + Ant Design
+# Seleção automática: React 18 + Next.js + Zustand + React Router + Ant Design
 
-# 原生优先（轻量级）
+# Prioridade para nativo (leve)
 /设置原生优先模式
-# 自动选择：Vanilla JS/TS + Vite + 原生CSS/Tailwind
+# Seleção automática: Vanilla JS/TS + Vite + CSS nativo/Tailwind
 ```
 
-**🔧 开发工具偏好：**
+**🔧 Preferências de ferramentas de desenvolvimento:**
 ```bash
-# TypeScript严格模式
+# TypeScript estrito
 /设置TypeScript严格模式
-# 启用最严格的类型检查和代码规范
+# Ativa a checagem de tipos e padrões de código mais rígidos
 
-# 性能优化优先
-/设置性能优化模式  
-# 自动应用性能最佳实践和优化建议
+# Prioridade em performance
+/设置性能优化模式
+# Aplica automaticamente boas práticas e recomendações de otimização
 
-# 可访问性优先
+# Prioridade em acessibilidade
 /设置无障碍优先模式
-# 自动添加ARIA标签和无障碍功能
+# Adiciona automaticamente ARIA e recursos de acessibilidade
 ```
 
-### **6.3 项目特定配置文件**
+### **6.3 Arquivo de configuração específico por projeto**
 
-**📄 创建项目配置文件：**
-在项目根目录创建 `.ai-frontend-config.json`：
+**📄 Criar arquivo de configuração do projeto:**
+
+Crie `.ai-frontend-config.json` na raiz do projeto:
 ```json
 {
   "project": {
-    "name": "我的前端项目",
+    "name": "Meu projeto frontend",
     "type": "spa",
     "target": "web"
   },
@@ -772,16 +777,16 @@ const handleClick = () => {
 }
 ```
 
-**🎯 配置文件说明：**
-- **project**: 项目基本信息
-- **tech_stack**: 技术栈偏好，AI会优先推荐这些技术
-- **preferences**: 代码风格和工具偏好
-- **ai_behavior**: AI助手行为配置
-- **development**: 开发环境配置
+**🎯 O que significa cada seção:**
+- **project**: informações básicas do projeto
+- **tech_stack**: preferências de stack; a IA vai priorizar essas sugestões
+- **preferences**: preferências de estilo de código e ferramentas
+- **ai_behavior**: comportamento do assistente de IA
+- **development**: configurações do ambiente de desenvolvimento
 
-### **6.4 团队协作配置**
+### **6.4 Configuração para colaboração em equipe**
 
-**👥 团队规范配置：**
+**👥 Configuração de normas de equipe:**
 ```json
 {
   "team": {
@@ -799,279 +804,279 @@ const handleClick = () => {
 }
 ```
 
-## ✅ 第七步：配置验证与故障排除
+## ✅ Passo 7: validar configuração e solucionar problemas
 
-> **🔍 验证提示**: 完整的功能测试确保所有组件正常工作，遇到问题时可快速定位和解决。
+> **🔍 Dica de validação:** testes completos garantem que tudo funciona. Se aparecer um problema, use os passos abaixo para localizar rapidamente.
 
-### **7.1 系统环境验证**
+### **7.1 Validar ambiente do sistema**
 
-**📋 快速环境检查脚本：**
+**📋 Script rápido de checagem do ambiente:**
 ```bash
 # Windows PowerShell
-Write-Host "=== 前端规则环境检查 ===" -ForegroundColor Green
-Write-Host "Node.js版本:" -NoNewline; node --version
-Write-Host "npm版本:" -NoNewline; npm --version
-Write-Host "当前目录:" -NoNewline; Get-Location
+Write-Host "=== Checagem do ambiente das regras frontend ===" -ForegroundColor Green
+Write-Host "Versão do Node.js:" -NoNewline; node --version
+Write-Host "Versão do npm:" -NoNewline; npm --version
+Write-Host "Diretório atual:" -NoNewline; Get-Location
 if (Test-Path ".ai-frontend-config.json") {
-    Write-Host "✅ 项目配置文件存在" -ForegroundColor Green
+    Write-Host "✅ Arquivo de configuração do projeto existe" -ForegroundColor Green
 } else {
-    Write-Host "⚠️ 项目配置文件不存在" -ForegroundColor Yellow
+    Write-Host "⚠️ Arquivo de configuração do projeto não existe" -ForegroundColor Yellow
 }
 ```
 
-**🎯 环境要求检查表：**
-| 组件 | 最低要求 | 推荐版本 | 检查命令 | 状态 |
+**🎯 Checklist de requisitos do ambiente:**
+| Componente | Mínimo | Recomendado | Comando | Status |
 |------|----------|----------|----------|------|
 | Node.js | 18.0.0+ | 20.0.0+ | `node --version` | ⬜ |
 | npm | 9.0.0+ | 10.0.0+ | `npm --version` | ⬜ |
-| Git | 2.30.0+ | 最新版 | `git --version` | ⬜ |
-| VS Code | 1.80.0+ | 最新版 | 查看帮助→关于 | ⬜ |
+| Git | 2.30.0+ | Versão mais recente | `git --version` | ⬜ |
+| VS Code | 1.80.0+ | Versão mais recente | Ajuda → Sobre | ⬜ |
 
-### **7.2 MCP工具功能验证**
+### **7.2 Validar funcionalidades das ferramentas MCP**
 
-**🔧 基础功能测试：**
+**🔧 Teste de funcionalidades básicas:**
 ```bash
-# 1. 测试前端开发模式激活
+# 1. Testar ativação do modo de desenvolvimento frontend
 /frontend-dev
-# ✅ 期望输出："🎯 前端开发模式已激活，请描述您的项目需求"
-# ❌ 如果无响应：检查MCP配置和权限
+# ✅ Saída esperada: "🎯 Modo de desenvolvimento frontend ativado. Descreva as necessidades do seu projeto"
+# ❌ Se não houver resposta: verifique configuração do MCP e permissões
 
-# 2. 测试模式切换功能
+# 2. Testar troca de modo
 /ui设计
-# ✅ 期望输出："🎨 UI设计模式已激活，准备协助您进行界面设计"
+# ✅ Saída esperada: "🎨 Modo de design de UI ativado. Pronto para ajudar no design"
 
 /组件开发
-# ✅ 期望输出："🧩 组件开发模式已激活，专注于可复用组件创建"
+# ✅ Saída esperada: "🧩 Modo de desenvolvimento de componentes ativado. Foco em componentes reutilizáveis"
 
-# 3. 测试配置状态查询
+# 3. Testar consulta de status
 /status
-# ✅ 期望输出：显示当前模式、配置信息、项目状态
+# ✅ Saída esperada: mostra modo atual, configuração e estado do projeto
 ```
 
-**🎨 高级功能测试：**
+**🎨 Teste de funcionalidades avançadas:**
 ```bash
-# 4. 测试技术栈偏好设置
+# 4. Testar preferências de stack
 /设置Vue优先模式
-# ✅ 期望输出："Vue生态系统优先模式已启用"
+# ✅ Saída esperada: "Modo com prioridade para o ecossistema Vue habilitado"
 
-# 5. 测试反馈级别调整
+# 5. Testar ajuste de nível de feedback
 /设置详细模式
-# ✅ 期望输出："详细反馈模式已启用，将提供完整的步骤说明"
+# ✅ Saída esperada: "Modo detalhado habilitado. Será fornecida explicação completa das etapas"
 
-# 6. 测试项目配置加载
+# 6. Testar carregamento do arquivo do projeto
 /检查配置
-# ✅ 期望输出：显示.ai-frontend-config.json的内容
+# ✅ Saída esperada: mostra o conteúdo do .ai-frontend-config.json
 ```
 
-### **7.3 实际开发场景测试**
+### **7.3 Testar cenários reais de desenvolvimento**
 
-**🚀 端到端测试流程：**
+**🚀 Fluxo de teste ponta a ponta:**
 ```bash
-# 场景1：创建新的Vue组件
+# Cenário 1: criar um novo componente Vue
 /组件开发
-# 输入："创建一个响应式的用户卡片组件，包含头像、姓名、邮箱和操作按钮"
-# ✅ 期望：生成完整的Vue组件代码，包含样式和类型定义
+# Entrada: "Crie um componente responsivo de cartão de usuário, com avatar, nome, email e botões de ação"
+# ✅ Esperado: código completo do componente Vue, com estilos e tipos
 
-# 场景2：UI设计优化
-/ui设计  
-# 输入："为电商网站设计一个现代化的商品列表页面"
-# ✅ 期望：提供设计建议、布局方案和CSS代码
+# Cenário 2: otimização de design de UI
+/ui设计
+# Entrada: "Desenhe uma página moderna de lista de produtos para um e-commerce"
+# ✅ Esperado: recomendações de design, layout e código de CSS
 
-# 场景3：性能优化分析
+# Cenário 3: análise de performance
 /优化
-# 输入："分析我的React应用性能瓶颈"
-# ✅ 期望：提供性能分析报告和优化建议
+# Entrada: "Analise gargalos de performance no meu app React"
+# ✅ Esperado: relatório de análise e recomendações de otimização
 ```
 
-### **7.4 常见问题故障排除**
+### **7.4 Solução de problemas comuns**
 
-**❌ 问题1：命令无响应**
+**❌ Problema 1: comando sem resposta**
 ```bash
-# 症状：输入/frontend-dev后无任何反应
-# 解决步骤：
-1. 检查MCP服务状态：npm run mcp:status
-2. 重启MCP服务：npm run mcp:restart
-3. 检查配置文件：cat mcp-config.json
-4. 查看错误日志：npm run mcp:logs
+# Sintoma: ao digitar /frontend-dev não acontece nada
+# Passos:
+1. Verifique o status do serviço MCP: npm run mcp:status
+2. Reinicie o serviço MCP: npm run mcp:restart
+3. Verifique o arquivo de configuração: cat mcp-config.json
+4. Veja os logs de erro: npm run mcp:logs
 ```
 
-**❌ 问题2：配置文件加载失败**
+**❌ Problema 2: falha ao carregar o arquivo de configuração**
 ```bash
-# 症状：提示"配置文件格式错误"或"无法加载配置"
-# 解决步骤：
-1. 验证JSON格式：npx jsonlint .ai-frontend-config.json
-2. 检查文件权限：ls -la .ai-frontend-config.json
-3. 重新生成配置：npm run generate:config
+# Sintoma: "Formato do arquivo inválido" ou "Não foi possível carregar a configuração"
+# Passos:
+1. Valide o JSON: npx jsonlint .ai-frontend-config.json
+2. Verifique permissões: ls -la .ai-frontend-config.json
+3. Gere novamente: npm run generate:config
 ```
 
-**❌ 问题3：VS Code集成问题**
+**❌ Problema 3: integração com VS Code**
 ```bash
-# 症状：VS Code中无法使用前端规则功能
-# 解决步骤：
-1. 检查插件安装：Ctrl+Shift+X 搜索"MCP"
-2. 重新加载窗口：Ctrl+Shift+P → "Developer: Reload Window"
-3. 检查工作区设置：.vscode/settings.json
+# Sintoma: não dá para usar as regras frontend no VS Code
+# Passos:
+1. Verifique extensões: Ctrl+Shift+X e procure por "MCP"
+2. Recarregue a janela: Ctrl+Shift+P → "Developer: Reload Window"
+3. Verifique configurações do workspace: .vscode/settings.json
 ```
 
-**❌ 问题4：权限错误**
+**❌ Problema 4: erro de permissão**
 ```bash
-# 症状："Permission denied"或"Access is denied"
-# 解决步骤：
-1. 以管理员身份运行终端
-2. 检查文件夹权限：icacls . /grant Users:F
-3. 清除npm缓存：npm cache clean --force
+# Sintoma: "Permission denied" ou "Access is denied"
+# Passos:
+1. Rode o terminal como administrador
+2. Verifique permissões da pasta: icacls . /grant Users:F
+3. Limpe cache do npm: npm cache clean --force
 ```
 
-### **7.5 性能验证测试**
+### **7.5 Testes de validação de performance**
 
-**⚡ 响应时间测试：**
+**⚡ Teste de tempo de resposta:**
 ```bash
-# 测试AI响应速度（应在3秒内响应）
+# Testar tempo de resposta da IA (deve responder em menos de 3 segundos)
 Measure-Command { /frontend-dev }
-# ✅ 期望：TotalSeconds < 3
+# ✅ Esperado: TotalSeconds < 3
 
-# 测试代码生成速度（简单组件应在10秒内）
-Measure-Command { /组件开发 "创建按钮组件" }
-# ✅ 期望：TotalSeconds < 10
+# Testar tempo de geração de código (componente simples em menos de 10 segundos)
+Measure-Command { /组件开发 "Criar componente de botão" }
+# ✅ Esperado: TotalSeconds < 10
 ```
 
-**📊 资源使用监控：**
+**📊 Monitoramento de recursos:**
 ```bash
-# 监控内存使用
+# Monitorar uso de memória
 Get-Process node | Select-Object ProcessName, WorkingSet
-# ✅ 期望：WorkingSet < 500MB
+# ✅ Esperado: WorkingSet < 500MB
 
-# 监控CPU使用
+# Monitorar uso de CPU
 Get-Counter "\Process(node)\% Processor Time"
-# ✅ 期望：平均CPU使用率 < 20%
+# ✅ Esperado: uso médio de CPU < 20%
 ```
 
-### **7.6 完整验证清单**
+### **7.6 Checklist completo de validação**
 
-**✅ 系统环境验证：**
-- [ ] Node.js 版本 >= 18.0.0
-- [ ] npm 版本 >= 9.0.0  
-- [ ] Git 版本 >= 2.30.0
-- [ ] VS Code 版本 >= 1.80.0
-- [ ] PowerShell 版本 >= 5.1
+**✅ Validação do ambiente do sistema:**
+- [ ] Node.js versão >= 18.0.0
+- [ ] npm versão >= 9.0.0
+- [ ] Git versão >= 2.30.0
+- [ ] VS Code versão >= 1.80.0
+- [ ] PowerShell versão >= 5.1
 
-**✅ MCP工具验证：**
-- [ ] MCP服务正常启动
-- [ ] 基础命令响应正常（/frontend-dev, /ui设计等）
-- [ ] 模式切换功能正常
-- [ ] 配置查询功能正常
-- [ ] 错误处理机制正常
+**✅ Validação das ferramentas MCP:**
+- [ ] Serviço MCP inicia normalmente
+- [ ] Comandos básicos respondem (ex.: /frontend-dev, /ui设计)
+- [ ] Troca de modo funciona
+- [ ] Consulta de configuração funciona
+- [ ] Mecanismo de tratamento de erros funciona
 
-**✅ 项目配置验证：**
-- [ ] .ai-frontend-config.json 文件存在且格式正确
-- [ ] 技术栈偏好设置生效
-- [ ] AI行为模式配置生效
-- [ ] 团队协作配置加载成功
+**✅ Validação de configuração do projeto:**
+- [ ] `.ai-frontend-config.json` existe e tem formato válido
+- [ ] Preferências de stack entram em vigor
+- [ ] Modo de comportamento da IA entra em vigor
+- [ ] Configuração de colaboração em equipe carrega
 
-**✅ 开发环境验证：**
-- [ ] VS Code插件正常工作
-- [ ] 代码补全功能正常
-- [ ] 语法高亮正常
-- [ ] 调试功能正常
-- [ ] 终端集成正常
+**✅ Validação do ambiente de desenvolvimento:**
+- [ ] Extensões do VS Code funcionam
+- [ ] Autocomplete funciona
+- [ ] Highlight de sintaxe funciona
+- [ ] Depuração funciona
+- [ ] Integração do terminal funciona
 
-**✅ 性能验证：**
-- [ ] AI响应时间 < 3秒
-- [ ] 代码生成时间 < 10秒
-- [ ] 内存使用 < 500MB
-- [ ] CPU使用率 < 20%
+**✅ Validação de performance:**
+- [ ] Tempo de resposta da IA < 3s
+- [ ] Tempo de geração de código < 10s
+- [ ] Uso de memória < 500MB
+- [ ] Uso de CPU < 20%
 
-## 🎉 完成！
+## 🎉 Concluído!
 
-🎊 **恭喜！您已经成功配置了前端规则系统 2.4.1！**
+🎊 **Parabéns! Você configurou com sucesso o sistema de regras frontend 2.6.0!**
 
-现在您拥有了一个强大的AI前端开发助手，可以：
+Agora você tem um assistente de IA poderoso para frontend e pode:
 
-### **🚀 立即开始使用：**
-- 🎯 **`/frontend-dev`** - 启动智能前端开发模式
-- 🎨 **`/ui设计`** - 进入专业界面设计模式  
-- 🧩 **`/组件开发`** - 创建高质量可复用组件
-- 🔧 **`/工程化`** - 优化项目架构和构建流程
-- 🧪 **`/测试`** - 编写全面的测试用例
-- ⚡ **`/优化`** - 提升应用性能和用户体验
+### **🚀 Começar agora:**
+- 🎯 **`/frontend-dev`** - Iniciar o modo inteligente de desenvolvimento frontend
+- 🎨 **`/ui设计`** - Entrar no modo profissional de design de interface
+- 🧩 **`/组件开发`** - Criar componentes reutilizáveis de alta qualidade
+- 🔧 **`/工程化`** - Otimizar arquitetura e pipeline de build
+- 🧪 **`/测试`** - Escrever testes completos
+- ⚡ **`/优化`** - Melhorar performance e experiência do usuário
 
-### **🎛️ 个性化配置：**
-- 🔄 **`/设置Vue优先模式`** - 专注Vue生态系统
-- ⚛️ **`/设置React优先模式`** - 专注React生态系统
-- 📝 **`/设置TypeScript严格模式`** - 启用严格类型检查
-- 🏃‍♂️ **`/设置快捷模式`** - 快速原型开发
+### **🎛️ Personalização:**
+- 🔄 **`/设置Vue优先模式`** - Focar no ecossistema Vue
+- ⚛️ **`/设置React优先模式`** - Focar no ecossistema React
+- 📝 **`/设置TypeScript严格模式`** - Habilitar checagem de tipos estrita
+- 🏃‍♂️ **`/设置快捷模式`** - Prototipação rápida
 
-### **📊 状态监控：**
-- 📈 **`/status`** - 查看当前配置和运行状态
-- 🔍 **`/检查配置`** - 验证项目配置文件
-- 📋 **`/help`** - 获取完整命令列表
+### **📊 Monitoramento:**
+- 📈 **`/status`** - Ver configuração atual e estado de execução
+- 🔍 **`/检查配置`** - Validar arquivo de configuração do projeto
+- 📋 **`/help`** - Ver lista completa de comandos
 
-## 📚 学习资源与文档
+## 📚 Recursos de aprendizado e documentação
 
-### **📖 核心文档：**
-- 📘 [前端规则文档](../global-rules/frontend-rules.mdc) - 深入了解规则系统
-- 🛠️ [MCP详细配置指南](../docs/MCP-DETAILED-CONFIG-GUIDE.md) - 高级配置选项
-- 🔧 [环境设置指南](../docs/ENVIRONMENT-SETUP.md) - 开发环境优化
-- 🎯 [智能使用策略](../docs/MCP-INTELLIGENT-USAGE-STRATEGY.md) - 专业开发建议
+### **📖 Documentos principais:**
+- 📘 [Documentação de regras frontend](../global-rules/frontend-rules.mdc) - Entenda o sistema de regras em profundidade
+- 🛠️ [Guia detalhado de configuração do MCP](../docs/MCP-DETAILED-CONFIG-GUIDE.md) - Opções avançadas
+- 🔧 [Guia de configuração do ambiente](../docs/ENVIRONMENT-SETUP.md) - Otimização do ambiente de desenvolvimento
+- 🎯 [Estratégia de uso inteligente](../docs/MCP-INTELLIGENT-USAGE-STRATEGY.md) - Recomendações profissionais
 
-### **🆘 问题解决：**
-- 🚨 [故障排除指南](../docs/MCP-TROUBLESHOOTING-GUIDE.md) - 常见问题解决方案
-- 📋 [导航索引](../docs/NAVIGATION-INDEX.md) - 快速查找文档
-- 🔧 [MCP工具介绍](../docs/MCP-TOOLS-INTRODUCTION.md) - 工具功能说明
+### **🆘 Solução de problemas:**
+- 🚨 [Guia de troubleshooting](../docs/MCP-TROUBLESHOOTING-GUIDE.md) - Soluções para problemas comuns
+- 📋 [Índice de navegação](../docs/NAVIGATION-INDEX.md) - Encontre documentos rapidamente
+- 🔧 [Introdução às ferramentas MCP](../docs/MCP-TOOLS-INTRODUCTION.md) - O que cada ferramenta faz
 
-### **🎓 学习教程：**
-- 🌟 [快速开始指南](../README.md) - 5分钟上手
-- 🏗️ [后端开发指南](../docs/backend-guide.md) - 后端开发参考
-- 🎨 [前端开发指南](../docs/frontend-guide.md) - 前端开发参考
-- 🧠 [超级大脑系统](../tutorials/super-brain-system-usage-guide.md) - 智能系统使用
+### **🎓 Tutoriais:**
+- 🌟 [Guia de início rápido](../README.md) - Em 5 minutos
+- 🏗️ [Guia de backend](../docs/backend-guide.md) - Referência para backend
+- 🎨 [Guia de frontend](../docs/frontend-guide.md) - Referência para frontend
+- 🧠 [Sistema Super Cérebro](../tutorials/super-brain-system-usage-guide.md) - Uso do sistema inteligente
 
-### **🔗 社区资源：**
-- 📚 [项目文档](../README.md) - 完整使用说明
-- 🛠️ [配置指南](../docs/) - 详细配置文档
-- 💡 [最佳实践](../tutorials/) - 开发经验分享
-- 🔧 [工具脚本](../mcp-scripts/) - 实用工具集合
+### **🔗 Recursos da comunidade:**
+- 📚 [Documentação do projeto](../README.md) - Instruções completas
+- 🛠️ [Documentos de configuração](../docs/) - Documentação detalhada
+- 💡 [Boas práticas](../tutorials/) - Experiências e dicas
+- 🔧 [Scripts e ferramentas](../mcp-scripts/) - Utilitários
 
-## 📋 版本信息
+## 📋 Informações de versão
 
-- **当前版本**: Rules 2.6.0
-- **发布日期**: 2025年10月19日
+- **Versão atual**: Rules 2.6.0
+- **Data de lançamento**: 19 de outubro de 2025
 
-**📌 详细信息**: 请查看 [README.md](../README.md) 获取最新版本信息和更新日志。
+**📌 Mais detalhes:** veja [README.md](../README.md) para informações da versão e changelog.
 
-## 👨‍💻 开发团队
+## 👨‍💻 Time de desenvolvimento
 
-### **🏢 前端规则系统**
-*专为现代前端开发者设计的AI辅助开发工具*
+### **🏢 Sistema de regras frontend**
 
-**🎯 项目目标**: 提供高效的AI前端开发辅助功能
+*Uma ferramenta de desenvolvimento assistida por IA, projetada para desenvolvedores frontend modernos.*
 
-**📦 项目特色**:
-- 🧠 **智能规则引擎** - 专业的前端开发规则
-- 🎨 **UI设计辅助** - 界面设计最佳实践  
-- 🔧 **工具链集成** - 完整的开发工具支持
-- 📚 **详细文档** - 完善的使用指南
+**🎯 Objetivo do projeto:** oferecer capacidades eficientes de assistência de IA para desenvolvimento frontend.
 
-**🤝 开源项目**: 欢迎贡献代码、文档和使用反馈！
+**📦 Destaques do projeto:**
+- 🧠 **Motor de regras inteligente** - Regras profissionais para desenvolvimento frontend
+- 🎨 **Apoio ao design de UI** - Melhores práticas de design de interface
+- 🔧 **Integração com toolchain** - Suporte completo a ferramentas de desenvolvimento
+- 📚 **Documentação detalhada** - Guia de uso completo
+
+**🤝 Projeto open source:** contribuições de código, documentação e feedback são bem-vindas.
 
 ---
 
-## 🚀 下一步行动
+## 🚀 Próximos passos
 
-### **🎯 立即体验：**
-1. 🏃‍♂️ **快速开始**: 输入 `/frontend-dev` 开始您的第一个AI辅助项目
-2. 🎨 **尝试设计**: 使用 `/ui设计` 体验智能界面设计
-3. 🧩 **组件开发**: 通过 `/组件开发` 创建您的第一个智能组件
+### **🎯 Para experimentar agora:**
+1. 🏃‍♂️ **Comece rápido**: digite `/frontend-dev` para iniciar seu primeiro projeto assistido por IA
+2. 🎨 **Experimente design**: use `/ui设计` para vivenciar o modo de design inteligente
+3. 🧩 **Desenvolva componentes**: use `/组件开发` para criar seu primeiro componente inteligente
 
-### **📈 持续改进：**
-- 🔄 定期更新到最新版本获取新功能
-- 📝 分享使用体验帮助我们改进产品
-- 🤝 加入社区讨论交流开发经验
+### **📈 Melhoria contínua:**
+- 🔄 Atualize regularmente para a versão mais recente para obter novos recursos
+- 📝 Compartilhe sua experiência para ajudar a melhorar o produto
+- 🤝 Participe da comunidade para trocar experiências de desenvolvimento
 
-### **💡 获取帮助：**
-- 📖 遇到问题先查看[故障排除指南](../docs/MCP-TROUBLESHOOTING-GUIDE.md)
-- 📚 查阅[详细配置指南](../docs/MCP-DETAILED-CONFIG-GUIDE.md)
-- 🔧 参考[环境设置文档](../docs/ENVIRONMENT-SETUP.md)
-- 💡 查看[智能使用策略](../docs/MCP-INTELLIGENT-USAGE-STRATEGY.md)
+### **💡 Como obter ajuda:**
+- 📖 Se surgir um problema, veja primeiro o [guia de troubleshooting](../docs/MCP-TROUBLESHOOTING-GUIDE.md)
+- 📚 Consulte o [guia detalhado de configuração](../docs/MCP-DETAILED-CONFIG-GUIDE.md)
+- 🔧 Veja o [guia de configuração do ambiente](../docs/ENVIRONMENT-SETUP.md)
+- 💡 Confira a [estratégia de uso inteligente](../docs/MCP-INTELLIGENT-USAGE-STRATEGY.md)
 
-**🎉 祝您开发愉快！让AI成为您最得力的编程伙伴！**
-
+**🎉 Bom desenvolvimento! Que a IA seja sua parceira de programação mais confiável!**

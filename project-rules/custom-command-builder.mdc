@@ -1,12 +1,12 @@
 ---
 type: "always_apply"
-description: "AI-powered custom command builder with intelligent templates - AI驱动的自定义命令构建器"
+description: "Construtor de comandos personalizados impulsionado por IA com modelos inteligentes"
 globs: ["**/*"]
 priority: 654
 alwaysApply: true
 integrations: ["super-brain-system", "mcp-intelligent-strategy", "context-loader"]
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -17,256 +17,256 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adição do sistema de gerenciamento de versão"
+      - "Padronização da estrutura do arquivo de regras"
 ---
 
-# 🛠️ Custom Command Builder - 智能自定义命令构建器
+# 🛠️ Custom Command Builder - Construtor de Comandos Inteligente
 
-AI驱动的用户自定义命令和规则构建系统，支持智能模板生成、规则扩展和插件开发。
+Sistema de construção de comandos personalizados e regras de usuário impulsionado por IA, suportando geração inteligente de modelos, extensão de regras e desenvolvimento de plugins.
 
-## 🧠 AI Intelligence Core - AI智能核心
+## 🧠 Núcleo de Inteligência IA
 
-### 智能激活条件
+### Condições de Ativação Inteligente
 ```yaml
-自动激活场景:
-  - 用户执行 "/create-command" 命令
-  - 检测到重复性操作需要自动化
-  - 超级大脑系统推荐创建自定义命令
-  - 项目需要特定的工作流定制
-  - 团队需要标准化操作流程
+Cenários de ativação automática:
+  - Usuário executa o comando "/create-command"
+  - Detecção de operações repetitivas que precisam de automação
+  - Sistema Super Brain recomenda a criação de comando personalizado
+  - Projeto requer customização de fluxo de trabalho específica
+  - Equipe precisa padronizar processos operacionais
 
-智能分析维度:
-  - 用户操作模式和频率 (30%)
-  - 项目特定需求分析 (25%)
-  - 团队协作模式识别 (20%)
-  - 工作流效率评估 (15%)
-  - 自动化潜力评估 (10%)
+Dimensões de análise inteligente:
+  - Padrões de operação do usuário e frequência (30%)
+  - Análise de requisitos específicos do projeto (25%)
+  - Identificação de padrões de colaboração da equipe (20%)
+  - Avaliação de eficiência do fluxo de trabalho (15%)
+  - Avaliação de potencial de automação (10%)
 ```
 
-## 🚀 Commands - 智能命令
+## 🚀 Comandos Inteligentes
 
-- `/create-command` - AI智能命令创建（推荐）
-- `/create-command --template <type>` - 使用指定模板创建
-- `/create-command --workflow` - 创建工作流命令
-- `/create-command --rule` - 创建自定义规则
-- `/create-command --plugin` - 创建插件扩展
-- `/list-commands` - 列出所有自定义命令
-- `/edit-command <name>` - 编辑现有命令
-- `/delete-command <name>` - 删除自定义命令
+- `/create-command` - Criação de comando inteligente por IA (recomendado)
+- `/create-command --template <type>` - Criar usando um modelo específico
+- `/create-command --workflow` - Criar comando de fluxo de trabalho
+- `/create-command --rule` - Criar regra personalizada
+- `/create-command --plugin` - Criar extensão de plugin
+- `/list-commands` - Listar todos os comandos personalizados
+- `/edit-command <name>` - Editar comando existente
+- `/delete-command <name>` - Excluir comando personalizado
 
-## ✨ AI-Powered Features - AI驱动功能
+## ✨ Recursos Impulsionados por IA
 
-### 🤖 智能命令生成引擎
+### 🤖 Motor de Geração de Comandos Inteligente
 ```yaml
-命令类型识别:
-  工作流命令:
-    - 开发流程自动化
-    - 测试和部署流程
-    - 代码审查流程
-    - 发布管理流程
+Identificação de Tipo de Comando:
+  Comandos de Workflow:
+    - Automação de fluxo de desenvolvimento
+    - Processos de teste e deploy
+    - Processos de revisão de código
+    - Processos de gerenciamento de release
 
-  工具集成命令:
-    - MCP工具快捷调用
-    - 外部API集成
-    - 数据库操作
-    - 文件系统操作
+  Comandos de Integração de Ferramentas:
+    - Chamada rápida de ferramentas MCP
+    - Integração de API externa
+    - Operações de banco de dados
+    - Operações de sistema de arquivos
 
-  项目管理命令:
-    - 项目状态查询
-    - 进度跟踪和报告
-    - 团队协作支持
-    - 质量指标监控
+  Comandos de Gerenciamento de Projeto:
+    - Consulta de status do projeto
+    - Rastreamento de progresso e relatórios
+    - Suporte à colaboração da equipe
+    - Monitoramento de indicadores de qualidade
 
-  自动化脚本:
-    - 重复任务自动化
-    - 批量操作处理
-    - 数据处理和转换
-    - 系统维护任务
+  Scripts de Automação:
+    - Automação de tarefas repetitivas
+    - Processamento de operações em lote
+    - Processamento e transformação de dados
+    - Tarefas de manutenção do sistema
 
-智能生成能力:
-  - 基于用户描述自动生成命令逻辑
-  - 智能参数识别和验证
-  - 错误处理和异常管理
-  - 帮助文档自动生成
+Capacidades de Geração Inteligente:
+  - Geração automática de lógica de comando baseada na descrição do usuário
+  - Identificação e validação inteligente de parâmetros
+  - Tratamento de erros e gerenciamento de exceções
+  - Geração automática de documentação de ajuda
 ```
 
-### 🔧 模板系统
+### 🔧 Sistema de Modelos
 ```yaml
-内置模板:
-  基础模板:
-    - simple-command: 简单命令模板
-    - workflow-command: 工作流命令模板
-    - api-integration: API集成模板
-    - file-operation: 文件操作模板
+Modelos Integrados:
+  Modelos Básicos:
+    - simple-command: Modelo de comando simples
+    - workflow-command: Modelo de comando de fluxo de trabalho
+    - api-integration: Modelo de integração de API
+    - file-operation: Modelo de operação de arquivo
 
-  高级模板:
-    - mcp-tool-wrapper: MCP工具包装器
-    - multi-step-workflow: 多步骤工作流
-    - conditional-logic: 条件逻辑模板
-    - error-handling: 错误处理模板
+  Modelos Avançados:
+    - mcp-tool-wrapper: Wrapper de ferramenta MCP
+    - multi-step-workflow: Fluxo de trabalho de múltiplas etapas
+    - conditional-logic: Modelo de lógica condicional
+    - error-handling: Modelo de tratamento de erros
 
-  项目特定模板:
-    - frontend-command: 前端项目命令
-    - backend-command: 后端项目命令
-    - fullstack-command: 全栈项目命令
-    - devops-command: DevOps操作命令
+  Modelos Específicos de Projeto:
+    - frontend-command: Comando de projeto Frontend
+    - backend-command: Comando de projeto Backend
+    - fullstack-command: Comando de projeto Fullstack
+    - devops-command: Comando de operação DevOps
 
-自定义模板:
-  - 用户可创建自己的模板
-  - 模板继承和扩展
-  - 模板参数化配置
-  - 模板版本管理
+Modelos Personalizados:
+  - Usuário pode criar seus próprios modelos
+  - Herança e extensão de modelos
+  - Configuração parametrizada de modelos
+  - Gerenciamento de versão de modelos
 ```
 
-### 📊 智能规则扩展
+### 📊 Extensão Inteligente de Regras
 ```yaml
-规则扩展能力:
-  规则类型:
-    - workflow_rule: 工作流规则
-    - feature_rule: 功能规则
-    - intelligent_workflow_rule: 智能工作流规则
-    - safety_rule: 安全规则
+Capacidades de Extensão de Regras:
+  Tipos de Regras:
+    - workflow_rule: Regra de fluxo de trabalho
+    - feature_rule: Regra de funcionalidade
+    - intelligent_workflow_rule: Regra de fluxo de trabalho inteligente
+    - safety_rule: Regra de segurança
 
-  规则配置:
-    - 优先级设置和冲突解决
-    - 触发条件和激活场景
-    - 集成配置和依赖管理
-    - 性能优化和缓存策略
+  Configuração de Regras:
+    - Configuração de prioridade e resolução de conflitos
+    - Condições de disparo e cenários de ativação
+    - Configuração de integração e gerenciamento de dependências
+    - Otimização de desempenho e estratégia de cache
 
-  规则验证:
-    - 语法和格式验证
-    - 逻辑一致性检查
-    - 性能影响评估
-    - 安全风险评估
+  Validação de Regras:
+    - Validação de sintaxe e formato
+    - Verificação de consistência lógica
+    - Avaliação de impacto de desempenho
+    - Avaliação de riscos de segurança
 ```
 
-## 🔄 AI Workflow Process - AI工作流程
+## 🔄 Processo de Fluxo de Trabalho IA
 
-### Phase 1: 需求分析阶段
+### Fase 1: Estágio de Análise de Requisitos
 ```yaml
-Step 1 - 需求收集:
-  - 分析用户描述和需求
-  - 识别重复性操作模式
-  - 评估自动化潜力
-  - 确定命令类型和范围
+Passo 1 - Coleta de Requisitos:
+  - Analisar descrição e necessidades do usuário
+  - Identificar padrões de operação repetitiva
+  - Avaliar potencial de automação
+  - Determinar tipo e escopo do comando
 
-Step 2 - 上下文分析:
-  - 获取项目上下文信息 (context-loader集成)
-  - 分析现有命令和规则
-  - 识别相关工具和依赖
-  - 评估集成复杂度
+Passo 2 - Análise de Contexto:
+  - Obter informações de contexto do projeto (integração context-loader)
+  - Analisar comandos e regras existentes
+  - Identificar ferramentas e dependências relevantes
+  - Avaliar complexidade de integração
 
-Step 3 - 模板选择:
-  - AI推荐最适合的模板
-  - 分析模板适用性
-  - 评估定制化需求
-  - 确定开发策略
+Passo 3 - Seleção de Modelo:
+  - IA recomenda o modelo mais adequado
+  - Analisar aplicabilidade do modelo
+  - Avaliar necessidades de customização
+  - Determinar estratégia de desenvolvimento
 ```
 
-### Phase 2: 智能生成阶段
+### Fase 2: Estágio de Geração Inteligente
 ```yaml
-Step 4 - 命令生成:
-  - 基于模板生成命令结构
-  - AI生成命令逻辑和参数
-  - 添加错误处理和验证
-  - 集成项目特定配置
+Passo 4 - Geração de Comando:
+  - Gerar estrutura de comando baseada no modelo
+  - IA gera lógica e parâmetros do comando
+  - Adicionar tratamento de erros e validação
+  - Integrar configurações específicas do projeto
 
-Step 5 - 规则集成:
-  - 与现有规则系统集成
-  - 配置优先级和触发条件
-  - 添加智能推荐和学习
-  - 集成MCP工具编排
+Passo 5 - Integração de Regras:
+  - Integrar com sistema de regras existente
+  - Configurar prioridade e condições de disparo
+  - Adicionar recomendação inteligente e aprendizado
+  - Integrar orquestração de ferramentas MCP
 
-Step 6 - 质量保证:
-  - 验证命令语法和逻辑
-  - 测试命令功能和性能
-  - 检查安全性和权限
-  - 生成文档和帮助信息
+Passo 6 - Garantia de Qualidade:
+  - Validar sintaxe e lógica do comando
+  - Testar funcionalidade e desempenho do comando
+  - Verificar segurança e permissões
+  - Gerar documentação e informações de ajuda
 ```
 
-### Phase 3: 部署集成阶段
+### Fase 3: Estágio de Deploy e Integração
 ```yaml
-Step 7 - 命令部署:
-  - 将命令集成到规则系统
-  - 配置命令访问权限
-  - 建立命令索引和搜索
-  - 启用命令监控和日志
+Passo 7 - Deploy de Comando:
+  - Integrar comando ao sistema de regras
+  - Configurar permissões de acesso ao comando
+  - Estabelecer índice e pesquisa de comandos
+  - Habilitar monitoramento e logs de comando
 
-Step 8 - 学习优化:
-  - 监控命令使用情况
-  - 收集用户反馈和建议
-  - 优化命令性能和体验
-  - 更新命令文档和示例
+Passo 8 - Aprendizado e Otimização:
+  - Monitorar uso do comando
+  - Coletar feedback e sugestões do usuário
+  - Otimizar desempenho e experiência do comando
+  - Atualizar documentação e exemplos do comando
 ```
 
-## 🧠 Super Brain Integration - 超级大脑集成
+## 🧠 Integração com Super Brain
 
-### 智能推荐引擎
+### Motor de Recomendação Inteligente
 ```yaml
-命令推荐:
-  - 基于用户行为推荐有用的命令
-  - 根据项目类型推荐相关命令
-  - 基于团队模式推荐协作命令
-  - 根据效率分析推荐优化命令
+Recomendação de Comandos:
+  - Recomendar comandos úteis baseados no comportamento do usuário
+  - Recomendar comandos relevantes baseados no tipo de projeto
+  - Recomendar comandos de colaboração baseados em padrões de equipe
+  - Recomendar comandos de otimização baseados em análise de eficiência
 
-学习和优化:
-  - 学习用户的命令使用偏好
-  - 优化命令生成的准确性
-  - 积累命令模板和最佳实践
-  - 改进命令推荐算法
+Aprendizado e Otimização:
+  - Aprender preferências de uso de comandos do usuário
+  - Otimizar precisão da geração de comandos
+  - Acumular modelos de comando e melhores práticas
+  - Melhorar algoritmo de recomendação de comandos
 
-项目管理集成:
-  - 根据项目阶段推荐相关命令
-  - 集成到五阶段管理流程
-  - 提供阶段特定的命令模板
-  - 支持项目发展路径规划
+Integração de Gerenciamento de Projeto:
+  - Recomendar comandos relevantes baseados na fase do projeto
+  - Integrar ao processo de gerenciamento de cinco fases
+  - Fornecer modelos de comando específicos por fase
+  - Suportar planejamento de caminho de desenvolvimento do projeto
 ```
 
-### 与其他规则协同
+### Sinergia com Outras Regras
 ```yaml
-context-loader协同:
-  - 利用项目上下文信息优化命令生成
-  - 基于项目特征推荐命令模板
-  - 集成项目配置到命令逻辑
-  - 提供项目特定的命令建议
+Sinergia com context-loader:
+  - Utilizar informações de contexto do projeto para otimizar geração de comandos
+  - Recomendar modelos de comando baseados nas características do projeto
+  - Integrar configuração do projeto à lógica do comando
+  - Fornecer sugestões de comando específicas do projeto
 
-commit工作流协同（支持 /commit-fast 别名）:
-  - 创建提交相关的自定义命令
-  - 集成到提交工作流
-  - 支持提交规范自定义
-  - 优化提交效率
+Sinergia com Workflow de Commit (suporta alias /commit-fast):
+  - Criar comandos personalizados relacionados a commits
+  - Integrar ao fluxo de trabalho de commit
+  - Suportar personalização de normas de commit
+  - Otimizar eficiência de commit
 
-code-quality-check协同:
-  - 创建质量检查相关命令
-  - 集成到质量保证流程
-  - 支持质量标准自定义
-  - 优化检查效率
+Sinergia com code-quality-check:
+  - Criar comandos relacionados à verificação de qualidade
+  - Integrar ao processo de garantia de qualidade
+  - Suportar personalização de padrões de qualidade
+  - Otimizar eficiência de verificação
 
-其他规则协同:
-  - 为每个规则提供自定义扩展能力
-  - 支持规则参数和行为定制
-  - 集成到统一的命令系统
-  - 提供规则间协调机制
+Sinergia com Outras Regras:
+  - Fornecer capacidade de extensão personalizada para cada regra
+  - Suportar personalização de parâmetros e comportamento de regras
+  - Integrar ao sistema de comandos unificado
+  - Fornecer mecanismo de coordenação entre regras
 ```
 
-## 📋 Command Templates - 命令模板
+## 📋 Modelos de Comando
 
-### 🎯 工作流命令模板
+### 🎯 Modelo de Comando de Workflow
 ```yaml
-开发工作流模板:
-  模板名称: dev-workflow
-  用途: 标准化开发流程
+Modelo de Workflow de Desenvolvimento:
+  Nome do Modelo: dev-workflow
+  Propósito: Padronizar o processo de desenvolvimento
   
-  示例命令: /my-dev-start
-  功能:
-    - 启动开发环境
-    - 检查项目状态
-    - 拉取最新代码
-    - 运行质量检查
-    - 启动开发服务器
+  Exemplo de Comando: /my-dev-start
+  Funcionalidades:
+    - Iniciar ambiente de desenvolvimento
+    - Verificar status do projeto
+    - Pull do código mais recente
+    - Executar verificação de qualidade
+    - Iniciar servidor de desenvolvimento
 
-  生成代码:
+  Código Gerado:
     ```yaml
     ---
     type: "workflow_rule"
@@ -277,30 +277,30 @@ code-quality-check协同:
     # Custom Development Workflow
     
     ## Commands
-    - `/my-dev-start` - 启动完整开发环境
+    - `/my-dev-start` - Iniciar ambiente de desenvolvimento completo
     
     ## Workflow Steps
-    1. 检查Git状态和更新
-    2. 运行代码质量检查
-    3. 启动开发服务器
-    4. 打开相关开发工具
+    1. Verificar status e atualizações do Git
+    2. Executar verificação de qualidade de código
+    3. Iniciar servidor de desenvolvimento
+    4. Abrir ferramentas de desenvolvimento relevantes
     ```
 ```
 
-### 🔧 工具集成模板
+### 🔧 Modelo de Integração de Ferramentas
 ```yaml
-MCP工具包装模板:
-  模板名称: mcp-wrapper
-  用途: 简化MCP工具调用
+Modelo de Wrapper de Ferramenta MCP:
+  Nome do Modelo: mcp-wrapper
+  Propósito: Simplificar chamadas de ferramentas MCP
   
-  示例命令: /quick-github
-  功能:
-    - 快速GitHub操作
-    - 智能参数处理
-    - 错误处理和重试
-    - 结果格式化输出
+  Exemplo de Comando: /quick-github
+  Funcionalidades:
+    - Operações rápidas no GitHub
+    - Processamento inteligente de parâmetros
+    - Tratamento de erros e retentativa
+    - Saída formatada de resultados
 
-  生成代码:
+  Código Gerado:
     ```yaml
     ---
     type: "feature_rule"
@@ -311,29 +311,29 @@ MCP工具包装模板:
     # Quick GitHub Wrapper
     
     ## Commands
-    - `/quick-github <action>` - 快速GitHub操作
+    - `/quick-github <action>` - Operação rápida no GitHub
     
     ## MCP Integration
-    - 自动调用server-github工具
-    - 智能参数验证和处理
-    - 统一的错误处理机制
+    - Chamada automática da ferramenta server-github
+    - Validação e processamento inteligente de parâmetros
+    - Mecanismo unificado de tratamento de erros
     ```
 ```
 
-### 📊 监控和报告模板
+### 📊 Modelo de Monitoramento e Relatório
 ```yaml
-项目监控模板:
-  模板名称: project-monitor
-  用途: 项目状态监控和报告
+Modelo de Monitoramento de Projeto:
+  Nome do Modelo: project-monitor
+  Propósito: Monitoramento e relatório de status do projeto
   
-  示例命令: /project-health
-  功能:
-    - 项目健康度检查
-    - 性能指标收集
-    - 质量趋势分析
-    - 自动报告生成
+  Exemplo de Comando: /project-health
+  Funcionalidades:
+    - Verificação de saúde do projeto
+    - Coleta de indicadores de desempenho
+    - Análise de tendências de qualidade
+    - Geração automática de relatórios
 
-  生成代码:
+  Código Gerado:
     ```yaml
     ---
     type: "intelligent_workflow_rule"
@@ -345,358 +345,358 @@ MCP工具包装模板:
     # Project Health Monitor
     
     ## Commands
-    - `/project-health` - 项目健康度检查
+    - `/project-health` - Verificação de saúde do projeto
     
     ## AI Features
-    - 智能健康度评估
-    - 趋势分析和预测
-    - 自动化报告生成
+    - Avaliação inteligente de saúde
+    - Análise de tendências e previsão
+    - Geração automatizada de relatórios
     ```
 ```
 
-## 🎯 Advanced Features - 高级功能
+## 🎯 Recursos Avançados
 
-### 🔌 插件系统
+### 🔌 Sistema de Plugins
 ```yaml
-插件架构:
-  插件类型:
-    - 命令插件: 扩展新的命令功能
-    - 规则插件: 添加新的规则类型
-    - 工具插件: 集成外部工具
-    - 主题插件: 自定义界面和样式
+Arquitetura de Plugin:
+  Tipos de Plugin:
+    - Plugin de Comando: Estender novas funcionalidades de comando
+    - Plugin de Regra: Adicionar novos tipos de regras
+    - Plugin de Ferramenta: Integrar ferramentas externas
+    - Plugin de Tema: Customizar interface e estilo
 
-  插件接口:
-    - 标准化的插件API
-    - 生命周期管理
-    - 依赖注入和管理
-    - 配置和参数传递
+  Interface de Plugin:
+    - API de plugin padronizada
+    - Gerenciamento de ciclo de vida
+    - Injeção e gerenciamento de dependência
+    - Passagem de configuração e parâmetros
 
-  插件管理:
-    - 插件安装和卸载
-    - 版本管理和更新
-    - 依赖关系解析
-    - 冲突检测和解决
+  Gerenciamento de Plugin:
+    - Instalação e desinstalação de plugin
+    - Gerenciamento de versão e atualização
+    - Resolução de dependências
+    - Detecção e resolução de conflitos
 ```
 
-### 📚 命令库管理
+### 📚 Gerenciamento de Biblioteca de Comandos
 ```yaml
-命令库:
-  官方命令库:
-    - 经过验证的高质量命令
-    - 定期更新和维护
-    - 完整的文档和示例
-    - 社区反馈和改进
+Biblioteca de Comandos:
+  Biblioteca Oficial:
+    - Comandos de alta qualidade verificados
+    - Atualização e manutenção regulares
+    - Documentação e exemplos completos
+    - Feedback da comunidade e melhorias
 
-  用户命令库:
-    - 用户创建的自定义命令
-    - 团队内部共享命令
-    - 项目特定命令集合
-    - 个人工作流命令
+  Biblioteca de Usuário:
+    - Comandos personalizados criados pelo usuário
+    - Comandos compartilhados internamente na equipe
+    - Coleção de comandos específicos do projeto
+    - Comandos de fluxo de trabalho pessoal
 
-  社区命令库:
-    - 开源社区贡献命令
-    - 行业最佳实践命令
-    - 特定技术栈命令
-    - 创新实验性命令
+  Biblioteca da Comunidade:
+    - Comandos contribuídos pela comunidade open source
+    - Comandos de melhores práticas da indústria
+    - Comandos de stack tecnológica específica
+    - Comandos experimentais inovadores
 
-命令发现:
-  - 智能命令推荐
-  - 基于项目类型的命令建议
-  - 流行命令排行榜
-  - 相关命令关联推荐
+Descoberta de Comandos:
+  - Recomendação inteligente de comandos
+  - Sugestões de comandos baseadas no tipo de projeto
+  - Ranking de comandos populares
+  - Recomendação de comandos relacionados
 ```
 
-## 📋 Command Categories - 命令分类
+## 📋 Categorias de Comandos
 
-### 🚀 开发效率命令
+### 🚀 Comandos de Eficiência de Desenvolvimento
 ```yaml
-快捷操作:
-  - 项目初始化命令
-  - 环境配置命令
-  - 依赖管理命令
-  - 构建和部署命令
+Operações Rápidas:
+  - Comando de inicialização de projeto
+  - Comando de configuração de ambiente
+  - Comando de gerenciamento de dependências
+  - Comando de build e deploy
 
-代码操作:
-  - 代码生成命令
-  - 重构辅助命令
-  - 测试生成命令
-  - 文档生成命令
+Operações de Código:
+  - Comando de geração de código
+  - Comando auxiliar de refatoração
+  - Comando de geração de testes
+  - Comando de geração de documentação
 
-质量保证:
-  - 代码检查命令
-  - 安全扫描命令
-  - 性能分析命令
-  - 测试执行命令
+Garantia de Qualidade:
+  - Comando de verificação de código
+  - Comando de varredura de segurança
+  - Comando de análise de desempenho
+  - Comando de execução de testes
 ```
 
-### 🔧 项目管理命令
+### 🔧 Comandos de Gerenciamento de Projeto
 ```yaml
-状态管理:
-  - 项目状态查询
-  - 进度跟踪命令
-  - 里程碑管理
-  - 风险评估命令
+Gerenciamento de Status:
+  - Consulta de status do projeto
+  - Comando de rastreamento de progresso
+  - Gerenciamento de marcos (milestones)
+  - Comando de avaliação de riscos
 
-团队协作:
-  - 任务分配命令
-  - 代码审查命令
-  - 会议安排命令
-  - 知识分享命令
+Colaboração da Equipe:
+  - Comando de atribuição de tarefas
+  - Comando de revisão de código
+  - Comando de agendamento de reuniões
+  - Comando de compartilhamento de conhecimento
 
-报告生成:
-  - 项目报告命令
-  - 质量报告命令
-  - 性能报告命令
-  - 团队效率报告
+Geração de Relatórios:
+  - Comando de relatório de projeto
+  - Comando de relatório de qualidade
+  - Comando de relatório de desempenho
+  - Relatório de eficiência da equipe
 ```
 
-### 🛠️ 系统维护命令
+### 🛠️ Comandos de Manutenção do Sistema
 ```yaml
-环境管理:
-  - 环境配置命令
-  - 依赖更新命令
-  - 清理和优化命令
-  - 备份和恢复命令
+Gerenciamento de Ambiente:
+  - Comando de configuração de ambiente
+  - Comando de atualização de dependências
+  - Comando de limpeza e otimização
+  - Comando de backup e restauração
 
-监控和诊断:
-  - 系统监控命令
-  - 性能诊断命令
-  - 错误分析命令
-  - 日志分析命令
+Monitoramento e Diagnóstico:
+  - Comando de monitoramento do sistema
+  - Comando de diagnóstico de desempenho
+  - Comando de análise de erros
+  - Comando de análise de logs
 ```
 
-## 🔗 Integration Points - 集成点
+## 🔗 Pontos de Integração
 
-### 核心集成策略 (性能优化)
+### Estratégia Principal de Integração (Otimização de Desempenho)
 ```yaml
-context-loader集成:
-  - 利用项目上下文优化命令生成
-  - 基于项目特征推荐命令模板
-  - 集成项目配置到命令逻辑
-  - 提供项目特定的命令建议
+Integração com context-loader:
+  - Utilizar contexto do projeto para otimizar geração de comandos
+  - Recomendar modelos de comando baseados nas características do projeto
+  - Integrar configuração do projeto à lógica do comando
+  - Fornecer sugestões de comando específicas do projeto
 
-mcp-intelligent-strategy集成:
-  - 智能选择MCP工具进行命令集成
-  - 优化工具编排和性能
-  - 提供工具使用最佳实践
-  - 集成到MCP工具管理流程
+Integração com mcp-intelligent-strategy:
+  - Seleção inteligente de ferramentas MCP para integração de comandos
+  - Otimizar orquestração e desempenho de ferramentas
+  - Fornecer melhores práticas de uso de ferramentas
+  - Integrar ao fluxo de gerenciamento de ferramentas MCP
 
-super-brain-system集成:
-  - 智能推荐命令模板和策略
-  - 学习用户命令使用偏好
-  - 优化命令生成准确性
-  - 提供个性化命令建议
+Integração com super-brain-system:
+  - Recomendação inteligente de modelos e estratégias de comando
+  - Aprender preferências de uso de comandos do usuário
+  - Otimizar precisão da geração de comandos
+  - Fornecer sugestões de comando personalizadas
 
-按需集成策略:
-  - 其他规则按需动态集成 (减少常驻开销)
-  - 仅在用户明确需要时加载相关规则
-  - 智能缓存集成结果
-  - 优化集成性能和资源使用
+Estratégia de Integração Sob Demanda:
+  - Integração dinâmica de outras regras sob demanda (reduzir overhead residente)
+  - Carregar regras relevantes apenas quando explicitamente necessário pelo usuário
+  - Cache inteligente de resultados de integração
+  - Otimizar desempenho de integração e uso de recursos
 ```
 
-## 🚨 Error Handling & Safety - 错误处理和安全保障
+## 🚨 Tratamento de Erros e Segurança
 
-### 统一错误处理机制
+### Mecanismo Unificado de Tratamento de Erros
 ```yaml
-错误分类:
-  Level 1 - 致命错误:
-    - 命令生成引擎故障
-    - 规则系统冲突
-    - 文件系统权限不足
-    - 关键依赖缺失
+Classificação de Erros:
+  Nível 1 - Erros Fatais:
+    - Falha no motor de geração de comandos
+    - Conflito no sistema de regras
+    - Permissão insuficiente no sistema de arquivos
+    - Falta de dependência crítica
 
-  Level 2 - 严重错误:
-    - 命令语法生成错误
-    - 模板解析失败
-    - 集成配置错误
-    - 权限验证失败
+  Nível 2 - Erros Graves:
+    - Erro na geração de sintaxe de comando
+    - Falha na análise de modelo
+    - Erro de configuração de integração
+    - Falha na validação de permissão
 
-  Level 3 - 一般错误:
-    - 单个命令生成失败
-    - 参数验证错误
-    - 模板加载失败
-    - 缓存数据不一致
+  Nível 3 - Erros Comuns:
+    - Falha na geração de comando individual
+    - Erro de validação de parâmetro
+    - Falha no carregamento de modelo
+    - Inconsistência de dados em cache
 
-  Level 4 - 警告信息:
-    - 命令性能警告
-    - 最佳实践偏离
-    - 版本兼容性提醒
-    - 安全建议提示
+  Nível 4 - Mensagens de Aviso:
+    - Aviso de desempenho de comando
+    - Desvio de melhores práticas
+    - Lembrete de compatibilidade de versão
+    - Dica de sugestão de segurança
 ```
 
-### 安全保障机制
+### Mecanismos de Garantia de Segurança
 ```yaml
-命令安全:
-  - 命令权限验证
-  - 危险操作检测和确认
-  - 命令执行沙箱
-  - 操作审计日志
+Segurança de Comando:
+  - Validação de permissão de comando
+  - Detecção e confirmação de operação perigosa
+  - Sandbox de execução de comando
+  - Log de auditoria de operação
 
-代码安全:
-  - 生成代码安全扫描
-  - 敏感信息检测和过滤
-  - 恶意代码模式识别
-  - 安全最佳实践验证
+Segurança de Código:
+  - Varredura de segurança de código gerado
+  - Detecção e filtragem de informações sensíveis
+  - Identificação de padrões de código malicioso
+  - Validação de melhores práticas de segurança
 
-系统安全:
-  - 文件系统访问控制
-  - 网络访问权限管理
-  - 资源使用限制
-  - 异常行为监控
+Segurança do Sistema:
+  - Controle de acesso ao sistema de arquivos
+  - Gerenciamento de permissão de acesso à rede
+  - Limitação de uso de recursos
+  - Monitoramento de comportamento anômalo
 
-与其他规则协调:
-  - 与所有规则共享安全机制
-  - 统一的权限验证体系
-  - 协调的审计日志系统
-  - 集成的安全策略
+Coordenação com Outras Regras:
+  - Compartilhamento de mecanismo de segurança com todas as regras
+  - Sistema de validação de permissão unificado
+  - Sistema de log de auditoria coordenado
+  - Estratégias de segurança integradas
 ```
 
-## ⚡ Performance Optimization - 性能优化
+## ⚡ Otimização de Desempenho
 
-### 智能缓存机制
+### Mecanismo de Cache Inteligente
 ```yaml
-缓存策略:
-  - 命令生成结果缓存
-  - 模板解析结果缓存
-  - 项目分析结果缓存
-  - 用户偏好设置缓存
+Estratégia de Cache:
+  - Cache de resultados de geração de comando
+  - Cache de resultados de análise de modelo
+  - Cache de resultados de análise de projeto
+  - Cache de preferências de usuário
 
-优化技术:
-  - 懒加载模板系统
-  - 并行命令生成
-  - 智能预加载
-  - 资源池管理
+Tecnologias de Otimização:
+  - Sistema de carregamento tardio (lazy loading) de modelos
+  - Geração de comando paralela
+  - Pré-carregamento inteligente
+  - Gerenciamento de pool de recursos
 ```
 
-### 执行效率目标
+### Objetivos de Eficiência de Execução
 ```yaml
-性能指标:
-  - 简单命令生成: <3秒
-  - 复杂工作流生成: <10秒
-  - 模板加载: <1秒
-  - 命令执行: <5秒
+Indicadores de Desempenho:
+  - Geração de comando simples: <3s
+  - Geração de workflow complexo: <10s
+  - Carregamento de modelo: <1s
+  - Execução de comando: <5s
 
-优化措施:
-  - 异步处理非关键任务
-  - 智能缓存重复计算
-  - 优化模板解析算法
-  - 减少不必要的文件I/O
+Medidas de Otimização:
+  - Processamento assíncrono de tarefas não críticas
+  - Cache inteligente de cálculos repetitivos
+  - Otimização de algoritmo de análise de modelo
+  - Redução de I/O de arquivo desnecessário
 ```
 
-## 📋 Usage Examples - 使用示例
+## 📋 Exemplos de Uso
 
-### 基础命令创建
+### Criação Básica de Comando
 ```bash
-# AI智能命令创建
+# Criação de comando inteligente por IA
 /create-command
 
-# AI引导式对话:
-# 🤖 请描述您想要创建的命令功能：
-# 用户: "我想要一个命令来快速启动前端开发环境"
+# Diálogo guiado por IA:
+# 🤖 Por favor, descreva a funcionalidade do comando que você deseja criar:
+# Usuário: "Eu quero um comando para iniciar rapidamente o ambiente de desenvolvimento frontend"
 # 
-# 🧠 AI分析结果:
-# - 命令类型: 工作流命令
-# - 推荐模板: frontend-workflow
-# - 集成规则: commit, code-quality-check
+# 🧠 Resultado da Análise da IA:
+# - Tipo de Comando: Comando de Workflow
+# - Modelo Recomendado: frontend-workflow
+# - Regras Integradas: commit, code-quality-check
 # 
-# 🛠️ 生成的命令: /start-frontend-dev
-# 功能:
-# 1. 检查Node.js和npm版本
-# 2. 安装/更新依赖
-# 3. 运行代码质量检查
-# 4. 启动开发服务器
-# 5. 打开浏览器到开发地址
+# 🛠️ Comando Gerado: /start-frontend-dev
+# Funcionalidades:
+# 1. Verificar versões do Node.js e npm
+# 2. Instalar/atualizar dependências
+# 3. Executar verificação de qualidade de código
+# 4. Iniciar servidor de desenvolvimento
+# 5. Abrir navegador no endereço de desenvolvimento
 ```
 
-### 使用模板创建
+### Criação Usando Modelo
 ```bash
-# 使用指定模板创建命令
+# Criar comando usando um modelo específico
 /create-command --template mcp-wrapper
 
-# 输出示例:
-# 🛠️ 使用MCP包装器模板
+# Exemplo de saída:
+# 🛠️ Usando modelo de wrapper MCP
 # 
-# 📋 请提供以下信息:
-# - 命令名称: /quick-deploy
-# - MCP工具: server-github
-# - 操作类型: 部署相关
-# - 参数配置: 环境选择, 分支指定
+# 📋 Por favor, forneça as seguintes informações:
+# - Nome do Comando: /quick-deploy
+# - Ferramenta MCP: server-github
+# - Tipo de Operação: Relacionado a deploy
+# - Configuração de Parâmetros: Seleção de ambiente, especificação de branch
 # 
-# ✅ 命令创建完成:
-# - 文件位置: project-rules/custom-quick-deploy.mdc
-# - 命令: /quick-deploy <environment> <branch>
-# - 集成: 自动集成到规则系统
+# ✅ Criação de comando concluída:
+# - Localização do arquivo: project-rules/custom-quick-deploy.mdc
+# - Comando: /quick-deploy <environment> <branch>
+# - Integração: Integrado automaticamente ao sistema de regras
 ```
 
-### 工作流命令创建
+### Criação de Comando de Workflow
 ```bash
-# 创建工作流命令
+# Criar comando de workflow
 /create-command --workflow
 
-# AI引导创建:
-# 🔄 工作流命令创建向导
+# Criação guiada por IA:
+# 🔄 Assistente de criação de comando de workflow
 # 
-# Step 1: 工作流类型选择
-# - 开发工作流
-# - 测试工作流  
-# - 部署工作流
-# - 维护工作流
+# 🧠 Passo 1: Seleção de tipo de workflow
+# - Workflow de desenvolvimento
+# - Workflow de teste
+# - Workflow de deploy
+# - Workflow de manutenção
 # 
-# Step 2: 步骤定义
-# [AI辅助定义工作流步骤]
+# Passo 2: Definição de passos
+# [Definição de passos do workflow assistida por IA]
 # 
-# Step 3: 集成配置
-# [自动配置与现有规则的集成]
+# Passo 3: Configuração de integração
+# [Configuração automática de integração com regras existentes]
 ```
 
-## 🎯 Advanced Customization - 高级定制
+## 🎯 Customização Avançada
 
-### 🔧 规则扩展系统
+### 🔧 Sistema de Extensão de Regras
 ```yaml
-自定义规则创建:
-  规则向导:
-    - 规则类型选择
-    - 优先级配置
-    - 触发条件设置
-    - 集成配置
+Criação de Regras Personalizadas:
+  Assistente de Regra:
+    - Seleção de tipo de regra
+    - Configuração de prioridade
+    - Definição de condições de disparo
+    - Configuração de integração
 
-  规则验证:
-    - 语法检查和验证
-    - 逻辑一致性检查
-    - 性能影响评估
-    - 安全风险评估
+  Validação de Regra:
+    - Verificação de sintaxe e validação
+    - Verificação de consistência lógica
+    - Avaliação de impacto de desempenho
+    - Avaliação de risco de segurança
 
-  规则部署:
-    - 自动集成到规则系统
-    - 冲突检测和解决
-    - 优先级自动调整
-    - 测试和验证
+  Deploy de Regra:
+    - Integração automática ao sistema de regras
+    - Detecção e resolução de conflitos
+    - Ajuste automático de prioridade
+    - Teste e validação
 ```
 
-### 📚 知识库集成
+### 📚 Integração com Base de Conhecimento
 ```yaml
-最佳实践库:
-  - 命令设计最佳实践
-  - 工作流优化经验
-  - 常见问题解决方案
-  - 性能优化技巧
+Biblioteca de Melhores Práticas:
+  - Melhores práticas de design de comando
+  - Experiência de otimização de fluxo de trabalho
+  - Soluções para problemas comuns
+  - Dicas de otimização de desempenho
 
-模板库:
-  - 官方认证模板
-  - 社区贡献模板
-  - 行业特定模板
-  - 创新实验模板
+Biblioteca de Modelos:
+  - Modelos certificados oficiais
+  - Modelos contribuídos pela comunidade
+  - Modelos específicos da indústria
+  - Modelos experimentais inovadores
 
-学习资源:
-  - 命令创建教程
-  - 高级定制指南
-  - API参考文档
-  - 示例项目和案例
+Recursos de Aprendizado:
+  - Tutoriais de criação de comandos
+  - Guia de customização avançada
+  - Documentação de referência da API
+  - Projetos de exemplo e casos de uso
 ```
 
 ---
 
-**🎯 规则优先级**: 670 (高优先级，支持用户扩展)  
-**🔄 更新频率**: 基于用户需求和社区贡献持续优化  
-**📊 成功指标**: 命令创建成功率>95%, 用户满意度>4.5/5.0, 命令使用率>80%  
-**🧠 AI模型**: 集成自然语言理解和代码生成引擎
+**🎯 Prioridade da Regra**: 670 (Alta prioridade, suporta extensão do usuário)  
+**🔄 Frequência de Atualização**: Otimização contínua baseada em demandas de usuários e contribuições da comunidade  
+**📊 Indicadores de Sucesso**: Taxa de sucesso de criação de comando > 95%, Satisfação do usuário > 4.5/5.0, Taxa de uso de comando > 80%  
+**🧠 Modelo IA**: Integração de compreensão de linguagem natural e motor de geração de código

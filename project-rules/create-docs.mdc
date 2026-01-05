@@ -1,11 +1,11 @@
 ---
 type: "utility_rule"
-description: "Comprehensive documentation generation - 全面的文档生成"
+description: "Geração abrangente de documentação"
 globs: ["**/*.md", "**/*.mdx", "**/*.rst", "**/*.txt"]
 priority: 301
 alwaysApply: false
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -16,146 +16,146 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adição do sistema de gerenciamento de versão"
+      - "Padronização da estrutura do arquivo de regras"
 ---
 
-# 📝 Documentation Creation - 文档创建
+# 📝 Criação de Documentação
 
-生成全面、结构化的项目文档。
+Geração de documentação de projeto abrangente e estruturada.
 
-## 🚀 Commands - 命令
+## 🚀 Comandos
 
-- `/create-docs` - 创建完整文档
-- `/api-docs` - 生成API文档
-- `/user-guide` - 创建用户指南
-- `/dev-docs` - 开发者文档
+- `/create-docs` - Criar documentação completa
+- `/api-docs` - Gerar documentação da API
+- `/user-guide` - Criar guia do usuário
+- `/dev-docs` - Documentação do desenvolvedor
 
-## 📋 Process - 文档流程
+## 📋 Processo de Documentação
 
-### 1. 📊 文档规划 (Documentation Planning)
-- 分析目标受众和使用场景
-- 确定文档结构和内容范围
-- 选择合适的文档工具和格式
-- **转换条件**：文档规划完整，结构清晰
+### 1. 📊 Planejamento da Documentação (Documentation Planning)
+- Analisar público-alvo e cenários de uso
+- Determinar estrutura e escopo do conteúdo
+- Escolher ferramentas e formatos adequados
+- **Critério de Transição**: Planejamento completo, estrutura clara
 
-### 2. ✍️ 内容创建 (Content Creation)
-- 编写核心文档内容
-- 添加代码示例和截图
-- 创建图表和流程图
-- **转换条件**：内容完整，质量达标
+### 2. ✍️ Criação de Conteúdo (Content Creation)
+- Escrever conteúdo principal
+- Adicionar exemplos de código e capturas de tela
+- Criar diagramas e fluxogramas
+- **Critério de Transição**: Conteúdo completo, qualidade atingida
 
-### 3. 🔍 审查优化 (Review & Optimization)
-- 检查内容准确性和完整性
-- 优化文档结构和可读性
-- 添加导航和索引
-- **转换条件**：文档质量优秀，用户友好
+### 3. 🔍 Revisão e Otimização (Review & Optimization)
+- Verificar precisão e integridade do conteúdo
+- Otimizar estrutura e legibilidade
+- Adicionar navegação e índices
+- **Critério de Transição**: Qualidade excelente, amigável ao usuário
 
-### 4. 🚀 发布维护 (Publish & Maintain)
-- 发布到文档平台
-- 设置自动更新机制
-- 收集用户反馈
-- **转换条件**：文档发布成功，维护机制完善
+### 4. 🚀 Publicação e Manutenção (Publish & Maintain)
+- Publicar na plataforma de documentação
+- Configurar mecanismo de atualização automática
+- Coletar feedback dos usuários
+- **Critério de Transição**: Documentação publicada com sucesso, manutenção estabelecida
 
-## 📚 Documentation Types - 文档类型
+## 📚 Tipos de Documentação
 
-### 用户文档 (User Documentation)
-- **README** - 项目概述和快速开始
-- **用户指南** - 详细使用说明
-- **FAQ** - 常见问题解答
-- **教程** - 分步骤学习指南
+### Documentação de Usuário (User Documentation)
+- **README** - Visão geral do projeto e início rápido
+- **Guia do Usuário** - Instruções detalhadas de uso
+- **FAQ** - Perguntas frequentes
+- **Tutoriais** - Guias de aprendizado passo a passo
 
-### 开发者文档 (Developer Documentation)
-- **API文档** - 接口规范和示例
-- **架构文档** - 系统设计和结构
-- **贡献指南** - 开发参与规范
-- **部署指南** - 环境配置和部署
+### Documentação de Desenvolvedor (Developer Documentation)
+- **Documentação da API** - Especificações e exemplos de interface
+- **Documentação de Arquitetura** - Design e estrutura do sistema
+- **Guia de Contribuição** - Normas para participação no desenvolvimento
+- **Guia de Deploy** - Configuração de ambiente e implantação
 
-### 技术文档 (Technical Documentation)
-- **设计文档** - 技术方案和决策
-- **测试文档** - 测试策略和用例
-- **运维文档** - 监控和故障处理
-- **变更日志** - 版本更新记录
+### Documentação Técnica (Technical Documentation)
+- **Documentação de Design** - Soluções técnicas e decisões
+- **Documentação de Testes** - Estratégias e casos de teste
+- **Documentação de Operações** - Monitoramento e solução de problemas
+- **Changelog** - Registro de atualizações de versão
 
-## 🛠️ Documentation Tools - 文档工具
+## 🛠️ Ferramentas de Documentação
 
-### 静态站点生成器
-- **VitePress** - Vue生态文档工具
-- **Docusaurus** - React生态文档平台
-- **GitBook** - 在线文档协作
-- **Notion** - 团队知识库
+### Geradores de Site Estático
+- **VitePress** - Ferramenta de documentação do ecossistema Vue
+- **Docusaurus** - Plataforma de documentação do ecossistema React
+- **GitBook** - Colaboração de documentação online
+- **Notion** - Base de conhecimento da equipe
 
-### API文档工具
-- **Swagger/OpenAPI** - REST API文档
-- **GraphQL Playground** - GraphQL API文档
-- **Postman** - API测试和文档
-- **Insomnia** - API设计和测试
+### Ferramentas de Documentação de API
+- **Swagger/OpenAPI** - Documentação de API REST
+- **GraphQL Playground** - Documentação de API GraphQL
+- **Postman** - Teste e documentação de API
+- **Insomnia** - Design e teste de API
 
-### 图表工具
-- **Mermaid** - 代码化图表
-- **Draw.io** - 在线图表编辑
-- **PlantUML** - UML图表生成
-- **Excalidraw** - 手绘风格图表
+### Ferramentas de Diagramas
+- **Mermaid** - Diagramas como código
+- **Draw.io** - Edição de diagramas online
+- **PlantUML** - Geração de diagramas UML
+- **Excalidraw** - Diagramas estilo rascunho
 
-## 📋 Documentation Template - 文档模板
+## 📋 Modelo de Documentação
 
-### README模板
+### Modelo de README
 ```markdown
-# 项目名称
+# Nome do Projeto
 
-简短的项目描述
+Breve descrição do projeto
 
-## 🚀 快速开始
+## 🚀 Início Rápido
 
-### 安装
+### Instalação
 \`\`\`bash
 npm install
 \`\`\`
 
-### 使用
+### Uso
 \`\`\`bash
 npm start
 \`\`\`
 
-## 📚 文档
+## 📚 Documentação
 
-创建以下文档文件（在项目根目录的 docs/ 文件夹中）：
+Crie os seguintes arquivos de documentação (na pasta docs/ da raiz do projeto):
 
-- **用户指南** (`docs/user-guide.md`) - 面向最终用户的使用说明
-- **API文档** (`docs/api.md`) - 详细的API接口文档  
-- **开发指南** (`docs/development.md`) - 开发者指南和最佳实践
+- **Guia do Usuário** (`docs/user-guide.md`) - Instruções de uso para o usuário final
+- **Documentação da API** (`docs/api.md`) - Documentação detalhada da interface da API
+- **Guia de Desenvolvimento** (`docs/development.md`) - Guia para desenvolvedores e melhores práticas
 
-## 🤝 贡献
+## 🤝 Contribuição
 
-请阅读 [项目说明](./README.md)
+Por favor, leia [Instruções do Projeto](./README.md)
 
-## 📄 许可证
+## 📄 Licença
 
 [MIT](./LICENSE)
 ```
 
-### API文档模板
+### Modelo de Documentação de API
 ```markdown
-# API文档
+# Documentação da API
 
-## 认证
+## Autenticação
 
-所有API请求需要包含认证头：
+Todas as requisições à API precisam incluir o cabeçalho de autenticação:
 \`\`\`
 Authorization: Bearer <token>
 \`\`\`
 
-## 端点
+## Endpoints
 
 ### GET /api/users
 
-获取用户列表
+Obter lista de usuários
 
-**参数：**
-- `page` (number) - 页码，默认1
-- `limit` (number) - 每页数量，默认10
+**Parâmetros:**
+- `page` (number) - Número da página, padrão 1
+- `limit` (number) - Quantidade por página, padrão 10
 
-**响应：**
+**Resposta:**
 \`\`\`json
 {
   "data": [...],
@@ -165,41 +165,41 @@ Authorization: Bearer <token>
 \`\`\`
 ```
 
-## ✅ Best Practices - 最佳实践
+## ✅ Melhores Práticas
 
-### 内容原则
-- **用户导向** - 从用户角度组织内容
-- **简洁明了** - 避免冗余和复杂表述
-- **示例丰富** - 提供充足的代码示例
-- **及时更新** - 保持文档与代码同步
+### Princípios de Conteúdo
+- **Orientado ao Usuário** - Organizar o conteúdo da perspectiva do usuário
+- **Conciso e Claro** - Evitar redundância e expressões complexas
+- **Rico em Exemplos** - Fornecer exemplos de código suficientes
+- **Atualização Oportuna** - Manter a documentação sincronizada com o código
 
-### 结构设计
-- **层次清晰** - 合理的标题层级
-- **导航便利** - 清晰的目录和链接
-- **搜索友好** - 关键词和标签优化
-- **移动适配** - 响应式设计
+### Design Estrutural
+- **Hierarquia Clara** - Níveis de título razoáveis
+- **Navegação Conveniente** - Diretório e links claros
+- **Amigável à Busca** - Otimização de palavras-chave e tags
+- **Adaptação Móvel** - Design responsivo
 
-### 维护策略
-- **版本控制** - 文档版本管理
-- **自动化** - 自动生成和更新
-- **反馈机制** - 用户意见收集
-- **定期审查** - 内容质量检查
+### Estratégia de Manutenção
+- **Controle de Versão** - Gerenciamento de versão da documentação
+- **Automação** - Geração e atualização automática
+- **Mecanismo de Feedback** - Coleta de opiniões dos usuários
+- **Revisão Regular** - Verificação de qualidade do conteúdo
 
-## 🔧 Automation - 自动化
+## 🔧 Automação
 
-### 文档生成
+### Geração de Documentação
 ```bash
-# 生成API文档
+# Gerar documentação da API
 npm run docs:api
 
-# 生成类型文档
+# Gerar documentação de tipos
 npm run docs:types
 
-# 构建文档站点
+# Construir site de documentação
 npm run docs:build
 ```
 
-### CI/CD集成
+### Integração CI/CD
 ```yaml
 # .github/workflows/docs.yml
 name: Documentation
@@ -217,22 +217,22 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
 ```
 
-## 📋 Checklist - 检查清单
+## 📋 Checklist - Lista de Verificação
 
-### 内容检查
-- [ ] 信息准确完整
-- [ ] 示例代码可运行
-- [ ] 链接有效可访问
-- [ ] 图片清晰有意义
+### Verificação de Conteúdo
+- [ ] Informações precisas e completas
+- [ ] Exemplos de código executáveis
+- [ ] Links válidos e acessíveis
+- [ ] Imagens claras e significativas
 
-### 结构检查
-- [ ] 目录结构合理
-- [ ] 导航清晰便利
-- [ ] 搜索功能正常
-- [ ] 移动端适配良好
+### Verificação Estrutural
+- [ ] Estrutura de diretórios razoável
+- [ ] Navegação clara e conveniente
+- [ ] Função de busca funcionando normal
+- [ ] Boa adaptação para dispositivos móveis
 
-### 质量检查
-- [ ] 语法拼写正确
-- [ ] 格式统一规范
-- [ ] 版本信息准确
-- [ ] 更新日期最新
+### Verificação de Qualidade
+- [ ] Gramática e ortografia corretas
+- [ ] Formatação unificada e padronizada
+- [ ] Informações de versão precisas
+- [ ] Data de atualização mais recente

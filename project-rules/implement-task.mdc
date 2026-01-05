@@ -1,11 +1,11 @@
 ---
 type: "utility_rule"
-description: "Methodical task implementation approach - 系统化任务实现方法"
+description: "Abordagem metódica de implementação de tarefas"
 globs: ["**/*"]
 priority: 302
 alwaysApply: false
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -16,216 +16,216 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adição do sistema de gerenciamento de versão"
+      - "Padronização da estrutura do arquivo de regras"
 ---
 
-# 🎯 Task Implementation - 任务实现
+# 🎯 Implementação de Tarefas
 
-系统化的任务实现方法，确保高质量交付。
+Abordagem sistematizada para implementação de tarefas, garantindo entrega de alta qualidade.
 
-## 🚀 Commands - 命令
+## 🚀 Comandos
 
-- `/implement-task` - 开始任务实现
-- `/task-plan` - 制定实现计划
-- `/task-review` - 任务审查
-- `/task-complete` - 完成任务
+- `/implement-task` - Iniciar implementação de tarefa
+- `/task-plan` - Elaborar plano de implementação
+- `/task-review` - Revisão de tarefa
+- `/task-complete` - Concluir tarefa
 
-## 🧠 前置步骤：Context7 知识预载（修复/新项目前置）
-- 触发时机：开始 /implement-task 前，任务涉及 Bug 修复或新功能/新项目实现
-- 执行：
-  - 使用 Context7 在 src、docs、tests、config、README.*、architecture、api 目录检索关键材料（架构、接口、约束、相关代码与历史决策）
-  - 质量阈值：至少 5 个高相关片段或覆盖 3 类关键材料；评分 ≥ 0.65；超时 60s
-  - 回退：Context7 → 代码检索（search_codebase/search_by_regex）→ 文件系统读取
-  - 记录与确认：将“知识预载摘要”写入 project.context.md 的 Pinned，并通过增强反馈机制确认后继续
-- 跳过条件：纯文档/注释、打印文案微调、单文件小范围变量改名等轻量变更
+## 🧠 Etapas Prévias: Pré-carregamento de Conhecimento Context7 (Correção/Pré-requisito de Novo Projeto)
+- Momento de Disparo: Antes de iniciar /implement-task, envolvendo correção de bugs ou implementação de nova funcionalidade/novo projeto
+- Execução:
+  - Usar Context7 para recuperar materiais chave (arquitetura, interfaces, restrições, código relacionado e decisões históricas) nos diretórios src, docs, tests, config, README.*, architecture, api
+  - Limiar de Qualidade: Pelo menos 5 fragmentos altamente relevantes ou cobrindo 3 categorias de materiais chave; pontuação ≥ 0.65; timeout 60s
+  - Fallback: Context7 → Recuperação de código (search_codebase/search_by_regex) → Leitura do sistema de arquivos
+  - Registro e Confirmação: Escrever "Resumo de Pré-carregamento de Conhecimento" em Pinned do project.context.md e confirmar via mecanismo de feedback aprimorado antes de continuar
+- Condição de Pulo: Ajustes finos puramente de estilo/texto, pequenas alterações sem mudança lógica, renomeação de variáveis em escopo pequeno de arquivo único
 
-## 📋 Process - 实现流程
+## 📋 Processo - Fluxo de Implementação
 
-### 1. 📊 任务分析 (Task Analysis)
-- 理解任务需求和目标
-- 分析技术要求和约束
-- 识别依赖和风险
-- **转换条件**：需求清晰，方案可行
+### 1. 📊 Análise de Tarefa (Task Analysis)
+- Compreender necessidades e objetivos da tarefa
+- Analisar requisitos técnicos e restrições
+- Identificar dependências e riscos
+- **Condições de Transição**: Requisitos claros, solução viável
 
-### 2. 📝 实现规划 (Implementation Planning)
-- 制定详细实现计划
-- 分解子任务和里程碑
-- 分配资源和时间
-- **转换条件**：计划完整，可执行
+### 2. 📝 Planejamento de Implementação (Implementation Planning)
+- Elaborar plano de implementação detalhado
+- Decompor em subtarefas e marcos
+- Alocar recursos e tempo
+- **Condições de Transição**: Plano completo, executável
 
-### 3. 🔨 代码实现 (Code Implementation)
-- 按计划实现功能
-- 遵循代码规范
-- 编写测试用例
-- **转换条件**：功能完成，测试通过
+### 3. 🔨 Implementação de Código (Code Implementation)
+- Implementar funcionalidade conforme plano
+- Seguir normas de código
+- Escrever casos de teste
+- **Condições de Transição**: Funcionalidade concluída, testes aprovados
 
-### 4. ✅ 质量保证 (Quality Assurance)
-- 代码审查和重构
-- 性能优化
-- 文档更新
-- **转换条件**：质量达标，文档完整
+### 4. ✅ Garantia de Qualidade (Quality Assurance)
+- Revisão de código e refatoração
+- Otimização de desempenho
+- Atualização da documentação
+- **Condições de Transição**: Qualidade dentro dos padrões, documentação completa
 
-### 5. 🚀 交付部署 (Delivery & Deployment)
-- 集成测试
-- 部署到环境
-- 用户验收
-- **转换条件**：验收通过，部署成功
+### 5. 🚀 Entrega e Deploy (Delivery & Deployment)
+- Testes de integração
+- Deploy para ambiente
+- Aceitação do usuário
+- **Condições de Transição**: Aceitação aprovada, deploy bem-sucedido
 
-## 🛠️ Implementation Strategy - 实现策略
+## 🛠️ Estratégia de Implementação
 
-### 分解原则
-- **垂直切分** - 按功能模块分解
-- **水平切分** - 按技术层次分解
-- **优先级排序** - 核心功能优先
-- **依赖管理** - 合理安排依赖顺序
+### Princípios de Decomposição
+- **Divisão Vertical** - Decomposição por módulo funcional
+- **Divisão Horizontal** - Decomposição por camada técnica
+- **Ordenação por Prioridade** - Funcionalidades principais primeiro
+- **Gerenciamento de Dependências** - Organizar ordem de dependências razoavelmente
 
-### 开发模式
-- **TDD** - 测试驱动开发
-- **BDD** - 行为驱动开发
-- **DDD** - 领域驱动设计
-- **敏捷开发** - 迭代增量
+### Modos de Desenvolvimento
+- **TDD** - Desenvolvimento Orientado a Testes
+- **BDD** - Desenvolvimento Orientado a Comportamento
+- **DDD** - Design Orientado a Domínio
+- **Desenvolvimento Ágil** - Iterativo e incremental
 
-### 质量控制
-- **代码审查** - Peer Review
-- **自动化测试** - 单元/集成测试
-- **静态分析** - 代码质量检查
-- **性能监控** - 运行时监控
+### Controle de Qualidade
+- **Revisão de Código** - Revisão por Pares (Peer Review)
+- **Testes Automatizados** - Testes unitários/integração
+- **Análise Estática** - Verificação de qualidade de código
+- **Monitoramento de Desempenho** - Monitoramento em tempo de execução
 
-## 📋 Task Template - 任务模板
+## 📋 Modelo de Tarefa
 
-### 任务实现计划
+### Plano de Implementação de Tarefa
 ```markdown
-## 任务概述
+## Visão Geral da Tarefa
 
-**任务名称**：[任务名称]
-**优先级**：高/中/低
-**预估工期**：X天
-**负责人**：[姓名]
+**Nome da Tarefa**: [Nome da Tarefa]
+**Prioridade**: Alta/Média/Baixa
+**Estimativa de Prazo**: X dias
+**Responsável**: [Nome]
 
-## 需求分析
+## Análise de Requisitos
 
-### 功能需求
-- [ ] 需求1：描述
-- [ ] 需求2：描述
+### Requisitos Funcionais
+- [ ] Requisito 1: Descrição
+- [ ] Requisito 2: Descrição
 
-### 非功能需求
-- [ ] 性能要求
-- [ ] 安全要求
-- [ ] 可用性要求
+### Requisitos Não Funcionais
+- [ ] Requisitos de desempenho
+- [ ] Requisitos de segurança
+- [ ] Requisitos de usabilidade
 
-## 技术方案
+## Solução Técnica
 
-### 架构设计
-- 系统架构图
-- 模块划分
-- 接口设计
+### Design de Arquitetura
+- Diagrama de arquitetura do sistema
+- Divisão de módulos
+- Design de interfaces
 
-### 技术选型
-- 框架/库选择
-- 工具链配置
-- 环境要求
+### Seleção Tecnológica
+- Escolha de frameworks/bibliotecas
+- Configuração da cadeia de ferramentas
+- Requisitos de ambiente
 
-## 实现计划
+## Plano de Implementação
 
-### 里程碑
-1. [ ] 里程碑1 (Day 1-2)
-2. [ ] 里程碑2 (Day 3-4)
-3. [ ] 里程碑3 (Day 5-6)
+### Marcos
+1. [ ] Marco 1 (Dia 1-2)
+2. [ ] Marco 2 (Dia 3-4)
+3. [ ] Marco 3 (Dia 5-6)
 
-### 风险识别
-- 风险1：描述 + 缓解方案
-- 风险2：描述 + 缓解方案
+### Identificação de Riscos
+- Risco 1: Descrição + Plano de mitigação
+- Risco 2: Descrição + Plano de mitigação
 
-## 验收标准
+## Critérios de Aceitação
 
-### 功能验收
-- [ ] 功能1测试通过
-- [ ] 功能2测试通过
+### Aceitação Funcional
+- [ ] Funcionalidade 1 testada e aprovada
+- [ ] Funcionalidade 2 testada e aprovada
 
-### 质量验收
-- [ ] 代码覆盖率 > 80%
-- [ ] 性能指标达标
-- [ ] 安全扫描通过
+### Aceitação de Qualidade
+- [ ] Cobertura de código > 80%
+- [ ] Indicadores de desempenho atingidos
+- [ ] Varredura de segurança aprovada
 ```
 
-## ✅ Best Practices - 最佳实践
+## ✅ Melhores Práticas
 
-### 实现原则
-- **小步快跑** - 频繁提交和集成
-- **持续反馈** - 及时沟通和调整
-- **质量优先** - 不妥协代码质量
-- **文档同步** - 代码和文档同步更新
+### Princípios de Implementação
+- **Passos Pequenos e Rápidos** - Commits e integrações frequentes
+- **Feedback Contínuo** - Comunicação e ajustes oportunos
+- **Qualidade em Primeiro Lugar** - Não comprometer a qualidade do código
+- **Sincronização de Documentação** - Atualização síncrona de código e documentação
 
-### 协作方式
-- **每日站会** - 同步进展和问题
-- **代码审查** - 知识分享和质量保证
-- **结对编程** - 复杂问题协作解决
-- **技术分享** - 经验总结和传播
+### Formas de Colaboração
+- **Daily Scrum** - Sincronizar progresso e problemas
+- **Revisão de Código** - Compartilhamento de conhecimento e garantia de qualidade
+- **Pair Programming** - Resolução colaborativa de problemas complexos
+- **Compartilhamento Técnico** - Resumo e disseminação de experiências
 
-### 工具使用
-- **版本控制** - Git工作流
-- **项目管理** - 看板和燃尽图
-- **自动化** - CI/CD流水线
-- **监控告警** - 运行时监控
+### Uso de Ferramentas
+- **Controle de Versão** - Fluxo de trabalho Git
+- **Gerenciamento de Projetos** - Kanban e Burndown Chart
+- **Automação** - Pipeline CI/CD
+- **Monitoramento e Alertas** - Monitoramento em tempo de execução
 
-## 🔧 Tools Integration - 工具集成
+## 🔧 Integração de Ferramentas
 
-### 开发工具
+### Ferramentas de Desenvolvimento
 ```bash
-# 代码生成
+# Geração de código
 npm run generate:component
 npm run generate:api
 
-# 代码检查
+# Verificação de código
 npm run lint
 npm run type-check
 
-# 测试运行
+# Execução de testes
 npm run test
 npm run test:coverage
 
-# 构建部署
+# Construção e Deploy
 npm run build
 npm run deploy
 ```
 
-### 项目管理
-- **Jira** - 任务跟踪
-- **Trello** - 看板管理
-- **GitHub Projects** - 项目规划
-- **Notion** - 文档协作
+### Gerenciamento de Projetos
+- **Jira** - Rastreamento de tarefas
+- **Trello** - Gerenciamento Kanban
+- **GitHub Projects** - Planejamento de projetos
+- **Notion** - Colaboração em documentação
 
-## 📊 Progress Tracking - 进度跟踪
+## 📊 Acompanhamento de Progresso
 
-### 进度指标
-- **完成度** - 已完成/总任务数
-- **质量指标** - 缺陷密度、覆盖率
-- **效率指标** - 速度、生产力
-- **风险指标** - 风险数量和等级
+### Indicadores de Progresso
+- **Conclusão** - Tarefas concluídas/Total
+- **Indicadores de Qualidade** - Densidade de defeitos, cobertura
+- **Indicadores de Eficiência** - Velocidade, produtividade
+- **Indicadores de Risco** - Quantidade e nível de riscos
 
-### 报告机制
-- **日报** - 每日进展和问题
-- **周报** - 周度总结和计划
-- **里程碑报告** - 阶段性成果
-- **项目总结** - 经验教训
+### Mecanismo de Relatórios
+- **Relatório Diário** - Progresso e problemas diários
+- **Relatório Semanal** - Resumo e plano semanal
+- **Relatório de Marco** - Resultados por etapa
+- **Resumo do Projeto** - Lições aprendidas
 
-## 📋 Checklist - 检查清单
+## 📋 Checklist - Lista de Verificação
 
-### 开始前
-- [ ] 需求理解清晰
-- [ ] 技术方案确定
-- [ ] 资源配置到位
-- [ ] 环境准备就绪
+### Antes de Começar
+- [ ] Compreensão clara dos requisitos
+- [ ] Solução técnica determinada
+- [ ] Recursos alocados
+- [ ] Ambiente preparado
 
-### 实现中
-- [ ] 按计划执行
-- [ ] 质量标准遵循
-- [ ] 进度及时汇报
-- [ ] 风险主动管理
+### Durante a Implementação
+- [ ] Execução conforme plano
+- [ ] Seguimento dos padrões de qualidade
+- [ ] Relato oportuno do progresso
+- [ ] Gerenciamento ativo de riscos
 
-### 完成后
-- [ ] 功能测试通过
-- [ ] 代码审查完成
-- [ ] 文档更新完整
-- [ ] 部署验证成功
+### Após a Conclusão
+- [ ] Testes funcionais aprovados
+- [ ] Revisão de código concluída
+- [ ] Atualização da documentação completa
+- [ ] Validação de deploy bem-sucedida

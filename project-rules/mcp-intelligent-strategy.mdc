@@ -1,11 +1,11 @@
 ---
 type: "always_apply"
-description: "MCP工具智能使用策略 - 专注于MCP工具的优先使用和高效执行"
+description: "Estratégia de Uso Inteligente de Ferramentas MCP - Focada no uso prioritário e execução eficiente de ferramentas MCP"
 globs: ["**/*"]
-alwaysApply: true
 priority: 980
+alwaysApply: true
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -16,588 +16,588 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adição do sistema de gerenciamento de versão"
+      - "Padronização da estrutura do arquivo de regras"
 ---
 
-# 🧠 MCP工具智能使用策略
+# 🧠 Estratégia de Uso Inteligente de Ferramentas MCP
 
-## 🎯 核心原则
+## 🎯 Princípios Centrais
 
-**MCP优先原则**: AI助手必须优先使用MCP工具，实现高效的任务执行和工具协同。
+**Princípio de Prioridade MCP**: O assistente de IA deve priorizar o uso de ferramentas MCP para alcançar execução de tarefas eficiente e colaboração de ferramentas.
 
-> **注意**: MCP环境检测、配置管理、跨平台同步等功能已整合到 [MCP统一管理策略](mcp-unified-management.mdc) 中。本策略专注于MCP工具的智能使用。
+> **Nota**: Funcionalidades como detecção de ambiente MCP, gerenciamento de configuração e sincronização entre plataformas foram integradas à [Estratégia de Gestão Unificada MCP](mcp-unified-management.mdc). Esta estratégia foca no uso inteligente das ferramentas MCP.
 
-## 🎯 核心策略原则
+## 🎯 Princípios de Estratégia Central
 
-### 智能系统集成优先
+### Prioridade de Integração de Sistema Inteligente
 ```yaml
-系统协同策略:
-  超级大脑系统:
-    - 统一的智能管理入口和决策支持
-    - 项目状态感知和上下文分析
-    - 自动化工作流编排和优化
-    - 持续学习和性能改进
+Estratégia de Colaboração do Sistema:
+  Sistema Super Brain:
+    - Entrada de gestão inteligente unificada e suporte à decisão
+    - Percepção de status do projeto e análise de contexto
+    - Orquestração e otimização automatizada de fluxo de trabalho
+    - Aprendizado contínuo e melhoria de desempenho
   
-  项目管理集成:
-    - 五阶段生命周期严格管理
-    - 阶段约束和切换条件检查
-    - 完整工作流和质量保证
-    - 成功指标和效果评估
+  Integração de Gestão de Projetos:
+    - Gestão rigorosa do ciclo de vida em cinco fases
+    - Verificação de restrições de fase e condições de troca
+    - Fluxo de trabalho completo e garantia de qualidade
+    - Indicadores de sucesso e avaliação de efeito
   
-  记忆系统协同:
-    - 多层次记忆架构和智能检索
-    - 自动记录和上下文感知
-    - 经验积累和知识管理
-    - 个性化服务和预测分析
+  Colaboração do Sistema de Memória:
+    - Arquitetura de memória multinível e recuperação inteligente
+    - Registro automático e percepção de contexto
+    - Acúmulo de experiência e gestão de conhecimento
+    - Serviços personalizados e análise preditiva
   
-  推荐引擎集成:
-    - 多维度智能推荐算法
-    - 关键词匹配和语义理解
-    - 学习优化和反馈循环
-    - 个性化定制和效果评估
+  Integração do Motor de Recomendação:
+    - Algoritmos de recomendação inteligente multidimensional
+    - Correspondência de palavras-chave e compreensão semântica
+    - Otimização de aprendizado e ciclo de feedback
+    - Customização personalizada e avaliação de efeito
 ```
 
-### 🔧 MCP工具使用优先级
+### 🔧 Prioridade de Uso de Ferramentas MCP
 ```yaml
-工具选择策略:
-  强制优先级:
-    1. 智能检测MCP配置状态 (自动调用检测脚本)
-    2. 扫描可用MCP工具
-    3. 评估任务适配度
-    4. 选择最优工具组合
-    5. 执行并监控效果
+Estratégia de Seleção de Ferramentas:
+  Prioridade Obrigatória:
+    1. Detecção inteligente do status de configuração MCP (chamada automática de script de detecção)
+    2. Varredura de ferramentas MCP disponíveis
+    3. Avaliação de adequação à tarefa
+    4. Seleção da melhor combinação de ferramentas
+    5. Execução e monitoramento de efeitos
   
-  自动脚本执行:
-    触发条件:
-      - 任务涉及文件操作时
-      - 需要跨平台MCP分析时
-      - 用户询问MCP状态时
-      - 检测到配置问题时
+  Execução Automática de Script:
+    Condições de Gatilho:
+      - Quando a tarefa envolve operações de arquivo
+      - Quando é necessária análise MCP entre plataformas
+      - Quando o usuário pergunta sobre o status do MCP
+      - Quando problemas de configuração são detectados
     
-    执行流程:
-      - 检查项目中是否存在mcp-tools/mcp-cross-platform-sync.ps1
-      - 如果存在，静默执行 -Action detect
-      - 策略引用: 默认遵循“检测复用与跳过 / 缓存复用”策略；详细参数与覆盖条件请参见 P2-intelligent-system/mcp-zero-config-detection.mdc
-      - 解析输出结果，整合到AI决策中
-      - 基于检测结果优化MCP工具选择
+    Fluxo de Execução:
+      - Verificar se mcp-tools/mcp-cross-platform-sync.ps1 existe no projeto
+      - Se existir, executar silenciosamente -Action detect
+      - Referência de estratégia: Seguir padrão "Reutilização de detecção e Pulo / Reutilização de cache"; ver detalhes em P2-intelligent-system/mcp-zero-config-detection.mdc
+      - Analisar resultados de saída e integrar à decisão da IA
+      - Otimizar seleção de ferramentas MCP com base nos resultados de detecção
   
-  核心工具优先级:
+  Prioridade de Ferramentas Principais:
     Tier_1: server-filesystem, codebase-retrieval
     Tier_2: server-github, mcp-feedback-enhanced, context7
-    Tier_3: 数据库工具, 自动化工具, 视觉AI工具
+    Tier_3: Ferramentas de banco de dados, ferramentas de automação, ferramentas de IA visual
   
-  切换条件:
-    - MCP工具不可用 → 使用备选方案
-    - 功能不足 → 组合多个工具
-    - 性能问题 → 动态调整策略
+  Condições de Troca:
+    - Ferramenta MCP indisponível → Usar alternativa
+    - Funcionalidade insuficiente → Combinar múltiplas ferramentas
+    - Problemas de desempenho → Ajuste dinâmico de estratégia
 ```
 
-### 效率优先原则
+### Princípio de Prioridade de Eficiência
 ```yaml
-工具选择策略:
-  智能编排优先:
-    1. 基于项目阶段的自动工具选择
-    2. 上下文感知的工具组合优化
-    3. 历史成功模式的智能复用
-    4. 实时性能监控和动态调整
+Estratégia de Seleção de Ferramentas:
+  Prioridade de Orquestração Inteligente:
+    1. Seleção automática de ferramentas baseada na fase do projeto
+    2. Otimização de combinação de ferramentas sensível ao contexto
+    3. Reutilização inteligente de padrões de sucesso históricos
+    4. Monitoramento de desempenho em tempo real e ajuste dinâmico
   
-  渐进式配置:
-    阶段1: 核心工具 (文件系统、代码搜索)
-    阶段2: 协作工具 (GitHub、反馈系统)
-    阶段3: 高级工具 (视觉AI、自动化)
-    阶段4: 定制工具 (项目特定需求)
+  Configuração Progressiva:
+    Fase 1: Ferramentas principais (sistema de arquivos, busca de código)
+    Fase 2: Ferramentas de colaboração (GitHub, sistema de feedback)
+    Fase 3: Ferramentas avançadas (IA visual, automação)
+    Fase 4: Ferramentas personalizadas (necessidades específicas do projeto)
   
-  传统优先级:
-    1. 高效率工具组合 (减少调用次数)
-    2. 专用工具优于通用工具
-    3. 批量操作优于单次操作
-    4. 缓存结果优于重复查询
+  Prioridade Tradicional:
+    1. Combinação de ferramentas de alta eficiência (reduzir número de chamadas)
+    2. Ferramentas especializadas superam ferramentas genéricas
+    3. Operações em lote superam operações únicas
+    4. Resultados em cache superam consultas repetidas
   
-  避免策略:
-    - 重复的文件读取操作
-    - 不必要的搜索和检索
-    - 过度细分的工具调用
-    - 低效的工具组合使用
-    - 忽略智能系统的推荐和优化
+  Estratégias a Evitar:
+    - Operações de leitura de arquivo repetitivas
+    - Buscas e recuperações desnecessárias
+    - Chamadas de ferramentas excessivamente fragmentadas
+    - Uso ineficiente de combinações de ferramentas
+    - Ignorar recomendações e otimizações do sistema inteligente
 ```
 
-## 🎯 MCP工具优先使用原则
+## 🎯 Princípios de Uso Prioritário de Ferramentas MCP
 
-### 1. 任务开始时的强制检查
+### 1. Verificação Obrigatória no Início da Tarefa
 ```
-每个任务开始时，必须执行：
-1. 立即扫描所有可用的MCP工具
-2. 识别任务类型和最适合的MCP工具
-3. 评估MCP工具vs通用方法的效率差异
-4. 优先选择MCP工具方案执行
-```
-
-### 2. MCP工具选择策略 <mcreference link="https://github.com/microsoft/autogen" index="4">4</mcreference>
-
-**选择原则**: 基于任务特性和工具能力进行最优MCP工具选择。
-
-```yaml
-MCP工具选择矩阵:
-  任务类型匹配:
-    文件操作:
-      - 首选: server-filesystem
-      - 适用: 所有文件读写、目录操作
-      - 优势: 高性能、批量操作
-    
-    代码检索:
-      - 首选: codebase-retrieval
-      - 适用: 语义搜索、代码分析
-      - 优势: 智能理解、精确匹配
-    
-    GitHub操作:
-      - 首选: server-github
-      - 适用: 仓库管理、PR、Issue
-      - 优势: 原生API、完整功能
-    
-    用户交互:
-      - 首选: mcp-feedback-enhanced
-      - 适用: 复杂决策、确认操作
-      - 优势: 结构化反馈、超时处理
-    
-    网页调试:
-      - 首选: chrome-devtools (CDP)
-      - 适用: 前端网络异常、控制台错误、DOM变更跟踪、性能分析
-      - 优势: 原生浏览器调试能力、精准事件监控
-    
-    测试自动化:
-      - 首选: Playwright
-      - 适用: 端到端测试、跨浏览器自动化、回归测试
-      - 优势: 高可靠性、多浏览器支持、并行执行
-    
-  知识管理:
-      - 默认建议: context7（文档与知识检索与管理）+ Recorder（记录员系统）
-      - 可选: server-memory（用于语义模糊检索或跨项目/跨时间聚合）
-      - 优势: context7统一知识入口与检索；Recorder精准归档与回溯；Memory语义聚合与跨范围检索
-    
-    备选方案:
-      - 通用工具: MCP工具不可用时
-      - 手动操作: 一次性简单任务
-      - 混合方案: 复杂场景需要多工具配合
+No início de cada tarefa, deve-se executar:
+1. Varredura imediata de todas as ferramentas MCP disponíveis
+2. Identificação do tipo de tarefa e ferramenta MCP mais adequada
+3. Avaliação da diferença de eficiência entre ferramenta MCP vs método genérico
+4. Priorizar a escolha da solução com ferramenta MCP para execução
 ```
 
-### 3. MCP工具使用流程 <mcreference link="https://github.com/langchain-ai/langchain" index="5">5</mcreference>
+### 2. Estratégia de Seleção de Ferramentas MCP <mcreference link="https://github.com/microsoft/autogen" index="4">4</mcreference>
+
+**Princípio de Seleção**: Seleção da melhor ferramenta MCP baseada nas características da tarefa e capacidade da ferramenta.
 
 ```yaml
-标准使用流程:
-  1. 任务分析:
-     - 识别任务类型
-     - 确定所需功能
-     - 评估复杂程度
-  
-  2. 工具选择:
-     - 扫描可用MCP工具
-     - 匹配工具能力
-     - 选择最适合的工具
-  
-  3. 执行监控:
-     - 监控工具性能
-     - 检测异常情况
-     - 必要时切换方案
-  
-  4. 结果验证:
-     - 验证执行结果
-     - 记录重要信息
-     - 总结经验教训
+Matriz de Seleção de Ferramentas MCP:
+  Correspondência de Tipo de Tarefa:
+    Operação de Arquivo:
+      - Preferencial: server-filesystem
+      - Aplicável: Todas as leituras e gravações de arquivos, operações de diretório
+      - Vantagem: Alto desempenho, operações em lote
+    
+    Recuperação de Código:
+      - Preferencial: codebase-retrieval
+      - Aplicável: Busca semântica, análise de código
+      - Vantagem: Compreensão inteligente, correspondência precisa
+    
+    Operação GitHub:
+      - Preferencial: server-github
+      - Aplicável: Gestão de repositório, PR, Issue
+      - Vantagem: API nativa, funcionalidade completa
+    
+    Interação com Usuário:
+      - Preferencial: mcp-feedback-enhanced
+      - Aplicável: Decisões complexas, operações de confirmação
+      - Vantagem: Feedback estruturado, tratamento de timeout
+    
+    Depuração Web:
+      - Preferencial: chrome-devtools (CDP)
+      - Aplicável: Exceções de rede frontend, erros de console, rastreamento de alterações DOM, análise de desempenho
+      - Vantagem: Capacidade de depuração de navegador nativa, monitoramento preciso de eventos
+    
+    Automação de Teste:
+      - Preferencial: Playwright
+      - Aplicável: Teste ponta a ponta, automação cross-browser, teste de regressão
+      - Vantagem: Alta confiabilidade, suporte a múltiplos navegadores, execução paralela
+    
+  Gestão de Conhecimento:
+      - Sugestão Padrão: context7 (Recuperação e gestão de documentos e conhecimento) + Recorder (Sistema de registro)
+      - Opcional: server-memory (Para recuperação semântica difusa ou agregação entre projetos/tempos)
+      - Vantagem: context7 unifica entrada e recuperação de conhecimento; Recorder arquiva e rastreia com precisão; Memory agrega semanticamente e recupera em escopo amplo
+    
+    Soluções Alternativas:
+      - Ferramenta Genérica: Quando ferramenta MCP indisponível
+      - Operação Manual: Tarefa simples única
+      - Solução Híbrida: Cenário complexo exigindo cooperação de múltiplas ferramentas
 ```
 
-### 4. MCP工具故障处理 <mcreference link="https://www.ibm.com/think/prompt-engineering" index="3">3</mcreference>
+### 3. Fluxo de Uso de Ferramentas MCP <mcreference link="https://github.com/langchain-ai/langchain" index="5">5</mcreference>
 
 ```yaml
-故障检测:
-  常见问题:
-    - 工具响应超时
-    - 连接失败
-    - 权限不足
-    - 配置错误
+Fluxo de Uso Padrão:
+  1. Análise de Tarefa:
+     - Identificar tipo de tarefa
+     - Determinar funcionalidades necessárias
+     - Avaliar complexidade
   
-  处理策略:
-    - 自动重试(最多3次)
-    - 切换到备用方案
-    - 提示用户检查配置
-    - 记录错误信息供后续分析
-
-恢复机制:
-  1. 立即重试: 网络临时问题
-  2. 延迟重试: 服务暂时不可用
-  3. 降级处理: 使用通用方法完成任务
-  4. 用户介入: 需要手动配置或授权
+  2. Seleção de Ferramenta:
+     - Varrer ferramentas MCP disponíveis
+     - Combinar capacidades das ferramentas
+     - Selecionar a ferramenta mais adequada
+  
+  3. Monitoramento de Execução:
+     - Monitorar desempenho da ferramenta
+     - Detectar situações anômalas
+     - Trocar solução se necessário
+  
+  4. Validação de Resultado:
+     - Validar resultado da execução
+     - Registrar informações importantes
+     - Resumir lições aprendidas
 ```
 
-## 📋 强制性工具映射表
+### 4. Tratamento de Falhas de Ferramentas MCP <mcreference link="https://www.ibm.com/think/prompt-engineering" index="3">3</mcreference>
 
-| 任务类型 | 建议首选的MCP工具 | 不推荐的低效方法 |
+```yaml
+Detecção de Falhas:
+  Problemas Comuns:
+    - Timeout de resposta da ferramenta
+    - Falha de conexão
+    - Permissão insuficiente
+    - Erro de configuração
+  
+  Estratégia de Tratamento:
+    - Tentativa automática (máximo 3 vezes)
+    - Troca para solução alternativa
+    - Solicitar ao usuário verificação de configuração
+    - Registrar informações de erro para análise posterior
+
+Mecanismo de Recuperação:
+  1. Tentativa Imediata: Problema temporário de rede
+  2. Tentativa Adiada: Serviço temporariamente indisponível
+  3. Tratamento Degradado: Usar método genérico para completar tarefa
+  4. Intervenção do Usuário: Necessidade de configuração manual ou autorização
+```
+
+## 📋 Tabela de Mapeamento de Ferramentas Obrigatória
+
+| Tipo de Tarefa | Ferramenta MCP Preferencial Sugerida | Método Ineficiente Não Recomendado |
 |----------|-------------------|----------------|
-| 文件操作 | `npx @modelcontextprotocol/server-filesystem` 或文件系统MCP工具 | 逐个手动操作 |
-| GitHub操作 | `npx @modelcontextprotocol/server-github` 或GitHub MCP工具 | web-fetch抓取HTML |
-| 代码检索 | `codebase-retrieval` 或代码检索MCP工具 | 盲目搜索文件 |
-| 用户反馈 | `uvx mcp-feedback-enhanced` 或反馈MCP工具 | 简单文本询问 |
-| 记忆检索（可选） | `npx @modelcontextprotocol/server-memory` 或记忆MCP工具 | 临时变量存储 |
-| 数据库操作 | `npx @modelcontextprotocol/server-postgres`, `npx @modelcontextprotocol/server-mysql` 等 | 手动SQL操作 |
-| 通用工具操作 | `npx @modelcontextprotocol/server-everything` 或通用MCP工具 | 手动执行基础操作 |
-| 测试和演示 | `npx @modelcontextprotocol/server-everything` 或通用MCP工具 | 复杂的手动验证 |
+| Operação de Arquivo | `npx @modelcontextprotocol/server-filesystem` ou ferramenta MCP de sistema de arquivos | Operação manual um a um |
+| Operação GitHub | `npx @modelcontextprotocol/server-github` ou ferramenta MCP GitHub | Captura de HTML com web-fetch |
+| Recuperação de Código | `codebase-retrieval` ou ferramenta MCP de recuperação de código | Busca cega de arquivos |
+| Feedback do Usuário | `uvx mcp-feedback-enhanced` ou ferramenta MCP de feedback | Pergunta de texto simples |
+| Recuperação de Memória (Opcional) | `npx @modelcontextprotocol/server-memory` ou ferramenta MCP de memória | Armazenamento em variável temporária |
+| Operação de Banco de Dados | `npx @modelcontextprotocol/server-postgres`, `npx @modelcontextprotocol/server-mysql` etc. | Operação SQL manual |
+| Operação de Ferramenta Genérica | `npx @modelcontextprotocol/server-everything` ou ferramenta MCP genérica | Execução manual de operações básicas |
+| Teste e Demonstração | `npx @modelcontextprotocol/server-everything` ou ferramenta MCP genérica | Validação manual complexa |
 
-## 🧠 按需 Memory 记录机制（Recorder 优先，默认关闭）
+## 🧠 Mecanismo de Registro de Memória Sob Demanda (Recorder Prioritário, Padrão Desligado)
 
-### 📝 自动记录触发条件
+### 📝 Condições de Gatilho de Registro Automático
 ```
-AI建议在以下情况自动调用memory工具记录信息：
+A IA sugere chamar automaticamente a ferramenta de memória para registrar informações nas seguintes situações:
 
-1. 项目重要决策时
-   - 技术栈选择和原因
-   - 架构设计决策
-   - 重要配置变更
+1. Em decisões importantes do projeto
+   - Escolha de stack tecnológico e razões
+   - Decisões de design de arquitetura
+   - Alterações importantes de configuração
 
-2. 问题解决方案时
-   - 遇到的问题描述
-   - 解决方案和步骤
-   - 效果验证结果
+2. Em soluções de problemas
+   - Descrição do problema encontrado
+   - Solução e passos
+   - Resultado da validação de efeito
 
-3. 用户重要需求时
-   - 明确的功能需求
-   - 特殊的偏好设置
-   - 项目约束条件
+3. Em requisitos importantes do usuário
+   - Requisitos funcionais claros
+   - Configurações de preferência especiais
+   - Condições de restrição do projeto
 
-4. 关键进展节点时
-   - 阶段性成果完成
-   - 重要里程碑达成
-   - 项目状态变更
+4. Em nós de progresso chave
+   - Conclusão de resultados de fase
+   - Alcance de marcos importantes
+   - Mudança de status do projeto
 
-5. 学习和发现时
-   - 新技术或工具的使用
-   - 最佳实践的总结
-   - 经验教训记录
-```
-
-### 🔄 记录执行规则
-```
-记录格式要求：
-- 简洁明确（1-2句话）
-- 包含关键信息
-- 便于后续查询
-- 标注时间和上下文
-
-记录时机：
-- 立即记录：重要决策做出时
-- 延迟记录：任务完成后总结
-- 批量记录：会话结束前汇总
+5. Em aprendizado e descoberta
+   - Uso de novas tecnologias ou ferramentas
+   - Resumo de melhores práticas
+   - Registro de lições aprendidas
 ```
 
-## 🔄 强制性执行流程
-
+### 🔄 Regras de Execução de Registro
 ```
-任务接收 → [强制]扫描MCP工具 → [强制]效率评估 → [强制]选择最优方案 → 执行监控 → [强制]动态调整
-```
+Requisitos de formato de registro:
+- Conciso e claro (1-2 frases)
+- Incluir informações chave
+- Fácil para consulta posterior
+- Marcar tempo e contexto
 
-## 🛠️ 具体执行指令
-
-### 文件操作任务
-```
-IF 任务涉及文件读写 THEN
-  首选：npx @modelcontextprotocol/server-filesystem 或已配置的文件系统MCP工具
-  检测：扫描可用的文件操作MCP工具（如 d-frontend-files, e-vue-projects 等）
-  禁止：直接使用通用文件操作
-  切换条件：MCP工具不可用或功能不足
+Momento de registro:
+- Registro imediato: Quando decisão importante é tomada
+- Registro atrasado: Resumo após conclusão da tarefa
+- Registro em lote: Resumo antes do fim da sessão
 ```
 
-### GitHub相关任务
+## 🔄 Fluxo de Execução Obrigatório
+
 ```
-IF 任务涉及GitHub操作 THEN
-  首选：server-github 或已配置的GitHub MCP工具
-  检测：扫描可用的GitHub MCP工具（如 github 等）
-  禁止：使用web-fetch抓取GitHub页面
-  切换条件：需要的功能GitHub工具不支持
+Recebimento de Tarefa → [Obrigatório] Varrer Ferramentas MCP → [Obrigatório] Avaliação de Eficiência → [Obrigatório] Selecionar Melhor Solução → Monitoramento de Execução → [Obrigatório] Ajuste Dinâmico
 ```
 
-### 代码分析任务
-```
-IF 任务需要理解或搜索代码 THEN
-  首选：codebase-retrieval MCP工具
-  禁止：手动逐文件搜索
-  切换条件：代码库过大或工具不可用
-```
+## 🛠️ Instruções de Execução Específicas
 
-### 用户交互任务
+### Tarefa de Operação de Arquivo
 ```
-IF 任务需要用户反馈或确认 THEN
-  首选：mcp-feedback-enhanced MCP工具
-  禁止：简单的文本询问
-  切换条件：需要复杂交互或工具不可用
+SE a tarefa envolve leitura/escrita de arquivo ENTÃO
+  Preferencial: npx @modelcontextprotocol/server-filesystem ou ferramenta MCP de sistema de arquivos configurada
+  Detecção: Varrer ferramentas MCP de operação de arquivo disponíveis (como d-frontend-files, e-vue-projects etc.)
+  Proibido: Usar diretamente operação de arquivo genérica
+  Condição de Troca: Ferramenta MCP indisponível ou funcionalidade insuficiente
 ```
 
-### 通用工具任务
+### Tarefa Relacionada ao GitHub
 ```
-IF 任务需要基础工具操作 THEN
-  首选：server-everything MCP工具
-  检测：扫描可用的通用工具功能（如 echo、add、图片处理等）
-  禁止：手动执行可自动化的基础操作
-  切换条件：需要的功能everything工具不支持
-```
-
-### Memory记录任务
-```
-IF 遇到以下情况 THEN 建议调用memory工具：
-  - 用户提到重要信息或决策
-  - 项目进展到关键节点
-  - 解决了重要问题
-  - 发现了有价值的经验
-  - 用户明确要求记住某些内容
-
-记录内容要求：
-  - 简洁明确（1-2句话）
-  - 包含关键上下文
-  - 便于后续检索
+SE a tarefa envolve operação GitHub ENTÃO
+  Preferencial: server-github ou ferramenta MCP GitHub configurada
+  Detecção: Varrer ferramentas MCP GitHub disponíveis (como github etc.)
+  Proibido: Usar web-fetch para capturar página GitHub
+  Condição de Troca: Funcionalidade necessária não suportada pela ferramenta GitHub
 ```
 
-## 🚨 违规检测
+### Tarefa de Análise de Código
+```
+SE a tarefa requer compreensão ou busca de código ENTÃO
+  Preferencial: Ferramenta MCP codebase-retrieval
+  Proibido: Busca manual arquivo por arquivo
+  Condição de Troca: Base de código muito grande ou ferramenta indisponível
+```
 
-### 禁止的低效行为
-- ❌ 有MCP工具可用时使用通用方法
-- ❌ 连续失败2次以上不切换工具
-- ❌ 发现缺失有用工具时不告知用户
-- ❌ 不主动评估工具效率
+### Tarefa de Interação com Usuário
+```
+SE a tarefa requer feedback ou confirmação do usuário ENTÃO
+  Preferencial: Ferramenta MCP mcp-feedback-enhanced
+  Proibido: Pergunta de texto simples
+  Condição de Troca: Necessidade de interação complexa ou ferramenta indisponível
+```
 
-### 建议的高效行为
-- ✅ 任务开始时立即扫描MCP工具
-- ✅ 优先选择最适合的MCP工具
-- ✅ 遇到问题时主动重新评估工具选择
-- ✅ 主动建议配置缺失的有用工具
+### Tarefa de Ferramenta Genérica
+```
+SE a tarefa requer operação de ferramenta básica ENTÃO
+  Preferencial: Ferramenta MCP server-everything
+  Detecção: Varrer funcionalidades de ferramenta genérica disponíveis (como echo, add, processamento de imagem etc.)
+  Proibido: Execução manual de operações básicas automatizáveis
+  Condição de Troca: Funcionalidade necessária não suportada pela ferramenta everything
+```
 
-## 🛠️ 项目阶段工具映射策略
+### Tarefa de Registro de Memória
+```
+SE encontrar as seguintes situações ENTÃO sugerir chamada da ferramenta de memória:
+  - Usuário menciona informações ou decisões importantes
+  - Projeto avança para nó chave
+  - Resolveu problema importante
+  - Descobriu experiência valiosa
+  - Usuário solicita explicitamente lembrar algo
 
-### 阶段1_智能需求分析
+Requisitos de conteúdo de registro:
+  - Conciso e claro (1-2 frases)
+  - Incluir contexto chave
+  - Fácil para recuperação posterior
+```
+
+## 🚨 Detecção de Violação
+
+### Comportamentos Ineficientes Proibidos
+- ❌ Usar método genérico quando ferramenta MCP está disponível
+- ❌ Não trocar de ferramenta após mais de 2 falhas consecutivas
+- ❌ Não informar o usuário ao descobrir falta de ferramenta útil
+- ❌ Não avaliar proativamente a eficiência da ferramenta
+
+### Comportamentos Eficientes Recomendados
+- ✅ Varrer ferramentas MCP imediatamente no início da tarefa
+- ✅ Priorizar a ferramenta MCP mais adequada
+- ✅ Reavaliar proativamente a escolha da ferramenta ao encontrar problemas
+- ✅ Sugerir proativamente a configuração de ferramentas úteis ausentes
+
+## 🛠️ Estratégia de Mapeamento de Ferramentas por Fase do Projeto
+
+### Fase 1_Análise de Requisitos Inteligente
 ```yaml
-核心工具组合:
-  需求理解引擎:
-    - mcp-feedback-enhanced: 深度需求收集和澄清
-    - memory: 需求上下文记录和关联分析
-    - context7: 技术知识库检索和最佳实践
+Combinação de Ferramentas Principais:
+  Motor de Compreensão de Requisitos:
+    - mcp-feedback-enhanced: Coleta e esclarecimento profundo de requisitos
+    - memory: Registro de contexto de requisitos e análise de correlação
+    - context7: Recuperação de base de conhecimento técnico e melhores práticas
   
-  需求验证工具:
-    - server-filesystem: 需求文档结构化管理
-    - codebase-retrieval: 类似项目需求参考
-    - server-github: 需求版本控制和协作
+  Ferramentas de Validação de Requisitos:
+    - server-filesystem: Gestão estruturada de documentos de requisitos
+    - codebase-retrieval: Referência de requisitos de projetos similares
+    - server-github: Controle de versão de requisitos e colaboração
 
-智能编排策略:
-  1. 自动需求类型识别 → 选择最优工具组合
-  2. 并行收集用户反馈和技术可行性分析
-  3. 智能澄清问题生成和验证循环
-  4. 需求完整性自动检查和补充建议
+Estratégia de Orquestração Inteligente:
+  1. Identificação automática do tipo de requisito → Selecionar melhor combinação de ferramentas
+  2. Coleta paralela de feedback do usuário e análise de viabilidade técnica
+  3. Geração inteligente de perguntas de esclarecimento e ciclo de validação
+  4. Verificação automática de integridade de requisitos e sugestões complementares
 ```
 
-### 阶段2_智能架构设计
+### Fase 2_Design de Arquitetura Inteligente
 ```yaml
-核心工具组合:
-  设计决策引擎:
-    - context7: 架构模式和设计原则检索
-    - codebase-retrieval: 架构参考和最佳实践
-    - mcp-feedback-enhanced: 设计方案讨论和确认
+Combinação de Ferramentas Principais:
+  Motor de Decisão de Design:
+    - context7: Recuperação de padrões de arquitetura e princípios de design
+    - codebase-retrieval: Referência de arquitetura e melhores práticas
+    - mcp-feedback-enhanced: Discussão e confirmação de plano de design
   
-  环境构建工具:
-    - server-filesystem: 项目结构智能生成
-    - server-github: 版本控制和协作环境
-    - memory: 设计决策记录和追溯
+  Ferramentas de Construção de Ambiente:
+    - server-filesystem: Geração inteligente de estrutura de projeto
+    - server-github: Controle de versão e ambiente de colaboração
+    - memory: Registro e rastreamento de decisões de design
 ```
 
-### 阶段3_高效开发实现
+### Fase 3_Implementação de Desenvolvimento Eficiente
 ```yaml
-核心工具组合:
-  代码生成引擎:
-    - codebase-retrieval: 代码模式和最佳实践
-    - server-filesystem: 智能文件管理
-    - memory: 开发进度和决策记录
+Combinação de Ferramentas Principais:
+  Motor de Geração de Código:
+    - codebase-retrieval: Padrões de código e melhores práticas
+    - server-filesystem: Gestão inteligente de arquivos
+    - memory: Progresso de desenvolvimento e registro de decisões
   
-  质量保证工具:
-    - server-github: 代码审查和版本控制
-    - mcp-feedback-enhanced: 代码质量反馈
-    - context7: 技术问题解决方案
-    - chrome-devtools: 前端调试与性能分析（CDP）
+  Ferramentas de Garantia de Qualidade:
+    - server-github: Revisão de código e controle de versão
+    - mcp-feedback-enhanced: Feedback de qualidade de código
+    - context7: Soluções para problemas técnicos
+    - chrome-devtools: Depuração frontend e análise de desempenho (CDP)
 ```
 
-### 阶段4_智能测试优化
+### Fase 4_Otimização de Teste Inteligente
 ```yaml
-核心工具组合:
-  测试自动化:
-    - server-filesystem: 测试文件管理
-    - memory: 测试结果记录和分析
-    - mcp-feedback-enhanced: 测试反馈收集
-    - Playwright: 端到端与跨浏览器自动化
+Combinação de Ferramentas Principais:
+  Automação de Teste:
+    - server-filesystem: Gestão de arquivos de teste
+    - memory: Registro e análise de resultados de teste
+    - mcp-feedback-enhanced: Coleta de feedback de teste
+    - Playwright: Automação ponta a ponta e cross-browser
   
-  性能优化:
-    - codebase-retrieval: 性能优化模式
-    - context7: 性能调优最佳实践
+  Otimização de Desempenho:
+    - codebase-retrieval: Padrões de otimização de desempenho
+    - context7: Melhores práticas de ajuste de desempenho
 ```
 
-### 阶段5_智能部署运维
+### Fase 5_Implantação e Operação Inteligente
 ```yaml
-核心工具组合:
-  部署自动化:
-    - server-filesystem: 部署脚本管理
-    - server-github: 部署版本控制
-    - memory: 部署历史和配置记录
+Combinação de Ferramentas Principais:
+  Automação de Implantação:
+    - server-filesystem: Gestão de scripts de implantação
+    - server-github: Controle de versão de implantação
+    - memory: Histórico de implantação e registro de configuração
   
-  运维监控:
-    - mcp-feedback-enhanced: 运维反馈收集
-    - context7: 运维最佳实践和故障解决
+  Monitoramento de Operação:
+    - mcp-feedback-enhanced: Coleta de feedback de operação
+    - context7: Melhores práticas de operação e resolução de falhas
 ```
 
-## 🧠 智能工具编排特性
+## 🧠 Recursos de Orquestração de Ferramentas Inteligente
 
-### 并行执行优化
+### Otimização de Execução Paralela
 ```yaml
-智能编排特性:
-  - 并行工具执行优化
-  - 工具链自动组合
-  - 性能实时监控
-  - 故障自动恢复
-  - 上下文感知选择
+Recursos de Orquestração Inteligente:
+  - Otimização de execução paralela de ferramentas
+  - Combinação automática de cadeia de ferramentas
+  - Monitoramento de desempenho em tempo real
+  - Recuperação automática de falhas
+  - Seleção sensível ao contexto
 
-智能决策流程:
-  任务分析 → 工具能力评估 → 智能编排 → 并行执行 → 实时优化 → 结果整合
+Fluxo de Decisão Inteligente:
+  Análise de Tarefa → Avaliação de Capacidade de Ferramenta → Orquestração Inteligente → Execução Paralela → Otimização em Tempo Real → Integração de Resultados
 
-智能切换条件:
-  文件操作: 基于文件大小和操作复杂度
-  代码分析: 基于查询类型和代码库规模
-  版本控制: 基于网络状态和操作类型
-  用户交互: 基于决策复杂度和用户偏好
+Condições de Troca Inteligente:
+  Operação de Arquivo: Baseado em tamanho de arquivo e complexidade de operação
+  Análise de Código: Baseado em tipo de consulta e escala de base de código
+  Controle de Versão: Baseado em estado de rede e tipo de operação
+  Interação com Usuário: Baseado em complexidade de decisão e preferência do usuário
 ```
 
-## 📊 效果验证
+## 📊 Verificação de Efeito
 
-### 自检清单
-每个任务完成后，AI建议自问：
-- [ ] 我是否在任务开始时扫描了MCP工具？
-- [ ] 我是否选择了最优的工具方案？
-- [ ] 我是否在遇到问题时重新评估了工具选择？
-- [ ] 我是否主动建议了有用的缺失工具？
-- [ ] 我是否在关键节点主动记录了重要信息到memory？
-- [ ] 我是否正确使用了everything工具处理通用任务？
-- [ ] 我是否根据项目阶段选择了最适合的工具组合？
+### Lista de Autoverificação
+Após completar cada tarefa, a IA sugere perguntar a si mesma:
+- [ ] Eu varri as ferramentas MCP no início da tarefa?
+- [ ] Eu escolhi a melhor solução de ferramenta?
+- [ ] Eu reavaliei a escolha da ferramenta ao encontrar problemas?
+- [ ] Eu sugeri proativamente ferramentas úteis ausentes?
+- [ ] Eu registrei informações importantes na memória em nós chave?
+- [ ] Eu usei corretamente a ferramenta everything para lidar com tarefas genéricas?
+- [ ] Eu escolhi a combinação de ferramentas mais adequada de acordo com a fase do projeto?
 
-### 用户反馈指标
-- 任务完成效率是否明显提升？
-- 错误率是否显著降低？
-- 用户是否感受到AI的智能化提升？
-- 项目阶段切换是否更加顺畅？
+### Indicadores de Feedback do Usuário
+- A eficiência de conclusão da tarefa aumentou significativamente?
+- A taxa de erro diminuiu significativamente?
+- O usuário sentiu o aumento da inteligência da IA?
+- A troca de fase do projeto foi mais suave?
 
 ---
 
-**🎯 记住：这是重要的核心策略，建议严格遵循！**
+**🎯 Lembre-se: Esta é uma estratégia central importante, sugere-se seguir rigorosamente!**
 
-**🚀 目标：让每个使用这个项目的AI都成为高效的MCP工具使用专家！**
+**🚀 Objetivo: Fazer com que cada IA usando este projeto se torne um especialista em uso eficiente de ferramentas MCP!**
 
-### 检测复用与跳过条件
+### Condições de Reutilização e Pulo de Detecção
 ```
-复用策略:
-- 若检测到 project.context.md 中存在"MCP平台报告"或当前会话已生成"检测响应"，则复用已有检测结果，不重复扫描。
-- 若 mcp-unified-management.mdc 在最近 3600 秒内执行过检测（可通过状态标记/日志识别），则直接复用其结果。
-- 若用户明确要求"重新检测"，则覆盖上述跳过条件并重新执行扫描。
+Estratégia de Reutilização:
+- Se detectar "Relatório de Plataforma MCP" em project.context.md ou "Resposta de Detecção" já gerada na sessão atual, reutilizar resultados de detecção existentes, não repetir varredura.
+- Se mcp-unified-management.mdc executou detecção nos últimos 3600 segundos (identificável por marca de status/log), reutilizar diretamente seus resultados.
+- Se o usuário solicitar explicitamente "redetectar", substituir as condições de pulo acima e reexecutar a varredura.
 
-跳过场景:
-- 系统级启动命令（如"启动超级大脑系统"）阶段的初始化，不主动重复进行工具扫描；由统一管理或系统激活流程协调。
-- 无文件/代码相关操作的纯信息咨询对话。
+Cenários de Pulo:
+- Inicialização de fase de comando de nível de sistema (como "Iniciar Sistema Super Brain"), não repetir proativamente varredura de ferramentas; coordenado por gestão unificada ou fluxo de ativação do sistema.
+- Diálogo de consulta de informação pura sem operação relacionada a arquivo/código.
 ```
 
-## 🔒 强化操作约束（新增，强制）
+## 🔒 Restrições de Operação Reforçadas (Novo, Obrigatório)
 
-### **MCP工具权限控制（Must）**
+### **Controle de Permissão de Ferramentas MCP (Obrigatório)**
 ```yaml
-权限分级管控:
-  白名单操作（可直接执行）:
-    - 项目代码开发相关的MCP工具调用
-    - 文档编写和查看操作
-    - 代码检索和分析工具
-    - 用户反馈和交互工具
-    - 只读检测和状态查询
+Controle de Nível de Permissão:
+  Operações de Lista Branca (Execução Direta):
+    - Chamada de ferramentas MCP relacionadas ao desenvolvimento de código do projeto
+    - Operações de escrita e visualização de documentação
+    - Ferramentas de recuperação e análise de código
+    - Ferramentas de feedback e interação com usuário
+    - Detecção somente leitura e consulta de status
   
-  灰名单操作（需要授权）:
-    - 系统配置文件的MCP工具修改
-    - MCP服务器配置变更
-    - 跨平台同步操作（sync动作）
-    - 批量文件操作
+  Operações de Lista Cinza (Requer Autorização):
+    - Modificação de ferramentas MCP em arquivos de configuração do sistema
+    - Alteração de configuração de servidor MCP
+    - Operação de sincronização entre plataformas (ação sync)
+    - Operação de arquivos em lote
   
-  黑名单操作（绝对禁止）:
-    - 删除系统核心文件的MCP工具调用
-    - 格式化或重置操作
-    - 未经授权的系统级配置修改
-    - 危险的批量删除操作
+  Operações de Lista Negra (Absolutamente Proibido):
+    - Chamada de ferramentas MCP para excluir arquivos centrais do sistema
+    - Operações de formatação ou reset
+    - Modificação de configuração de nível de sistema não autorizada
+    - Operações de exclusão em lote perigosas
 ```
 
-### **MCP脚本执行约束（Must）**
+### **Restrições de Execução de Script MCP (Obrigatório)**
 ```yaml
-脚本执行限制:
-  允许静默执行:
+Restrições de Execução de Script:
+  Execução Silenciosa Permitida:
     - mcp-cross-platform-sync.ps1 -Action detect
     - mcp-cross-platform-sync.ps1 -Action current
-    - 任何带有 status、check、list、show 参数的只读命令
+    - Qualquer comando somente leitura com parâmetros status, check, list, show
   
-  需要明确授权:
+  Requer Autorização Explícita:
     - mcp-cross-platform-sync.ps1 -Action sync
-    - 任何会修改MCP配置的脚本
-    - 任何会写入系统文件的操作
-    - 批量修改或删除操作
+    - Qualquer script que modifique configuração MCP
+    - Qualquer operação que grave em arquivos do sistema
+    - Operações de modificação ou exclusão em lote
   
-  绝对禁止:
-    - 未经用户确认的系统级脚本执行
-    - 可能影响系统稳定性的危险操作
-    - 删除或格式化操作
+  Absolutamente Proibido:
+    - Execução de script de nível de sistema não confirmada pelo usuário
+    - Operações perigosas que podem afetar a estabilidade do sistema
+    - Operações de exclusão ou formatação
 ```
 
-### **冻结目录保护（Must）**
+### **Proteção de Diretório Congelado (Obrigatório)**
 ```yaml
-受保护目录:
-  严格保护（禁止任何MCP工具修改）:
-    - mcp-scripts/ （MCP脚本目录）
-    - global-rules/ （全局规则文件）
-    - project-rules/ （项目规则文件）
-    - install-scripts/ （安装脚本）
-    - scripts/ （系统脚本）
+Diretórios Protegidos:
+  Proteção Estrita (Proibido qualquer modificação por ferramenta MCP):
+    - mcp-scripts/ (Diretório de scripts MCP)
+    - global-rules/ (Arquivos de regras globais)
+    - project-rules/ (Arquivos de regras do projeto)
+    - install-scripts/ (Scripts de instalação)
+    - scripts/ (Scripts do sistema)
   
-  保护策略:
-    - 任何针对这些目录的写入操作必须先获得用户明确授权
-    - MCP工具不得自动修改这些目录中的文件
-    - 必须通过强制确认模板获得授权
+  Estratégia de Proteção:
+    - Qualquer operação de escrita nesses diretórios deve obter autorização explícita do usuário
+    - Ferramentas MCP não devem modificar arquivos nesses diretórios automaticamente
+    - Deve obter autorização através do modelo de confirmação obrigatório
 ```
 
-### **强制确认流程（Must）**
+### **Fluxo de Confirmação Obrigatório (Obrigatório)**
 ```yaml
-确认模板:
-  每次准备使用MCP工具进行敏感操作时，必须提供：
-  1. 操作目标与原因说明
-  2. 影响范围与风险评估
-  3. 具体文件清单（含完整路径）
-  4. 执行动作类型（新增/修改/删除/同步）
-  5. 回滚方案说明
-  6. 明确的授权请求："是否授权执行（y/n）"
+Modelo de Confirmação:
+  Sempre que preparar para usar ferramenta MCP para operação sensível, deve fornecer:
+  1. Descrição do objetivo e razão da operação
+  2. Avaliação de escopo de impacto e risco
+  3. Lista de arquivos específica (com caminho completo)
+  4. Tipo de ação de execução (novo/modificar/excluir/sincronizar)
+  5. Descrição do plano de rollback
+  6. Solicitação de autorização clara: "Autorizar execução (y/n)"
   
-  示例格式:
-    "准备使用MCP工具执行以下操作：
-    - 目标：[具体目标]
-    - 影响：[影响范围]
-    - 文件：[文件清单]
-    - 动作：[操作类型]
-    - 回滚：[回滚方案]
+  Exemplo de Formato:
+    "Preparando para usar ferramenta MCP para executar a seguinte operação:
+    - Objetivo: [Objetivo Específico]
+    - Impacto: [Escopo de Impacto]
+    - Arquivos: [Lista de Arquivos]
+    - Ação: [Tipo de Operação]
+    - Rollback: [Plano de Rollback]
     
-    是否授权执行？(y/n)"
+    Autorizar execução? (y/n)"
 ```
 
-### **违规处理机制（Must）**
+### **Mecanismo de Tratamento de Violação (Obrigatório)**
 ```yaml
-违规检测:
-  - 未经授权使用MCP工具修改受保护文件
-  - 跳过强制确认流程
-  - 执行黑名单操作
-  - 假设用户同意而直接执行敏感操作
+Detecção de Violação:
+  - Uso não autorizado de ferramenta MCP para modificar arquivos protegidos
+  - Pular fluxo de confirmação obrigatório
+  - Executar operação de lista negra
+  - Assumir consentimento do usuário e executar operação sensível diretamente
   
-违规处理:
-  1. 立即停止所有MCP工具操作
-  2. 向用户道歉并说明违规情况
-  3. 调用反馈机制重新沟通
-  4. 详细说明计划并等待明确授权
-  5. 记录违规事件以避免重复
+Tratamento de Violação:
+  1. Parar imediatamente todas as operações de ferramentas MCP
+  2. Pedir desculpas ao usuário e explicar a violação
+  3. Chamar mecanismo de feedback para re-comunicar
+  4. Explicar plano detalhadamente e aguardar autorização explícita
+  5. Registrar evento de violação para evitar repetição
 ```

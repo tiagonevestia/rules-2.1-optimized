@@ -1,12 +1,12 @@
 ---
 type: "always_apply"
-description: "AI-powered cross-language code quality check with intelligent analysis - AI驱动的跨语言代码质量检查"
+description: "Verificação de qualidade de código multi-linguagem impulsionada por IA com análise inteligente"
 globs: ["**/*"]
 priority: 640
 alwaysApply: true
 integrations: ["super-brain-system", "mcp-intelligent-strategy", "intelligent-project-management", "commit", "changelog-management"]
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -17,271 +17,271 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adição do sistema de gerenciamento de versão"
+      - "Padronização da estrutura do arquivo de regras"
 ---
 
-# 🔍 Code Quality Check - 智能代码质量检查
+# 🔍 Verificação de Qualidade de Código - Inteligência Artificial
 
-AI驱动的跨语言代码质量检查系统，集成智能分析引擎、MCP工具自动化和超级大脑系统推荐。
+Sistema de verificação de qualidade de código multi-linguagem impulsionado por IA, integrando motor de análise inteligente, automação de ferramentas MCP e recomendações do Super Brain System.
 
-## 🧠 AI Intelligence Core - AI智能核心
+## 🧠 Núcleo de Inteligência IA
 
-### 智能激活条件
+### Condições de Ativação Inteligente
 ```yaml
-自动激活场景:
-  - 检测到代码文件变更需要质量检查
-  - 用户执行 "/quality-check" 命令
-  - commit工作流提交前自动触发（/commit 或 /commit --fast；支持 /commit-fast 别名）
-  - 超级大脑系统推荐质量检查
-  - 项目进入代码审查阶段
+Cenários de ativação automática:
+  - Detecção de alterações em arquivos de código que requerem verificação de qualidade
+  - Usuário executa o comando "/quality-check"
+  - Gatilho automático antes do workflow de commit (/commit ou /commit --fast; suporta o alias /commit-fast)
+  - Recomendação de verificação de qualidade pelo Super Brain System
+  - Projeto entra na fase de revisão de código
 
-智能分析维度:
-  - 代码复杂度和可维护性 (30%)
-  - 安全漏洞和潜在风险 (25%)
-  - 性能问题和优化机会 (20%)
-  - 代码规范和最佳实践 (15%)
-  - 测试覆盖率和质量 (10%)
+Dimensões de análise inteligente:
+  - Complexidade do código e manutenibilidade (30%)
+  - Vulnerabilidades de segurança e riscos potenciais (25%)
+  - Problemas de desempenho e oportunidades de otimização (20%)
+  - Padrões de código e melhores práticas (15%)
+  - Cobertura de testes e qualidade (10%)
 ```
 
-## 🚀 Commands - 智能命令
+## 🚀 Comandos Inteligentes
 
-- `/quality-check` - AI智能质量检查（推荐）
-- `/quality-check --language <lang>` - 指定语言检查
-- `/quality-check --severity <level>` - 指定严重级别 (critical/high/medium/low)
-- `/quality-check --fix` - 自动修复可修复的问题
-- `/quality-check --report` - 生成详细质量报告
-- `/quality-check --baseline` - 建立质量基线
+- `/quality-check` - Verificação de qualidade inteligente por IA (recomendado)
+- `/quality-check --language <lang>` - Verificação para uma linguagem específica
+- `/quality-check --severity <level>` - Especificar nível de severidade (critical/high/medium/low)
+- `/quality-check --fix` - Corrigir automaticamente problemas reparáveis
+- `/quality-check --report` - Gerar relatório detalhado de qualidade
+- `/quality-check --baseline` - Estabelecer uma linha de base (baseline) de qualidade
 
-## ✨ AI-Powered Features - AI驱动功能
+## ✨ Recursos Impulsionados por IA
 
-### 🤖 智能代码分析引擎
+### 🤖 Motor de Análise de Código Inteligente
 ```yaml
-多语言支持:
-  前端语言:
+Suporte Multi-linguagem:
+  Linguagens Frontend:
     - JavaScript/TypeScript (ES6+, React, Vue, Angular)
-    - HTML5/CSS3 (响应式设计, 可访问性)
-    - SCSS/SASS/Less (预处理器优化)
+    - HTML5/CSS3 (Design Responsivo, Acessibilidade)
+    - SCSS/SASS/Less (Otimização de pré-processadores)
 
-  后端语言:
+  Linguagens Backend:
     - Python (Django, Flask, FastAPI)
     - Node.js (Express, Koa, NestJS)
     - Java (Spring Boot, Maven, Gradle)
     - C# (.NET Core, ASP.NET)
-    - Go (Gin, Echo, 微服务)
+    - Go (Gin, Echo, Microserviços)
 
-  数据库和配置:
+  Banco de Dados e Configuração:
     - SQL (MySQL, PostgreSQL, SQLite)
     - NoSQL (MongoDB, Redis)
-    - YAML/JSON/XML 配置文件
-    - Docker/Kubernetes 配置
+    - Arquivos de configuração YAML/JSON/XML
+    - Configurações Docker/Kubernetes
 
-智能分析能力:
-  - 语法和语义分析
-  - 代码复杂度计算
-  - 安全漏洞扫描
-  - 性能瓶颈识别
-  - 代码异味检测
-  - 依赖关系分析
+Capacidades de Análise Inteligente:
+  - Análise sintática e semântica
+  - Cálculo de complexidade de código
+  - Varredura de vulnerabilidades de segurança
+  - Identificação de gargalos de desempenho
+  - Detecção de code smells
+  - Análise de dependências
 ```
 
-### 🔧 MCP工具智能编排
+### 🔧 Orquestração Inteligente de Ferramentas MCP
 ```yaml
-工具链集成:
-  代码分析工具:
+Integração da Cadeia de Ferramentas:
+  Ferramentas de Análise de Código:
     - ESLint/Prettier (JavaScript/TypeScript)
     - Pylint/Black (Python)
-    - SonarQube (多语言静态分析)
-    - CodeQL (安全分析)
-    - Bandit (Python安全扫描)
+    - SonarQube (Análise estática multi-linguagem)
+    - CodeQL (Análise de segurança)
+    - Bandit (Varredura de segurança Python)
 
-  性能分析工具:
-    - Lighthouse (前端性能)
-    - Profiler (后端性能)
-    - Memory Analyzer (内存分析)
-    - Load Testing (负载测试)
+  Ferramentas de Análise de Desempenho:
+    - Lighthouse (Desempenho Frontend)
+    - Profiler (Desempenho Backend)
+    - Memory Analyzer (Análise de memória)
+    - Load Testing (Testes de carga)
 
-  自动化修复:
-    - 代码格式化自动修复
-    - 简单语法错误修复
-    - 导入语句优化
-    - 代码风格统一
+  Correção Automática:
+    - Correção automática de formatação de código
+    - Correção de erros sintáticos simples
+    - Otimização de declarações de importação
+    - Unificação do estilo de código
 ```
 
-## 📋 Quality Check Categories - 质量检查分类
+## 📋 Categorias de Verificação de Qualidade
 
-### 🔴 Critical Issues - 致命问题
+### 🔴 Problemas Críticos - Fatais
 ```yaml
-安全漏洞:
-  - SQL注入风险
-  - XSS跨站脚本攻击
-  - CSRF跨站请求伪造
-  - 敏感信息泄露
-  - 不安全的加密实现
+Vulnerabilidades de Segurança:
+  - Risco de Injeção SQL
+  - Ataques de Script Cross-site (XSS)
+  - Falsificação de Solicitação Cross-site (CSRF)
+  - Vazamento de informações sensíveis
+  - Implementações de criptografia inseguras
 
-架构问题:
-  - 循环依赖
-  - 紧耦合设计
-  - 单点故障
-  - 资源泄露
-  - 死锁风险
+Problemas de Arquitetura:
+  - Dependências circulares
+  - Design com acoplamento forte
+  - Ponto único de falha (SPOF)
+  - Vazamento de recursos
+  - Riscos de deadlock
 ```
 
-### 🟠 High Priority - 高优先级
+### 🟠 Alta Prioridade
 ```yaml
-性能问题:
-  - 内存泄露
-  - 无限循环
-  - 低效算法
-  - 数据库N+1查询
-  - 大文件处理问题
+Problemas de Desempenho:
+  - Vazamento de memória (Memory leaks)
+  - Loops infinitos
+  - Algoritmos ineficientes
+  - Consultas N+1 no banco de dados
+  - Problemas no processamento de arquivos grandes
 
-可维护性:
-  - 代码重复率过高
-  - 函数复杂度过高
-  - 类职责不清
-  - 命名不规范
-  - 缺少文档注释
+Manutenibilidade:
+  - Taxa de duplicação de código muito alta
+  - Complexidade de função muito alta
+  - Responsabilidades de classe pouco claras
+  - Nomenclatura fora do padrão
+  - Falta de comentários de documentação
 ```
 
-### 🟡 Medium Priority - 中优先级
+### 🟡 Média Prioridade
 ```yaml
-代码规范:
-  - 代码风格不一致
-  - 变量命名不规范
-  - 注释不充分
-  - 文件结构混乱
-  - 版本控制问题
+Padrões de Código:
+  - Estilo de código inconsistente
+  - Nomenclatura de variáveis fora do padrão
+  - Comentários insuficientes
+  - Estrutura de arquivos desorganizada
+  - Problemas de controle de versão
 
-测试质量:
-  - 测试覆盖率不足
-  - 测试用例质量低
-  - 缺少集成测试
-  - 测试数据不完整
-  - 测试环境不一致
+Qualidade de Testes:
+  - Cobertura de testes insuficiente
+  - Baixa qualidade dos casos de teste
+  - Falta de testes de integração
+  - Dados de teste incompletos
+  - Ambientes de teste inconsistentes
 ```
 
-### 🟢 Low Priority - 低优先级
+### 🟢 Baixa Prioridade
 ```yaml
-优化建议:
-  - 代码简化机会
-  - 性能优化建议
-  - 新技术应用建议
-  - 重构机会识别
-  - 最佳实践推荐
+Sugestões de Otimização:
+  - Oportunidades de simplificação de código
+  - Sugestões de otimização de desempenho
+  - Sugestões de aplicação de novas tecnologias
+  - Identificação de oportunidades de refatoração
+  - Recomendações de melhores práticas
 ```
 
-## 🔄 AI Workflow Process - AI工作流程
+## 🔄 Processo de Fluxo de Trabalho IA
 
-### Phase 1: 智能扫描阶段
+### Fase 1: Estágio de Varredura Inteligente
 ```yaml
-Step 1 - 环境检测:
-  - 识别项目类型和技术栈
-  - 检测代码文件和结构
-  - 分析项目配置和依赖
-  - 加载相应的检查规则
+Passo 1 - Detecção de Ambiente:
+  - Identificar tipo de projeto e stack tecnológica
+  - Detectar arquivos de código e estrutura
+  - Analisar configurações e dependências do projeto
+  - Carregar as regras de verificação correspondentes
 
-Step 2 - 文件分析:
-  - 扫描所有相关代码文件
-  - 识别文件类型和语言
-  - 分析文件大小和复杂度
-  - 建立文件依赖关系图
+Passo 2 - Análise de Arquivos:
+  - Varrer todos os arquivos de código relevantes
+  - Identificar tipos de arquivos e linguagens
+  - Analisar tamanho e complexidade dos arquivos
+  - Estabelecer grafo de dependência de arquivos
 
-Step 3 - 智能分类:
-  - 按语言分类文件
-  - 按模块分组检查
-  - 识别关键文件和路径
-  - 确定检查优先级
+Passo 3 - Classificação Inteligente:
+  - Classificar arquivos por linguagem
+  - Agrupar verificações por módulo
+  - Identificar arquivos e caminhos críticos
+  - Determinar prioridades de verificação
 ```
 
-### Phase 2: 深度分析阶段
+### Fase 2: Estágio de Análise Profunda
 ```yaml
-Step 4 - 多维度分析:
-  - 语法和语义检查
-  - 安全漏洞扫描
-  - 性能问题分析
-  - 代码质量评估
+Passo 4 - Análise Multi-dimensional:
+  - Verificação sintática e semântica
+  - Varredura de vulnerabilidades de segurança
+  - Análise de problemas de desempenho
+  - Avaliação da qualidade do código
 
-Step 5 - AI智能评分:
-  - 计算代码质量分数
-  - 生成问题严重级别
-  - 识别修复优先级
-  - 提供改进建议
+Passo 5 - Pontuação Inteligente por IA:
+  - Calcular pontuação de qualidade do código
+  - Gerar níveis de severidade dos problemas
+  - Identificar prioridades de correção
+  - Fornecer sugestões de melhoria
 
-Step 6 - 关联分析:
-  - 分析问题间的关联性
-  - 识别根本原因
-  - 评估修复影响范围
-  - 生成修复计划
+Passo 6 - Análise de Correlação:
+  - Analisar correlação entre problemas
+  - Identificar a causa raiz
+  - Avaliar o impacto da correção
+  - Gerar plano de correção
 ```
 
-### Phase 3: 报告生成阶段
+### Fase 3: Estágio de Geração de Relatório
 ```yaml
-Step 7 - 智能报告:
-  - 生成详细质量报告
-  - 创建问题修复建议
-  - 提供代码改进方案
-  - 生成质量趋势分析
+Passo 7 - Relatório Inteligente:
+  - Gerar relatório detalhado de qualidade
+  - Criar sugestões de correção de problemas
+  - Fornecer planos de melhoria de código
+  - Gerar análise de tendências de qualidade
 
-Step 8 - 自动修复:
-  - 执行可自动修复的问题
-  - 生成修复代码建议
-  - 创建重构方案
-  - 更新项目配置
+Passo 8 - Correção Automática:
+  - Executar correções automáticas para problemas passíveis disso
+  - Gerar sugestões de código de correção
+  - Criar planos de refatoração
+  - Atualizar configurações do projeto
 ```
 
-## 🧠 Super Brain Integration - 超级大脑集成
+## 🧠 Integração com Super Brain
 
-### 智能推荐引擎
+### Motor de Recomendação Inteligente
 ```yaml
-质量标准推荐:
-  - 基于项目类型推荐质量标准
-  - 根据团队经验调整检查级别
-  - 建议最佳实践和工具配置
-  - 提供个性化质量目标
+Recomendação de Padrões de Qualidade:
+  - Recomendar padrões de qualidade baseados no tipo de projeto
+  - Ajustar níveis de verificação de acordo com a experiência da equipe
+  - Sugerir melhores práticas e configurações de ferramentas
+  - Fornecer objetivos de qualidade personalizados
 
-学习和优化:
-  - 学习项目特定的质量模式
-  - 记录常见问题和解决方案
-  - 优化检查规则和阈值
-  - 积累质量改进经验
+Aprendizado e Otimização:
+  - Aprender padrões de qualidade específicos do projeto
+  - Registrar problemas comuns e soluções
+  - Otimizar regras de verificação e limiares
+  - Acumular experiência em melhoria de qualidade
 
-项目管理集成:
-  - 根据项目阶段调整检查重点
-  - 集成到开发工作流中
-  - 提供质量门禁建议
-  - 支持持续集成流程
+Integração com Gerenciamento de Projeto:
+  - Ajustar o foco da verificação conforme a fase do projeto
+  - Integrar ao fluxo de trabalho de desenvolvimento
+  - Fornecer sugestões de Quality Gates (Portões de Qualidade)
+  - Suportar processos de integração contínua (CI)
 ```
 
-### 与commit工作流协同（支持 /commit-fast 别名）
+### Sinergia com Workflow de Commit (suporta alias /commit-fast)
 ```yaml
-提交前检查:
-  - commit工作流触发自动质量检查（/commit 或 /commit --fast）
-  - 阻止低质量代码提交
-  - 提供快速修复建议
-  - 集成到提交工作流
+Verificação Pré-commit:
+  - Workflow de commit dispara verificação automática de qualidade (/commit ou /commit --fast)
+  - Bloquear commit de código de baixa qualidade
+  - Fornecer sugestões de correção rápida
+  - Integrar ao workflow de submissão
 
-质量门禁:
-  - 设置质量阈值
-  - 自动拒绝不合格提交
-  - 生成质量改进任务
-  - 通知相关开发人员
+Quality Gates (Portões de Qualidade):
+  - Definir limiares de qualidade
+  - Rejeitar automaticamente submissões não qualificadas
+  - Gerar tarefas de melhoria de qualidade
+  - Notificar desenvolvedores relevantes
 ```
 
-## 🎯 Language-Specific Rules - 语言特定规则
+## 🎯 Regras Específicas por Linguagem
 
 ### JavaScript/TypeScript
 ```yaml
-检查重点:
-  - ESLint规则合规性
-  - TypeScript类型安全
-  - React/Vue组件最佳实践
-  - 异步代码处理
-  - 内存泄露检测
+Foco da Verificação:
+  - Conformidade com regras ESLint
+  - Segurança de tipos TypeScript
+  - Melhores práticas de componentes React/Vue
+  - Tratamento de código assíncrono
+  - Detecção de vazamento de memória (Memory leaks)
 
-工具集成:
+Integração de Ferramentas:
   - ESLint + Prettier
-  - TypeScript Compiler
+  - Compilador TypeScript
   - JSHint/JSLint
   - Webpack Bundle Analyzer
   - Chrome DevTools
@@ -289,401 +289,401 @@ Step 8 - 自动修复:
 
 ### Python
 ```yaml
-检查重点:
-  - PEP 8代码风格
-  - 类型注解完整性
-  - Django/Flask安全实践
-  - 性能优化机会
-  - 依赖安全检查
+Foco da Verificação:
+  - Estilo de código PEP 8
+  - Integridade de anotações de tipo
+  - Práticas de segurança Django/Flask
+  - Oportunidades de otimização de desempenho
+  - Verificação de segurança de dependências
 
-工具集成:
+Integração de Ferramentas:
   - Pylint + Black
-  - mypy (类型检查)
-  - Bandit (安全扫描)
-  - pytest (测试质量)
-  - Safety (依赖安全)
+  - mypy (verificação de tipos)
+  - Bandit (varredura de segurança)
+  - pytest (qualidade de testes)
+  - Safety (segurança de dependências)
 ```
 
 ### Java
 ```yaml
-检查重点:
-  - Spring Boot最佳实践
-  - 内存管理和GC优化
-  - 线程安全和并发
-  - 设计模式应用
-  - Maven/Gradle配置
+Foco da Verificação:
+  - Melhores práticas Spring Boot
+  - Gerenciamento de memória e otimização de GC
+  - Thread safety e concorrência
+  - Aplicação de padrões de projeto
+  - Configurações Maven/Gradle
 
-工具集成:
+Integração de Ferramentas:
   - SpotBugs + PMD
   - Checkstyle
-  - JaCoCo (覆盖率)
+  - JaCoCo (cobertura)
   - SonarQube
   - OWASP Dependency Check
 ```
 
-## 📊 Quality Metrics - 质量指标
+## 📊 Métricas de Qualidade
 
-### 代码质量评分
+### Pontuação de Qualidade de Código
 ```yaml
-评分维度:
-  - 可维护性指数 (25%)
-  - 安全性评分 (25%)
-  - 性能效率 (20%)
-  - 可靠性指标 (15%)
-  - 可测试性 (15%)
+Dimensões de Pontuação:
+  - Índice de manutenibilidade (25%)
+  - Pontuação de segurança (25%)
+  - Eficiência de desempenho (20%)
+  - Indicadores de confiabilidade (15%)
+  - Testabilidade (15%)
 
-评分等级:
-  - A级 (90-100分): 优秀
-  - B级 (80-89分): 良好
-  - C级 (70-79分): 一般
-  - D级 (60-69分): 需改进
-  - F级 (<60分): 不合格
+Níveis de Pontuação:
+  - Nível A (90-100 pontos): Excelente
+  - Nível B (80-89 pontos): Bom
+  - Nível C (70-79 pontos): Regular
+  - Nível D (60-69 pontos): Precisa melhorar
+  - Nível F (<60 pontos): Insuficiente
 ```
 
-### 趋势分析
+### Análise de Tendências
 ```yaml
-质量趋势:
-  - 代码质量变化趋势
-  - 问题修复效率
-  - 新增问题统计
-  - 团队质量改进进度
+Tendências de Qualidade:
+  - Tendência de mudança na qualidade do código
+  - Eficiência na correção de problemas
+  - Estatísticas de novos problemas
+  - Progresso da melhoria de qualidade da equipe
 
-基准对比:
-  - 行业标准对比
-  - 历史版本对比
-  - 团队平均水平
-  - 最佳实践差距
+Comparação de Base:
+  - Comparação com padrões da indústria
+  - Comparação com versões históricas
+  - Nível médio da equipe
+  - Lacuna (gap) para melhores práticas
 ```
 
-## 🔧 Auto-Fix Capabilities - 自动修复能力
+## 🔧 Capacidades de Correção Automática
 
-### 可自动修复的问题
+### Problemas Corrigíveis Automaticamente
 ```yaml
-格式化问题:
-  - 代码缩进和空格
-  - 行尾字符统一
-  - 导入语句排序
-  - 变量命名规范
+Problemas de Formatação:
+  - Indentação e espaços
+  - Unificação de caracteres de fim de linha
+  - Ordenação de declarações de importação
+  - Padronização de nomenclatura de variáveis
 
-简单语法问题:
-  - 缺少分号
-  - 括号匹配
-  - 引号统一
-  - 未使用变量清理
+Problemas Sintáticos Simples:
+  - Falta de ponto e vírgula
+  - Correspondência de parênteses
+  - Unificação de aspas
+  - Limpeza de variáveis não utilizadas
 
-配置优化:
-  - 依赖版本更新
-  - 配置文件格式化
-  - 环境变量优化
-  - 构建脚本改进
+Otimização de Configuração:
+  - Atualização de versões de dependências
+  - Formatação de arquivos de configuração
+  - Otimização de variáveis de ambiente
+  - Melhoria de scripts de build
 ```
 
-### 修复建议生成
+### Geração de Sugestões de Correção
 ```yaml
-智能建议:
-  - 提供多种修复方案
-  - 评估修复影响范围
-  - 生成重构建议
-  - 推荐最佳实践
+Sugestões Inteligentes:
+  - Fornecer múltiplas soluções de correção
+  - Avaliar impacto da correção
+  - Gerar sugestões de refatoração
+  - Recomendar melhores práticas
 
-代码示例:
-  - 提供修复前后对比
-  - 生成示例代码
-  - 解释修复原理
-  - 提供相关文档链接
+Exemplos de Código:
+  - Fornecer comparação antes/depois da correção
+  - Gerar código de exemplo
+  - Explicar o princípio da correção
+  - Fornecer links para documentação relevante
 ```
 
-## 🚨 Error Handling & Safety - 错误处理和安全保障
+## 🚨 Tratamento de Erros e Segurança
 
-### 统一错误处理机制
+### Mecanismo Unificado de Tratamento de Erros
 ```yaml
-错误分类:
-  Level 1 - 致命错误:
-    - 代码分析工具不可用
-    - 项目文件结构损坏
-    - 内存不足无法分析
-    - 关键依赖缺失
+Classificação de Erros:
+  Nível 1 - Erros Fatais:
+    - Ferramenta de análise de código indisponível
+    - Estrutura de arquivos do projeto corrompida
+    - Memória insuficiente para análise
+    - Dependências críticas ausentes
 
-  Level 2 - 严重错误:
-    - 部分文件分析失败
-    - 工具配置错误
-    - 网络连接问题
-    - 权限访问受限
+  Nível 2 - Erros Graves:
+    - Falha na análise de parte dos arquivos
+    - Erro de configuração da ferramenta
+    - Problemas de conexão de rede
+    - Acesso de permissão restrito
 
-  Level 3 - 一般错误:
-    - 单个文件检查失败
-    - 工具版本不兼容
-    - 配置参数错误
-    - 临时文件创建失败
+  Nível 3 - Erros Comuns:
+    - Falha na verificação de um único arquivo
+    - Versão da ferramenta incompatível
+    - Parâmetro de configuração incorreto
+    - Falha na criação de arquivo temporário
 
-  Level 4 - 警告信息:
-    - 检查规则过时
-    - 性能检查超时
-    - 部分功能不可用
-    - 建议更新工具
+  Nível 4 - Mensagens de Aviso:
+    - Regras de verificação desatualizadas
+    - Timeout na verificação de desempenho
+    - Algumas funcionalidades indisponíveis
+    - Sugestão de atualização de ferramentas
 ```
 
-### 错误恢复策略
+### Estratégias de Recuperação de Erros
 ```yaml
-自动恢复:
-  - 工具重启和重试机制
-  - 备用分析引擎切换
-  - 缓存数据恢复
-  - 降级检查模式
+Recuperação Automática:
+  - Mecanismo de reinicialização e retentativa de ferramentas
+  - Alternância para motor de análise reserva
+  - Recuperação de dados em cache
+  - Modo de verificação degradado
 
-人工干预:
-  - 致命错误立即通知
-  - 提供详细错误信息和解决方案
-  - 支持手动配置修复
-  - 集成feedback-enhanced反馈
+Intervenção Humana:
+  - Notificação imediata de erros fatais
+  - Fornecer informações detalhadas de erro e soluções
+  - Suporte para correção de configuração manual
+  - Feedback aprimorado integrado (feedback-enhanced)
 
-日志记录:
-  - 完整的分析过程日志
-  - 错误堆栈和上下文
-  - 工具执行状态
-  - 性能指标记录
+Registro de Logs:
+  - Logs completos do processo de análise
+  - Stack trace de erro e contexto
+  - Status de execução das ferramentas
+  - Registro de métricas de desempenho
 ```
 
-### 安全保障机制
+### Mecanismos de Garantia de Segurança
 ```yaml
-数据安全:
-  - 敏感代码信息保护
-  - 分析结果加密存储
-  - 访问权限控制
-  - 审计日志记录
+Segurança de Dados:
+  - Proteção de informações de código sensíveis
+  - Armazenamento criptografado dos resultados da análise
+  - Controle de permissões de acesso
+  - Registro de logs de auditoria
 
-操作安全:
-  - 自动修复前备份
-  - 危险操作确认
-  - 回滚机制支持
-  - 权限验证检查
+Segurança Operacional:
+  - Backup antes da correção automática
+  - Confirmação de operações perigosas
+  - Suporte a mecanismo de rollback
+  - Verificação de permissões
 
-与其他规则协调:
-  - 与commit共享错误处理
-  - 与changelog-management协调日志
-  - 统一的安全保障措施
-  - 集成的恢复策略
+Coordenação com Outras Regras:
+  - Compartilhamento de tratamento de erros com commit
+  - Coordenação de logs com changelog-management
+  - Medidas de segurança unificadas
+  - Estratégias de recuperação integradas
 ```
 
-## ⚡ Performance Optimization - 性能优化
+## ⚡ Otimização de Desempenho
 
-### 智能缓存机制
+### Mecanismo de Cache Inteligente
 ```yaml
-缓存策略:
-  - 文件分析结果缓存
-  - 工具执行结果缓存
-  - 配置解析结果缓存
-  - 依赖关系图缓存
+Estratégias de Cache:
+  - Cache de resultados de análise de arquivos
+  - Cache de resultados de execução de ferramentas
+  - Cache de resultados de parsing de configuração
+  - Cache do grafo de dependências
 
-优化技术:
-  - 增量分析算法
-  - 并行文件处理
-  - 智能跳过未变更文件
-  - 资源池管理
+Tecnologias de Otimização:
+  - Algoritmo de análise incremental
+  - Processamento paralelo de arquivos
+  - Pulo inteligente de arquivos não alterados
+  - Gerenciamento de pool de recursos
 ```
 
-### 执行效率目标
+### Objetivos de Eficiência de Execução
 ```yaml
-性能指标:
-  - 单文件分析: <2秒
-  - 项目全量检查: <30秒 (中型项目)
-  - 增量检查: <5秒
-  - 报告生成: <3秒
+Métricas de Desempenho:
+  - Análise de arquivo único: <2s
+  - Verificação total do projeto: <30s (projeto médio)
+  - Verificação incremental: <5s
+  - Geração de relatório: <3s
 
-优化措施:
-  - 异步并行处理
-  - 智能文件过滤
-  - 缓存命中优化
-  - 内存使用优化
+Medidas de Otimização:
+  - Processamento paralelo assíncrono
+  - Filtragem inteligente de arquivos
+  - Otimização de acerto (hit) de cache
+  - Otimização do uso de memória
 ```
 
-## 📋 Usage Examples - 使用示例
+## 📋 Exemplos de Uso
 
-### 基础质量检查
+### Verificação de Qualidade Básica
 ```bash
-# AI智能质量检查
+# Verificação de qualidade inteligente por IA
 /quality-check
 
-# 输出示例:
-# 🔍 代码质量检查完成
+# Exemplo de saída:
+# 🔍 Verificação de qualidade de código concluída
 # 
-# 📊 质量评分: B级 (85分)
-# 🔴 致命问题: 0个
-# 🟠 高优先级: 3个
-# 🟡 中优先级: 12个
-# 🟢 低优先级: 8个
+# 📊 Pontuação de qualidade: Nível B (85 pontos)
+# 🔴 Problemas Fatais: 0
+# 🟠 Alta Prioridade: 3
+# 🟡 Média Prioridade: 12
+# 🟢 Baixa Prioridade: 8
 # 
-# 🔧 可自动修复: 15个问题
-# 📄 详细报告: ./quality-report.html
+# 🔧 Corrigíveis automaticamente: 15 problemas
+# 📄 Relatório detalhado: ./quality-report.html
 ```
 
-### 语言特定检查
+### Verificação Específica por Linguagem
 ```bash
-# Python代码检查
+# Verificação de código Python
 /quality-check --language python
 
-# JavaScript/TypeScript检查
+# Verificação JavaScript/TypeScript
 /quality-check --language javascript
 
-# 多语言项目检查
+# Verificação de projeto multi-linguagem
 /quality-check --language all
 ```
 
-### 自动修复模式
+### Modo de Correção Automática
 ```bash
-# 自动修复可修复的问题
+# Corrigir automaticamente problemas passíveis disso
 /quality-check --fix
 
-# 输出示例:
-# 🔧 自动修复完成
-# ✅ 修复了15个问题
-# - 代码格式化: 8个
-# - 导入优化: 4个
-# - 变量清理: 3个
+# Exemplo de saída:
+# 🔧 Correção automática concluída
+# ✅ Corrigidos 15 problemas
+# - Formatação de código: 8
+# - Otimização de importação: 4
+# - Limpeza de variáveis: 3
 # 
-# 📋 需要手动处理: 8个问题
-# 📄 修复报告: ./fix-report.md
+# 📋 Requer processamento manual: 8 problemas
+# 📄 Relatório de correção: ./fix-report.md
 ```
 
-## 🔗 Integration Points - 集成点
+## 🔗 Pontos de Integração
 
-### 与现有规则集成
+### Integração com Regras Existentes
 ```yaml
-commit工作流集成（支持 /commit-fast 别名）:
-  - 提交前自动触发质量检查
-  - 质量不合格阻止提交
-  - 集成到快速提交工作流
-  - 提供质量改进建议
+Integração com Workflow de Commit (suporta alias /commit-fast):
+  - Gatilho automático antes do commit
+  - Bloqueio de submissão se a qualidade for insuficiente
+  - Integração com workflow de commit rápido
+  - Fornecer sugestões de melhoria de qualidade
 
-changelog-management集成:
-  - 质量改进记录到变更日志
-  - 生成质量趋势报告
-  - 集成到版本发布流程
-  - 质量指标历史追踪
+Integração com changelog-management:
+  - Registro de melhorias de qualidade no log de alterações
+  - Geração de relatórios de tendências de qualidade
+  - Integração com processo de lançamento de versão
+  - Rastreamento histórico de métricas de qualidade
 
-super-brain-system集成:
-  - 智能质量标准推荐
-  - 个性化检查配置
-  - 学习项目质量模式
-  - 质量改进路径规划
+Integração com super-brain-system:
+  - Recomendação inteligente de padrões de qualidade
+  - Configuração personalizada de verificação
+  - Aprendizado de padrões de qualidade do projeto
+  - Planejamento de caminho de melhoria de qualidade
 
-mcp-intelligent-strategy集成:
-  - 智能工具选择和配置
-  - 自动化检查流程
-  - 工具故障转移
-  - 性能优化建议
+Integração com mcp-intelligent-strategy:
+  - Seleção e configuração inteligente de ferramentas
+  - Fluxo de verificação automatizado
+  - Failover de ferramentas
+  - Sugestões de otimização de desempenho
 ```
 
-#### Commit工作流中的质量门禁 (缺陷#23修复)
+#### Quality Gates no Workflow de Commit (Correção Bug #23)
 ```yaml
-执行顺序 (严格按此序):
-  Stage 1 - 代码质量检查:
-    前置条件: /commit 或 /commit-fast 命令触发
-    步骤:
-      1. 执行 /quality-check (或 --fix 模式)
-      2. 生成质量检查报告
-      3. 获取质量得分
-      4. 检查是否满足质量门禁
-    输出: 质量检查通过/失败
+Ordem de Execução (estritamente nesta ordem):
+  Estágio 1 - Verificação de Qualidade de Código:
+    Pré-condição: Disparado pelos comandos /commit ou /commit-fast
+    Passos:
+      1. Executar /quality-check (ou modo --fix)
+      2. Gerar relatório de verificação de qualidade
+      3. Obter pontuação de qualidade
+      4. Verificar se atende aos Quality Gates
+    Saída: Verificação de qualidade Aprovada/Reprovada
   
-  Barrier (质量门禁) - 关键检查点:
-    ❌ 如果质量检查失败 → 中止后续流程，不执行commit
-    ✅ 如果质量检查通过 → 继续到Stage 2
+  Barreira (Quality Gate) - Ponto Crítico de Verificação:
+    ❌ Se a verificação falhar → Interromper fluxos subsequentes, não executar commit
+    ✅ Se a verificação passar → Continuar para o Estágio 2
   
-  Stage 2 - Commit执行:
-    前置条件: Stage 1 通过
-    步骤:
-      1. 收集所有待提交变更
-      2. 生成标准化提交信息
-      3. 执行Git commit
-      4. 更新分支信息
-    输出: 提交完成，返回提交哈希
+  Estágio 2 - Execução do Commit:
+    Pré-condição: Estágio 1 Aprovado
+    Passos:
+      1. Coletar todas as alterações pendentes
+      2. Gerar mensagem de commit padronizada
+      3. Executar Git commit
+      4. Atualizar informações de branch
+    Saída: Commit concluído, retorna o hash do commit
 
-质量门禁定义 (必须全部满足):
-  Level 1 - 致命问题 (MUST):
-    - Critical Issues: 0个 (绝不允许)
-    - 任何一个致命问题 → 阻止提交
+Definição dos Quality Gates (deve atender a todos):
+  Nível 1 - Problemas Fatais (OBRIGATÓRIO):
+    - Problemas Críticos: 0 (nunca permitido)
+    - Qualquer problema fatal → Bloqueia o commit
   
-  Level 2 - 高优先级问题 (SHOULD):
-    - High Priority Issues: < 3个
-    - 超过3个 → 警告但允许用户覆盖
+  Nível 2 - Problemas de Alta Prioridade (RECOMENDADO):
+    - Problemas de Alta Prioridade: < 3
+    - Mais de 3 → Aviso, mas permite override do usuário
   
-  Level 3 - 测试覆盖 (MUST):
-    - Code Coverage: >= 80% (推荐)
-    - 缺少单元测试的代码 → 标记为警告
+  Nível 3 - Cobertura de Testes (OBRIGATÓRIO):
+    - Cobertura de Código: >= 80% (recomendado)
+    - Código sem testes unitários → Marcado como aviso
   
-  Level 4 - 性能回归 (MUST):
-    - Performance Regression: 无
-    - 性能下降> 5% → 阻止提交
-    - 需要提供优化方案或等待审查
+  Nível 4 - Regressão de Desempenho (OBRIGATÓRIO):
+    - Regressão de Desempenho: Nenhuma
+    - Queda de desempenho > 5% → Bloqueia o commit
+    - Necessário fornecer plano de otimização ou aguardar revisão
   
-  Level 5 - 安全问题 (MUST):
-    - Security Issues: 0个 (Critical/High)
-    - 任何安全漏洞 → 立即阻止
+  Nível 5 - Problemas de Segurança (OBRIGATÓRIO):
+    - Problemas de Segurança: 0 (Crítico/Alto)
+    - Qualquer vulnerabilidade de segurança → Bloqueio imediato
 
-失败处理流程:
-  Case 1 - 自动修复模式失败:
-    触发条件: /quality-check --fix 执行后仍有问题
-    处理步骤:
-      1. 生成修复失败报告
-      2. 列出所有无法修复的问题
-      3. 提供问题详情和修复建议
-      4. 停止流程，提示用户手动修复
-      5. 不执行commit
+Fluxo de Tratamento de Falhas:
+  Caso 1 - Falha no modo de correção automática:
+    Condição de ativação: Problemas persistem após /quality-check --fix
+    Passos de tratamento:
+      1. Gerar relatório de falha na correção
+      2. Listar todos os problemas que não puderam ser corrigidos
+      3. Fornecer detalhes do problema e sugestões de correção
+      4. Parar o processo, solicitar correção manual ao usuário
+      5. Não executar commit
   
-  Case 2 - 质量不符合门禁:
-    触发条件: 质量检查通过但仍有高优先级问题
-    处理步骤:
-      1. 警告用户关于质量问题
-      2. 给出改进建议
-      3. 提供选项:
-         ✅ 选项A: 修复问题后重新检查
-         ✅ 选项B: 接受风险继续提交 (带警告标签)
-         ❌ 选项C: 放弃本次提交
-      4. 根据用户选择执行相应操作
+  Caso 2 - Qualidade não atende ao Quality Gate:
+    Condição de ativação: Verificação concluída, mas com problemas de alta prioridade
+    Passos de tratamento:
+      1. Avisar o usuário sobre problemas de qualidade
+      2. Dar sugestões de melhoria
+      3. Fornecer opções:
+         ✅ Opção A: Corrigir problemas e verificar novamente
+         ✅ Opção B: Aceitar o risco e continuar o commit (com tag de aviso)
+         ❌ Opção C: Desistir do commit atual
+      4. Executar ação correspondente baseada na escolha do usuário
   
-  Case 3 - 工具故障或超时:
-    触发条件: 质量检查工具出现故障
-    处理步骤:
-      1. 自动重试一次
-      2. 如果再次失败,进入降级模式
-      3. 降级模式: 仅进行基础检查 (语法、格式)
-      4. 提示用户后续进行完整检查
-      5. 允许用户选择是否继续提交
+  Caso 3 - Falha ou Timeout da ferramenta:
+    Condição de ativação: Falha na ferramenta de verificação
+    Passos de tratamento:
+      1. Tentar novamente uma vez automaticamente
+      2. Se falhar novamente, entrar em modo degradado
+      3. Modo degradado: Realizar apenas verificações básicas (sintaxe, formato)
+      4. Avisar o usuário para realizar verificação completa posteriormente
+      5. Permitir que o usuário escolha se deseja continuar o commit
 
-用户交互选项:
-  提交前质量提示:
-    "🔍 质量检查结果:
+Opções de Interação com o Usuário:
+  Aviso de qualidade pré-commit:
+    "🔍 Resultado da Verificação de Qualidade:
     
-    📊 质量评分: 85分 (良好)
-    🔴 致命问题: 0个 ✓
-    🟠 高优先级: 2个 (< 3个阈值) ✓
-    🟡 中优先级: 8个
-    🟢 低优先级: 5个
+    📊 Pontuação: 85 pontos (Bom)
+    🔴 Problemas Fatais: 0 ✓
+    🟠 Alta Prioridade: 2 (< limiar de 3) ✓
+    🟡 Média Prioridade: 8
+    🟢 Baixa Prioridade: 5
     
-    ✅ 可以提交
+    ✅ Pode realizar o commit
     
-    建议: 修复2个高优先级问题可提升到优秀等级
+    Sugestão: Corrigir 2 problemas de alta prioridade pode elevar para nível Excelente
     
-    选项: [1] 继续提交 [2] 先修复 [3] 查看详情"
+    Opções: [1] Continuar commit [2] Corrigir primeiro [3] Ver detalhes"
 
-非标准模式处理:
-  强制提交模式 (/commit --force):
-    - 绕过质量检查
-    - 需要用户明确确认
-    - 记录强制提交日志
-    - 不推荐在生产分支使用
+Tratamento de Modos Não-padrão:
+  Modo de Commit Forçado (/commit --force):
+    - Ignorar verificação de qualidade
+    - Requer confirmação explícita do usuário
+    - Registrar log de commit forçado
+    - Não recomendado para branches de produção
   
-  草稿提交模式 (/commit --draft):
-    - 降低质量要求
-    - 仅检查致命问题
-    - 不阻止中等以下问题
-    - 适合工作中进度提交
+  Modo de Commit Rascunho (/commit --draft):
+    - Reduzir exigências de qualidade
+    - Verificar apenas problemas fatais
+    - Não bloquear problemas de nível médio ou inferior
+    - Adequado para commits de progresso de trabalho
 ```
 
 ---
 
-**🎯 规则优先级**: 640 (与commit和changelog-management协同)  
-**🔄 更新频率**: 基于代码变更和质量反馈持续优化  
-**📊 成功指标**: 代码质量评分提升30%+, 问题检出率>95%, 修复效率提升50%+  
-**🧠 AI模型**: 集成多语言代码分析和质量评估引擎
+**🎯 Prioridade da Regra**: 640 (em sinergia com commit e changelog-management)  
+**🔄 Frequência de Atualização**: Otimização contínua baseada em alterações de código e feedback de qualidade  
+**📊 Indicadores de Sucesso**: Aumento de 30%+ na pontuação de qualidade, taxa de detecção de problemas > 95%, aumento de 50%+ na eficiência de correção  
+**🧠 Modelo IA**: Motor integrado de análise de código multi-linguagem e avaliação de qualidade

@@ -1,11 +1,11 @@
 ---
 type: "workflow_rule"
-description: "Frontend development workflow with Vue/React/TypeScript - 前端开发完整工作流"
+description: "Fluxo de trabalho de desenvolvimento frontend com Vue/React/TypeScript"
 globs: ["**/*.vue", "**/*.jsx", "**/*.tsx", "**/*.ts", "**/*.js", "**/*.css", "**/*.scss", "**/*.html"]
 priority: 700
 alwaysApply: false
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -16,178 +16,178 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adição do sistema de gerenciamento de versão"
+      - "Padronização da estrutura do arquivo de regras"
 ---
 
-# 🎨 Frontend Development Workflow - 前端开发工作流
+# 🎨 Fluxo de Trabalho de Desenvolvimento Frontend
 
-专为 Vue 3、React 18+、TypeScript 优化的前端开发完整工作流程。
+Fluxo de trabalho de desenvolvimento frontend completo otimizado para Vue 3, React 18+ e TypeScript.
 
-## 🚀 Commands - 命令
+## 🚀 Comandos
 
-- `/frontend-dev` - 启动前端开发工作流
-- `/component` - 创建新组件
-- `/ui-design` - UI设计和样式开发
-- `/test-frontend` - 运行前端测试
-- `/build-frontend` - 构建和优化
+- `/frontend-dev` - Iniciar fluxo de trabalho de desenvolvimento frontend
+- `/component` - Criar novo componente
+- `/ui-design` - Design de UI e desenvolvimento de estilo
+- `/test-frontend` - Executar testes frontend
+- `/build-frontend` - Construir e otimizar
 
-### 前端专用配置模式
-- `/设置Vue优先模式` - 优先使用 Vue 3 技术栈
-- `/设置React优先模式` - 优先使用 React 18+ 技术栈
-- `/设置TypeScript严格模式` - 启用最严格的类型检查
-- `/设置性能优化模式` - 自动应用前端性能优化建议
+### Modos de Configuração Específicos de Frontend
+- `/set-vue-priority` - Priorizar stack tecnológica Vue 3
+- `/set-react-priority` - Priorizar stack tecnológica React 18+
+- `/set-ts-strict` - Habilitar verificação de tipo mais rigorosa
+- `/set-perf-optimization` - Aplicar automaticamente sugestões de otimização de desempenho frontend
 
-### 反馈频率控制
-- `/设置详细模式` - 启用所有反馈点，完整工作流
-- `/设置标准模式` - 关键决策点反馈（默认）
-- `/设置静默模式` - 仅错误时反馈，适合熟练用户
+### Controle de Frequência de Feedback
+- `/set-verbose-mode` - Habilitar todos os pontos de feedback, fluxo de trabalho completo
+- `/set-standard-mode` - Feedback em pontos de decisão chave (padrão)
+- `/set-silent-mode` - Feedback apenas em caso de erro, adequado para usuários experientes
 
-### 工作流配置
-- `/设置严格模式` - 严格按顺序执行，不允许跳过
-- `/设置灵活模式` - 允许模式跳转和流程调整（默认）
-- `/设置快捷模式` - 简化某些步骤，提高效率
+### Configuração de Fluxo de Trabalho
+- `/set-strict-mode` - Execução estrita em ordem, não permite pular
+- `/set-flexible-mode` - Permitir saltos de modo e ajustes de processo (padrão)
+- `/set-fast-mode` - Simplificar algumas etapas, aumentar eficiência
 
-### 质量标准配置
-- `/设置企业级标准` - 最高质量要求，完整测试
-- `/设置标准级别` - 平衡质量和效率（默认）
-- `/设置原型级别` - 快速验证，降低质量要求
+### Configuração de Padrão de Qualidade
+- `/set-enterprise-standard` - Requisitos de qualidade mais altos, testes completos
+- `/set-standard-quality` - Equilíbrio entre qualidade e eficiência (padrão)
+- `/set-prototype-quality` - Validação rápida, requisitos de qualidade reduzidos
 
-## 🧠 前置步骤：Context7 知识预载（修复/新项目前置）
-- 触发时机：开始 /frontend-dev 前，涉及 Bug 修复或新前端项目/功能开发
-- 执行：
-  - 使用 Context7 在 src、docs、tests、config、README.*、architecture、api 目录检索关键材料（UI架构、状态管理、接口契约、性能/安全约束、历史决策）
-  - 质量阈值：至少 5 个高相关片段或覆盖 3 类关键材料；评分 ≥ 0.65；超时 60s
-  - 回退：Context7 → 代码检索（search_codebase/search_by_regex）→ 文件系统读取
-  - 记录与确认：将“知识预载摘要”写入 project.context.md 的 Pinned，并通过增强反馈机制确认后继续
-- 跳过条件：纯样式/文案微调、无逻辑改动的小变更
+## 🧠 Etapas Prévias: Pré-carregamento de Conhecimento Context7 (Correção/Pré-requisito de Novo Projeto)
+- Momento de Disparo: Antes de iniciar /frontend-dev, envolvendo correção de bugs ou desenvolvimento de novo projeto/funcionalidade frontend
+- Execução:
+  - Usar Context7 para recuperar materiais chave (arquitetura de UI, gerenciamento de estado, contratos de interface, restrições de desempenho/segurança, decisões históricas) nos diretórios src, docs, tests, config, README.*, architecture, api
+  - Limiar de Qualidade: Pelo menos 5 fragmentos altamente relevantes ou cobrindo 3 categorias de materiais chave; pontuação ≥ 0.65; timeout 60s
+  - Fallback: Context7 → Recuperação de código (search_codebase/search_by_regex) → Leitura do sistema de arquivos
+  - Registro e Confirmação: Escrever "Resumo de Pré-carregamento de Conhecimento" em Pinned do project.context.md e confirmar via mecanismo de feedback aprimorado antes de continuar
+- Condição de Pulo: Ajustes finos puramente de estilo/texto, pequenas alterações sem mudança lógica
 
-## 📋 Process - 开发流程
+## 📋 Processo - Fluxo de Desenvolvimento
 
-### 1. 🔍 需求分析 (Requirements Analysis)
-- 分析用户交互需求和业务逻辑
-- 确定技术栈和架构方案
-- 设计组件结构和数据流
-- **转换条件**：需求明确，技术方案确定
+### 1. 🔍 Análise de Requisitos (Requirements Analysis)
+- Analisar necessidades de interação do usuário e lógica de negócios
+- Determinar stack tecnológico e esquema de arquitetura
+- Projetar estrutura de componentes e fluxo de dados
+- **Condições de Transição**: Requisitos claros, solução técnica determinada
 
-### 2. 🎨 UI设计 (UI Design)
-- 设计组件界面和交互逻辑
-- 确定样式规范和响应式布局
-- 规划路由和页面结构
-- **转换条件**：UI设计完成，交互逻辑清晰
+### 2. 🎨 Design de UI (UI Design)
+- Projetar interface de componentes e lógica de interação
+- Determinar especificações de estilo e layout responsivo
+- Planejar rotas e estrutura de páginas
+- **Condições de Transição**: Design de UI concluído, lógica de interação clara
 
-### 3. ⚡ 组件开发 (Component Development)
-- 实现组件功能和样式
-- 集成状态管理和 API 调用
-- 优化性能和用户体验
-- **转换条件**：功能完成，自测通过
+### 3. ⚡ Desenvolvimento de Componentes (Component Development)
+- Implementar funcionalidade e estilo dos componentes
+- Integrar gerenciamento de estado e chamadas de API
+- Otimizar desempenho e experiência do usuário
+- **Condições de Transição**: Funcionalidade concluída, autoteste aprovado
 
-### 4. 🧪 测试验证 (Testing)
-- 单元测试和集成测试
-- 跨浏览器兼容性测试
-- 性能和可访问性测试
-- **转换条件**：测试通过，质量达标
+### 4. 🧪 Testes e Validação (Testing)
+- Testes unitários e testes de integração
+- Testes de compatibilidade entre navegadores
+- Testes de desempenho e acessibilidade
+- **Condições de Transição**: Testes aprovados, qualidade dentro dos padrões
 
-### 5. 📦 构建部署 (Build & Deploy)
-- 代码打包和优化
-- 部署到测试/生产环境
-- 监控和性能分析
-- **转换条件**：部署成功，运行稳定
+### 5. 📦 Construção e Deploy (Build & Deploy)
+- Empacotamento e otimização de código
+- Deploy para ambientes de teste/produção
+- Monitoramento e análise de desempenho
+- **Condições de Transição**: Deploy bem-sucedido, execução estável
 
-## 🛠️ Technology Stack - 技术栈
+## 🛠️ Stack Tecnológico
 
-### Core Frameworks - 核心框架
+### Frameworks Principais
 - **Vue 3** - Composition API, `<script setup>`
-- **React 18+** - Hooks, Concurrent Features
-- **TypeScript** - 类型安全和开发体验
+- **React 18+** - Hooks, Recursos Concorrentes
+- **TypeScript** - Segurança de tipo e experiência de desenvolvimento
 
-### Build Tools - 构建工具
-- **Vite** - 快速开发和构建
-- **Webpack** - 复杂项目配置
+### Ferramentas de Construção
+- **Vite** - Desenvolvimento e construção rápidos
+- **Webpack** - Configuração de projetos complexos
 
-### UI Libraries - UI库
+### Bibliotecas de UI
 - **Element Plus** (Vue)
 - **Ant Design** (React)
-- **Tailwind CSS** - 原子化CSS
+- **Tailwind CSS** - CSS Atômico
 
-### State Management - 状态管理
+### Gerenciamento de Estado
 - **Pinia** (Vue)
 - **Zustand** (React)
 - **Redux Toolkit** (React)
 
-## ✅ Best Practices - 最佳实践
+## ✅ Melhores Práticas
 
-### Component Development - 组件开发
-- 使用 Composition API (Vue) 或 Hooks (React)
-- 保持组件单一职责
-- 合理使用 props 和 emit/callback
-- 实现响应式设计
+### Desenvolvimento de Componentes
+- Usar Composition API (Vue) ou Hooks (React)
+- Manter responsabilidade única do componente
+- Uso razoável de props e emit/callback
+- Implementar design responsivo
 
-### Code Quality - 代码质量
-- TypeScript 严格模式
-- ESLint + Prettier 代码规范
-- 组件和函数命名规范
-- 充分的注释和文档
+### Qualidade de Código
+- Modo estrito do TypeScript
+- Especificações de código ESLint + Prettier
+- Convenções de nomenclatura de componentes e funções
+- Comentários e documentação adequados
 
-### Performance - 性能优化
-- 懒加载和代码分割
-- 图片优化和压缩
-- 缓存策略
-- Bundle 分析和优化
+### Desempenho
+- Carregamento lento (Lazy loading) e divisão de código
+- Otimização e compressão de imagens
+- Estratégias de cache
+- Análise e otimização de Bundle
 
-## 🔧 Development Commands - 开发命令
+## 🔧 Comandos de Desenvolvimento
 
 ```bash
-# 项目初始化
+# Inicialização do projeto
 npm create vue@latest my-project  # Vue 3
 npx create-react-app my-app --template typescript  # React
 
-# 开发服务器
+# Servidor de desenvolvimento
 npm run dev
 
-# 构建
+# Construção
 npm run build
 
-# 测试
+# Testes
 npm run test
 
-# 代码检查
+# Verificação de código
 npm run lint
 npm run type-check
 ```
 
-## 📋 Checklist - 检查清单
+## 📋 Checklist - Lista de Verificação
 
-### 开发前
-- [ ] 需求分析完成
-- [ ] 技术栈选择确定
-- [ ] 项目结构规划
-- [ ] 开发环境配置
+### Antes do Desenvolvimento
+- [ ] Análise de requisitos concluída
+- [ ] Seleção de stack tecnológico determinada
+- [ ] Planejamento da estrutura do projeto
+- [ ] Configuração do ambiente de desenvolvimento
 
-### 开发中
-- [ ] 组件设计合理
-- [ ] 代码规范遵循
-- [ ] 类型定义完整
-- [ ] 单元测试编写
+### Durante o Desenvolvimento
+- [ ] Design de componentes razoável
+- [ ] Seguimento das normas de código
+- [ ] Definição de tipos completa
+- [ ] Escrita de testes unitários
 
-### 开发后
-- [ ] 功能测试通过
-- [ ] 性能指标达标
-- [ ] 代码审查完成
-- [ ] 文档更新完整
+### Após o Desenvolvimento
+- [ ] Testes funcionais aprovados
+- [ ] Indicadores de desempenho atingidos
+- [ ] Revisão de código concluída
+- [ ] Atualização da documentação completa
 
-## 🎯 Mode Switching - 模式切换
+## 🎯 Troca de Modos
 
-根据当前任务自动或手动切换到对应模式：
+Alternar automática ou manualmente para o modo correspondente com base na tarefa atual:
 
-- **UI设计模式** - `/ui-design`
-- **组件开发模式** - `/component`
-- **测试模式** - `/test-frontend`
-- **优化模式** - `/optimize`
-- **部署模式** - `/deploy`
+- **Modo de Design de UI** - `/ui-design`
+- **Modo de Desenvolvimento de Componentes** - `/component`
+- **Modo de Teste** - `/test-frontend`
+- **Modo de Otimização** - `/optimize`
+- **Modo de Deploy** - `/deploy`
 
-### 前端专用配置模式行为
-- **Vue优先模式** - 激活后优先推荐 Vue 3 + Composition API 技术栈
-- **React优先模式** - 激活后优先推荐 React 18+ + Hooks 技术栈
-- **TypeScript严格模式** - 激活后启用最严格的类型检查和类型安全
-- **性能优化模式** - 激活后自动建议代码分割、懒加载、缓存策略
+### Comportamento dos Modos de Configuração Específicos de Frontend
+- **Modo Prioridade Vue** - Quando ativado, recomenda priorizar stack Vue 3 + Composition API
+- **Modo Prioridade React** - Quando ativado, recomenda priorizar stack React 18+ + Hooks
+- **Modo Estrito TypeScript** - Quando ativado, habilita a verificação de tipo e segurança de tipo mais rigorosas
+- **Modo Otimização de Desempenho** - Quando ativado, sugere automaticamente divisão de código, lazy loading, estratégias de cache

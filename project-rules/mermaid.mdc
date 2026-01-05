@@ -1,11 +1,11 @@
 ---
 type: "utility_rule"
-description: "Mermaid diagram generation for various visualizations - Mermaid图表生成工具"
+description: "Geração de diagramas Mermaid para várias visualizações"
 globs: ["**/*.md", "**/*.mdx", "**/*.mmd"]
 priority: 303
 alwaysApply: false
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -16,51 +16,56 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adição do sistema de gerenciamento de versão"
+      - "Padronização da estrutura do arquivo de regras"
 ---
 
-# 📊 Mermaid Diagrams - Mermaid图表
+# 📊 Mermaid Diagrams - Diagramas Mermaid
 
-使用Mermaid创建各种类型的图表和可视化。
+Use Mermaid para criar vários tipos de diagramas e visualizações.
 
-## 🚀 Commands - 命令
+## 🚀 Comandos
 
-- `/mermaid` - 创建Mermaid图表
-- `/flowchart` - 创建流程图
-- `/sequence` - 创建时序图
-- `/class-diagram` - 创建类图
-- `/er-diagram` - 创建实体关系图
+- `/mermaid` - Criar diagrama Mermaid
+- `/flowchart` - Criar fluxograma
+- `/sequence` - Criar diagrama de sequência
+- `/class-diagram` - Criar diagrama de classes
+- `/er-diagram` - Criar diagrama entidade-relacionamento
+- `/state-diagram` - Criar diagrama de estados
+- `/gantt` - Criar gráfico de Gantt
+- `/pie` - Criar gráfico de pizza
+- `/git` - Criar gráfico Git
+- `/journey` - Criar mapa de jornada do usuário
 
-## 📋 Diagram Types - 图表类型
+## 📋 Tipos de Diagramas
 
-### 1. 🔄 流程图 (Flowchart)
+### 1. 🔄 Fluxograma (Flowchart)
 ```mermaid
 flowchart TD
-    A[开始] --> B{条件判断}
-    B -->|是| C[执行操作A]
-    B -->|否| D[执行操作B]
-    C --> E[结束]
+    A[Início] --> B{Condição}
+    B -->|Sim| C[Executar Ação A]
+    B -->|Não| D[Executar Ação B]
+    C --> E[Fim]
     D --> E
 ```
 
-### 2. ⏱️ 时序图 (Sequence Diagram)
+### 2. ⏱️ Diagrama de Sequência (Sequence Diagram)
 ```mermaid
 sequenceDiagram
-    participant U as 用户
-    participant F as 前端
-    participant B as 后端
-    participant D as 数据库
+    participant U as Usuário
+    participant F as Frontend
+    participant B as Backend
+    participant D as Banco de Dados
     
-    U->>F: 登录请求
-    F->>B: 验证用户
-    B->>D: 查询用户信息
-    D-->>B: 返回用户数据
-    B-->>F: 返回认证结果
-    F-->>U: 显示登录状态
+    U->>F: Requisição de Login
+    F->>B: Validar Usuário
+    B->>D: Consultar Info Usuário
+    D-->>B: Retornar Dados Usuário
+    B-->>F: Retornar Resultado Auth
+    F-->>U: Exibir Status Login
 ```
 
-### 3. 🏗️ 类图 (Class Diagram)
+### 3. 🏗️ Diagrama de Classes (Class Diagram)
 ```mermaid
 classDiagram
     class User {
@@ -78,7 +83,7 @@ classDiagram
     User <|-- Admin
 ```
 
-### 4. 🗄️ 实体关系图 (ER Diagram)
+### 4. 🗄️ Diagrama Entidade-Relacionamento (ER Diagram)
 ```mermaid
 erDiagram
     USER ||--o{ ORDER : places
@@ -98,10 +103,10 @@ erDiagram
     }
 ```
 
-### 5. 🌳 Git图 (Git Graph)
+### 5. 🌳 Gráfico Git (Git Graph)
 ```mermaid
 gitgraph
-    commit id: "Initial"
+    commit id: "Inicial"
     branch develop
     checkout develop
     commit id: "Feature A"
@@ -111,66 +116,66 @@ gitgraph
     commit id: "Release v1.0"
 ```
 
-### 6. 📊 甘特图 (Gantt Chart)
+### 6. 📊 Gráfico de Gantt (Gantt Chart)
 ```mermaid
 gantt
-    title 项目开发计划
+    title Plano de Desenvolvimento do Projeto
     dateFormat  YYYY-MM-DD
-    section 需求分析
-    需求调研    :done, des1, 2024-01-01, 2024-01-05
-    需求文档    :done, des2, after des1, 3d
-    section 开发阶段
-    前端开发    :active, dev1, 2024-01-08, 10d
-    后端开发    :dev2, 2024-01-08, 12d
-    section 测试阶段
-    单元测试    :test1, after dev1, 3d
-    集成测试    :test2, after dev2, 2d
+    section Análise de Requisitos
+    Pesquisa de Requisitos    :done, des1, 2024-01-01, 2024-01-05
+    Documentação de Requisitos    :done, des2, after des1, 3d
+    section Fase de Desenvolvimento
+    Desenvolvimento Frontend    :active, dev1, 2024-01-08, 10d
+    Desenvolvimento Backend    :dev2, 2024-01-08, 12d
+    section Fase de Testes
+    Testes Unitários    :test1, after dev1, 3d
+    Testes de Integração    :test2, after dev2, 2d
 ```
 
-### 7. 🍰 饼图 (Pie Chart)
+### 7. 🍰 Gráfico de Pizza (Pie Chart)
 ```mermaid
-pie title 技术栈分布
+pie title Distribuição de Stack Tecnológica
     "Vue.js" : 35
     "React" : 30
     "Angular" : 15
-    "其他" : 20
+    "Outros" : 20
 ```
 
-### 8. 📈 用户旅程图 (User Journey)
+### 8. 📈 Jornada do Usuário (User Journey)
 ```mermaid
 journey
-    title 用户购物体验
-    section 发现产品
-      浏览首页: 5: 用户
-      搜索产品: 3: 用户
-      查看详情: 4: 用户
-    section 购买决策
-      比较价格: 2: 用户
-      查看评价: 4: 用户
-      添加购物车: 5: 用户
-    section 完成购买
-      结算支付: 3: 用户
-      确认订单: 5: 用户
+    title Experiência de Compra do Usuário
+    section Descobrir Produto
+      Navegar Home: 5: Usuário
+      Buscar Produto: 3: Usuário
+      Ver Detalhes: 4: Usuário
+    section Decisão de Compra
+      Comparar Preços: 2: Usuário
+      Ver Avaliações: 4: Usuário
+      Adicionar ao Carrinho: 5: Usuário
+    section Finalizar Compra
+      Pagamento: 3: Usuário
+      Confirmar Pedido: 5: Usuário
 ```
 
-## 🛠️ Common Patterns - 常用模式
+## 🛠️ Padrões Comuns
 
-### 前端架构图
+### Arquitetura Frontend
 ```mermaid
 graph TB
-    subgraph "前端层"
-        A[Vue/React组件]
-        B[状态管理]
-        C[路由管理]
+    subgraph "Camada Frontend"
+        A[Componentes Vue/React]
+        B[Gerenciamento de Estado]
+        C[Gerenciamento de Rotas]
     end
     
-    subgraph "服务层"
-        D[API服务]
-        E[工具函数]
-        F[常量配置]
+    subgraph "Camada de Serviço"
+        D[Serviço API]
+        E[Funções Utilitárias]
+        F[Configuração Constantes]
     end
     
-    subgraph "后端层"
+    subgraph "Camada Backend"
         G[REST API]
         H[GraphQL]
         I[WebSocket]
@@ -184,21 +189,21 @@ graph TB
     D --> I
 ```
 
-### 数据流图
+### Diagrama de Fluxo de Dados
 ```mermaid
 flowchart LR
-    A[用户输入] --> B[表单验证]
-    B --> C{验证通过?}
-    C -->|是| D[发送请求]
-    C -->|否| E[显示错误]
-    D --> F[API处理]
-    F --> G[数据库操作]
-    G --> H[返回结果]
-    H --> I[更新界面]
+    A[Entrada do Usuário] --> B[Validação de Formulário]
+    B --> C{Validação Passou?}
+    C -->|Sim| D[Enviar Requisição]
+    C -->|Não| E[Exibir Erro]
+    D --> F[Processamento API]
+    F --> G[Operação Banco de Dados]
+    G --> H[Retornar Resultado]
+    H --> I[Atualizar Interface]
     E --> A
 ```
 
-### 组件关系图
+### Diagrama de Relacionamento de Componentes
 ```mermaid
 graph TD
     A[App.vue] --> B[Header.vue]
@@ -215,68 +220,68 @@ graph TD
     H --> J[UserForm.vue]
 ```
 
-## ✅ Best Practices - 最佳实践
+## ✅ Melhores Práticas
 
-### 设计原则
-- **简洁明了** - 避免过于复杂的图表
-- **层次清晰** - 合理的信息层级
-- **色彩协调** - 统一的配色方案
-- **标注完整** - 清晰的标签和说明
+### Princípios de Design
+- **Simples e Claro** - Evite diagramas excessivamente complexos
+- **Hierarquia Clara** - Níveis de informação razoáveis
+- **Cores Coordenadas** - Esquema de cores unificado
+- **Anotações Completas** - Etiquetas e explicações claras
 
-### 使用场景
-- **架构设计** - 系统架构和模块关系
-- **流程说明** - 业务流程和操作步骤
-- **数据建模** - 数据结构和关系
-- **项目管理** - 进度计划和里程碑
+### Cenários de Uso
+- **Design de Arquitetura** - Arquitetura do sistema e relação de módulos
+- **Explicação de Processo** - Processos de negócios e etapas de operação
+- **Modelagem de Dados** - Estrutura de dados e relacionamentos
+- **Gerenciamento de Projeto** - Cronograma e marcos
 
-### 维护策略
-- **版本控制** - 图表文件纳入版本管理
-- **文档同步** - 与代码保持同步更新
-- **格式统一** - 统一的图表风格
-- **定期审查** - 定期检查图表准确性
+### Estratégia de Manutenção
+- **Controle de Versão** - Arquivos de diagrama sob controle de versão
+- **Sincronização de Documentação** - Manter atualizado com o código
+- **Formato Unificado** - Estilo de diagrama unificado
+- **Revisão Regular** - Verificar precisão dos diagramas regularmente
 
-## 🔧 Integration - 集成
+## 🔧 Integração
 
-### Markdown支持
+### Suporte Markdown
 ```markdown
-# 系统架构
+# Arquitetura do Sistema
 
-以下是系统的整体架构：
+Abaixo está a arquitetura geral do sistema:
 
 \`\`\`mermaid
 graph TB
-    A[前端] --> B[API网关]
-    B --> C[微服务]
-    C --> D[数据库]
+    A[Frontend] --> B[API Gateway]
+    B --> C[Microsserviços]
+    C --> D[Banco de Dados]
 \`\`\`
 ```
 
-### 文档工具集成
-- **VitePress** - 原生支持Mermaid
-- **Docusaurus** - 插件支持
-- **GitBook** - 内置支持
-- **Notion** - 代码块支持
+### Integração com Ferramentas de Documentação
+- **VitePress** - Suporte nativo ao Mermaid
+- **Docusaurus** - Suporte via plugin
+- **GitBook** - Suporte integrado
+- **Notion** - Suporte em bloco de código
 
-### 导出格式
-- **SVG** - 矢量图形
-- **PNG** - 位图格式
-- **PDF** - 文档格式
-- **HTML** - 网页嵌入
+### Formatos de Exportação
+- **SVG** - Gráficos vetoriais
+- **PNG** - Formato bitmap
+- **PDF** - Formato de documento
+- **HTML** - Incorporação em página web
 
-## 📋 Templates - 模板
+## 📋 Modelos
 
-### 系统设计模板
+### Modelo de Design de Sistema
 ```mermaid
 graph TB
-    subgraph "客户端"
-        A[Web应用]
-        B[移动应用]
+    subgraph "Cliente"
+        A[Aplicação Web]
+        B[Aplicação Mobile]
     end
     
-    subgraph "服务端"
-        C[负载均衡]
-        D[应用服务器]
-        E[数据库]
+    subgraph "Servidor"
+        C[Balanceador de Carga]
+        D[Servidor de Aplicação]
+        E[Banco de Dados]
     end
     
     A --> C
@@ -285,38 +290,38 @@ graph TB
     D --> E
 ```
 
-### API设计模板
+### Modelo de Design de API
 ```mermaid
 sequenceDiagram
-    participant C as 客户端
-    participant G as API网关
-    participant S as 服务
-    participant D as 数据库
+    participant C as Cliente
+    participant G as API Gateway
+    participant S as Serviço
+    participant D as Banco de Dados
     
-    C->>G: HTTP请求
-    G->>S: 转发请求
-    S->>D: 查询数据
-    D-->>S: 返回数据
-    S-->>G: 处理结果
-    G-->>C: HTTP响应
+    C->>G: Requisição HTTP
+    G->>S: Encaminhar Requisição
+    S->>D: Consultar Dados
+    D-->>S: Retornar Dados
+    S-->>G: Processar Resultado
+    G-->>C: Resposta HTTP
 ```
 
-## 📋 Checklist - 检查清单
+## 📋 Checklist - Lista de Verificação
 
-### 图表设计
-- [ ] 目的明确，信息准确
-- [ ] 结构清晰，层次分明
-- [ ] 标注完整，易于理解
-- [ ] 风格统一，美观大方
+### Design de Diagrama
+- [ ] Objetivo claro, informações precisas
+- [ ] Estrutura clara, hierarquia distinta
+- [ ] Anotações completas, fácil de entender
+- [ ] Estilo unificado, esteticamente agradável
 
-### 技术实现
-- [ ] 语法正确，渲染正常
-- [ ] 兼容性良好，跨平台支持
-- [ ] 性能优化，加载快速
-- [ ] 维护方便，易于更新
+### Implementação Técnica
+- [ ] Sintaxe correta, renderização normal
+- [ ] Boa compatibilidade, suporte multiplataforma
+- [ ] Otimização de desempenho, carregamento rápido
+- [ ] Manutenção conveniente, fácil de atualizar
 
-### 文档集成
-- [ ] 与文档系统集成
-- [ ] 版本控制管理
-- [ ] 自动化生成
-- [ ] 定期更新维护
+### Integração de Documentação
+- [ ] Integração com sistema de documentação
+- [ ] Gerenciamento de controle de versão
+- [ ] Geração automatizada
+- [ ] Atualização e manutenção regulares

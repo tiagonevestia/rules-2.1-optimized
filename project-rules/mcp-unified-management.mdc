@@ -1,11 +1,11 @@
 ---
 type: "always_apply"
-description: "MCP统一管理策略 - 整合检测、推荐、配置、同步等所有MCP功能的统一管理"
+description: "Estratégia de Gestão Unificada MCP - Gestão unificada integrando detecção, recomendação, configuração, sincronização e todas as funções MCP"
 globs: ["**/*"]
 priority: 990
 alwaysApply: true
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -16,61 +16,61 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adição do sistema de gerenciamento de versão"
+      - "Padronização da estrutura do arquivo de regras"
 ---
 
-# 🌐 MCP统一管理策略
+# 🌐 Estratégia de Gestão Unificada MCP
 
-> **一站式管理**: 整合所有MCP相关功能，提供统一的检测、推荐、配置和同步服务
+> **Gestão Completa**: Integra todas as funções relacionadas ao MCP, fornecendo serviços unificados de detecção, recomendação, configuração e sincronização
 
-## 🎯 核心功能
+## 🎯 Funções Centrais
 
-### 1. 跨平台环境检测
+### 1. Detecção de Ambiente Multiplataforma
 ```yaml
-支持的AI工具:
-  # 主流AI编辑器
+Ferramentas de IA Suportadas:
+  # Editores de IA Mainstream
   Trae: "%USERPROFILE%\AppData\Roaming\Trae\User\mcp.json"
   Trae_CN: "%USERPROFILE%\AppData\Roaming\Trae CN\User\mcp.json"
   Cursor: "%USERPROFILE%\AppData\Roaming\Cursor\User\globalStorage\cursor.mcp\mcp_settings.json"
   Claude: "%USERPROFILE%\AppData\Roaming\Claude\claude_desktop_config.json"
   
-  # 2024-2025年热门AI工具
+  # Ferramentas de IA Populares 2024-2025
   Windsurf: "%USERPROFILE%\AppData\Roaming\Windsurf\User\mcp.json"
   Replit: "%USERPROFILE%\.replit\mcp_config.json"
   Sourcegraph_Cody: "%USERPROFILE%\AppData\Roaming\Code\User\globalStorage\sourcegraph.cody-ai\mcp_settings.json"
   Continue_dev: "%USERPROFILE%\.continue\mcpServers\mcp.json"
   
-  # IDE集成AI助手
+  # Assistentes de IA Integrados em IDE
   VSCode_Copilot: "%USERPROFILE%\AppData\Roaming\Code\User\mcp.json"
   JetBrains_AI: "%USERPROFILE%\.jetbrains\mcp_config.json"
   Tabnine: "%USERPROFILE%\AppData\Roaming\TabNine\mcp_config.json"
   
-  # 云端AI平台
+  # Plataformas de IA em Nuvem
   Amazon_Q: "%USERPROFILE%\AppData\Roaming\AmazonQ\settings.json"
   Gemini_Code_Assist: "%USERPROFILE%\.google\gemini-code-assist\mcp.json"
   Qodo_Gen: "%USERPROFILE%\.qodo\mcp_config.json"
   
-  # 开源AI工具
+  # Ferramentas de IA Open Source
   Aider: "%USERPROFILE%\.aider\mcp_config.json"
   CodeGeeX: "%USERPROFILE%\.codegeex\mcp_settings.json"
   TabbyML: "%USERPROFILE%\.tabby\mcp_config.json"
   Cline: "%USERPROFILE%\AppData\Roaming\Code\User\globalStorage\saoudrizwan.claude-dev\settings\cline_mcp_settings.json"
   
-  # OpenAI系列工具
+  # Ferramentas da Série OpenAI
   OpenAI_Codex: "%USERPROFILE%\.openai\codex_mcp.json"
   OpenAI_Codex_CLI: "%USERPROFILE%\.codex\cli_mcp_settings.json"
   
-  # 腾讯AI工具
+  # Ferramentas de IA Tencent
   CodeBuddy: "%USERPROFILE%\AppData\Roaming\CodeBuddy\User\globalStorage\tencent.planning-genie\settings\codebuddy_mcp_settings.json"
   CodeBuddy_CLI: "%USERPROFILE%\.codebuddy\cli_mcp_config.json"
   
-  # 新兴AI编辑器
+  # Editores de IA Emergentes
   Void: "%USERPROFILE%\.void\mcp_config.json"
   Warp: "%USERPROFILE%\.warp\mcp_settings.json"
   Zed: "%USERPROFILE%\.zed\mcp_config.json"
   
-  # 高级AI助手
+  # Assistentes de IA Avançados
   Refact_ai: "%USERPROFILE%\.refact\mcp_settings.json"
   Jules_Google: "%USERPROFILE%\.jules\mcp_config.json"
   Junie_JetBrains: "%USERPROFILE%\.junie\mcp_settings.json"
@@ -81,341 +81,341 @@ changelog:
   Memex: "%USERPROFILE%\.memex\mcp_config.json"
   Mentat: "%USERPROFILE%\.mentat\mcp_settings.json"
 
-检测机制:
-  自动扫描: 检测所有已安装的AI工具
-    - 主流编辑器: Trae, Cursor, Claude
-    - 热门AI工具: Windsurf, Replit, Sourcegraph Cody, Continue.dev
-    - IDE集成: VSCode Copilot, JetBrains AI, Tabnine
-    - 云端平台: Amazon Q, Gemini Code Assist, Qodo Gen
-    - 开源工具: Aider, CodeGeeX, TabbyML, Cline
-    - OpenAI系列: OpenAI Codex, Codex CLI
-    - 腾讯AI工具: CodeBuddy, CodeBuddy CLI
-    - 新兴编辑器: Void, Warp, Zed
-    - 高级助手: Refact.ai, Jules, Junie, Kilo Code, Kodu, MarsCode, Melty, Memex, Mentat
+Mecanismo de Detecção:
+  Varredura Automática: Detecta todas as ferramentas de IA instaladas
+    - Editores Mainstream: Trae, Cursor, Claude
+    - Ferramentas Populares: Windsurf, Replit, Sourcegraph Cody, Continue.dev
+    - Integração IDE: VSCode Copilot, JetBrains AI, Tabnine
+    - Plataformas em Nuvem: Amazon Q, Gemini Code Assist, Qodo Gen
+    - Ferramentas Open Source: Aider, CodeGeeX, TabbyML, Cline
+    - Série OpenAI: OpenAI Codex, Codex CLI
+    - Ferramentas Tencent: CodeBuddy, CodeBuddy CLI
+    - Editores Emergentes: Void, Warp, Zed
+    - Assistentes Avançados: Refact.ai, Jules, Junie, Kilo Code, Kodu, MarsCode, Melty, Memex, Mentat
   
-  配置分析: 分析各平台MCP服务器配置
-    - 配置文件格式兼容性检查
-    - MCP服务器版本兼容性验证
-    - 工具特定配置项验证 (如Trae的disabled字段)
+  Análise de Configuração: Analisa configurações de servidores MCP de cada plataforma
+    - Verificação de compatibilidade de formato de arquivo de configuração
+    - Validação de compatibilidade de versão de servidor MCP
+    - Validação de itens de configuração específicos da ferramenta (como campo disabled do Trae)
   
-  差异识别: 识别配置不一致和缺失项
-    - 跨平台配置同步状态
-    - 缺失的核心MCP服务器
-    - 工具特定功能缺失
+  Identificação de Diferenças: Identifica inconsistências de configuração e itens ausentes
+    - Status de sincronização de configuração entre plataformas
+    - Servidores MCP principais ausentes
+    - Funcionalidades específicas da ferramenta ausentes
   
-  性能评估: 分析服务器性能和可用性
-    - MCP服务器响应时间
-    - 内存使用情况
-    - 错误率统计
+  Avaliação de Desempenho: Analisa desempenho e disponibilidade do servidor
+    - Tempo de resposta do servidor MCP
+    - Uso de memória
+    - Estatísticas de taxa de erro
 ```
 
-### 2. MCP专用推荐引擎 (与全局推荐引擎协同)
+### 2. Motor de Recomendação Dedicado MCP (Colaboração com Motor de Recomendação Global)
 ```yaml
-功能定位:
-  专用领域: MCP工具选择和配置推荐
-  与全局推荐引擎协同: 接收项目阶段信息，提供MCP工具建议
-  避免重复: 专注MCP领域，不重复实现通用推荐算法
+Posicionamento Funcional:
+  Domínio Dedicado: Seleção de ferramentas MCP e recomendação de configuração
+  Colaboração com Motor Global: Recebe informações da fase do projeto, fornece sugestões de ferramentas MCP
+  Evitar Duplicação: Foca no domínio MCP, não reimplementa algoritmos de recomendação genéricos
 
-  工具分层:
-    Tier_1_核心工具 (必需):
-      - server-filesystem: 文件系统操作
-      - codebase-retrieval: 代码语义搜索
+  Hierarquia de Ferramentas:
+    Tier_1_Ferramentas Principais (Obrigatório):
+      - server-filesystem: Operações de sistema de arquivos
+      - codebase-retrieval: Busca semântica de código
   
-  Tier_2_协作工具 (推荐):
-    - server-github: Git协作和PR管理
-    - mcp-feedback-enhanced: 增强交互反馈
-    - context7: 文档和知识管理
+  Tier_2_Ferramentas de Colaboração (Recomendado):
+    - server-github: Colaboração Git e gestão de PR
+    - mcp-feedback-enhanced: Feedback de interação aprimorado
+    - context7: Gestão de documentos e conhecimento
   
-  Tier_3_高级工具 (可选):
-    - 数据库服务器: MySQL/Redis集成
-    - 自动化工具: Playwright/TestSprite
-    - 调试工具: chrome-devtools (CDP 浏览器调试与性能分析)
-    - 视觉AI: Peekaboo (macOS 14.0+)
+  Tier_3_Ferramentas Avançadas (Opcional):
+    - Servidor de Banco de Dados: Integração MySQL/Redis
+    - Ferramentas de Automação: Playwright/TestSprite
+    - Ferramentas de Depuração: chrome-devtools (Depuração de navegador CDP e análise de desempenho)
+    - IA Visual: Peekaboo (macOS 14.0+)
 
-推荐算法:
-  项目类型适配: 基于前端/后端/全栈自动推荐
-  团队规模调整: 个人/小团队/大团队差异化配置
-  经验水平适配: 新手/中级/专家不同复杂度
+Algoritmo de Recomendação:
+  Adaptação ao Tipo de Projeto: Recomendação automática baseada em Frontend/Backend/Fullstack
+  Ajuste ao Tamanho da Equipe: Configuração diferenciada para Individual/Pequena Equipe/Grande Equipe
+  Adaptação ao Nível de Experiência: Diferentes complexidades para Iniciante/Intermediário/Especialista
 
-  场景化推荐:
-    意图识别:
-      - 测试/E2E/回归:
-        前端/全栈项目: "推荐 Playwright（测试自动化）与 chrome-devtools（浏览器调试）"
-      - 前端调试/性能/Console/Network/DOM:
-        默认: "推荐 chrome-devtools（CDP 集成）"
-    执行建议:
-      - "优先使用已安装的MCP服务器；未安装则提示'一键配置MCP'"
-      - "结合 install-mcp-tools-enhanced-final.ps1 生成配置状态进行检测"
+  Recomendação Baseada em Cenário:
+    Identificação de Intenção:
+      - Teste/E2E/Regressão:
+        Projeto Frontend/Fullstack: "Recomendar Playwright (Automação de Teste) e chrome-devtools (Depuração de Navegador)"
+      - Depuração Frontend/Desempenho/Console/Network/DOM:
+        Padrão: "Recomendar chrome-devtools (Integração CDP)"
+    Sugestão de Execução:
+      - "Priorizar o uso de servidores MCP instalados; se não instalado, sugerir 'Configuração MCP em um clique'"
+      - "Gerar estado de configuração combinado com install-mcp-tools-enhanced-final.ps1 para detecção"
 ```
 
-### 3. 统一命令系统
+### 3. Sistema de Comandos Unificado
 ```yaml
-检测命令:
-  - "检查MCP状态" - 单平台检测
-  - "检查所有AI工具MCP状态" - 跨平台检测
-  - "MCP健康检查" - 全面状态检查
-  - "MCP平台报告" - 详细分析报告
+Comandos de Detecção:
+  - "Verificar status MCP" - Detecção em plataforma única
+  - "Verificar status MCP de todas as ferramentas AI" - Detecção multiplataforma
+  - "Verificação de saúde MCP" - Verificação de status abrangente
+  - "Relatório de plataforma MCP" - Relatório de análise detalhado
 
-配置命令:
-  - "推荐MCP工具" - 智能推荐配置
-  - "一键配置MCP" - 自动安装配置
-  - "优化MCP设置" - 性能优化调整
+Comandos de Configuração:
+  - "Recomendar ferramentas MCP" - Recomendação de configuração inteligente
+  - "Configuração MCP em um clique" - Instalação e configuração automática
+  - "Otimizar configurações MCP" - Ajuste de otimização de desempenho
 
-同步命令:
-  - "同步MCP配置" - 跨平台配置同步
-  - "统一MCP设置" - 多平台配置统一
-  - "备份MCP配置" - 配置文件备份
-  - "预览同步操作" - 干运行模式查看变更
-  - "自动同步MCP" - 智能选择源平台同步
-  - "多平台同步" - 同时同步到多个目标平台
+Comandos de Sincronização:
+  - "Sincronizar configuração MCP" - Sincronização de configuração entre plataformas
+  - "Unificar configurações MCP" - Unificação de configuração multiplataforma
+  - "Backup de configuração MCP" - Backup de arquivo de configuração
+  - "Visualizar operação de sincronização" - Modo Dry Run para ver alterações
+  - "Sincronização automática MCP" - Seleção inteligente de plataforma de origem para sincronização
+  - "Sincronização multiplataforma" - Sincronização simultânea para múltiplas plataformas de destino
 
-管理命令:
-  - "MCP使用报告" - 使用统计分析
-  - "修复MCP问题" - 自动问题诊断
-  - "更新MCP服务器" - 批量更新管理
-  - "运行 Playwright 测试" - 端到端测试执行
-  - "启动浏览器调试" - 通过 chrome-devtools (CDP) 连接并调试
+Comandos de Gestão:
+  - "Relatório de uso MCP" - Análise estatística de uso
+  - "Reparar problemas MCP" - Diagnóstico automático de problemas
+  - "Atualizar servidores MCP" - Gestão de atualização em lote
+  - "Executar teste Playwright" - Execução de teste ponta a ponta
+  - "Iniciar depuração de navegador" - Conectar e depurar via chrome-devtools (CDP)
 
-命令示例:
+Exemplos de Comando:
   Playwright:
-    执行示例: "npx playwright test --project=chromium --headed"
-    常用参数:
+    Exemplo de Execução: "npx playwright test --project=chromium --headed"
+    Parâmetros Comuns:
       - "--project=chromium|firefox|webkit"
       - "--grep=@smoke"
       - "--reporter=html|list|blob"
   chrome-devtools:
-    启动示例: "chrome --remote-debugging-port=9222"
-    连接示例: "ws://127.0.0.1:9222/devtools/browser/<id>"
-    典型用途:
-      - "Network/Console/DOM/Performance 监控"
-    注意: "需安装 chrome-devtools-mcp@latest 并确保目标浏览器可连接"
+    Exemplo de Inicialização: "chrome --remote-debugging-port=9222"
+    Exemplo de Conexão: "ws://127.0.0.1:9222/devtools/browser/<id>"
+    Uso Típico:
+      - "Monitoramento de Network/Console/DOM/Performance"
+    Nota: "Requer instalação de chrome-devtools-mcp@latest e garantir que o navegador de destino seja conectável"
 ```
 
-## 🔧 智能工作流
+## 🔧 Fluxo de Trabalho Inteligente
 
-### MCP智能检测和自动执行
+### Detecção Inteligente e Execução Automática MCP
 ```yaml
-自动检测触发条件:
-  任务开始时: 自动检测MCP配置状态
-  文件操作时: 检查filesystem工具可用性
-  代码分析时: 验证codebase-retrieval状态
-  GitHub操作时: 确认github工具配置
-  跨平台需求时: 自动运行 项目根目录/mcp-tools/mcp-cross-platform-sync.ps1
-  网页调试时: 检查 chrome-devtools 可用性
-  测试执行时: 检查 Playwright 安装与浏览器驱动
-  跳过与复用条件:
-    系统级启动: 在“启动超级大脑系统”等系统激活阶段不主动触发检测，由系统激活流程统一协调
-    最近检测复用: 若最近3600秒内已有检测结果或存在"检测响应"/"MCP平台报告"，则复用结果并跳过重复检测
-    用户覆盖: 若用户明确要求重新检测，则执行检测并更新结果缓存
+Condições de Gatilho de Detecção Automática:
+  Início de Tarefa: Detectar automaticamente o status de configuração MCP
+  Operação de Arquivo: Verificar disponibilidade da ferramenta filesystem
+  Análise de Código: Validar status do codebase-retrieval
+  Operação GitHub: Confirmar configuração da ferramenta github
+  Demanda Multiplataforma: Executar automaticamente Diretório Raiz do Projeto/mcp-tools/mcp-cross-platform-sync.ps1
+  Depuração Web: Verificar disponibilidade do chrome-devtools
+  Execução de Teste: Verificar instalação do Playwright e drivers de navegador
+  Condições de Pulo e Reutilização:
+    Inicialização do Sistema: Não acionar detecção proativamente em fases de ativação do sistema como "Iniciar Sistema Super Brain", coordenado pelo fluxo de ativação do sistema
+    Reutilização de Detecção Recente: Se houver resultado de detecção ou "Resposta de Detecção"/"Relatório de Plataforma MCP" nos últimos 3600 segundos, reutilizar resultado e pular detecção repetida
+    Substituição pelo Usuário: Se o usuário solicitar explicitamente re-detecção, executar detecção e atualizar cache de resultados
 ```
 
-智能脚本调用:
-  检测脚本位置: 
-    - 项目根目录/mcp-tools/mcp-cross-platform-sync.ps1
-  自动执行条件:
-    - 需要了解MCP配置状态时
-    - 检测到多个AI工具时
-    - 用户询问MCP相关问题时
-    - 配置不完整需要分析时
+Chamada de Script Inteligente:
+  Localização do Script de Detecção: 
+    - Diretório Raiz do Projeto/mcp-tools/mcp-cross-platform-sync.ps1
+  Condições de Execução Automática:
+    - Quando é necessário entender o status de configuração MCP
+    - Quando múltiplas ferramentas de IA são detectadas
+    - Quando o usuário faz perguntas relacionadas ao MCP
+    - Quando a configuração está incompleta e precisa de análise
   
-  执行方式:
-    - 静默执行: .\mcp-tools\mcp-cross-platform-sync.ps1 -Action detect
-    - 策略引用: 默认遵循“检测复用与跳过 / 缓存复用”策略；详细参数与覆盖条件请参见 mcp-zero-config-detection.mdc
-    - 获取结果: 解析输出并整合到AI响应中
-    - 智能分析: 基于检测结果提供建议
+  Modo de Execução:
+    - Execução Silenciosa: .\mcp-tools\mcp-cross-platform-sync.ps1 -Action detect
+    - Referência de Estratégia: Seguir padrão "Reutilização de detecção e Pulo / Reutilização de cache"; ver detalhes em mcp-zero-config-detection.mdc
+    - Obtenção de Resultados: Analisar saída e integrar na resposta da IA
+    - Análise Inteligente: Fornecer sugestões com base nos resultados da detecção
   
-  缓存复用:
-    - 详细策略与参数请参见 mcp-zero-config-detection.mdc（唯一事实来源）
-    - 本文仅说明在高层编排中会引用该策略，不重复参数或条件
+  Reutilização de Cache:
+    - Ver mcp-zero-config-detection.mdc para estratégia e parâmetros detalhados (fonte única da verdade)
+    - Este documento apenas declara que essa estratégia será referenciada na orquestração de alto nível, sem repetir parâmetros ou condições
 
-### MCP优先使用策略
+### Estratégia de Uso Prioritário MCP
 ```yaml
-强制执行流程:
-  任务接收 → 智能检测MCP状态 → 扫描可用工具 → 效率评估 → 选择最优方案 → 执行监控 → 动态调整
+Fluxo de Execução Obrigatório:
+  Recebimento de Tarefa → Detecção Inteligente de Status MCP → Varredura de Ferramentas Disponíveis → Avaliação de Eficiência → Seleção da Melhor Solução → Monitoramento de Execução → Ajuste Dinâmico
 
-  工具选择矩阵:
-  文件操作: server-filesystem > 手动操作
-  代码检索: codebase-retrieval > 盲目搜索
-  GitHub操作: server-github > web抓取
-  用户反馈: mcp-feedback-enhanced > 简单询问
-  记忆检索（可选）: server-memory > 临时变量
-  通用操作: server-everything > 手动执行
+  Matriz de Seleção de Ferramentas:
+  Operação de Arquivo: server-filesystem > Operação Manual
+  Recuperação de Código: codebase-retrieval > Busca Cega
+  Operação GitHub: server-github > Web Scraping
+  Feedback do Usuário: mcp-feedback-enhanced > Pergunta Simples
+  Recuperação de Memória (Opcional): server-memory > Variável Temporária
+  Operação Genérica: server-everything > Execução Manual
 
-切换条件:
-  - MCP工具不可用时使用备选方案
-  - 功能不足时组合多个工具
-  - 性能问题时动态调整策略
+Condições de Troca:
+  - Usar alternativa quando ferramenta MCP indisponível
+  - Combinar múltiplas ferramentas quando funcionalidade insuficiente
+  - Ajuste dinâmico de estratégia em caso de problemas de desempenho
 ```
 
-### 自动化配置生成
+### Geração de Configuração Automatizada
 ```yaml
-配置模板:
-  基础配置:
-    - 标准mcp_settings.json结构
-    - 工具优先级设置
-    - 性能优化参数
-    - 安全和权限配置
+Modelo de Configuração:
+  Configuração Básica:
+    - Estrutura padrão mcp_settings.json
+    - Configuração de prioridade de ferramentas
+    - Parâmetros de otimização de desempenho
+    - Configuração de segurança e permissões
   
-  平台适配:
-    # 主流编辑器
-    - Trae特定配置 (disabled字段、timeout)
-    - Cursor工作区配置
-    - Claude标准配置
+  Adaptação de Plataforma:
+    # Editores Mainstream
+    - Configuração específica Trae (campos disabled, timeout)
+    - Configuração de workspace Cursor
+    - Configuração padrão Claude
     
-    # 热门AI工具
-    - Windsurf配置 (基于VSCode架构)
-    - Replit云端配置 (在线环境适配)
-    - Sourcegraph Cody企业配置
-    - Continue.dev开源配置
+    # Ferramentas de IA Populares
+    - Configuração Windsurf (baseada em arquitetura VSCode)
+    - Configuração nuvem Replit (adaptação a ambiente online)
+    - Configuração empresarial Sourcegraph Cody
+    - Configuração open source Continue.dev
     
-    # IDE集成
-    - VSCode Copilot扩展配置
-    - JetBrains AI插件配置
-    - Tabnine多IDE配置
+    # Integração IDE
+    - Configuração de extensão VSCode Copilot
+    - Configuração de plugin JetBrains AI
+    - Configuração multi-IDE Tabnine
     
-    # 云端平台
-    - Amazon Q Developer配置
-    - Gemini Code Assist配置
-    - Qodo Gen测试生成配置
+    # Plataformas em Nuvem
+    - Configuração Amazon Q Developer
+    - Configuração Gemini Code Assist
+    - Configuração de geração de teste Qodo Gen
     
-    # 开源工具
-    - Aider命令行配置
-    - CodeGeeX本地化配置
-    - TabbyML自托管配置
-    - Cline VS Code扩展配置
+    # Ferramentas Open Source
+    - Configuração de linha de comando Aider
+    - Configuração local CodeGeeX
+    - Configuração self-hosted TabbyML
+    - Configuração de extensão VS Code Cline
     
-    - 环境变量适配
+    - Adaptação de variáveis de ambiente
 
-  渐进式配置:
-  阶段1: 核心工具 (filesystem, codebase；memory 可选)
-  阶段2: 协作工具 (github, feedback-enhanced)
-  阶段3: 高级工具 (数据库, 自动化, 视觉AI)
-  阶段4: 定制工具 (项目特定需求)
+  Configuração Progressiva:
+  Fase 1: Ferramentas Principais (filesystem, codebase; memory opcional)
+  Fase 2: Ferramentas de Colaboração (github, feedback-enhanced)
+  Fase 3: Ferramentas Avançadas (Banco de Dados, Automação, IA Visual)
+  Fase 4: Ferramentas Personalizadas (Necessidades específicas do projeto)
 ```
 
-## 📊 智能监控和优化
+## 📊 Monitoramento e Otimização Inteligentes
 
-### 性能监控
+### Monitoramento de Desempenho
 ```yaml
-监控维度:
-  可用性: MCP服务器连接状态和响应时间
-  使用率: 工具调用频率和成功率
-  效率: 任务完成时间和质量指标
-  稳定性: 错误率和故障恢复能力
+Dimensões de Monitoramento:
+  Disponibilidade: Status de conexão e tempo de resposta do servidor MCP
+  Taxa de Uso: Frequência de chamada de ferramenta e taxa de sucesso
+  Eficiência: Tempo de conclusão de tarefa e indicadores de qualidade
+  Estabilidade: Taxa de erro e capacidade de recuperação de falhas
 
-优化策略:
-  实时调整: 基于使用频率调整工具优先级
-  预测分析: 根据项目阶段预测工具需求
-  自动修复: 检测到问题时自动尝试修复
-  学习优化: 基于使用模式持续改进推荐
+Estratégia de Otimização:
+  Ajuste em Tempo Real: Ajuste de prioridade de ferramenta baseado na frequência de uso
+  Análise Preditiva: Previsão de demanda de ferramenta baseada na fase do projeto
+  Reparo Automático: Tentativa automática de reparo ao detectar problemas
+  Otimização de Aprendizado: Melhoria contínua de recomendação baseada em padrões de uso
 ```
 
-### 跨平台同步
+### Sincronização Multiplataforma
 ```yaml
-同步策略:
-  智能源选择: 自动识别最完整的配置作为同步源
-  增量同步: 只同步缺失的服务器配置
-  冲突解决: 智能合并冲突配置
-  备份保护: 同步前自动备份原始配置
-  多目标同步: 支持同时同步到多个目标平台
-  干运行模式: 预览同步操作而不实际执行
+Estratégia de Sincronização:
+  Seleção Inteligente de Origem: Identificação automática da configuração mais completa como origem
+  Sincronização Incremental: Sincronização apenas de configurações de servidores ausentes
+  Resolução de Conflitos: Fusão inteligente de configurações conflitantes
+  Proteção de Backup: Backup automático da configuração original antes da sincronização
+  Sincronização Multi-Alvo: Suporte a sincronização simultânea para múltiplas plataformas de destino
+  Modo Dry Run: Prévia da operação de sincronização sem execução real
 
-同步模式:
-  手动模式: 指定源平台和目标平台
-    - 示例: .\mcp-cross-platform-sync.ps1 sync -SourcePlatform "Trae" -TargetPlatforms "Cursor,OpenAICodex"
-  自动模式: 自动选择最佳源平台
-    - 示例: .\mcp-cross-platform-sync.ps1 sync -TargetPlatforms "OpenAICodex" -Auto
-  干运行模式: 预览同步操作
-    - 示例: .\mcp-cross-platform-sync.ps1 sync -SourcePlatform "Trae" -TargetPlatforms "Cursor" -DryRun
+Modo de Sincronização:
+  Modo Manual: Especificar plataforma de origem e plataformas de destino
+    - Exemplo: .\mcp-cross-platform-sync.ps1 sync -SourcePlatform "Trae" -TargetPlatforms "Cursor,OpenAICodex"
+  Modo Automático: Seleção automática da melhor plataforma de origem
+    - Exemplo: .\mcp-cross-platform-sync.ps1 sync -TargetPlatforms "OpenAICodex" -Auto
+  Modo Dry Run: Prévia da operação de sincronização
+    - Exemplo: .\mcp-cross-platform-sync.ps1 sync -SourcePlatform "Trae" -TargetPlatforms "Cursor" -DryRun
 
-同步流程:
-  1. 扫描所有平台配置 (detect命令)
-  2. 分析配置差异和完整性
-  3. 选择最佳配置作为同步源 (自动模式)
-  4. 生成同步计划和预览 (干运行模式)
-  5. 执行同步并验证结果
-  6. 创建备份和日志记录
+Fluxo de Sincronização:
+  1. Varrer configurações de todas as plataformas (comando detect)
+  2. Analisar diferenças e integridade de configuração
+  3. Selecionar melhor configuração como origem (Modo Automático)
+  4. Gerar plano de sincronização e prévia (Modo Dry Run)
+  5. Executar sincronização e validar resultados
+  6. Criar backup e registro de log
 
-安全特性:
-  - 自动备份原始配置文件
-  - 详细的操作日志记录
-  - 干运行模式预览变更
-  - 配置文件完整性验证
+Recursos de Segurança:
+  - Backup automático de arquivos de configuração originais
+  - Registro detalhado de log de operações
+  - Prévia de alterações no modo Dry Run
+  - Validação de integridade de arquivo de configuração
 ```
 
-## 🎯 使用示例
+## 🎯 Exemplos de Uso
 
-### 典型工作流
+### Fluxo de Trabalho Típico
 ```yaml
-场景1_新环境配置:
-  用户: "检查MCP状态"
-  AI: 自动检测 → 分析缺失 → 推荐配置 → 一键安装
+Cenário 1_Configuração de Novo Ambiente:
+  Usuário: "Verificar status MCP"
+  IA: Detecção Automática → Análise de Ausências → Recomendação de Configuração → Instalação em Um Clique
 
-场景2_跨平台同步:
-  用户: "同步MCP配置"
-  AI: 扫描平台 → 识别差异 → 智能同步 → 验证结果
+Cenário 2_Sincronização Multiplataforma:
+  Usuário: "Sincronizar configuração MCP"
+  IA: Varredura de Plataformas → Identificação de Diferenças → Sincronização Inteligente → Validação de Resultados
 
-场景3_性能优化:
-  用户: "优化MCP设置"
-  AI: 分析使用 → 识别瓶颈 → 调整配置 → 监控效果
+Cenário 3_Otimização de Desempenho:
+  Usuário: "Otimizar configurações MCP"
+  IA: Análise de Uso → Identificação de Gargalos → Ajuste de Configuração → Monitoramento de Efeito
 
-场景4_问题诊断:
-  用户: "MCP健康检查"
-  AI: 全面检测 → 问题诊断 → 修复建议 → 自动修复
+Cenário 4_Diagnóstico de Problemas:
+  Usuário: "Verificação de saúde MCP"
+  IA: Detecção Abrangente → Diagnóstico de Problemas → Sugestão de Reparo → Reparo Automático
 ```
 
-### 智能响应模板
+### Modelo de Resposta Inteligente
 ```yaml
-检测响应:
-  "🔍 正在检测MCP环境..."
-  "📊 检测到 [X] 个AI工具，[Y] 个MCP服务器"
-  "💡 推荐配置: [具体建议]"
-  "🚀 可选操作: [行动建议]"
+Resposta de Detecção:
+  "🔍 Detectando ambiente MCP..."
+  "📊 Detectadas [X] ferramentas de IA, [Y] servidores MCP"
+  "💡 Configuração Recomendada: [Sugestão Específica]"
+  "🚀 Operação Opcional: [Sugestão de Ação]"
 
-同步响应:
-  "🔄 开始跨平台同步..."
-  "📖 源配置: [最佳平台] ([X] 个服务器)"
-  "🎯 同步目标: [目标平台列表]"
-  "📋 同步模式: [手动/自动/干运行]"
-  "🔒 安全措施: 已创建配置备份"
-  "✅ 同步完成: [结果摘要]"
-  "📊 同步统计: 成功 [X] 个，跳过 [Y] 个"
+Resposta de Sincronização:
+  "🔄 Iniciando sincronização multiplataforma..."
+  "📖 Configuração de Origem: [Melhor Plataforma] ([X] servidores)"
+  "🎯 Destino de Sincronização: [Lista de Plataformas de Destino]"
+  "📋 Modo de Sincronização: [Manual/Automático/Dry Run]"
+  "🔒 Medidas de Segurança: Backup de configuração criado"
+  "✅ Sincronização Concluída: [Resumo do Resultado]"
+  "📊 Estatísticas de Sincronização: Sucesso [X], Pulo [Y]"
 ```
 
-## 📈 效果评估
+## 📈 Avaliação de Efeito
 
-### 关键指标
+### Indicadores Chave
 ```yaml
-效率指标:
-  - 配置时间: 从30分钟 → 2分钟
-  - 检测准确率: >95%
-  - 同步成功率: >98%
-  - 用户满意度: >4.5/5.0
+Indicadores de Eficiência:
+  - Tempo de Configuração: De 30 minutos → 2 minutos
+  - Precisão de Detecção: >95%
+  - Taxa de Sucesso de Sincronização: >98%
+  - Satisfação do Usuário: >4.5/5.0
 
-质量指标:
-  - 推荐准确率: >90%
-  - 工具使用率: >85%
-  - 错误率: <3%
-  - 响应时间: <2秒
+Indicadores de Qualidade:
+  - Precisão de Recomendação: >90%
+  - Taxa de Uso de Ferramentas: >85%
+  - Taxa de Erro: <3%
+  - Tempo de Resposta: <2 segundos
 ```
 
-## 🔗 集成其他系统
+## 🔗 Integração com Outros Sistemas
 
-### 超级大脑系统集成
+### Integração com Sistema Super Brain
 ```yaml
-统一管理:
-  - MCP状态纳入项目健康度评估
-  - 工具推荐集成到阶段管理
-  - 配置优化融入性能监控
-  - 问题诊断连接故障处理
+Gestão Unificada:
+  - Status MCP incluído na avaliação de saúde do projeto
+  - Recomendação de ferramentas integrada à gestão de fases
+  - Otimização de configuração incorporada ao monitoramento de desempenho
+  - Diagnóstico de problemas conectado ao tratamento de falhas
 
-智能决策:
-  - 基于项目阶段自动调整MCP配置
-  - 根据团队规模优化工具组合
-  - 结合开发需求动态推荐工具
-  - 整合用户反馈持续改进
+Decisão Inteligente:
+  - Ajuste automático de configuração MCP baseado na fase do projeto
+  - Otimização de combinação de ferramentas baseada no tamanho da equipe
+  - Recomendação dinâmica de ferramentas combinada com necessidades de desenvolvimento
+  - Melhoria contínua integrando feedback do usuário
 ```
 
 ---
 
-**🎯 激活提示**: 该统一管理策略整合了所有MCP相关功能，用户只需使用简单的命令即可获得完整的MCP管理服务。系统会自动选择最适合的功能模块来响应用户需求。
+**🎯 Dica de Ativação**: Esta estratégia de gestão unificada integra todas as funções relacionadas ao MCP. O usuário só precisa usar comandos simples para obter serviços completos de gestão MCP. O sistema selecionará automaticamente o módulo funcional mais adequado para responder às necessidades do usuário.

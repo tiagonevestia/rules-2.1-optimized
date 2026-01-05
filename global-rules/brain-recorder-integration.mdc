@@ -6,7 +6,7 @@ alwaysApply: true
 dependencies: ["super-brain-system.mdc", "context-recorder-system.mdc"]
 integrations: ["super-brain-system", "context-recorder-system"]
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -17,8 +17,8 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adição do sistema de gerenciamento de versão"
+      - "Padronização da estrutura do arquivo de regras"
 ---
 
 # 🧠📝 Brain-Recorder Integration System (大脑-记录员集成系统)

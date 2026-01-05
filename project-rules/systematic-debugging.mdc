@@ -1,12 +1,12 @@
 ---
 type: "always_apply"
-description: "AI-powered systematic debugging with intelligent troubleshooting - AI驱动的系统化调试方法"
+description: "Depuração sistemática impulsionada por IA com solução de problemas inteligente"
 globs: ["**/*"]
 priority: 648
 alwaysApply: true
 integrations: ["super-brain-system", "mcp-intelligent-strategy", "intelligent-project-management", "commit", "changelog-management", "code-quality-check", "root-cause-analysis"]
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -17,567 +17,567 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adição do sistema de gerenciamento de versão"
+      - "Padronização da estrutura do arquivo de regras"
 ---
 
-# 🐛 Systematic Debugging - 智能系统化调试
+# 🐛 Systematic Debugging - Depuração Sistemática Inteligente
 
-AI驱动的系统化调试工具，集成智能故障诊断、自动化调试流程和解决方案推荐引擎。
+Ferramenta de depuração sistemática impulsionada por IA, integrando diagnóstico inteligente de falhas, fluxos de depuração automatizados e motor de recomendação de soluções.
 
-## 🧠 AI Intelligence Core - AI智能核心
+## 🧠 Núcleo de Inteligência IA
 
-### 智能激活条件
+### Condições de Ativação Inteligente
 ```yaml
-自动激活场景:
-  - 检测到代码执行错误或异常
-  - 用户执行 "/debug" 命令
-  - code-quality-check发现严重Bug
-  - root-cause-analysis需要深度调试
-  - 超级大脑系统推荐系统化调试
+Cenários de ativação automática:
+  - Detecção de erro ou exceção na execução do código
+  - Usuário executa o comando "/debug"
+  - code-quality-check encontra Bug grave
+  - root-cause-analysis requer depuração profunda
+  - Sistema Super Brain recomenda depuração sistemática
 
-智能分析维度:
-  - 错误类型和严重程度 (30%)
-  - 代码复杂度和调试难度 (25%)
-  - 系统环境和依赖关系 (20%)
-  - 历史调试经验匹配 (15%)
-  - 调试工具可用性 (10%)
+Dimensões de análise inteligente:
+  - Tipo de erro e severidade (30%)
+  - Complexidade do código e dificuldade de depuração (25%)
+  - Ambiente do sistema e dependências (20%)
+  - Correspondência com experiência histórica de depuração (15%)
+  - Disponibilidade de ferramentas de depuração (10%)
 ```
 
-## 🚀 Commands - 智能命令
+## 🚀 Comandos Inteligentes
 
-- `/debug` - AI智能系统化调试（推荐）
-- `/debug --error <type>` - 指定错误类型调试
-- `/debug --trace` - 执行跟踪调试
-- `/debug --performance` - 性能调试模式
-- `/debug --security` - 安全问题调试
-- `/debug --auto-fix` - 自动修复调试
+- `/debug` - Depuração sistemática inteligente por IA (recomendado)
+- `/debug --error <type>` - Depuração de tipo de erro específico
+- `/debug --trace` - Executar depuração com rastreamento (trace)
+- `/debug --performance` - Modo de depuração de desempenho
+- `/debug --security` - Depuração de problemas de segurança
+- `/debug --auto-fix` - Depuração com correção automática
 
-## ✨ AI-Powered Features - AI驱动功能
+## ✨ Recursos Impulsionados por IA
 
-### 🤖 智能故障诊断引擎
+### 🤖 Motor de Diagnóstico Inteligente de Falhas
 ```yaml
-错误类型识别:
-  语法错误:
-    - 编译时错误
-    - 语法解析错误
-    - 类型不匹配
-    - 缺少依赖
+Identificação de Tipo de Erro:
+  Erros de Sintaxe:
+    - Erro em tempo de compilação
+    - Erro de análise sintática (parsing)
+    - Incompatibilidade de tipos
+    - Dependência ausente
 
-  运行时错误:
-    - 空指针异常
-    - 数组越界
-    - 内存泄露
-    - 死锁问题
+  Erros em Tempo de Execução (Runtime):
+    - Exceção de ponteiro nulo (Null Pointer)
+    - Índice de array fora dos limites
+    - Vazamento de memória (Memory leak)
+    - Problemas de Deadlock
 
-  逻辑错误:
-    - 算法逻辑错误
-    - 业务逻辑缺陷
-    - 数据处理错误
-    - 状态管理问题
+  Erros Lógicos:
+    - Erro na lógica do algoritmo
+    - Defeito na lógica de negócios
+    - Erro no processamento de dados
+    - Problema de gerenciamento de estado
 
-  环境错误:
-    - 配置错误
-    - 依赖版本冲突
-    - 权限问题
-    - 网络连接问题
+  Erros de Ambiente:
+    - Erro de configuração
+    - Conflito de versão de dependência
+    - Problema de permissão
+    - Problema de conexão de rede
 
-智能诊断能力:
-  - 错误堆栈智能分析
-  - 异常模式识别
-  - 相关代码定位
-  - 影响范围评估
+Capacidades de Diagnóstico Inteligente:
+  - Análise inteligente de stack trace de erro
+  - Reconhecimento de padrões de exceção
+  - Localização de código relevante
+  - Avaliação do escopo de impacto
 ```
 
-### 🔧 自动化调试工具集成
+### 🔧 Integração de Ferramentas de Depuração Automatizada
 ```yaml
-调试工具编排:
-  前端调试:
+Orquestração de Ferramentas de Depuração:
+  Depuração Frontend:
     - Chrome DevTools
     - React Developer Tools
     - Vue.js DevTools
     - Browser Console
 
-  后端调试:
+  Depuração Backend:
     - Node.js Inspector
     - Python Debugger (pdb)
     - Java Debugger (jdb)
     - .NET Debugger
 
-  数据库调试:
+  Depuração de Banco de Dados:
     - SQL Query Analyzer
     - Database Profiler
     - Connection Pool Monitor
     - Transaction Analyzer
 
-  性能调试:
+  Depuração de Desempenho:
     - Memory Profiler
     - CPU Profiler
     - Network Monitor
     - I/O Analyzer
 ```
 
-## 📋 Debugging Categories - 调试分类
+## 📋 Categorias de Depuração
 
-### 🔴 Critical Debugging - 致命调试
+### 🔴 Depuração Crítica - Fatal
 ```yaml
-系统崩溃:
-  - 应用程序崩溃
-  - 服务器宕机
-  - 数据库连接失败
-  - 内存溢出
+Falha do Sistema:
+  - Crash da aplicação
+  - Queda do servidor
+  - Falha na conexão com banco de dados
+  - Estouro de memória (Out of Memory)
 
-调试策略:
-  - 立即错误定位
-  - 紧急恢复方案
-  - 核心转储分析
-  - 系统状态快照
+Estratégia de Depuração:
+  - Localização imediata do erro
+  - Plano de recuperação de emergência
+  - Análise de core dump
+  - Snapshot do estado do sistema
 ```
 
-### 🟠 High Priority Debugging - 高优先级调试
+### 🟠 Alta Prioridade
 ```yaml
-功能故障:
-  - 核心功能异常
-  - API接口错误
-  - 数据处理失败
-  - 用户操作阻塞
+Falha Funcional:
+  - Exceção em funcionalidade central
+  - Erro em interface API
+  - Falha no processamento de dados
+  - Bloqueio de operação do usuário
 
-调试策略:
-  - 功能流程跟踪
-  - 数据流分析
-  - 接口调用监控
-  - 用户行为重现
+Estratégia de Depuração:
+  - Rastreamento de fluxo funcional
+  - Análise de fluxo de dados
+  - Monitoramento de chamadas de interface
+  - Reprodução de comportamento do usuário
 ```
 
-### 🟡 Medium Priority Debugging - 中优先级调试
+### 🟡 Média Prioridade
 ```yaml
-性能问题:
-  - 响应时间慢
-  - 内存使用高
-  - CPU占用率高
-  - 网络延迟
+Problemas de Desempenho:
+  - Tempo de resposta lento
+  - Alto uso de memória
+  - Alta taxa de ocupação de CPU
+  - Latência de rede
 
-调试策略:
-  - 性能瓶颈分析
-  - 资源使用监控
-  - 代码热点识别
-  - 优化建议生成
+Estratégia de Depuração:
+  - Análise de gargalo de desempenho
+  - Monitoramento de uso de recursos
+  - Identificação de pontos quentes (hotspots) de código
+  - Geração de sugestões de otimização
 ```
 
-### 🟢 Low Priority Debugging - 低优先级调试
+### 🟢 Baixa Prioridade
 ```yaml
-体验问题:
-  - 界面显示异常
-  - 交互响应慢
-  - 功能使用不便
-  - 错误提示不清
+Problemas de Experiência:
+  - Exibição de interface anormal
+  - Resposta de interação lenta
+  - Inconveniência no uso de funcionalidade
+  - Mensagem de erro pouco clara
 
-调试策略:
-  - 用户体验分析
-  - 界面渲染检查
-  - 交互流程优化
-  - 错误信息改进
+Estratégia de Depuração:
+  - Análise de experiência do usuário
+  - Verificação de renderização de interface
+  - Otimização de fluxo de interação
+  - Melhoria de informações de erro
 ```
 
-## 🔄 AI Workflow Process - AI工作流程
+## 🔄 Processo de Fluxo de Trabalho IA
 
-### Phase 1: 问题识别阶段
+### Fase 1: Estágio de Identificação do Problema
 ```yaml
-Step 1 - 错误收集:
-  - 收集错误信息和堆栈
-  - 记录用户操作步骤
-  - 获取系统环境信息
-  - 建立问题重现环境
+Passo 1 - Coleta de Erros:
+  - Coletar informações de erro e stack traces
+  - Registrar passos de operação do usuário
+  - Obter informações do ambiente do sistema
+  - Estabelecer ambiente de reprodução do problema
 
-Step 2 - 智能分类:
-  - AI自动错误分类
-  - 确定调试优先级
-  - 识别相关系统组件
-  - 评估影响范围
+Passo 2 - Classificação Inteligente:
+  - Classificação automática de erros por IA
+  - Determinar prioridade de depuração
+  - Identificar componentes do sistema relacionados
+  - Avaliar escopo de impacto
 
-Step 3 - 工具选择:
-  - 智能选择调试工具
-  - 配置调试环境
-  - 准备调试数据
-  - 建立调试计划
+Passo 3 - Seleção de Ferramentas:
+  - Seleção inteligente de ferramentas de depuração
+  - Configurar ambiente de depuração
+  - Preparar dados de depuração
+  - Estabelecer plano de depuração
 ```
 
-### Phase 2: 深度调试阶段
+### Fase 2: Estágio de Depuração Profunda
 ```yaml
-Step 4 - 系统化调试:
-  - 执行分层调试策略
-  - 进行断点和跟踪分析
-  - 监控系统状态变化
-  - 收集调试数据
+Passo 4 - Depuração Sistemática:
+  - Executar estratégia de depuração em camadas
+  - Realizar análise de breakpoints e rastreamento
+  - Monitorar mudanças de estado do sistema
+  - Coletar dados de depuração
 
-Step 5 - 数据分析:
-  - 分析调试日志和数据
-  - 识别异常模式和趋势
-  - 定位问题根本原因
-  - 验证调试假设
+Passo 5 - Análise de Dados:
+  - Analisar logs e dados de depuração
+  - Identificar padrões de anomalia e tendências
+  - Localizar causa raiz do problema
+  - Validar hipóteses de depuração
 
-Step 6 - 解决方案验证:
-  - 设计修复方案
-  - 验证修复效果
-  - 测试回归风险
-  - 确认问题解决
+Passo 6 - Validação de Solução:
+  - Projetar plano de correção
+  - Validar efeito da correção
+  - Testar riscos de regressão
+  - Confirmar resolução do problema
 ```
 
-### Phase 3: 知识积累阶段
+### Fase 3: Estágio de Acumulação de Conhecimento
 ```yaml
-Step 7 - 经验记录:
-  - 记录调试过程和方法
-  - 总结有效的调试策略
-  - 更新调试知识库
-  - 分享调试经验
+Passo 7 - Registro de Experiência:
+  - Registrar processo e métodos de depuração
+  - Resumir estratégias de depuração eficazes
+  - Atualizar base de conhecimento de depuração
+  - Compartilhar experiência de depuração
 
-Step 8 - 预防改进:
-  - 设计预防性措施
-  - 改进监控和预警
-  - 优化开发流程
-  - 更新最佳实践
+Passo 8 - Melhoria Preventiva:
+  - Projetar medidas preventivas
+  - Melhorar monitoramento e alertas
+  - Otimizar fluxo de desenvolvimento
+  - Atualizar melhores práticas
 ```
 
-## 🧠 Super Brain Integration - 超级大脑集成
+## 🧠 Integração com Super Brain
 
-### 智能推荐引擎
+### Motor de Recomendação Inteligente
 ```yaml
-调试策略推荐:
-  - 基于错误类型推荐调试方法
-  - 根据项目特点选择调试工具
-  - 提供个性化调试建议
-  - 优化调试流程效率
+Recomendação de Estratégia de Depuração:
+  - Recomendar métodos de depuração baseados no tipo de erro
+  - Escolher ferramentas de depuração de acordo com características do projeto
+  - Fornecer sugestões de depuração personalizadas
+  - Otimizar eficiência do fluxo de depuração
 
-学习和优化:
-  - 学习项目特定的调试模式
-  - 积累调试经验和技巧
-  - 优化调试工具配置
-  - 改进调试策略准确性
+Aprendizado e Otimização:
+  - Aprender padrões de depuração específicos do projeto
+  - Acumular experiência e técnicas de depuração
+  - Otimizar configuração de ferramentas de depuração
+  - Melhorar precisão da estratégia de depuração
 
-项目管理集成:
-  - 根据项目阶段调整调试重点
-  - 集成到开发工作流
-  - 提供调试时间估算
-  - 支持调试资源规划
+Integração com Gerenciamento de Projeto:
+  - Ajustar foco de depuração conforme fase do projeto
+  - Integrar ao fluxo de trabalho de desenvolvimento
+  - Fornecer estimativa de tempo de depuração
+  - Suportar planejamento de recursos de depuração
 ```
 
-### 与其他规则协同
+### Sinergia com Outras Regras
 ```yaml
-root-cause-analysis协同:
-  - 深度调试支持根因分析
-  - 验证根因分析假设
-  - 提供详细的技术证据
-  - 完善解决方案设计
+Sinergia com root-cause-analysis:
+  - Depuração profunda suporta análise de causa raiz
+  - Validar hipóteses de análise de causa raiz
+  - Fornecer evidências técnicas detalhadas
+  - Aprimorar design de soluções
 
-code-quality-check协同:
-  - 调试质量检查发现的问题
-  - 验证代码修复效果
-  - 提供调试最佳实践
-  - 改进代码质量标准
+Sinergia com code-quality-check:
+  - Depurar problemas encontrados na verificação de qualidade
+  - Validar efeito de correção de código
+  - Fornecer melhores práticas de depuração
+  - Melhorar padrões de qualidade de código
 
-commit协同:
-  - 调试提交过程中的问题
-  - 优化提交工作流
-  - 预防提交相关错误
-  - 改进提交质量
+Sinergia com commit:
+  - Depurar problemas durante o processo de commit
+  - Otimizar fluxo de trabalho de commit
+  - Prevenir erros relacionados a commit
+  - Melhorar qualidade do commit
 
-changelog-management协同:
-  - 记录调试过程和结果
-  - 跟踪问题修复历史
-  - 生成调试报告
-  - 维护调试知识库
+Sinergia com changelog-management:
+  - Registrar processo e resultados de depuração
+  - Rastrear histórico de correção de problemas
+  - Gerar relatórios de depuração
+  - Manter base de conhecimento de depuração
 ```
 
-## 🛠️ Debugging Tools Integration - 调试工具集成
+## 🛠️ Integração de Ferramentas de Depuração
 
-### 前端调试工具
+### Ferramentas de Depuração Frontend
 ```yaml
-浏览器调试:
-  - Chrome DevTools集成
+Depuração de Navegador:
+  - Integração Chrome DevTools
   - Firefox Developer Tools
   - Safari Web Inspector
   - Edge DevTools
 
-框架特定:
+Específico de Framework:
   - React Developer Tools
   - Vue.js DevTools
   - Angular DevTools
   - Redux DevTools
 
-性能调试:
-  - Lighthouse性能分析
-  - WebPageTest集成
+Depuração de Desempenho:
+  - Análise de desempenho Lighthouse
+  - Integração WebPageTest
   - Performance Monitor
   - Memory Heap Analyzer
 ```
 
-### 后端调试工具
+### Ferramentas de Depuração Backend
 ```yaml
-语言特定:
+Específico de Linguagem:
   - Node.js Inspector
   - Python pdb/ipdb
   - Java JDB/IntelliJ
   - C# Visual Studio Debugger
 
-数据库调试:
+Depuração de Banco de Dados:
   - SQL Profiler
   - Query Execution Plan
   - Database Connection Monitor
   - Transaction Log Analyzer
 
-系统调试:
+Depuração de Sistema:
   - Process Monitor
   - System Performance Counter
   - Network Packet Analyzer
   - Log File Analyzer
 ```
 
-## 📊 Debugging Metrics - 调试指标
+## 📊 Métricas de Depuração
 
-### 调试效率指标
+### Indicadores de Eficiência de Depuração
 ```yaml
-时间指标:
-  - 问题定位时间
-  - 调试过程时间
-  - 修复验证时间
-  - 总体解决时间
+Indicadores de Tempo:
+  - Tempo de localização do problema
+  - Tempo de processo de depuração
+  - Tempo de validação de correção
+  - Tempo total de resolução
 
-质量指标:
-  - 问题定位准确率
-  - 修复成功率
-  - 回归问题率
-  - 用户满意度
+Indicadores de Qualidade:
+  - Precisão de localização do problema
+  - Taxa de sucesso de correção
+  - Taxa de problemas de regressão
+  - Satisfação do usuário
 
-学习指标:
-  - 调试经验积累
-  - 工具使用熟练度
-  - 调试策略优化
-  - 知识库完善度
+Indicadores de Aprendizado:
+  - Acumulação de experiência de depuração
+  - Proficiência no uso de ferramentas
+  - Otimização de estratégia de depuração
+  - Completude da base de conhecimento
 ```
 
-### 调试成功标准
+### Critérios de Sucesso de Depuração
 ```yaml
-问题解决:
-  - 问题完全修复
-  - 功能正常运行
-  - 性能指标达标
-  - 用户验收通过
+Resolução de Problema:
+  - Problema totalmente corrigido
+  - Funcionalidade operando normalmente
+  - Indicadores de desempenho atingidos
+  - Aceite do usuário aprovado
 
-知识积累:
-  - 调试过程完整记录
-  - 解决方案文档化
-  - 经验知识更新
-  - 预防措施建立
+Acumulação de Conhecimento:
+  - Registro completo do processo de depuração
+  - Solução documentada
+  - Atualização de conhecimento e experiência
+  - Estabelecimento de medidas preventivas
 ```
 
-## 🚨 Error Handling & Safety - 错误处理和安全保障
+## 🚨 Tratamento de Erros e Segurança
 
-### 统一错误处理机制
+### Mecanismo Unificado de Tratamento de Erros
 ```yaml
-错误分类:
-  Level 1 - 致命错误:
-    - 调试工具完全不可用
-    - 系统环境严重损坏
-    - 关键数据丢失风险
-    - 安全漏洞暴露
+Classificação de Erros:
+  Nível 1 - Erros Fatais:
+    - Ferramenta de depuração totalmente indisponível
+    - Ambiente do sistema seriamente danificado
+    - Risco de perda de dados críticos
+    - Exposição de vulnerabilidade de segurança
 
-  Level 2 - 严重错误:
-    - 调试过程中断
-    - 工具配置错误
-    - 数据访问权限问题
-    - 网络连接失败
+  Nível 2 - Erros Graves:
+    - Interrupção do processo de depuração
+    - Erro de configuração da ferramenta
+    - Problema de permissão de acesso a dados
+    - Falha na conexão de rede
 
-  Level 3 - 一般错误:
-    - 单个工具故障
-    - 部分数据缺失
-    - 配置参数错误
-    - 临时文件问题
+  Nível 3 - Erros Comuns:
+    - Falha de ferramenta única
+    - Perda parcial de dados
+    - Erro de parâmetro de configuração
+    - Problema de arquivo temporário
 
-  Level 4 - 警告信息:
-    - 调试效率低下
-    - 工具版本过时
-    - 配置建议优化
-    - 最佳实践提醒
+  Nível 4 - Mensagens de Aviso:
+    - Baixa eficiência de depuração
+    - Versão da ferramenta desatualizada
+    - Sugestão de otimização de configuração
+    - Lembrete de melhores práticas
 ```
 
-### 调试安全保障
+### Garantia de Segurança na Depuração
 ```yaml
-数据安全:
-  - 调试数据加密保护
-  - 敏感信息自动过滤
-  - 调试日志安全存储
-  - 访问权限控制
+Segurança de Dados:
+  - Proteção criptografada de dados de depuração
+  - Filtragem automática de informações sensíveis
+  - Armazenamento seguro de logs de depuração
+  - Controle de permissões de acesso
 
-操作安全:
-  - 调试操作审计
-  - 危险操作确认
-  - 自动备份机制
-  - 回滚操作支持
+Segurança Operacional:
+  - Auditoria de operações de depuração
+  - Confirmação de operações perigosas
+  - Mecanismo de backup automático
+  - Suporte a operações de rollback
 
-与其他规则协调:
-  - 与所有规则共享错误处理机制
-  - 统一的安全保障措施
-  - 协调的日志记录系统
-  - 集成的恢复策略
+Coordenação com Outras Regras:
+  - Compartilhamento de mecanismo de tratamento de erros com todas as regras
+  - Medidas de segurança unificadas
+  - Sistema de registro de logs coordenado
+  - Estratégias de recuperação integradas
 ```
 
-## ⚡ Performance Optimization - 性能优化
+## ⚡ Otimização de Desempenho
 
-### 智能缓存机制
+### Mecanismo de Cache Inteligente
 ```yaml
-缓存策略:
-  - 调试会话状态缓存
-  - 工具配置缓存
-  - 调试结果缓存
-  - 知识库查询缓存
+Estratégia de Cache:
+  - Cache de estado da sessão de depuração
+  - Cache de configuração de ferramentas
+  - Cache de resultados de depuração
+  - Cache de consulta à base de conhecimento
 
-优化技术:
-  - 并行调试处理
-  - 智能断点管理
-  - 资源使用优化
-  - 调试数据压缩
+Tecnologias de Otimização:
+  - Processamento paralelo de depuração
+  - Gerenciamento inteligente de breakpoints
+  - Otimização de uso de recursos
+  - Compressão de dados de depuração
 ```
 
-### 执行效率目标
+### Objetivos de Eficiência de Execução
 ```yaml
-性能指标:
-  - 调试环境启动: <5秒
-  - 问题定位: <20秒
-  - 解决方案生成: <10秒
-  - 总体调试流程: <60秒
+Indicadores de Desempenho:
+  - Inicialização do ambiente de depuração: <5 segundos
+  - Localização do problema: <20 segundos
+  - Geração de solução: <10 segundos
+  - Fluxo total de depuração: <60 segundos
 
-优化措施:
-  - 预加载常用调试工具
-  - 智能缓存调试状态
-  - 并行执行调试任务
-  - 优化调试数据传输
+Medidas de Otimização:
+  - Pré-carregamento de ferramentas de depuração comuns
+  - Cache inteligente de estado de depuração
+  - Execução paralela de tarefas de depuração
+  - Otimização da transmissão de dados de depuração
 ```
 
-## 📋 Usage Examples - 使用示例
+## 📋 Exemplos de Uso
 
-### 基础系统化调试
+### Depuração Sistemática Básica
 ```bash
-# AI智能系统化调试
+# Depuração sistemática inteligente por IA
 /debug
 
-# 输出示例:
-# 🐛 系统化调试启动
+# Exemplo de saída:
+# 🐛 Depuração sistemática iniciada
 # 
-# 📊 错误分析: 运行时异常 - 空指针引用
-# 🎯 问题定位: UserService.java:45行
-# 🔧 建议工具: Java Debugger + IntelliJ IDEA
+# 📊 Análise de Erro: Exceção em Tempo de Execução - Referência de Ponteiro Nulo
+# 🎯 Localização do Problema: UserService.java:linha 45
+# 🔧 Ferramenta Sugerida: Java Debugger + IntelliJ IDEA
 # 
-# 🛠️ 调试步骤:
-# 1. 设置断点在UserService.java:43行
-# 2. 检查user对象的初始化
-# 3. 验证数据库查询结果
-# 4. 确认异常处理逻辑
+# 🛠️ Passos de Depuração:
+# 1. Definir breakpoint em UserService.java:linha 43
+# 2. Verificar a inicialização do objeto user
+# 3. Validar resultado da consulta ao banco de dados
+# 4. Confirmar lógica de tratamento de exceção
 # 
-# 📋 预期修复: 添加空值检查和异常处理
+# 📋 Correção Esperada: Adicionar verificação de valor nulo e tratamento de exceção
 ```
 
-### 性能调试模式
+### Modo de Depuração de Desempenho
 ```bash
-# 性能问题调试
+# Depuração de problemas de desempenho
 /debug --performance
 
-# 输出示例:
-# ⚡ 性能调试模式启动
+# Exemplo de saída:
+# ⚡ Modo de depuração de desempenho iniciado
 # 
-# 📊 性能分析: 响应时间过长 (>5秒)
-# 🎯 瓶颈定位: 数据库查询优化需求
-# 🔧 推荐工具: SQL Profiler + Performance Monitor
+# 📊 Análise de Desempenho: Tempo de resposta muito longo (>5 segundos)
+# 🎯 Localização do Gargalo: Necessidade de otimização de consulta ao banco de dados
+# 🔧 Ferramenta Recomendada: SQL Profiler + Performance Monitor
 # 
-# 🛠️ 调试计划:
-# 1. 启用SQL查询日志
-# 2. 分析慢查询语句
-# 3. 检查索引使用情况
-# 4. 优化查询性能
+# 🛠️ Plano de Depuração:
+# 1. Habilitar log de consultas SQL
+# 2. Analisar instruções de consulta lenta
+# 3. Verificar uso de índices
+# 4. Otimizar desempenho da consulta
 ```
 
-### 安全问题调试
+### Depuração de Problemas de Segurança
 ```bash
-# 安全问题调试
+# Depuração de problemas de segurança
 /debug --security
 
-# 输出示例:
-# 🔒 安全调试模式启动
+# Exemplo de saída:
+# 🔒 Modo de depuração de segurança iniciado
 # 
-# 📊 安全分析: 潜在SQL注入风险
-# 🎯 风险定位: UserController.java:getUserById方法
-# 🔧 推荐工具: OWASP ZAP + Burp Suite
+# 📊 Análise de Segurança: Risco potencial de Injeção SQL
+# 🎯 Localização do Risco: Método UserController.java:getUserById
+# 🔧 Ferramenta Recomendada: OWASP ZAP + Burp Suite
 # 
-# 🛠️ 安全检查:
-# 1. 验证输入参数过滤
-# 2. 检查SQL语句构造
-# 3. 测试注入攻击向量
-# 4. 加强输入验证
+# 🛠️ Verificação de Segurança:
+# 1. Validar filtragem de parâmetros de entrada
+# 2. Verificar construção de instruções SQL
+# 3. Testar vetores de ataque de injeção
+# 4. Reforçar validação de entrada
 ```
 
-## 🔗 Integration Points - 集成点
+## 🔗 Pontos de Integração
 
-### 与现有规则集成
+### Integração com Regras Existentes
 ```yaml
-完整的Phase 2规则链:
-  1. code-quality-check发现问题
-  2. systematic-debugging深度调试
-  3. root-cause-analysis根因分析
-  4. commit优化提交
-  5. changelog-management记录改进
+Cadeia Completa de Regras da Fase 2:
+  1. code-quality-check descobre problemas
+  2. systematic-debugging realiza depuração profunda
+  3. root-cause-analysis analisa a causa raiz
+  4. commit otimiza a submissão
+  5. changelog-management registra melhorias
 
-协同工作流:
-  - 质量检查 → 系统调试 → 根因分析 → 解决方案
-  - 调试结果 → 代码修复 → 质量验证 → 提交记录
-  - 问题模式 → 预防措施 → 流程改进 → 知识积累
+Fluxo de Trabalho Colaborativo:
+  - Verificação de Qualidade → Depuração Sistemática → Análise de Causa Raiz → Solução
+  - Resultado da Depuração → Correção de Código → Validação de Qualidade → Registro de Commit
+  - Padrão do Problema → Medida Preventiva → Melhoria de Processo → Acumulação de Conhecimento
 
-super-brain-system集成:
-  - 智能调试策略推荐
-  - 调试经验学习和积累
-  - 个性化调试配置
-  - 调试效率优化建议
+Integração super-brain-system:
+  - Recomendação inteligente de estratégia de depuração
+  - Aprendizado e acumulação de experiência de depuração
+  - Configuração de depuração personalizada
+  - Sugestão de otimização de eficiência de depuração
 ```
 
-## 📚 Debugging Knowledge Base - 调试知识库
+## 📚 Base de Conhecimento de Depuração
 
-### 常见问题解决方案
+### Soluções para Problemas Comuns
 ```yaml
-前端常见问题:
-  - JavaScript异步问题
-  - React组件状态问题
-  - CSS布局问题
-  - 浏览器兼容性问题
+Problemas Comuns de Frontend:
+  - Problemas assíncronos em JavaScript
+  - Problemas de estado em componentes React
+  - Problemas de layout CSS
+  - Problemas de compatibilidade entre navegadores
 
-后端常见问题:
-  - 数据库连接问题
-  - API接口错误
-  - 服务器配置问题
-  - 微服务通信问题
+Problemas Comuns de Backend:
+  - Problemas de conexão com banco de dados
+  - Erros em interfaces API
+  - Problemas de configuração de servidor
+  - Problemas de comunicação entre microsserviços
 
-性能常见问题:
-  - 内存泄露定位
-  - CPU使用率过高
-  - 数据库查询优化
-  - 网络延迟问题
+Problemas Comuns de Desempenho:
+  - Localização de vazamento de memória
+  - Uso excessivo de CPU
+  - Otimização de consulta ao banco de dados
+  - Problemas de latência de rede
 ```
 
-### 调试最佳实践
+### Melhores Práticas de Depuração
 ```yaml
-调试原则:
-  - 系统化方法论
-  - 分层调试策略
-  - 数据驱动决策
-  - 经验积累共享
+Princípios de Depuração:
+  - Metodologia sistemática
+  - Estratégia de depuração em camadas
+  - Decisão baseada em dados
+  - Compartilhamento de acumulação de experiência
 
-调试技巧:
-  - 有效断点设置
-  - 日志分析方法
-  - 性能监控技巧
-  - 问题重现技术
+Técnicas de Depuração:
+  - Configuração eficaz de breakpoints
+  - Métodos de análise de log
+  - Técnicas de monitoramento de desempenho
+  - Técnicas de reprodução de problemas
 ```
 
 ---
 
-**🎯 规则优先级**: 625 (与Phase 2其他规则协同)  
-**🔄 更新频率**: 基于调试经验和工具发展持续优化  
-**📊 成功指标**: 调试效率提升60%+, 问题解决率>95%, 调试时间减少50%+  
-**🧠 AI模型**: 集成故障诊断和智能推理引擎
+**🎯 Prioridade da Regra**: 625 (Sinergia com outras regras da Fase 2)  
+**🔄 Frequência de Atualização**: Otimização contínua baseada em experiência de depuração e desenvolvimento de ferramentas  
+**📊 Indicadores de Sucesso**: Aumento de eficiência de depuração em 60%+, taxa de resolução de problemas > 95%, redução de tempo de depuração em 50%+  
+**🧠 Modelo IA**: Motor integrado de diagnóstico de falhas e raciocínio inteligente

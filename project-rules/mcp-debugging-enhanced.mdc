@@ -1,12 +1,12 @@
 ---
 type: "always_apply"
-description: "AI-powered MCP debugging and diagnostics with intelligent analysis - AI驱动的MCP调试和诊断工具"
+description: "AI-powered MCP debugging and diagnostics with intelligent analysis - Depuração e diagnóstico de MCP com tecnologia de IA e análise inteligente"
 globs: ["**/*"]
 priority: 652
 alwaysApply: true
 integrations: ["super-brain-system", "mcp-intelligent-strategy", "intelligent-project-management", "context-loader", "custom-command-builder", "systematic-debugging", "root-cause-analysis"]
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -17,469 +17,469 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adição do sistema de gerenciamento de versão"
+      - "Padronização da estrutura do arquivo de regras"
 ---
 
-# 🔧 MCP Debugging Enhanced - 增强MCP调试工具
+# 🔧 MCP Debugging Enhanced - Ferramenta de Depuração MCP Aprimorada
 
-AI驱动的MCP服务器调试和诊断系统，提供智能故障分析、性能监控和自动化修复建议。
+Sistema de depuração e diagnóstico de servidor MCP impulsionado por IA, fornecendo análise inteligente de falhas, monitoramento de desempenho e sugestões de correção automatizada.
 
-## 🧠 AI Intelligence Core - AI智能核心
+## 🧠 AI Intelligence Core - Núcleo de Inteligência de IA
 
-### 智能激活条件
+### Condições de Ativação Inteligente
 ```yaml
-自动激活场景:
-  - 检测到MCP工具连接失败或异常
-  - 用户执行 "/mcp-debug" 命令
-  - systematic-debugging触发MCP相关调试
-  - MCP工具性能异常或超时
-  - 超级大脑系统推荐MCP诊断
+Cenários de Ativação Automática:
+  - Detecção de falha ou anomalia na conexão da ferramenta MCP
+  - Usuário executa comando "/mcp-debug"
+  - systematic-debugging aciona depuração relacionada ao MCP
+  - Anomalia de desempenho ou timeout da ferramenta MCP
+  - Sistema Super Brain recomenda diagnóstico de MCP
 
-智能分析维度:
-  - MCP服务器状态和健康度 (35%)
-  - 网络连接和通信质量 (25%)
-  - 配置正确性和兼容性 (20%)
-  - 性能指标和资源使用 (15%)
-  - 错误模式和历史问题 (5%)
+Dimensões de Análise Inteligente:
+  - Status e integridade do servidor MCP (35%)
+  - Conexão de rede e qualidade de comunicação (25%)
+  - Correção e compatibilidade de configuração (20%)
+  - Métricas de desempenho e uso de recursos (15%)
+  - Padrões de erro e problemas históricos (5%)
 ```
 
-## 🚀 Commands - 智能命令
+## 🚀 Commands - Comandos Inteligentes
 
-- `/mcp-debug` - AI智能MCP调试（推荐）
-- `/mcp-debug --health` - MCP健康度检查
-- `/mcp-debug --performance` - MCP性能分析
-- `/mcp-debug --config` - MCP配置诊断
-- `/mcp-debug --network` - 网络连接诊断
-- `/mcp-debug --logs` - MCP日志分析
-- `/mcp-debug --fix` - 自动修复MCP问题
+- `/mcp-debug` - Depuração MCP inteligente por IA (Recomendado)
+- `/mcp-debug --health` - Verificação de integridade do MCP
+- `/mcp-debug --performance` - Análise de desempenho do MCP
+- `/mcp-debug --config` - Diagnóstico de configuração do MCP
+- `/mcp-debug --network` - Diagnóstico de conexão de rede
+- `/mcp-debug --logs` - Análise de logs do MCP
+- `/mcp-debug --fix` - Correção automática de problemas do MCP
 
-## ✨ AI-Powered Features - AI驱动功能
+## ✨ AI-Powered Features - Recursos Impulsionados por IA
 
-### 🤖 智能MCP诊断引擎
+### 🤖 Motor de Diagnóstico MCP Inteligente
 ```yaml
-MCP服务器分析:
-  状态检测:
-    - 服务器运行状态
-    - 进程健康度检查
-    - 内存和CPU使用
-    - 网络端口状态
+Análise de Servidor MCP:
+  Detecção de Status:
+    - Status de execução do servidor
+    - Verificação de integridade do processo
+    - Uso de memória e CPU
+    - Status da porta de rede
 
-  配置分析:
-    - MCP配置文件验证
-    - 环境变量检查
-    - 依赖关系分析
-    - 版本兼容性检查
+  Análise de Configuração:
+    - Validação de arquivo de configuração MCP
+    - Verificação de variáveis de ambiente
+    - Análise de dependências
+    - Verificação de compatibilidade de versão
 
-  性能监控:
-    - 响应时间监控
-    - 吞吐量分析
-    - 资源使用统计
-    - 错误率监控
+  Monitoramento de Desempenho:
+    - Monitoramento de tempo de resposta
+    - Análise de throughput
+    - Estatísticas de uso de recursos
+    - Monitoramento de taxa de erro
 
-  通信诊断:
-    - 协议兼容性检查
-    - 消息格式验证
-    - 数据传输质量
-    - 连接稳定性分析
+  Diagnóstico de Comunicação:
+    - Verificação de compatibilidade de protocolo
+    - Validação de formato de mensagem
+    - Qualidade de transmissão de dados
+    - Análise de estabilidade de conexão
 
-智能故障识别:
-  - 常见故障模式识别
-  - 异常行为检测
-  - 性能瓶颈定位
-  - 配置错误识别
+Identificação Inteligente de Falhas:
+  - Reconhecimento de padrões de falha comuns
+  - Detecção de comportamento anômalo
+  - Localização de gargalos de desempenho
+  - Identificação de erros de configuração
 ```
 
-### 🔧 自动化修复引擎
+### 🔧 Motor de Correção Automatizada
 ```yaml
-可自动修复的问题:
-  配置问题:
-    - 端口冲突解决
-    - 环境变量修复
-    - 路径配置纠正
-    - 权限问题修复
+Problemas Corrigíveis Automaticamente:
+  Problemas de Configuração:
+    - Resolução de conflito de porta
+    - Correção de variáveis de ambiente
+    - Correção de configuração de caminho
+    - Correção de problemas de permissão
 
-  连接问题:
-    - 网络连接重试
-    - 超时参数调整
-    - 协议版本协商
-    - 认证配置修复
+  Problemas de Conexão:
+    - Tentativa de reconexão de rede
+    - Ajuste de parâmetros de timeout
+    - Negociação de versão de protocolo
+    - Correção de configuração de autenticação
 
-  性能问题:
-    - 缓存配置优化
-    - 连接池调整
-    - 内存使用优化
-    - 并发参数调整
+  Problemas de Desempenho:
+    - Otimização de configuração de cache
+    - Ajuste de pool de conexões
+    - Otimização de uso de memória
+    - Ajuste de parâmetros de concorrência
 
-修复策略:
-  - 渐进式修复方法
-  - 影响最小化原则
-  - 自动备份和回滚
-  - 修复效果验证
+Estratégia de Correção:
+  - Método de correção progressiva
+  - Princípio de minimização de impacto
+  - Backup e rollback automáticos
+  - Validação de efeito de correção
 ```
 
-### 📊 智能监控和分析
+### 📊 Monitoramento e Análise Inteligentes
 ```yaml
-实时监控:
-  - MCP服务器状态监控
-  - 性能指标实时追踪
-  - 错误和异常监控
-  - 资源使用监控
+Monitoramento em Tempo Real:
+  - Monitoramento de status do servidor MCP
+  - Rastreamento de métricas de desempenho em tempo real
+  - Monitoramento de erros e exceções
+  - Monitoramento de uso de recursos
 
-历史分析:
-  - 性能趋势分析
-  - 错误模式识别
-  - 使用统计分析
-  - 优化效果评估
+Análise Histórica:
+  - Análise de tendências de desempenho
+  - Reconhecimento de padrões de erro
+  - Análise de estatísticas de uso
+  - Avaliação de efeito de otimização
 
-预测分析:
-  - 故障风险预测
-  - 性能瓶颈预警
-  - 资源需求预测
-  - 维护时机建议
+Análise Preditiva:
+  - Previsão de risco de falha
+  - Alerta de gargalo de desempenho
+  - Previsão de demanda de recursos
+  - Sugestão de momento de manutenção
 ```
 
-## 🔄 AI Workflow Process - AI工作流程
+## 🔄 AI Workflow Process - Processo de Fluxo de Trabalho de IA
 
-### Phase 1: 诊断扫描阶段
+### Phase 1: Fase de Varredura de Diagnóstico
 ```yaml
-Step 1 - 环境检测:
-  - 扫描所有已安装的MCP工具
-  - 检查MCP服务器运行状态
-  - 分析MCP配置文件
-  - 验证环境变量和依赖
+Step 1 - Detecção de Ambiente:
+  - Varredura de todas as ferramentas MCP instaladas
+  - Verificação de status de execução do servidor MCP
+  - Análise de arquivos de configuração MCP
+  - Validação de variáveis de ambiente e dependências
 
-Step 2 - 连接测试:
-  - 测试MCP服务器连接
-  - 验证通信协议
-  - 检查认证和权限
-  - 测试基本功能调用
+Step 2 - Teste de Conexão:
+  - Teste de conexão do servidor MCP
+  - Validação de protocolo de comunicação
+  - Verificação de autenticação e permissões
+  - Teste de chamada de funcionalidade básica
 
-Step 3 - 性能基准:
-  - 测量响应时间
-  - 评估吞吐量
-  - 监控资源使用
-  - 建立性能基线
+Step 3 - Benchmark de Desempenho:
+  - Medição de tempo de resposta
+  - Avaliação de throughput
+  - Monitoramento de uso de recursos
+  - Estabelecimento de linha de base de desempenho
 ```
 
-### Phase 2: 深度分析阶段
+### Phase 2: Fase de Análise Profunda
 ```yaml
-Step 4 - 故障分析:
-  - 分析错误日志和堆栈
-  - 识别故障模式和原因
-  - 评估故障影响范围
-  - 生成故障分析报告
+Step 4 - Análise de Falhas:
+  - Análise de logs de erro e stack traces
+  - Identificação de padrões e causas de falhas
+  - Avaliação de escopo de impacto de falha
+  - Geração de relatório de análise de falha
 
-Step 5 - 性能分析:
-  - 识别性能瓶颈
-  - 分析资源使用模式
-  - 评估优化机会
-  - 生成性能分析报告
+Step 5 - Análise de Desempenho:
+  - Identificação de gargalos de desempenho
+  - Análise de padrões de uso de recursos
+  - Avaliação de oportunidades de otimização
+  - Geração de relatório de análise de desempenho
 
-Step 6 - 配置分析:
-  - 验证配置正确性
-  - 识别配置冲突
-  - 分析最佳实践偏离
-  - 生成配置优化建议
+Step 6 - Análise de Configuração:
+  - Validação de correção de configuração
+  - Identificação de conflitos de configuração
+  - Análise de desvio de melhores práticas
+  - Geração de sugestões de otimização de configuração
 ```
 
-### Phase 3: 修复优化阶段
+### Phase 3: Fase de Correção e Otimização
 ```yaml
-Step 7 - 自动修复:
-  - 执行可自动修复的问题
-  - 应用配置优化建议
-  - 实施性能优化措施
-  - 验证修复效果
+Step 7 - Correção Automática:
+  - Execução de problemas corrigíveis automaticamente
+  - Aplicação de sugestões de otimização de configuração
+  - Implementação de medidas de otimização de desempenho
+  - Validação de efeito de correção
 
-Step 8 - 监控设置:
-  - 建立持续监控机制
-  - 配置预警和通知
-  - 设置性能基准监控
-  - 启用自动化维护
+Step 8 - Configuração de Monitoramento:
+  - Estabelecimento de mecanismo de monitoramento contínuo
+  - Configuração de alertas e notificações
+  - Configuração de monitoramento de linha de base de desempenho
+  - Ativação de manutenção automatizada
 ```
 
-## 🧠 Super Brain Integration - 超级大脑集成
+## 🧠 Super Brain Integration - Integração Super Brain
 
-### 智能推荐引擎
+### Motor de Recomendação Inteligente
 ```yaml
-MCP工具推荐:
-  - 基于项目需求推荐MCP工具
-  - 根据使用模式优化工具配置
-  - 提供工具升级和替换建议
-  - 推荐新的MCP工具和功能
+Recomendação de Ferramentas MCP:
+  - Recomendação de ferramentas MCP baseada em requisitos do projeto
+  - Otimização de configuração de ferramentas baseada em padrões de uso
+  - Sugestões de atualização e substituição de ferramentas
+  - Recomendação de novas ferramentas e funcionalidades MCP
 
-学习和优化:
-  - 学习MCP使用模式和偏好
-  - 积累故障解决经验
-  - 优化诊断算法准确性
-  - 建立MCP最佳实践库
+Aprendizado e Otimização:
+  - Aprendizado de padrões e preferências de uso de MCP
+  - Acúmulo de experiência em resolução de falhas
+  - Otimização de precisão de algoritmos de diagnóstico
+  - Estabelecimento de biblioteca de melhores práticas de MCP
 
-项目管理集成:
-  - 根据项目阶段调整MCP配置
-  - 集成到五阶段管理流程
-  - 提供阶段特定的MCP建议
-  - 支持MCP工具发展规划
+Integração de Gestão de Projetos:
+  - Ajuste de configuração MCP baseado na fase do projeto
+  - Integração ao fluxo de gestão de cinco fases
+  - Fornecimento de sugestões MCP específicas da fase
+  - Suporte ao planejamento de desenvolvimento de ferramentas MCP
 ```
 
-### 与其他规则协同
+### Colaboração com Outras Regras
 ```yaml
-systematic-debugging协同:
-  - 为系统调试提供MCP专业支持
-  - 集成MCP故障到整体调试流程
-  - 提供MCP特定的调试策略
-  - 优化调试工具选择
+Colaboração systematic-debugging:
+  - Fornecimento de suporte profissional MCP para depuração do sistema
+  - Integração de falhas MCP ao fluxo geral de depuração
+  - Fornecimento de estratégias de depuração específicas para MCP
+  - Otimização de seleção de ferramentas de depuração
 
-root-cause-analysis协同:
-  - 为MCP问题提供根因分析
-  - 集成MCP故障模式识别
-  - 提供MCP问题解决方案
-  - 建立MCP问题预防机制
+Colaboração root-cause-analysis:
+  - Fornecimento de análise de causa raiz para problemas MCP
+  - Integração de reconhecimento de padrões de falha MCP
+  - Fornecimento de soluções para problemas MCP
+  - Estabelecimento de mecanismo de prevenção de problemas MCP
 
-mcp-intelligent-strategy协同:
-  - 增强MCP工具智能使用策略
-  - 提供深度的MCP诊断能力
-  - 优化MCP工具编排效率
-  - 集成到MCP管理流程
+Colaboração mcp-intelligent-strategy:
+  - Aprimoramento de estratégias de uso inteligente de ferramentas MCP
+  - Fornecimento de capacidades profundas de diagnóstico MCP
+  - Otimização de eficiência de orquestração de ferramentas MCP
+  - Integração ao fluxo de gestão MCP
 ```
 
-## 📋 MCP Debugging Categories - MCP调试分类
+## 📋 MCP Debugging Categories - Categorias de Depuração MCP
 
-### 🔴 Critical MCP Issues - 致命MCP问题
+### 🔴 Critical MCP Issues - Problemas Críticos de MCP
 ```yaml
-服务器故障:
-  - MCP服务器完全不响应
-  - 服务器进程崩溃
-  - 内存泄露导致系统不稳定
-  - 安全漏洞暴露
+Falha de Servidor:
+  - Servidor MCP totalmente não responsivo
+  - Falha de processo do servidor
+  - Vazamento de memória causando instabilidade do sistema
+  - Exposição de vulnerabilidade de segurança
 
-诊断策略:
-  - 立即服务器重启
-  - 紧急故障转移
-  - 安全隔离措施
-  - 紧急通知机制
+Estratégia de Diagnóstico:
+  - Reinicialização imediata do servidor
+  - Failover de emergência
+  - Medidas de isolamento de segurança
+  - Mecanismo de notificação de emergência
 ```
 
-### 🟠 High Priority MCP Issues - 高优先级MCP问题
+### 🟠 High Priority MCP Issues - Problemas de MCP de Alta Prioridade
 ```yaml
-连接问题:
-  - 间歇性连接失败
-  - 认证和授权错误
-  - 协议版本不兼容
-  - 网络延迟过高
+Problemas de Conexão:
+  - Falha de conexão intermitente
+  - Erros de autenticação e autorização
+  - Incompatibilidade de versão de protocolo
+  - Latência de rede excessiva
 
-诊断策略:
-  - 连接质量分析
-  - 认证配置检查
-  - 协议兼容性测试
-  - 网络优化建议
+Estratégia de Diagnóstico:
+  - Análise de qualidade de conexão
+  - Verificação de configuração de autenticação
+  - Teste de compatibilidade de protocolo
+  - Sugestões de otimização de rede
 ```
 
-### 🟡 Medium Priority MCP Issues - 中优先级MCP问题
+### 🟡 Medium Priority MCP Issues - Problemas de MCP de Média Prioridade
 ```yaml
-性能问题:
-  - 响应时间过长
-  - 吞吐量不足
-  - 资源使用过高
-  - 缓存效率低下
+Problemas de Desempenho:
+  - Tempo de resposta excessivo
+  - Throughput insuficiente
+  - Uso de recursos excessivo
+  - Baixa eficiência de cache
 
-诊断策略:
-  - 性能瓶颈分析
-  - 资源使用优化
-  - 缓存策略调整
-  - 配置参数调优
+Estratégia de Diagnóstico:
+  - Análise de gargalo de desempenho
+  - Otimização de uso de recursos
+  - Ajuste de estratégia de cache
+  - Ajuste fino de parâmetros de configuração
 ```
 
-### 🟢 Low Priority MCP Issues - 低优先级MCP问题
+### 🟢 Low Priority MCP Issues - Problemas de MCP de Baixa Prioridade
 ```yaml
-配置优化:
-  - 配置参数不是最优
-  - 功能使用不充分
-  - 版本更新建议
-  - 最佳实践偏离
+Otimização de Configuração:
+  - Parâmetros de configuração não ideais
+  - Uso insuficiente de funcionalidades
+  - Sugestões de atualização de versão
+  - Desvio de melhores práticas
 
-诊断策略:
-  - 配置优化建议
-  - 功能使用指导
-  - 版本升级规划
-  - 最佳实践推荐
+Estratégia de Diagnóstico:
+  - Sugestões de otimização de configuração
+  - Orientação de uso de funcionalidades
+  - Planejamento de atualização de versão
+  - Recomendação de melhores práticas
 ```
 
-## 🛠️ MCP Tools Integration - MCP工具集成
+## 🛠️ MCP Tools Integration - Integração de Ferramentas MCP
 
-### 支持的MCP工具
+### Ferramentas MCP Suportadas
 ```yaml
-官方MCP工具:
+Ferramentas MCP Oficiais:
   - @modelcontextprotocol/server-filesystem
   - @modelcontextprotocol/server-github
-  - @modelcontextprotocol/server-memory  # 可选（按需启用）
+  - @modelcontextprotocol/server-memory  # Opcional (ativado sob demanda)
   - @modelcontextprotocol/server-everything
   - codebase-retrieval
   - context7
 
-第三方MCP工具:
+Ferramentas MCP de Terceiros:
   - mcp-feedback-enhanced
-  - chrome-devtools  # CDP 调试集成（浏览器调试与性能分析）
-  - playwright       # 端到端测试/自动化
-  - 自定义MCP服务器
-  - 企业级MCP工具
-  - 社区开发MCP工具
+  - chrome-devtools  # Integração de depuração CDP (depuração e análise de desempenho de navegador)
+  - playwright       # Teste E2E/automação
+  - Servidores MCP personalizados
+  - Ferramentas MCP de nível empresarial
+  - Ferramentas MCP desenvolvidas pela comunidade
 
-调试支持:
-  - 所有工具的连接诊断
-  - 工具特定的性能分析
-  - 配置验证和优化
-  - 故障排除和修复
+Suporte de Depuração:
+  - Diagnóstico de conexão para todas as ferramentas
+  - Análise de desempenho específica da ferramenta
+  - Validação e otimização de configuração
+  - Resolução e correção de falhas
 ```
 
-### 调试工具集成
+### Integração de Ferramentas de Depuração
 ```yaml
-调试界面:
-  - MCP Inspector UI集成
-  - 自定义调试面板
-  - 实时监控界面
-  - 日志查看器
+Interface de Depuração:
+  - Integração de UI do MCP Inspector
+  - Painel de depuração personalizado
+  - Interface de monitoramento em tempo real
+  - Visualizador de logs
 
-调试工具:
-  - 网络抓包工具
-  - 性能分析器
-  - 内存分析器
-  - 日志分析工具
-  - Chrome DevTools Protocol (CDP) 集成：网络、控制台、DOM、性能事件监控
+Ferramentas de Depuração:
+  - Ferramentas de captura de pacotes de rede
+  - Analisador de desempenho
+  - Analisador de memória
+  - Ferramenta de análise de logs
+  - Integração Chrome DevTools Protocol (CDP): Monitoramento de eventos de rede, console, DOM, desempenho
 
-自动化工具:
-  - 自动化测试套件（Playwright 集成）
-  - 性能基准测试
-  - 配置验证工具
-  - 故障模拟器
+Ferramentas de Automação:
+  - Suíte de testes automatizados (Integração Playwright)
+  - Teste de benchmark de desempenho
+  - Ferramenta de validação de configuração
+  - Simulador de falhas
 ```
 
-### 🔎 智能激活条件（Playwright 与 Chrome DevTools）
+### 🔎 Condições de Ativação Inteligente (Playwright e Chrome DevTools)
 ```yaml
-触发来源:
-  用户意图:
-    - 测试/E2E/回归/自动化/CI/覆盖率
-    - 前端调试/浏览器错误/控制台异常/网络失败/白屏/卡顿/性能问题/内存泄漏
-  项目类型:
+Fonte de Disparo:
+  Intenção do Usuário:
+    - teste/E2E/regressão/automação/CI/cobertura
+    - depuração frontend/erro de navegador/exceção de console/falha de rede/tela branca/travamento/problema de desempenho/vazamento de memória
+  Tipo de Projeto:
     - frontend
     - full-stack
-  文件特征:
+  Características de Arquivo:
     - playwright.config.(ts|js)
     - **/tests/**, **/e2e/**
-    - package.json 中存在 devDependencies.@playwright/test
-  运行端口/服务:
-    - http://localhost:9222/json/version 可访问（Chrome 远程调试端口）
+    - package.json contém devDependencies.@playwright/test
+  Porta/Serviço em Execução:
+    - http://localhost:9222/json/version acessível (Porta de depuração remota do Chrome)
 
-激活逻辑:
-  Playwright（测试自动化）:
-    条件:
-      - 命中“测试/E2E/回归/自动化/CI”等意图 或 项目类型为前端/全栈 且检测到 Playwright 配置/依赖
-    行为:
-      - 优先提示执行: npx playwright test --project=chromium --headed
-      - 根据需求追加: --grep <标签>、--reporter=html、--project=webkit/firefox
-      - 未安装时: 提示安装并引导执行 npm i -D @playwright/test && npx playwright install
-      - 记录测试结果与报告链接，纳入 Recorder/知识管理
-  Chrome DevTools（CDP 调试）:
-    条件:
-      - 命中“前端调试/性能问题/浏览器错误/白屏/卡顿/内存泄漏”等意图 或 项目类型为前端/全栈
-    行为:
-      - 检查并提示启动: chrome --remote-debugging-port=9222
-      - 自动获取 webSocketDebuggerUrl: 访问 http://localhost:9222/json/version
-      - 连接后执行: 网络/控制台/DOM/性能/内存 的采集与分析工作流
-      - 未开启端口或无法连接时: 提供一键启动与连接引导
-  组合策略:
-    - 同时命中测试与调试意图时，优先通过 mcp-feedback-enhanced 征询选择（仅调试、仅测试、两者都做）
-    - 推荐工作流: CDP 诊断 → 修复 → Playwright 冒烟/关键路径回归 → 报告归档
+Lógica de Ativação:
+  Playwright (Automação de Teste):
+    Condição:
+      - Corresponde a intenções como "teste/E2E/regressão/automação/CI" OU tipo de projeto é frontend/full-stack E configuração/dependência Playwright detectada
+    Comportamento:
+      - Priorizar sugestão de execução: npx playwright test --project=chromium --headed
+      - Adicionar conforme necessário: --grep <tag>, --reporter=html, --project=webkit/firefox
+      - Se não instalado: Sugerir instalação e guiar execução npm i -D @playwright/test && npx playwright install
+      - Registrar resultados de teste e link de relatório, incluir em Recorder/Gestão de Conhecimento
+  Chrome DevTools (Depuração CDP):
+    Condição:
+      - Corresponde a intenções como "depuração frontend/problema de desempenho/erro de navegador/tela branca/travamento/vazamento de memória" OU tipo de projeto é frontend/full-stack
+    Comportamento:
+      - Verificar e sugerir inicialização: chrome --remote-debugging-port=9222
+      - Obter automaticamente webSocketDebuggerUrl: Acessar http://localhost:9222/json/version
+      - Executar após conexão: Fluxo de trabalho de coleta e análise de rede/console/DOM/desempenho/memória
+      - Se porta não aberta ou impossível conectar: Fornecer guia de inicialização e conexão com um clique
+  Estratégia Combinada:
+    - Quando intenções de teste e depuração coincidem, priorizar consulta via mcp-feedback-enhanced (apenas depuração, apenas teste, ambos)
+    - Fluxo de trabalho recomendado: Diagnóstico CDP → Correção → Regressão de caminho crítico/Smoke Playwright → Arquivamento de relatório
 
-检测与安装:
-  - 依赖 install-mcp-tools-enhanced-final.ps1 的检测与提示能力（未安装时提供一键安装/配置）
-  - 与 mcp-unified-management 的场景化推荐策略保持一致（基于项目类型与意图触发）
+Detecção e Instalação:
+  - Capacidade de detecção e sugestão dependente de install-mcp-tools-enhanced-final.ps1 (oferecer instalação/configuração com um clique se não instalado)
+  - Consistente com estratégia de recomendação baseada em cenário de mcp-unified-management (disparo baseado em tipo de projeto e intenção)
 
-安全与回滚:
-  - 所有执行前进行参数确认（通过 feedback-enhanced 收集偏好）
-  - 执行失败时保留日志与采集数据，便于后续复盘与重试
+Segurança e Rollback:
+  - Confirmação de parâmetros antes de todas as execuções (coletar preferências via feedback-enhanced)
+  - Manter logs e dados coletados em caso de falha de execução, para facilitar revisão e nova tentativa
 ```
 
-## 🚨 Error Handling & Safety - 错误处理和安全保障
+## 🚨 Error Handling & Safety - Tratamento de Erros e Segurança
 
-### 统一错误处理机制
+### Mecanismo Unificado de Tratamento de Erros
 ```yaml
-错误分类:
-  Level 1 - 致命错误:
-    - MCP调试引擎完全故障
-    - 系统权限不足无法调试
-    - 关键MCP服务器完全不可用
-    - 网络连接完全中断
+Classificação de Erros:
+  Level 1 - Erro Fatal:
+    - Falha total do motor de depuração MCP
+    - Permissões de sistema insuficientes para depuração
+    - Servidor MCP crítico totalmente indisponível
+    - Interrupção total da conexão de rede
 
-  Level 2 - 严重错误:
-    - 部分MCP工具调试失败
-    - 诊断引擎响应超时
-    - 配置文件解析错误
-    - 关键监控数据缺失
+  Level 2 - Erro Grave:
+    - Falha de depuração de algumas ferramentas MCP
+    - Timeout de resposta do motor de diagnóstico
+    - Erro de análise de arquivo de configuração
+    - Dados de monitoramento críticos ausentes
 
-  Level 3 - 一般错误:
-    - 单个MCP工具连接失败
-    - 性能数据收集不完整
-    - 日志文件访问受限
-    - 缓存数据不一致
+  Level 3 - Erro Geral:
+    - Falha de conexão de ferramenta MCP única
+    - Coleta de dados de desempenho incompleta
+    - Acesso limitado a arquivo de log
+    - Inconsistência de dados de cache
 
-  Level 4 - 警告信息:
-    - MCP工具版本过时
-    - 配置参数不是最优
-    - 性能指标异常
-    - 建议更新工具
+  Level 4 - Informação de Aviso:
+    - Versão de ferramenta MCP desatualizada
+    - Parâmetros de configuração não ideais
+    - Anomalia de métrica de desempenho
+    - Sugestão de atualização de ferramenta
 ```
 
-### 错误恢复策略
+### Estratégia de Recuperação de Erros
 ```yaml
-自动恢复:
-  - MCP服务器重启和重连机制
-  - 备用调试工具切换
-  - 缓存数据恢复
-  - 降级调试模式
+Recuperação Automática:
+  - Mecanismo de reinicialização e reconexão de servidor MCP
+  - Alternância para ferramenta de depuração de backup
+  - Recuperação de dados de cache
+  - Modo de depuração degradado
 
-人工干预:
-  - 致命错误立即通知用户
-  - 提供详细错误信息和解决方案
-  - 支持手动调试模式
-  - 集成feedback-enhanced反馈
+Intervenção Manual:
+  - Notificação imediata ao usuário sobre erros fatais
+  - Fornecimento de informações detalhadas sobre erros e soluções
+  - Suporte ao modo de depuração manual
+  - Integração de feedback feedback-enhanced
 
-日志记录:
-  - 完整的调试过程日志
-  - MCP通信日志记录
-  - 错误堆栈和上下文
-  - 修复操作详情
+Registro de Logs:
+  - Log completo do processo de depuração
+  - Registro de log de comunicação MCP
+  - Stack de erros e contexto
+  - Detalhes da operação de correção
 
-与其他规则协调:
-  - 与systematic-debugging共享错误处理
-  - 与root-cause-analysis协调分析
-  - 与所有规则统一安全措施
-  - 集成的恢复策略
+Coordenação com Outras Regras:
+  - Compartilhamento de tratamento de erros com systematic-debugging
+  - Coordenação de análise com root-cause-analysis
+  - Unificação de medidas de segurança com todas as regras
+  - Estratégias de recuperação integradas
 ```
 
-### 安全保障机制
+### Mecanismo de Garantia de Segurança
 ```yaml
-调试安全:
-  - MCP调试数据加密保护
-  - 敏感配置信息过滤
-  - 调试权限验证
-  - 操作审计日志
+Segurança de Depuração:
+  - Proteção de criptografia de dados de depuração MCP
+  - Filtragem de informações de configuração sensíveis
+  - Validação de permissão de depuração
+  - Log de auditoria de operações
 
-系统安全:
-  - 调试操作沙箱隔离
-  - 危险操作确认机制
-  - 自动备份重要配置
-  - 异常行为监控
+Segurança do Sistema:
+  - Isolamento de sandbox para operações de depuração
+  - Mecanismo de confirmação para operações perigosas
+  - Backup automático de configurações importantes
+  - Monitoramento de comportamento anômalo
 
-数据安全:
-  - 调试数据安全存储
-  - 访问权限控制
-  - 数据传输加密
-  - 隐私信息保护
+Segurança de Dados:
+  - Armazenamento seguro de dados de depuração
+  - Controle de permissão de acesso
+  - Criptografia de transmissão de dados
+  - Proteção de informações de privacidade
 ```
 
 ---
 
-**🎯 规则优先级**: 660 (MCP专业调试支持)  
-**🔄 更新频率**: 基于MCP生态发展和故障反馈持续优化  
-**📊 成功指标**: 故障诊断准确率>90%, 修复成功率>85%, 性能优化效果>30%  
-**🧠 AI模型**: 集成MCP协议分析和故障诊断引擎
+**🎯 Prioridade da Regra**: 660 (Suporte Profissional de Depuração MCP)  
+**🔄 Frequência de Atualização**: Otimização contínua baseada no desenvolvimento do ecossistema MCP e feedback de falhas  
+**📊 Indicadores de Sucesso**: Precisão de diagnóstico de falhas > 90%, Taxa de sucesso de correção > 85%, Efeito de otimização de desempenho > 30%  
+**🧠 Modelo de IA**: Integração de análise de protocolo MCP e motor de diagnóstico de falhas

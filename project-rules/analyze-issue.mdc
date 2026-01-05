@@ -1,11 +1,11 @@
 ---
 type: "utility_rule"
-description: "GitHub issue analysis and implementation specification - GitHub问题分析和实现规范"
+description: "Análise de problemas do GitHub e especificação de implementação"
 globs: ["**/*"]
 priority: 300
 alwaysApply: false
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -16,169 +16,169 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adicionado sistema de gerenciamento de versão"
+      - "Padronizada estrutura do arquivo de regra"
 ---
 
-# 🔍 Issue Analysis - 问题分析
+# 🔍 Issue Analysis - Análise de Problemas
 
-分析GitHub问题并创建详细的实现规范。
+Analisa problemas do GitHub e cria especificações detalhadas de implementação.
 
-## 🚀 Commands - 命令
+## 🚀 Commands - Comandos
 
-- `/analyze-issue` - 分析GitHub问题
-- `/issue-spec` - 创建实现规范
-- `/estimate` - 评估工作量
+- `/analyze-issue` - Analisa um problema do GitHub
+- `/issue-spec` - Cria uma especificação de implementação
+- `/estimate` - Avalia o esforço (estimativa)
 
-## 🧠 前置步骤：Context7 知识预载（修复/新项目前置）
-- 触发时机：开始 /analyze-issue 前，问题类型为 Bug/错误/异常 或 新功能/新项目分析
-- 执行：
-  - 使用 Context7 在 src、docs、tests、config、README.*、architecture、api 目录检索相关材料（错误堆栈、模块、接口、约束、历史决策）
-  - 质量阈值：至少 5 个高相关片段或覆盖 3 类关键材料；评分 ≥ 0.65；超时 60s
-  - 回退：Context7 → 代码检索（search_codebase/search_by_regex）→ 文件系统读取
-  - 记录与确认：将“知识预载摘要”写入 project.context.md 的 Pinned，并通过增强反馈机制确认后继续
-- 跳过条件：纯文档/注释、打印文案微调、单文件小范围变量改名等轻量变更
+## 🧠 Passo Anterior: Pré-carregamento de Conhecimento Context7 (Pré-requisito para Correção/Novo Projeto)
+- Momento de Disparo: Antes de iniciar `/analyze-issue`, quando o tipo de problema for Bug/Erro/Exceção ou análise de Nova Funcionalidade/Novo Projeto.
+- Execução:
+  - Usar Context7 para recuperar materiais relevantes nos diretórios `src`, `docs`, `tests`, `config`, `README.*`, `architecture`, `api` (stack de erros, módulos, interfaces, restrições, decisões históricas).
+  - Limite de Qualidade: Pelo menos 5 fragmentos altamente relevantes ou cobertura de 3 tipos de materiais críticos; pontuação ≥ 0.65; tempo limite 60s.
+  - Alternativa (Fallback): Context7 → Busca de código (search_codebase/search_by_regex) → Leitura do sistema de arquivos.
+  - Registro e Confirmação: Escrever o "Resumo do Pré-carregamento de Conhecimento" na seção Pinned do `project.context.md` e continuar após confirmação via mecanismo de feedback aprimorado.
+- Condição de Pulo: Alterações leves como apenas documentos/comentários, pequenos ajustes de texto de impressão, renomeação de variáveis de pequeno escopo em arquivo único, etc.
 
-## 📋 Process - 分析流程
+## 📋 Process - Fluxo de Análise
 
-### 1. 🔍 问题理解 (Issue Understanding)
-- 仔细阅读问题描述和评论
-- 识别核心需求和约束条件
-- 理解用户期望和使用场景
-- **转换条件**：问题理解清晰，需求明确
+### 1. 🔍 Compreensão do Problema (Issue Understanding)
+- Ler cuidadosamente a descrição do problema e os comentários
+- Identificar requisitos centrais e restrições
+- Compreender as expectativas do usuário e cenários de uso
+- **Condição de Transição**: Compreensão clara do problema, requisitos definidos
 
-### 2. 📊 技术分析 (Technical Analysis)
-- 分析现有代码库结构
-- 识别相关模块和依赖
-- 评估技术可行性
-- **转换条件**：技术方案可行，风险可控
+### 2. 📊 Análise Técnica (Technical Analysis)
+- Analisar a estrutura atual da base de código
+- Identificar módulos e dependências relacionados
+- Avaliar a viabilidade técnica
+- **Condição de Transição**: Solução técnica viável, riscos controlados
 
-### 3. 📝 实现规范 (Implementation Spec)
-- 创建详细的实现计划
-- 定义接口和数据结构
-- 规划测试策略
-- **转换条件**：规范完整，可执行性强
+### 3. 📝 Especificação de Implementação (Implementation Spec)
+- Criar um plano detalhado de implementação
+- Definir interfaces e estruturas de dados
+- Planejar a estratégia de testes
+- **Condição de Transição**: Especificação completa, alta capacidade de execução
 
-### 4. ⏱️ 工作量评估 (Effort Estimation)
-- 评估开发时间
-- 识别潜在风险
-- 制定里程碑计划
-- **转换条件**：评估合理，计划可行
+### 4. ⏱️ Avaliação de Esforço (Effort Estimation)
+- Avaliar o tempo de desenvolvimento
+- Identificar riscos potenciais
+- Definir plano de marcos (milestones)
+- **Condição de Transição**: Avaliação razoável, plano viável
 
-## 🛠️ Analysis Framework - 分析框架
+## 🛠️ Analysis Framework - Estrutura de Análise
 
-### Issue Classification - 问题分类
-- **Bug** 🐛 - 功能缺陷
-- **Feature** ✨ - 新功能需求
-- **Enhancement** ⚡ - 功能改进
-- **Documentation** 📝 - 文档相关
-- **Performance** 🚀 - 性能优化
-- **Security** 🔒 - 安全问题
+### Classificação de Problemas (Issue Classification)
+- **Bug** 🐛 - Defeito funcional
+- **Feature** ✨ - Requisito de nova funcionalidade
+- **Enhancement** ⚡ - Melhoria funcional
+- **Documentation** 📝 - Relacionado a documentação
+- **Performance** 🚀 - Otimização de performance
+- **Security** 🔒 - Problema de segurança
 
-### Priority Assessment - 优先级评估
-- **Critical** 🔴 - 阻塞性问题
-- **High** 🟠 - 重要功能
-- **Medium** 🟡 - 一般需求
-- **Low** 🟢 - 优化建议
+### Avaliação de Prioridade (Priority Assessment)
+- **Crítica (Critical)** 🔴 - Problema bloqueador
+- **Alta (High)** 🟠 - Funcionalidade importante
+- **Média (Medium)** 🟡 - Requisito geral
+- **Baixa (Low)** 🟢 - Sugestão de otimização
 
-### Complexity Analysis - 复杂度分析
-- **Simple** - 1-2天
-- **Medium** - 3-5天
-- **Complex** - 1-2周
-- **Epic** - 2周以上
+### Análise de Complexidade (Complexity Analysis)
+- **Simples (Simple)** - 1-2 dias
+- **Média (Medium)** - 3-5 dias
+- **Complexa (Complex)** - 1-2 semanas
+- **Épica (Epic)** - Mais de 2 semanas
 
-## 📋 Implementation Template - 实现模板
+## 📋 Modelo de Implementação - Template de Implementação
 
-### 问题分析报告
+### Relatório de Análise de Problema
 ```markdown
-## 问题分析
+## Análise do Problema
 
-### 核心需求
-- [ ] 需求1：描述
-- [ ] 需求2：描述
+### Requisitos Centrais
+- [ ] Requisito 1: Descrição
+- [ ] Requisito 2: Descrição
 
-### 技术要求
-- [ ] 技术要求1
-- [ ] 技术要求2
+### Requisitos Técnicos
+- [ ] Requisito técnico 1
+- [ ] Requisito técnico 2
 
-### 约束条件
-- [ ] 约束1
-- [ ] 约束2
+### Restrições
+- [ ] Restrição 1
+- [ ] Restrição 2
 
-## 实现方案
+## Plano de Implementação
 
-### 架构设计
-- 模块结构
-- 数据流设计
-- 接口定义
+### Design de Arquitetura
+- Estrutura de módulos
+- Design de fluxo de dados
+- Definição de interfaces
 
-### 实现步骤
-1. [ ] 步骤1
-2. [ ] 步骤2
-3. [ ] 步骤3
+### Passos de Implementação
+1. [ ] Passo 1
+2. [ ] Passo 2
+3. [ ] Passo 3
 
-### 测试策略
-- [ ] 单元测试
-- [ ] 集成测试
-- [ ] 用户验收测试
+### Estratégia de Testes
+- [ ] Testes unitários
+- [ ] Testes de integração
+- [ ] Testes de aceitação do usuário (UAT)
 
-## 工作量评估
+## Avaliação de Esforço
 
-- **预估时间**：X天
-- **风险等级**：低/中/高
-- **依赖项**：列出依赖
+- **Tempo estimado**: X dias
+- **Nível de risco**: Baixo/Médio/Alto
+- **Dependências**: Listar dependências
 ```
 
-## ✅ Best Practices - 最佳实践
+## ✅ Melhores Práticas - Best Practices
 
-### 分析原则
-- **全面性** - 考虑所有相关因素
-- **准确性** - 基于事实和数据
-- **可行性** - 方案切实可行
-- **可测试性** - 结果可验证
+### Princípios de Análise
+- **Abrangência** - Considerar todos os fatores relevantes
+- **Precisão** - Baseado em fatos e dados
+- **Viabilidade** - Solução prática e realizável
+- **Testabilidade** - Resultados verificáveis
 
-### 沟通策略
-- **及时反馈** - 定期更新进展
-- **主动澄清** - 遇到歧义及时确认
-- **文档记录** - 重要决策要记录
-- **风险预警** - 提前识别和沟通风险
+### Estratégia de Comunicação
+- **Feedback tempestivo** - Atualizar o progresso regularmente
+- **Clarificação ativa** - Confirmar imediatamente em caso de ambiguidade
+- **Registro documental** - Registrar decisões importantes
+- **Aviso de risco** - Identificar e comunicar riscos antecipadamente
 
-## 🔧 Tools Integration - 工具集成
+## 🔧 Integração de Ferramentas - Tools Integration
 
 ### GitHub CLI
 ```bash
-# 获取问题详情
+# Obter detalhes do problema
 gh issue view <issue-number>
 
-# 创建分支
+# Criar branch
 gh issue develop <issue-number>
 
-# 关联PR
+# Associar PR
 gh pr create --title "Fix #<issue-number>"
 ```
 
-### 项目管理
-- 创建项目看板
-- 设置里程碑
-- 分配任务标签
-- 跟踪进度
+### Gerenciamento de Projeto
+- Criar quadro (board) do projeto
+- Definir marcos (milestones)
+- Atribuir etiquetas (labels) de tarefa
+- Rastrear progresso
 
-## 📋 Checklist - 检查清单
+## 📋 Checklist - Lista de Verificação
 
-### 分析阶段
-- [ ] 问题描述理解清晰
-- [ ] 技术可行性确认
-- [ ] 资源需求评估完成
-- [ ] 风险识别和缓解方案
+### Fase de Análise
+- [ ] Descrição do problema compreendida claramente
+- [ ] Viabilidade técnica confirmada
+- [ ] Avaliação de requisitos de recursos concluída
+- [ ] Identificação de riscos e plano de mitigação
 
-### 规范阶段
-- [ ] 实现方案详细完整
-- [ ] 接口设计合理
-- [ ] 测试策略覆盖全面
-- [ ] 文档更新计划
+### Fase de Especificação
+- [ ] Plano de implementação detalhado e completo
+- [ ] Design de interface razoável
+- [ ] Estratégia de testes com cobertura total
+- [ ] Plano de atualização de documentação
 
-### 评估阶段
-- [ ] 工作量评估合理
-- [ ] 时间计划可行
-- [ ] 依赖关系明确
-- [ ] 验收标准清晰
+### Fase de Avaliação
+- [ ] Avaliação de esforço razoável
+- [ ] Cronograma viável
+- [ ] Relações de dependência claras
+- [ ] Critérios de aceitação nítidos

@@ -1,12 +1,12 @@
 ---
 type: "always_apply"
-description: "AI-powered changelog management with automatic generation and version tracking - AI驱动的变更日志管理"
+description: "Gerenciamento de changelog impulsionado por IA com geração automática e rastreamento de versão"
 globs: ["**/*"]
 priority: 620
 alwaysApply: true
 integrations: ["super-brain-system", "mcp-intelligent-strategy", "intelligent-project-management", "commit"]
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -17,782 +17,782 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adicionado sistema de gerenciamento de versão"
+      - "Padronizada estrutura do arquivo de regra"
 ---
 
-# 📋 Changelog Management - 智能变更日志管理
+# 📋 Gerenciamento de Changelog - Inteligente
 
-AI驱动的自动化变更日志生成和管理系统，集成版本控制、智能分类和格式化输出。
+Sistema de geração e gerenciamento automático de changelog impulsionado por IA, integrado com controle de versão, classificação inteligente e saída formatada.
 
-## 🧠 AI Intelligence Core - AI智能核心
+## 🧠 Núcleo de Inteligência IA
 
-### 智能激活条件
+### Condições de Ativação Inteligente
 ```yaml
-自动激活场景:
-  - 检测到版本标签创建或更新
-  - 用户执行 "/changelog" 相关命令
-  - 项目进入发布准备阶段
-  - 超级大脑系统推荐生成变更日志
-  - 集成到commit工作流中（支持 /commit-fast 别名）
+Cenários de Ativação Automática:
+  - Detecção de criação ou atualização de tags de versão
+  - Execução de comandos relacionados a "/changelog" pelo usuário
+  - Projeto entrando em fase de preparação de lançamento (release)
+  - Recomendação do Sistema Super Brain para gerar changelog
+  - Integração no fluxo de trabalho de commit (suporta o alias /commit-fast)
 
-智能分析维度:
-  - 提交历史分析和分类 (35%)
-  - 版本语义化识别 (25%)
-  - 变更影响评估 (20%)
-  - 用户关注度分析 (15%)
-  - 发布时机判断 (5%)
+Dimensões de Análise Inteligente:
+  - Análise e classificação do histórico de commits (35%)
+  - Reconhecimento semântico de versão (25%)
+  - Avaliação de impacto de mudanças (20%)
+  - Análise de foco do usuário (15%)
+  - Julgamento do momento de lançamento (5%)
 ```
 
-## 🚀 Commands - 智能命令
+## 🚀 Comandos - Inteligentes
 
-- `/changelog` - 生成完整变更日志
-- `/changelog --since <version>` - 生成指定版本以来的变更
-- `/changelog --auto` - 自动化生成并更新文件
-- `/changelog --preview` - 预览变更日志内容
-- `/changelog --format <type>` - 指定输出格式 (markdown/json/html)
-- `/changelog --release` - 生成发布版本变更日志
+- `/changelog` - Gerar changelog completo
+- `/changelog --since <version>` - Gerar mudanças desde uma versão específica
+- `/changelog --auto` - Gerar e atualizar arquivos automaticamente
+- `/changelog --preview` - Pré-visualizar o conteúdo do changelog
+- `/changelog --format <type>` - Especificar formato de saída (markdown/json/html)
+- `/changelog --release` - Gerar changelog para versão de lançamento
 
-## ✨ AI-Powered Features - AI驱动功能
+## ✨ Recursos Impulsionados por IA
 
-### 🤖 智能提交分析引擎
+### 🤖 Motor Inteligente de Análise de Commits
 ```yaml
-提交历史挖掘:
-  语义分析:
-    - 自动解析约定式提交格式
-    - 识别提交类型和作用域
-    - 提取关键变更信息
-    - 分析变更重要性和影响
+Mineração de Histórico de Commits:
+  Análise Semântica:
+    - Parse automático do formato de commits convencionais
+    - Identificação do tipo e escopo do commit
+    - Extração de informações chave da mudança
+    - Análise da importância e impacto da mudança
 
-  智能分类:
-    - 功能增强 (Features)
-    - 问题修复 (Bug Fixes)
-    - 性能改进 (Performance)
-    - 安全更新 (Security)
-    - 文档更新 (Documentation)
-    - 开发工具 (Development)
-    - 重大变更 (Breaking Changes)
+  Classificação Inteligente:
+    - Novas Funcionalidades (Features)
+    - Correções de Erros (Bug Fixes)
+    - Melhorias de Performance (Performance)
+    - Atualizações de Segurança (Security)
+    - Atualizações de Documentação (Documentation)
+    - Ferramentas de Desenvolvimento (Development)
+    - Mudanças Quebrantes (Breaking Changes)
 
-  影响评估:
-    - 用户可见性评估
-    - API兼容性分析
-    - 性能影响评估
-    - 安全影响分析
+  Avaliação de Impacto:
+    - Avaliação de visibilidade para o usuário
+    - Análise de compatibilidade de API
+    - Avaliação de impacto na performance
+    - Análise de impacto na segurança
 ```
 
-### 🔧 版本管理集成
+### 🔧 Integração de Gerenciamento de Versão
 ```yaml
-版本识别:
-  语义化版本:
-    - 自动识别 MAJOR.MINOR.PATCH 格式
-    - 支持预发布版本 (alpha, beta, rc)
-    - 处理版本标签和分支
-    - 智能版本号建议
+Identificação de Versão:
+  Versionamento Semântico:
+    - Reconhecimento automático do formato MAJOR.MINOR.PATCH
+    - Suporte para versões de pré-lançamento (alpha, beta, rc)
+    - Tratamento de tags de versão e branches
+    - Sugestões inteligentes de número de versão
 
-  发布管理:
-    - 自动检测发布候选
-    - 生成发布说明
-    - 集成CI/CD流水线
-    - 支持多环境发布
+  Gerenciamento de Lançamento:
+    - Detecção automática de candidatos a lançamento (release candidates)
+    - Geração de notas de lançamento (release notes)
+    - Integração com pipelines de CI/CD
+    - Suporte para lançamentos em múltiplos ambientes
 
-  历史追踪:
-    - 维护完整版本历史
-    - 跟踪版本间差异
-    - 生成版本对比报告
-    - 支持版本回滚信息
+  Rastreamento Histórico:
+    - Manutenção do histórico completo de versões
+    - Rastreamento de diferenças entre versões
+    - Geração de relatórios de comparação de versões
+    - Suporte para informações de rollback de versão
 ```
 
-### 📝 智能内容生成
+### 📝 Geração Inteligente de Conteúdo
 ```yaml
-内容生成引擎:
-  自动摘要:
-    - 生成版本亮点摘要
-    - 提取关键功能描述
-    - 创建用户友好的说明
-    - 生成技术细节补充
+Motor de Geração de Conteúdo:
+  Resumo Automático:
+    - Geração de resumos de destaques da versão
+    - Extração de descrições de funcionalidades chave
+    - Criação de explicações amigáveis ao usuário
+    - Geração de complementos de detalhes técnicos
 
-  格式化输出:
-    - Markdown格式 (默认)
-    - JSON结构化数据
-    - HTML网页格式
-    - 纯文本格式
+  Saída Formatada:
+    - Formato Markdown (padrão)
+    - Dados estruturados em JSON
+    - Formato de página web HTML
+    - Formato de texto puro
 
-  多语言支持:
-    - 中英文双语生成
-    - 技术术语标准化
-    - 用户友好的表达
-    - 开发者详细信息
+  Suporte Multi-idioma:
+    - Geração bilíngue (Ex: Português e Inglês)
+    - Padronização de termos técnicos
+    - Expressões amigáveis ao usuário
+    - Detalhes para desenvolvedores
 ```
 
-## 📋 Changelog Structure - 变更日志结构
+## 📋 Estrutura do Changelog
 
-### 🎯 标准格式模板
+### 🎯 Modelo de Formato Padrão
 ```yaml
-文档结构:
-  头部信息:
-    - 项目名称和描述
-    - 版本管理说明
-    - 最后更新时间
-    - 生成工具信息
+Estrutura do Documento:
+  Informações de Cabeçalho:
+    - Nome e descrição do projeto
+    - Instruções de gerenciamento de versão
+    - Hora da última atualização
+    - Informações da ferramenta geradora
 
-  版本条目:
-    - 版本号和发布日期
-    - 版本类型 (Major/Minor/Patch)
-    - 变更摘要
-    - 详细变更列表
+  Entradas de Versão:
+    - Número da versão e data de lançamento
+    - Tipo de versão (Major/Minor/Patch)
+    - Resumo das mudanças
+    - Lista detalhada de mudanças
 
-  分类组织:
-    - 🚀 新功能 (Added)
-    - 🔧 功能改进 (Changed)
-    - 🗑️ 废弃功能 (Deprecated)
-    - 🔥 移除功能 (Removed)
-    - 🐛 问题修复 (Fixed)
-    - 🔒 安全更新 (Security)
+  Organização por Categoria:
+    - 🚀 Novas Funcionalidades (Added)
+    - 🔧 Melhorias de Funcionalidades (Changed)
+    - 🗑️ Funcionalidades Depreciadas (Deprecated)
+    - 🔥 Funcionalidades Removidas (Removed)
+    - 🐛 Correções de Erros (Fixed)
+    - 🔒 Atualizações de Segurança (Security)
 ```
 
-### 📄 生成模板示例
+### 📄 Exemplo de Modelo Gerado
 ```markdown
-# 📋 变更日志
+# 📋 Changelog
 
-本项目的所有重要变更都将记录在此文件中。
+Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
-格式基于 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.0.0/)，
-版本号遵循 [语义化版本](https://semver.org/lang/zh-CN/)。
+O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/),
+este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
-## [未发布]
+## [Não lançado]
 
-### 🚀 新增
-- 新功能描述
+### 🚀 Adicionado
+- Descrição da nova funcionalidade
 
-### 🔧 变更
-- 功能改进描述
+### 🔧 Alterado
+- Descrição da melhoria da funcionalidade
 
-### 🐛 修复
-- 问题修复描述
+### 🐛 Corrigido
+- Descrição da correção do problema
 
-### 🚀 新增
-- ✨ 添加AI驱动的快速提交工作流
-- 🧠 集成超级大脑系统智能推荐
-- 🔧 实现MCP工具自动编排
+### 🚀 Adicionado
+- ✨ Adicionado fluxo de trabalho de commit rápido impulsionado por IA
+- 🧠 Integração com recomendações inteligentes do sistema Super Brain
+- 🔧 Implementação de orquestração automática de ferramentas MCP
 
-### 🔧 变更
-- ♻️ 重构提交信息生成逻辑
-- ⚡️ 优化文件暂存性能
-- 🎨 改进用户界面体验
+### 🔧 Alterado
+- ♻️ Refatoração da lógica de geração de mensagens de commit
+- ⚡️ Otimização da performance de staging de arquivos
+- 🎨 Melhoria da experiência da interface do usuário
 
-### 🐛 修复
-- 🐛 修复大文件处理超时问题
-- 🔧 解决并发提交冲突
-- 📝 修正文档格式错误
+### 🐛 Corrigido
+- 🐛 Correção de problema de timeout no processamento de arquivos grandes
+- 🔧 Resolução de conflitos de commit simultâneos
+- 📝 Correção de erros de formatação de documentação
 
-### 🔒 安全
-- 🔒 加强敏感信息检测
-- 🛡️ 改进权限验证机制
+### 🔒 Segurança
+- 🔒 Fortalecimento da detecção de informações sensíveis
+- 🛡️ Melhoria do mecanismo de verificação de permissões
 ```
 
-## 🔄 AI Workflow Process - AI工作流程
+## 🔄 Processo de Fluxo de Trabalho IA
 
-### Phase 1: 数据收集阶段
+### Fase 1: Coleta de Dados
 ```yaml
-Step 1 - Git历史分析:
-  - 扫描指定范围的提交历史
-  - 解析提交信息和元数据
-  - 识别合并请求和标签
-  - 收集作者和时间信息
+Passo 1 - Análise do Histórico Git:
+  - Escaneamento do histórico de commits no intervalo especificado
+  - Parse de mensagens de commit e metadados
+  - Identificação de Merge Requests e tags
+  - Coleta de informações de autor e data
 
-Step 2 - 变更分类:
-  - 基于约定式提交格式分类
-  - 识别特殊类型提交
-  - 分析变更文件和内容
-  - 评估变更重要性
+Passo 2 - Classificação de Mudanças:
+  - Classificação baseada no formato de commits convencionais
+  - Identificação de commits de tipos especiais
+  - Análise de arquivos e conteúdos alterados
+  - Avaliação da importância da mudança
 
-Step 3 - 版本识别:
-  - 检测版本标签和分支
-  - 分析版本号语义
-  - 确定版本发布时间
-  - 识别预发布版本
+Passo 3 - Reconhecimento de Versão:
+  - Detecção de tags de versão e branches
+  - Análise da semântica do número da versão
+  - Determinação do tempo de lançamento da versão
+  - Identificação de versões de pré-lançamento
 ```
 
-### Phase 2: 内容生成阶段
+### Fase 2: Geração de Conteúdo
 ```yaml
-Step 4 - 智能摘要:
-  - 生成版本亮点摘要
-  - 提取关键功能描述
-  - 创建用户友好说明
-  - 添加技术细节
+Passo 4 - Resumo Inteligente:
+  - Geração de resumos de destaques da versão
+  - Extração de descrições de funcionalidades chave
+  - Criação de explicações amigáveis ao usuário
+  - Adição de detalhes técnicos
 
-Step 5 - 格式化输出:
-  - 应用标准模板格式
-  - 生成多种输出格式
-  - 添加链接和引用
-  - 优化可读性
+Passo 5 - Saída Formatada:
+  - Aplicação do formato de modelo padrão
+  - Geração de múltiplos formatos de saída
+  - Adição de links e referências
+  - Otimização da legibilidade
 
-Step 6 - 质量检查:
-  - 验证内容完整性
-  - 检查格式正确性
-  - 确保链接有效性
-  - 校对语言表达
+Passo 6 - Verificação de Qualidade:
+  - Validação da integridade do conteúdo
+  - Verificação da correção do formato
+  - Garantia da validade dos links
+  - Revisão da expressão linguística
 ```
 
-### Phase 3: 集成发布阶段
+### Fase 3: Integração e Lançamento
 ```yaml
-Step 7 - 文件更新:
-  - 更新CHANGELOG.md文件
-  - 生成版本特定文档
-  - 创建发布说明
-  - 更新项目文档
+Passo 7 - Atualização de Arquivos:
+  - Atualização do arquivo CHANGELOG.md
+  - Geração de documentação específica da versão
+  - Criação de notas de lançamento (release notes)
+  - Atualização da documentação do projeto
 
-Step 8 - 版本管理:
-  - 创建版本标签
-  - 更新版本文件
-  - 生成发布包
-  - 触发发布流程
+Passo 8 - Gerenciamento de Versão:
+  - Criação de tags de versão
+  - Atualização de arquivos de versão
+  - Geração de pacotes de lançamento
+  - Disparo do fluxo de lançamento
 ```
 
-## 🧠 Super Brain Integration - 超级大脑集成
+## 🧠 Integração Super Brain
 
-### 智能推荐引擎
+### Motor de Recomendação Inteligente
 ```yaml
-发布时机推荐:
-  - 基于变更累积分析推荐发布时机
-  - 考虑项目阶段和里程碑
-  - 评估变更影响和风险
-  - 建议版本号增量策略
+Recomendação de Momento de Lançamento:
+  - Recomendação de momento de lançamento baseada na análise de mudanças acumuladas
+  - Consideração das fases do projeto e marcos (milestones)
+  - Avaliação de impacto e risco das mudanças
+  - Sugestão de estratégia de incremento do número da versão
 
-内容优化建议:
-  - 推荐重要变更突出显示
-  - 建议用户关注点强调
-  - 优化技术描述表达
-  - 提供多版本对比建议
+Sugestões de Otimização de Conteúdo:
+  - Recomendação de destaque para mudanças importantes
+  - Sugestão de ênfase em pontos de interesse do usuário
+  - Otimização da expressão de descrições técnicas
+  - Fornecimento de sugestões de comparação entre múltiplas versões
 
-学习和改进:
-  - 学习用户编辑偏好
-  - 优化自动生成质量
-  - 积累项目特定模式
-  - 改进分类准确性
+Aprendizado e Melhoria:
+  - Aprendizado das preferências de edição do usuário
+  - Otimização da qualidade da geração automática
+  - Acúmulo de padrões específicos do projeto
+  - Melhoria da precisão da classificação
 ```
 
-### 项目管理集成
+### Integração com Gerenciamento de Projeto
 ```yaml
-阶段感知生成:
-  开发阶段:
-    - 重点关注功能开发进展
-    - 强调新特性和改进
-    - 详细记录开发里程碑
+Geração Consciente de Fase:
+  Fase de Desenvolvimento:
+    - Foco no progresso do desenvolvimento de funcionalidades
+    - Ênfase em novas características e melhorias
+    - Registro detalhado dos marcos de desenvolvimento
 
-  测试阶段:
-    - 突出质量改进和修复
-    - 记录性能优化成果
-    - 强调稳定性提升
+  Fase de Teste:
+    - Destaque para melhorias de qualidade e correções
+    - Registro de resultados de otimização de performance
+    - Ênfase no aumento da estabilidade
 
-  发布阶段:
-    - 生成用户友好的发布说明
-    - 突出重要功能和改进
-    - 提供升级指导信息
+  Fase de Lançamento:
+    - Geração de notas de lançamento amigáveis ao usuário
+    - Destaque para funcionalidades e melhorias importantes
+    - Fornecimento de informações de guia de atualização
 
-  维护阶段:
-    - 重点记录问题修复
-    - 强调安全更新
-    - 记录兼容性改进
+  Fase de Manutenção:
+    - Foco no registro de correções de problemas
+    - Ênfase em atualizações de segurança
+    - Registro de melhorias de compatibilidade
 ```
 
-## 🎯 Advanced Features - 高级功能
+## 🎯 Recursos Avançados
 
-### 📊 变更分析和统计
+### 📊 Análise e Estatísticas de Mudanças
 ```yaml
-统计分析:
-  提交统计:
-    - 按类型统计提交数量
-    - 分析提交频率趋势
-    - 计算代码变更量
-    - 评估开发活跃度
+Análise Estatística:
+  Estatísticas de Commit:
+    - Contagem de commits por tipo
+    - Análise de tendências de frequência de commit
+    - Cálculo do volume de alterações de código
+    - Avaliação da atividade de desenvolvimento
 
-  贡献者分析:
-    - 统计贡献者活跃度
-    - 分析贡献分布
-    - 识别关键贡献者
-    - 生成贡献者致谢
+  Análise de Contribuidores:
+    - Estatísticas de atividade dos contribuidores
+    - Análise da distribuição de contribuições
+    - Identificação de contribuidores chave
+    - Geração de agradecimentos aos contribuidores
 
-  质量指标:
-    - 计算修复/功能比例
-    - 分析变更稳定性
-    - 评估发布质量
-    - 跟踪技术债务
+  Indicadores de Qualidade:
+    - Cálculo da proporção de correções/funcionalidades
+    - Análise da estabilidade das mudanças
+    - Avaliação da qualidade do lançamento
+    - Rastreamento de dívida técnica
 ```
 
-### 🔗 外部集成
+### 🔗 Integrações Externas
 ```yaml
-CI/CD集成:
-  - 自动触发变更日志生成
-  - 集成到发布流水线
-  - 支持多环境部署
-  - 自动化发布通知
+Integração CI/CD:
+  - Disparo automático de geração de changelog
+  - Integração no pipeline de lançamento
+  - Suporte para implantação em múltiplos ambientes
+  - Notificações de lançamento automáticas
 
-问题跟踪集成:
-  - 关联GitHub Issues
-  - 链接Jira票据
-  - 引用Pull Requests
-  - 生成关闭问题列表
+Integração com Rastreamento de Problemas:
+  - Associação com GitHub Issues
+  - Link com tickets do Jira
+  - Referência a Pull Requests
+  - Geração de lista de problemas resolvidos
 
-文档系统集成:
-  - 更新项目文档
-  - 生成API变更说明
-  - 创建迁移指南
-  - 维护版本兼容性文档
+Integração com Sistema de Documentação:
+  - Atualização da documentação do projeto
+  - Geração de notas de mudança de API
+  - Criação de guias de migração
+  - Manutenção de documentação de compatibilidade de versão
 ```
 
-#### 与Commit规则的协调机制 
+#### Mecanismo de Coordenação com Regras de Commit
 ```yaml
-数据流向设计:
-  权威数据源:
-    - 主权威: Git提交历史 (不可改)
-    - 辅权威: Commit规则生成的提交信息 (标准化格式)
-    - 参考: project.context.md (仅参考，不作为权威)
+Design do Fluxo de Dados:
+  Fontes de Dados Autoritativas:
+    - Autoridade Principal: Histórico de commits Git (Imutável)
+    - Autoridade Auxiliar: Mensagens de commit geradas pelas regras de Commit (Formato padronizado)
+    - Referência: project.context.md (Apenas referência, não autoritativo)
   
-  数据流向:
-    Git提交 → Commit规则 (提取提交信息)
-             ↓
-           标准化格式 (约定式提交)
-             ↓
-           Changelog规则 (解析和生成变更日志)
-             ↓
-           CHANGELOG.md (最终输出)
+  Fluxo de Dados:
+    Commits Git → Regras de Commit (Extração de mensagens)
+                 ↓
+               Formato Padronizado (Commits Convencionais)
+                 ↓
+               Regras de Changelog (Parse e geração de changelog)
+                 ↓
+               CHANGELOG.md (Saída final)
   
-  禁止反向依赖:
-    ❌ Changelog 不依赖 project.context.md (仅作参考)
-    ❌ Commit 不依赖 Changelog (单向流动)
-    ❌ 两个系统不相互修改数据
+  Proibição de Dependência Reversa:
+    ❌ Changelog não depende de project.context.md (Apenas para referência)
+    ❌ Commit não depende de Changelog (Fluxo unidirecional)
+    ❌ Os dois sistemas não modificam dados um do outro reciprocamente
 
-执行顺序定义:
-  Step 1 - Commit规则执行:
-    - 收集所有待提交变更
-    - 生成标准化提交信息 (Conventional Commits格式)
-    - 执行Git提交操作
-    - 输出: 新的提交哈希值和提交信息
+Definição da Ordem de Execução:
+  Passo 1 - Execução da Regra de Commit:
+    - Coleta de todas as alterações pendentes
+    - Geração de mensagem de commit padronizada (Formato Conventional Commits)
+    - Execução da operação de commit Git
+    - Saída: Novo hash de commit e mensagem
   
-  Step 2 - Git更新完成:
-    - 确认提交已写入版本库
-    - 更新本地和远程分支
-    - 触发Git钩子
+  Passo 2 - Conclusão da Atualização Git:
+    - Confirmação de que o commit foi gravado no repositório
+    - Atualização de branches locais e remotos
+    - Disparo de hooks Git
   
-  Step 3 - Changelog规则执行 (异步，非阻断):
-    - 读取Git提交历史
-    - 解析约定式提交格式
-    - 生成或更新CHANGELOG.md
-    - 更新版本信息
+  Passo 3 - Execução da Regra de Changelog (Assíncrono, Não-bloqueante):
+    - Leitura do histórico de commits Git
+    - Parse do formato de commit convencional
+    - Geração ou atualização do CHANGELOG.md
+    - Atualização de informações de versão
   
-  Step 4 - project.context.md同步 (可选，最后执行):
-    - 同步关键版本信息到Pinned/Notes
-    - 记录发布相关决策到Decisions
-    - 不影响主流程
+  Passo 4 - Sincronização project.context.md (Opcional, Executado por último):
+    - Sincronização de informações chave de versão para Pinned/Notes
+    - Registro de decisões relacionadas ao lançamento em Decisions
+    - Não afeta o fluxo principal
 
-版本控制策略:
-  Git版本: 基于提交ID (SHA)
-    - 不可改，唯一标识
-    - 是Changelog的权威来源
+Estratégia de Controle de Versão:
+  Versão Git: Baseada em ID de commit (SHA)
+    - Imutável, identificador único
+    - Fonte autoritativa para o Changelog
   
-  Changelog版本: 基于发布版本号 (MAJOR.MINOR.PATCH)
-    - 语义化版本控制
-    - 独立于提交ID
-    - 用于生成发布说明
+  Versão Changelog: Baseada em número de versão de lançamento (MAJOR.MINOR.PATCH)
+    - Versionamento Semântico
+    - Independente do ID de commit
+    - Usado para gerar notas de lançamento
   
-  Context版本: 独立的版本序列
-    - 与Git和Changelog无关
-    - 用于追踪项目记忆文件的演进
-    - 不参与发布版本计算
+  Versão Context: Sequência de versão independente
+    - Não relacionada ao Git e Changelog
+    - Usada para rastrear a evolução dos arquivos de memória do projeto
+    - Não participa do cálculo de versão de lançamento
 
-冲突处理规则:
-  当Git历史和Changelog不一致时:
-    1. 原因分析: 检查是否为并发操作
-    2. 优先级: 以Git提交历史为准
-    3. 重建: 重新解析Git历史生成Changelog
-    4. 记录: 在日志中记录不一致事件
+Regras de Tratamento de Conflitos:
+  Quando o histórico Git e o Changelog são inconsistentes:
+    1. Análise de Causa: Verificar se é uma operação concorrente
+    2. Prioridade: Histórico de commits Git prevalece
+    3. Reconstrução: Re-analisar histórico Git para gerar Changelog
+    4. Registro: Registrar evento de inconsistência no log
   
-  当提交信息格式不符合约定时:
-    1. 检测: Changelog解析失败
-    2. 处理: 跳过该提交或生成警告
-    3. 通知: 提示用户修复提交信息
-    4. 可选: 允许手动补充说明
+  Quando o formato da mensagem de commit não está em conformidade:
+    1. Detecção: Falha no parse do Changelog
+    2. Tratamento: Pular o commit ou gerar aviso
+    3. Notificação: Alertar usuário para corrigir mensagem de commit
+    4. Opcional: Permitir suplementação manual
 ```
 
-## 📋 Configuration Options - 配置选项
+## 📋 Configuration Options - Opções de Configuração
 
-### 🎛️ 生成配置
+### 🎛️ Configuração de Geração
 ```yaml
-内容配置:
-  包含类型:
-    - feat: true    # 包含新功能
-    - fix: true     # 包含问题修复
-    - docs: false   # 排除文档变更
-    - style: false  # 排除样式变更
-    - refactor: true # 包含重构
-    - perf: true    # 包含性能改进
-    - test: false   # 排除测试变更
-    - chore: false  # 排除工具变更
+Configuração de Conteúdo:
+  Tipos Incluídos:
+    - feat: true    # Incluir novas funcionalidades
+    - fix: true     # Incluir correções de problemas
+    - docs: false   # Excluir alterações de documentação
+    - style: false  # Excluir alterações de estilo
+    - refactor: true # Incluir refatoração
+    - perf: true    # Incluir melhorias de performance
+    - test: false   # Excluir alterações de teste
+    - chore: false  # Excluir alterações de ferramentas
 
-  详细程度:
-    - minimal: 仅包含重要变更
-    - standard: 标准详细程度
-    - detailed: 包含所有变更
-    - comprehensive: 最详细模式
+  Nível de Detalhe:
+    - minimal: Apenas alterações importantes
+    - standard: Nível de detalhe padrão
+    - detailed: Incluir todas as alterações
+    - comprehensive: Modo mais detalhado
 
-  输出格式:
-    - format: markdown  # 默认格式
-    - template: standard # 使用模板
-    - language: auto    # 自动语言检测
-    - encoding: utf-8   # 文件编码
+  Formato de Saída:
+    - format: markdown  # Formato padrão
+    - template: standard # Usar modelo
+    - language: auto    # Detecção automática de idioma
+    - encoding: utf-8   # Codificação de arquivo
 ```
 
-### 🔧 版本配置
+### 🔧 Configuração de Versão
 ```yaml
-版本管理:
-  版本格式:
+Gerenciamento de Versão:
+  Formato de Versão:
     - pattern: "v{major}.{minor}.{patch}"
     - prerelease: ["alpha", "beta", "rc"]
     - build_metadata: true
 
-  发布配置:
-    - auto_tag: true        # 自动创建标签
-    - update_version: true  # 更新版本文件
-    - create_release: false # 创建GitHub发布
-    - notify_team: true     # 通知团队
+  Configuração de Lançamento:
+    - auto_tag: true        # Criar tag automaticamente
+    - update_version: true  # Atualizar arquivo de versão
+    - create_release: false # Criar lançamento GitHub
+    - notify_team: true     # Notificar equipe
 
-  历史范围:
-    - max_versions: 50      # 最大版本数
-    - date_range: "1y"      # 时间范围
-    - include_prereleases: false # 包含预发布
+  Escopo Histórico:
+    - max_versions: 50      # Número máximo de versões
+    - date_range: "1y"      # Intervalo de tempo
+    - include_prereleases: false # Incluir pré-lançamentos
 ```
 
-## 📊 Quality Assurance - 质量保证
+## 📊 Quality Assurance - Garantia de Qualidade
 
-### ✅ 内容验证
+### ✅ Validação de Conteúdo
 ```yaml
-自动检查:
-  格式验证:
-    - Markdown语法正确性
-    - 链接有效性检查
-    - 版本号格式验证
-    - 日期格式标准化
+Verificação Automática:
+  Validação de Formato:
+    - Correção de sintaxe Markdown
+    - Verificação de validade de links
+    - Validação de formato de número de versão
+    - Padronização de formato de data
 
-  内容完整性:
-    - 必要章节存在性
-    - 版本信息完整性
-    - 变更描述充分性
-    - 分类准确性验证
+  Integridade de Conteúdo:
+    - Existência de seções necessárias
+    - Integridade de informações de versão
+    - Suficiência de descrição de alterações
+    - Verificação de precisão de classificação
 
-  质量评估:
-    - 可读性评分
-    - 信息密度分析
-    - 用户友好度评估
-    - 技术准确性检查
+  Avaliação de Qualidade:
+    - Pontuação de legibilidade
+    - Análise de densidade de informação
+    - Avaliação de amigabilidade ao usuário
+    - Verificação de precisão técnica
 ```
 
-### 🔧 自动修复
+### 🔧 Correção Automática
 ```yaml
-智能修复:
-  格式修复:
-    - 自动修正Markdown格式
-    - 标准化日期格式
-    - 统一版本号格式
-    - 修复链接错误
+Correção Inteligente:
+  Correção de Formato:
+    - Correção automática de formato Markdown
+    - Padronização de formato de data
+    - Unificação de formato de número de versão
+    - Correção de erros de link
 
-  内容优化:
-    - 改进描述表达
-    - 统一术语使用
-    - 优化分类归属
-    - 增强可读性
+  Otimização de Conteúdo:
+    - Melhoria de expressão descritiva
+    - Unificação de uso de termos
+    - Otimização de atribuição de categoria
+    - Aprimoramento de legibilidade
 ```
 
-## 📋 Usage Examples - 使用示例
+## 📋 Usage Examples - Exemplos de Uso
 
-### 基础变更日志生成
+### Geração Básica de Changelog
 ```bash
-# 生成完整变更日志
+# Gerar changelog completo
 /changelog
 
-# 输出示例:
-# 📋 变更日志已生成
+# Exemplo de Saída:
+# 📋 Changelog gerado com sucesso
 # 
-# 📊 统计信息:
-# - 分析提交: 156个
-# - 新功能: 23个
-# - 问题修复: 31个
-# - 性能改进: 8个
-# - 文档更新: 12个
+# 📊 Estatísticas:
+# - Commits analisados: 156
+# - Novas funcionalidades: 23
+# - Correções de problemas: 31
+# - Melhorias de performance: 8
+# - Atualizações de documentação: 12
 # 
-# 📄 文件已更新: CHANGELOG.md
-# 🔗 预览链接: ./CHANGELOG.md#v242
+# 📄 Arquivo atualizado: CHANGELOG.md
+# 🔗 Link de visualização: ./CHANGELOG.md#v242
 ```
 
-### 版本范围生成
+### Geração por Intervalo de Versão
 ```bash
-# 生成指定版本以来的变更
+# Gerar alterações desde uma versão específica
 /changelog --since v2.4.0
 
-# 自动化生成并更新
+# Geração e atualização automática
 /changelog --auto --format markdown
 
-# 预览模式
+# Modo de pré-visualização
 /changelog --preview --since v2.4.0
 ```
 
-### 发布版本生成
+### Geração de Versão de Lançamento
 ```bash
-# 生成发布版本变更日志
+# Gerar changelog para versão de lançamento
 /changelog --release --version v2.5.0
 
-# 输出示例:
-# 🚀 发布版本 v2.5.0 变更日志
+# Exemplo de Saída:
+# 🚀 Changelog da versão de lançamento v2.5.0
 # 
-# ## 🌟 版本亮点
-# - 全新AI驱动的提交工作流
-# - 智能变更日志自动生成
-# - 增强的代码质量检查
+# ## 🌟 Destaques da Versão
+# - Novo fluxo de trabalho de commit impulsionado por IA
+# - Geração automática inteligente de changelog
+# - Verificação de qualidade de código aprimorada
 # 
-# ## 📋 详细变更
-# [详细的分类变更列表]
+# ## 📋 Alterações Detalhadas
+# [Lista detalhada de alterações categorizadas]
 # 
-# ## 🔄 升级指南
-# [升级步骤和注意事项]
+# ## 🔄 Guia de Atualização
+# [Passos de atualização e precauções]
 ```
 
-## 🔗 Integration Points - 集成点
+## 🔗 Integration Points - Pontos de Integração
 
-### 与现有规则集成
+### Integração com Regras Existentes
 ```yaml
-commit集成:
-  - 自动从快速提交中提取变更信息
-  - 集成智能提交信息分析
-  - 支持实时变更日志更新
-  - 协同版本管理流程
+Integração com Commit:
+  - Extração automática de informações de alteração de commits rápidos
+  - Integração com análise inteligente de mensagens de commit
+  - Suporte para atualização de changelog em tempo real
+  - Processo de gerenciamento de versão colaborativo
 
-super-brain-system集成:
-  - 利用智能推荐引擎
-  - 集成项目阶段感知
-  - 支持学习和优化
-  - 协同决策支持
+Integração com super-brain-system:
+  - Utilização do motor de recomendação inteligente
+  - Integração com percepção de fase do projeto
+  - Suporte para aprendizado e otimização
+  - Suporte à decisão colaborativa
 
-mcp-intelligent-strategy集成:
-  - 自动选择合适的工具
-  - 集成外部服务API
-  - 支持并行处理
-  - 优化执行效率
+Integração com mcp-intelligent-strategy:
+  - Seleção automática de ferramentas apropriadas
+  - Integração com APIs de serviços externos
+  - Suporte para processamento paralelo
+  - Otimização da eficiência de execução
 ```
 
-### 外部工具集成
+### Integração de Ferramentas Externas
 ```yaml
-版本控制系统:
-  - Git标签和分支管理
-  - GitHub/GitLab集成
-  - 自动化发布流程
-  - 问题跟踪关联
+Sistema de Controle de Versão:
+  - Gerenciamento de tags e branches Git
+  - Integração com GitHub/GitLab
+  - Fluxo de lançamento automatizado
+  - Associação com rastreamento de problemas
 
-文档系统:
-  - 自动更新项目文档
-  - 生成API变更文档
-  - 创建迁移指南
-  - 维护版本兼容性
+Sistema de Documentação:
+  - Atualização automática da documentação do projeto
+  - Geração de notas de alteração de API
+  - Criação de guias de migração
+  - Manutenção de compatibilidade de versão
 
-通知系统:
-  - 团队通知集成
-  - 邮件发送支持
-  - Slack/Teams集成
-  - 自定义Webhook
+Sistema de Notificação:
+  - Integração com notificações da equipe
+  - Suporte para envio de e-mail
+  - Integração com Slack/Teams
+  - Webhook personalizado
 ```
 
-#### 与Commit规则的协调机制 (缺陷#22修复)
+#### Mecanismo de Coordenação com Regras de Commit (Correção de Defeito #22)
 ```yaml
-数据流向设计:
-  权威数据源:
-    - 主权威: Git提交历史 (不可改)
-    - 辅权威: Commit规则生成的提交信息 (标准化格式)
-    - 参考: project.context.md (仅参考，不作为权威)
+Design do Fluxo de Dados:
+  Fontes de Dados Autoritativas:
+    - Autoridade Principal: Histórico de commits Git (Imutável)
+    - Autoridade Auxiliar: Mensagens de commit geradas pelas regras de Commit (Formato padronizado)
+    - Referência: project.context.md (Apenas referência, não autoritativo)
   
-  数据流向:
-    Git提交 → Commit规则 (提取提交信息)
-             ↓
-           标准化格式 (约定式提交)
-             ↓
-           Changelog规则 (解析和生成变更日志)
-             ↓
-           CHANGELOG.md (最终输出)
+  Fluxo de Dados:
+    Commits Git → Regras de Commit (Extração de mensagens)
+                 ↓
+               Formato Padronizado (Commits Convencionais)
+                 ↓
+               Regras de Changelog (Parse e geração de changelog)
+                 ↓
+               CHANGELOG.md (Saída final)
   
-  禁止反向依赖:
-    ❌ Changelog 不依赖 project.context.md (仅作参考)
-    ❌ Commit 不依赖 Changelog (单向流动)
-    ❌ 两个系统不相互修改数据
+  Proibição de Dependência Reversa:
+    ❌ Changelog não depende de project.context.md (Apenas para referência)
+    ❌ Commit não depende de Changelog (Fluxo unidirecional)
+    ❌ Os dois sistemas não modificam dados um do outro reciprocamente
 
-执行顺序定义:
-  Step 1 - Commit规则执行:
-    - 收集所有待提交变更
-    - 生成标准化提交信息 (Conventional Commits格式)
-    - 执行Git提交操作
-    - 输出: 新的提交哈希值和提交信息
-  
-  Step 2 - Git更新完成:
-    - 确认提交已写入版本库
-    - 更新本地和远程分支
-    - 触发Git钩子
-  
-  Step 3 - Changelog规则执行 (异步，非阻断):
-    - 读取Git提交历史
-    - 解析约定式提交格式
-    - 生成或更新CHANGELOG.md
-    - 更新版本信息
-  
-  Step 4 - project.context.md同步 (可选，最后执行):
-    - 同步关键版本信息到Pinned/Notes
-    - 记录发布相关决策到Decisions
-    - 不影响主流程
+Definição da Ordem de Execução:
+  Passo 1 - Execução da Regra de Commit:
+    - Coleta de todas as alterações pendentes
+    - Geração de mensagem de commit padronizada (Formato Conventional Commits)
+    - Execução da operação de commit Git
+    - Saída: Novo hash de commit e mensagem
 
-版本控制策略:
-  Git版本: 基于提交ID (SHA)
-    - 不可改，唯一标识
-    - 是Changelog的权威来源
-  
-  Changelog版本: 基于发布版本号 (MAJOR.MINOR.PATCH)
-    - 语义化版本控制
-    - 独立于提交ID
-    - 用于生成发布说明
-  
-  Context版本: 独立的版本序列
-    - 与Git和Changelog无关
-    - 用于追踪项目记忆文件的演进
-    - 不参与发布版本计算
+  Passo 2 - Conclusão da Atualização Git:
+    - Confirmação de que o commit foi gravado no repositório
+    - Atualização de branches locais e remotos
+    - Disparo de hooks Git
 
-冲突处理规则:
-  当Git历史和Changelog不一致时:
-    1. 原因分析: 检查是否为并发操作
-    2. 优先级: 以Git提交历史为准
-    3. 重建: 重新解析Git历史生成Changelog
-    4. 记录: 在日志中记录不一致事件
+  Passo 3 - Execução da Regra de Changelog (Assíncrono, Não-bloqueante):
+    - Leitura do histórico de commits Git
+    - Parse do formato de commit convencional
+    - Geração ou atualização do CHANGELOG.md
+    - Atualização de informações de versão
+
+  Passo 4 - Sincronização project.context.md (Opcional, Executado por último):
+    - Sincronização de informações chave de versão para Pinned/Notes
+    - Registro de decisões relacionadas ao lançamento em Decisions
+    - Não afeta o fluxo principal
+
+Estratégia de Controle de Versão:
+  Versão Git: Baseada em ID de commit (SHA)
+    - Imutável, identificador único
+    - Fonte autoritativa para o Changelog
   
-  当提交信息格式不符合约定时:
-    1. 检测: Changelog解析失败
-    2. 处理: 跳过该提交或生成警告
-    3. 通知: 提示用户修复提交信息
-    4. 可选: 允许手动补充说明
+  Versão Changelog: Baseada em número de versão de lançamento (MAJOR.MINOR.PATCH)
+    - Versionamento Semântico
+    - Independente do ID de commit
+    - Usado para gerar notas de lançamento
+  
+  Versão Context: Sequência de versão independente
+    - Não relacionada ao Git e Changelog
+    - Usada para rastrear a evolução dos arquivos de memória do projeto
+    - Não participa do cálculo de versão de lançamento
+
+Regras de Tratamento de Conflitos:
+  Quando o histórico Git e o Changelog são inconsistentes:
+    1. Análise de Causa: Verificar se é uma operação concorrente
+    2. Prioridade: Histórico de commits Git prevalece
+    3. Reconstrução: Re-analisar histórico Git para gerar Changelog
+    4. Registro: Registrar evento de inconsistência no log
+  
+  Quando o formato da mensagem de commit não está em conformidade:
+    1. Detecção: Falha no parse do Changelog
+    2. Tratamento: Pular o commit ou gerar aviso
+    3. Notificação: Alertar usuário para corrigir mensagem de commit
+    4. Opcional: Permitir suplementação manual
 ```
 
-## ⚡ Performance Optimization - 性能优化
+## ⚡ Performance Optimization - Otimização de Performance
 
-### 智能缓存机制
+### Mecanismo de Cache Inteligente
 ```yaml
-缓存策略:
-  - Git历史分析结果缓存
-  - 提交分类结果缓存
-  - 生成内容模板缓存
-  - 外部API调用缓存
+Estratégia de Cache:
+  - Cache de resultados de análise de histórico Git
+  - Cache de resultados de classificação de commits
+  - Cache de modelos de conteúdo gerado
+  - Cache de chamadas de API externas
 
-优化技术:
-  - 增量分析算法
-  - 并行处理管道
-  - 智能预加载
-  - 资源池管理
+Técnicas de Otimização:
+  - Algoritmo de análise incremental
+  - Pipeline de processamento paralelo
+  - Pré-carregamento inteligente
+  - Gerenciamento de pool de recursos
 ```
 
-### 执行效率目标
+### Objetivos de Eficiência de Execução
 ```yaml
-性能指标:
-  - 历史分析: <3秒 (100个提交) [优化]
-  - 内容生成: <2秒 [优化]
-  - 文件更新: <0.5秒 [优化]
-  - 总体流程: <8秒 [优化目标]
+Indicadores de Performance:
+  - Análise de histórico: <3s (100 commits) [Otimizado]
+  - Geração de conteúdo: <2s [Otimizado]
+  - Atualização de arquivo: <0.5s [Otimizado]
+  - Fluxo geral: <8s [Meta de otimização]
 
-优化措施:
-  - 异步处理非关键任务
-  - 智能跳过重复分析
-  - 缓存重复计算结果
-  - 优化文件I/O操作
-  - 增量Git历史分析 [新增]
-  - 并行内容生成处理 [新增]
-  - 智能缓存命中优化 [新增]
+Medidas de Otimização:
+  - Processamento assíncrono de tarefas não críticas
+  - Pulo inteligente de análises repetidas
+  - Cache de resultados de cálculos repetidos
+  - Otimização de operações de I/O de arquivo
+  - Análise incremental de histórico Git [Novo]
+  - Geração de conteúdo paralela [Novo]
+  - Otimização de acerto de cache inteligente [Novo]
 ```
 
-## 🚨 Error Handling & Safety - 错误处理和安全保障
+## 🚨 Error Handling & Safety - Tratamento de Erros e Segurança
 
-### 统一错误处理机制
+### Mecanismo Unificado de Tratamento de Erros
 ```yaml
-错误分类:
-  Level 1 - 致命错误:
-    - Git仓库历史损坏
-    - 文件系统访问权限不足
-    - 网络连接完全中断
-    - 关键MCP工具完全不可用
+Classificação de Erros:
+  Nível 1 - Erro Fatal:
+    - Histórico do repositório Git corrompido
+    - Permissões insuficientes de acesso ao sistema de arquivos
+    - Conexão de rede totalmente interrompida
+    - Ferramentas MCP críticas totalmente indisponíveis
 
-  Level 2 - 严重错误:
-    - Git历史分析失败
-    - AI内容生成引擎超时
-    - 版本标签解析错误
-    - 超级大脑系统连接失败
+  Nível 2 - Erro Grave:
+    - Falha na análise do histórico Git
+    - Timeout do motor de geração de conteúdo IA
+    - Erro de parse de tag de versão
+    - Falha na conexão com sistema Super Brain
 
-  Level 3 - 一般错误:
-    - 部分提交信息解析失败
-    - 变更日志格式化错误
-    - 非关键MCP工具故障
-    - 性能指标未达预期
+  Nível 3 - Erro Geral:
+    - Falha parcial no parse de mensagens de commit
+    - Erro de formatação do changelog
+    - Falha em ferramenta MCP não crítica
+    - Indicadores de performance abaixo do esperado
 
-  Level 4 - 警告信息:
-    - 提交信息格式不规范
-    - 版本号命名不一致
-    - 缓存命中率低
-    - 内容质量建议
+  Nível 4 - Mensagens de Aviso:
+    - Formato de mensagem de commit fora do padrão
+    - Nomenclatura de número de versão inconsistente
+    - Baixa taxa de acerto de cache
+    - Sugestões de qualidade de conteúdo
 ```
 
-### 错误恢复策略
+### Estratégia de Recuperação de Erros
 ```yaml
-自动恢复:
-  - Git操作重试机制 (3次重试)
-  - MCP工具故障转移
-  - 缓存数据恢复
-  - 备用内容生成模型切换
+Recuperação Automática:
+  - Mecanismo de retentativa de operação Git (3 tentativas)
+  - Failover de ferramenta MCP
+  - Recuperação de dados de cache
+  - Alternância para modelo de geração de conteúdo reserva
 
-人工干预:
-  - 致命错误立即通知用户
-  - 提供详细错误信息和解决建议
-  - 支持手动数据修复
-  - 集成feedback-enhanced反馈机制
+Intervenção Manual:
+  - Notificação imediata ao usuário em caso de erro fatal
+  - Fornecimento de informações detalhadas do erro e sugestões de resolução
+  - Suporte para reparo manual de dados
+  - Integração com mecanismo de feedback feedback-enhanced
 
-日志记录:
-  - 完整的Git操作日志
-  - AI分析过程记录
-  - 用户操作上下文
-  - 恢复操作详情
+Registro de Log:
+  - Logs completos de operações Git
+  - Registro do processo de análise de IA
+  - Contexto de operação do usuário
+  - Detalhes da operação de recuperação
 ```
 
-### 安全保障机制
+### Mecanismo de Garantia de Segurança
 ```yaml
-数据安全:
-  - 敏感信息自动过滤
-  - 变更日志内容安全扫描
-  - 备份重要历史数据
-  - 访问权限验证
+Segurança de Dados:
+  - Filtragem automática de informações sensíveis
+  - Varredura de segurança do conteúdo do changelog
+  - Backup de dados históricos importantes
+  - Verificação de permissões de acesso
 
-操作安全:
-  - 危险操作确认机制
-  - 自动备份变更日志
-  - 操作审计追踪
-  - 异常模式检测
+Segurança Operacional:
+  - Mecanismo de confirmação para operações perigosas
+  - Backup automático do changelog
+  - Rastreamento de auditoria de operações
+  - Detecção de padrões anômalos
 ```
 
-### 与commit协调
+### Coordenação com Commit
 ```yaml
-错误处理协调:
-  - 共享统一的错误分类体系
-  - 协调的恢复策略
-  - 统一的安全保障措施
-  - 集成的日志记录系统
+Coordenação de Tratamento de Erros:
+  - Compartilhamento de sistema unificado de classificação de erros
+  - Estratégias de recuperação coordenadas
+  - Medidas de garantia de segurança unificadas
+  - Sistema de registro de logs integrado
 
-工作流协同:
-  - commit错误时暂停变更日志生成
-  - 变更日志错误时通知commit
-  - 共享错误状态和恢复进度
-  - 协调的用户通知机制
+Sinergia de Fluxo de Trabalho:
+  - Pausa na geração de changelog em caso de erro de commit
+  - Notificação ao commit em caso de erro no changelog
+  - Compartilhamento de status de erro e progresso de recuperação
+  - Mecanismo de notificação ao usuário coordenado
 ```
 
 ---
 
-**🎯 规则优先级**: 620 (与commit协同工作)  
-**🔄 更新频率**: 基于版本发布和用户反馈持续优化  
-**📊 成功指标**: 变更日志生成效率提升70%+, 内容质量评分>4.6/5.0  
-**🧠 AI模型**: 集成自然语言处理和语义分析引擎
+**🎯 Prioridade da Regra**: 620 (Trabalho colaborativo com commit)  
+**🔄 Frequência de Atualização**: Otimização contínua baseada em lançamentos de versão e feedback do usuário  
+**📊 Indicadores de Sucesso**: Eficiência na geração de changelog aumentada em 70%+, Pontuação de qualidade de conteúdo >4.6/5.0  
+**🧠 Modelo de IA**: Integração de processamento de linguagem natural e motor de análise semântica

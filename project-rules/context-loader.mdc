@@ -1,12 +1,12 @@
 ---
 type: "always_apply"
-description: "AI-powered intelligent project context loader with deep analysis - AI驱动的智能项目上下文加载器"
+description: "Carregador de contexto de projeto inteligente impulsionado por IA com análise profunda"
 globs: ["**/*"]
 priority: 681
 alwaysApply: true
 integrations: ["super-brain-system", "mcp-intelligent-strategy", "intelligent-project-management", "commit", "changelog-management", "code-quality-check", "root-cause-analysis", "systematic-debugging"]
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -17,623 +17,623 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adição do sistema de gerenciamento de versão"
+      - "Padronização da estrutura do arquivo de regras"
 ---
 
-# 🧠 Context Loader - 智能项目上下文加载器
+# 🧠 Context Loader - Carregador de Contexto Inteligente
 
-AI驱动的智能项目上下文分析和加载系统，超越传统上下文加载，提供深度项目理解和智能配置推荐。
+Sistema de análise e carregamento de contexto de projeto inteligente impulsionado por IA, superando o carregamento de contexto tradicional, oferecendo compreensão profunda do projeto e recomendações de configuração inteligentes.
 
-## 🧠 AI Intelligence Core - AI智能核心
+## 🧠 Núcleo de Inteligência IA
 
-### 智能激活条件
+### Condições de Ativação Inteligente
 ```yaml
-自动激活场景:
-  - 检测到新项目或项目结构变化
-  - 用户执行 "/load-context" 命令
-  - 超级大脑系统推荐上下文分析
-  - AI助手首次接触项目时
-  - 项目配置发生重大变更
+Cenários de ativação automática:
+  - Detecção de novo projeto ou mudança na estrutura do projeto
+  - Usuário executa o comando "/load-context"
+  - Sistema Super Brain recomenda análise de contexto
+  - Assistente AI entra em contato com o projeto pela primeira vez
+  - Ocorrem alterações significativas na configuração do projeto
 
-智能分析维度:
-  - 项目类型和技术栈识别 (35%)
-  - 代码结构和架构模式 (25%)
-  - 开发工具和配置分析 (20%)
-  - 团队协作模式识别 (15%)
-  - 项目成熟度评估 (5%)
+Dimensões de análise inteligente:
+  - Identificação de tipo de projeto e stack tecnológica (35%)
+  - Estrutura de código e padrões de arquitetura (25%)
+  - Análise de ferramentas de desenvolvimento e configuração (20%)
+  - Identificação de padrões de colaboração da equipe (15%)
+  - Avaliação de maturidade do projeto (5%)
 ```
 
-## 🚀 Commands - 智能命令
+## 🚀 Comandos Inteligentes
 
-- `/load-context` - AI智能项目上下文加载（推荐）
-- `/load-context --deep` - 深度分析模式（详细项目分析）
-- `/load-context --quick` - 快速分析模式（基础信息）
-- `/load-context --tech-stack` - 技术栈专项分析
-- `/load-context --team` - 团队协作模式分析
-- `/load-context --config` - 配置和工具分析
+- `/load-context` - Carregamento de contexto de projeto inteligente por IA (recomendado)
+- `/load-context --deep` - Modo de análise profunda (análise detalhada do projeto)
+- `/load-context --quick` - Modo de análise rápida (informações básicas)
+- `/load-context --tech-stack` - Análise específica de stack tecnológica
+- `/load-context --team` - Análise de padrões de colaboração da equipe
+- `/load-context --config` - Análise de configuração e ferramentas
 
-## ✨ AI-Powered Features - AI驱动功能
+## ✨ Recursos Impulsionados por IA
 
-### 🤖 智能项目识别引擎
+### 🤖 Motor de Identificação de Projeto Inteligente
 ```yaml
-项目类型识别:
-  前端项目:
-    - React/Next.js项目 (package.json + React依赖)
-    - Vue.js项目 (vue.config.js + Vue依赖)
-    - Angular项目 (angular.json + Angular CLI)
-    - 静态网站 (HTML/CSS/JS结构)
-    - 移动端应用 (React Native/Flutter)
+Identificação de Tipo de Projeto:
+  Projetos Frontend:
+    - Projeto React/Next.js (package.json + Dependência React)
+    - Projeto Vue.js (vue.config.js + Dependência Vue)
+    - Projeto Angular (angular.json + Angular CLI)
+    - Site Estático (Estrutura HTML/CSS/JS)
+    - Aplicação Mobile (React Native/Flutter)
 
-  后端项目:
-    - Node.js项目 (package.json + Express/Koa)
-    - Python项目 (requirements.txt + Django/Flask)
-    - Java项目 (pom.xml/build.gradle + Spring)
-    - .NET项目 (.csproj + ASP.NET)
-    - Go项目 (go.mod + Gin/Echo)
+  Projetos Backend:
+    - Projeto Node.js (package.json + Express/Koa)
+    - Projeto Python (requirements.txt + Django/Flask)
+    - Projeto Java (pom.xml/build.gradle + Spring)
+    - Projeto .NET (.csproj + ASP.NET)
+    - Projeto Go (go.mod + Gin/Echo)
 
-  全栈项目:
-    - Monorepo结构识别
-    - 微服务架构检测
-    - JAMstack项目识别
-    - 容器化项目分析
+  Projetos Fullstack:
+    - Identificação de estrutura Monorepo
+    - Detecção de arquitetura de microsserviços
+    - Identificação de projeto JAMstack
+    - Análise de projeto conteinerizado
 
-  特殊项目:
-    - 开源库项目
-    - 文档项目
-    - 配置项目
-    - 脚本工具项目
+  Projetos Especiais:
+    - Projeto de biblioteca Open Source
+    - Projeto de documentação
+    - Projeto de configuração
+    - Projeto de ferramentas de script
 
-技术栈深度分析:
-  - 主要框架和库识别
-  - 开发工具链分析
-  - 构建和部署配置
-  - 测试框架和策略
-  - 数据库和存储方案
+Análise Profunda de Stack Tecnológica:
+  - Identificação dos principais frameworks e bibliotecas
+  - Análise da cadeia de ferramentas (toolchain) de desenvolvimento
+  - Configuração de build e deploy
+  - Frameworks e estratégias de teste
+  - Soluções de banco de dados e armazenamento
 ```
 
-### 🔧 智能配置推荐引擎
+### 🔧 Motor de Recomendação de Configuração Inteligente
 ```yaml
-配置分析:
-  开发环境:
-    - IDE配置文件分析
-    - 编辑器设置检测
-    - 插件和扩展识别
-    - 调试配置分析
+Análise de Configuração:
+  Ambiente de Desenvolvimento:
+    - Análise de arquivos de configuração da IDE
+    - Detecção de configurações do editor
+    - Identificação de plugins e extensões
+    - Análise de configuração de debug
 
-  构建工具:
-    - Webpack/Vite/Rollup配置
-    - Babel/TypeScript配置
-    - ESLint/Prettier设置
-    - 测试框架配置
+  Ferramentas de Build:
+    - Configuração Webpack/Vite/Rollup
+    - Configuração Babel/TypeScript
+    - Configurações ESLint/Prettier
+    - Configuração de frameworks de teste
 
-  部署配置:
-    - Docker/Kubernetes配置
-    - CI/CD流水线设置
-    - 云服务配置
-    - 环境变量管理
+  Configuração de Deploy:
+    - Configuração Docker/Kubernetes
+    - Configuração de pipeline CI/CD
+    - Configuração de serviços em nuvem
+    - Gerenciamento de variáveis de ambiente
 
-智能推荐:
-  - 缺失配置自动识别
-  - 最佳实践配置建议
-  - 性能优化配置推荐
-  - 安全配置增强建议
+Recomendação Inteligente:
+  - Identificação automática de configurações ausentes
+  - Sugestões de configuração de melhores práticas
+  - Recomendações de configuração para otimização de desempenho
+  - Sugestões de aprimoramento de configuração de segurança
 ```
 
-### 📊 项目健康度评估
+### 📊 Avaliação de Saúde do Projeto
 ```yaml
-健康度指标:
-  代码质量:
-    - 代码覆盖率分析
-    - 技术债务评估
-    - 代码复杂度统计
-    - 安全漏洞扫描
+Indicadores de Saúde:
+  Qualidade de Código:
+    - Análise de cobertura de código
+    - Avaliação de dívida técnica
+    - Estatísticas de complexidade de código
+    - Varredura de vulnerabilidades de segurança
 
-  项目管理:
-    - 文档完整性检查
-    - 版本管理规范性
-    - 依赖管理健康度
-    - 测试策略完整性
+  Gerenciamento de Projeto:
+    - Verificação de integridade da documentação
+    - Padronização de gerenciamento de versão
+    - Saúde do gerenciamento de dependências
+    - Integridade da estratégia de testes
 
-  团队协作:
-    - 代码审查流程
-    - 提交规范性
-    - 分支管理策略
-    - 问题跟踪效率
+  Colaboração da Equipe:
+    - Processo de revisão de código
+    - Padronização de commits
+    - Estratégia de gerenciamento de branches
+    - Eficiência no rastreamento de problemas
 
-评分体系:
-  - A级 (90-100分): 优秀项目
-  - B级 (80-89分): 良好项目
-  - C级 (70-79分): 一般项目
-  - D级 (60-69分): 需改进项目
-  - F级 (<60分): 问题项目
+Sistema de Pontuação:
+  - Nível A (90-100 pontos): Projeto Excelente
+  - Nível B (80-89 pontos): Projeto Bom
+  - Nível C (70-79 pontos): Projeto Regular
+  - Nível D (60-69 pontos): Projeto que Precisa Melhorar
+  - Nível F (<60 pontos): Projeto Problemático
 ```
 
-## 🔄 AI Workflow Process - AI工作流程
+## 🔄 Processo de Fluxo de Trabalho IA
 
-### Phase 1: 项目扫描阶段
+### Fase 1: Estágio de Varredura do Projeto
 ```yaml
-Step 1 - 文件系统分析:
-  - 扫描项目目录结构
-  - 识别关键配置文件
-  - 分析文件类型分布
-  - 检测隐藏文件和配置
+Passo 1 - Análise do Sistema de Arquivos:
+  - Varrer estrutura de diretórios do projeto
+  - Identificar arquivos de configuração chave
+  - Analisar distribuição de tipos de arquivos
+  - Detectar arquivos ocultos e configurações
 
-Step 2 - 技术栈识别:
-  - 分析package.json/requirements.txt等
-  - 识别框架和库依赖
-  - 检测开发工具配置
-  - 分析构建和部署脚本
+Passo 2 - Identificação de Stack Tecnológica:
+  - Analisar package.json/requirements.txt, etc.
+  - Identificar dependências de frameworks e bibliotecas
+  - Detectar configuração de ferramentas de desenvolvimento
+  - Analisar scripts de build e deploy
 
-Step 3 - 代码结构分析:
-  - 分析代码组织模式
-  - 识别架构设计模式
-  - 检测模块化程度
-  - 评估代码质量指标
+Passo 3 - Análise de Estrutura de Código:
+  - Analisar padrões de organização de código
+  - Identificar padrões de design de arquitetura
+  - Detectar grau de modularidade
+  - Avaliar indicadores de qualidade de código
 ```
 
-### Phase 2: 深度理解阶段
+### Fase 2: Estágio de Compreensão Profunda
 ```yaml
-Step 4 - 业务逻辑分析:
-  - 识别核心业务功能
-  - 分析数据流和状态管理
-  - 检测API设计模式
-  - 理解用户交互流程
+Passo 4 - Análise de Lógica de Negócios:
+  - Identificar funcionalidades de negócio principais
+  - Analisar fluxo de dados e gerenciamento de estado
+  - Detectar padrões de design de API
+  - Compreender fluxos de interação do usuário
 
-Step 5 - 团队协作分析:
-  - 分析Git提交历史
-  - 识别团队协作模式
-  - 检测代码审查流程
-  - 评估项目管理成熟度
+Passo 5 - Análise de Colaboração da Equipe:
+  - Analisar histórico de commits do Git
+  - Identificar padrões de colaboração da equipe
+  - Detectar processos de revisão de código
+  - Avaliar maturidade do gerenciamento de projeto
 
-Step 6 - 环境和工具分析:
-  - 分析开发环境配置
-  - 检测CI/CD流水线
-  - 识别监控和日志配置
-  - 评估部署策略
+Passo 6 - Análise de Ambiente e Ferramentas:
+  - Analisar configuração do ambiente de desenvolvimento
+  - Detectar pipelines CI/CD
+  - Identificar configurações de monitoramento e logs
+  - Avaliar estratégias de deploy
 ```
 
-### Phase 3: 智能推荐阶段
+### Fase 3: Estágio de Recomendação Inteligente
 ```yaml
-Step 7 - 配置推荐生成:
-  - 生成缺失配置建议
-  - 推荐最佳实践配置
-  - 提供性能优化建议
-  - 建议安全加固措施
+Passo 7 - Geração de Recomendação de Configuração:
+  - Gerar sugestões para configurações ausentes
+  - Recomendar configurações de melhores práticas
+  - Fornecer sugestões de otimização de desempenho
+  - Sugerir medidas de reforço de segurança
 
-Step 8 - 工作流优化:
-  - 推荐适合的开发工作流
-  - 建议规则配置优化
-  - 提供工具集成建议
-  - 生成项目改进计划
+Passo 8 - Otimização de Fluxo de Trabalho:
+  - Recomendar fluxos de trabalho de desenvolvimento adequados
+  - Sugerir otimização de configuração de regras
+  - Fornecer sugestões de integração de ferramentas
+  - Gerar plano de melhoria do projeto
 ```
 
-## 🧠 Super Brain Integration - 超级大脑集成
+## 🧠 Integração com Super Brain
 
-### 智能推荐引擎
+### Motor de Recomendação Inteligente
 ```yaml
-项目类型推荐:
-  - 基于项目特征推荐最适合的规则配置
-  - 根据团队规模推荐协作工具
-  - 基于项目复杂度推荐管理策略
-  - 根据技术栈推荐最佳实践
+Recomendação por Tipo de Projeto:
+  - Recomendar configuração de regras mais adequada baseada nas características do projeto
+  - Recomendar ferramentas de colaboração baseadas no tamanho da equipe
+  - Recomendar estratégias de gerenciamento baseadas na complexidade do projeto
+  - Recomendar melhores práticas baseadas na stack tecnológica
 
-学习和优化:
-  - 学习项目特定的配置模式
-  - 积累成功项目的配置经验
-  - 优化推荐算法准确性
-  - 建立项目配置知识库
+Aprendizado e Otimização:
+  - Aprender padrões de configuração específicos do projeto
+  - Acumular experiência de configuração de projetos de sucesso
+  - Otimizar precisão do algoritmo de recomendação
+  - Estabelecer base de conhecimento de configuração de projetos
 
-项目管理集成:
-  - 自动识别项目当前阶段
-  - 推荐阶段特定的配置
-  - 集成到五阶段管理流程
-  - 提供项目发展路径建议
+Integração com Gerenciamento de Projeto:
+  - Identificação automática da fase atual do projeto
+  - Recomendar configurações específicas para a fase
+  - Integração com o processo de gerenciamento de cinco fases
+  - Fornecer sugestões de caminho de desenvolvimento do projeto
 ```
 
-### 与其他规则协同
+### Sinergia com Outras Regras
 ```yaml
-commit工作流协同（支持 /commit-fast 别名）:
-  - 为提交工作流提供项目上下文
-  - 优化提交信息生成
-  - 配置项目特定的提交规范
-  - 集成到统一提交工作流（含快速模式）
+Sinergia com Workflow de Commit (suporta alias /commit-fast):
+  - Fornecer contexto do projeto para o fluxo de trabalho de commit
+  - Otimizar geração de mensagens de commit
+  - Configurar padrões de commit específicos do projeto
+  - Integrar ao fluxo de trabalho de commit unificado (incluindo modo rápido)
 
-code-quality-check协同:
-  - 为质量检查提供项目配置
-  - 推荐项目特定的质量标准
-  - 配置语言特定的检查规则
-  - 优化质量检查性能
+Sinergia com code-quality-check:
+  - Fornecer configuração do projeto para verificação de qualidade
+  - Recomendar padrões de qualidade específicos do projeto
+  - Configurar regras de verificação específicas da linguagem
+  - Otimizar desempenho da verificação de qualidade
 
-systematic-debugging协同:
-  - 为调试提供项目环境信息
-  - 推荐项目特定的调试工具
-  - 配置调试环境和参数
-  - 优化调试流程效率
+Sinergia com systematic-debugging:
+  - Fornecer informações do ambiente do projeto para depuração
+  - Recomendar ferramentas de depuração específicas do projeto
+  - Configurar ambiente e parâmetros de depuração
+  - Otimizar eficiência do processo de depuração
 ```
 
-## 📋 Context Analysis Categories - 上下文分析分类
+## 📋 Categorias de Análise de Contexto
 
-### 🎯 项目基础信息
+### 🎯 Informações Básicas do Projeto
 ```yaml
-基本属性:
-  - 项目名称和描述
-  - 版本信息和历史
-  - 许可证和开源状态
-  - 主要贡献者信息
+Atributos Básicos:
+  - Nome e descrição do projeto
+  - Informações de versão e histórico
+  - Licença e status open source
+  - Informações dos principais contribuidores
 
-技术信息:
-  - 主要编程语言
-  - 框架和库依赖
-  - 开发工具链
-  - 构建和部署配置
+Informações Técnicas:
+  - Linguagem de programação principal
+  - Dependências de frameworks e bibliotecas
+  - Cadeia de ferramentas (toolchain) de desenvolvimento
+  - Configuração de build e deploy
 
-结构信息:
-  - 目录组织模式
-  - 模块化程度
-  - 代码行数统计
-  - 文件类型分布
+Informações Estruturais:
+  - Padrão de organização de diretórios
+  - Grau de modularidade
+  - Estatísticas de linhas de código
+  - Distribuição de tipos de arquivo
 ```
 
-### 🔍 深度分析信息
+### 🔍 Informações de Análise Profunda
 ```yaml
-架构模式:
-  - MVC/MVP/MVVM识别
-  - 微服务/单体架构
-  - 前后端分离程度
-  - 数据库设计模式
+Padrões de Arquitetura:
+  - Identificação MVC/MVP/MVVM
+  - Arquitetura de Microsserviços/Monólito
+  - Grau de separação Frontend/Backend
+  - Padrões de design de banco de dados
 
-开发流程:
-  - Git工作流模式
-  - 分支管理策略
-  - 代码审查流程
-  - 发布管理流程
+Fluxo de Desenvolvimento:
+  - Padrão de fluxo de trabalho Git
+  - Estratégia de gerenciamento de branches
+  - Processo de revisão de código
+  - Processo de gerenciamento de releases
 
-质量保证:
-  - 测试策略和覆盖率
-  - 代码质量工具配置
-  - 静态分析工具使用
-  - 安全扫描配置
+Garantia de Qualidade:
+  - Estratégia e cobertura de testes
+  - Configuração de ferramentas de qualidade de código
+  - Uso de ferramentas de análise estática
+  - Configuração de varredura de segurança
 
-团队协作:
-  - 团队规模和角色
-  - 协作工具使用
-  - 文档维护状况
-  - 知识分享机制
+Colaboração da Equipe:
+  - Tamanho da equipe e papéis
+  - Uso de ferramentas de colaboração
+  - Status de manutenção da documentação
+  - Mecanismos de compartilhamento de conhecimento
 ```
 
-## 🎯 Intelligent Recommendations - 智能推荐
+## 🎯 Recomendações Inteligentes
 
-### 配置优化建议
+### Sugestões de Otimização de Configuração
 ```yaml
-开发环境优化:
-  - IDE配置优化建议
-  - 插件和扩展推荐
-  - 调试配置优化
-  - 开发工具升级建议
+Otimização do Ambiente de Desenvolvimento:
+  - Sugestões de otimização de configuração da IDE
+  - Recomendações de plugins e extensões
+  - Otimização de configuração de debug
+  - Sugestões de atualização de ferramentas de desenvolvimento
 
-构建优化:
-  - 构建性能优化
-  - 依赖管理优化
-  - 打包配置改进
-  - 缓存策略优化
+Otimização de Build:
+  - Otimização de desempenho de build
+  - Otimização de gerenciamento de dependências
+  - Melhoria de configuração de empacotamento
+  - Otimização de estratégia de cache
 
-部署优化:
-  - 部署流程简化
-  - 环境配置标准化
-  - 监控和日志配置
-  - 安全配置加强
+Otimização de Deploy:
+  - Simplificação do processo de deploy
+  - Padronização de configuração de ambiente
+  - Configuração de monitoramento e logs
+  - Reforço de configuração de segurança
 ```
 
-### 工作流推荐
+### Recomendação de Fluxo de Trabalho
 ```yaml
-开发工作流:
-  - 基于项目类型推荐最适合的开发流程
-  - 根据团队规模推荐协作模式
-  - 基于项目复杂度推荐管理策略
+Fluxo de Trabalho de Desenvolvimento:
+  - Recomendar o processo de desenvolvimento mais adequado baseado no tipo de projeto
+  - Recomendar modo de colaboração baseado no tamanho da equipe
+  - Recomendar estratégia de gerenciamento baseada na complexidade do projeto
 
-质量保证流程:
-  - 推荐适合的测试策略
-  - 建议代码审查流程
-  - 配置质量门禁标准
-  - 设置持续集成流程
+Fluxo de Garantia de Qualidade:
+  - Recomendar estratégia de testes adequada
+  - Sugerir processo de revisão de código
+  - Configurar padrões de quality gate
+  - Configurar fluxo de integração contínua
 
-发布管理:
-  - 推荐版本管理策略
-  - 建议发布流程优化
-  - 配置自动化部署
-  - 设置监控和回滚
+Gerenciamento de Releases:
+  - Recomendar estratégia de gerenciamento de versão
+  - Sugerir otimização do processo de release
+  - Configurar deploy automatizado
+  - Configurar monitoramento e rollback
 ```
 
-## 📊 Context Loading Templates - 上下文加载模板
+## 📊 Modelos de Carregamento de Contexto
 
-### 🎨 前端项目模板
+### 🎨 Modelo de Projeto Frontend
 ```yaml
-React项目上下文:
-  技术栈识别:
-    - React版本和特性使用
-    - 状态管理方案 (Redux/Zustand/Context)
-    - 路由方案 (React Router/Next.js)
-    - UI库和组件系统
-    - 构建工具 (Webpack/Vite/Create React App)
+Contexto de Projeto React:
+  Identificação de Stack Tecnológica:
+    - Versão do React e uso de funcionalidades
+    - Solução de gerenciamento de estado (Redux/Zustand/Context)
+    - Solução de roteamento (React Router/Next.js)
+    - Biblioteca de UI e sistema de componentes
+    - Ferramentas de build (Webpack/Vite/Create React App)
 
-  配置推荐:
-    - ESLint/Prettier配置优化
-    - TypeScript配置建议
-    - 测试框架配置 (Jest/Testing Library)
-    - 性能优化配置
-    - 部署配置建议
+  Recomendação de Configuração:
+    - Otimização de configuração ESLint/Prettier
+    - Sugestão de configuração TypeScript
+    - Configuração de framework de testes (Jest/Testing Library)
+    - Configuração de otimização de desempenho
+    - Sugestão de configuração de deploy
 
-  工作流推荐:
-    - 组件开发工作流
-    - 状态管理最佳实践
-    - 性能优化策略
-    - 测试策略建议
+  Recomendação de Fluxo de Trabalho:
+    - Fluxo de trabalho de desenvolvimento de componentes
+    - Melhores práticas de gerenciamento de estado
+    - Estratégias de otimização de desempenho
+    - Sugestão de estratégia de testes
 ```
 
-### 🔧 后端项目模板
+### 🔧 Modelo de Projeto Backend
 ```yaml
-Node.js项目上下文:
-  技术栈识别:
-    - Node.js版本和特性
-    - Web框架 (Express/Koa/Fastify)
-    - 数据库方案 (MongoDB/PostgreSQL/MySQL)
+Contexto de Projeto Node.js:
+  Identificação de Stack Tecnológica:
+    - Versão do Node.js e funcionalidades
+    - Framework Web (Express/Koa/Fastify)
+    - Solução de banco de dados (MongoDB/PostgreSQL/MySQL)
     - ORM/ODM (Mongoose/Prisma/TypeORM)
-    - 认证和授权方案
+    - Solução de autenticação e autorização
 
-  配置推荐:
-    - 环境变量管理
-    - 数据库连接配置
-    - 日志和监控配置
-    - 安全配置加强
-    - 性能优化设置
+  Recomendação de Configuração:
+    - Gerenciamento de variáveis de ambiente
+    - Configuração de conexão com banco de dados
+    - Configuração de logs e monitoramento
+    - Reforço de configuração de segurança
+    - Configuração de otimização de desempenho
 
-  工作流推荐:
-    - API开发工作流
-    - 数据库迁移策略
-    - 测试策略 (单元/集成/E2E)
-    - 部署和运维策略
+  Recomendação de Fluxo de Trabalho:
+    - Fluxo de trabalho de desenvolvimento de API
+    - Estratégia de migração de banco de dados
+    - Estratégia de testes (Unitários/Integração/E2E)
+    - Estratégia de deploy e operações
 ```
 
-### 🌐 全栈项目模板
+### 🌐 Modelo de Projeto Fullstack
 ```yaml
-全栈项目上下文:
-  架构识别:
-    - 前后端分离程度
-    - API设计模式 (REST/GraphQL)
-    - 数据流架构
-    - 微服务vs单体架构
+Contexto de Projeto Fullstack:
+  Identificação de Arquitetura:
+    - Grau de separação Frontend/Backend
+    - Padrão de design de API (REST/GraphQL)
+    - Arquitetura de fluxo de dados
+    - Microsserviços vs Arquitetura Monolítica
 
-  配置推荐:
-    - 跨域配置优化
-    - API版本管理
-    - 数据同步策略
-    - 缓存策略配置
+  Recomendação de Configuração:
+    - Otimização de configuração CORS
+    - Gerenciamento de versão de API
+    - Estratégia de sincronização de dados
+    - Configuração de estratégia de cache
 
-  工作流推荐:
-    - 全栈开发工作流
-    - 前后端协作模式
-    - 数据一致性保证
-    - 端到端测试策略
+  Recomendação de Fluxo de Trabalho:
+    - Fluxo de trabalho de desenvolvimento fullstack
+    - Modo de colaboração Frontend/Backend
+    - Garantia de consistência de dados
+    - Estratégia de testes End-to-End
 ```
 
-## 🔗 Integration Points - 集成点
+## 🔗 Pontos de Integração
 
-### 与Phase 2规则深度集成
+### Integração Profunda com Regras da Fase 2
 ```yaml
-commit工作流集成（支持 /commit-fast 别名）:
-  - 为提交工作流提供项目上下文信息
-  - 基于项目类型优化提交信息生成
-  - 配置项目特定的提交规范和模板
-  - 集成到智能提交决策过程
+Integração com Workflow de Commit (suporta alias /commit-fast):
+  - Fornecer informações de contexto do projeto para o fluxo de trabalho de commit
+  - Otimizar geração de mensagens de commit baseado no tipo de projeto
+  - Configurar padrões e templates de commit específicos do projeto
+  - Integrar ao processo de decisão de commit inteligente
 
-code-quality-check集成:
-  - 为质量检查提供项目配置上下文
-  - 推荐项目特定的质量标准和规则
-  - 配置语言和框架特定的检查工具
-  - 优化质量检查的准确性和效率
+Integração com code-quality-check:
+  - Fornecer contexto de configuração do projeto para verificação de qualidade
+  - Recomendar padrões e regras de qualidade específicos do projeto
+  - Configurar ferramentas de verificação específicas para linguagens e frameworks
+  - Otimizar precisão e eficiência da verificação de qualidade
 
-root-cause-analysis集成:
-  - 为根因分析提供项目背景信息
-  - 基于项目历史提供问题模式分析
-  - 推荐项目特定的解决方案
-  - 集成到问题分析决策过程
+Integração com root-cause-analysis:
+  - Fornecer informações de background do projeto para análise de causa raiz
+  - Fornecer análise de padrões de problemas baseada no histórico do projeto
+  - Recomendar soluções específicas do projeto
+  - Integrar ao processo de decisão de análise de problemas
 
-systematic-debugging集成:
-  - 为调试提供项目环境和配置信息
-  - 推荐项目特定的调试工具和策略
-  - 配置调试环境和参数
-  - 优化调试流程的针对性
+Integração com systematic-debugging:
+  - Fornecer informações de ambiente e configuração do projeto para depuração
+  - Recomendar ferramentas e estratégias de depuração específicas do projeto
+  - Configurar ambiente e parâmetros de depuração
+  - Otimizar a pertinência do processo de depuração
 
-changelog-management集成:
-  - 为变更日志提供项目上下文
-  - 基于项目类型优化日志格式
-  - 推荐版本管理策略
-  - 集成到发布管理流程
+Integração com changelog-management:
+  - Fornecer contexto do projeto para o log de alterações
+  - Otimizar formato de log baseado no tipo de projeto
+  - Recomendar estratégia de gerenciamento de versão
+  - Integrar ao fluxo de gerenciamento de releases
 ```
 
-### 与智能系统集成
+### Integração com Sistemas Inteligentes
 ```yaml
-super-brain-system集成:
-  - 将项目上下文信息输入超级大脑
-  - 基于项目特征提供智能推荐
-  - 学习项目特定的配置模式
-  - 优化项目管理策略
+Integração com super-brain-system:
+  - Alimentar o Super Brain com informações de contexto do projeto
+  - Fornecer recomendações inteligentes baseadas nas características do projeto
+  - Aprender padrões de configuração específicos do projeto
+  - Otimizar estratégias de gerenciamento de projeto
 
-intelligent-project-management集成:
-  - 自动识别项目当前阶段
-  - 推荐阶段特定的配置和工具
-  - 集成到五阶段管理流程
-  - 提供项目发展路径建议
+Integração com intelligent-project-management:
+  - Identificação automática da fase atual do projeto
+  - Recomendar configurações e ferramentas específicas da fase
+  - Integração com o processo de gerenciamento de cinco fases
+  - Fornecer sugestões de caminho de desenvolvimento do projeto
 
-mcp-intelligent-strategy集成:
-  - 基于项目需求推荐MCP工具
-  - 配置项目特定的工具编排
-  - 优化工具选择和使用策略
-  - 集成到MCP工具管理流程
+Integração com mcp-intelligent-strategy:
+  - Recomendar ferramentas MCP baseadas nas necessidades do projeto
+  - Configurar orquestração de ferramentas específica do projeto
+  - Otimizar estratégias de seleção e uso de ferramentas
+  - Integrar ao fluxo de gerenciamento de ferramentas MCP
 ```
 
-## ⚡ Performance Optimization - 性能优化
+## ⚡ Otimização de Desempenho
 
-### 智能缓存机制
+### Mecanismo de Cache Inteligente
 ```yaml
-缓存策略:
-  - 项目分析结果缓存
-  - 配置推荐结果缓存
-  - 技术栈识别缓存
-  - 文件系统扫描缓存
+Estratégia de Cache:
+  - Cache de resultados de análise de projeto
+  - Cache de resultados de recomendação de configuração
+  - Cache de identificação de stack tecnológica
+  - Cache de varredura do sistema de arquivos
 
-优化技术:
-  - 增量分析算法
-  - 并行文件处理
-  - 智能跳过未变更部分
-  - 资源使用优化
+Tecnologias de Otimização:
+  - Algoritmo de análise incremental
+  - Processamento paralelo de arquivos
+  - Pulo inteligente de partes não alteradas
+  - Otimização de uso de recursos
 ```
 
-### 执行效率目标
+### Objetivos de Eficiência de Execução
 ```yaml
-性能指标:
-  - 小型项目分析: <5秒
-  - 中型项目分析: <15秒
-  - 大型项目分析: <45秒
-  - 配置推荐生成: <3秒
+Indicadores de Desempenho:
+  - Análise de projeto pequeno: <5s
+  - Análise de projeto médio: <15s
+  - Análise de projeto grande: <45s
+  - Geração de recomendação de configuração: <3s
 
-优化措施:
-  - 异步并行处理
-  - 智能文件过滤
-  - 缓存命中优化
-  - 内存使用控制
+Medidas de Otimização:
+  - Processamento paralelo assíncrono
+  - Filtragem inteligente de arquivos
+  - Otimização de acerto (hit) de cache
+  - Controle de uso de memória
 ```
 
-## 🚨 Error Handling & Safety - 错误处理和安全保障
+## 🚨 Tratamento de Erros e Segurança
 
-### 统一错误处理机制
+### Mecanismo Unificado de Tratamento de Erros
 ```yaml
-错误分类:
-  Level 1 - 致命错误:
-    - 项目目录不存在或无权限
-    - 关键配置文件损坏
-    - 文件系统严重错误
-    - 内存不足无法分析
+Classificação de Erros:
+  Nível 1 - Erros Fatais:
+    - Diretório do projeto inexistente ou sem permissão
+    - Arquivo de configuração crítico corrompido
+    - Erro grave no sistema de arquivos
+    - Memória insuficiente para análise
 
-  Level 2 - 严重错误:
-    - 部分配置文件解析失败
-    - 技术栈识别错误
-    - AI分析引擎超时
-    - 网络连接问题
+  Nível 2 - Erros Graves:
+    - Falha na análise de arquivos de configuração parciais
+    - Erro na identificação de stack tecnológica
+    - Timeout do motor de análise IA
+    - Problemas de conexão de rede
 
-  Level 3 - 一般错误:
-    - 单个文件分析失败
-    - 配置推荐生成错误
-    - 缓存数据不一致
-    - 工具版本不兼容
+  Nível 3 - Erros Comuns:
+    - Falha na análise de arquivo único
+    - Erro na geração de recomendação de configuração
+    - Inconsistência de dados em cache
+    - Incompatibilidade de versão de ferramenta
 
-  Level 4 - 警告信息:
-    - 配置文件格式不规范
-    - 依赖版本过时
-    - 最佳实践偏离
-    - 性能优化建议
+  Nível 4 - Mensagens de Aviso:
+    - Formato de arquivo de configuração fora do padrão
+    - Versão de dependência obsoleta
+    - Desvio de melhores práticas
+    - Sugestão de otimização de desempenho
 ```
 
-### 安全保障机制
+### Mecanismos de Garantia de Segurança
 ```yaml
-数据安全:
-  - 敏感配置信息保护
-  - 项目数据加密存储
-  - 访问权限验证
-  - 隐私信息过滤
+Segurança de Dados:
+  - Proteção de informações de configuração sensíveis
+  - Armazenamento criptografado de dados do projeto
+  - Verificação de permissões de acesso
+  - Filtragem de informações de privacidade
 
-操作安全:
-  - 只读模式分析 (不修改项目文件)
-  - 安全的配置推荐
-  - 权限验证检查
-  - 操作审计日志
+Segurança Operacional:
+  - Modo de análise somente leitura (não modifica arquivos do projeto)
+  - Recomendação de configuração segura
+  - Verificação de permissões
+  - Logs de auditoria de operações
 
-与其他规则协调:
-  - 与所有规则共享错误处理机制
-  - 统一的安全保障措施
-  - 协调的日志记录系统
-  - 集成的恢复策略
+Coordenação com Outras Regras:
+  - Compartilhamento de mecanismo de tratamento de erros com todas as regras
+  - Medidas de segurança unificadas
+  - Sistema de registro de logs coordenado
+  - Estratégias de recuperação integradas
 ```
 
-## 📋 Usage Examples - 使用示例
+## 📋 Exemplos de Uso
 
-### 基础项目上下文加载
+### Carregamento Básico de Contexto de Projeto
 ```bash
-# AI智能项目上下文加载
+# Carregamento de contexto de projeto inteligente por IA
 /load-context
 
-# 输出示例:
-# 🧠 项目上下文分析完成
+# Exemplo de saída:
+# 🧠 Análise de contexto de projeto concluída
 # 
-# 📊 项目信息:
-# - 项目类型: React + Node.js 全栈项目
-# - 技术栈: React 18 + TypeScript + Express + MongoDB
-# - 项目规模: 中型项目 (156个文件, 15.2K行代码)
-# - 健康度评分: B级 (82分)
+# 📊 Informações do Projeto:
+# - Tipo de Projeto: Projeto Fullstack React + Node.js
+# - Stack Tecnológica: React 18 + TypeScript + Express + MongoDB
+# - Escala do Projeto: Projeto Médio (156 arquivos, 15.2K linhas de código)
+# - Pontuação de Saúde: Nível B (82 pontos)
 # 
-# 🔧 配置建议:
-# - 建议添加 ESLint配置优化
-# - 推荐集成 Prettier代码格式化
-# - 建议完善 Jest测试配置
-# - 推荐添加 Docker容器化配置
+# 🔧 Sugestões de Configuração:
+# - Sugere-se adicionar otimização de configuração ESLint
+# - Recomenda-se integrar formatação de código Prettier
+# - Sugere-se melhorar configuração de testes Jest
+# - Recomenda-se adicionar configuração de conteinerização Docker
 # 
-# 🎯 工作流推荐:
-# - 推荐使用 commit 智能提交工作流（支持 /commit-fast 别名）
-# - 建议启用 code-quality-check 质量检查
-# - 推荐配置 changelog-management 变更管理
+# 🎯 Recomendação de Fluxo de Trabalho:
+# - Recomenda-se usar workflow de commit inteligente (suporta alias /commit-fast)
+# - Sugere-se habilitar verificação de qualidade code-quality-check
+# - Recomenda-se configurar gerenciamento de mudanças changelog-management
 ```
 
-### 深度分析模式
+### Modo de Análise Profunda
 ```bash
-# 深度项目分析
+# Análise profunda de projeto
 /load-context --deep
 
-# 输出示例:
-# 🔍 深度项目分析完成
+# Exemplo de saída:
+# 🔍 Análise profunda de projeto concluída
 # 
-# 📊 详细技术栈:
+# 📊 Stack Tecnológica Detalhada:
 # Frontend: React 18.2.0 + TypeScript 5.0 + Vite 4.3
 # Backend: Node.js 18.16 + Express 4.18 + MongoDB 6.0
 # DevTools: ESLint + Prettier + Jest + Docker
 # 
-# 🏗️ 架构分析:
-# - 架构模式: 前后端分离 + RESTful API
-# - 状态管理: Redux Toolkit + RTK Query
-# - 数据库设计: MongoDB文档型 + Mongoose ODM
-# - 部署策略: Docker容器化 + Nginx反向代理
+# 🏗️ Análise de Arquitetura:
+# - Padrão de Arquitetura: Separação Frontend/Backend + API RESTful
+# - Gerenciamento de Estado: Redux Toolkit + RTK Query
+# - Design de Banco de Dados: MongoDB Orientado a Documentos + Mongoose ODM
+# - Estratégia de Deploy: Conteinerização Docker + Proxy Reverso Nginx
 # 
-# 📈 健康度详情:
-# - 代码质量: 85分 (良好)
-# - 测试覆盖: 72分 (一般)
-# - 文档完整: 78分 (良好)
-# - 安全配置: 90分 (优秀)
+# 📈 Detalhes de Saúde:
+# - Qualidade de Código: 85 pontos (Bom)
+# - Cobertura de Testes: 72 pontos (Regular)
+# - Integridade da Documentação: 78 pontos (Bom)
+# - Configuração de Segurança: 90 pontos (Excelente)
 ```
 
-### 技术栈专项分析
+### Análise Específica de Stack Tecnológica
 ```bash
-# 技术栈专项分析
+# Análise específica de stack tecnológica
 /load-context --tech-stack
 
-# 输出示例:
-# 🔧 技术栈专项分析
+# Exemplo de saída:
+# 🔧 Análise específica de stack tecnológica
 # 
-# 📦 依赖分析:
-# - 生产依赖: 23个 (最新版本: 87%)
-# - 开发依赖: 31个 (最新版本: 92%)
-# - 安全漏洞: 0个 (优秀)
-# - 过时依赖: 3个 (需要更新)
+# 📦 Análise de Dependências:
+# - Dependências de Produção: 23 (Versão mais recente: 87%)
+# - Dependências de Desenvolvimento: 31 (Versão mais recente: 92%)
+# - Vulnerabilidades de Segurança: 0 (Excelente)
+# - Dependências Obsoletas: 3 (Precisa atualizar)
 # 
-# 🛠️ 工具链分析:
-# - 构建工具: Vite (推荐保持)
-# - 代码检查: ESLint (建议升级规则)
-# - 测试框架: Jest (建议添加E2E测试)
-# - 部署工具: Docker (建议优化镜像)
+# 🛠️ Análise da Cadeia de Ferramentas:
+# - Ferramenta de Build: Vite (Recomendado manter)
+# - Verificação de Código: ESLint (Sugere-se atualizar regras)
+# - Framework de Testes: Jest (Sugere-se adicionar testes E2E)
+# - Ferramenta de Deploy: Docker (Sugere-se otimizar imagem)
 ```
 
 ---
 
-**🎯 规则优先级**: 680 (最高优先级，为其他规则提供上下文)  
-**🔄 更新频率**: 基于项目变更和配置更新持续优化  
-**📊 成功指标**: 项目识别准确率>95%, 配置推荐采用率>80%, 分析时间<45秒  
-**🧠 AI模型**: 集成项目分析和配置推荐引擎
+**🎯 Prioridade da Regra**: 680 (Prioridade máxima, fornece contexto para outras regras)  
+**🔄 Frequência de Atualização**: Otimização contínua baseada em alterações do projeto e atualizações de configuração  
+**📊 Indicadores de Sucesso**: Precisão de identificação de projeto > 95%, Taxa de adoção de recomendação de configuração > 80%, Tempo de análise < 45s  
+**🧠 Modelo IA**: Motor integrado de análise de projeto e recomendação de configuração

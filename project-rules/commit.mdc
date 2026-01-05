@@ -1,12 +1,12 @@
 ---
 type: "always_apply"
-description: "Unified comprehensive commit workflow (standard + fast + AI) - 统一全面提交工作流（标准 + 快速 + AI）"
+description: "Fluxo de trabalho de commit unificado e abrangente (padrão + rápido + IA)"
 globs: ["**/*"]
 priority: 680
 alwaysApply: true
 integrations: ["super-brain-system", "code-quality-check", "changelog-management", "mcp-intelligent-strategy", "intelligent-project-management"]
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -17,220 +17,221 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adição do sistema de gerenciamento de versão"
+      - "Padronização da estrutura do arquivo de regras"
 ---
 
-# 📝 Commit Unified Workflow - 统一提交工作流
+# 📝 Commit Unified Workflow - Fluxo de Trabalho de Commit Unificado
 
-一个全面、统一的提交工作流：既支持标准化提交，也支持快速提交与AI智能消息生成；集成质量门与变更日志，适配不同团队规范与项目阶段。
+Um fluxo de trabalho de commit abrangente e unificado: suporta tanto commits padronizados quanto commits rápidos com geração inteligente de mensagens por IA; integra portões de qualidade e logs de alterações, adaptando-se a diferentes normas de equipe e fases do projeto.
 
-## 🚀 Commands - 智能命令（统一）
+## 🚀 Commands - Comandos Inteligentes (Unificado)
 
-- `/commit` - 标准提交（包含预提交检查）
-- `/commit --fast` - 快速提交模式（智能暂存 + AI消息生成）
-- `/commit-fast` - 快速提交别名（与 `/commit --fast` 等效）
-- `/commit --no-verify` - 跳过预提交检查（紧急场景）
-- `/commit --analyze` - 深度分析模式（详细变更分析与建议）
-- `/commit --template <type>` - 指定模板类型（如 feat/fix/docs/refactor 等）
-- `/commit --smart-stage` - 智能暂存相关文件（自动排除临时/配置文件）
+- `/commit` - Commit padrão (inclui verificações pré-commit)
+- `/commit --fast` - Modo de commit rápido (stage inteligente + geração de mensagem por IA)
+- `/commit-fast` - Alias para commit rápido (equivalente a `/commit --fast`)
+- `/commit --no-verify` - Pular verificações pré-commit (cenários de emergência)
+- `/commit --analyze` - Modo de análise profunda (análise detalhada de alterações e sugestões)
+- `/commit --template <type>` - Especificar tipo de modelo (como feat/fix/docs/refactor etc.)
+- `/commit --smart-stage` - Stage inteligente de arquivos relevantes (exclui automaticamente arquivos temporários/configuração)
 
-说明：保留所有既有命令习惯，同时提供统一的参数化入口，便于脚本与工具集成。
+Nota: Mantém todos os hábitos de comando existentes, fornecendo ao mesmo tempo uma entrada parametrizada unificada para fácil integração com scripts e ferramentas.
 
-## 🧠 AI Intelligence Core - AI智能核心
+## 🧠 AI Intelligence Core - Núcleo de Inteligência IA
 
-### 智能激活条件
+### Condições de Ativação Inteligente
 ```yaml
-自动激活场景:
-  - 检测到多个文件变更且需要快速提交
-  - 用户执行 `/commit --fast` 或 `/commit-fast`
-  - 超级大脑系统推荐快速提交流程
-  - 项目处于需要频繁提交的阶段
+Cenários de Ativação Automática:
+  - Detecção de múltiplas alterações de arquivos e necessidade de commit rápido
+  - Usuário executa `/commit --fast` ou `/commit-fast`
+  - Sistema Super Brain recomenda fluxo de commit rápido
+  - Projeto está em uma fase que requer commits frequentes
 
-智能分析维度:
-  - 变更文件类型和数量 (30%)
-  - 代码变更复杂度 (25%)
-  - 项目当前阶段 (20%)
-  - 历史提交模式 (15%)
-  - 时间紧迫性 (10%)
+Dimensões de Análise Inteligente:
+  - Tipo e quantidade de arquivos alterados (30%)
+  - Complexidade da alteração de código (25%)
+  - Fase atual do projeto (20%)
+  - Padrões históricos de commit (15%)
+  - Urgência de tempo (10%)
 ```
 
-## ✨ AI-Powered Features - AI驱动功能
+## ✨ AI-Powered Features - Recursos Impulsionados por IA
 
-### 🤖 智能提交信息生成
+### 🤖 Geração Inteligente de Mensagem de Commit
 ```yaml
-AI分析引擎:
-  文件变更分析:
-    - 自动识别变更类型（feat/fix/docs/refactor等）
-    - 分析变更影响范围和重要性
-    - 检测代码模式和最佳实践
-    - 识别潜在的安全和性能影响
+Motor de Análise de IA:
+  Análise de Alteração de Arquivo:
+    - Identificação automática do tipo de alteração (feat/fix/docs/refactor, etc.)
+    - Análise do escopo de impacto e importância da alteração
+    - Detecção de padrões de código e melhores práticas
+    - Identificação de impactos potenciais de segurança e performance
 
-  智能消息生成:
-    - 基于变更内容自动生成描述性标题
-    - 智能选择最合适的emoji和类型
-    - 自动添加作用域（scope）信息
-    - 生成详细的变更说明（可选）
+  Geração Inteligente de Mensagens:
+    - Geração automática de título descritivo com base no conteúdo da alteração
+    - Seleção inteligente do emoji e tipo mais adequados
+    - Adição automática de informações de escopo (scope)
+    - Geração de descrição detalhada da alteração (opcional)
 
-  上下文感知:
-    - 考虑项目类型和技术栈
-    - 分析历史提交模式
-    - 集成项目管理阶段信息
-    - 参考团队提交规范
+  Percepção de Contexto:
+    - Consideração do tipo de projeto e stack tecnológica
+    - Análise de padrões históricos de commit
+    - Integração de informações da fase de gerenciamento do projeto
+    - Referência às normas de commit da equipe
 ```
 
-### 🔧 MCP工具自动编排（可选）
+### 🔧 Orquestração Automática de Ferramentas MCP (Opcional)
 ```yaml
-预提交自动化:
-  - 智能选择相关的代码检查工具
-  - 自动运行适当的测试套件
-  - 执行代码格式化和清理
-  - 生成或更新相关文档
+Automação Pré-commit:
+  - Seleção inteligente de ferramentas de verificação de código relevantes
+  - Execução automática de suítes de teste apropriadas
+  - Execução de formatação e limpeza de código
+  - Geração ou atualização de documentação relacionada
 
-质量保证:
-  - 自动安全扫描（如适用）
-  - 性能影响评估
-  - 依赖关系检查
-  - 版本兼容性验证
+Garantia de Qualidade:
+  - Varredura de segurança automática (se aplicável)
+  - Avaliação de impacto de performance
+  - Verificação de dependências
+  - Validação de compatibilidade de versão
 
-智能优化:
-  - 根据项目类型选择工具
-  - 基于变更范围调整检查级别
-  - 并行执行提升效率
-  - 智能缓存和增量检查
+Otimização Inteligente:
+  - Seleção de ferramentas baseada no tipo de projeto
+  - Ajuste do nível de verificação baseado no escopo da alteração
+  - Execução paralela para aumentar a eficiência
+  - Cache inteligente e verificação incremental
 ```
 
-## ✨ Features - 功能特性
+## ✨ Features - Funcionalidades
 
-- 默认运行预提交检查（lint、build、生成文档）
-- 如果没有暂存文件，自动暂存文件
-- 使用约定式提交格式和描述性表情符号
-- 建议为不同关注点拆分提交
+- Executa verificações pré-commit por padrão (lint, build, geração de documentos)
+- Se não houver arquivos em stage, faz stage automático
+- Usa formato de commit convencional e emojis descritivos
+- Sugere dividir commits para diferentes focos
 
-补充：在快速模式下，会根据变更自动选择最合适的提交类型与模板，并支持自动生成详细说明。
+Nota: No modo rápido, seleciona automaticamente o tipo e modelo de commit mais adequados com base nas alterações e suporta a geração automática de descrições detalhadas.
 
-## 📋 Commit Types - 提交类型（统一）
+## 📋 Commit Types - Tipos de Commit (Unificado)
 
-| 类型 | 表情符号 | 描述 | 示例 |
+| Tipo | Emoji | Descrição | Exemplo |
 |------|----------|------|------|
-| **feat** | ✨ | 新功能 | `✨ feat: 添加用户认证功能` |
-| **fix** | 🐛 | Bug修复 | `🐛 fix: 修复登录页面验证错误` |
-| **docs** | 📝 | 文档变更 | `📝 docs: 更新API文档` |
-| **refactor** | ♻️ | 重构代码 | `♻️ refactor: 重构用户服务层` |
-| **style** | 🎨 | 代码格式 | `🎨 style: 格式化代码，添加缺失分号` |
-| **perf** | ⚡️ | 性能改进 | `⚡️ perf: 优化数据库查询性能` |
-| **test** | ✅ | 测试相关 | `✅ test: 添加用户注册单元测试` |
-| **chore** | 🧑‍💻 | 工具配置 | `🧑‍💻 chore: 更新构建配置` |
-| **wip** | 🚧 | 进行中的工作 | `🚧 wip: 用户权限功能开发中` |
-| **remove** | 🔥 | 删除代码 | `🔥 remove: 删除废弃的API接口` |
-| **hotfix** | 🚑 | 紧急修复 | `🚑 hotfix: 修复生产环境登录问题` |
-| **security** | 🔒 | 安全改进 | `🔒 security: 加强密码加密机制` |
+| **feat** | ✨ | Nova funcionalidade | `✨ feat: Adicionar funcionalidade de autenticação de usuário` |
+| **fix** | 🐛 | Correção de bug | `🐛 fix: Corrigir erro de validação na página de login` |
+| **docs** | 📝 | Alteração de documentação | `📝 docs: Atualizar documentação da API` |
+| **refactor** | ♻️ | Refatoração de código | `♻️ refactor: Refatorar camada de serviço de usuário` |
+| **style** | 🎨 | Formatação de código | `🎨 style: Formatar código, adicionar ponto e vírgula ausente` |
+| **perf** | ⚡️ | Melhoria de performance | `⚡️ perf: Otimizar performance de consulta ao banco de dados` |
+| **test** | ✅ | Relacionado a testes | `✅ test: Adicionar teste unitário de registro de usuário` |
+| **chore** | 🧑‍💻 | Configuração de ferramentas | `🧑‍💻 chore: Atualizar configuração de build` |
+| **wip** | 🚧 | Trabalho em progresso | `🚧 wip: Desenvolvimento de funcionalidade de permissão de usuário` |
+| **remove** | 🔥 | Remoção de código | `🔥 remove: Remover interface de API obsoleta` |
+| **hotfix** | 🚑 | Correção urgente | `🚑 hotfix: Corrigir problema de login em produção` |
+| **security** | 🔒 | Melhoria de segurança | `🔒 security: Fortalecer mecanismo de criptografia de senha` |
 
-### 扩展类型（AI自动识别）
+### Tipos Estendidos (Reconhecimento Automático por IA)
+
 ```yaml
-功能开发:
-  - ✨ feat: 新功能添加
-  - 🎉 init: 项目初始化
-  - 🚀 deploy: 部署相关
-  - 💫 enhancement: 功能增强
+Desenvolvimento de Funcionalidade:
+  - ✨ feat: Adição de nova funcionalidade
+  - 🎉 init: Inicialização do projeto
+  - 🚀 deploy: Relacionado a deploy
+  - 💫 enhancement: Melhoria de funcionalidade
 
-问题修复:
-  - 🐛 fix: 常规Bug修复
-  - 🚑 hotfix: 紧急修复
-  - 🩹 patch: 小补丁
-  - 🔧 config: 配置修复
+Correção de Problemas:
+  - 🐛 fix: Correção de bug convencional
+  - 🚑 hotfix: Correção urgente
+  - 🩹 patch: Pequeno patch
+  - 🔧 config: Correção de configuração
 
-代码质量:
-  - ♻️ refactor: 代码重构
-  - 🎨 style: 代码格式化
-  - ⚡️ perf: 性能优化
-  - 🧹 cleanup: 代码清理
+Qualidade de Código:
+  - ♻️ refactor: Refatoração de código
+  - 🎨 style: Formatação de código
+  - ⚡️ perf: Otimização de performance
+  - 🧹 cleanup: Limpeza de código
 
-文档和测试:
-  - 📝 docs: 文档更新
-  - ✅ test: 测试相关
-  - 📚 tutorial: 教程更新
-  - 💡 example: 示例代码
+Documentação e Testes:
+  - 📝 docs: Atualização de documentação
+  - ✅ test: Relacionado a testes
+  - 📚 tutorial: Atualização de tutorial
+  - 💡 example: Código de exemplo
 
-工具和配置:
-  - 🧑‍💻 chore: 工具配置
-  - 📦 deps: 依赖更新
-  - 🔨 build: 构建相关
-  - 🔧 tools: 工具更新
+Ferramentas e Configuração:
+  - 🧑‍💻 chore: Configuração de ferramentas
+  - 📦 deps: Atualização de dependências
+  - 🔨 build: Relacionado a build
+  - 🔧 tools: Atualização de ferramentas
 ```
 
-## 📋 Process - 提交流程
+## 📋 Process - Processo de Commit
 
-### 1. 检查暂存变更
+### 1. Verificar Alterações em Stage
 ```bash
 git status
 ```
 
-### 2. 如果没有暂存变更，审查并暂存适当的文件
+### 2. Se não houver alterações em stage, revisar e adicionar arquivos apropriados
 ```bash
 git add <files>
-# 或者暂存所有变更
+# Ou adicionar todas as alterações
 git add .
 ```
 
-### 3. 运行预提交检查（除非使用 --no-verify）
-- 代码检查 (lint)
-- 构建验证
-- 测试运行
-- 文档生成
+### 3. Executar Verificações Pré-commit (a menos que use --no-verify)
+- Verificação de código (lint)
+- Validação de build
+- Execução de testes
+- Geração de documentação
 
-### 4. 分析变更以确定提交类型
-- 查看修改的文件和内容
-- 确定主要变更类型
-- 考虑是否需要拆分为多个提交
+### 4. Analisar Alterações para Determinar Tipo de Commit
+- Verificar arquivos e conteúdos modificados
+- Determinar tipo principal de alteração
+- Considerar se é necessário dividir em múltiplos commits
 
-### 5. 生成描述性提交消息
-- 使用格式：`emoji type(scope): description`
-- 包含作用域（如适用）：`type(scope): description`
-- 为复杂变更添加正文，解释原因
-- 引用相关问题/PR
+### 5. Gerar Mensagem de Commit Descritiva
+- Usar formato: `emoji type(scope): description`
+- Incluir escopo (se aplicável): `type(scope): description`
+- Adicionar corpo para alterações complexas, explicando o motivo
+- Referenciar issues/PRs relacionados
 
-### 6. 执行提交（标准）
+### 6. Executar Commit (Padrão)
 ```bash
-git commit -m "✨ feat(auth): 添加JWT认证中间件
+git commit -m "✨ feat(auth): Adicionar middleware de autenticação JWT
 
-- 实现JWT token生成和验证
-- 添加认证中间件到路由保护
-- 更新用户模型包含token字段
+- Implementar geração e validação de token JWT
+- Adicionar middleware de autenticação para proteção de rota
+- Atualizar modelo de usuário para incluir campo de token
 
 Closes #123"
 ```
 
-### 7. 快速提交（可选）
-当使用 `/commit --fast` 或 `/commit-fast` 时：
+### 7. Commit Rápido (Opcional)
+Ao usar `/commit --fast` ou `/commit-fast`:
 ```yaml
-流程简化:
-  - 自动暂存相关变更（智能排除临时/配置文件）
-  - 运行最小必要的预提交检查（可配置）
-  - AI生成提交标题与说明（可交互确认或全自动）
-  - 直接执行提交并记录元数据
+Simplificação do Fluxo:
+  - Stage automático de alterações relevantes (exclusão inteligente de arquivos temporários/configuração)
+  - Executar verificações pré-commit mínimas necessárias (configurável)
+  - IA gera título e descrição do commit (confirmação interativa ou totalmente automático)
+  - Executar commit diretamente e registrar metadados
 ```
 
-## ✅ Best Practices - 最佳实践
+## ✅ Best Practices - Melhores Práticas
 
-### 提交原则
-- **原子性** - 保持提交专注和原子化
-- **命令式语气** - 使用"添加功能"而不是"已添加功能"
-- **解释原因** - 说明为什么，而不仅仅是什么
-- **引用问题** - 在相关时引用问题/PR
-- **拆分变更** - 将不相关的变更拆分为单独的提交
+### Princípios de Commit
+- **Atomicidade** - Manter commits focados e atômicos
+- **Tom imperativo** - Usar "Adicionar funcionalidade" em vez de "Funcionalidade adicionada"
+- **Explicar o porquê** - Explicar o motivo, não apenas o que
+- **Referenciar issues** - Referenciar issues/PRs quando relevante
+- **Dividir alterações** - Separar alterações não relacionadas em commits individuais
 
-### 超级大脑集成（建议）
+### Integração com Super Brain (Sugerido)
 ```yaml
-智能推荐:
-  - 基于项目阶段推荐提交频率与时机
-  - 推荐相关后续操作（测试/文档/变更日志）
-学习优化:
-  - 记录提交偏好与历史模式
-  - 优化AI消息生成准确性
+Recomendação Inteligente:
+  - Recomendar frequência e momento de commit com base na fase do projeto
+  - Recomendar ações subsequentes (testes/documentação/changelog)
+Aprendizado e Otimização:
+  - Registrar preferências de commit e padrões históricos
+  - Otimizar precisão da geração de mensagens por IA
 ```
 
-### 消息格式
+### Formato da Mensagem
 ```
 <emoji> <type>(<scope>): <description>
 
@@ -239,78 +240,78 @@ Closes #123"
 <footer>
 ```
 
-### 示例提交消息
+### Exemplos de Mensagens de Commit
 
-**简单功能添加：**
+**Adição de funcionalidade simples:**
 ```
-✨ feat: 添加用户头像上传功能
-```
-
-**带作用域的修复：**
-```
-🐛 fix(api): 修复用户查询接口分页错误
+✨ feat: Adicionar funcionalidade de upload de avatar do usuário
 ```
 
-**复杂变更带正文：**
+**Correção com escopo:**
 ```
-♻️ refactor(database): 重构用户数据访问层
+🐛 fix(api): Corrigir erro de paginação na interface de consulta de usuário
+```
 
-- 将原始SQL查询迁移到ORM
-- 添加数据库连接池配置
-- 优化查询性能和内存使用
+**Alteração complexa com corpo:**
+```
+♻️ refactor(database): Refatorar camada de acesso a dados do usuário
 
-性能提升约30%，代码可维护性显著改善
+- Migrar consultas SQL brutas para ORM
+- Adicionar configuração de pool de conexões de banco de dados
+- Otimizar performance de consulta e uso de memória
+
+Aumento de performance em cerca de 30%, manutenibilidade do código significativamente melhorada
 
 Closes #456
 ```
 
-## 🔧 Pre-commit Checks - 预提交检查
+## 🔧 Pre-commit Checks - Verificações Pré-commit
 
-### 自动运行的检查
-1. **代码检查** - ESLint, Prettier, 等
-2. **类型检查** - TypeScript, mypy, 等
-3. **测试运行** - 单元测试和集成测试
-4. **构建验证** - 确保代码可以成功构建
-5. **文档生成** - 自动更新API文档
+### Verificações Executadas Automaticamente
+1. **Verificação de código** - ESLint, Prettier, etc.
+2. **Verificação de tipos** - TypeScript, mypy, etc.
+3. **Execução de testes** - Testes unitários e de integração
+4. **Validação de build** - Garantir que o código pode ser compilado com sucesso
+5. **Geração de documentação** - Atualizar documentação da API automaticamente
 
-提示：在快速模式下，可以降级或跳过部分检查（与 `--no-verify` 区分，仍建议保留核心检查）。
+Dica: No modo rápido, é possível rebaixar ou pular algumas verificações (distinto de `--no-verify`, ainda recomenda-se manter verificações essenciais).
 
-### 跳过检查
+### Pular Verificações
 ```bash
-# 紧急情况下跳过预提交检查
-git commit --no-verify -m "🚑 hotfix: 紧急修复生产问题"
+# Pular verificações pré-commit em caso de emergência
+git commit --no-verify -m "🚑 hotfix: Correção urgente de problema em produção"
 ```
 
-## 📋 Checklist - 检查清单
+## 📋 Checklist - Lista de Verificação
 
-### 提交前
-- [ ] 变更已审查和测试
-- [ ] 提交消息清晰描述性
-- [ ] 使用正确的提交类型和表情符号
-- [ ] 包含相关的作用域
-- [ ] 引用相关问题/PR
+### Antes do Commit
+- [ ] Alterações revisadas e testadas
+- [ ] Mensagem de commit clara e descritiva
+- [ ] Usar tipo de commit e emoji corretos
+- [ ] Incluir escopo relevante
+- [ ] Referenciar issue/PR relevante
 
-### 提交后
-- [ ] 推送到远程仓库
-- [ ] 检查CI/CD流水线状态
-- [ ] 更新相关文档
-- [ ] 通知团队成员（如需要）
+### Após o Commit
+- [ ] Push para repositório remoto
+- [ ] Verificar status do pipeline CI/CD
+- [ ] Atualizar documentação relacionada
+- [ ] Notificar membros da equipe (se necessário)
 
-## 🧠 Super Brain Integration - 超级大脑集成
+## 🧠 Super Brain Integration - Integração com Super Brain
 
-与超级大脑系统协同：
-- 感知阶段与上下文，优化提交策略与消息生成
-- 自动记录与学习，提升未来建议与准确性
-- 与智能项目管理、质量检查、变更日志联动
+Sinergia com o sistema Super Brain:
+- Perceber fase e contexto, otimizar estratégia de commit e geração de mensagens
+- Registro e aprendizado automáticos, melhorando sugestões e precisão futuras
+- Integração com gerenciamento de projetos inteligente, verificação de qualidade e changelog
 
-## 🎯 Integration - 集成
+## 🎯 Integration - Integração
 
 ### Git Hooks
 ```bash
-# 安装预提交钩子
+# Instalar hooks de pré-commit
 npm install --save-dev husky lint-staged
 
-# 配置 package.json
+# Configurar package.json
 {
   "husky": {
     "hooks": {
@@ -324,8 +325,8 @@ npm install --save-dev husky lint-staged
 }
 ```
 
-### 与CI/CD集成
-- 自动触发构建和测试
-- 代码质量检查
-- 自动部署到测试环境
-- 生成变更日志
+### Integração com CI/CD
+- Acionar build e testes automaticamente
+- Verificação de qualidade de código
+- Deploy automático para ambiente de teste
+- Gerar changelog

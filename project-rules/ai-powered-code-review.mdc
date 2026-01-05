@@ -1,11 +1,11 @@
 ---
 type: "project_rule"
-description: "AI驱动的智能代码审查规则 - 基于机器学习的代码质量分析和自动化审查流程"
+description: "Regra de revisão de código inteligente baseada em IA - Análise de qualidade de código baseada em aprendizado de máquina e fluxo de revisão automatizado"
 globs: ["**/*"]
 alwaysApply: false
 priority: 500
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -16,436 +16,435 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adicionado sistema de gerenciamento de versão"
+      - "Padronizada estrutura do arquivo de regra"
 ---
 
-# 🔍 AI驱动的智能代码审查规则
+# 🔍 Regra de Revisão de Código Inteligente Baseada em IA
 
-## 🎯 核心理念
+## 🎯 Conceito Central
 
-基于最新AI代码审查技术，实现智能化、自动化的代码质量控制和审查流程。
+Baseado nas mais recentes tecnologias de revisão de código por IA, alcançando controle de qualidade e fluxos de revisão inteligentes e automatizados.
 
-### 🤖 智能审查引擎
+### 🤖 Motor de Revisão Inteligente
 ```yaml
-核心能力:
-  静态分析增强:
-    - 语义理解和上下文分析
-    - 设计模式识别和评估
-    - 架构一致性检查
-    - 性能影响预测
+Capacidades Principais:
+  Aprimoramento de Análise Estática:
+    - Compreensão semântica e análise de contexto
+    - Identificação e avaliação de padrões de projeto
+    - Verificação de consistência arquitetural
+    - Previsão de impacto na performance
   
-  动态行为分析:
-    - 运行时行为预测
-    - 资源使用模式分析
-    - 并发安全性检查
-    - 异常处理完整性
+  Análise de Comportamento Dinâmico:
+    - Previsão de comportamento em tempo de execução
+    - Análise de padrões de uso de recursos
+    - Verificação de segurança de concorrência
+    - Integridade do tratamento de exceções
   
-  学习和适应:
-    - 团队编码风格学习
-    - 历史缺陷模式识别
-    - 最佳实践自动应用
-    - 个性化建议生成
+  Aprendizado e Adaptação:
+    - Aprendizado do estilo de codificação da equipe
+    - Identificação de padrões históricos de defeitos
+    - Aplicação automática de melhores práticas
+    - Geração de sugestões personalizadas
 ```
 
-## 🚀 智能审查流程
+## 🚀 Fluxo de Revisão Inteligente
 
-### 📋 自动触发机制
+### 📋 Mecanismo de Disparo Automático
 ```yaml
-触发条件:
-  代码提交触发:
-    - 每次commit自动触发
-    - 差异分析和影响评估
-    - 风险等级自动分类
-    - 审查优先级排序
+Condições de Disparo:
+  Disparo por Commit:
+    - Disparo automático a cada commit
+    - Análise de diferenças e avaliação de impacto
+    - Classificação automática de nível de risco
+    - Ordenação de prioridade de revisão
   
-  Pull Request触发:
-    - PR创建时全面审查
-    - 变更影响范围分析
-    - 冲突风险预测
-    - 合并建议生成
+  Disparo por Pull Request:
+    - Revisão completa na criação do PR
+    - Análise do escopo de impacto das mudanças
+    - Previsão de riscos de conflito
+    - Geração de sugestões de mesclagem (merge)
   
-  定期审查:
-    - 技术债务定期扫描
-    - 代码质量趋势分析
-    - 安全漏洞定期检查
-    - 性能回归检测
+  Revisão Periódica:
+    - Varredura periódica de dívida técnica
+    - Análise de tendências de qualidade de código
+    - Verificação periódica de vulnerabilidades de segurança
+    - Detecção de regressão de performance
 ```
 
-### 🎯 多层次审查策略
+### 🎯 Estratégia de Revisão em Múltiplos Níveis
 ```yaml
-审查层次:
-  L1 - 语法和格式:
-    自动化程度: 100%
-    检查内容:
-      - 代码格式规范
-      - 命名约定检查
-      - 注释完整性
-      - 文档同步性
-    处理方式: 自动修复 + 通知
+Níveis de Revisão:
+  L1 - Sintaxe e Formatação:
+    Grau de Automação: 100%
+    Conteúdo da Verificação:
+      - Normas de formatação de código
+      - Verificação de convenções de nomenclatura
+      - Integridade de comentários
+      - Sincronização de documentação
+    Forma de Tratamento: Correção automática + Notificação
   
-  L2 - 逻辑和结构:
-    自动化程度: 80%
-    检查内容:
-      - 逻辑错误检测
-      - 代码复杂度分析
-      - 重复代码识别
-      - 依赖关系检查
-    处理方式: 智能建议 + 人工确认
+  L2 - Lógica e Estrutura:
+    Grau de Automação: 80%
+    Conteúdo da Verificação:
+      - Detecção de erros lógicos
+      - Análise de complexidade de código
+      - Identificação de código duplicado
+      - Verificação de dependências
+    Forma de Tratamento: Sugestão inteligente + Confirmação manual
   
-  L3 - 架构和设计:
-    自动化程度: 60%
-    检查内容:
-      - 设计模式应用
-      - 架构一致性
-      - 接口设计合理性
-      - 扩展性评估
-    处理方式: 专家建议 + 团队讨论
-  
-  L4 - 业务和安全:
-    自动化程度: 40%
-    检查内容:
-      - 业务逻辑正确性
-      - 安全漏洞检测
-      - 性能影响评估
-      - 合规性检查
-    处理方式: 专家审查 + 安全团队确认
+  L3 - Arquitetura e Design:
+    Grau de Automação: 60%
+    Conteúdo da Verificação:
+      - Aplicação de padrões de projeto
+      - Consistência arquitetural
+      - Racionalidade do design de interface
+      - Avaliação de extensibilidade
+    Forma de Tratamento: Sugestão de especialistas + Discussão da equipe
+
+  L4 - Negócios e Segurança:
+    Grau de Automação: 40%
+    Conteúdo da Verificação:
+      - Correção da lógica de negócios
+      - Detecção de vulnerabilidades de segurança
+      - Avaliação de impacto na performance
+      - Verificação de conformidade
+    Forma de Tratamento: Revisão de especialistas + Confirmação da equipe de segurança
+
+## 🔍 Dimensões de Análise Inteligente
+
+### 📊 Análise de Qualidade de Código
+```yaml
+Dimensões de Qualidade:
+  Análise de Legibilidade:
+    - Pontuação de clareza do código
+    - Avaliação da qualidade dos comentários
+    - Racionalidade da nomenclatura de variáveis
+    - Análise de complexidade de funções
+    Peso da Pontuação: 25%
+
+  Análise de Manutenibilidade:
+    - Verificação do grau de acoplamento de módulos
+    - Análise da taxa de duplicação de código
+    - Avaliação do escopo de impacto de alterações
+    - Verificação da cobertura de testes
+    Peso da Pontuação: 30%
+
+  Análise de Confiabilidade:
+    - Integridade do tratamento de exceções
+    - Verificação de condições de contorno (boundary)
+    - Validação de segurança de concorrência
+    - Verificação de gerenciamento de recursos
+    Peso da Pontuação: 25%
+
+  Análise de Performance:
+    - Avaliação da complexidade de algoritmos
+    - Eficiência do uso de recursos
+    - Verificação da estratégia de cache
+    - Otimização de consultas ao banco de dados
+    Peso da Pontuação: 20%
 ```
 
-## 🔍 智能分析维度
-
-### 📊 代码质量分析
+### 🛡️ Análise de Segurança
 ```yaml
-质量维度:
-  可读性分析:
-    - 代码清晰度评分
-    - 注释质量评估
-    - 变量命名合理性
-    - 函数复杂度分析
-    评分权重: 25%
-  
-  可维护性分析:
-    - 模块耦合度检查
-    - 代码重复率分析
-    - 修改影响范围评估
-    - 测试覆盖率检查
-    评分权重: 30%
-  
-  可靠性分析:
-    - 异常处理完整性
-    - 边界条件检查
-    - 并发安全性验证
-    - 资源管理检查
-    评分权重: 25%
-  
-  性能分析:
-    - 算法复杂度评估
-    - 资源使用效率
-    - 缓存策略检查
-    - 数据库查询优化
-    评分权重: 20%
+Verificações de Segurança:
+  Validação de Entrada:
+    - Detecção de riscos de injeção SQL
+    - Verificação de proteção contra ataques XSS
+    - Validação de parâmetros de entrada
+    - Verificação de segurança de tipos de dados
+
+  Controle de Permissões:
+    - Verificação de controle de acesso
+    - Riscos de elevação de privilégio
+    - Auditoria de operações sensíveis
+    - Validação de mecanismos de autenticação
+
+  Proteção de Dados:
+    - Identificação de dados sensíveis
+    - Verificação de algoritmos de criptografia
+    - Segurança na transmissão de dados
+    - Validação de segurança de armazenamento
+
+  Segurança de Dependências:
+    - Varredura de vulnerabilidades em bibliotecas de terceiros
+    - Verificação de segurança de versões de dependências
+    - Conformidade de licenças
+    - Avaliação de segurança da cadeia de suprimentos
 ```
 
-### 🛡️ 安全性分析
+### ⚡ Análise de Performance
 ```yaml
-安全检查:
-  输入验证:
-    - SQL注入风险检测
-    - XSS攻击防护检查
-    - 输入参数验证
-    - 数据类型安全检查
-  
-  权限控制:
-    - 访问控制检查
-    - 权限提升风险
-    - 敏感操作审计
-    - 认证机制验证
-  
-  数据保护:
-    - 敏感数据识别
-    - 加密算法检查
-    - 数据传输安全
-    - 存储安全验证
-  
-  依赖安全:
-    - 第三方库漏洞扫描
-    - 依赖版本安全检查
-    - 许可证合规性
-    - 供应链安全评估
+Dimensões de Performance:
+  Eficiência de Algoritmos:
+    - Análise de complexidade de tempo
+    - Avaliação de complexidade de espaço
+    - Racionalidade na escolha de algoritmos
+    - Sugestões de otimização de estruturas de dados
+
+  Uso de Recursos:
+    - Padrões de uso de memória
+    - Eficiência de uso de CPU
+    - Otimização de operações de E/S (I/O)
+    - Otimização de requisições de rede
+
+  Performance de Concorrência:
+    - Verificação de segurança de threads
+    - Análise de contenção de travas (locks)
+    - Otimização de processamento assíncrono
+    - Avaliação do grau de concorrência
+
+  Estratégia de Cache:
+    - Racionalidade do uso de cache
+    - Estratégias de invalidação de cache
+    - Proteção contra cache penetration
+    - Verificação de consistência de cache
 ```
 
-### ⚡ 性能分析
+## 🎨 Geração de Sugestões Inteligentes
+
+### 💡 Sugestões Personalizadas
 ```yaml
-性能维度:
-  算法效率:
-    - 时间复杂度分析
-    - 空间复杂度评估
-    - 算法选择合理性
-    - 数据结构优化建议
-  
-  资源使用:
-    - 内存使用模式
-    - CPU使用效率
-    - I/O操作优化
-    - 网络请求优化
-  
-  并发性能:
-    - 线程安全检查
-    - 锁竞争分析
-    - 异步处理优化
-    - 并发度评估
-  
-  缓存策略:
-    - 缓存使用合理性
-    - 缓存失效策略
-    - 缓存穿透防护
-    - 缓存一致性检查
+Estratégia de Geração de Sugestões:
+  Baseado no Perfil do Desenvolvedor:
+    - Avaliação do nível de habilidade
+    - Análise de hábitos de codificação
+    - Identificação de preferências de aprendizado
+    - Recomendações de foco em melhorias
+
+  Baseado nas Características do Projeto:
+    - Características do tipo de projeto
+    - Características da stack tecnológica
+    - Requisitos do domínio de negócios
+    - Modelo de colaboração da equipe
+
+  Baseado em Dados Históricos:
+    - Padrões de erros comuns
+    - Casos de melhoria bem-sucedidos
+    - Aplicação de melhores práticas
+    - Feedback de avaliação de eficácia
 ```
 
-## 🎨 智能建议生成
-
-### 💡 个性化建议
+### 🔧 Capacidade de Correção Automática
 ```yaml
-建议生成策略:
-  基于开发者画像:
-    - 技能水平评估
-    - 编码习惯分析
-    - 学习偏好识别
-    - 改进重点推荐
-  
-  基于项目特性:
-    - 项目类型特点
-    - 技术栈特性
-    - 业务领域要求
-    - 团队协作模式
-  
-  基于历史数据:
-    - 常见错误模式
-    - 成功改进案例
-    - 最佳实践应用
-    - 效果评估反馈
+Escopo de Correção Automática:
+  Problemas de Formatação:
+    - Formatação de código
+    - Organização de instruções de importação
+    - Ajuste de linhas vazias e indentação
+    - Padronização do formato de comentários
+    Aplicação Automática: Sim
+
+  Problemas Lógicos Simples:
+    - Limpeza de variáveis não utilizadas
+    - Sugestões de refatoração simples
+    - Otimização de conversão de tipos
+    - Simplificação de expressões condicionais
+    Aplicação Automática: Opcional
+
+  Questões de Segurança:
+    - Correções de segurança básicas
+    - Adição de validação de entrada
+    - Aperfeiçoamento do tratamento de exceções
+    - Verificação de liberação de recursos
+    Aplicação Automática: Necessita Confirmação
+
+  Otimização de Performance:
+    - Otimizações de performance simples
+    - Sugestões de estratégia de cache
+    - Sugestões de otimização de consulta
+    - Sugestões de melhoria de algoritmos
+    Aplicação Automática: Necessita Avaliação
 ```
 
-### 🔧 自动修复能力
+## 📊 Relatórios e Métricas Inteligentes
+
+### 📈 Indicadores de Medição de Qualidade
 ```yaml
-自动修复范围:
-  格式问题:
-    - 代码格式化
-    - 导入语句整理
-    - 空行和缩进调整
-    - 注释格式规范
-    自动应用: 是
-  
-  简单逻辑问题:
-    - 未使用变量清理
-    - 简单重构建议
-    - 类型转换优化
-    - 条件表达式简化
-    自动应用: 可选
-  
-  安全问题:
-    - 基础安全修复
-    - 输入验证添加
-    - 异常处理完善
-    - 资源释放检查
-    自动应用: 需确认
-  
-  性能优化:
-    - 简单性能优化
-    - 缓存策略建议
-    - 查询优化建议
-    - 算法改进建议
-    自动应用: 需评估
+Indicadores Principais:
+  Pontuação de Qualidade de Código:
+    Forma de Cálculo: Média ponderada
+    Frequência de Atualização: Tempo real
+    Tendência Histórica: Mantida por 6 meses
+    Comparação de Referência: Média da equipe/indústria
+
+  Índice de Dívida Técnica:
+    Dimensões de Cálculo: Complexidade + Duplicação + Cobertura
+    Nível de Risco: Baixo/Médio/Alto/Crítico
+    Sugestões de Pagamento: Ordenação por prioridade
+    Avaliação de Impacto: Impacto na eficiência de desenvolvimento
+
+  Pontuação de Risco de Segurança:
+    Classificação de Risco: Crítico/Alto/Médio/Baixo
+    Prioridade de Correção: Ordenação automática
+    Status de Conformidade: Monitoramento em tempo real
+    Análise de Tendências: Tendência de mudança de risco
+
+  Saúde de Performance:
+    Referência de Performance: Estabelecida automaticamente
+    Detecção de Regressão: Alerta automático
+    Oportunidades de Otimização: Identificação inteligente
+    Avaliação de Eficácia: Avaliação quantitativa
 ```
 
-## 📊 智能报告和度量
-
-### 📈 质量度量指标
+### 📋 Geração de Relatórios Inteligentes
 ```yaml
-核心指标:
-  代码质量分数:
-    计算方式: 加权平均
-    更新频率: 实时
-    历史趋势: 保留6个月
-    基准对比: 团队/行业平均
-  
-  技术债务指数:
-    计算维度: 复杂度+重复+覆盖率
-    风险等级: 低/中/高/严重
-    偿还建议: 优先级排序
-    影响评估: 开发效率影响
-  
-  安全风险评分:
-    风险分类: 严重/高/中/低
-    修复优先级: 自动排序
-    合规状态: 实时监控
-    趋势分析: 风险变化趋势
-  
-  性能健康度:
-    性能基准: 自动建立
-    回归检测: 自动预警
-    优化机会: 智能识别
-    改进效果: 量化评估
+Tipos de Relatórios:
+  Relatório de Feedback em Tempo Real:
+    Momento de Disparo: Ao enviar código (commit)
+    Foco do Conteúdo: Problemas e sugestões imediatas
+    Formato: Resumo conciso + Links detalhados
+    Destinatário: Desenvolvedor individual
+
+  Relatório de Qualidade Diário:
+    Momento de Disparo: Gerado automaticamente todos os dias
+    Foco do Conteúdo: Tendências de qualidade e pontos de melhoria
+    Formato: Gráficos + Indicadores chave
+    Destinatário: Líder da equipe
+
+  Análise Profunda Periódica:
+    Momento de Disparo: Semanal/Mensal
+    Foco do Conteúdo: Análise profunda e sugestões estratégicas
+    Formato: Relatório detalhado + Plano de ação
+    Destinatário: Gestão técnica
+
+  Relatório de Marcos do Projeto:
+    Momento de Disparo: Nós importantes (milestones)
+    Foco do Conteúdo: Status de alcance da qualidade
+    Formato: Avaliação abrangente + Alerta de risco
+    Destinatário: Partes interessadas do projeto (stakeholders)
 ```
 
-### 📋 智能报告生成
+## 🔄 Aprendizado e Otimização Contínuos
+
+### 🧠 Mecanismo de Aprendizado
 ```yaml
-报告类型:
-  实时反馈报告:
-    触发时机: 代码提交时
-    内容重点: 即时问题和建议
-    格式: 简洁摘要 + 详细链接
-    接收者: 开发者个人
-  
-  每日质量报告:
-    触发时机: 每日自动生成
-    内容重点: 质量趋势和改进点
-    格式: 图表 + 关键指标
-    接收者: 团队负责人
-  
-  周期性深度分析:
-    触发时机: 每周/每月
-    内容重点: 深度分析和战略建议
-    格式: 详细报告 + 行动计划
-    接收者: 技术管理层
-  
-  项目里程碑报告:
-    触发时机: 重要节点
-    内容重点: 质量达成情况
-    格式: 综合评估 + 风险预警
-    接收者: 项目干系人
+Fontes de Dados de Aprendizado:
+  Histórico de Alterações de Código:
+    - Análise de padrões de modificação
+    - Registros de correção de defeitos
+    - Avaliação do efeito de refatoração
+    - Rastreamento de melhorias de performance
+
+  Feedback de Revisão:
+    - Análise de comentários de revisão
+    - Padrões de aceitação/rejeição
+    - Efeito após modificação
+    - Preferências do revisor
+
+  Dados em Tempo de Execução:
+    - Dados de monitoramento de performance
+    - Análise de logs de erro
+    - Dados de comportamento do usuário
+    - Indicadores de saúde do sistema
+
+  Conhecimento Externo:
+    - Melhores práticas da indústria
+    - Bancos de dados de vulnerabilidades de segurança
+    - Análise de projetos de código aberto
+    - Feedback da comunidade técnica
 ```
 
-## 🔄 持续学习和优化
-
-### 🧠 学习机制
+### 🎯 Estratégia de Otimização
 ```yaml
-学习数据源:
-  代码变更历史:
-    - 修改模式分析
-    - 缺陷修复记录
-    - 重构效果评估
-    - 性能改进跟踪
-  
-  审查反馈:
-    - 审查意见分析
-    - 接受/拒绝模式
-    - 修改后效果
-    - 审查者偏好
-  
-  运行时数据:
-    - 性能监控数据
-    - 错误日志分析
-    - 用户行为数据
-    - 系统健康指标
-  
-  外部知识:
-    - 行业最佳实践
-    - 安全漏洞数据库
-    - 开源项目分析
-    - 技术社区反馈
+Dimensões de Otimização:
+  Precisão de Detecção:
+    - Redução da taxa de falsos positivos
+    - Controle da taxa de falsos negativos
+    - Aumento da profundidade de detecção
+    - Fortalecimento da compreensão do contexto
+
+  Qualidade das Sugestões:
+    - Aumento da relevância das sugestões
+    - Fortalecimento da operabilidade
+    - Aumento do grau de personalização
+    - Precisão na previsão de efeitos
+
+  Eficiência de Performance:
+    - Otimização da velocidade de análise
+    - Eficiência no uso de recursos
+    - Capacidade de processamento paralelo
+    - Otimização da estratégia de cache
+
+  Experiência do Usuário:
+    - Amigabilidade da interface
+    - Tempestividade do feedback
+    - Otimização da curva de aprendizado
+    - Conveniência de integração
 ```
 
-### 🎯 优化策略
+## 🛠️ Integração e Configuração de Ferramentas
+
+### 🔧 Integração de Ferramentas MCP
 ```yaml
-优化维度:
-  检测准确性:
-    - 误报率降低
-    - 漏报率控制
-    - 检测深度提升
-    - 上下文理解增强
-  
-  建议质量:
-    - 建议相关性提升
-    - 可操作性增强
-    - 个性化程度提高
-    - 效果预测准确性
-  
-  性能效率:
-    - 分析速度优化
-    - 资源使用效率
-    - 并行处理能力
-    - 缓存策略优化
-  
-  用户体验:
-    - 界面友好性
-    - 反馈及时性
-    - 学习曲线优化
-    - 集成便利性
+Orquestração de Ferramentas MCP:
+  Ferramentas de Análise de Código:
+    - codebase-retrieval: Análise semântica
+    - server-filesystem: Operações de arquivo
+    - Ferramentas de análise estática: Verificação de regras
+    - Ferramentas de varredura de segurança: Detecção de vulnerabilidades
+
+  Integração de Controle de Versão:
+    - server-github: Gerenciamento de PR
+    - Git hooks: Disparo automático
+    - Estratégia de branches: Gate de qualidade
+    - Estratégia de mesclagem (merge): Mesclagem inteligente
+
+  Notificação e Feedback:
+    - mcp-feedback-enhanced: Feedback interativo
+    - Notificações por e-mail: Problemas importantes
+    - Mensagens instantâneas: Alertas em tempo real
+    - Dashboard: Exibição visual
 ```
 
-## 🛠️ 工具集成和配置
-
-### 🔧 MCP工具集成
+### ⚙️ Gerenciamento de Configuração
 ```yaml
-MCP工具编排:
-  代码分析工具:
-    - codebase-retrieval: 语义分析
-    - server-filesystem: 文件操作
-    - 静态分析工具: 规则检查
-    - 安全扫描工具: 漏洞检测
-  
-  版本控制集成:
-    - server-github: PR管理
-    - Git hooks: 自动触发
-    - 分支策略: 质量门禁
-    - 合并策略: 智能合并
-  
-  通知和反馈:
-    - mcp-feedback-enhanced: 交互反馈
-    - 邮件通知: 重要问题
-    - 即时消息: 实时提醒
-    - 仪表板: 可视化展示
+Hierarquia de Configuração:
+  Configuração Global:
+    - Padrões de qualidade básicos
+    - Regras de verificação de segurança
+    - Definições de baseline de performance
+    - Configuração da estratégia de notificação
+
+  Configuração do Projeto:
+    - Regras específicas do projeto
+    - Adaptação da stack tecnológica
+    - Customização de regras de negócio
+    - Definições de preferência da equipe
+
+  Configuração Pessoal:
+    - Definições de preferência pessoal
+    - Configuração de nível de habilidade
+    - Definição de objetivos de aprendizado
+    - Ajuste da frequência de feedback
 ```
 
-### ⚙️ 配置管理
-```yaml
-配置层次:
-  全局配置:
-    - 基础质量标准
-    - 安全检查规则
-    - 性能基准设置
-    - 通知策略配置
-  
-  项目配置:
-    - 项目特定规则
-    - 技术栈适配
-    - 业务规则定制
-    - 团队偏好设置
-  
-  个人配置:
-    - 个人偏好设置
-    - 技能水平配置
-    - 学习目标设定
-    - 反馈频率调整
-```
+## 🎯 Exemplos de Uso
 
-## 🎯 使用示例
-
-### 🚀 快速启动
+### 🚀 Início Rápido
 ```bash
-# 启动智能代码审查
-/启动智能审查 [严格程度] [自动化级别]
+# Iniciar revisão de código inteligente
+/iniciar-revisao-inteligente [nível de rigor] [nível de automação]
 
-# 示例
-/启动智能审查 企业级 高度自动化
-/启动智能审查 标准 平衡模式
-/启动智能审查 宽松 人工主导
+# Exemplos
+/iniciar-revisao-inteligente corporativo alta-automacao
+/iniciar-revisao-inteligente padrao modo-equilibrado
+/iniciar-revisao-inteligente flexivel liderado-por-humanos
 ```
 
-### 🎨 自定义配置
+### 🎨 Configuração Personalizada
 ```bash
-# 设置审查严格程度
-/设置审查级别 严格      # 最高质量要求
-/设置审查级别 标准      # 平衡质量和效率
-/设置审查级别 宽松      # 快速开发模式
+# Definir nível de rigor da revisão
+/definir-nivel-revisao rigoroso      # Requisitos de qualidade máxima
+/definir-nivel-revisao padrao        # Equilíbrio entre qualidade e eficiência
+/definir-nivel-revisao flexivel      # Modo de desenvolvimento rápido
 
-# 设置自动修复级别
-/设置自动修复 激进     # 自动应用所有安全修复
-/设置自动修复 保守     # 仅自动修复格式问题
-/设置自动修复 禁用     # 仅提供建议，不自动修复
+# Definir nível de correção automática
+/definir-correcao-automatica agressivo     # Aplicar automaticamente todas as correções de segurança
+/definir-correcao-automatica conservador   # Apenas corrigir automaticamente problemas de formatação
+/definir-correcao-automatica desativado    # Apenas fornecer sugestões, sem correção automática
 ```
 
 ---
 
-**注意**: 此规则文件实现了基于AI的智能代码审查系统，提供多层次、个性化的代码质量控制，显著提升代码质量和开发效率。
+**Nota**: Este arquivo de regra implementa um sistema de revisão de código inteligente baseado em IA, fornecendo controle de qualidade em múltiplos níveis e personalizado, aumentando significativamente a qualidade do código e a eficiência do desenvolvimento.

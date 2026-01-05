@@ -1,12 +1,12 @@
 ---
 type: "always_apply"
-description: "AI-powered root cause analysis with Five Whys methodology - AI驱动的根因分析方法"
+description: "Análise de causa raiz impulsionada por IA com metodologia dos Cinco Porquês"
 globs: ["**/*"]
 priority: 650
 alwaysApply: true
 integrations: ["super-brain-system", "mcp-intelligent-strategy", "intelligent-project-management", "commit", "changelog-management", "code-quality-check"]
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -17,685 +17,685 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adição do sistema de gerenciamento de versão"
+      - "Padronização da estrutura do arquivo de regras"
 ---
 
-# 🔍 Root Cause Analysis - 智能根因分析
+# 🔍 Root Cause Analysis - Análise de Causa Raiz Inteligente
 
-AI驱动的根因分析系统，集成五个为什么方法论、智能问题分类和解决方案推荐引擎。
+Sistema de análise de causa raiz impulsionado por IA, integrando a metodologia dos Cinco Porquês, classificação inteligente de problemas e motor de recomendação de soluções.
 
-## 🧠 AI Intelligence Core - AI智能核心
+## 🧠 Núcleo de Inteligência IA
 
-### 智能激活条件
+### Condições de Ativação Inteligente
 ```yaml
-自动激活场景:
-  - 检测到重复性问题或Bug
-  - 用户执行 "/root-cause" 命令
-  - code-quality-check发现严重问题
-  - 系统故障或异常发生
-  - 超级大脑系统推荐根因分析
+Cenários de ativação automática:
+  - Detecção de problemas repetitivos ou Bugs
+  - Usuário executa o comando "/root-cause"
+  - code-quality-check descobre problemas graves
+  - Ocorrência de falha ou exceção do sistema
+  - Sistema Super Brain recomenda análise de causa raiz
 
-智能分析维度:
-  - 问题复杂度和影响范围 (30%)
-  - 历史问题模式匹配 (25%)
-  - 系统关联性分析 (20%)
-  - 解决方案可行性 (15%)
-  - 预防措施有效性 (10%)
+Dimensões de análise inteligente:
+  - Complexidade do problema e escopo de impacto (30%)
+  - Correspondência com padrões de problemas históricos (25%)
+  - Análise de correlação do sistema (20%)
+  - Viabilidade da solução (15%)
+  - Eficácia das medidas preventivas (10%)
 ```
 
-## 🚀 Commands - 智能命令
+## 🚀 Comandos Inteligentes
 
-- `/root-cause` - AI智能根因分析（推荐）
-- `/root-cause --issue <description>` - 分析指定问题
-- `/root-cause --five-whys` - 使用五个为什么方法
-- `/root-cause --pattern` - 模式识别分析
-- `/root-cause --solution` - 生成解决方案建议
-- `/root-cause --prevent` - 生成预防措施
+- `/root-cause` - Análise de causa raiz inteligente por IA (recomendado)
+- `/root-cause --issue <description>` - Analisar problema especificado
+- `/root-cause --five-whys` - Usar metodologia dos Cinco Porquês
+- `/root-cause --pattern` - Análise de reconhecimento de padrões
+- `/root-cause --solution` - Gerar sugestões de solução
+- `/root-cause --prevent` - Gerar medidas preventivas
 
-## ✨ AI-Powered Features - AI驱动功能
+## ✨ Recursos Impulsionados por IA
 
-### 🤖 智能问题分析引擎
+### 🤖 Motor de Análise de Problemas Inteligente
 ```yaml
-问题识别:
-  技术问题:
-    - 代码Bug和逻辑错误
-    - 性能瓶颈和资源问题
-    - 安全漏洞和风险
-    - 架构设计缺陷
-    - 依赖冲突和版本问题
+Identificação de Problemas:
+  Problemas Técnicos:
+    - Bug de código e erro lógico
+    - Gargalo de desempenho e problemas de recursos
+    - Vulnerabilidade de segurança e riscos
+    - Defeito de design de arquitetura
+    - Conflito de dependência e problemas de versão
 
-  流程问题:
-    - 开发流程不规范
-    - 测试覆盖不足
-    - 部署流程问题
-    - 团队协作障碍
-    - 文档维护不及时
+  Problemas de Processo:
+    - Processo de desenvolvimento não padronizado
+    - Cobertura de testes insuficiente
+    - Problema no processo de deploy
+    - Barreiras na colaboração da equipe
+    - Manutenção de documentação atrasada
 
-  环境问题:
-    - 开发环境配置
-    - 生产环境差异
-    - 第三方服务依赖
-    - 网络连接问题
-    - 硬件资源限制
+  Problemas de Ambiente:
+    - Configuração do ambiente de desenvolvimento
+    - Diferenças no ambiente de produção
+    - Dependência de serviços de terceiros
+    - Problema de conexão de rede
+    - Limitação de recursos de hardware
 
-智能分类:
-  - 根本原因 vs 表面现象
-  - 系统性问题 vs 偶发问题
-  - 技术问题 vs 管理问题
-  - 内部问题 vs 外部依赖
+Classificação Inteligente:
+  - Causa Raiz vs Fenômeno Superficial
+  - Problema Sistêmico vs Problema Esporádico
+  - Problema Técnico vs Problema de Gestão
+  - Problema Interno vs Dependência Externa
 ```
 
-### 🔧 五个为什么方法论
+### 🔧 Metodologia dos Cinco Porquês
 ```yaml
-AI增强的五个为什么:
-  Why 1 - 现象识别:
-    - 详细描述问题现象
-    - 收集相关数据和日志
-    - 确定问题影响范围
-    - 建立问题时间线
+Cinco Porquês Aprimorados por IA:
+  Why 1 - Identificação do Fenômeno:
+    - Descrever detalhadamente o fenômeno do problema
+    - Coletar dados e logs relevantes
+    - Determinar o escopo de impacto do problema
+    - Estabelecer linha do tempo do problema
 
-  Why 2 - 直接原因:
-    - 分析直接触发因素
-    - 识别相关系统组件
-    - 检查配置和设置
-    - 分析用户操作
+  Why 2 - Causa Direta:
+    - Analisar fatores desencadeantes diretos
+    - Identificar componentes do sistema relacionados
+    - Verificar configurações e ajustes
+    - Analisar operações do usuário
 
-  Why 3 - 系统原因:
-    - 分析系统设计缺陷
-    - 检查流程和规范
-    - 识别架构问题
-    - 分析依赖关系
+  Why 3 - Causa Sistêmica:
+    - Analisar defeitos de design do sistema
+    - Verificar processos e normas
+    - Identificar problemas de arquitetura
+    - Analisar relações de dependência
 
-  Why 4 - 管理原因:
-    - 分析管理流程
-    - 检查团队协作
-    - 识别资源分配
-    - 分析决策过程
+  Why 4 - Causa de Gestão:
+    - Analisar processos de gestão
+    - Verificar colaboração da equipe
+    - Identificar alocação de recursos
+    - Analisar processo de decisão
 
-  Why 5 - 根本原因:
-    - 识别根本性问题
-    - 分析文化和理念
-    - 检查组织结构
-    - 确定改进方向
+  Why 5 - Causa Raiz:
+    - Identificar problema fundamental
+    - Analisar cultura e filosofia
+    - Verificar estrutura organizacional
+    - Determinar direção de melhoria
 ```
 
-### 📊 智能模式识别
+### 📊 Reconhecimento Inteligente de Padrões
 ```yaml
-历史模式分析:
-  - 相似问题识别
-  - 问题发生频率分析
-  - 解决方案效果评估
-  - 预防措施有效性
+Análise de Padrões Históricos:
+  - Identificação de problemas similares
+  - Análise de frequência de ocorrência de problemas
+  - Avaliação de eficácia da solução
+  - Eficácia das medidas preventivas
 
-关联性分析:
-  - 问题间的因果关系
-  - 系统组件关联性
-  - 时间序列相关性
-  - 环境因素影响
+Análise de Correlação:
+  - Relação causal entre problemas
+  - Correlação de componentes do sistema
+  - Correlação de séries temporais
+  - Impacto de fatores ambientais
 
-预测性分析:
-  - 潜在问题预警
-  - 风险评估和量化
-  - 影响范围预测
-  - 解决时间估算
+Análise Preditiva:
+  - Alerta de problemas potenciais
+  - Avaliação e quantificação de riscos
+  - Previsão de escopo de impacto
+  - Estimativa de tempo de resolução
 ```
 
-## 🔄 AI Workflow Process - AI工作流程
+## 🔄 Processo de Fluxo de Trabalho IA
 
-### Phase 1: 问题收集阶段
+### Fase 1: Estágio de Coleta de Problemas
 ```yaml
-Step 1 - 问题定义:
-  - 收集问题描述和现象
-  - 整理相关日志和数据
-  - 确定问题严重级别
-  - 建立问题档案
+Passo 1 - Definição do Problema:
+  - Coletar descrição e fenômeno do problema
+  - Organizar logs e dados relevantes
+  - Determinar nível de severidade do problema
+  - Estabelecer arquivo do problema
 
-Step 2 - 环境分析:
-  - 分析问题发生环境
-  - 检查系统配置状态
-  - 收集相关依赖信息
-  - 建立环境快照
+Passo 2 - Análise de Ambiente:
+  - Analisar ambiente de ocorrência do problema
+  - Verificar status de configuração do sistema
+  - Coletar informações de dependência relevantes
+  - Estabelecer snapshot do ambiente
 
-Step 3 - 数据收集:
-  - 收集错误日志和堆栈
-  - 获取性能监控数据
-  - 收集用户操作记录
-  - 整理相关文档
+Passo 3 - Coleta de Dados:
+  - Coletar logs de erro e stack traces
+  - Obter dados de monitoramento de desempenho
+  - Coletar registros de operação do usuário
+  - Organizar documentos relevantes
 ```
 
-### Phase 2: 智能分析阶段
+### Fase 2: Estágio de Análise Inteligente
 ```yaml
-Step 4 - AI分析:
-  - 执行智能问题分类
-  - 进行模式匹配分析
-  - 识别关联性和依赖
-  - 生成分析假设
+Passo 4 - Análise IA:
+  - Executar classificação inteligente de problemas
+  - Realizar análise de correspondência de padrões
+  - Identificar correlações e dependências
+  - Gerar hipóteses de análise
 
-Step 5 - 五个为什么:
-  - 引导式问题深挖
-  - AI辅助原因推理
-  - 验证分析假设
-  - 确定根本原因
+Passo 5 - Cinco Porquês:
+  - Investigação profunda guiada
+  - Raciocínio de causa auxiliado por IA
+  - Validar hipóteses de análise
+  - Determinar causa raiz
 
-Step 6 - 验证分析:
-  - 验证根因分析结果
-  - 检查逻辑一致性
-  - 评估解决方案可行性
-  - 确认分析完整性
+Passo 6 - Validação da Análise:
+  - Validar resultados da análise de causa raiz
+  - Verificar consistência lógica
+  - Avaliar viabilidade da solução
+  - Confirmar integridade da análise
 ```
 
-### Phase 3: 解决方案阶段
+### Fase 3: Estágio de Solução
 ```yaml
-Step 7 - 方案生成:
-  - 生成多种解决方案
-  - 评估方案优缺点
-  - 计算实施成本和风险
-  - 推荐最佳方案
+Passo 7 - Geração de Solução:
+  - Gerar múltiplas soluções
+  - Avaliar prós e contras das soluções
+  - Calcular custos e riscos de implementação
+  - Recomendar a melhor solução
 
-Step 8 - 预防措施:
-  - 设计预防性措施
-  - 建立监控和预警
-  - 制定应急预案
-  - 更新最佳实践
+Passo 8 - Medidas Preventivas:
+  - Projetar medidas preventivas
+  - Estabelecer monitoramento e alertas
+  - Elaborar plano de emergência
+  - Atualizar melhores práticas
 ```
 
-## 🧠 Super Brain Integration - 超级大脑集成
+## 🧠 Integração com Super Brain
 
-### 智能推荐引擎
+### Motor de Recomendação Inteligente
 ```yaml
-问题模式学习:
-  - 学习项目特定的问题模式
-  - 积累解决方案知识库
-  - 优化分析算法准确性
-  - 建立预防性建议
+Aprendizado de Padrões de Problemas:
+  - Aprender padrões de problemas específicos do projeto
+  - Acumular base de conhecimento de soluções
+  - Otimizar precisão do algoritmo de análise
+  - Estabelecer sugestões preventivas
 
-经验积累:
-  - 记录成功的分析案例
-  - 学习失败的分析教训
-  - 优化五个为什么的问题引导
-  - 改进解决方案推荐
+Acumulação de Experiência:
+  - Registrar casos de análise bem-sucedidos
+  - Aprender com lições de análises falhas
+  - Otimizar orientação de perguntas dos Cinco Porquês
+  - Melhorar recomendação de soluções
 
-项目管理集成:
-  - 根据项目阶段调整分析重点
-  - 集成到问题管理流程
-  - 提供项目风险评估
-  - 支持决策支持系统
+Integração com Gerenciamento de Projeto:
+  - Ajustar foco de análise conforme fase do projeto
+  - Integrar ao fluxo de gerenciamento de problemas
+  - Fornecer avaliação de risco do projeto
+  - Suportar sistema de apoio à decisão
 ```
 
-### 与其他规则协同
+### Sinergia com Outras Regras
 ```yaml
-code-quality-check协同:
-  - 质量问题自动触发根因分析
-  - 分析代码质量下降原因
-  - 提供质量改进根本方案
-  - 建立质量预防机制
+Sinergia com code-quality-check:
+  - Problemas de qualidade acionam automaticamente análise de causa raiz
+  - Analisar causa da queda de qualidade de código
+  - Fornecer solução fundamental para melhoria de qualidade
+  - Estabelecer mecanismo de prevenção de qualidade
 
-commit协同:
-  - 分析提交失败原因
-  - 优化提交工作流
-  - 预防提交冲突
-  - 改进提交质量
+Sinergia com commit:
+  - Analisar causa de falha de commit
+  - Otimizar fluxo de trabalho de commit
+  - Prevenir conflitos de commit
+  - Melhorar qualidade do commit
 
-changelog-management协同:
-  - 分析版本发布问题
-  - 优化发布流程
-  - 预防发布风险
-  - 改进变更管理
+Sinergia com changelog-management:
+  - Analisar problemas de lançamento de versão
+  - Otimizar processo de lançamento
+  - Prevenir riscos de lançamento
+  - Melhorar gerenciamento de mudanças
 ```
 
-## 📋 Analysis Categories - 分析分类
+## 📋 Categorias de Análise
 
-### 🔴 Critical Issues - 致命问题
+### 🔴 Problemas Críticos - Fatais
 ```yaml
-系统故障:
-  - 服务完全不可用
-  - 数据丢失或损坏
-  - 安全漏洞被利用
-  - 性能完全崩溃
+Falha do Sistema:
+  - Serviço totalmente indisponível
+  - Perda ou corrupção de dados
+  - Vulnerabilidade de segurança explorada
+  - Colapso total de desempenho
 
-分析重点:
-  - 立即影响评估
-  - 紧急恢复方案
-  - 根本原因快速定位
-  - 预防措施紧急部署
+Foco da Análise:
+  - Avaliação imediata de impacto
+  - Plano de recuperação de emergência
+  - Localização rápida da causa raiz
+  - Implantação urgente de medidas preventivas
 ```
 
-### 🟠 High Priority - 高优先级
+### 🟠 Alta Prioridade
 ```yaml
-功能异常:
-  - 核心功能不正常
-  - 用户体验严重下降
-  - 数据一致性问题
-  - 集成接口故障
+Anomalia Funcional:
+  - Funcionalidade central anormal
+  - Experiência do usuário seriamente degradada
+  - Problema de consistência de dados
+  - Falha de interface de integração
 
-分析重点:
-  - 功能影响范围分析
-  - 用户影响评估
-  - 修复优先级排序
-  - 临时解决方案
+Foco da Análise:
+  - Análise de escopo de impacto funcional
+  - Avaliação de impacto no usuário
+  - Classificação de prioridade de correção
+  - Solução temporária
 ```
 
-### 🟡 Medium Priority - 中优先级
+### 🟡 Média Prioridade
 ```yaml
-性能问题:
-  - 响应时间过长
-  - 资源使用过高
-  - 并发处理能力不足
-  - 缓存效率低下
+Problemas de Desempenho:
+  - Tempo de resposta excessivo
+  - Uso de recursos muito alto
+  - Capacidade de processamento concorrente insuficiente
+  - Baixa eficiência de cache
 
-分析重点:
-  - 性能瓶颈定位
-  - 优化方案设计
-  - 资源配置调整
-  - 监控指标优化
+Foco da Análise:
+  - Localização de gargalo de desempenho
+  - Design de plano de otimização
+  - Ajuste de configuração de recursos
+  - Otimização de indicadores de monitoramento
 ```
 
-### 🟢 Low Priority - 低优先级
+### 🟢 Baixa Prioridade
 ```yaml
-改进机会:
-  - 代码可维护性
-  - 用户体验优化
-  - 流程效率提升
-  - 文档完善
+Oportunidades de Melhoria:
+  - Manutenibilidade de código
+  - Otimização da experiência do usuário
+  - Melhoria da eficiência do processo
+  - Aprimoramento da documentação
 
-分析重点:
-  - 长期改进规划
-  - 最佳实践应用
-  - 技术债务管理
-  - 知识积累
+Foco da Análise:
+  - Planejamento de melhoria a longo prazo
+  - Aplicação de melhores práticas
+  - Gerenciamento de dívida técnica
+  - Acumulação de conhecimento
 ```
 
-## 🎯 Five Whys Templates - 五个为什么模板
+## 🎯 Modelos dos Cinco Porquês
 
-### 技术问题模板
+### Modelo de Problema Técnico
 ```yaml
-问题: 网站响应时间过长
+Problema: Tempo de resposta do site muito longo
 
-Why 1: 为什么网站响应时间过长？
-答案: 数据库查询时间过长
+Why 1: Por que o tempo de resposta do site é muito longo?
+Resposta: Tempo de consulta ao banco de dados muito longo
 
-Why 2: 为什么数据库查询时间过长？
-答案: 缺少适当的索引
+Why 2: Por que o tempo de consulta ao banco de dados é muito longo?
+Resposta: Falta de índices apropriados
 
-Why 3: 为什么缺少适当的索引？
-答案: 数据库设计时没有考虑查询模式
+Why 3: Por que faltam índices apropriados?
+Resposta: O design do banco de dados não considerou padrões de consulta
 
-Why 4: 为什么设计时没有考虑查询模式？
-答案: 需求分析不充分，缺少性能要求
+Why 4: Por que o design não considerou padrões de consulta?
+Resposta: Análise de requisitos insuficiente, falta de requisitos de desempenho
 
-Why 5: 为什么需求分析不充分？
-答案: 项目时间紧迫，跳过了详细的性能分析阶段
+Why 5: Por que a análise de requisitos foi insuficiente?
+Resposta: Tempo de projeto apertado, pulou-se a fase de análise detalhada de desempenho
 
-根本原因: 项目管理流程中缺少性能要求的强制性分析环节
-解决方案: 建立性能要求分析检查点，完善项目管理流程
+Causa Raiz: O processo de gerenciamento de projeto carece de etapa obrigatória de análise de requisitos de desempenho
+Solução: Estabelecer ponto de verificação de análise de requisitos de desempenho, aprimorar processo de gerenciamento de projeto
 ```
 
-### 流程问题模板
+### Modelo de Problema de Processo
 ```yaml
-问题: 代码质量持续下降
+Problema: Qualidade de código caindo continuamente
 
-Why 1: 为什么代码质量持续下降？
-答案: 代码审查不够严格
+Why 1: Por que a qualidade de código está caindo continuamente?
+Resposta: Revisão de código não é rigorosa o suficiente
 
-Why 2: 为什么代码审查不够严格？
-答案: 审查时间不足，压力过大
+Why 2: Por que a revisão de código não é rigorosa o suficiente?
+Resposta: Tempo de revisão insuficiente, pressão excessiva
 
-Why 3: 为什么审查时间不足？
-答案: 项目进度紧张，优先功能开发
+Why 3: Por que o tempo de revisão é insuficiente?
+Resposta: Cronograma do projeto apertado, prioridade no desenvolvimento de funcionalidades
 
-Why 4: 为什么项目进度紧张？
-答案: 需求变更频繁，计划不准确
+Why 4: Por que o cronograma do projeto está apertado?
+Resposta: Mudanças frequentes de requisitos, planejamento impreciso
 
-Why 5: 为什么需求变更频繁？
-答案: 与客户沟通不充分，需求理解有偏差
+Why 5: Por que as mudanças de requisitos são frequentes?
+Resposta: Comunicação insuficiente com o cliente, desvio no entendimento dos requisitos
 
-根本原因: 需求管理流程不完善，缺少有效的需求确认机制
-解决方案: 建立需求确认流程，加强客户沟通，完善变更管理
+Causa Raiz: Processo de gerenciamento de requisitos imperfeito, falta de mecanismo eficaz de confirmação de requisitos
+Solução: Estabelecer processo de confirmação de requisitos, fortalecer comunicação com cliente, aprimorar gerenciamento de mudanças
 ```
 
-## 📊 Solution Generation - 解决方案生成
+## 📊 Geração de Soluções
 
-### 智能解决方案引擎
+### Motor de Soluções Inteligente
 ```yaml
-方案生成策略:
-  短期解决方案:
-    - 快速修复当前问题
-    - 临时缓解措施
-    - 紧急恢复方案
-    - 风险控制措施
+Estratégia de Geração de Soluções:
+  Solução de Curto Prazo:
+    - Correção rápida do problema atual
+    - Medidas de mitigação temporária
+    - Plano de recuperação de emergência
+    - Medidas de controle de risco
 
-  中期改进方案:
-    - 系统优化改进
-    - 流程规范完善
-    - 工具和技术升级
-    - 团队能力提升
+  Plano de Melhoria de Médio Prazo:
+    - Melhoria de otimização do sistema
+    - Aprimoramento de normas de processo
+    - Atualização de ferramentas e tecnologias
+    - Melhoria da capacidade da equipe
 
-  长期预防方案:
-    - 架构设计改进
-    - 管理流程优化
-    - 文化和理念转变
-    - 组织结构调整
+  Plano de Prevenção de Longo Prazo:
+    - Melhoria de design de arquitetura
+    - Otimização de processo de gestão
+    - Mudança de cultura e filosofia
+    - Ajuste de estrutura organizacional
 
-方案评估维度:
-  - 实施难度 (25%)
-  - 成本效益 (25%)
-  - 风险评估 (20%)
-  - 时间要求 (15%)
-  - 资源需求 (15%)
+Dimensões de Avaliação de Soluções:
+  - Dificuldade de implementação (25%)
+  - Custo-benefício (25%)
+  - Avaliação de risco (20%)
+  - Requisito de tempo (15%)
+  - Demanda de recursos (15%)
 ```
 
-### 预防措施设计
+### Design de Medidas Preventivas
 ```yaml
-技术预防:
-  - 自动化测试增强
-  - 监控和预警系统
-  - 代码质量门禁
-  - 安全扫描集成
+Prevenção Técnica:
+  - Aprimoramento de testes automatizados
+  - Sistema de monitoramento e alerta
+  - Portão de qualidade de código
+  - Integração de verificação de segurança
 
-流程预防:
-  - 检查点和审查机制
-  - 风险评估流程
-  - 变更管理规范
-  - 知识分享机制
+Prevenção de Processo:
+  - Pontos de verificação e mecanismo de revisão
+  - Processo de avaliação de risco
+  - Normas de gerenciamento de mudanças
+  - Mecanismo de compartilhamento de conhecimento
 
-文化预防:
-  - 质量意识培养
-  - 持续改进文化
-  - 学习型组织建设
-  - 经验分享激励
+Prevenção Cultural:
+  - Cultivo de consciência de qualidade
+  - Cultura de melhoria contínua
+  - Construção de organização de aprendizado
+  - Incentivo ao compartilhamento de experiência
 ```
 
-## 🔄 AI Workflow Process - AI工作流程
+## 🔄 Processo de Fluxo de Trabalho IA
 
-### Phase 1: 问题定义阶段
+### Fase 1: Estágio de Definição do Problema
 ```yaml
-Step 1 - 问题收集:
-  - 详细记录问题现象
-  - 收集相关日志和数据
-  - 确定问题影响范围
-  - 建立问题时间线
+Passo 1 - Coleta de Problemas:
+  - Registrar detalhadamente o fenômeno do problema
+  - Coletar logs e dados relevantes
+  - Determinar escopo de impacto do problema
+  - Estabelecer linha do tempo do problema
 
-Step 2 - 初步分类:
-  - AI自动问题分类
-  - 确定问题严重级别
-  - 识别相关系统组件
-  - 评估紧急程度
+Passo 2 - Classificação Preliminar:
+  - Classificação automática de problemas por IA
+  - Determinar nível de severidade do problema
+  - Identificar componentes do sistema relacionados
+  - Avaliar urgência
 
-Step 3 - 背景分析:
-  - 分析问题发生环境
-  - 检查相关配置变更
-  - 识别可能的触发因素
-  - 建立问题上下文
+Passo 3 - Análise de Contexto:
+  - Analisar ambiente de ocorrência do problema
+  - Verificar alterações de configuração relevantes
+  - Identificar possíveis fatores desencadeantes
+  - Estabelecer contexto do problema
 ```
 
-### Phase 2: 根因挖掘阶段
+### Fase 2: Estágio de Mineração de Causa Raiz
 ```yaml
-Step 4 - AI辅助五个为什么:
-  - AI生成引导性问题
-  - 智能推理和假设验证
-  - 关联性分析和验证
-  - 逻辑链条完整性检查
+Passo 4 - Cinco Porquês Assistido por IA:
+  - IA gera perguntas orientadoras
+  - Raciocínio inteligente e verificação de hipóteses
+  - Análise e validação de correlação
+  - Verificação de integridade da cadeia lógica
 
-Step 5 - 模式匹配:
-  - 搜索历史相似问题
-  - 分析问题模式和趋势
-  - 识别系统性问题
-  - 评估问题复发风险
+Passo 5 - Correspondência de Padrões:
+  - Pesquisar problemas históricos similares
+  - Analisar padrões e tendências de problemas
+  - Identificar problemas sistêmicos
+  - Avaliar risco de recorrência do problema
 
-Step 6 - 根因验证:
-  - 验证根因分析结果
-  - 检查逻辑推理链条
-  - 评估根因可信度
-  - 确认分析完整性
+Passo 6 - Validação de Causa Raiz:
+  - Validar resultados da análise de causa raiz
+  - Verificar cadeia de raciocínio lógico
+  - Avaliar credibilidade da causa raiz
+  - Confirmar integridade da análise
 ```
 
-### Phase 3: 方案制定阶段
+### Fase 3: Estágio de Elaboração de Soluções
 ```yaml
-Step 7 - 解决方案生成:
-  - AI生成多种解决方案
-  - 评估方案可行性
-  - 计算成本效益比
-  - 推荐最优方案
+Passo 7 - Geração de Soluções:
+  - IA gera múltiplas soluções
+  - Avaliar viabilidade da solução
+  - Calcular relação custo-benefício
+  - Recomendar solução ótima
 
-Step 8 - 预防措施设计:
-  - 设计预防性措施
-  - 建立监控预警机制
-  - 制定应急响应预案
-  - 更新最佳实践库
+Passo 8 - Design de Medidas Preventivas:
+  - Projetar medidas preventivas
+  - Estabelecer mecanismo de monitoramento e alerta
+  - Elaborar plano de resposta a emergências
+  - Atualizar base de melhores práticas
 ```
 
-## 📋 Analysis Templates - 分析模板
+## 📋 Modelos de Análise
 
-### 🐛 Bug分析模板
+### 🐛 Modelo de Análise de Bug
 ```yaml
-问题描述:
-  - 问题现象: [详细描述]
-  - 复现步骤: [步骤列表]
-  - 预期行为: [正确行为]
-  - 实际行为: [错误行为]
-  - 影响范围: [用户/功能影响]
+Descrição do Problema:
+  - Fenômeno do problema: [Descrição detalhada]
+  - Passos de reprodução: [Lista de passos]
+  - Comportamento esperado: [Comportamento correto]
+  - Comportamento real: [Comportamento incorreto]
+  - Escopo de impacto: [Impacto no usuário/funcionalidade]
 
-五个为什么分析:
-  Why 1: 为什么出现这个Bug？
-  答案: [直接原因]
+Análise dos Cinco Porquês:
+  Why 1: Por que esse Bug apareceu?
+  Resposta: [Causa direta]
   
-  Why 2: 为什么会有这个直接原因？
-  答案: [系统原因]
+  Why 2: Por que essa causa direta existe?
+  Resposta: [Causa sistêmica]
   
-  Why 3: 为什么系统会有这个问题？
-  答案: [设计原因]
+  Why 3: Por que o sistema tem esse problema?
+  Resposta: [Causa de design]
   
-  Why 4: 为什么设计时没有考虑这个问题？
-  答案: [流程原因]
+  Why 4: Por que o design não considerou esse problema?
+  Resposta: [Causa de processo]
   
-  Why 5: 为什么流程中缺少这个考虑？
-  答案: [根本原因]
+  Why 5: Por que o processo carece dessa consideração?
+  Resposta: [Causa raiz]
 
-解决方案:
-  - 短期修复: [立即修复方案]
-  - 中期改进: [系统改进方案]
-  - 长期预防: [预防措施设计]
+Solução:
+  - Correção de curto prazo: [Plano de correção imediata]
+  - Melhoria de médio prazo: [Plano de melhoria do sistema]
+  - Prevenção de longo prazo: [Design de medidas preventivas]
 ```
 
-### ⚡ 性能问题模板
+### ⚡ Modelo de Problema de Desempenho
 ```yaml
-问题描述:
-  - 性能指标: [具体数据]
-  - 基准对比: [历史数据对比]
-  - 影响评估: [用户体验影响]
-  - 监控数据: [系统监控信息]
+Descrição do Problema:
+  - Indicadores de desempenho: [Dados específicos]
+  - Comparação de referência: [Comparação com dados históricos]
+  - Avaliação de impacto: [Impacto na experiência do usuário]
+  - Dados de monitoramento: [Informações de monitoramento do sistema]
 
-根因分析:
-  Why 1: 为什么性能下降？
-  Why 2: 为什么会有性能瓶颈？
-  Why 3: 为什么没有及时发现？
-  Why 4: 为什么监控不够及时？
-  Why 5: 为什么缺少性能监控？
+Análise de Causa Raiz:
+  Why 1: Por que o desempenho caiu?
+  Why 2: Por que existe gargalo de desempenho?
+  Why 3: Por que não foi descoberto a tempo?
+  Why 4: Por que o monitoramento não foi oportuno o suficiente?
+  Why 5: Por que falta monitoramento de desempenho?
 
-优化方案:
-  - 立即优化: [紧急优化措施]
-  - 架构优化: [长期架构改进]
-  - 监控完善: [监控体系建设]
+Plano de Otimização:
+  - Otimização imediata: [Medidas de otimização de emergência]
+  - Otimização de arquitetura: [Melhoria de arquitetura a longo prazo]
+  - Aprimoramento de monitoramento: [Construção de sistema de monitoramento]
 ```
 
-## 🔗 Integration Points - 集成点
+## 🔗 Pontos de Integração
 
-### 与现有规则集成
+### Integração com Regras Existentes
 ```yaml
-code-quality-check集成:
-  - 质量问题自动触发根因分析
-  - 分析代码质量下降的根本原因
-  - 提供质量改进的根本方案
-  - 建立质量预防机制
+Integração code-quality-check:
+  - Problemas de qualidade acionam automaticamente análise de causa raiz
+  - Analisar causa raiz da queda de qualidade de código
+  - Fornecer solução fundamental para melhoria de qualidade
+  - Estabelecer mecanismo de prevenção de qualidade
 
-commit集成:
-  - 分析提交失败的根本原因
-  - 优化提交工作流程
-  - 预防提交冲突和问题
-  - 改进提交质量管理
+Integração commit:
+  - Analisar causa raiz de falha de commit
+  - Otimizar fluxo de trabalho de commit
+  - Prevenir conflitos e problemas de commit
+  - Melhorar gerenciamento de qualidade de commit
 
-changelog-management集成:
-  - 分析版本发布问题的根因
-  - 优化发布流程和管理
-  - 预防发布风险和问题
-  - 改进变更管理流程
+Integração changelog-management:
+  - Analisar causa raiz de problemas de lançamento de versão
+  - Otimizar processo e gerenciamento de lançamento
+  - Prevenir riscos e problemas de lançamento
+  - Melhorar fluxo de gerenciamento de mudanças
 
-super-brain-system集成:
-  - 利用智能推荐引擎
-  - 集成项目阶段感知
-  - 支持学习和优化
-  - 协同决策支持
+Integração super-brain-system:
+  - Utilizar motor de recomendação inteligente
+  - Integrar percepção de fase do projeto
+  - Suportar aprendizado e otimização
+  - Suporte à decisão colaborativa
 ```
 
-## 🚨 Error Handling & Safety - 错误处理和安全保障
+## 🚨 Tratamento de Erros e Segurança
 
-### 统一错误处理机制
+### Mecanismo Unificado de Tratamento de Erros
 ```yaml
-错误分类:
-  Level 1 - 致命错误:
-    - 分析引擎完全故障
-    - 数据访问权限不足
-    - 关键依赖服务不可用
-    - 内存不足无法分析
+Classificação de Erros:
+  Nível 1 - Erros Fatais:
+    - Falha total do motor de análise
+    - Permissão de acesso a dados insuficiente
+    - Serviço de dependência crítica indisponível
+    - Memória insuficiente, impossível analisar
 
-  Level 2 - 严重错误:
-    - 部分分析功能失败
-    - AI推理引擎超时
-    - 历史数据访问失败
-    - 模式匹配算法错误
+  Nível 2 - Erros Graves:
+    - Falha parcial de função de análise
+    - Timeout do motor de raciocínio IA
+    - Falha no acesso a dados históricos
+    - Erro no algoritmo de correspondência de padrões
 
-  Level 3 - 一般错误:
-    - 单个分析步骤失败
-    - 数据格式解析错误
-    - 网络连接间歇性问题
-    - 缓存数据不一致
+  Nível 3 - Erros Comuns:
+    - Falha em etapa única de análise
+    - Erro de análise de formato de dados
+    - Problema intermitente de conexão de rede
+    - Inconsistência de dados em cache
 
-  Level 4 - 警告信息:
-    - 分析结果可信度低
-    - 历史数据不充分
-    - 模式匹配相似度低
-    - 建议更新分析模型
+  Nível 4 - Mensagens de Aviso:
+    - Baixa credibilidade do resultado da análise
+    - Dados históricos insuficientes
+    - Baixa similaridade na correspondência de padrões
+    - Sugestão de atualização do modelo de análise
 ```
 
-### 错误恢复策略
+### Estratégias de Recuperação de Erros
 ```yaml
-自动恢复:
-  - 分析引擎重启和重试
-  - 备用AI模型切换
-  - 缓存数据恢复
-  - 降级分析模式
+Recuperação Automática:
+  - Reinicialização e retentativa do motor de análise
+  - Alternância para modelo de IA de backup
+  - Recuperação de dados em cache
+  - Modo de análise degradado
 
-人工干预:
-  - 致命错误立即通知
-  - 提供详细错误信息和解决方案
-  - 支持手动分析模式
-  - 集成feedback-enhanced反馈
+Intervenção Humana:
+  - Notificação imediata de erro fatal
+  - Fornecer informações detalhadas de erro e solução
+  - Suportar modo de análise manual
+  - Integrar feedback aprimorado (feedback-enhanced)
 
-日志记录:
-  - 完整的分析过程日志
-  - 错误堆栈和上下文
-  - 用户操作记录
-  - 分析结果和建议
+Registro de Logs:
+  - Logs completos do processo de análise
+  - Stack trace de erro e contexto
+  - Registro de operação do usuário
+  - Resultados de análise e sugestões
 
-与其他规则协调:
-- 与commit共享错误处理
-  - 与changelog-management协调日志
-  - 与code-quality-check统一安全措施
-  - 集成的恢复策略
+Coordenação com Outras Regras:
+  - Compartilhar tratamento de erros com commit
+  - Coordenar logs com changelog-management
+  - Unificar medidas de segurança com code-quality-check
+  - Estratégias de recuperação integradas
 ```
 
-## ⚡ Performance Optimization - 性能优化
+## ⚡ Otimização de Desempenho
 
-### 智能缓存机制
+### Mecanismo de Cache Inteligente
 ```yaml
-缓存策略:
-  - 问题分析结果缓存
-  - 历史模式数据缓存
-  - AI推理结果缓存
-  - 解决方案模板缓存
+Estratégia de Cache:
+  - Cache de resultados de análise de problemas
+  - Cache de dados de padrões históricos
+  - Cache de resultados de raciocínio IA
+  - Cache de modelos de solução
 
-优化技术:
-  - 增量分析算法
-  - 并行处理管道
-  - 智能预加载
-  - 资源池管理
+Tecnologias de Otimização:
+  - Algoritmo de análise incremental
+  - Pipeline de processamento paralelo
+  - Pré-carregamento inteligente
+  - Gerenciamento de pool de recursos
 ```
 
-### 执行效率目标
+### Objetivos de Eficiência de Execução
 ```yaml
-性能指标:
-  - 问题分析: <10秒
-  - 五个为什么: <15秒
-  - 解决方案生成: <5秒
-  - 总体流程: <30秒
+Indicadores de Desempenho:
+  - Análise de problema: <10 segundos
+  - Cinco Porquês: <15 segundos
+  - Geração de solução: <5 segundos
+  - Fluxo total: <30 segundos
 
-优化措施:
-  - 异步处理非关键任务
-  - 智能跳过重复分析
-  - 缓存重复计算结果
-  - 优化AI模型推理
+Medidas de Otimização:
+  - Processamento assíncrono de tarefas não críticas
+  - Pulo inteligente de análise repetida
+  - Cache de resultados de cálculos repetidos
+  - Otimização de inferência de modelo IA
 ```
 
-## 📋 Usage Examples - 使用示例
+## 📋 Exemplos de Uso
 
-### 基础根因分析
+### Análise de Causa Raiz Básica
 ```bash
-# AI智能根因分析
-/root-cause --issue "用户登录失败率突然增加"
+# Análise de causa raiz inteligente por IA
+/root-cause --issue "Aumento repentino na taxa de falha de login de usuários"
 
-# 输出示例:
-# 🔍 根因分析完成
+# Exemplo de saída:
+# 🔍 Análise de causa raiz concluída
 # 
-# 📊 问题分类: 高优先级功能异常
-# 🎯 根本原因: 认证服务配置变更导致token验证逻辑错误
+# 📊 Classificação do Problema: Anomalia Funcional de Alta Prioridade
+# 🎯 Causa Raiz: Alteração de configuração do serviço de autenticação causou erro na lógica de validação de token
 # 
-# 🔧 解决方案:
-# 1. 立即回滚认证服务配置 (紧急)
-# 2. 修复token验证逻辑 (短期)
-# 3. 建立配置变更审查流程 (长期)
+# 🔧 Solução:
+# 1. Reverter configuração do serviço de autenticação imediatamente (Emergência)
+# 2. Corrigir lógica de validação de token (Curto Prazo)
+# 3. Estabelecer processo de revisão de alteração de configuração (Longo Prazo)
 # 
-# 🛡️ 预防措施:
-# - 配置变更前强制测试
-# - 建立认证服务监控
-# - 完善变更管理流程
+# 🛡️ Medidas Preventivas:
+# - Teste obrigatório antes de alteração de configuração
+# - Estabelecer monitoramento do serviço de autenticação
+# - Aprimorar fluxo de gerenciamento de mudanças
 ```
 
-### 五个为什么分析
+### Análise dos Cinco Porquês
 ```bash
-# 使用五个为什么方法
+# Usar metodologia dos Cinco Porquês
 /root-cause --five-whys
 
-# AI引导式问题分析:
-# Why 1: 为什么会出现这个问题？
-# [AI分析建议和引导问题]
+# Análise de problema guiada por IA:
+# Why 1: Por que esse problema apareceu?
+# [Sugestão de análise e perguntas guia da IA]
 # 
-# Why 2: 为什么会有这个直接原因？
-# [深入分析和验证]
+# Why 2: Por que essa causa direta existe?
+# [Análise profunda e validação]
 # 
-# [继续深入分析直到根本原因]
+# [Continuar análise profunda até a causa raiz]
 ```
 
-### 模式识别分析
+### Análise de Reconhecimento de Padrões
 ```bash
-# 模式识别分析
+# Análise de reconhecimento de padrões
 /root-cause --pattern
 
-# 输出示例:
-# 📊 模式识别结果
+# Exemplo de saída:
+# 📊 Resultado de reconhecimento de padrões
 # 
-# 🔍 发现相似问题: 3个
-# - 2024-12-15: 相同的认证失败模式
-# - 2024-11-20: 类似的配置变更问题
-# - 2024-10-10: 相关的服务依赖问题
+# 🔍 Problemas similares encontrados: 3
+# - 2024-12-15: Padrão idêntico de falha de autenticação
+# - 2024-11-20: Problema similar de alteração de configuração
+# - 2024-10-10: Problema de dependência de serviço relacionado
 # 
-# 📈 问题趋势: 配置变更相关问题呈上升趋势
-# 🎯 建议重点: 加强配置管理和变更控制
+# 📈 Tendência do Problema: Problemas relacionados a alteração de configuração apresentam tendência de alta
+# 🎯 Foco Sugerido: Fortalecer gerenciamento de configuração e controle de mudanças
 ```
 
 ---
 
-**🎯 规则优先级**: 630 (与其他Phase 2规则协同)  
-**🔄 更新频率**: 基于问题分析和解决效果持续优化  
-**📊 成功指标**: 根因识别准确率>90%, 解决方案有效率>85%, 预防措施成功率>80%  
-**🧠 AI模型**: 集成因果推理和模式识别引擎
+**🎯 Prioridade da Regra**: 630 (Sinergia com outras regras da Fase 2)  
+**🔄 Frequência de Atualização**: Otimização contínua baseada em análise de problemas e eficácia de resolução  
+**📊 Indicadores de Sucesso**: Precisão de identificação de causa raiz > 90%, Taxa de eficácia de solução > 85%, Taxa de sucesso de medidas preventivas > 80%  
+**🧠 Modelo IA**: Motor integrado de raciocínio causal e reconhecimento de padrões

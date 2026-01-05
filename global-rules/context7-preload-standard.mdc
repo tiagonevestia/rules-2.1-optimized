@@ -4,7 +4,7 @@ description: "Context7 知识预载标准 - 修复Bug与新项目启动前的前
 priority: 450
 alwaysApply: false
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -15,8 +15,8 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adição do sistema de gerenciamento de versão"
+      - "Padronização da estrutura do arquivo de regras"
 ---
 
 # 🧠 Context7 知识预载标准（修复/新项目前置）

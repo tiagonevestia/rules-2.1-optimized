@@ -5,7 +5,7 @@ globs: ["**/*"]
 alwaysApply: true
 priority: 1120
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -16,8 +16,8 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adição do sistema de gerenciamento de versão"
+      - "Padronização da estrutura do arquivo de regras"
 ---
 
 # 🔬 知识创造与发现框架 (Knowledge Creation and Discovery Framework)

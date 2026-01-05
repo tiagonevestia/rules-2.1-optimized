@@ -1,12 +1,12 @@
 ---
 type: "project_rule"
-description: "企业级工作流编排规则 - 大型团队和复杂项目的高级智能编排"
+description: "Regra de orquestração de fluxo de trabalho de nível empresarial - Orquestração inteligente avançada para grandes equipes e projetos complexos"
 globs: ["**/*"]
 alwaysApply: false
 priority: 911
 dependencies: ["intelligent-project-management.mdc"]
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -17,356 +17,356 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adição do sistema de gerenciamento de versão"
+      - "Padronização da estrutura do arquivo de regras"
 ---
 
-# 🚀 企业级智能工作流编排系统
+# 🚀 Sistema de Orquestração de Fluxo de Trabalho Inteligente de Nível Empresarial
 
-> **企业级工作流**: 专为大型团队(10+人员)和复杂企业项目设计的高级智能编排系统
+> **Fluxo de Trabalho Empresarial**: Sistema de orquestração inteligente avançado projetado para grandes equipes (10+ pessoas) e projetos corporativos complexos
 
-## 🎯 系统概述
+## 🎯 Visão Geral do Sistema
 
-**适用范围**: 
-- ✅ 大型团队协作 (10+ 人员)
-- ✅ 复杂微服务架构
-- ✅ 多项目并行管理  
-- ✅ 企业级CI/CD流程
-- ✅ 跨部门协作项目
+**Escopo de Aplicação**:
+- ✅ Colaboração de grandes equipes (10+ pessoas)
+- ✅ Arquitetura de microsserviços complexa
+- ✅ Gerenciamento paralelo de múltiplos projetos
+- ✅ Processos CI/CD de nível empresarial
+- ✅ Projetos de colaboração entre departamentos
 
-**不适用范围**:
-- ❌ 小型项目 (< 5人团队) → 请使用 `intelligent-project-management.mdc`
-- ❌ 简单单体应用 → 请使用 `intelligent-project-management.mdc`
-- ❌ 个人项目 → 请使用 `intelligent-project-management.mdc`
+**Escopo Não Aplicável**:
+- ❌ Pequenos projetos (< 5 pessoas) → Use `intelligent-project-management.mdc`
+- ❌ Aplicações monolíticas simples → Use `intelligent-project-management.mdc`
+- ❌ Projetos pessoais → Use `intelligent-project-management.mdc`
 
-基于2025年AI代理发展趋势，实现企业级复杂工作流的自主编排和性能优化。
+Com base nas tendências de desenvolvimento de agentes de IA de 2025, implementa orquestração autônoma e otimização de desempenho para fluxos de trabalho empresariais complexos.
 
-### 🧠 企业级智能代理核心能力
+### 🧠 Capacidades Principais do Agente Inteligente Empresarial
 ```yaml
-企业级自主能力矩阵:
-  高级推理能力:
-    - 复杂上下文理解和分析
-    - 多项目关联分析
-    - 企业级约束识别
-    - 战略目标对齐
+Matriz de Capacidades Autônomas Empresariais:
+  Capacidade de Raciocínio Avançado:
+    - Compreensão e análise de contexto complexo
+    - Análise de correlação entre múltiplos projetos
+    - Identificação de restrições empresariais
+    - Alinhamento com objetivos estratégicos
   
-  企业级规划能力:
-    - 大规模任务分解和编排
-    - 跨部门资源协调
-    - 复杂依赖关系管理
-    - 企业级里程碑规划
+  Capacidade de Planejamento Empresarial:
+    - Decomposição e orquestração de tarefas em larga escala
+    - Coordenação de recursos entre departamentos
+    - Gerenciamento de dependências complexas
+    - Planejamento de marcos empresariais
   
-  高级执行能力:
-    - 企业级工具链编排
-    - 大规模并行协调
-    - 智能异常处理
-    - 企业级质量控制
+  Capacidade de Execução Avançada:
+    - Orquestração de cadeia de ferramentas empresarial
+    - Coordenação paralela em larga escala
+    - Tratamento inteligente de exceções
+    - Controle de qualidade empresarial
   
-  组织学习能力:
-    - 企业知识管理
-    - 跨项目经验复用
-    - 组织策略优化
-    - 企业知识图谱构建
+  Capacidade de Aprendizado Organizacional:
+    - Gestão de conhecimento empresarial
+    - Reutilização de experiência entre projetos
+    - Otimização de estratégias organizacionais
+    - Construção de grafo de conhecimento empresarial
 ```
 
-## 🚀 高级工作流架构
+## 🚀 Arquitetura de Fluxo de Trabalho Avançada
 
-> **基础项目启动**: 请使用 `intelligent-project-management.mdc` 中的 "启动超级大脑系统" 命令
+> **Início de Projeto Básico**: Por favor, use o comando "Iniciar Sistema Super Brain" em `intelligent-project-management.mdc`
 
-### 📋 企业级工作流增强
+### 📋 Aprimoramento de Fluxo de Trabalho Empresarial
 ```yaml
-适用场景:
-  - 大型团队协作 (10+ 人员)
-  - 复杂微服务架构
-  - 多项目并行管理
-  - 企业级CI/CD流程
-  - 跨部门协作项目
+Cenários Aplicáveis:
+  - Colaboração de grandes equipes (10+ pessoas)
+  - Arquitetura de microsserviços complexa
+  - Gerenciamento paralelo de múltiplos projetos
+  - Processos CI/CD de nível empresarial
+  - Projetos de colaboração entre departamentos
 ```
 
-### 🎯 企业级任务编排引擎
+### 🎯 Motor de Orquestração de Tarefas Empresariais
 ```yaml
-大规模任务编排策略:
-  企业级分析维度:
-    - 跨部门影响评估
-    - 企业级业务价值分析
-    - 合规性风险评定
-    - 大规模资源协调
-    - 长期战略对齐
+Estratégia de Orquestração de Tarefas em Larga Escala:
+  Dimensões de Análise Empresarial:
+    - Avaliação de impacto entre departamentos
+    - Análise de valor de negócio empresarial
+    - Avaliação de riscos de conformidade
+    - Coordenação de recursos em larga escala
+    - Alinhamento estratégico de longo prazo
   
-  高级编排算法:
-    - 企业级历史数据挖掘
-    - 组织能力建模
-    - 跨项目依赖优化
-    - 企业级并行度最大化
-    - 风险传播分析
+  Algoritmos de Orquestração Avançados:
+    - Mineração de dados históricos empresariais
+    - Modelagem de capacidade organizacional
+    - Otimização de dependências entre projetos
+    - Maximização de paralelismo empresarial
+    - Análise de propagação de riscos
   
-  企业级动态调整:
-    - 多项目进度协调
-    - 企业级资源重分配
-    - 战略优先级调整
-    - 组织变更适应
+  Ajuste Dinâmico Empresarial:
+    - Coordenação de progresso de múltiplos projetos
+    - Realocação de recursos empresariais
+    - Ajuste de prioridade estratégica
+    - Adaptação a mudanças organizacionais
 
-注意: 基础任务分解请使用 intelligent-project-management.mdc
+Nota: Para decomposição de tarefas básicas, use intelligent-project-management.mdc
 ```
 
-### 🔄 智能执行编排
+### 🔄 Orquestração de Execução Inteligente
 ```yaml
-执行编排策略:
-  并行执行优化:
-    - 无依赖任务并行处理
-    - 资源冲突检测和避免
-    - 负载均衡和调度
-    - 性能瓶颈识别
+Estratégia de Orquestração de Execução:
+  Otimização de Execução Paralela:
+    - Processamento paralelo de tarefas sem dependência
+    - Detecção e prevenção de conflitos de recursos
+    - Balanceamento de carga e agendamento
+    - Identificação de gargalos de desempenho
   
-  工具链智能选择:
-    - 任务特性分析
-    - 工具能力匹配
-    - 性能效率评估
-    - 故障恢复能力
+  Seleção Inteligente de Cadeia de Ferramentas:
+    - Análise de características da tarefa
+    - Correspondência de capacidade da ferramenta
+    - Avaliação de eficiência de desempenho
+    - Capacidade de recuperação de falhas
   
-  质量控制集成:
-    - 实时代码质量检查
-    - 自动化测试触发
-    - 安全扫描集成
-    - 性能基准验证
+  Integração de Controle de Qualidade:
+    - Verificação de qualidade de código em tempo real
+    - Disparo de testes automatizados
+    - Integração de varredura de segurança
+    - Validação de benchmark de desempenho
 ```
 
-## 🎨 智能开发模式
+## 🎨 Modos de Desenvolvimento Inteligente
 
-### 🏗️ 架构设计智能助手
+### 🏗️ Assistente Inteligente de Design de Arquitetura
 ```yaml
-架构智能分析:
-  需求理解:
-    - 业务需求自动解析
-    - 非功能性需求识别
-    - 约束条件分析
-    - 扩展性需求预测
+Análise Inteligente de Arquitetura:
+  Compreensão de Requisitos:
+    - Análise automática de requisitos de negócios
+    - Identificação de requisitos não funcionais
+    - Análise de condições de restrição
+    - Previsão de requisitos de escalabilidade
   
-  架构推荐:
-    - 基于需求的架构模式推荐
-    - 技术栈最优组合建议
-    - 性能优化策略
-    - 安全架构设计
+  Recomendação de Arquitetura:
+    - Recomendação de padrões de arquitetura baseada em requisitos
+    - Sugestão de combinação ótima de stack tecnológico
+    - Estratégia de otimização de desempenho
+    - Design de arquitetura de segurança
   
-  设计验证:
-    - 架构一致性检查
-    - 性能影响评估
-    - 可维护性分析
-    - 成本效益评估
+  Validação de Design:
+    - Verificação de consistência de arquitetura
+    - Avaliação de impacto de desempenho
+    - Análise de manutenibilidade
+    - Avaliação de custo-benefício
 ```
 
-### 💻 智能编码助手
+### 💻 Assistente de Codificação Inteligente
 ```yaml
-编码智能支持:
-  代码生成:
-    - 基于规范的代码模板生成
-    - 业务逻辑自动实现
-    - 测试用例自动生成
-    - 文档自动同步
+Suporte Inteligente de Codificação:
+  Geração de Código:
+    - Geração de templates de código baseada em normas
+    - Implementação automática de lógica de negócios
+    - Geração automática de casos de teste
+    - Sincronização automática de documentação
   
-  代码优化:
-    - 性能瓶颈自动识别
-    - 代码重构建议
-    - 最佳实践应用
-    - 安全漏洞检测
+  Otimização de Código:
+    - Identificação automática de gargalos de desempenho
+    - Sugestões de refatoração de código
+    - Aplicação de melhores práticas
+    - Detecção de vulnerabilidades de segurança
   
-  协作支持:
-    - 代码冲突预测和解决
-    - 代码审查自动化
-    - 知识共享和传递
-    - 技能差距识别
+  Suporte à Colaboração:
+    - Previsão e resolução de conflitos de código
+    - Automação de revisão de código
+    - Compartilhamento e transferência de conhecimento
+    - Identificação de lacunas de habilidades
 ```
 
-### 🧪 智能测试编排
+### 🧪 Orquestração de Testes Inteligentes
 ```yaml
-测试智能化:
-  测试策略:
-    - 风险驱动的测试优先级
-    - 测试覆盖率智能优化
-    - 测试数据自动生成
-    - 测试环境自动配置
+Inteligência de Testes:
+  Estratégia de Teste:
+    - Prioridade de teste orientada a riscos
+    - Otimização inteligente de cobertura de teste
+    - Geração automática de dados de teste
+    - Configuração automática de ambiente de teste
   
-  执行优化:
-    - 并行测试执行
-    - 失败测试快速定位
-    - 回归测试智能选择
-    - 性能测试自动化
+  Otimização de Execução:
+    - Execução paralela de testes
+    - Localização rápida de testes com falha
+    - Seleção inteligente de testes de regressão
+    - Automação de testes de desempenho
   
-  结果分析:
-    - 测试结果智能分析
-    - 质量趋势预测
-    - 缺陷模式识别
-    - 改进建议生成
+  Análise de Resultados:
+    - Análise inteligente de resultados de teste
+    - Previsão de tendências de qualidade
+    - Reconhecimento de padrões de defeitos
+    - Geração de sugestões de melhoria
 ```
 
-## 📊 智能监控和优化
+## 📊 Monitoramento e Otimização Inteligentes
 
-### 📈 实时性能监控
+### 📈 Monitoramento de Desempenho em Tempo Real
 ```yaml
-监控维度:
-  开发效率:
-    - 代码提交频率和质量
-    - 功能完成速度
-    - 缺陷修复时间
-    - 代码审查效率
+Dimensões de Monitoramento:
+  Eficiência de Desenvolvimento:
+    - Frequência e qualidade de commits de código
+    - Velocidade de conclusão de funcionalidades
+    - Tempo de correção de defeitos
+    - Eficiência de revisão de código
   
-  系统性能:
-    - 构建时间优化
-    - 测试执行时间
-    - 部署成功率
-    - 系统稳定性
+  Desempenho do Sistema:
+    - Otimização do tempo de build
+    - Tempo de execução de testes
+    - Taxa de sucesso de implantação
+    - Estabilidade do sistema
   
-  团队协作:
-    - 沟通效率分析
-    - 知识共享程度
-    - 技能发展轨迹
-    - 工作负载平衡
+  Colaboração da Equipe:
+    - Análise de eficiência de comunicação
+    - Grau de compartilhamento de conhecimento
+    - Trajetória de desenvolvimento de habilidades
+    - Equilíbrio de carga de trabalho
 ```
 
-### 🔮 预测性分析
+### 🔮 Análise Preditiva
 ```yaml
-预测能力:
-  项目风险预测:
-    - 延期风险评估
-    - 质量风险预警
-    - 资源不足预测
-    - 技术债务累积
+Capacidade Preditiva:
+  Previsão de Risco do Projeto:
+    - Avaliação de risco de atraso
+    - Alerta de risco de qualidade
+    - Previsão de escassez de recursos
+    - Acúmulo de dívida técnica
   
-  优化机会识别:
-    - 流程改进点
-    - 工具升级建议
-    - 技能培训需求
-    - 架构演进方向
+  Identificação de Oportunidades de Otimização:
+    - Pontos de melhoria de processo
+    - Sugestões de atualização de ferramentas
+    - Necessidades de treinamento de habilidades
+    - Direção de evolução da arquitetura
   
-  决策支持:
-    - 技术选型建议
-    - 资源分配优化
-    - 发布时机选择
-    - 风险缓解策略
+  Suporte à Decisão:
+    - Sugestões de seleção técnica
+    - Otimização de alocação de recursos
+    - Escolha de momento de lançamento
+    - Estratégia de mitigação de riscos
 ```
 
-## 🎯 智能反馈和学习
+## 🎯 Feedback e Aprendizado Inteligentes
 
-### 🔄 持续学习机制
+### 🔄 Mecanismo de Aprendizado Contínuo
 ```yaml
-学习系统:
-  经验积累:
-    - 项目成功模式识别
-    - 失败案例分析
-    - 最佳实践提取
-    - 知识图谱更新
+Sistema de Aprendizado:
+  Acúmulo de Experiência:
+    - Identificação de padrões de sucesso de projetos
+    - Análise de casos de falha
+    - Extração de melhores práticas
+    - Atualização de grafo de conhecimento
   
-  策略优化:
-    - 工作流效率分析
-    - 决策准确性评估
-    - 预测模型调优
-    - 推荐算法改进
+  Otimização de Estratégia:
+    - Análise de eficiência de fluxo de trabalho
+    - Avaliação de precisão de decisão
+    - Ajuste fino de modelo de previsão
+    - Melhoria de algoritmo de recomendação
   
-  知识共享:
-    - 团队经验传承
-    - 跨项目知识复用
-    - 行业最佳实践集成
-    - 创新模式探索
+  Compartilhamento de Conhecimento:
+    - Herança de experiência da equipe
+    - Reutilização de conhecimento entre projetos
+    - Integração de melhores práticas da indústria
+    - Exploração de modelos inovadores
 ```
 
-### 📋 智能反馈触发
+### 📋 Gatilho de Feedback Inteligente
 ```yaml
-反馈触发条件:
-  关键决策点:
-    - 架构设计确认
-    - 技术栈选择
-    - 重要功能实现
-    - 性能优化策略
+Condições de Gatilho de Feedback:
+  Pontos de Decisão Chave:
+    - Confirmação de design de arquitetura
+    - Seleção de stack tecnológico
+    - Implementação de funcionalidades importantes
+    - Estratégia de otimização de desempenho
   
-  风险预警:
-    - 进度偏差>20%
-    - 质量指标下降
-    - 团队负载过高
-    - 技术债务累积
+  Alerta de Risco:
+    - Desvio de progresso > 20%
+    - Queda de indicadores de qualidade
+    - Carga da equipe muito alta
+    - Acúmulo de dívida técnica
   
-  优化机会:
-    - 效率提升>30%的机会
-    - 成本节约机会
-    - 质量改进机会
-    - 创新应用机会
+  Oportunidade de Otimização:
+    - Oportunidade de aumento de eficiência > 30%
+    - Oportunidade de economia de custos
+    - Oportunidade de melhoria de qualidade
+    - Oportunidade de aplicação inovadora
 ```
 
-## 🛠️ 工具集成和编排
+## 🛠️ Integração e Orquestração de Ferramentas
 
-### 🔧 企业级MCP工具编排
+### 🔧 Orquestração de Ferramentas MCP de Nível Empresarial
 ```yaml
-企业级工具编排策略:
-  大规模工具协调:
-    - 跨部门工具集成
-    - 企业级工具链管理
-    - 合规性工具验证
-    - 安全性工具审计
+Estratégia de Orquestração de Ferramentas Empresariais:
+  Coordenação de Ferramentas em Larga Escala:
+    - Integração de ferramentas entre departamentos
+    - Gestão de cadeia de ferramentas empresarial
+    - Validação de ferramentas de conformidade
+    - Auditoria de ferramentas de segurança
   
-  企业级工具链优化:
-    - 大规模数据流管理
-    - 企业级并行协调
-    - 灾难恢复机制
-    - 企业级性能监控
+  Otimização de Cadeia de Ferramentas Empresarial:
+    - Gestão de fluxo de dados em larga escala
+    - Coordenação paralela empresarial
+    - Mecanismo de recuperação de desastres
+    - Monitoramento de desempenho empresarial
   
-  企业级故障处理:
-    - 企业级故障预测
-    - 业务连续性保障
-    - 合规性故障处理
-    - 企业级维护策略
+  Tratamento de Falhas Empresarial:
+    - Previsão de falhas empresariais
+    - Garantia de continuidade de negócios
+    - Tratamento de falhas de conformidade
+    - Estratégia de manutenção empresarial
 
-注意: 基础MCP工具策略请使用 mcp-intelligent-strategy.mdc
+Nota: Para estratégias de ferramentas MCP básicas, use mcp-intelligent-strategy.mdc
 ```
 
-### 📊 集成开发环境优化
+### 📊 Otimização do Ambiente de Desenvolvimento Integrado (IDE)
 ```yaml
-IDE智能增强:
-  代码智能:
-    - 上下文感知的代码补全
-    - 智能重构建议
-    - 实时代码质量反馈
-    - 性能影响预测
+Aprimoramento Inteligente de IDE:
+  Inteligência de Código:
+    - Completamento de código sensível ao contexto
+    - Sugestões de refatoração inteligente
+    - Feedback de qualidade de código em tempo real
+    - Previsão de impacto de desempenho
   
-  调试增强:
-    - 智能断点建议
-    - 异常根因分析
-    - 性能瓶颈定位
-    - 调试路径优化
+  Aprimoramento de Depuração:
+    - Sugestões inteligentes de breakpoint
+    - Análise de causa raiz de exceções
+    - Localização de gargalos de desempenho
+    - Otimização de caminho de depuração
   
-  协作增强:
-    - 实时协作冲突预测
-    - 代码审查智能助手
-    - 知识共享推荐
-    - 技能发展建议
+  Aprimoramento de Colaboração:
+    - Previsão de conflito de colaboração em tempo real
+    - Assistente inteligente de revisão de código
+    - Recomendação de compartilhamento de conhecimento
+    - Sugestões de desenvolvimento de habilidades
 ```
 
-## 🎯 使用示例
+## 🎯 Exemplos de Uso
 
-### 🚀 快速启动
+### 🚀 Início Rápido
 ```bash
-# 启动智能全栈开发工作流
-/启动智能工作流 全栈Web应用 中等复杂度 5人团队
+# Iniciar fluxo de trabalho de desenvolvimento full-stack inteligente
+/iniciar-fluxo-inteligente AplicaçãoWebFullStack ComplexidadeMedia Equipe5Pessoas
 
-# 系统自动分析并生成:
-# 1. 项目架构建议
-# 2. 技术栈推荐
-# 3. 开发计划
-# 4. 任务分配
-# 5. 质量控制策略
+# O sistema analisa e gera automaticamente:
+# 1. Sugestão de arquitetura do projeto
+# 2. Recomendação de stack tecnológico
+# 3. Plano de desenvolvimento
+# 4. Alocação de tarefas
+# 5. Estratégia de controle de qualidade
 ```
 
-### 🎨 自定义配置
+### 🎨 Configuração Personalizada
 ```bash
-# 设置智能化级别
-/设置智能化级别 高级    # 最大化自动化
-/设置智能化级别 标准    # 平衡自动化和人工控制
-/设置智能化级别 保守    # 最小化自动化，保持人工控制
+# Definir nível de inteligência
+/definir-nivel-inteligencia Avancado    # Maximizar automação
+/definir-nivel-inteligencia Padrao      # Equilibrar automação e controle manual
+/definir-nivel-inteligencia Conservador # Minimizar automação, manter controle manual
 
-# 设置反馈频率
-/设置智能反馈 实时     # 实时反馈和建议
-/设置智能反馈 关键点   # 仅在关键决策点反馈
-/设置智能反馈 总结     # 阶段性总结反馈
+# Definir frequência de feedback
+/definir-feedback-inteligente TempoReal   # Feedback e sugestões em tempo real
+/definir-feedback-inteligente PontosChave # Feedback apenas em pontos de decisão chave
+/definir-feedback-inteligente Resumo      # Feedback de resumo por etapa
 ```
 
 ---
 
-**注意**: 此规则文件实现了基于2025年AI代理发展趋势的智能工作流编排，提供自主推理、规划和执行能力，显著提升开发效率和质量。
+**Nota**: Este arquivo de regra implementa a orquestração de fluxo de trabalho inteligente baseada nas tendências de desenvolvimento de agentes de IA de 2025, fornecendo capacidades de raciocínio, planejamento e execução autônomos, melhorando significativamente a eficiência e qualidade do desenvolvimento.

@@ -1,11 +1,11 @@
 ---
 type: "workflow_rule"
-description: "Complete bug-fixing workflow from issue to PR - 从问题到PR的完整Bug修复工作流"
+description: "Fluxo de trabalho completo de correção de bugs, do problema ao PR"
 globs: ["**/*"]
 priority: 600
 alwaysApply: false
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -16,88 +16,88 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adicionado sistema de gerenciamento de versão"
+      - "Padronizada estrutura do arquivo de regra"
 ---
 
-# 🐛 Bug Fix Workflow - Bug修复工作流
+# 🐛 Bug Fix Workflow - Fluxo de Correção de Bugs
 
-从问题创建到拉取请求的完整Bug修复工作流程。
+Fluxo de trabalho completo de correção de bugs, desde a criação do problema até o pull request.
 
-## 🚀 Commands - 命令
+## 🚀 Commands - Comandos
 
-- `/bug-fix` - 启动Bug修复工作流
-- `/reproduce-bug` - 重现Bug
-- `/root-cause` - 根因分析
-- `/fix-verify` - 修复验证
+- `/bug-fix` - Inicia o fluxo de correção de bugs
+- `/reproduce-bug` - Reproduz o bug
+- `/root-cause` - Análise de causa raiz
+- `/fix-verify` - Verificação da correção
 
-## 📋 Process - 修复流程
+## 📋 Process - Fluxo de Correção
 
-### 🔍 Before Starting - 开始前准备
+### 🔍 Before Starting - Preparação Inicial
 
-#### 1. GitHub Issue Creation - 创建GitHub问题
+#### 1. GitHub Issue Creation - Criação de Problema no GitHub
 ```markdown
-**Bug标题**: [组件/模块] 简短描述性标题
+**Título do Bug**: [Componente/Módulo] Título descritivo curto
 
-**环境信息**:
-- 操作系统: Windows 11 / macOS 13 / Ubuntu 22.04
-- 浏览器: Chrome 120 / Firefox 121 / Safari 17
-- 应用版本: v2.1.0
-- Node.js版本: v18.19.0
+**Informações do Ambiente**:
+- Sistema Operacional: Windows 11 / macOS 13 / Ubuntu 22.04
+- Navegador: Chrome 120 / Firefox 121 / Safari 17
+- Versão do Aplicativo: v2.1.0
+- Versão do Node.js: v18.19.0
 
-**重现步骤**:
-1. 打开应用
-2. 点击登录按钮
-3. 输入有效凭据
-4. 点击提交
+**Passos para Reproduzir**:
+1. Abrir o aplicativo
+2. Clicar no botão de login
+3. Inserir credenciais válidas
+4. Clicar em enviar
 
-**预期行为**: 用户应该成功登录并跳转到仪表板
+**Comportamento Esperado**: O usuário deve logar com sucesso e ser redirecionado para o painel
 
-**实际行为**: 显示"网络错误"，用户停留在登录页面
+**Comportamento Real**: Exibe "erro de rede", o usuário permanece na página de login
 
-**错误信息**:
+**Mensagem de Erro**:
 ```
 TypeError: Cannot read property 'token' of undefined
   at LoginComponent.handleLogin (login.component.ts:45)
 ```
 
-**截图/录屏**: [附加相关截图或录屏]
+**Captura de Tela/Vídeo**: [Anexar capturas de tela ou vídeos relevantes]
 
-**优先级**: High / Medium / Low
-**标签**: bug, frontend, authentication
+**Prioridade**: Alta (High) / Média (Medium) / Baixa (Low)
+**Etiquetas**: bug, frontend, autenticação
 ```
 
-#### 2. Git Branch Creation - 创建Git分支
+#### 2. Git Branch Creation - Criação de Ramificação (Branch) Git
 ```bash
-# 创建并切换到功能分支
+# Criar e mudar para a ramificação da funcionalidade
 git checkout -b fix/login-token-error
 
-# 或者使用更具描述性的分支名
+# Ou usar um nome de ramificação mais descritivo
 git checkout -b fix/issue-123-login-authentication-error
 ```
 
-### 🔧 Fix the Bug - 修复Bug
+### 🔧 Fix the Bug - Corrigindo o Bug
 
-#### Step 1: Reproduce the Issue - 重现问题
+#### Passo 1: Reproduce the Issue - Reproduzir o Problema
 ```bash
-# 1. 切换到问题分支
+# 1. Mudar para a ramificação do problema
 git checkout main
 git pull origin main
 
-# 2. 尝试重现Bug
+# 2. Tentar reproduzir o bug
 npm start
-# 按照问题描述的步骤操作
+# Siga os passos descritos no problema
 
-# 3. 确认问题存在
-# 记录重现步骤和错误信息
+# 3. Confirmar que o problema existe
+# Registrar passos de reprodução e mensagens de erro
 ```
 
-#### Step 2: Write Failing Test - 编写失败测试
+#### Passo 2: Write Failing Test - Escrever Teste Falho
 ```javascript
-// 示例：为Bug编写测试用例
+// Exemplo: Escrevendo um caso de teste para o bug
 describe('LoginComponent', () => {
   it('should handle login with valid credentials', async () => {
-    // 这个测试应该失败，因为Bug存在
+    // Este teste deve falhar porque o bug existe
     const mockUser = { username: 'test', password: 'password' };
     const result = await loginComponent.handleLogin(mockUser);
     
@@ -109,7 +109,7 @@ describe('LoginComponent', () => {
   });
 
   it('should handle undefined response gracefully', async () => {
-    // 测试边界条件
+    // Testar condições de contorno (boundary conditions)
     mockApiService.login.mockResolvedValue(undefined);
     
     const result = await loginComponent.handleLogin(mockUser);
@@ -119,185 +119,185 @@ describe('LoginComponent', () => {
 });
 ```
 
-#### Step 3: Implement the Fix - 实现修复
+#### Passo 3: Implement the Fix - Implementar a Correção
 ```typescript
-// 修复前的代码
+// Código antes da correção
 async handleLogin(credentials: LoginCredentials) {
   try {
     const response = await this.authService.login(credentials);
-    // Bug: 没有检查response是否存在
+    // Bug: Não verifica se a resposta existe
     localStorage.setItem('token', response.token);
     this.router.navigate(['/dashboard']);
   } catch (error) {
-    this.showError('登录失败');
+    this.showError('Falha no login');
   }
 }
 
-// 修复后的代码
+// Código após a correção
 async handleLogin(credentials: LoginCredentials) {
   try {
     const response = await this.authService.login(credentials);
     
-    // 修复: 添加响应验证
+    // Correção: Adicionar validação de resposta
     if (!response || !response.token) {
-      throw new Error('Invalid response from server');
+      throw new Error('Resposta inválida do servidor');
     }
     
     localStorage.setItem('token', response.token);
     this.router.navigate(['/dashboard']);
     return { success: true, token: response.token, user: response.user };
   } catch (error) {
-    console.error('Login error:', error);
-    this.showError('登录失败: ' + error.message);
+    console.error('Erro de login:', error);
+    this.showError('Falha no login: ' + error.message);
     return { success: false, error: error.message };
   }
 }
 ```
 
-#### Step 4: Verify Test Passes - 验证测试通过
+#### Passo 4: Verify Test Passes - Verificar Aprovação dos Testes
 ```bash
-# 运行特定测试
+# Executar teste específico
 npm test -- --grep "LoginComponent"
 
-# 运行所有测试
+# Executar todos os testes
 npm test
 
-# 确保测试通过
+# Garantir que os testes passaram
 ✓ should handle login with valid credentials
 ✓ should handle undefined response gracefully
 ```
 
-#### Step 5: Run Full Test Suite - 运行完整测试套件
+#### Passo 5: Run Full Test Suite - Executar Suíte de Testes Completa
 ```bash
-# 运行所有测试确保没有回归
+# Executar todos os testes para garantir que não haja regressão
 npm run test:all
 
-# 运行端到端测试
+# Executar testes de ponta a ponta (e2e)
 npm run test:e2e
 
-# 运行代码检查
+# Executar lint (verificação de código)
 npm run lint
 
-# 运行类型检查
+# Executar verificação de tipos
 npm run type-check
 ```
 
-### ✅ On Completion - 完成后操作
+### ✅ On Completion - Operações Após Conclusão
 
-#### 1. Git Commit - Git提交
+#### 1. Git Commit - Commit Git
 ```bash
-# 暂存变更
+# Adicionar mudanças
 git add .
 
-# 提交变更，引用问题编号
-git commit -m "🐛 fix(auth): 修复登录时token未定义错误 (#123)
+# Commit das mudanças, referenciando o número do problema
+git commit -m "🐛 fix(auth): corrigir erro de token indefinido no login (#123)
 
-- 添加响应验证防止undefined错误
-- 改进错误处理和用户反馈
-- 添加边界条件测试用例
+- Adicionada validação de resposta para evitar erro de undefined
+- Melhorado tratamento de erro e feedback ao usuário
+- Adicionado caso de teste para condições de contorno
 
-修复了当服务器返回空响应时的崩溃问题
-现在会显示有意义的错误消息给用户
+Corrige o problema de travamento quando o servidor retorna uma resposta vazia.
+Agora exibe uma mensagem de erro significativa para o usuário.
 
 Fixes #123"
 ```
 
-#### 2. Push Branch - 推送分支
+#### 2. Push Branch - Enviar Ramificação (Push)
 ```bash
-# 推送分支到远程仓库
+# Enviar ramificação para o repositório remoto
 git push origin fix/login-token-error
 ```
 
-#### 3. Create Pull Request - 创建拉取请求
+#### 3. Create Pull Request - Criar Pull Request (PR)
 ```markdown
-## 🐛 Bug Fix: 修复登录时token未定义错误
+## 🐛 Bug Fix: Corrigir erro de token indefinido no login
 
-### 问题描述
-修复 #123 - 用户登录时遇到"Cannot read property 'token' of undefined"错误
+### Descrição do Problema
+Corrige #123 - Erro "Cannot read property 'token' of undefined" ao fazer login.
 
-### 根本原因
-当认证服务返回空响应或格式不正确的响应时，代码没有进行适当的验证就尝试访问`token`属性。
+### Causa Raiz
+Quando o serviço de autenticação retornava uma resposta vazia ou malformada, o código tentava acessar a propriedade `token` sem a validação adequada.
 
-### 解决方案
-- ✅ 添加响应验证逻辑
-- ✅ 改进错误处理机制
-- ✅ 添加有意义的用户反馈
-- ✅ 增加边界条件测试
+### Solução
+- ✅ Adicionada lógica de validação de resposta
+- ✅ Melhorado o mecanismo de tratamento de erros
+- ✅ Adicionado feedback significativo ao usuário
+- ✅ Adicionados testes de condições de contorno
 
-### 测试
-- [x] 单元测试通过
-- [x] 集成测试通过
-- [x] 手动测试验证
-- [x] 回归测试通过
+### Testes
+- [x] Testes unitários aprovados
+- [x] Testes de integração aprovados
+- [x] Verificação manual realizada
+- [x] Testes de regressão aprovados
 
-### 影响范围
-- 仅影响登录组件
-- 向后兼容
-- 无破坏性变更
+### Escopo de Impacto
+- Afeta apenas o componente de login
+- Compatibilidade reversa mantida
+- Sem alterações disruptivas (breaking changes)
 
-### 截图/录屏
-[添加修复后的截图或录屏]
+### Capturas de Tela/Vídeo
+[Adicionar capturas de tela ou vídeos após a correção]
 
-### 检查清单
-- [x] 代码审查完成
-- [x] 测试覆盖率充足
-- [x] 文档已更新
-- [x] 无安全风险
+### Lista de Verificação (Checklist)
+- [x] Revisão de código concluída
+- [x] Cobertura de testes suficiente
+- [x] Documentação atualizada
+- [x] Sem riscos de segurança
 ```
 
-## 🔍 Root Cause Analysis - 根因分析
+## 🔍 Root Cause Analysis - Análise de Causa Raiz
 
-### Five Whys Technique - 五个为什么技术
+### Técnica dos Cinco Porquês (Five Whys)
 ```
-1. 为什么登录失败？
-   → 因为代码尝试访问undefined对象的token属性
+1. Por que o login falhou?
+   → Porque o código tentou acessar a propriedade token de um objeto undefined.
 
-2. 为什么response是undefined？
-   → 因为API服务在某些情况下返回空响应
+2. Por que o response era undefined?
+   → Porque o serviço de API retornou uma resposta vazia em certas situações.
 
-3. 为什么API服务返回空响应？
-   → 因为网络超时或服务器错误时没有正确处理
+3. Por que o serviço de API retornou uma resposta vazia?
+   → Porque não houve tratamento correto para erros de servidor ou tempo de rede esgotado (timeout).
 
-4. 为什么没有验证响应？
-   → 因为开发时假设API总是返回有效响应
+4. Por que a resposta não foi validada?
+   → Porque assumiu-se durante o desenvolvimento que a API sempre retornaria uma resposta válida.
 
-5. 为什么没有考虑错误情况？
-   → 因为缺少错误处理的最佳实践指导
+5. Por que não foram consideradas situações de erro?
+   → Porque faltavam diretrizes de melhores práticas para tratamento de erros.
 ```
 
-### Prevention Measures - 预防措施
-- 添加响应验证模式
-- 实施错误处理标准
-- 增加边界条件测试
-- 代码审查检查清单更新
+### Medidas Preventivas (Prevention Measures)
+- Adicionar padrões de validação de resposta
+- Implementar padrões de tratamento de erro
+- Aumentar testes de condições de contorno
+- Atualizar a lista de verificação (checklist) de revisão de código
 
-## 📊 Bug Categories - Bug分类
+## 📊 Bug Categories - Categorias de Bugs
 
-### Severity Levels - 严重程度
-- **Critical** - 系统崩溃，数据丢失
-- **High** - 核心功能无法使用
-- **Medium** - 功能受限，有变通方案
-- **Low** - 界面问题，不影响功能
+### Níveis de Gravidade (Severity Levels)
+- **Crítico (Critical)** - Travamento do sistema, perda de dados
+- **Alto (High)** - Funcionalidade principal inutilizável
+- **Médio (Medium)** - Funcionalidade limitada, com alternativa disponível (workaround)
+- **Baixo (Low)** - Problemas de interface, não afeta a funcionalidade
 
-### Bug Types - Bug类型
-- **Logic Error** - 逻辑错误
-- **Runtime Error** - 运行时错误
-- **UI/UX Issue** - 界面/体验问题
-- **Performance** - 性能问题
-- **Security** - 安全漏洞
-- **Compatibility** - 兼容性问题
+### Tipos de Bug (Bug Types)
+- **Erro Lógico (Logic Error)** - Erro na lógica de programação
+- **Erro em Tempo de Execução (Runtime Error)** - Erro durante a execução
+- **Problema de UI/UX (UI/UX Issue)** - Problemas de interface/experiência
+- **Performance** - Problemas de desempenho
+- **Segurança (Security)** - Vulnerabilidades de segurança
+- **Compatibilidade (Compatibility)** - Problemas de compatibilidade
 
-## 🛠️ Tools and Techniques - 工具和技术
+## 🛠️ Tools and Techniques - Ferramentas e Técnicas
 
-### Debugging Tools - 调试工具
+### Ferramentas de Depuração (Debugging Tools)
 ```bash
-# 浏览器开发者工具
+# Ferramentas de desenvolvedor do navegador
 F12 → Console/Network/Sources
 
-# Node.js调试
+# Depuração do Node.js
 node --inspect-brk app.js
 
-# VS Code调试配置
+# Configuração de depuração no VS Code
 {
   "type": "node",
   "request": "launch",
@@ -306,36 +306,36 @@ node --inspect-brk app.js
 }
 ```
 
-### Logging and Monitoring - 日志和监控
+### Registro e Monitoramento (Logging and Monitoring)
 ```javascript
-// 结构化日志
-console.log('Login attempt', {
+// Registro estruturado (Logging)
+console.log('Tentativa de login', {
   timestamp: new Date().toISOString(),
   userId: credentials.username,
   userAgent: navigator.userAgent,
   error: error.message
 });
 
-// 错误监控集成
+// Integração com monitoramento de erros
 import * as Sentry from '@sentry/browser';
 Sentry.captureException(error);
 ```
 
-## ✅ Best Practices - 最佳实践
+## ✅ Best Practices - Melhores Práticas
 
-### Bug Prevention - Bug预防
-- **代码审查** - 所有代码变更都要审查
-- **测试驱动** - 先写测试，后写代码
-- **静态分析** - 使用ESLint、TypeScript等工具
-- **持续集成** - 自动化测试和部署
+### Prevenção de Bugs (Bug Prevention)
+- **Revisão de Código** - Revisar todas as alterações de código
+- **Desenvolvimento Orientado a Testes (TDD)** - Escrever testes antes do código
+- **Análise Estática** - Usar ferramentas como ESLint, TypeScript, etc.
+- **Integração Contínua (CI)** - Automatizar testes e implantação
 
-### Bug Fixing - Bug修复
-- **重现优先** - 确保能稳定重现Bug
-- **最小变更** - 只修改必要的代码
-- **测试覆盖** - 为Bug添加测试用例
-- **文档更新** - 更新相关文档
+### Correção de Bugs (Bug Fixing)
+- **Priorizar Reprodução** - Garantir que o bug possa ser reproduzido de forma estável
+- **Alteração Mínima** - Alterar apenas o código estritamente necessário
+- **Cobertura de Testes** - Adicionar casos de teste para o bug identificado
+- **Atualização de Documentação** - Atualizar documentos relacionados
 
-### Communication - 沟通
-- **及时更新** - 定期更新Issue状态
-- **清晰描述** - 详细描述问题和解决方案
-- **知识分享** - 分享修复经验和教训
+### Comunicação
+- **Atualizações Tempestivas** - Atualizar regularmente o status do Issue
+- **Descrição Clara** - Descrever detalhadamente o problema e a solução
+- **Compartilhamento de Conhecimento** - Compartilhar experiências e lições aprendidas na correção

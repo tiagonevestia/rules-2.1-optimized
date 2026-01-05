@@ -1,11 +1,10 @@
 ---
-type: "project_rule"
-description: "智能项目管理系统 - 整合阶段管理、工作流编排、智能推荐和记忆系统"
+description: "Sistema de Gestão Inteligente de Projetos - Integração de gestão de fases, orquestração de fluxo de trabalho, recomendação inteligente e sistema de memória"
 globs: ["**/*"]
 alwaysApply: false
 priority: 952
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -16,647 +15,647 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adição do sistema de gerenciamento de versão"
+      - "Padronização da estrutura do arquivo de regras"
 ---
 
-# 🧠 智能项目管理系统
+# 🧠 Sistema de Gestão Inteligente de Projetos
 
-> **统一管理**: 整合严格阶段管理、完整工作流、智能推荐机制、记忆系统和超级大脑系统
+> **Gestão Unificada**: Integra gestão rigorosa de fases, fluxo de trabalho completo, mecanismo de recomendação inteligente, sistema de memória e sistema Super Brain.
 
-## 🎯 系统概述
+## 🎯 Visão Geral do Sistema
 
-本系统提供智能化的项目管理能力，结合现代AI代理技术和传统项目管理最佳实践，确保项目从需求分析到部署运维的全生命周期管理。
+Este sistema fornece capacidades inteligentes de gestão de projetos, combinando tecnologia moderna de agentes de IA e melhores práticas tradicionais de gestão de projetos, garantindo o gerenciamento de todo o ciclo de vida do projeto, desde a análise de requisitos até a implantação e operação.
 
-### 🌐 全局阶段上下文 (缺陷#24修复)
+### 🌐 Contexto de Fase Global (Correção #24)
 
-其他规则的阶段感知机制。所有规则通过读取此上下文来了解当前项目所处的阶段。
+Mecanismo de percepção de fase para outras regras. Todas as regras leem este contexto para entender a fase atual do projeto.
 
 ```yaml
-全局阶段上下文结构 (被所有规则访问):
+Estrutura do Contexto de Fase Global (Acessado por todas as regras):
   current_phase: int (1-5)
-    描述: 当前项目所处的阶段编号
-    值范围: 1(需求分析) / 2(架构设计) / 3(开发实现) / 4(测试优化) / 5(部署运维)
+    Descrição: Número da fase atual do projeto
+    Intervalo de valores: 1(Análise de Requisitos) / 2(Design de Arquitetura) / 3(Implementação de Desenvolvimento) / 4(Teste e Otimização) / 5(Implantação e Operação)
   
   phase_name: string
-    描述: 当前阶段的名称
-    值示例: "需求分析" / "架构设计" / "开发实现" / "测试优化" / "部署运维"
+    Descrição: Nome da fase atual
+    Exemplos de valores: "Análise de Requisitos" / "Design de Arquitetura" / "Implementação de Desenvolvimento" / "Teste e Otimização" / "Implantação e Operação"
   
   phase_progress: percentage (0-100)
-    描述: 当前阶段的完成度百分比
-    更新频率: 每次重要任务完成时更新
-    用途: 判断阶段是否即将完成
+    Descrição: Porcentagem de conclusão da fase atual
+    Frequência de atualização: Atualizado a cada tarefa importante concluída
+    Uso: Julgar se a fase está prestes a ser concluída
   
   phase_completion_criteria: list
-    描述: 当前阶段的完成标准清单
-    更新: 在阶段开始时设置，完成时标记
-    用途: 跟踪阶段进度和交付物
+    Descrição: Lista de critérios de conclusão da fase atual
+    Atualização: Definido no início da fase, marcado ao concluir
+    Uso: Rastrear progresso da fase e entregáveis
   
   next_phase_readiness: bool
-    描述: 是否已准备好切换到下一阶段
-    计算: 当phase_progress >= 80% 且所有criteria已完成
-    用途: 提示用户进行阶段切换
+    Descrição: Se está pronto para mudar para a próxima fase
+    Cálculo: Quando phase_progress >= 80% e todos os critérios foram concluídos
+    Uso: Lembrar o usuário de realizar a mudança de fase
 
-上下文存储位置:
-  - 主记录: project.context.md 的 project_metadata 中
-  - 备份: context.archive*.md 中的历史记录
-  - 更新频率: 每次 /switch 命令或阶段进度变化时更新
-  - 访问权限: 所有规则读取权限，仅项目管理系统写入权限
+Localização de Armazenamento do Contexto:
+  - Registro principal: Em project_metadata de project.context.md
+  - Backup: Registros históricos em context.archive*.md
+  - Frequência de atualização: Atualizado a cada comando /switch ou mudança de progresso da fase
+  - Permissões de acesso: Permissão de leitura para todas as regras, permissão de gravação apenas para o sistema de gestão de projetos
 
-规则的阶段感知实现:
+Implementação de Percepção de Fase das Regras:
   backend-dev.mdc:
-    - 阶段3激活: 100% (完全启用)
-    - 阶段2可用: 50% (仅架构设计部分)
-    - 阶段1禁用: 0% (架构设计之前不可用)
-    - 阶段4+禁用: 0% (开发后禁用新功能开发)
+    - Fase 3 ativada: 100% (Totalmente habilitado)
+    - Fase 2 disponível: 50% (Apenas parte de design de arquitetura)
+    - Fase 1 desabilitada: 0% (Indisponível antes do design de arquitetura)
+    - Fase 4+ desabilitada: 0% (Desenvolvimento de novas funcionalidades desabilitado após o desenvolvimento)
   
   frontend-dev.mdc:
-    - 同 backend-dev (对称规则)
+    - Igual backend-dev (Regra simétrica)
   
   code-quality-check.mdc:
-    - 所有阶段可用: 100%
-    - 但阈值基于阶段调整:
-      * 阶段1-2: 警告级别检查
-      * 阶段3: 标准级别检查
-      * 阶段4: 严格级别检查
-      * 阶段5: 生产级别检查
+    - Disponível em todas as fases: 100%
+    - Mas o limite é ajustado com base na fase:
+      * Fase 1-2: Verificação de nível de aviso
+      * Fase 3: Verificação de nível padrão
+      * Fase 4: Verificação de nível estrito
+      * Fase 5: Verificação de nível de produção
   
   commit.mdc:
-    - 所有阶段可用: 100%
-    - 但检查内容基于阶段:
-      * 阶段1-2: 仅快照，不生成CHANGELOG
-      * 阶段3+: 标准化提交消息和CHANGELOG
+    - Disponível em todas as fases: 100%
+    - Mas o conteúdo da verificação baseia-se na fase:
+      * Fase 1-2: Apenas snapshot, não gera CHANGELOG
+      * Fase 3+: Mensagens de commit padronizadas e CHANGELOG
   
   changelog-management.mdc:
-    - 阶段1-2: 不自动生成
-    - 阶段3: 可用 (用于开发版本)
-    - 阶段4-5: 启用 (用于发布版本)
+    - Fase 1-2: Não gera automaticamente
+    - Fase 3: Disponível (Para versão de desenvolvimento)
+    - Fase 4-5: Habilitado (Para versão de lançamento)
 
-阶段检查流程 (所有规则必须执行):
-  Step 1 - 读取全局阶段上下文:
-    if current_phase 不存在 or 为空:
-      fallback to: 阶段3 (安全默认)
-      记录警告: "无法读取当前阶段，使用默认阶段"
+Fluxo de Verificação de Fase (Todas as regras devem executar):
+  Step 1 - Ler contexto de fase global:
+    if current_phase não existe ou vazio:
+      fallback to: Fase 3 (Padrão seguro)
+      Registrar aviso: "Não foi possível ler a fase atual, usando fase padrão"
   
-  Step 2 - 检查规则的阶段兼容性:
-    if current_phase 在该规则的激活范围内:
-      执行规则
+  Step 2 - Verificar compatibilidade de fase da regra:
+    if current_phase está no intervalo de ativação da regra:
+      Executar regra
     else:
-      显示提示: "当前阶段不支持此功能"
-      建议: "切换到适当的阶段以使用此功能"
-      选项: [1] 切换阶段 [2] 继续 [3] 取消
+      Exibir dica: "A fase atual não suporta esta funcionalidade"
+      Sugestão: "Mude para a fase apropriada para usar esta funcionalidade"
+      Opções: [1] Mudar de fase [2] Continuar [3] Cancelar
   
-  Step 3 - 根据阶段调整规则行为:
-    根据 current_phase 调整检查严格程度或功能集合
-    记录规则的激活状态到日志
+  Step 3 - Ajustar comportamento da regra com base na fase:
+    Ajustar rigor da verificação ou conjunto de funcionalidades com base em current_phase
+    Registrar status de ativação da regra no log
 
-阶段切换通知:
-  当执行 /switch <phase> 时:
-    1. 验证新阶段编号 (1-5)
-    2. 更新全局阶段上下文
-    3. 通知所有依赖规则
-    4. 重新计算规则的激活状态
-    5. 记录切换事件到project.context.md
-    6. 显示切换完成状态和建议
+Notificação de Mudança de Fase:
+  Ao executar /switch <phase>:
+    1. Validar novo número de fase (1-5)
+    2. Atualizar contexto de fase global
+    3. Notificar todas as regras dependentes
+    4. Recalcular status de ativação das regras
+    5. Registrar evento de mudança em project.context.md
+    6. Exibir status de conclusão da mudança e sugestões
 ```
 
-## 📋 五阶段项目管理 (整合完整工作流)
+## 📋 Gestão de Projetos em Cinco Fases (Integração de Fluxo de Trabalho Completo)
 
-### 阶段1: 需求分析 (Requirements Analysis)
+### Fase 1: Análise de Requisitos (Requirements Analysis)
 ```yaml
-主要目标:
-  - 明确项目需求和目标
-  - 确定技术方案和架构方向
-  - 制定项目计划和时间线
-  - 识别风险和约束条件
+Objetivos Principais:
+  - Esclarecer requisitos e objetivos do projeto
+  - Determinar solução técnica e direção da arquitetura
+  - Elaborar plano de projeto e cronograma
+  - Identificar riscos e restrições
 
-核心任务:
-  需求收集:
-    - 用户访谈和需求调研
-    - 功能需求和非功能需求分析
-    - 业务流程梳理和优化
-    - 用户体验和界面需求
+Tarefas Centrais:
+  Coleta de Requisitos:
+    - Entrevistas com usuários e pesquisa de requisitos
+    - Análise de requisitos funcionais e não funcionais
+    - Mapeamento e otimização de processos de negócios
+    - Requisitos de experiência do usuário e interface
   
-  技术调研:
-    - 技术栈选型和评估
-    - 架构模式选择和分析
-    - 第三方服务和工具评估
-    - 性能和安全要求分析
+  Pesquisa Técnica:
+    - Seleção e avaliação de stack tecnológico
+    - Seleção e análise de padrões de arquitetura
+    - Avaliação de serviços e ferramentas de terceiros
+    - Análise de requisitos de desempenho e segurança
   
-  项目规划:
-    - 工作分解结构(WBS)制定
-    - 时间估算和里程碑设定
-    - 资源需求和团队配置
-    - 风险识别和应对策略
+  Planejamento do Projeto:
+    - Elaboração da Estrutura Analítica do Projeto (EAP/WBS)
+    - Estimativa de tempo e definição de marcos
+    - Requisitos de recursos e configuração da equipe
+    - Identificação de riscos e estratégias de resposta
 
-约束条件:
-  - 禁止代码生成，专注需求澄清
-  - 禁止技术实现，专注方案设计
+Restrições:
+  - Proibido geração de código, foco no esclarecimento de requisitos
+  - Proibido implementação técnica, foco no design da solução
 
-交付产出:
-  - 需求规格说明书
-  - 技术方案设计文档
-  - 项目计划和时间线
-  - 风险评估和应对计划
+Entregáveis:
+  - Especificação de requisitos
+  - Documento de design de solução técnica
+  - Plano de projeto e cronograma
+  - Avaliação de riscos e plano de resposta
 ```
 
-### 阶段2: 架构设计 (Architecture Design)
+### Fase 2: Design de Arquitetura (Architecture Design)
 ```yaml
-主要目标:
-  - 设计系统架构和技术框架
-  - 建立开发环境和工具链
-  - 制定开发规范和流程
-  - 创建项目基础结构
+Objetivos Principais:
+  - Projetar arquitetura do sistema e estrutura técnica
+  - Estabelecer ambiente de desenvolvimento e cadeia de ferramentas
+  - Definir normas e processos de desenvolvimento
+  - Criar estrutura base do projeto
 
-核心任务:
-  架构设计:
-    - 系统架构图和组件设计
-    - 数据库设计和数据模型
-    - API设计和接口规范
-    - 安全架构和权限设计
+Tarefas Centrais:
+  Design de Arquitetura:
+    - Diagrama de arquitetura do sistema e design de componentes
+    - Design de banco de dados e modelo de dados
+    - Design de API e especificações de interface
+    - Arquitetura de segurança e design de permissões
   
-  环境搭建:
-    - 开发环境配置和标准化
-    - 版本控制系统设置
-    - CI/CD流水线基础配置
-    - 开发工具和插件配置
+  Configuração de Ambiente:
+    - Configuração e padronização do ambiente de desenvolvimento
+    - Configuração do sistema de controle de versão
+    - Configuração básica do pipeline CI/CD
+    - Configuração de ferramentas de desenvolvimento e plugins
   
-  框架建立:
-    - 项目目录结构创建
-    - 基础代码框架搭建
-    - 依赖管理和包配置
-    - 基础组件和工具类
+  Estabelecimento de Framework:
+    - Criação da estrutura de diretórios do projeto
+    - Construção da estrutura de código base
+    - Gerenciamento de dependências e configuração de pacotes
+    - Componentes base e classes utilitárias
 
-约束条件:
-  - 禁止业务逻辑实现
-  - 禁止完整功能开发
-  - 专注架构和框架搭建
+Restrições:
+  - Proibido implementação de lógica de negócios
+  - Proibido desenvolvimento de funcionalidades completas
+  - Foco na arquitetura e construção do framework
 
-交付产出:
-  - 系统架构设计文档
-  - 数据库设计文档
-  - API接口设计文档
-  - 开发环境配置指南
+Entregáveis:
+  - Documento de design de arquitetura do sistema
+  - Documento de design de banco de dados
+  - Documento de design de interface API
+  - Guia de configuração do ambiente de desenvolvimento
 ```
 
-### 阶段3: 开发实现 (Development Implementation)
+### Fase 3: Implementação de Desenvolvimento (Development Implementation)
 ```yaml
-主要目标:
-  - 实现核心功能和业务逻辑
-  - 开发用户界面和交互
-  - 集成第三方服务和API
-  - 编写单元测试和文档
+Objetivos Principais:
+  - Implementar funcionalidades principais e lógica de negócios
+  - Desenvolver interface de usuário e interação
+  - Integrar serviços e APIs de terceiros
+  - Escrever testes unitários e documentação
 
-核心任务:
-  功能开发:
-    - 核心业务逻辑实现
-    - 用户界面开发
-    - 数据处理和存储
-    - 第三方集成和API调用
+Tarefas Centrais:
+  Desenvolvimento de Funcionalidades:
+    - Implementação da lógica de negócios central
+    - Desenvolvimento da interface de usuário
+    - Processamento e armazenamento de dados
+    - Integração de terceiros e chamadas de API
   
-  质量保证:
-    - 单元测试编写
-    - 代码审查和重构
-    - 性能监控和日志
-    - 错误处理和异常管理
+  Garantia de Qualidade:
+    - Escrita de testes unitários
+    - Revisão de código e refatoração
+    - Monitoramento de desempenho e logs
+    - Tratamento de erros e gerenciamento de exceções
 
-约束条件:
-  - 禁止架构重大调整
-  - 禁止需求范围扩展
-  - 专注功能实现和质量
+Restrições:
+  - Proibido ajustes significativos na arquitetura
+  - Proibido expansão do escopo de requisitos
+  - Foco em implementação de funcionalidades e qualidade
 
-交付产出:
-  - 功能完整的应用代码
-  - 单元测试和测试报告
-  - API文档和使用指南
-  - 代码质量分析报告
+Entregáveis:
+  - Código da aplicação com funcionalidades completas
+  - Testes unitários e relatórios de teste
+  - Documentação da API e guia de uso
+  - Relatório de análise de qualidade de código
 ```
 
-### 阶段4: 测试优化 (Testing & Optimization)
+### Fase 4: Teste e Otimização (Testing & Optimization)
 ```yaml
-主要目标:
-  - 全面测试和质量验证
-  - 性能优化和用户体验改进
-  - Bug修复和稳定性提升
-  - 准备生产环境部署
+Objetivos Principais:
+  - Testes abrangentes e validação de qualidade
+  - Otimização de desempenho e melhoria da experiência do usuário
+  - Correção de bugs e melhoria da estabilidade
+  - Preparação para implantação em ambiente de produção
 
-核心任务:
-  测试验证:
-    - 集成测试和系统测试
-    - 用户验收测试(UAT)
-    - 性能测试和压力测试
-    - 安全测试和漏洞扫描
+Tarefas Centrais:
+  Validação de Testes:
+    - Testes de integração e testes de sistema
+    - Testes de aceitação do usuário (UAT)
+    - Testes de desempenho e testes de estresse
+    - Testes de segurança e varredura de vulnerabilidades
   
-  优化改进:
-    - 性能瓶颈识别和优化
-    - 用户体验改进
-    - 代码优化和重构
-    - 资源使用优化
+  Melhoria e Otimização:
+    - Identificação e otimização de gargalos de desempenho
+    - Melhoria da experiência do usuário
+    - Otimização e refatoração de código
+    - Otimização do uso de recursos
 
-约束条件:
-  - 禁止新功能开发
-  - 禁止架构重大变更
-  - 专注测试和优化
+Restrições:
+  - Proibido desenvolvimento de novas funcionalidades
+  - Proibido alterações significativas na arquitetura
+  - Foco em testes e otimização
 
-交付产出:
-  - 完整测试报告
-  - 性能优化报告
-  - Bug修复记录
-  - 生产就绪确认
+Entregáveis:
+  - Relatório de teste completo
+  - Relatório de otimização de desempenho
+  - Registro de correção de bugs
+  - Confirmação de prontidão para produção
 ```
 
-### 阶段5: 部署运维 (Deployment & Operations)
+### Fase 5: Implantação e Operação (Deployment & Operations)
 ```yaml
-主要目标:
-  - 生产环境部署和配置
-  - 监控和运维体系建立
-  - 用户培训和文档交付
-  - 项目总结和经验沉淀
+Objetivos Principais:
+  - Implantação e configuração em ambiente de produção
+  - Estabelecimento de sistema de monitoramento e operação
+  - Treinamento de usuários e entrega de documentação
+  - Resumo do projeto e consolidação de experiência
 
-核心任务:
-  部署配置:
-    - 生产环境搭建
-    - 应用部署和配置
-    - 数据库迁移和初始化
-    - 域名和SSL证书配置
+Tarefas Centrais:
+  Implantação e Configuração:
+    - Configuração do ambiente de produção
+    - Implantação e configuração da aplicação
+    - Migração e inicialização de banco de dados
+    - Configuração de domínio e certificado SSL
   
-  运维监控:
-    - 监控系统配置
-    - 日志收集和分析
-    - 备份和恢复策略
-    - 安全防护和更新
+  Operação e Monitoramento:
+    - Configuração do sistema de monitoramento
+    - Coleta e análise de logs
+    - Estratégias de backup e recuperação
+    - Proteção de segurança e atualizações
 
-约束条件:
-  - 禁止代码功能修改
-  - 禁止架构调整
-  - 专注部署和运维
+Restrições:
+  - Proibido modificação funcional de código
+  - Proibido ajustes de arquitetura
+  - Foco em implantação e operação
 
-交付产出:
-  - 部署脚本和配置文件
-  - 运维手册和监控配置
-  - 用户使用手册
-  - 项目总结和文档归档
+Entregáveis:
+  - Scripts de implantação e arquivos de configuração
+  - Manual de operação e configuração de monitoramento
+  - Manual do usuário
+  - Resumo do projeto e arquivamento de documentos
 ```
 
-### 阶段切换机制
+### Mecanismo de Troca de Fase
 ```yaml
-切换方式:
-  命令格式: "/switch [阶段号]"
-  自然语言: "切换到XX阶段"、"进入XX阶段"
-  智能推荐: "/switch 0" 启动推荐模式
+Modos de Troca:
+  Formato do comando: "/switch [número da fase]"
+  Linguagem natural: "Mudar para fase XX", "Entrar na fase XX"
+  Recomendação inteligente: "/switch 0" Inicia modo de recomendação
   
-辅助命令:
-  "/status" - 查看当前阶段和规则
-  "/recommend" - 获取阶段推荐
-  "/memory" - 查看项目记忆（可选，Recorder 优先）
+Comandos Auxiliares:
+  "/status" - Ver fase e regras atuais
+  "/recommend" - Obter recomendação de fase
+  "/memory" - Ver memória do projeto (opcional, Recorder tem prioridade)
 ```
 
-## 🤖 智能推荐机制 (集成全局推荐引擎)
+## 🤖 Mecanismo de Recomendação Inteligente (Integração com Motor de Recomendação Global)
 
-### 推荐引擎集成
+### Integração do Motor de Recomendação
 ```yaml
-架构设计:
-  全局推荐引擎: intelligent-recommendation-engine.mdc
-  项目管理集成: 调用全局推荐引擎API
-  避免重复实现: 统一推荐算法和逻辑
+Design de Arquitetura:
+  Motor de recomendação global: intelligent-recommendation-engine.mdc
+  Integração de gestão de projeto: Chamada de API do motor de recomendação global
+  Evitar implementação duplicada: Algoritmos e lógica de recomendação unificados
 
-集成方式:
-  1. 项目上下文传递给全局推荐引擎
-  2. 全局推荐引擎分析并返回推荐结果
-  3. 项目管理系统应用推荐结果
-  4. 记录推荐历史和用户反馈
+Modo de Integração:
+  1. Contexto do projeto passado para o motor de recomendação global
+  2. Motor de recomendação global analisa e retorna resultados de recomendação
+  3. Sistema de gestão de projetos aplica resultados de recomendação
+  4. Registrar histórico de recomendações e feedback do usuário
 
-推荐类型:
-  阶段推荐: 基于用户输入推荐最适合的项目阶段
-  工具推荐: 基于当前阶段推荐最优MCP工具组合
-  流程推荐: 基于项目类型推荐最佳工作流程
-  优化推荐: 基于项目状态推荐改进措施
+Tipos de Recomendação:
+  Recomendação de fase: Recomendação da fase de projeto mais adequada com base na entrada do usuário
+  Recomendação de ferramenta: Recomendação da melhor combinação de ferramentas MCP com base na fase atual
+  Recomendação de fluxo: Recomendação do melhor fluxo de trabalho com base no tipo de projeto
+  Recomendação de otimização: Recomendação de medidas de melhoria com base no status do projeto
 ```
 
-### 推荐触发机制
+### Mecanismo de Gatilho de Recomendação
 ```yaml
-自动触发:
-  - 用户输入包含阶段切换意图时
-  - 当前阶段完成度达到80%时
-  - 检测到项目进展异常时
-  - 用户请求帮助或指导时
+Gatilho Automático:
+  - Quando a entrada do usuário contém intenção de mudança de fase
+  - Quando a conclusão da fase atual atinge 80%
+  - Quando anomalias de progresso do projeto são detectadas
+  - Quando o usuário solicita ajuda ou orientação
 
-手动触发:
-  - 用户执行 "/recommend" 命令
-  - 用户执行 "/switch 0" 命令
-  - 用户询问 "下一步做什么"
-  - 用户表达困惑或不确定时
+Gatilho Manual:
+  - Usuário executa comando "/recommend"
+  - Usuário executa comando "/switch 0"
+  - Usuário pergunta "O que fazer a seguir"
+  - Usuário expressa confusão ou incerteza
 
-推荐结果应用:
-  - 显示推荐的阶段和理由
-  - 提供阶段切换选项
-  - 记录用户选择和反馈
-  - 更新项目状态和记忆
+Aplicação dos Resultados de Recomendação:
+  - Exibir fase recomendada e motivos
+  - Fornecer opções de mudança de fase
+  - Registrar escolha do usuário e feedback
+  - Atualizar status e memória do projeto
 ```
 
-## 💾 项目记忆系统
+## 💾 Sistema de Memória do Projeto
 
-### 记忆存储结构
+### Estrutura de Armazenamento de Memória
 ```json
 {
-  "project_id": "项目唯一标识",
-  "project_name": "项目名称",
-  "current_phase": "当前阶段",
-  "created_time": "创建时间",
-  "last_updated": "最后更新时间",
+  "project_id": "Identificador único do projeto",
+  "project_name": "Nome do projeto",
+  "current_phase": "Fase atual",
+  "created_time": "Data de criação",
+  "last_updated": "Última atualização",
   "phases": {
     "phase_1_requirements": {
       "status": "completed|in_progress|pending",
-      "start_time": "开始时间",
-      "end_time": "结束时间",
-      "requirements": "需求描述",
-      "technical_decisions": ["技术决策列表"],
-      "deliverables": ["交付物列表"],
-      "user_confirmations": ["用户确认记录"]
+      "start_time": "Data de início",
+      "end_time": "Data de término",
+      "requirements": "Descrição dos requisitos",
+      "technical_decisions": ["Lista de decisões técnicas"],
+      "deliverables": ["Lista de entregáveis"],
+      "user_confirmations": ["Registros de confirmação do usuário"]
     },
     "phase_2_architecture": {
       "status": "completed|in_progress|pending",
-      "technical_stack": "技术栈选择",
-      "architecture_design": "架构设计方案",
-      "system_components": ["系统组件列表"],
-      "design_patterns": ["设计模式列表"]
+      "technical_stack": "Seleção de stack tecnológico",
+      "architecture_design": "Plano de design de arquitetura",
+      "system_components": ["Lista de componentes do sistema"],
+      "design_patterns": ["Lista de padrões de design"]
     },
     "phase_3_development": {
       "status": "completed|in_progress|pending",
-      "implementation_plan": "实施计划",
-      "code_structure": "代码结构设计",
-      "development_milestones": ["开发里程碑"],
-      "completed_features": ["已完成功能"]
+      "implementation_plan": "Plano de implementação",
+      "code_structure": "Design de estrutura de código",
+      "development_milestones": ["Marcos de desenvolvimento"],
+      "completed_features": ["Funcionalidades concluídas"]
     },
     "phase_4_testing": {
       "status": "completed|in_progress|pending",
-      "testing_strategy": "测试策略",
-      "quality_standards": "质量标准",
-      "performance_metrics": "性能指标",
-      "bug_reports": ["Bug报告列表"]
+      "testing_strategy": "Estratégia de teste",
+      "quality_standards": "Padrões de qualidade",
+      "performance_metrics": "Métricas de desempenho",
+      "bug_reports": ["Lista de relatórios de Bug"]
     },
     "phase_5_deployment": {
       "status": "completed|in_progress|pending",
-      "deployment_strategy": "部署策略",
-      "environment_config": "环境配置",
-      "monitoring_setup": "监控配置",
-      "maintenance_plan": "维护计划"
+      "deployment_strategy": "Estratégia de implantação",
+      "environment_config": "Configuração de ambiente",
+      "monitoring_setup": "Configuração de monitoramento",
+      "maintenance_plan": "Plano de manutenção"
     }
   },
-  "global_notes": ["全局备注"],
-  "lessons_learned": ["经验教训"]
+  "global_notes": ["Notas globais"],
+  "lessons_learned": ["Lições aprendidas"]
 }
 ```
 
-### 自动记录触发条件
+### Condições de Gatilho de Registro Automático
 ```yaml
-记录触发:
-  阶段切换时: 自动保存当前阶段状态
-  重要决策时: 技术选型、架构设计等
-  里程碑达成时: 功能完成、测试通过等
-  问题解决时: Bug修复、性能优化等
-  用户确认时: 需求确认、方案批准等
+Gatilho de Registro:
+  Na mudança de fase: Salvar automaticamente o estado da fase atual
+  Em decisões importantes: Seleção técnica, design de arquitetura, etc.
+  No alcance de marcos: Conclusão de funcionalidade, aprovação em testes, etc.
+  Na resolução de problemas: Correção de Bug, otimização de desempenho, etc.
+  Na confirmação do usuário: Confirmação de requisitos, aprovação de plano, etc.
 ```
 
-## 🛠️ MCP工具策略集成
+## 🛠️ Integração de Estratégia de Ferramentas MCP
 
-### 工具策略统一
+### Unificação de Estratégia de Ferramentas
 ```yaml
-MCP工具策略:
-  统一入口: 使用 mcp-intelligent-strategy.mdc 中定义的策略
+Estratégia de Ferramentas MCP:
+  Entrada unificada: Usar estratégia definida em mcp-intelligent-strategy.mdc
   
-  注意: 项目管理系统不重复定义MCP工具策略
-        所有MCP工具使用策略已统一到 mcp-intelligent-strategy.mdc
+  Nota: O sistema de gestão de projetos não redefine estratégias de ferramentas MCP
+        Todas as estratégias de uso de ferramentas MCP foram unificadas em mcp-intelligent-strategy.mdc
         
-  集成方式:
-    - 项目管理系统调用MCP工具策略
-    - 根据项目阶段自动选择最优工具组合
-    - 智能编排和并行执行优化
-    - 实时性能监控和动态调整
+  Modo de Integração:
+    - O sistema de gestão de projetos chama a estratégia de ferramentas MCP
+    - Seleciona automaticamente a melhor combinação de ferramentas com base na fase do projeto
+    - Orquestração inteligente e otimização de execução paralela
+    - Monitoramento de desempenho em tempo real e ajuste dinâmico
 ```
 
-## 📊 智能质量保证体系
+## 📊 Sistema Inteligente de Garantia de Qualidade
 
-### 质量标准
+### Padrões de Qualidade
 ```yaml
-智能代码质量:
-  基础指标:
-    - 代码覆盖率 ≥ 85%
-    - 代码复杂度 ≤ 8
-    - 代码重复率 ≤ 3%
-    - 静态分析无严重问题
+Qualidade de Código Inteligente:
+  Indicadores Básicos:
+    - Cobertura de código ≥ 85%
+    - Complexidade de código ≤ 8
+    - Taxa de duplicação de código ≤ 3%
+    - Sem problemas graves na análise estática
   
-  智能增强:
-    - AI代码审查和质量评分
-    - 自动重构建议和优化方案
-    - 代码模式识别和最佳实践推荐
-    - 性能瓶颈预测和优化建议
+  Melhoria Inteligente:
+    - Revisão de código e pontuação de qualidade por IA
+    - Sugestões de refatoração automática e planos de otimização
+    - Reconhecimento de padrões de código e recomendação de melhores práticas
+    - Previsão de gargalos de desempenho e sugestões de otimização
 
-智能性能标准:
-  基础指标:
-    - 页面加载时间 ≤ 2秒
-    - API响应时间 ≤ 300ms
-    - 并发用户数 ≥ 1500
-    - 系统可用性 ≥ 99.95%
+Padrões de Desempenho Inteligentes:
+  Indicadores Básicos:
+    - Tempo de carregamento da página ≤ 2 segundos
+    - Tempo de resposta da API ≤ 300ms
+    - Número de usuários simultâneos ≥ 1500
+    - Disponibilidade do sistema ≥ 99.95%
   
-  智能增强:
-    - 性能趋势预测和优化
-    - 自适应负载均衡
-    - 智能缓存策略优化
-    - 资源使用智能监控
+  Melhoria Inteligente:
+    - Previsão de tendências de desempenho e otimização
+    - Balanceamento de carga adaptativo
+    - Otimização inteligente de estratégia de cache
+    - Monitoramento inteligente de uso de recursos
 
-需求理解质量:
-  新增指标:
-    - 需求理解准确率 ≥ 92%
-    - 需求澄清效率提升 ≥ 50%
-    - 需求变更适应性 ≥ 85%
-    - 用户满意度 ≥ 4.7/5.0
+Qualidade de Compreensão de Requisitos:
+  Novos Indicadores:
+    - Precisão de compreensão de requisitos ≥ 92%
+    - Aumento na eficiência de esclarecimento de requisitos ≥ 50%
+    - Adaptabilidade a mudanças de requisitos ≥ 85%
+    - Satisfação do usuário ≥ 4.7/5.0
 ```
 
-## 🔄 阶段间协调机制
+## 🔄 Mecanismo de Coordenação entre Fases
 
-### 阶段切换条件
+### Condições de Troca de Fase
 ```yaml
-切换检查点:
-  阶段1→阶段2:
-    - 需求文档已确认
-    - 技术方案已批准
-    - 项目计划已制定
-    - 团队资源已到位
+Pontos de Verificação de Troca:
+  Fase 1→Fase 2:
+    - Documento de requisitos confirmado
+    - Solução técnica aprovada
+    - Plano de projeto elaborado
+    - Recursos da equipe alocados
   
-  阶段2→阶段3:
-    - 架构设计已完成
-    - 开发环境已配置
-    - 基础框架已搭建
-    - 开发规范已制定
+  Fase 2→Fase 3:
+    - Design de arquitetura concluído
+    - Ambiente de desenvolvimento configurado
+    - Framework base construído
+    - Normas de desenvolvimento definidas
   
-  阶段3→阶段4:
-    - 核心功能已实现
-    - 基本测试已通过
-    - 代码质量已达标
-    - 集成测试已完成
+  Fase 3→Fase 4:
+    - Funcionalidades principais implementadas
+    - Testes básicos aprovados
+    - Qualidade de código dentro dos padrões
+    - Testes de integração concluídos
   
-  阶段4→阶段5:
-    - 所有测试已通过
-    - 性能已达到要求
-    - Bug已修复完成
-    - 用户验收已通过
+  Fase 4→Fase 5:
+    - Todos os testes aprovados
+    - Desempenho atingiu os requisitos
+    - Bugs corrigidos
+    - Aceitação do usuário aprovada
 ```
 
-### 回退机制
+### Mecanismo de Rollback
 ```yaml
-回退条件:
-  - 发现重大设计缺陷
-  - 技术方案不可行
-  - 需求发生重大变更
-  - 质量标准未达到
+Condições de Rollback:
+  - Descoberta de falhas graves de design
+  - Solução técnica inviável
+  - Mudanças significativas nos requisitos
+  - Padrões de qualidade não atingidos
 
-回退流程:
-  1. 问题识别和评估
-  2. 回退决策和批准
-  3. 状态保存和备份
-  4. 阶段回退和重新开始
-  5. 经验总结和改进
+Fluxo de Rollback:
+  1. Identificação e avaliação do problema
+  2. Decisão e aprovação de rollback
+  3. Salvamento de estado e backup
+  4. Rollback de fase e reinício
+  5. Resumo de experiência e melhoria
 ```
 
-## 🚀 超级大脑系统集成
+## 🚀 Integração com Sistema Super Brain
 
-### 系统激活
+### Ativação do Sistema
 ```yaml
-激活方式:
-  统一入口: 使用 super-brain-system.mdc 中定义的激活机制
-  主要触发词: "启动超级大脑系统"
+Modo de Ativação:
+  Entrada unificada: Usar mecanismo de ativação definido em super-brain-system.mdc
+  Palavra-chave principal: "Iniciar Sistema Super Brain"
   
-  注意: 所有系统激活逻辑已统一到 super-brain-system.mdc
-        本文件专注于项目管理流程和阶段控制
+  Nota: Toda a lógica de ativação do sistema foi unificada em super-brain-system.mdc
+        Este arquivo foca no fluxo de gestão de projetos e controle de fases
 ```
 
-### 项目管理功能
+### Funcionalidades de Gestão de Projetos
 ```yaml
-核心功能:
-  1. 五阶段生命周期管理:
-     - 严格的阶段控制和验证
-     - 阶段间的依赖关系管理
-     - 交付物质量保证
+Funcionalidades Centrais:
+  1. Gestão do ciclo de vida em cinco fases:
+     - Controle e validação rigorosos de fases
+     - Gestão de dependências entre fases
+     - Garantia de qualidade dos entregáveis
   
-  2. 工作流编排:
-     - 任务分解和优先级排序
-     - 依赖关系分析和管理
-     - 并行任务协调
+  2. Orquestração de fluxo de trabalho:
+     - Decomposição de tarefas e ordenação por prioridade
+     - Análise e gestão de dependências
+     - Coordenação de tarefas paralelas
   
-  3. 质量控制:
-     - 阶段门禁检查
-     - 交付物验证
-     - 风险识别和缓解
+  3. Controle de qualidade:
+     - Verificações de portão de fase
+     - Validação de entregáveis
+     - Identificação e mitigação de riscos
   
-  4. 进度跟踪:
-     - 实时进度监控
-     - 里程碑管理
-     - 绩效分析和报告
+  4. Rastreamento de progresso:
+     - Monitoramento de progresso em tempo real
+     - Gestão de marcos
+     - Análise de desempenho e relatórios
 ```
 
-## 🔄 完整工作流集成
+## 🔄 Integração Completa de Fluxo de Trabalho
 
-### 前后端协同工作流
+### Fluxo de Trabalho Colaborativo Frontend e Backend
 ```yaml
-协同模式:
-  并行开发:
-    - 前端: UI/UX设计和组件开发
-    - 后端: API设计和业务逻辑
-    - 同步点: 接口定义、数据模型
+Modo Colaborativo:
+  Desenvolvimento Paralelo:
+    - Frontend: Design de UI/UX e desenvolvimento de componentes
+    - Backend: Design de API e lógica de negócios
+    - Ponto de Sincronização: Definição de interface, modelo de dados
   
-  集成测试:
-    - 前端: 组件测试、E2E测试
-    - 后端: 单元测试、集成测试
-    - 联调: API对接、数据流测试
+  Teste de Integração:
+    - Frontend: Testes de componentes, testes E2E
+    - Backend: Testes unitários, testes de integração
+    - Integração: Conexão de API, teste de fluxo de dados
   
-  部署协调:
-    - 前端: 静态资源部署
-    - 后端: 服务部署和配置
-    - 监控: 全栈性能监控
+  Coordenação de Implantação:
+    - Frontend: Implantação de recursos estáticos
+    - Backend: Implantação e configuração de serviços
+    - Monitoramento: Monitoramento de desempenho full-stack
 ```
 
-### MCP工具智能编排
+### Orquestração Inteligente de Ferramentas MCP
 ```yaml
-工具编排策略:
-  阶段1_需求分析:
-    主要工具: ["mcp-feedback-enhanced", "memory（可选）"]
-    目标: 需求收集和分析
+Estratégia de Orquestração de Ferramentas:
+  Fase 1_Análise de Requisitos:
+    Ferramentas principais: ["mcp-feedback-enhanced", "memory (opcional)"]
+    Objetivo: Coleta e análise de requisitos
   
-  阶段2_架构设计:
-    主要工具: ["codebase-retrieval", "server-filesystem"]
-    目标: 架构设计和项目初始化
+  Fase 2_Design de Arquitetura:
+    Ferramentas principais: ["codebase-retrieval", "server-filesystem"]
+    Objetivo: Design de arquitetura e inicialização do projeto
   
-  阶段3_开发实现:
-    主要工具: ["server-github", "codebase-retrieval", "server-filesystem"]
-    目标: 代码开发和版本管理
+  Fase 3_Implementação de Desenvolvimento:
+    Ferramentas principais: ["server-github", "codebase-retrieval", "server-filesystem"]
+    Objetivo: Desenvolvimento de código e gerenciamento de versão
   
-  阶段4_测试优化:
-    主要工具: ["server-filesystem", "codebase-retrieval"]
-    目标: 测试执行和性能优化
+  Fase 4_Teste e Otimização:
+    Ferramentas principais: ["server-filesystem", "codebase-retrieval"]
+    Objetivo: Execução de testes e otimização de desempenho
   
-  阶段5_部署运维:
-    主要工具: ["server-github", "server-filesystem"]
-    目标: 部署配置和运维管理
+  Fase 5_Implantação e Operação:
+    Ferramentas principais: ["server-github", "server-filesystem"]
+    Objetivo: Configuração de implantação e gestão de operações
 ```
 
-## 📊 使用示例
+## 📊 Exemplos de Uso
 
-### 项目管理流程
+### Fluxo de Gestão de Projetos
 ```
-# 系统激活后的项目管理流程示例
+# Exemplo de fluxo de gestão de projetos após ativação do sistema
 
-阶段1 - 需求分析:
-用户: "我要开发一个电商网站"
-AI: "📋 进入需求分析阶段
-     🎯 当前任务: 需求收集和分析
+Fase 1 - Análise de Requisitos:
+Usuário: "Quero desenvolver um site de comércio eletrônico"
+IA: "📋 Entrando na fase de Análise de Requisitos
+     🎯 Tarefa atual: Coleta e análise de requisitos
      
-     需要明确的关键信息：
-     1. 目标用户群体和使用场景
-     2. 核心功能需求列表
-     3. 非功能性需求（性能、安全等）
-     4. 技术约束和偏好
-     5. 项目时间线和预算"
+     Informações chave necessárias:
+     1. Público-alvo e cenários de uso
+     2. Lista de funcionalidades principais
+     3. Requisitos não funcionais (desempenho, segurança, etc.)
+     4. Restrições e preferências técnicas
+     5. Cronograma e orçamento do projeto"
 ```
 
-### 阶段切换管理
+### Gestão de Troca de Fase
 ```
-用户: "需求已经明确了，开始架构设计"
-AI: "🔄 阶段切换检查
-     ✅ 验证阶段1交付物完整性
-     📝 保存需求分析成果到项目记忆
-     🔄 切换到阶段2-架构设计
+Usuário: "Os requisitos já estão claros, vamos começar o design da arquitetura"
+IA: "🔄 Verificação de troca de fase
+     ✅ Validando integridade dos entregáveis da Fase 1
+     📝 Salvando resultados da análise de requisitos na memória do projeto
+     🔄 Mudando para Fase 2-Design de Arquitetura
      
-     🏗️ 架构设计阶段任务:
-     1. 技术栈选择和评估
-     2. 系统架构设计
-     3. 数据库设计和建模
-     4. 项目结构初始化"
+     🏗️ Tarefas da fase de Design de Arquitetura:
+     1. Seleção e avaliação do stack tecnológico
+     2. Design da arquitetura do sistema
+     3. Design e modelagem do banco de dados
+     4. Inicialização da estrutura do projeto"
 ```
 
-### 智能推荐
+### Recomendação Inteligente
 ```
-用户: "我想开始写代码了"
-AI: "🤖 智能分析中...
-     📊 关键词匹配: '写代码' → 阶段3-开发实现
-     ⚠️  当前阶段: 阶段2-架构设计
+Usuário: "Quero começar a escrever código"
+IA: "🤖 Analisando de forma inteligente...
+     📊 Correspondência de palavras-chave: 'escrever código' → Fase 3-Implementação de Desenvolvimento
+     ⚠️  Fase atual: Fase 2-Design de Arquitetura
      
-     💡 建议: 架构设计尚未完成，建议先完成：
-     - 数据库表结构设计
-     - API接口定义
-     - 前端组件规划
+     💡 Sugestão: O design da arquitetura ainda não foi concluído, sugere-se completar primeiro:
+     - Design da estrutura de tabelas do banco de dados
+     - Definição de interfaces API
+     - Planejamento de componentes frontend
      
-     确认切换到开发阶段吗？(y/n)"
+     Confirmar mudança para a fase de desenvolvimento? (y/n)"
 ```
 
-## 🎯 集成优势
+## 🎯 Vantagens da Integração
 
-1. **结构化管理**: 严格的阶段约束确保项目有序进行
-2. **智能辅助**: AI推荐和自动化减少人工决策负担
-3. **记忆延续**: 完整的项目记忆确保信息不丢失
-4. **工具协同**: MCP工具与项目阶段深度集成
-5. **经验积累**: 持续学习和优化提升项目成功率
+1. **Gestão Estruturada**: Restrições rigorosas de fase garantem o andamento ordenado do projeto
+2. **Assistência Inteligente**: Recomendação de IA e automação reduzem a carga de decisão manual
+3. **Continuidade de Memória**: Memória completa do projeto garante que informações não sejam perdidas
+4. **Colaboração de Ferramentas**: Ferramentas MCP profundamente integradas com as fases do projeto
+5. **Acúmulo de Experiência**: Aprendizado e otimização contínuos aumentam a taxa de sucesso do projeto
 
 ---
 
-**🎯 使用提示**: 通过 `/switch 0` 启动智能推荐，让AI帮助您选择最适合的项目阶段！
+**🎯 Dica de Uso**: Use `/switch 0` para iniciar a recomendação inteligente e deixe a IA ajudá-lo a escolher a fase de projeto mais adequada!

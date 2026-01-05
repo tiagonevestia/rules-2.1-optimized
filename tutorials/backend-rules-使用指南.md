@@ -1,166 +1,166 @@
-# 🔧 后端开发 AI 助手规则使用指南 v2.6.0
+# 🔧 Guia de Uso das Regras de Assistente de IA para Desenvolvimento Backend v2.6.0
 
-## 📖 概述
+## 📖 Visão Geral
 
-本指南专门针对后端开发，**手把手教你**如何配置和使用后端开发 AI 助手规则。
+Este guia é especificamente voltado para desenvolvimento backend, **ensinando passo a passo** como configurar e usar as regras do assistente de IA para desenvolvimento backend.
 
-### 🚀 **2.6.0 优化亮点**
-- ✅ **54个智能规则（.mdc）** - 完整的AI智能化规则生态系统（31个全局规则+23个项目规则）
-- ✅ **优化优先级分布** - 智能系统规则提升到P2层级
-- ✅ **新增集成系统** - 大脑-记录员深度集成
-- ✅ **100%AI驱动** - 所有规则集成智能分析和推荐
-- ✅ **完美集成** - 100/100满分的集成测试验证
+### 🚀 **Destaques da Otimização 2.6.0**
+- ✅ **54 regras inteligentes (.mdc)** - Ecossistema completo de regras inteligentes de IA (31 regras globais + 23 regras de projeto)
+- ✅ **Distribuição otimizada de prioridades** - Regras de sistema inteligente promovidas ao nível P2
+- ✅ **Novo sistema de integração** - Integração profunda cérebro-secretário
+- ✅ **100% conduzido por IA** - Todas as regras com análise e recomendações inteligentes integradas
+- ✅ **Integração perfeita** - Validação de testes de integração 100/100 pontos
 
-**🎯 适合人群：**
-- ✅ **完全新手** - 从未接触过 MCP 工具的用户
-- ✅ **后端开发者** - 想要 AI 助手帮助开发 Java/Python/Node.js 项目
-- ✅ **全栈开发者** - 需要前后端 AI 助手支持
-- ✅ **学习者** - 想要学习现代后端开发工具链
+**🎯 Público-alvo:**
+- ✅ **Iniciantes completos** - Usuários que nunca tiveram contato com ferramentas MCP
+- ✅ **Desenvolvedores backend** - Querem assistente de IA para ajudar em projetos Java/Python/Node.js
+- ✅ **Desenvolvedores fullstack** - Precisam de suporte de assistente de IA para frontend e backend
+- ✅ **Aprendizes** - Querem aprender cadeias de ferramentas modernas de desenvolvimento backend
 
-**📚 你将学会：**
-- 🔧 如何安装和配置 Node.js、Java、Python 环境
-- 📦 如何安装和配置 5 个 MCP 工具
-- 🤖 如何使用智能反馈机制进行架构设计和 API 开发
-- ⚙️ 如何让 AI 帮你开发后端项目
+**📚 Você aprenderá:**
+- 🔧 Como instalar e configurar ambientes Node.js, Java, Python
+- 📦 Como instalar e configurar 5 ferramentas MCP
+- 🤖 Como usar mecanismos de feedback inteligente para design de arquitetura e desenvolvimento de APIs
+- ⚙️ Como fazer a IA ajudar você a desenvolver projetos backend
 
-**⏱️ 预计时间：** 45-90 分钟（取决于需要安装的环境数量）
+**⏱️ Tempo estimado:** 45-90 minutos (dependendo do número de ambientes a serem instalados)
 
-## 🎯 什么是后端规则？
+## 🎯 O que são Regras Backend?
 
-**⚠️ 新手必读：** 在开始之前，请先了解这个项目能为你做什么！
+**⚠️ Leitura obrigatória para iniciantes:** Antes de começar, entenda o que este projeto pode fazer por você!
 
-### 🔥 **核心改进：统一规则创建逻辑**
+### 🔥 **Melhoria principal: Lógica unificada de criação de regras**
 
-**重大突破**：现在所有AI工具（Augment、Cursor、Claude Code、Trae AI）使用**完全相同的规则内容**！
+**Avanço significativo**: Agora todas as ferramentas de IA (Augment, Cursor, Claude Code, Trae AI) usam **exatamente o mesmo conteúdo de regras**!
 
-- ✅ **功能完全一致** - 四个AI工具提供相同的后端开发功能
-- ✅ **规则内容统一** - 所有工具使用相同的文件组合顺序（约184KB）
-- ✅ **可互相复制** - 规则文件可以在不同AI工具间通用
-- ✅ **一致性验证** - `comprehensive-test-report.bat`确保持续一致
+- ✅ **Funcionalidade completamente idêntica** - Quatro ferramentas de IA fornecem as mesmas funcionalidades de desenvolvimento backend
+- ✅ **Conteúdo de regras unificado** - Todas as ferramentas usam a mesma ordem de combinação de arquivos (~184KB)
+- ✅ **Copiável entre si** - Arquivos de regras podem ser usados universalmente entre diferentes ferramentas de IA
+- ✅ **Validação de consistência** - `comprehensive-test-report.bat` garante consistência contínua
 
-### 📋 项目核心功能
-本项目会为你的开发环境安装以下组件：
+### 📋 Funcionalidades principais do projeto
+Este projeto instalará os seguintes componentes em seu ambiente de desenvolvimento:
 
-1. **🤖 AI助手规则** - 让AI更懂后端开发，提供专业的架构建议
-2. **🔧 MCP工具链** - 5个强大的工具，让AI能够直接操作文件、记忆、GitHub等
-3. **📚 智能反馈系统** - AI会主动询问需求，提供个性化建议
-4. **🎯 多AI工具支持** - 同时支持Augment、Cursor、Claude Code、Trae AI
-5. **🔄 统一规则创建** - 确保所有AI工具功能完全一致
+1. **🤖 Regras de assistente de IA** - Faz a IA entender melhor o desenvolvimento backend, fornecendo sugestões profissionais de arquitetura
+2. **🔧 Cadeia de ferramentas MCP** - 5 ferramentas poderosas que permitem à IA operar diretamente arquivos, memória, GitHub, etc.
+3. **📚 Sistema de feedback inteligente** - A IA perguntará ativamente sobre suas necessidades, fornecendo sugestões personalizadas
+4. **🎯 Suporte multi-ferramentas de IA** - Suporte simultâneo para Augment, Cursor, Claude Code, Trae AI
+5. **🔄 Criação unificada de regras** - Garante que todas as ferramentas de IA tenham funcionalidades completamente idênticas
 
-### 🎯 你将获得什么能力？
-后端规则是专门为 API/数据库/微服务开发优化的 AI 助手规则，包含：
+### 🎯 Quais capacidades você obterá?
+As regras backend são regras de assistente de IA otimizadas especificamente para desenvolvimento de APIs/banco de dados/microsserviços, incluindo:
 
-- 🏗️ **架构设计模式** - 系统设计和技术选型
-- ⚡ **API 开发模式** - RESTful API 和 GraphQL 实现
-- 🗄️ **数据建模模式** - 数据库设计和优化
-- 🔒 **安全开发模式** - 安全设计和漏洞检测
-- 🚀 **运维部署模式** - 部署自动化和监控
+- 🏗️ **Padrões de design de arquitetura** - Design de sistema e seleção de tecnologia
+- ⚡ **Padrões de desenvolvimento de API** - Implementação de RESTful API e GraphQL
+- 🗄️ **Padrões de modelagem de dados** - Design e otimização de banco de dados
+- 🔒 **Padrões de desenvolvimento seguro** - Design de segurança e detecção de vulnerabilidades
+- 🚀 **Padrões de implantação e operações** - Automação de implantação e monitoramento
 
-## 📁 第一步：安装后端规则
+## 📁 Passo 1: Instalar Regras Backend
 
-> **💡 快速安装**: 参考 [README.md](../README.md) 的快速开始部分
+> **💡 Instalação rápida**: Consulte a seção de início rápido em [README.md](../README.md)
 >
-> **📚 详细安装**: 参考 [傻瓜式安装指南](../install-scripts/INSTALL-GUIDE.md) | [中文版](../install-scripts/INSTALL-GUIDE-CN.md)
+> **📚 Instalação detalhada**: Consulte [Guia de Instalação Simplificado](../install-scripts/INSTALL-GUIDE.md) | [Versão Chinesa](../install-scripts/INSTALL-GUIDE-CN.md)
 >
-> **🎯 安装命令**: 
+> **🎯 Comando de instalação**: 
 > ```cmd
-> # 注意：如果规则目录在非C盘，需要先切换盘符
-> E:                                    # 先切换到E盘（根据你的实际盘符）
-> cd "你的rules-2.4.1-optimized目录路径"
-> install-scripts\install-ultra.bat ..\你的项目目录 backend
+> # Nota: Se o diretório de regras não estiver no drive C, mude primeiro o drive
+> E:                                    # Mude primeiro para o drive E (de acordo com seu drive real)
+> cd "caminho do seu diretório rules-2.4.1-optimized"
+> install-scripts\install-ultra.bat ..\seu-diretório-de-projeto backend
 > ```
 
-## 🔧 第二步：环境要求检查
+## 🔧 Passo 2: Verificação de Requisitos de Ambiente
 
-### **2.1 环境配置**
+### **2.1 Configuração de Ambiente**
 
-> **📋 环境要求**: 请先完成基础环境配置，确保开发环境已正确安装
+> **📋 Requisitos de ambiente**: Por favor, complete primeiro a configuração básica do ambiente, certificando-se de que o ambiente de desenvolvimento esteja instalado corretamente
 
-**✅ 环境检查**
+**✅ Verificação de ambiente**
 ```bash
-# 检查必需环境
-node --version  # 应显示 ≥16.0.0
-npm --version   # 应显示 ≥8.0.0
-java --version  # 应显示 ≥11 (如使用Java)
-python --version # 应显示 ≥3.8 (如使用Python)
+# Verificar ambientes necessários
+node --version  # Deve mostrar ≥16.0.0
+npm --version   # Deve mostrar ≥8.0.0
+java --version  # Deve mostrar ≥11 (se usar Java)
+python --version # Deve mostrar ≥3.8 (se usar Python)
 ```
 
-**环境状态**:
-- ✅ **已就绪**: 版本符合要求，可以继续后端开发配置
-- ❌ **需要配置**: 请先完成 [环境配置指南](../docs/ENVIRONMENT-SETUP.md)
+**Status do ambiente**:
+- ✅ **Pronto**: Versão atende aos requisitos, pode continuar com a configuração de desenvolvimento backend
+- ❌ **Requer configuração**: Por favor, complete primeiro [Guia de Configuração de Ambiente](../docs/ENVIRONMENT-SETUP.md)
 
-**📚 详细安装教程**: 如需安装或升级开发环境，请参考 [环境配置指南](../docs/ENVIRONMENT-SETUP.md)，包含：
-- Node.js/NVM 安装配置
-- Java JDK 安装配置  
-- Python 安装配置
-- npm/pip 镜像源配置
-- 常见问题解决方案
+**📚 Tutorial de instalação detalhada**: Se precisar instalar ou atualizar o ambiente de desenvolvimento, consulte [Guia de Configuração de Ambiente](../docs/ENVIRONMENT-SETUP.md), incluindo:
+- Configuração de instalação Node.js/NVM
+- Configuração de instalação Java JDK  
+- Configuração de instalação Python
+- Configuração de mirror npm/pip
+- Soluções para problemas comuns
 
-## 🔧 第三步：MCP工具配置
+## 🔧 Passo 3: Configuração de Ferramentas MCP
 
-### **3.1 一键自动安装（推荐）**
+### **3.1 Instalação Automática com um Clique (recomendado)**
 
-> **⚠️ 重要提醒**：使用MCP工具安装脚本前，建议先阅读 **[📋 安装脚本使用说明](../mcp-scripts/安装脚本使用说明.md)** 了解详细的安装方法和注意事项。
+> **⚠️ Lembrete importante**: Antes de usar o script de instalação de ferramentas MCP, é recomendável ler **[📋 Instruções de Uso dos Scripts de Instalação](../mcp-scripts/安装脚本使用说明.md)** para entender os métodos de instalação detalhados e observações.
 
-**使用自动安装脚本：**
+**Usar script de instalação automática:**
 ```bash
-# 推荐方法：双击运行（最简单）
-双击运行: mcp-scripts/run-powershell-installer.bat
+# Método recomendado: executar com duplo clique (mais simples)
+Executar com duplo clique: mcp-scripts/run-powershell-installer.bat
 
-# 或者手动在PowerShell中执行
-powershell -ExecutionPolicy Bypass -File "install-mcp-tools-enhanced-final.ps1的绝对路径"
+# Ou executar manualmente no PowerShell
+powershell -ExecutionPolicy Bypass -File "caminho absoluto para install-mcp-tools-enhanced-final.ps1"
 ```
 
-**📚 详细配置指南**：如需更详细的MCP配置说明，请参考 [MCP快速入门指南](../docs/MCP-QUICK-START-GUIDE.md) 或 [MCP详细配置指南](../docs/MCP-DETAILED-CONFIG-GUIDE.md)
+**📚 Guia de configuração detalhada**: Para obter instruções mais detalhadas sobre configuração MCP, consulte [Guia de Início Rápido MCP](../docs/MCP-QUICK-START-GUIDE.md) ou [Guia de Configuração Detalhada MCP](../docs/MCP-DETAILED-CONFIG-GUIDE.md)
 
-> **🚨 安装后重要**：执行MCP安装脚本后，会在MCP-Tools文件夹下自动生成 `mcp-config.json` 配置文件，然后**强烈建议**完整阅读 **[📋 MCP工具详细配置指南](../docs/MCP-DETAILED-CONFIG-GUIDE.md)** 以确保MCP功能正常使用！生成的配置文件是模板，需要根据你的实际情况修改！
+> **🚨 Importante após instalação**: Após executar o script de instalação MCP, um arquivo de configuração `mcp-config.json` será gerado automaticamente na pasta MCP-Tools. Então é **altamente recomendável** ler completamente **[📋 Guia de Configuração Detalhada de Ferramentas MCP](../docs/MCP-DETAILED-CONFIG-GUIDE.md)** para garantir funcionamento adequado das funcionalidades MCP! O arquivo de configuração gerado é um modelo e precisa ser modificado de acordo com sua situação real!
 
-**脚本功能：**
-- ✅ 自动检测系统环境
-- ✅ 自动安装5个核心MCP工具
-- ✅ 生成基础配置文件（**注意：是模板，需要修改**）
-- ✅ 验证安装结果
-- ✅ 提供详细的安装进度和结果报告
+**Funcionalidades do script:**
+- ✅ Detecção automática de ambiente de sistema
+- ✅ Instalação automática de 5 ferramentas MCP principais
+- ✅ Gera arquivo de configuração básico (**Nota: é um modelo, precisa ser modificado**)
+- ✅ Valida resultado da instalação
+- ✅ Fornece relatório detalhado de progresso e resultado da instalação
 
-### **3.2 手动安装（备选）**
+### **3.2 Instalação Manual (alternativa)**
 
-**⚠️ 重要提示：** 根据最新测试，mcp-feedback-enhanced 是Python包，需要特殊安装方式！
+**⚠️ Dica importante:** De acordo com testes recentes, mcp-feedback-enhanced é um pacote Python e requer método de instalação especial!
 
 ```bash
-# 创建MCP工具目录
+# Criar diretório de ferramentas MCP
 mkdir C:\MCP-Tools
 cd C:\MCP-Tools
 
-# 初始化项目
+# Inicializar projeto
 npm init -y
 
-# 安装Node.js MCP工具（本地安装，路径清晰；server-memory 可选）
+# Instalar ferramentas Node.js MCP (instalação local, caminho claro; server-memory opcional)
 npm install @modelcontextprotocol/server-filesystem
-npm install @modelcontextprotocol/server-memory  # 可选（Recorder 优先）
+npm install @modelcontextprotocol/server-memory  # Opcional (Recorder prioritário)
 npm install @modelcontextprotocol/server-github
 npm install @modelcontextprotocol/server-everything
 
-# 安装Python MCP工具
+# Instalar ferramentas Python MCP
 pip install uv
-# mcp-feedback-enhanced 通过 uvx 运行，无需预安装
+# mcp-feedback-enhanced roda via uvx, não requer pré-instalação
 ```
 
-**✅ 验证安装：**
+**✅ Verificar instalação:**
 ```bash
-# 验证Node.js工具
+# Verificar ferramentas Node.js
 npm list --depth=0 | findstr modelcontextprotocol
 
-# 验证Python工具
+# Verificar ferramentas Python
 uvx mcp-feedback-enhanced@latest version
 ```
 
-### **3.2 创建配置文件**
+### **3.2 Criar arquivo de configuração**
 
-**📝 完整MCP配置模板：**
+**📝 Modelo completo de configuração MCP:**
 
-**⚠️ 重要提醒：** 下面的配置文件是**模板**，你需要根据自己的实际情况修改，否则可能无法正常工作！
+**⚠️ Lembrete importante:** O arquivo de configuração abaixo é um **modelo**, você precisa modificá-lo de acordo com sua situação real, caso contrário pode não funcionar corretamente!
 
-创建 `mcp-config.json`：
+Criar `mcp-config.json`:
 ```json
 {
   "mcpServers": {
@@ -215,224 +215,224 @@ uvx mcp-feedback-enhanced@latest version
 }
 ```
 
-**🚨 需要修改的内容：**
-1. **后端项目路径**：将 `C:\\your-backend-projects` 改为实际路径
-2. **GitHub Token**：将 `your_github_token_here` 改为真实Token
+**🚨 Conteúdo que precisa ser modificado:**
+1. **Caminho do projeto backend**: Mude `C:\your-backend-projects` para o caminho real
+2. **Token do GitHub**: Mude `your_github_token_here` para um token real
 
-**📂 后端项目路径示例：**
+**📂 Exemplos de caminho de projeto backend:**
 ```json
-// Java项目
-"D:\\Java\\SpringBoot项目"
+// Projeto Java
+"D:\\Java\\ProjetoSpringBoot"
 
-// Python项目
-"E:\\Python\\FastAPI项目"
+// Projeto Python
+"E:\\Python\\ProjetoFastAPI"
 
-// Node.js项目
-"C:\\Users\\用户名\\Desktop\\NodeJS"
+// Projeto Node.js
+"C:\\Users\\nomedousuario\\Desktop\\NodeJS"
 ```
 
-**💡 配置说明：**
-- **npx命令** - 自动使用最新版本的Node.js MCP工具
-- **uvx命令** - 自动运行最新版本的Python MCP工具
-- **timeout设置** - 反馈工具超时时间（600秒）
-- **autoApprove** - 自动批准反馈交互功能
+**💡 Instruções de configuração:**
+- **comando npx** - Usa automaticamente a versão mais recente das ferramentas Node.js MCP
+- **comando uvx** - Executa automaticamente a versão mais recente das ferramentas Python MCP
+- **configuração de timeout** - Tempo limite da ferramenta de feedback (600 segundos)
+- **autoApprove** - Aprova automaticamente funções de interação de feedback
 
-### **3.3 GitHub Token配置**
-1. 访问：https://github.com/settings/tokens
-2. 点击"Generate new token (classic)"
-3. 选择权限：`repo`, `user`, `workflow`
-4. 复制生成的token并替换配置文件中的占位符
+### **3.3 Configuração de Token do GitHub**
+1. Acesse: https://github.com/settings/tokens
+2. Clique em "Generate new token (classic)"
+3. Selecione permissões: `repo`, `user`, `workflow`
+4. Copie o token gerado e substitua o placeholder no arquivo de configuração
 
-## 🚀 第四步：开始使用
+## 🚀 Passo 4: Começar a Usar
 
-### **4.1 基本命令**
+### **4.1 Comandos básicos**
 ```bash
-# 启动后端开发工作流
+# Iniciar fluxo de trabalho de desenvolvimento backend
 /backend-dev
 
-# API接口设计
+# Design de interface API
 /api-design
 
-# 数据库设计
+# Design de banco de dados
 /database-design
 
-# 安全检查
+# Verificação de segurança
 /security-check
 
-# 性能测试
+# Teste de desempenho
 /performance-test
 ```
 
-### **4.2 模式切换**
+### **4.2 Mudança de Modo**
 ```bash
-# 手动切换模式
-/架构设计    # 架构设计模式
-/api开发     # API开发模式
-/数据建模    # 数据建模模式
-/安全开发    # 安全开发模式
-/运维部署    # 运维部署模式
+# Mudar modo manualmente
+/架构设计    # Modo de design de arquitetura
+/api开发     # Modo de desenvolvimento de API
+/数据建模    # Modo de modelagem de dados
+/安全开发    # Modo de desenvolvimento seguro
+/运维部署    # Modo de implantação e operações
 ```
 
-### **4.3 专用配置模式**
+### **4.3 Modos de Configuração Especializados**
 ```bash
-# 架构策略配置
-/设置微服务模式    # 启用微服务架构优先策略
-/设置单体模式      # 启用单体应用架构策略
+# Configuração de estratégia de arquitetura
+/设置微服务模式    # Habilitar estratégia prioritaria de arquitetura de microsserviços
+/设置单体模式      # Habilitar estratégia de arquitetura de aplicação monolítica
 
-# 性能优化配置
-/设置性能优化模式  # 自动应用性能优化建议
+# Configuração de otimização de desempenho
+/设置性能优化模式  # Aplicar automaticamente sugestões de otimização de desempenho
 ```
 
-### **4.4 反馈频率控制**
+### **4.4 Controle de Frequência de Feedback**
 ```bash
-# 反馈频率控制
-/设置详细模式    # 启用所有反馈点，完整工作流
-/设置标准模式    # 关键决策点反馈（默认）
-/设置静默模式    # 仅错误时反馈，适合熟练用户
+# Controle de frequência de feedback
+/设置详细模式    # Habilitar todos os pontos de feedback, fluxo de trabalho completo
+/设置标准模式    # Feedback nos pontos de decisão críticos (padrão)
+/设置静默模式    # Apenas feedback em caso de erro, adequado para usuários experientes
 ```
 
-### **4.5 工作流配置**
+### **4.5 Configuração de Fluxo de Trabalho**
 ```bash
-# 工作流配置
-/设置严格模式    # 严格按顺序执行，不允许跳过
-/设置灵活模式    # 允许模式跳转和流程调整（默认）
-/设置快捷模式    # 简化某些步骤，提高效率
+# Configuração de fluxo de trabalho
+/设置严格模式    # Executar estritamente em sequência, não permitir pular
+/设置灵活模式    # Permitir mudança de modo e ajuste de fluxo (padrão)
+/设置快捷模式    # Simplificar certos passos, melhorar eficiência
 ```
 
-### **4.6 质量标准配置**
+### **4.6 Configuração de Padrão de Qualidade**
 ```bash
-# 质量标准配置
-/设置企业级标准  # 最高质量要求，完整测试
-/设置标准级别    # 平衡质量和效率（默认）
-/设置原型级别    # 快速验证，降低质量要求
+# Configuração de padrão de qualidade
+/设置企业级标准  # Requisitos de qualidade mais altos, testes completos
+/设置标准级别    # Equilibrar qualidade e eficiência (padrão)
+/设置原型级别    # Validação rápida, reduzir requisitos de qualidade
 ```
 
-### **4.7 智能反馈场景**
-AI会在以下情况主动请求反馈：
+### **4.7 Cenários de Feedback Inteligente**
+A IA solicitará feedback ativamente nas seguintes situações:
 
-#### **架构设计确认：**
+#### **Confirmação de Design de Arquitetura:**
 ```
-"请确认系统架构方案：
-1. 微服务架构 vs 单体架构
-2. 数据库选择：MySQL vs PostgreSQL
-3. 缓存方案：Redis vs Memcached
-4. 消息队列：RabbitMQ vs Kafka
-请选择并说明原因"
-```
-
-#### **API设计确认：**
-```
-"API接口设计完成，请确认：
-- RESTful风格是否符合要求
-- 响应格式是否统一
-- 错误处理机制是否完善
-- 认证授权方案是否合适"
+"Por favor confirme o esquema de arquitetura do sistema:
+1. Arquitetura de microsserviços vs Arquitetura monolítica
+2. Escolha de banco de dados: MySQL vs PostgreSQL
+3. Esquema de cache: Redis vs Memcached
+4. Fila de mensagens: RabbitMQ vs Kafka
+Por favor escolha e explique o motivo"
 ```
 
-## 📋 第五步：实际使用示例
-
-### **示例1：Java Spring Boot项目**
+#### **Confirmação de Design de API:**
 ```
-用户：帮我创建一个Spring Boot的用户管理系统
-
-AI响应：[模式：架构设计] [角色：后端架构师]
-我来帮你设计Spring Boot用户管理系统...
-
-[触发反馈机制，确认技术栈和架构方案]
+"Design de interface API concluído, por favor confirme:
+- Estilo RESTful atende aos requisitos
+- Formato de resposta está unificado
+- Mecanismo de tratamento de erros está completo
+- Esquema de autenticação e autorização é apropriado"
 ```
 
-### **示例2：Python FastAPI项目**
+## 📋 Passo 5: Exemplos de Uso Prático
+
+### **Exemplo 1: Projeto Java Spring Boot**
 ```
-用户：/api开发 创建用户认证API
+Usuário: Me ajude a criar um sistema de gerenciamento de usuários Spring Boot
 
-AI响应：[模式：API开发] [角色：后端开发工程师]
-我来帮你创建FastAPI用户认证接口...
+Resposta da IA: [Modo: Design de Arquitetura] [Papel: Arquiteto Backend]
+Vou te ajudar a projetar o sistema de gerenciamento de usuários Spring Boot...
 
-[自动生成API代码，包含认证和授权]
-```
-
-### **示例3：数据库设计**
-```
-用户：/数据建模 设计电商系统数据库
-
-AI响应：[模式：数据建模] [角色：数据库工程师]
-我来设计电商系统的数据库结构...
-
-[生成表结构设计和关系图]
+[Disparar mecanismo de feedback, confirmar stack técnica e esquema de arquitetura]
 ```
 
-## 🛠️ 第六步：技术栈支持
+### **Exemplo 2: Projeto Python FastAPI**
+```
+Usuário: /api开发 criar API de autenticação de usuário
 
-### **6.1 Java技术栈**
-- **Spring Boot** - 企业级Java框架
-- **Spring Security** - 安全框架
-- **Spring Data JPA** - 数据访问层
-- **Maven/Gradle** - 依赖管理
-- **JUnit** - 单元测试
+Resposta da IA: [Modo: Desenvolvimento de API] [Papel: Engenheiro de Desenvolvimento Backend]
+Vou te ajudar a criar interface de autenticação de usuário FastAPI...
 
-### **6.2 Python技术栈**
-- **FastAPI** - 现代Python框架
-- **Django** - 全功能Web框架
-- **SQLAlchemy** - ORM框架
-- **Pydantic** - 数据验证
-- **pytest** - 测试框架
+[Gerar código de API automaticamente, incluindo autenticação e autorização]
+```
 
-### **6.3 Node.js技术栈**
-- **Express** - 经典Node.js框架
-- **Koa** - 轻量级框架
-- **TypeScript** - 类型安全
-- **Prisma** - 现代ORM
-- **Jest** - 测试框架
+### **Exemplo 3: Design de Banco de Dados**
+```
+Usuário: /数据建模 projetar banco de dados de sistema de e-commerce
 
-## ✅ 第七步：验证配置
+Resposta da IA: [Modo: Modelagem de Dados] [Papel: Engenheiro de Banco de Dados]
+Vou projetar a estrutura de banco de dados do sistema de e-commerce...
 
-### **7.1 功能测试**
+[Gerar design de estrutura de tabelas e diagrama de relacionamento]
+```
+
+## 🛠️ Passo 6: Suporte a Stack Tecnológica
+
+### **6.1 Stack Java**
+- **Spring Boot** - Framework Java empresarial
+- **Spring Security** - Framework de segurança
+- **Spring Data JPA** - Camada de acesso a dados
+- **Maven/Gradle** - Gerenciamento de dependências
+- **JUnit** - Teste unitário
+
+### **6.2 Stack Python**
+- **FastAPI** - Framework Python moderno
+- **Django** - Framework web completo
+- **SQLAlchemy** - Framework ORM
+- **Pydantic** - Validação de dados
+- **pytest** - Framework de teste
+
+### **6.3 Stack Node.js**
+- **Express** - Framework Node.js clássico
+- **Koa** - Framework leve
+- **TypeScript** - Segurança de tipos
+- **Prisma** - ORM moderno
+- **Jest** - Framework de teste
+
+## ✅ Passo 7: Verificar Configuração
+
+### **7.1 Teste de Funcionalidade**
 ```bash
-# 测试基本功能
+# Testar funcionalidade básica
 /backend-dev
 
-# 测试反馈机制
+# Testar mecanismo de feedback
 /feedback
 
-# 测试模式切换
+# Testar mudança de modo
 /架构设计
 ```
 
-### **7.2 检查清单**
-- [ ] 开发环境正确安装（Node.js/Java/Python）
-- [ ] 规则文件正确放置
-- [ ] MCP工具配置完成
-- [ ] GitHub Token配置正确
-- [ ] 基本命令可以正常使用
-- [ ] 反馈机制正常工作
-- [ ] 模式切换功能正常
+### **7.2 Lista de Verificação**
+- [ ] Ambiente de desenvolvimento instalado corretamente (Node.js/Java/Python)
+- [ ] Arquivos de regras posicionados corretamente
+- [ ] Configuração de ferramentas MCP concluída
+- [ ] Configuração de Token do GitHub correta
+- [ ] Comandos básicos podem ser usados normalmente
+- [ ] Mecanismo de feedback funcionando normalmente
+- [ ] Função de mudança de modo normal
 
-## 🎉 完成！
+## 🎉 Concluído!
 
-恭喜！你已经成功配置了后端开发 AI 助手规则。现在可以享受高效的后端开发体验了！
+Parabéns! Você configurou com sucesso as regras do assistente de IA para desenvolvimento backend. Agora pode aproveitar uma experiência de desenvolvimento backend eficiente!
 
-## 📚 更多资源
+## 📚 Mais Recursos
 
-- **详细文档**：查看 `docs/MCP-QUICK-START-GUIDE.md` 和 `docs/MCP-DETAILED-CONFIG-GUIDE.md`
-- **项目规则**：浏览 `project-rules/` 目录
-- **全局规则**：参考 `global-rules/` 目录
-- **MCP配置**：详见 `docs/MCP-DETAILED-CONFIG-GUIDE.md`
+- **Documentação detalhada**: Verifique `docs/MCP-QUICK-START-GUIDE.md` e `docs/MCP-DETAILED-CONFIG-GUIDE.md`
+- **Regras do projeto**: Navegue pelo diretório `project-rules/`
+- **Regras globais**: Consulte o diretório `global-rules/`
+- **Configuração MCP**: Veja detalhes em `docs/MCP-DETAILED-CONFIG-GUIDE.md`
 
-## 📋 版本信息
+## 📋 Informações de Versão
 
-- **当前版本**: Rules 2.6.0
-- **发布日期**: 2025年10月19日
+- **Versão atual**: Rules 2.6.0
+- **Data de lançamento**: 19 de outubro de 2025
 
-详细版本信息请参考 [README.md](../README.md)
+Para informações detalhadas da versão, consulte [README.md](../README.md)
 
-### 🔥 **重大改进**
-- ✅ **统一规则创建逻辑** - 所有AI工具使用相同的规则内容
-- ✅ **规则一致性保证** - 四个AI工具功能完全一致
-- ✅ **自动目录创建** - 解决路径不存在问题
-- ✅ **验证工具** - `comprehensive-test-report.bat`确保一致性
+### 🔥 **Melhorias Significativas**
+- ✅ **Lógica unificada de criação de regras** - Todas as ferramentas de IA usam o mesmo conteúdo de regras
+- ✅ **Garantia de consistência de regras** - Quatro ferramentas de IA com funcionalidades completamente idênticas
+- ✅ **Criação automática de diretório** - Resolve problema de caminho inexistente
+- ✅ **Ferramenta de validação** - `comprehensive-test-report.bat` garante consistência
 
 
-### 👨‍💻 作者信息
-- **博客ID**：m0_73635308
-- **联系邮箱**：3553952458@qq.com
+### 👨‍💻 Informações do Autor
+- **ID do Blog**: m0_73635308
+- **Email de Contato**: 3553952458@qq.com
  

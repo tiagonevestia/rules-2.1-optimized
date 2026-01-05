@@ -1,18 +1,18 @@
-# 📋 记录员系统模板配置文件
+# 📋 Arquivo de Configuração do Sistema de Templates
 # Template Configuration for Context Recorder System v2.0
-# 定义项目类型、触发条件、分类规则等智能化配置
+# Define configurações inteligentes como tipos de projeto, condições de gatilho, regras de classificação, etc.
 
 version: "2.0-enhanced"
 last_updated: "2025-10-18"
 compatibility: "context-recorder-system v2.0+"
 
 # Template System v2.0 Configuration
-# 智能模板系统配置文件
+# Configuração do Sistema de Templates v2.0
 
-# 🎯 项目类型自动识别配置
+# 🎯 Configuração de Identificação Automática de Tipos de Projeto
 project_types:
   frontend:
-    name: "前端项目"
+    name: "Projeto Frontend"
     detection_rules:
       files:
         - "package.json"
@@ -43,15 +43,15 @@ project_types:
       - "JavaScript"
     default_config:
       complexity_score: 6
-      estimated_duration: "2-6个月"
-      team_size: "2-5人"
+      estimated_duration: "2-6 meses"
+      team_size: "2-5 pessoas"
       archive_threshold:
         lines: 150
         days: 5
         decisions: 3
 
   backend:
-    name: "后端项目"
+    name: "Projeto Backend"
     detection_rules:
       files:
         - "pom.xml"
@@ -87,15 +87,15 @@ project_types:
       - "Ruby on Rails"
     default_config:
       complexity_score: 8
-      estimated_duration: "3-12个月"
-      team_size: "3-8人"
+      estimated_duration: "3-12 meses"
+      team_size: "3-8 pessoas"
       archive_threshold:
         lines: 200
         days: 7
         decisions: 5
 
   fullstack:
-    name: "全栈项目"
+    name: "Projeto Fullstack"
     detection_rules:
       files:
         - "package.json"
@@ -122,15 +122,15 @@ project_types:
       - "T3 Stack"
     default_config:
       complexity_score: 9
-      estimated_duration: "6-18个月"
-      team_size: "4-12人"
+      estimated_duration: "6-18 meses"
+      team_size: "4-12 pessoas"
       archive_threshold:
         lines: 250
         days: 10
         decisions: 7
 
   mobile:
-    name: "移动应用项目"
+    name: "Projeto de Aplicativo Móvel"
     detection_rules:
       files:
         - "pubspec.yaml"
@@ -160,15 +160,15 @@ project_types:
       - "Native Android"
     default_config:
       complexity_score: 7
-      estimated_duration: "4-10个月"
-      team_size: "2-6人"
+      estimated_duration: "4-10 meses"
+      team_size: "2-6 pessoas"
       archive_threshold:
         lines: 180
         days: 6
         decisions: 4
 
   devops:
-    name: "DevOps/基础设施项目"
+    name: "Projeto DevOps/Infraestrutura"
     detection_rules:
       files:
         - "Dockerfile"
@@ -198,14 +198,14 @@ project_types:
       - "GCP"
     default_config:
       complexity_score: 8
-      estimated_duration: "2-8个月"
-      team_size: "1-4人"
+      estimated_duration: "2-8 meses"
+      team_size: "1-4 pessoas"
       archive_threshold:
         lines: 120
         days: 14
         decisions: 6
 
-# 🏷️ 智能标签系统配置
+# 🏷️ Configuração do Sistema de Etiquetas Inteligentes
 smart_tags:
   auto_generation: true
   categories:
@@ -262,10 +262,11 @@ tagging_system:
         - "completion_rate"
         - "activity_level"
       examples:
-        - "#status-planning"
+        - "#status-analysis"
+        - "#status-design"
         - "#status-development"
         - "#status-testing"
-        - "#status-production"
+        - "#status-maintenance"
 
     priority:
       prefix: "#priority-"
@@ -303,7 +304,7 @@ tagging_system:
         - "#domain-healthcare"
         - "#domain-education"
 
-# 📊 质量评分配置
+# 📊 Configuração de Pontuação de Qualidade
 quality_scoring:
   enabled: true
   real_time_calculation: true
@@ -316,10 +317,10 @@ quality_scoring:
         - "description_detail_level"
         - "metadata_completeness"
       scoring_rules:
-        excellent: 90-100  # 所有必填字段完整，描述详细
-        good: 70-89       # 大部分字段完整，描述适中
-        fair: 50-69       # 基本字段完整，描述简单
-        poor: 0-49        # 缺少关键字段或描述
+        excellent: 90-100  # Todos os campos obrigatórios preenchidos, descrição detalhada
+        good: 70-89       # Maioria dos campos preenchidos, descrição moderada
+        fair: 50-69       # Campos básicos preenchidos, descrição simples
+        poor: 0-49        # Faltam campos críticos ou descrição
 
     evidence_quality:
       weight: 0.25
@@ -328,10 +329,10 @@ quality_scoring:
         - "evidence_relevance"
         - "proof_completeness"
       scoring_rules:
-        excellent: 90-100  # 所有链接有效，证据充分
-        good: 70-89       # 大部分链接有效，证据较好
-        fair: 50-69       # 部分链接有效，证据一般
-        poor: 0-49        # 链接失效或证据不足
+        excellent: 90-100  # Todos os links válidos, evidência suficiente
+        good: 70-89       # Maioria dos links válidos, evidência boa
+        fair: 50-69       # Alguns links válidos, evidência comum
+        poor: 0-49        # Links inválidos ou evidência insuficiente
 
     timeliness:
       weight: 0.2
@@ -340,10 +341,10 @@ quality_scoring:
         - "information_freshness"
         - "response_time"
       scoring_rules:
-        excellent: 90-100  # 及时更新，信息新鲜
-        good: 70-89       # 定期更新，信息较新
-        fair: 50-69       # 偶尔更新，信息一般
-        poor: 0-49        # 很少更新，信息陈旧
+        excellent: 90-100  # Atualização oportuna, informação fresca
+        good: 70-89       # Atualização regular, informação relativamente nova
+        fair: 50-69       # Atualização ocasional, informação comum
+        poor: 0-49        # Raramente atualizado, informação obsoleta
 
     relevance:
       weight: 0.25
@@ -352,18 +353,18 @@ quality_scoring:
         - "decision_traceability"
         - "context_consistency"
       scoring_rules:
-        excellent: 90-100  # 高度相关，逻辑清晰
-        good: 70-89       # 较为相关，逻辑合理
-        fair: 50-69       # 基本相关，逻辑一般
-        poor: 0-49        # 相关性低，逻辑混乱
+        excellent: 90-100  # Altamente relevante, lógica clara
+        good: 70-89       # Relevante, lógica razoável
+        fair: 50-69       # Basicamente relevante, lógica comum
+        poor: 0-49        # Baixa relevância, lógica confusa
 
   quality_thresholds:
-    high_quality: 85      # 高质量内容阈值
-    medium_quality: 70    # 中等质量内容阈值
-    low_quality: 50       # 低质量内容阈值
-    archive_threshold: 30 # 自动归档阈值
+    high_quality: 85      # Limite para conteúdo de alta qualidade
+    medium_quality: 70    # Limite para conteúdo de qualidade média
+    low_quality: 50       # Limite para conteúdo de baixa qualidade
+    archive_threshold: 30 # Limite para arquivamento automático
 
-# 🔄 智能归档策略配置
+# 🔄 Configuração de Estratégia de Arquivamento Inteligente
 archive_strategy:
   enabled: true
   strategy_type: "adaptive"  # adaptive, fixed, manual
@@ -388,10 +389,10 @@ archive_strategy:
 
     secondary:
       - type: "quality_degradation"
-        threshold: 0.3  # 低质量内容占比超过30%
+        threshold: 0.3  # Proporção de conteúdo de baixa qualidade acima de 30%
         weight: 0.4
       - type: "activity_decline"
-        threshold: "3days"  # 3天无活动
+        threshold: "3days"  # 3 dias sem atividade
         weight: 0.3
       - type: "phase_change"
         threshold: true
@@ -434,14 +435,14 @@ archive_strategy:
         retention: "minimal"
         archive_strategy: "compress_or_discard"
 
-# 🔗 关联关系管理配置
+# 🔗 Configuração de Gestão de Relacionamentos
 relationship_management:
   enabled: true
   auto_detection: true
   
   relationship_types:
     dependency:
-      description: "任务或决策之间的依赖关系"
+      description: "Relação de dependência entre tarefas ou decisões"
       detection_keywords:
         - "depends on"
         - "requires"
@@ -450,7 +451,7 @@ relationship_management:
       weight: 0.8
 
     influence:
-      description: "决策对后续任务的影响关系"
+      description: "Relação de influência de decisões em tarefas subsequentes"
       detection_keywords:
         - "affects"
         - "impacts"
@@ -459,7 +460,7 @@ relationship_management:
       weight: 0.7
 
     similarity:
-      description: "相似问题或解决方案的关联"
+      description: "Associação entre problemas ou soluções semelhantes"
       detection_keywords:
         - "similar to"
         - "like"
@@ -468,7 +469,7 @@ relationship_management:
       weight: 0.6
 
     sequence:
-      description: "时间序列上的前后关系"
+      description: "Relação de anterioridade/posterioridade na linha do tempo"
       detection_keywords:
         - "follows"
         - "precedes"
@@ -487,7 +488,7 @@ relationship_management:
       similarity: "#45B7D1"
       sequence: "#96CEB4"
 
-# 🔔 通知和提醒配置
+# 🔔 Configuração de Notificações e Lembretes
 notifications:
   enabled: true
   
@@ -510,7 +511,7 @@ notifications:
     
     archive_suggestion:
       enabled: true
-      threshold_reached: 0.8  # 80%达到归档条件时提醒
+      threshold_reached: 0.8  # Lembrar quando 80% das condições de arquivamento forem atingidas
       frequency: "on_trigger"
 
   delivery_methods:
@@ -518,7 +519,7 @@ notifications:
     - "comment"
     - "summary_report"
 
-# 🔌 集成配置
+# 🔌 Configuração de Integrações
 integrations:
   git:
     enabled: true
@@ -541,23 +542,23 @@ integrations:
     auto_link_docs: true
     version_tracking: true
 
-# 🎨 模板自定义配置
+# 🎨 Configuração de Personalização de Templates
 template_customization:
   allow_custom_sections: true
   section_ordering: "flexible"
   required_sections:
-    - "项目元数据"
-    - "置顶信息"
-    - "决策记录"
-    - "待办事项"
-    - "已完成"
+    - "Metadados do Projeto"
+    - "Fixados"
+    - "Registro de Decisões"
+    - "Tarefas Pendentes"
+    - "Itens Concluídos"
   
   optional_sections:
-    - "项目笔记"
-    - "问题追踪"
-    - "项目统计"
-    - "关联信息"
-    - "项目配置"
+    - "Notas do Projeto"
+    - "Rastreamento de Problemas"
+    - "Estatísticas do Projeto"
+    - "Relações e Dependências"
+    - "Configuração do Projeto"
   
   custom_fields:
     enabled: true
@@ -570,7 +571,7 @@ template_customization:
       - "select"
       - "multi_select"
 
-# 📈 分析和报告配置
+# 📈 Configuração de Análise e Relatórios
 analytics:
   enabled: true
   
@@ -596,16 +597,16 @@ analytics:
     include_trends: true
     include_recommendations: true
 
-# 🔧 系统配置
+# 🔧 Configuração do Sistema
 system:
   version_compatibility:
     min_version: "2.0"
     max_version: "2.x"
   
   performance:
-    max_file_size: "3MB"  # project.context.md 最大大小
-    max_archive_size: "5MB"  # 单个归档文件最大大小
-    max_total_archive_size: "100MB"  # 所有归档文件总大小
+    max_file_size: "3MB"  # Tamanho máximo de project.context.md
+    max_archive_size: "5MB"  # Tamanho máximo de um único arquivo de arquivamento
+    max_total_archive_size: "100MB"  # Tamanho total de todos os arquivos de arquivamento
     cache_duration: "24hours"
     
   backup:
@@ -618,11 +619,11 @@ system:
     access_logging: true
     sensitive_data_masking: true
 
-# 📝 使用说明
+# 📝 Notas de Uso
 usage_notes: |
-  1. 此配置文件定义了记录员系统v2.0的所有智能化功能参数
-  2. 项目类型会根据detection_rules自动识别，也可手动指定
-  3. 质量评分会实时计算，影响归档策略和内容分类
-  4. 关联关系会自动检测，支持可视化展示
-  5. 所有配置项都可以根据项目需求进行调整
-  6. 建议在项目初期根据实际情况调整阈值和权重
+  1. Este arquivo de configuração define todos os parâmetros das funcionalidades inteligentes do sistema de registro v2.0
+  2. O tipo de projeto é identificado automaticamente com base em detection_rules, mas também pode ser especificado manualmente
+  3. A pontuação de qualidade é calculada em tempo real, afetando a estratégia de arquivamento e classificação de conteúdo
+  4. Relacionamentos são detectados automaticamente e suportam visualização
+  5. Todos os itens de configuração podem ser ajustados conforme as necessidades do projeto
+  6. Recomenda-se ajustar os limites e pesos no início do projeto de acordo com a situação real

@@ -1,11 +1,11 @@
 ---
 type: "workflow_rule"
-description: "Backend development workflow with Java/Python/Node.js - 后端开发完整工作流"
+description: "Fluxo de trabalho de desenvolvimento backend com Java/Python/Node.js"
 globs: ["**/*.py", "**/*.js", "**/*.ts", "**/*.java", "**/*.go", "**/*.rs", "**/*.php", "**/*.rb", "**/*.cs", "**/*.sql"]
 priority: 820
 alwaysApply: false
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -16,231 +16,231 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adicionado sistema de gerenciamento de versão"
+      - "Padronizada estrutura do arquivo de regra"
 ---
 
-# ⚙️ Backend Development Workflow - 后端开发工作流
+# ⚙️ Backend Development Workflow - Fluxo de Trabalho Backend
 
-专为 Java、Python、Node.js 等后端技术栈优化的完整开发工作流程。
+Fluxo de trabalho de desenvolvimento completo otimizado para pilhas técnicas de backend como Java, Python, Node.js, etc.
 
-## 🚀 Commands - 命令
+## 🚀 Commands - Comandos
 
-### 主命令
-- `/backend-dev` - 启动后端开发完整工作流
+### Comando Principal
+- `/backend-dev` - Inicia o fluxo de trabalho completo de desenvolvimento backend
 
-### 独立子命令（可单独使用）
-- `/api-design [描述]` - **API接口设计专用命令**
-  - 示例: `/api-design 用户登录接口`
-  - 功能: 设计RESTful API，生成接口文档和示例代码
+### Subcomandos Independentes (podem ser usados separadamente)
+- `/api-design [descrição]` - **Comando específico para design de interface API**
+  - Exemplo: `/api-design Interface de login de usuário`
+  - Função: Projeta APIs RESTful, gera documentação de interface e código de exemplo
   
-- `/database-design [描述]` - **数据库设计专用命令**
-  - 示例: `/database-design 电商订单表`
-  - 功能: 设计表结构，生成SQL脚本和ER图
+- `/database-design [descrição]` - **Comando específico para design de banco de dados**
+  - Exemplo: `/database-design Tabela de pedidos de e-commerce`
+  - Função: Projeta a estrutura da tabela, gera scripts SQL e diagramas ER
 
-### 其他子命令
-- `/security-check` - 安全检查
-- `/performance-test` - 性能测试
+### Outros Subcomandos
+- `/security-check` - Verificação de segurança
+- `/performance-test` - Teste de performance
 
-### 专用配置模式
-- `/设置微服务模式` - 启用微服务架构优先策略
-- `/设置单体模式` - 启用单体应用架构策略
-- `/设置性能优化模式` - 自动应用性能优化建议
+### Modos de Configuração Específicos
+- `/set-microservices-mode` - Ativa estratégia prioritária para arquitetura de microserviços
+- `/set-monolith-mode` - Ativa estratégia para arquitetura de aplicação monolítica
+- `/set-performance-mode` - Aplica automaticamente sugestões de otimização de performance
 
-### 反馈频率控制
-- `/设置详细模式` - 启用所有反馈点，完整工作流
-- `/设置标准模式` - 关键决策点反馈（默认）
-- `/设置静默模式` - 仅错误时反馈，适合熟练用户
+### Controle de Frequência de Feedback
+- `/set-verbose-mode` - Ativa todos os pontos de feedback, fluxo de trabalho completo
+- `/set-standard-mode` - Feedback em pontos de decisão críticos (padrão)
+- `/set-silent-mode` - Feedback apenas em caso de erro, ideal para usuários experientes
 
-### 工作流配置
-- `/设置严格模式` - 严格按顺序执行，不允许跳过
-- `/设置灵活模式` - 允许模式跳转和流程调整（默认）
-- `/设置快捷模式` - 简化某些步骤，提高效率
+### Configuração do Fluxo de Trabalho
+- `/set-strict-mode` - Execução estritamente sequencial, não permite pular etapas
+- `/set-flexible-mode` - Permite saltos de modo e ajustes de fluxo (padrão)
+- `/set-fast-mode` - Simplifica certas etapas para aumentar a eficiência
 
-### 质量标准配置
-- `/设置企业级标准` - 最高质量要求，完整测试
-- `/设置标准级别` - 平衡质量和效率（默认）
-- `/设置原型级别` - 快速验证，降低质量要求
+### Configuração de Padrões de Qualidade
+- `/set-enterprise-standard` - Requisitos de qualidade máxima, testes completos
+- `/set-standard-level` - Equilíbrio entre qualidade e eficiência (padrão)
+- `/set-prototype-level` - Validação rápida, requisitos de qualidade reduzidos
 
-## 🧠 前置步骤：Context7 知识预载（修复/新项目前置）
-- 触发时机：开始 /backend-dev 前，涉及 Bug 修复或新后端项目/功能开发
-- 执行：
-  - 使用 Context7 在 src、docs、tests、config、README.*、architecture、api 目录检索关键材料（架构设计、数据模型、接口契约、性能/安全约束、历史决策）
-  - 质量阈值：至少 5 个高相关片段或覆盖 3 类关键材料；评分 ≥ 0.65；超时 60s
-  - 回退：Context7 → 代码检索（search_codebase/search_by_regex）→ 文件系统读取
-  - 记录与确认：将“知识预载摘要”写入 project.context.md 的 Pinned，并通过增强反馈机制确认后继续
-- 跳过条件：纯文档/注释微调、无逻辑改动的小变更
+## 🧠 Passo Anterior: Pré-carregamento de Conhecimento Context7 (Pré-requisito para Correção/Novo Projeto)
+- Momento de Disparo: Antes de iniciar `/backend-dev`, envolvendo correção de Bug ou novo projeto/funcionalidade backend.
+- Execução:
+  - Usar Context7 para recuperar materiais críticos nos diretórios `src`, `docs`, `tests`, `config`, `README.*`, `architecture`, `api` (design de arquitetura, modelos de dados, contratos de interface, restrições de performance/segurança, decisões históricas).
+  - Limite de Qualidade: Pelo menos 5 fragmentos altamente relevantes ou cobertura de 3 tipos de materiais críticos; pontuação ≥ 0.65; tempo limite 60s.
+  - Alternativa (Fallback): Context7 → Busca de código (search_codebase/search_by_regex) → Leitura do sistema de arquivos.
+  - Registro e Confirmação: Escrever o "Resumo do Pré-carregamento de Conhecimento" na seção Pinned do `project.context.md` e continuar após confirmação via mecanismo de feedback aprimorado.
+- Condição de Pulo: Pequenos ajustes de documentos/comentários, alterações menores sem mudança lógica.
 
-## 📋 Process - 开发流程
+## 📋 Process - Fluxo de Desenvolvimento
 
-### 1. 🔍 需求分析 (Requirements Analysis)
-- 分析业务需求和技术约束
-- 确定 API 规范和数据模型
-- 评估性能和扩展性要求
-- **转换条件**：需求明确，技术方案可行
+### 1. 🔍 Análise de Requisitos (Requirements Analysis)
+- Analisar requisitos de negócio e restrições técnicas
+- Determinar especificações de API e modelos de dados
+- Avaliar requisitos de performance e escalabilidade
+- **Condição de Transição**: Requisitos claros, solução técnica viável
 
-### 2. 🏗️ 架构设计 (Architecture Design)
-- 设计系统架构和模块划分
-- 选择技术栈和中间件
-- 规划数据库设计和缓存策略
-- **转换条件**：架构设计完成，技术选型确定
+### 2. 🏗️ Design de Arquitetura (Architecture Design)
+- Projetar arquitetura do sistema e divisão de módulos
+- Escolher pilha técnica e middlewares
+- Planejar design de banco de dados e estratégia de cache
+- **Condição de Transição**: Design de arquitetura concluído, seleção técnica definida
 
-### 3. ⚡ API开发 (API Development)
-- 实现 RESTful API 或 GraphQL 接口
-- 集成认证授权机制
-- 实现业务逻辑和数据处理
-- **转换条件**：API功能完成，接口测试通过
+### 3. ⚡ Desenvolvimento de API (API Development)
+- Implementar APIs RESTful ou interfaces GraphQL
+- Integrar mecanismos de autenticação e autorização
+- Implementar lógica de negócio e processamento de dados
+- **Condição de Transição**: Funcionalidade de API concluída, testes de interface aprovados
 
-### 4. 🗄️ 数据建模 (Data Modeling)
-- 设计数据库表结构和关系
-- 实现数据访问层和 ORM
-- 优化查询性能和索引
-- **转换条件**：数据模型稳定，性能达标
+### 4. 🗄️ Modelagem de Dados (Data Modeling)
+- Projetar estrutura e relacionamentos de tabelas do banco de dados
+- Implementar camada de acesso a dados e ORM
+- Otimizar performance de consultas e índices
+- **Condição de Transição**: Modelo de dados estável, performance atingida
 
-### 5. 🧪 测试验证 (Testing)
-- 单元测试和集成测试
-- API 接口测试和压力测试
-- 安全测试和漏洞扫描
-- **转换条件**：测试通过，质量达标
+### 5. 🧪 Validação de Testes (Testing)
+- Testes unitários e de integração
+- Testes de interface de API e testes de estresse
+- Testes de segurança e varredura de vulnerabilidades
+- **Condição de Transição**: Testes aprovados, qualidade atingida
 
-### 6. 🚀 部署运维 (Deploy & Operations)
-- 容器化和 CI/CD 配置
-- 监控和日志系统
-- 性能调优和故障处理
-- **转换条件**：部署成功，运行稳定
+### 6. 🚀 Implantação e Operações (Deploy & Operations)
+- Configuração de conteinerização e CI/CD
+- Sistemas de monitoramento e logs
+- Ajuste de performance e tratamento de falhas
+- **Condição de Transição**: Implantação bem-sucedida, execução estável
 
-## 🛠️ Technology Stack - 技术栈
+## 🛠️ Technology Stack - Pilha Tecnológica
 
-### Languages & Frameworks - 语言和框架
+### Languages & Frameworks - Linguagens e Frameworks
 - **Java** - Spring Boot, Spring Security, JPA
 - **Python** - FastAPI, Django, SQLAlchemy
 - **Node.js** - Express, Koa, NestJS
 - **Go** - Gin, Echo, GORM
 - **Rust** - Actix-web, Rocket, Diesel
 
-### Databases - 数据库
-- **关系型** - PostgreSQL, MySQL
+### Databases - Bancos de Dados
+- **Relacional** - PostgreSQL, MySQL
 - **NoSQL** - MongoDB, Redis
-- **搜索** - Elasticsearch
-- **消息队列** - RabbitMQ, Kafka
+- **Busca** - Elasticsearch
+- **Filas de Mensagens** - RabbitMQ, Kafka
 
-### DevOps & Tools - 运维工具
-- **容器化** - Docker, Kubernetes
+### DevOps & Tools - Ferramentas de DevOps
+- **Conteinerização** - Docker, Kubernetes
 - **CI/CD** - GitHub Actions, Jenkins
-- **监控** - Prometheus, Grafana
-- **日志** - ELK Stack
+- **Monitoramento** - Prometheus, Grafana
+- **Logs** - ELK Stack
 
-## ✅ Best Practices - 最佳实践
+## ✅ Best Practices - Melhores Práticas
 
-### API Design - API设计
-- RESTful 设计原则
-- 统一的响应格式
-- 完善的错误处理
-- API 版本管理
+### API Design - Design de API
+- Princípios de design RESTful
+- Formato de resposta unificado
+- Tratamento de erros completo
+- Gerenciamento de versão de API
 
-### Security - 安全
-- 输入验证和参数化查询
-- 认证和授权机制
-- HTTPS 和数据加密
-- 安全头和 CORS 配置
+### Security - Segurança
+- Validação de entrada e consultas parametrizadas
+- Mecanismos de autenticação e autorização
+- HTTPS e criptografia de dados
+- Cabeçalhos de segurança e configuração de CORS
 
-### Performance - 性能
-- 数据库查询优化
-- 缓存策略实施
-- 异步处理
-- 连接池配置
+### Performance - Performance
+- Otimização de consultas ao banco de dados
+- Implementação de estratégias de cache
+- Processamento assíncrono
+- Configuração de pool de conexões
 
-### Code Quality - 代码质量
-- 分层架构设计
-- 单元测试覆盖
-- 代码规范遵循
-- 文档完整性
+### Code Quality - Qualidade de Código
+- Design de arquitetura em camadas
+- Cobertura de testes unitários
+- Adesão às normas de código
+- Integridade da documentação
 
-## 🔧 Development Commands - 开发命令
+## 🔧 Development Commands - Comandos de Desenvolvimento
 
 ### Java (Spring Boot)
 ```bash
-# 项目创建
+# Criação do projeto
 spring init --dependencies=web,jpa,security my-project
 
-# 运行
+# Execução
 ./mvnw spring-boot:run
 
-# 测试
+# Teste
 ./mvnw test
 
-# 构建
+# Construção (Build)
 ./mvnw clean package
 ```
 
 ### Python (FastAPI)
 ```bash
-# 项目创建
+# Criação do projeto
 pip install fastapi uvicorn
 
-# 运行
+# Execução
 uvicorn main:app --reload
 
-# 测试
+# Teste
 pytest
 
-# 依赖管理
+# Gerenciamento de dependências
 pip freeze > requirements.txt
 ```
 
 ### Node.js (Express)
 ```bash
-# 项目创建
+# Criação do projeto
 npm init -y
 npm install express
 
-# 运行
+# Execução
 npm start
 
-# 测试
+# Teste
 npm test
 
-# 构建
+# Construção (Build)
 npm run build
 ```
 
-## 📋 Checklist - 检查清单
+## 📋 Checklist - Lista de Verificação
 
-### 架构设计
-- [ ] 系统架构图完成
-- [ ] 技术栈选择合理
-- [ ] 数据库设计优化
-- [ ] 安全方案确定
+### Arquitetura e Design
+- [ ] Diagrama de arquitetura do sistema concluído
+- [ ] Escolha da pilha técnica razoável
+- [ ] Design do banco de dados otimizado
+- [ ] Plano de segurança definido
 
-### API开发
-- [ ] 接口设计规范
-- [ ] 认证授权实现
-- [ ] 错误处理完善
-- [ ] 接口文档完整
+### Desenvolvimento de API
+- [ ] Normas de design de interface seguidas
+- [ ] Implementação de autenticação e autorização
+- [ ] Tratamento de erros completo
+- [ ] Documentação de interface íntegra
 
-### 数据层
-- [ ] 数据模型设计
-- [ ] 查询性能优化
-- [ ] 数据迁移脚本
-- [ ] 备份策略制定
+### Camada de Dados
+- [ ] Design do modelo de dados concluído
+- [ ] Otimização de performance de consulta
+- [ ] Scripts de migração de dados preparados
+- [ ] Estratégia de backup definida
 
-### 测试部署
-- [ ] 单元测试覆盖
-- [ ] 集成测试通过
-- [ ] 性能测试达标
-- [ ] 部署流程验证
+### Testes e Implantação
+- [ ] Cobertura de testes unitários atingida
+- [ ] Testes de integração aprovados
+- [ ] Performance de testes de estresse atingida
+- [ ] Processo de implantação verificado
 
-## 🎯 Mode Switching - 模式切换
+## 🎯 Mode Switching - Alternância de Modo
 
-根据当前任务自动或手动切换到对应模式：
+Alterna automática ou manualmente para o modo correspondente conforme a tarefa atual:
 
-- **架构设计模式** - `/architecture`
-- **API开发模式** - `/api-dev`
-- **数据建模模式** - `/data-model`
-- **安全开发模式** - `/security`
-- **运维部署模式** - `/devops`
+- **Modo de Design de Arquitetura** - `/architecture`
+- **Modo de Desenvolvimento de API** - `/api-dev`
+- **Modo de Modelagem de Dados** - `/data-model`
+- **Modo de Desenvolvimento Seguro** - `/security`
+- **Modo de DevOps e Implantação** - `/devops`
 
-### 专用配置模式行为
-- **微服务模式** - 激活后优先推荐分布式架构、API网关、服务发现
-- **单体模式** - 激活后推荐传统分层架构、简化部署方案
-- **性能优化模式** - 激活后自动建议缓存、数据库优化、异步处理
+### Comportamento de Modos de Configuração Específicos
+- **Modo Microserviços** - Quando ativado, prioriza recomendações de arquitetura distribuída, API Gateway e descoberta de serviços.
+- **Modo Monolítico** - Quando ativado, recomenda arquitetura em camadas tradicional e soluções de implantação simplificadas.
+- **Modo Otimização de Performance** - Quando ativado, sugere automaticamente cache, otimização de banco de dados e processamento assíncrono.

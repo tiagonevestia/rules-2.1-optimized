@@ -1,123 +1,123 @@
-# 📋 ${PROJECT_NAME} - 项目上下文记录 (Project Context Record)
+# 📋 ${PROJECT_NAME} - Registro de Contexto do Projeto (Project Context Record)
 
-## 🔍 项目元数据 (Project Metadata) [PROTECTED]
-- **项目类型 (Project Type)**: ${PROJECT_TYPE} (agile/waterfall/research/maintenance/hybrid - 敏捷/瀑布/研究/维护/混合)
-- **技术栈 (Tech Stack)**: ${TECH_STACK}
-- **团队规模 (Team Size)**: ${TEAM_SIZE} (solo/small/medium/large - 独立/小型/中型/大型)
-- **预估工期 (Estimated Duration)**: ${DURATION} (sprint/short/medium/long - 冲刺/短期/中期/长期)
-- **复杂度评分 (Complexity Score)**: ${COMPLEXITY_SCORE}/10
-- **模板版本 (Template Version)**: enhanced-v1.0
-- **创建者 (Created By)**: ${USER}
-- **创建时间 (Created At)**: ${TIMESTAMP}
-- **最后修改 (Last Modified)**: ${TIMESTAMP}
-- **项目阶段 (Project Phase)**: ${PROJECT_PHASE} (planning/development/testing/deployment/maintenance - 规划/开发/测试/部署/维护)
+## 🔍 Metadados do Projeto (Project Metadata) [PROTECTED]
+- **Tipo de Projeto (Project Type)**: ${PROJECT_TYPE} (agile/waterfall/research/maintenance/hybrid - ágil/cascata/pesquisa/manutenção/híbrido)
+- **Stack Tecnológica (Tech Stack)**: ${TECH_STACK}
+- **Tamanho da Equipe (Team Size)**: ${TEAM_SIZE} (solo/small/medium/large - individual/pequena/média/grande)
+- **Duração Estimada (Estimated Duration)**: ${DURATION} (sprint/short/medium/long - sprint/curto prazo/médio prazo/longo prazo)
+- **Pontuação de Complexidade (Complexity Score)**: ${COMPLEXITY_SCORE}/10
+- **Versão do Template (Template Version)**: enhanced-v1.0
+- **Criado por (Created By)**: ${USER}
+- **Data de Criação (Created At)**: ${TIMESTAMP}
+- **Última Modificação (Last Modified)**: ${TIMESTAMP}
+- **Fase do Projeto (Project Phase)**: ${PROJECT_PHASE} (analysis/design/development/testing/maintenance - análise/design/desenvolvimento/teste/manutenção)
 
-## 🎯 快速导航 (Quick Navigation) [PROTECTED]
-- [📌 置顶 (Pinned)](#-置顶信息-pinned-protected) | [🎯 决策 (Decisions)](#-决策记录-decisions-protected) | [📝 待办 (TODO)](#📝-待办事项-todo-protected)
-- [✅ 已完成 (Done)](#-已完成事项-done-protected) | [📋 笔记 (Notes)](#-项目笔记-notes-protected) | [🔧 问题 (Problems)](#-问题跟踪-problems-protected)
-- [📊 统计 (Statistics)](#-项目统计-project-statistics-protected) | [🔗 关联 (Relationships)](#-关联关系-relationships-protected)
-- [🏷️ 标签 (Tags)](#-智能标签-smart-tags-protected) | [⚙️ 配置 (Config)](#-项目配置-project-configuration-protected)
+## 🎯 Navegação Rápida (Quick Navigation) [PROTECTED]
+- [📌 Fixados (Pinned)](#-fixados-pinned-protected) | [🎯 Decisões (Decisions)](#-registro-de-decisões-decisions-protected) | [📝 Tarefas (TODO)](#📝-tarefas-pendentes-todo-protected)
+- [✅ Concluído (Done)](#-itens-concluídos-done-protected) | [📋 Notas (Notes)](#-notas-do-projeto-notes-protected) | [🔧 Problemas (Problems)](#-rastreamento-de-problemas-problems-protected)
+- [📊 Estatísticas (Statistics)](#-estatísticas-do-projeto-project-statistics-protected) | [🔗 Relações (Relationships)](#-relações-e-dependências-relationships-protected)
+- [🏷️ Etiquetas (Tags)](#-etiquetas-inteligentes-smart-tags-protected) | [⚙️ Configuração (Config)](#-configuração-do-projeto-project-configuration-protected)
 
-## 📌 置顶信息 (Pinned) [PROTECTED]
-<!-- 应始终可见的关键信息 -->
-<!-- 用于: 关键决策、重要截止日期、关键联系人、重要链接 -->
+## 📌 Fixados (Pinned) [PROTECTED]
+<!-- Informações críticas que devem estar sempre visíveis -->
+<!-- Exemplos: Decisões chave, prazos importantes, contatos principais, links vitais -->
 
-## 🎯 决策记录 (Decisions) [PROTECTED]
-<!-- 重要的项目决策及影响分析 -->
-<!-- 格式: [日期] 决策: 描述 | 影响: High/Medium/Low | 利益相关者: 列表 -->
+## 🎯 Registro de Decisões (Decisions) [PROTECTED]
+<!-- Decisões importantes do projeto e análise de impacto -->
+<!-- Formato: [Data] Decisão: Descrição | Impacto: High/Medium/Low | Partes Interessadas: Lista -->
 
-## 📝 待办事项 (TODO) [PROTECTED]
-### P0 - 关键且紧急 (Critical & Urgent)
-<!-- 阻塞问题、生产问题、安全漏洞 -->
+## 📝 Tarefas Pendentes (TODO) [PROTECTED]
+### P0 - Crítico e Urgente (Critical & Urgent)
+<!-- Problemas bloqueadores, falhas em produção, vulnerabilidades de segurança -->
 
-### P1 - 重要但不紧急 (Important & Not Urgent)
-<!-- 战略任务、架构决策、主要功能 -->
+### P1 - Importante, mas Não Urgente (Important & Not Urgent)
+<!-- Tarefas estratégicas, decisões de arquitetura, funcionalidades principais -->
 
-### P2 - 紧急但不重要 (Urgent & Not Important)
-<!-- 中断事务、部分会议、部分邮件 -->
+### P2 - Urgente, mas Não Importante (Urgent & Not Important)
+<!-- Interrupções, algumas reuniões, alguns e-mails -->
 
-### P3 - 不紧急且不重要 (Not Urgent & Not Important)
-<!-- 锦上添花的功能、文档改进、重构 -->
+### P3 - Não Urgente e Não Importante (Not Urgent & Not Important)
+<!-- Funcionalidades desejáveis, melhorias de documentação, refatoração -->
 
-## ✅ 已完成事项 (Done) [PROTECTED]
-<!-- 已完成任务及成就跟踪 -->
-<!-- 格式: [日期] 任务: 描述 | 影响: 描述 | 经验教训: 关键学习 -->
+## ✅ Itens Concluídos (Done) [PROTECTED]
+<!-- Tarefas finalizadas e rastreamento de conquistas -->
+<!-- Formato: [Data] Tarefa: Descrição | Impacto: Descrição | Lições Aprendidas: Aprendizado Chave -->
 
-## 📋 项目笔记 (Notes) [PROTECTED]
-<!-- 项目笔记及智能分类 -->
-<!-- 使用标签: #technical #meeting #idea #research #bug #feature -->
+## 📋 Notas do Projeto (Notes) [PROTECTED]
+<!-- Notas do projeto e classificação inteligente -->
+<!-- Use etiquetas: #technical #meeting #idea #research #bug #feature -->
 
-## 🔧 问题跟踪 (Problems) [PROTECTED]
-<!-- 问题跟踪及根本原因分析 -->
-<!-- 格式: [日期] 问题: 描述 | 根本原因: 分析 | 解决方案: 方法 | 状态: Open/Resolved -->
+## 🔧 Rastreamento de Problemas (Problems) [PROTECTED]
+<!-- Rastreamento de problemas e análise de causa raiz -->
+<!-- Formato: [Data] Problema: Descrição | Causa Raiz: Análise | Solução: Método | Status: Open/Resolved -->
 
-### 🏷️ 智能标签 (Smart Tags) [PROTECTED]
-- **主要标签 (Primary Tags)**: ${PRIMARY_TAGS}
-- **次要标签 (Secondary Tags)**: ${SECONDARY_TAGS}
-- **技术领域 (Tech Domains)**: ${TECH_DOMAINS}
-- **业务领域 (Business Areas)**: ${BUSINESS_AREAS}
-- **质量属性 (Quality Attributes)**: ${QUALITY_ATTRIBUTES}
+### 🏷️ Etiquetas Inteligentes (Smart Tags) [PROTECTED]
+- **Etiquetas Primárias (Primary Tags)**: ${PRIMARY_TAGS}
+- **Etiquetas Secundárias (Secondary Tags)**: ${SECONDARY_TAGS}
+- **Domínios Técnicos (Tech Domains)**: ${TECH_DOMAINS}
+- **Áreas de Negócio (Business Areas)**: ${BUSINESS_AREAS}
+- **Atributos de Qualidade (Quality Attributes)**: ${QUALITY_ATTRIBUTES}
 
-## 📊 项目统计 (Project Statistics) [PROTECTED]
-### 基本指标 (Basic Metrics)
-- **总记录数 (Total Records)**: 0
-- **活跃天数 (Active Days)**: 0
-- **完成率 (Completion Rate)**: 0%
-- **问题解决率 (Problem Resolution Rate)**: 0%
-- **最后更新 (Last Update)**: ${TIMESTAMP}
+## 📊 Estatísticas do Projeto (Project Statistics) [PROTECTED]
+### Métricas Básicas (Basic Metrics)
+- **Total de Registros (Total Records)**: 0
+- **Dias Ativos (Active Days)**: 0
+- **Taxa de Conclusão (Completion Rate)**: 0%
+- **Taxa de Resolução de Problemas (Problem Resolution Rate)**: 0%
+- **Última Atualização (Last Update)**: ${TIMESTAMP}
 
-### 高级分析 (Advanced Analytics)
-- **活跃度评分 (Activity Score)**: 0/10 (基于日常贡献)
-- **质量评分 (Quality Score)**: 0/10 (基于内容丰富度)
-- **速度趋势 (Velocity Trend)**: Stable (基于完成模式)
-- **风险等级 (Risk Level)**: Low (基于问题频率)
-- **知识密度 (Knowledge Density)**: 0/10 (基于决策/笔记比率)
+### Análise Avançada (Advanced Analytics)
+- **Pontuação de Atividade (Activity Score)**: 0/10 (baseado em contribuições diárias)
+- **Pontuação de Qualidade (Quality Score)**: 0/10 (baseado na riqueza do conteúdo)
+- **Tendência de Velocidade (Velocity Trend)**: Stable (baseado em padrões de conclusão)
+- **Nível de Risco (Risk Level)**: Low (baseado na frequência de problemas)
+- **Densidade de Conhecimento (Knowledge Density)**: 0/10 (baseado na proporção decisões/notas)
 
-### 进度跟踪 (Progress Tracking)
-- **P0 任务**: 0 待处理, 0 已完成
-- **P1 任务**: 0 待处理, 0 已完成
-- **P2 任务**: 0 待处理, 0 已完成
-- **P3 任务**: 0 待处理, 0 已完成
-- **已做决策 (Decisions Made)**: 0
-- **已解决问题 (Problems Solved)**: 0
+### Rastreamento de Progresso (Progress Tracking)
+- **Tarefas P0**: 0 pendentes, 0 concluídas
+- **Tarefas P1**: 0 pendentes, 0 concluídas
+- **Tarefas P2**: 0 pendentes, 0 concluídas
+- **Tarefas P3**: 0 pendentes, 0 concluídas
+- **Decisões Tomadas (Decisions Made)**: 0
+- **Problemas Resolvidos (Problems Solved)**: 0
 
-## 🔗 关联关系 (Relationships) [PROTECTED]
-- **相关项目 (Related Projects)**: None
-- **依赖关系 (Dependencies)**: None
-- **归档文件 (Archive Files)**: None
-- **外部引用 (External References)**: None
-- **团队成员 (Team Members)**: ${TEAM_MEMBERS}
-- **利益相关者 (Stakeholders)**: ${STAKEHOLDERS}
+## 🔗 Relações e Dependências (Relationships) [PROTECTED]
+- **Projetos Relacionados (Related Projects)**: None
+- **Dependências (Dependencies)**: None
+- **Arquivos de Arquivamento (Archive Files)**: None
+- **Referências Externas (External References)**: None
+- **Membros da Equipe (Team Members)**: ${TEAM_MEMBERS}
+- **Partes Interessadas (Stakeholders)**: ${STAKEHOLDERS}
 
-## ⚙️ 项目配置 (Project Configuration) [PROTECTED]
-### 归档设置 (Archive Settings)
-- **自动归档阈值 (Auto Archive Threshold)**: 2.90MB~3MB (文件大小区间触发归档)
-- **归档触发器 (Archive Trigger)**: size/manual/milestone (大小/手动/里程碑)
-- **当前归档文件 (Current Archive File)**: ${CURRENT_ARCHIVE_FILE}
-- **归档文件命名规则 (Archive File Naming)**: context.archive0.md, context.archive1.md, context.archive2.md...
-- **保护记忆机制 (Memory Protection)**: 启用 (防止内容截断)
-- **质量阈值 (Quality Threshold)**: ${QUALITY_THRESHOLD}/10
-- **备份频率 (Backup Frequency)**: ${BACKUP_FREQUENCY}
+## ⚙️ Configuração do Projeto (Project Configuration) [PROTECTED]
+### Configurações de Arquivamento (Archive Settings)
+- **Limite de Arquivamento Automático (Auto Archive Threshold)**: 2.90MB~3MB (gatilho por tamanho de arquivo)
+- **Gatilho de Arquivamento (Archive Trigger)**: size/manual/milestone (tamanho/manual/marco)
+- **Arquivo de Arquivamento Atual (Current Archive File)**: ${CURRENT_ARCHIVE_FILE}
+- **Regra de Nomenclatura (Archive File Naming)**: context.archive0.md, context.archive1.md, context.archive2.md...
+- **Mecanismo de Proteção de Memória (Memory Protection)**: Ativado (previne truncamento de conteúdo)
+- **Limite de Qualidade (Quality Threshold)**: ${QUALITY_THRESHOLD}/10
+- **Frequência de Backup (Backup Frequency)**: ${BACKUP_FREQUENCY}
 
-### 通知设置 (Notification Settings)
-- **P0任务警报 (Alert on P0 Tasks)**: ${P0_ALERTS} (enabled/disabled - 启用/禁用)
-- **每日摘要 (Daily Summary)**: ${DAILY_SUMMARY} (enabled/disabled - 启用/禁用)
-- **周报 (Weekly Report)**: ${WEEKLY_REPORT} (enabled/disabled - 启用/禁用)
-- **里程碑通知 (Milestone Notifications)**: ${MILESTONE_ALERTS} (enabled/disabled - 启用/禁用)
+### Configurações de Notificação (Notification Settings)
+- **Alertas de Tarefas P0 (Alert on P0 Tasks)**: ${P0_ALERTS} (enabled/disabled - ativado/desativado)
+- **Resumo Diário (Daily Summary)**: ${DAILY_SUMMARY} (enabled/disabled - ativado/desativado)
+- **Relatório Semanal (Weekly Report)**: ${WEEKLY_REPORT} (enabled/disabled - ativado/desativado)
+- **Notificações de Marcos (Milestone Notifications)**: ${MILESTONE_ALERTS} (enabled/disabled - ativado/desativado)
 
-### 集成设置 (Integration Settings)
-- **版本控制 (Version Control)**: ${VCS_INTEGRATION} (git/svn/none)
-- **问题追踪 (Issue Tracker)**: ${ISSUE_TRACKER} (jira/github/none)
-- **沟通工具 (Communication)**: ${COMM_TOOL} (slack/teams/none)
-- **文档工具 (Documentation)**: ${DOC_TOOL} (confluence/notion/none)
+### Configurações de Integração (Integration Settings)
+- **Controle de Versão (Version Control)**: ${VCS_INTEGRATION} (git/svn/none)
+- **Rastreador de Problemas (Issue Tracker)**: ${ISSUE_TRACKER} (jira/github/none)
+- **Ferramenta de Comunicação (Communication)**: ${COMM_TOOL} (slack/teams/none)
+- **Ferramenta de Documentação (Documentation)**: ${DOC_TOOL} (confluence/notion/none)
 
-## 🔄 系统信息 (System Information) [PROTECTED]
-- **模板源 (Template Source)**: project-init-template.md
-- **模板版本 (Template Version)**: enhanced-v1.0
-- **兼容性 (Compatibility)**: context-recorder-system v2.1+
-- **模板最后更新 (Last Template Update)**: ${TEMPLATE_UPDATE_DATE}
-- **自动生成 (Auto-generated)**: ${TIMESTAMP}
-- **验证状态 (Validation Status)**: ✅ Valid
+## 🔄 Informações do Sistema (System Information) [PROTECTED]
+- **Fonte do Template (Template Source)**: project-init-template.md
+- **Versão do Template (Template Version)**: enhanced-v1.0
+- **Compatibilidade (Compatibility)**: context-recorder-system v2.1+
+- **Última Atualização do Template (Last Template Update)**: ${TEMPLATE_UPDATE_DATE}
+- **Gerado Automaticamente (Auto-generated)**: ${TIMESTAMP}
+- **Status de Validação (Validation Status)**: ✅ Válido
 
 ---
-*此文件由上下文记录员系统自动管理。对[PROTECTED]部分的手动编辑可能会被覆盖。*
+*Este arquivo é gerenciado automaticamente pelo sistema Context Recorder. Edições manuais nas seções [PROTECTED] podem ser sobrescritas.*

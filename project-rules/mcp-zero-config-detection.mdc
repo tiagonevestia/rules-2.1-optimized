@@ -1,11 +1,11 @@
 ---
 type: "always_apply"
-description: "MCP零配置检测和提醒策略 - 检测用户是否缺少MCP配置并主动提醒引导"
+description: "Estratégia de detecção e lembrete de configuração zero MCP - Detecta se o usuário não possui configuração MCP e lembra e orienta proativamente"
 globs: ["**/*"]
 priority: 1050
 alwaysApply: true
 
-# Version Management
+# Gerenciamento de Versão
 version: "2.6.0"
 last_updated: "2025-10-18"
 author: "system"
@@ -16,288 +16,288 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-18"
     changes:
-      - "P1-3: 实现多级缓存机制(L1/L2/L3)"
-      - "添加智能失效机制(mtime+hash监控)"
-      - "新增缓存元数据v2.0结构"
+      - "P1-3: Implementação de mecanismo de cache multinível (L1/L2/L3)"
+      - "Adição de mecanismo de invalidação inteligente (monitoramento mtime+hash)"
+      - "Nova estrutura de metadados de cache v2.0"
 ---
 
-# 🔍 MCP零配置检测和提醒策略
+# 🔍 Estratégia de Detecção e Lembrete de Configuração Zero MCP
 
-> **主动关怀**: 检测用户MCP配置状态，在缺少配置时主动提醒和引导
+> **Cuidado Proativo**: Detecta o status da configuração MCP do usuário e lembra e orienta proativamente quando a configuração está ausente.
 
-## 🎯 检测触发条件
+## 🎯 Condições de Disparo de Detecção
 
-### 自动检测时机
+### Momento de Detecção Automática
 ```yaml
-触发场景:
-  任务开始时: 每次接收用户任务时自动检测
-  文件操作时: 需要文件系统操作时检测
-  代码分析时: 需要代码检索时检测
-  项目管理时: 涉及项目记忆时检测
-  GitHub操作时: 需要Git协作时检测
-  跳过与复用条件:
-    系统级启动: 在“启动超级大脑系统”等系统激活阶段不主动触发零配置检测，由系统激活流程统一协调
-    最近检测复用: 若最近3600秒内已有检测结果或存在"检测响应"/"MCP平台报告"，则复用结果并跳过重复检测
-    用户覆盖: 若用户明确要求“重新检测”，则执行检测并更新结果缓存
+Cenários de Disparo:
+  Ao Iniciar Tarefa: Detecta automaticamente cada vez que uma tarefa do usuário é recebida
+  Ao Operar Arquivos: Detecta quando operações do sistema de arquivos são necessárias
+  Ao Analisar Código: Detecta quando a recuperação de código é necessária
+  Ao Gerenciar Projeto: Detecta quando envolve memória do projeto
+  Ao Operar GitHub: Detecta quando a colaboração Git é necessária
+  Condições de Pulo e Reutilização:
+    Inicialização do Sistema: Não aciona proativamente a detecção de configuração zero durante a fase de ativação do sistema como "Iniciar Sistema Super Brain", coordenado unificadamente pelo fluxo de ativação do sistema
+    Reutilização Recente: Se houver um resultado de detecção ou "Resposta de Detecção"/"Relatório de Plataforma MCP" nos últimos 3600 segundos, reutiliza o resultado e pula a detecção repetida
+    Substituição do Usuário: Se o usuário solicitar explicitamente "Redetectar", executa a detecção e atualiza o cache de resultados
 ```
 
-### 缓存复用
+### Reutilização de Cache
 ```yaml
-缓存策略:
-  缓存文件位置: 项目根目录/.cache/mcp-status-cache.json
-  缓存时间: 默认3600秒（1小时）
-  记录内容: 检测时间戳、检测来源、结果摘要
-  记录项:
-    - 最近检测时间戳
-    - 检测来源（mcp-unified-management / zero-config / 其他）
-    - 检测结果摘要
-  一句话总结:
-    - 默认1小时内复用上一次检测结果；超过1小时或你说"重新检测"会重跑；也可以执行 -Action clearCache 手动清空缓存。
-  复用策略:
-    - 在缓存有效期（≤3600秒）内直接复用检测结果
-    - 如 project.context.md 或会话上下文存在“MCP平台报告/检测响应”，优先读取并复用
-    - 用户显式“重新检测”时刷新缓存并重新执行检测
-  注意:
-    - 缓存仅用于避免短时重复扫描；长期变更需强制检测
+Estratégia de Cache:
+  Local do Arquivo de Cache: Raiz do projeto/.cache/mcp-status-cache.json
+  Tempo de Cache: Padrão 3600 segundos (1 hora)
+  Conteúdo Registrado: Timestamp de detecção, origem da detecção, resumo do resultado
+  Itens de Registro:
+    - Timestamp da última detecção
+    - Origem da detecção (mcp-unified-management / zero-config / outros)
+    - Resumo do resultado da detecção
+  Resumo em uma frase:
+    - Reutiliza o último resultado de detecção dentro de 1 hora por padrão; executa novamente após 1 hora ou se você disser "Redetectar"; também pode executar -Action clearCache para limpar o cache manualmente.
+  Estratégia de Reutilização:
+    - Reutiliza diretamente o resultado da detecção dentro da validade do cache (≤3600 segundos)
+    - Se "Relatório de Plataforma MCP/Resposta de Detecção" existir em project.context.md ou no contexto da sessão, lê e reutiliza preferencialmente
+    - Atualiza o cache e reexecuta a detecção quando o usuário solicita explicitamente "Redetectar"
+  Nota:
+    - O cache é usado apenas para evitar varreduras repetidas em curto prazo; alterações de longo prazo requerem detecção forçada
 ```
 
-### 检测逻辑
+### Lógica de Detecção
 ```yaml
-检测步骤:
-  1. 智能脚本检测:
-     - 默认路径（install-ultra.bat生成）：mcp-tools/mcp-cross-platform-sync.ps1
-     - 兼容路径（新结构）：mcp-scripts/mcp-cross-platform-sync.ps1
-     - 如果脚本存在，自动执行获取详细配置信息
-     - 调用参数: 默认 -Action detect -CacheTTLSeconds 3600；用户明确"重新检测"时添加 -Force
-     - 清理缓存: 支持 -Action clearCache 手动清理检测缓存文件（用于极端或调试场景）
-     - 解析脚本输出，获得完整的跨平台MCP状态
+Passos de Detecção:
+  1. Detecção por Script Inteligente:
+     - Caminho padrão (gerado por install-ultra.bat): mcp-tools/mcp-cross-platform-sync.ps1
+     - Caminho compatível (nova estrutura): mcp-scripts/mcp-cross-platform-sync.ps1
+     - Se o script existir, executa automaticamente para obter informações detalhadas de configuração
+     - Parâmetros de chamada: Padrão -Action detect -CacheTTLSeconds 3600; adiciona -Force quando o usuário solicita explicitamente "Redetectar"
+     - Limpeza de cache: Suporta -Action clearCache para limpar manualmente o arquivo de cache de detecção (para cenários extremos ou de depuração)
+     - Analisa a saída do script para obter o status completo do MCP multiplataforma
   
-  2. 基础路径扫描:
-     # 主流AI编辑器
+  2. Varredura de Caminhos Básicos:
+     # Editores de IA Mainstream
      - %USERPROFILE%\.claude\mcp_settings.json
      - %USERPROFILE%\AppData\Roaming\Trae\User\mcp.json
      - %USERPROFILE%\AppData\Roaming\Trae CN\User\mcp.json
      - %USERPROFILE%\AppData\Roaming\Cursor\User\globalStorage\cursor.mcp\mcp_settings.json
      
-     # 2024-2025年热门AI工具
+     # Ferramentas de IA Populares 2024-2025
      - %USERPROFILE%\AppData\Roaming\Windsurf\User\mcp.json
      - %USERPROFILE%\.replit\mcp_config.json
      - %USERPROFILE%\AppData\Roaming\Code\User\globalStorage\sourcegraph.cody-ai\mcp_settings.json
      - %USERPROFILE%\.continue\mcpServers\mcp.json
      
-     # IDE集成AI助手
+     # Assistentes de IA Integrados em IDE
      - %USERPROFILE%\AppData\Roaming\Code\User\mcp.json
      - %USERPROFILE%\.jetbrains\mcp_config.json
      - %USERPROFILE%\AppData\Roaming\TabNine\mcp_config.json
      
-     # 云端AI平台
+     # Plataformas de IA em Nuvem
      - %USERPROFILE%\AppData\Roaming\AmazonQ\settings.json
      - %USERPROFILE%\.google\gemini-code-assist\mcp.json
      - %USERPROFILE%\AppData\Roaming\CodeBuddy\mcp_settings.json
      
-     # 开源AI工具
+     # Ferramentas de IA Open Source
      - %USERPROFILE%\.aider\mcp_config.json
      - %USERPROFILE%\.codegeex\mcp_settings.json
      - %USERPROFILE%\.tabby\mcp_config.json
      - %USERPROFILE%\AppData\Roaming\Code\User\globalStorage\saoudrizwan.claude-dev\settings\cline_mcp_settings.json
   
-  3. 配置完整性分析:
-     - 配置文件是否存在
-     - 是否包含基础MCP服务器
-     - 服务器配置是否有效
-     - 跨平台配置一致性
+  3. Análise de Integridade de Configuração:
+     - Se o arquivo de configuração existe
+     - Se contém servidores MCP básicos
+     - Se a configuração do servidor é válida
+     - Consistência de configuração multiplataforma
   
-  4. 功能缺失评估:
-     - 缺少文件系统工具
-     - 缺少记忆系统
-     - 缺少代码检索能力
-     - 缺少GitHub集成
-     - 跨平台配置差异
+  4. Avaliação de Funcionalidades Ausentes:
+     - Falta de ferramenta de sistema de arquivos
+     - Falta de sistema de memória
+     - Falta de capacidade de recuperação de código
+     - Falta de integração com GitHub
+     - Diferenças de configuração multiplataforma
 ```
 
-## 💡 智能提醒机制
+## 💡 Mecanismo de Lembrete Inteligente
 ```yaml
-当检测到用户完全没有MCP配置时:
+Quando detectado que o usuário não possui nenhuma configuração MCP:
   
-  立即提醒:
-    "🔍 检测到您尚未配置MCP工具。MCP (Model Context Protocol) 可以显著提升AI助手的能力！"
+  Lembrete Imediato:
+    "🔍 Detectei que você ainda não configurou as ferramentas MCP. O MCP (Model Context Protocol) pode aumentar significativamente as capacidades do assistente de IA!"
     
-  价值说明:
-    "配置MCP工具后，我可以："
-    "📁 直接操作您的文件和项目"
-    "🧠 记住项目信息和上下文"
-    "🔍 智能搜索和分析代码"
-    "🔗 集成GitHub进行协作"
-    "💬 提供更丰富的交互反馈"
+  Explicação de Valor:
+    "Após configurar as ferramentas MCP, eu posso:"
+    "📁 Operar diretamente seus arquivos e projetos"
+    "🧠 Lembrar informações e contexto do projeto"
+    "🔍 Pesquisar e analisar código de forma inteligente"
+    "🔗 Integrar com GitHub para colaboração"
+    "💬 Fornecer feedback de interação mais rico"
     
-  引导配置:
-    "🚀 推荐配置方案："
-    "1. 快速配置 (5分钟): 运行自动安装脚本"
-    "2. 手动配置 (15分钟): 按照详细指南配置"
-    "3. 跨平台同步: 从其他AI工具同步现有配置"
-    "4. 稍后配置: 继续当前任务，稍后配置"
+  Orientação de Configuração:
+    "🚀 Esquema de configuração recomendado:"
+    "1. Configuração rápida (5 minutos): Execute o script de instalação automática"
+    "2. Configuração manual (15 minutos): Configure seguindo o guia detalhado"
+    "3. Sincronização multiplataforma: Sincronize configurações existentes de outras ferramentas de IA"
+    "4. Configurar mais tarde: Continue a tarefa atual, configure depois"
 ```
 
-### 部分配置检测响应
+### Resposta de Detecção de Configuração Parcial
 ```yaml
-当检测到用户有部分MCP配置时:
+Quando detectado que o usuário possui configuração MCP parcial:
   
-  分析现状:
-    "📊 检测到您已配置了 [X] 个MCP工具"
-    "✅ 已有: [已配置的工具列表]"
-    "❌ 缺少: [建议添加的工具列表]"
+  Análise da Situação Atual:
+    "📊 Detectei que você configurou [X] ferramentas MCP"
+    "✅ Existentes: [Lista de ferramentas configuradas]"
+    "❌ Ausentes: [Lista de ferramentas sugeridas]"
     
-  AI工具检测:
-    "🤖 检测到的AI编程工具:"
-    "主流编辑器: Trae, Cursor, Claude"
-    "热门工具: Windsurf, Replit, Sourcegraph Cody, Continue.dev"
-    "IDE集成: VSCode Copilot, JetBrains AI, Tabnine"
-    "云端平台: Amazon Q, Gemini Code Assist, Qodo Gen"
-    "开源工具: Aider, CodeGeeX, TabbyML, Cline"
+  Detecção de Ferramentas de IA:
+    "🤖 Ferramentas de programação de IA detectadas:"
+    "Editores Mainstream: Trae, Cursor, Claude"
+    "Ferramentas Populares: Windsurf, Replit, Sourcegraph Cody, Continue.dev"
+    "Integração IDE: VSCode Copilot, JetBrains AI, Tabnine"
+    "Plataformas em Nuvem: Amazon Q, Gemini Code Assist, Qodo Gen"
+    "Ferramentas Open Source: Aider, CodeGeeX, TabbyML, Cline"
     
-  针对性建议:
-    "💡 基于您的项目类型 ([项目类型])，建议添加："
-    "- [具体工具名称]: [功能说明]"
-    "- [具体工具名称]: [功能说明]"
+  Sugestão Específica:
+    "💡 Com base no seu tipo de projeto ([Tipo de Projeto]), sugiro adicionar:"
+    "- [Nome da ferramenta]: [Descrição da funcionalidade]"
+    "- [Nome da ferramenta]: [Descrição da funcionalidade]"
     
-  配置指导:
-    "🔧 您可以选择："
-    "1. '推荐MCP工具' - 获取个性化推荐"
-    "2. '检查MCP状态' - 查看详细配置分析"
-    "3. 继续当前任务 - 使用现有配置"
+  Orientação de Configuração:
+    "🔧 Você pode escolher:"
+    "1. 'Recomendar ferramentas MCP' - Obter recomendação personalizada"
+    "2. 'Verificar status MCP' - Ver análise de configuração detalhada"
+    "3. Continuar tarefa atual - Usar configuração existente"
 ```
 
-## 🎯 个性化推荐策略
+## 🎯 Estratégia de Recomendação Personalizada
 ```yaml
-前端项目:
-  必需工具:
-    - server-filesystem: "管理项目文件和组件"
-  推荐工具:
-    - server-github: "版本控制和协作"
-    - mcp-feedback-enhanced: "增强交互体验"
-    - chrome-devtools: "浏览器调试与性能分析（CDP）"
-    - Playwright: "端到端测试与跨浏览器自动化"
-    - server-memory (可选): "语义模糊检索与跨范围聚合"
+Projetos Frontend:
+  Ferramentas Essenciais:
+    - server-filesystem: "Gerenciar arquivos e componentes do projeto"
+  Ferramentas Recomendadas:
+    - server-github: "Controle de versão e colaboração"
+    - mcp-feedback-enhanced: "Experiência de interação aprimorada"
+    - chrome-devtools: "Depuração de navegador e análise de desempenho (CDP)"
+    - Playwright: "Testes end-to-end e automação cross-browser"
+    - server-memory (opcional): "Recuperação semântica fuzzy e agregação cross-range"
   
-后端项目:
-  必需工具:
-    - server-filesystem: "管理API和配置文件"
-    - codebase-retrieval: "智能代码搜索和分析"
-  推荐工具:
-    - server-github: "代码协作和CI/CD"
-    - 数据库工具: "数据库操作和管理"
-    - server-memory (可选): "语义模糊检索与跨范围聚合"
+Projetos Backend:
+  Ferramentas Essenciais:
+    - server-filesystem: "Gerenciar API e arquivos de configuração"
+    - codebase-retrieval: "Busca e análise inteligente de código"
+  Ferramentas Recomendadas:
+    - server-github: "Colaboração de código e CI/CD"
+    - Ferramentas de Banco de Dados: "Operação e gerenciamento de banco de dados"
+    - server-memory (opcional): "Recuperação semântica fuzzy e agregação cross-range"
 
-全栈项目:
-  必需工具:
-    - server-filesystem: "管理前后端文件"
-    - codebase-retrieval: "跨技术栈代码分析"
-    - mcp-feedback-enhanced: "复杂项目交互管理"
-  推荐工具:
-    - server-github: "团队协作和版本管理"
-    - 自动化工具: "测试和部署自动化"
-    - chrome-devtools: "浏览器调试与性能分析（CDP）"
-    - Playwright: "端到端测试与跨浏览器自动化"
-    - server-memory (可选): "语义模糊检索与跨范围聚合"
+Projetos Fullstack:
+  Ferramentas Essenciais:
+    - server-filesystem: "Gerenciar arquivos frontend e backend"
+    - codebase-retrieval: "Análise de código cross-stack"
+    - mcp-feedback-enhanced: "Gerenciamento de interação de projetos complexos"
+  Ferramentas Recomendadas:
+    - server-github: "Colaboração de equipe e gerenciamento de versão"
+    - Ferramentas de Automação: "Automação de testes e deploy"
+    - chrome-devtools: "Depuração de navegador e análise de desempenho (CDP)"
+    - Playwright: "Testes end-to-end e automação cross-browser"
+    - server-memory (opcional): "Recuperação semântica fuzzy e agregação cross-range"
 ```
 
-### 基于用户经验推荐
+### Recomendação Baseada na Experiência do Usuário
 ```yaml
-新手用户:
-  简化配置: 只推荐3个核心工具
-  详细指导: 提供步骤详细的配置指南
-  持续支持: 配置过程中提供实时帮助
+Usuário Iniciante:
+  Configuração Simplificada: Recomendar apenas 3 ferramentas principais
+  Orientação Detalhada: Fornecer guia de configuração passo a passo
+  Suporte Contínuo: Fornecer ajuda em tempo real durante a configuração
   
-中级用户:
-  标准配置: 推荐5-7个常用工具
-  效率优化: 提供性能调优建议
-  最佳实践: 分享使用技巧和经验
+Usuário Intermediário:
+  Configuração Padrão: Recomendar 5-7 ferramentas comuns
+  Otimização de Eficiência: Fornecer sugestões de ajuste de desempenho
+  Melhores Práticas: Compartilhar dicas de uso e experiência
   
-高级用户:
-  完整配置: 推荐全套工具链
-  自定义选项: 提供高级配置选项
-  集成建议: 与现有工具链集成方案
+Usuário Avançado:
+  Configuração Completa: Recomendar toolchain completo
+  Opções Personalizadas: Fornecer opções de configuração avançadas
+  Sugestões de Integração: Esquema de integração com toolchain existente
 ```
 
-## 🚀 配置引导流程
+## 🚀 Fluxo de Orientação de Configuração
 ```yaml
-一键配置:
-  检测环境: "检查Node.js、Python环境"
-  推荐脚本: "运行 mcp-scripts/run-powershell-installer.bat"
-  验证安装: "测试MCP工具是否正常工作"
-  配置优化: "根据项目需求调整配置"
+Configuração em Um Clique:
+  Detecção de Ambiente: "Verificar ambiente Node.js, Python"
+  Script Recomendado: "Executar mcp-scripts/run-powershell-installer.bat"
+  Verificação de Instalação: "Testar se as ferramentas MCP funcionam corretamente"
+  Otimização de Configuração: "Ajustar configuração conforme necessidades do projeto"
   
-引导命令:
-  - "一键配置MCP" - 自动安装推荐工具
-  - "MCP配置指导" - 获取详细配置步骤
-  - "检查MCP状态" - 验证当前配置状态
-  - "跨平台同步MCP" - 从其他AI工具同步配置
+Comandos de Orientação:
+  - "Configurar MCP em um clique" - Instalar automaticamente ferramentas recomendadas
+  - "Guia de configuração MCP" - Obter passos de configuração detalhados
+  - "Verificar status MCP" - Validar status de configuração atual
+  - "Sincronizar MCP multiplataforma" - Sincronizar configuração de outras ferramentas de IA
 ```
 
-### 手动配置路径
+### Caminho de Configuração Manual
 ```yaml
-详细指导:
-  环境准备: "确保Node.js ≥16.0.0, Python ≥3.8"
-  工具安装: "逐步安装每个MCP工具"
-  配置文件: "创建和编辑mcp_settings.json"
-  测试验证: "验证每个工具是否正常工作"
+Orientação Detalhada:
+  Preparação de Ambiente: "Garantir Node.js ≥16.0.0, Python ≥3.8"
+  Instalação de Ferramentas: "Instalar cada ferramenta MCP passo a passo"
+  Arquivo de Configuração: "Criar e editar mcp_settings.json"
+  Teste e Validação: "Validar se cada ferramenta funciona corretamente"
 ```
 
 
-## 📊 检测结果示例
+## 📊 Exemplo de Resultado de Detecção
 
-### 零配置用户
+### Usuário com Configuração Zero
 ```yaml
-检测结果:
-  "🔍 MCP配置检测结果："
-  "❌ 未检测到任何MCP配置"
-  "📈 配置MCP后可提升效率 60-80%"
+Resultado da Detecção:
+  "🔍 Resultado da detecção de configuração MCP:"
+  "❌ Nenhuma configuração MCP detectada"
+  "📈 Configurar MCP pode aumentar a eficiência em 60-80%"
   
-  "🎯 推荐行动："
-  "1. 运行快速配置脚本 (推荐)"
-  "2. 从其他AI工具同步配置 (如果已有)"
-  "3. 查看MCP工具介绍了解价值"
-  "4. 按照详细指南手动配置"
+  "🎯 Ação Recomendada："
+  "1. Executar script de configuração rápida (Recomendado)"
+  "2. Sincronizar configuração de outras ferramentas de IA (Se houver)"
+  "3. Ver introdução das ferramentas MCP para entender o valor"
+  "4. Configurar manualmente seguindo o guia detalhado"
   
-  "💡 现在配置还是稍后？"
-  "- '立即配置' - 我来指导您完成配置"
-  "- '跨平台同步' - 从其他AI工具同步现有配置"
-  "- '了解更多' - 先了解MCP工具的价值"
-  "- '稍后配置' - 继续当前任务"
+  "💡 Configurar agora ou mais tarde?"
+  "- 'Configurar agora' - Eu guio você na configuração"
+  "- 'Sincronização multiplataforma' - Sincronizar configuração existente de outras ferramentas de IA"
+  "- 'Saiba mais' - Entender primeiro o valor das ferramentas MCP"
+  "- 'Configurar mais tarde' - Continuar tarefa atual"
 ```
 
-### 部分配置用户
+### Usuário com Configuração Parcial
 ```yaml
-检测结果:
-  "📊 MCP配置分析："
-  "✅ 已配置: filesystem, memory (2个工具，memory 可选)"
-  "❌ 建议添加: github, codebase-retrieval (2个工具)"
-  "📈 完整配置后可再提升效率 30-40%"
+Resultado da Detecção:
+  "📊 Análise de configuração MCP:"
+  "✅ Configurado: filesystem, memory (2 ferramentas, memory opcional)"
+  "❌ Sugestão de adição: github, codebase-retrieval (2 ferramentas)"
+  "📈 Configuração completa pode aumentar a eficiência em mais 30-40%"
   
-  "🎯 针对性建议："
-  "基于您的全栈项目，建议添加："
-  "- GitHub集成: 版本控制和协作"
-  "- 代码检索: 智能代码分析"
+  "🎯 Sugestão Específica:"
+  "Com base no seu projeto Fullstack, sugiro adicionar:"
+  "- Integração GitHub: Controle de versão e colaboração"
+  "- Recuperação de código: Análise de código inteligente"
   
-  "💡 需要配置建议吗？"
-  "- '推荐MCP工具' - 获取详细推荐"
-  "- '检查MCP状态' - 查看完整分析"
-  "- '继续任务' - 使用现有配置"
+  "💡 Precisa de sugestão de configuração?"
+  "- 'Recomendar ferramentas MCP' - Obter recomendação detalhada"
+  "- 'Verificar status MCP' - Ver análise completa"
+  "- 'Continuar tarefa' - Usar configuração existente"
 ```
 
-## 🔄 持续监控机制
+## 🔄 Mecanismo de Monitoramento Contínuo
 ```yaml
-检查频率:
-  新项目: 每次进入新项目时检查
-  功能需求: 当任务需要特定MCP功能时检查
-  性能问题: 检测到效率问题时分析MCP配置
+Frequência de Verificação:
+  Novo Projeto: Verificar ao entrar em um novo projeto
+  Necessidade Funcional: Verificar quando a tarefa requer funcionalidade MCP específica
+  Problema de Desempenho: Analisar configuração MCP quando detectado problema de eficiência
   
-优化建议:
-  配置更新: 发现新的有用工具时推荐
-  性能调优: 基于使用模式优化配置
-  问题修复: 检测到配置问题时主动修复
+Sugestões de Otimização:
+  Atualização de Configuração: Recomendar quando novas ferramentas úteis são descobertas
+  Ajuste de Desempenho: Otimizar configuração com base nos padrões de uso
+  Correção de Problemas: Corrigir proativamente quando problemas de configuração são detectados
 ```
 
 ---
 
-**🎯 激活提示**: 该规则会在每次任务开始时自动检测用户的MCP配置状态，对于零配置或配置不完整的用户主动提供友好的提醒和引导，确保用户能够充分利用MCP工具的强大功能。
+**🎯 Dica de Ativação**: Esta regra detectará automaticamente o status da configuração MCP do usuário no início de cada tarefa e fornecerá lembretes e orientações amigáveis proativamente para usuários com configuração zero ou incompleta, garantindo que os usuários possam aproveitar ao máximo os recursos poderosos das ferramentas MCP.

@@ -7,7 +7,7 @@ alwaysApply: true
 integrations: ["super-brain-system", "brain-recorder-integration"]
 modules: ["context-recorder-core", "context-recorder-templates", "context-recorder-advanced", "context-recorder-edge-cases"]
 
-# Version Management
+# Gerenciamento de Versão
 version: "3.0.0"
 last_updated: "2025-10-19"
 author: "system"
@@ -25,8 +25,8 @@ changelog:
   - version: "2.6.0"
     date: "2025-10-19"
     changes:
-      - "Add version management system"
-      - "Standardize rule file structure"
+      - "Adição do sistema de gerenciamento de versão"
+      - "Padronização da estrutura do arquivo de regras"
 ---
 
 # 📝 Context Recorder System (记录员系统)

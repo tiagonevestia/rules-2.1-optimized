@@ -1,113 +1,113 @@
-# 🧠 超级大脑系统 2.6.0 使用指南
+# 🧠 Guia de Uso do Sistema Super Cérebro 2.6.0
 
-> **🎯 核心理念**: 将AI助手升级为具备智能需求理解、深度讨论框架和开发效率优化的下一代超级大脑系统
+> **🎯 Conceito Central**: Elevar o assistente de IA para um sistema de Super Cérebro de próxima geração, dotado de entendimento inteligente de requisitos, estrutura de discussão profunda e otimização da eficiência de desenvolvimento.
 > 
-> **🚀 2.6.0 优化**: 优化规则优先级分布，新增大脑-记录员集成系统，实现完整的智能化规则生态系统，100%集成测试通过
+> **🚀 Otimização 2.6.0**: Prioridade de regras otimizada, novo sistema integrado Cérebro-Registrador, alcançando um ecossistema de regras inteligentes completo, com 100% de aprovação em testes de integração.
 >
-> **🗺️ 文档导航**: [完整导航索引](../docs/NAVIGATION-INDEX.md) | [返回主页](../README.md)
+> **🗺️ Navegação de Documentos**: [Índice de Navegação Completo](../docs/NAVIGATION-INDEX.md) | [Voltar à Página Inicial](../README.md)
 
-## 🚀 智能化核心特色
+## 🚀 Recursos Principais de Inteligência
 
-### 🧠 智能需求理解引擎
-- **深度语义分析**: 理解用户真实意图，不仅仅是字面意思
-- **上下文关联**: 结合项目历史和用户偏好，提供个性化建议
-- **需求补全**: 主动识别遗漏需求，避免后期返工
-- **优先级智能排序**: 基于业务价值和技术复杂度自动排序
+### 🧠 Mecanismo de Entendimento Inteligente de Requisitos
+- **Análise Semântica Profunda**: Compreende a real intenção do usuário, indo além do significado literal.
+- **Associação de Contexto**: Combina o histórico do projeto e as preferências do usuário para fornecer sugestões personalizadas.
+- **Complementação de Requisitos**: Identifica proativamente requisitos omitidos para evitar retrabalho futuro.
+- **Ordenação Inteligente de Prioridades**: Ordena automaticamente com base no valor de negócio e complexidade técnica.
 
-### 💬 深度讨论框架
-- **结构化对话**: 引导用户进行深入的技术和业务讨论
-- **多维度分析**: 从技术、业务、用户体验等多角度分析问题
-- **决策支持**: 提供数据驱动的决策建议和风险评估
-- **知识沉淀**: 将讨论结果转化为可复用的项目知识
+### 💬 Estrutura de Discussão Profunda
+- **Diálogo Estruturado**: Guia o usuário em discussões técnicas e de negócio profundas.
+- **Análise Multidimensional**: Analisa problemas sob as perspectivas técnica, de negócio e de experiência do usuário (UX).
+- **Suporte à Decisão**: Fornece sugestões orientadas a dados e avaliações de risco.
+- **Consolidação de Conhecimento**: Transforma os resultados das discussões em conhecimento reutilizável para o projeto.
 
-### ⚡ 开发效率优化引擎
-- **智能工作流**: 基于项目特点自动优化开发流程
-- **瓶颈识别**: 实时识别开发瓶颈并提供解决方案
-- **资源优化**: 智能分配开发资源，最大化团队效率
-- **质量保证**: 内置质量检查点，确保交付质量
+### ⚡ Mecanismo de Otimização da Eficiência de Desenvolvimento
+- **Fluxo de Trabalho Inteligente**: Otimiza automaticamente o processo de desenvolvimento com base nas características do projeto.
+- **Identificação de Gargalos**: Identifica gargalos de desenvolvimento em tempo real e oferece soluções.
+- **Otimização de Recursos**: Distribui recursos de desenvolvimento de forma inteligente para maximizar a eficiência da equipe.
+- **Garantia de Qualidade**: Pontos de verificação de qualidade integrados para garantir a excelência na entrega.
 
-## 📋 环境检查
+## 📋 Verificação de Ambiente
 
-### 🔧 系统要求
+### 🔧 Requisitos do Sistema
 
-**必需环境：**
-- **Node.js**: 18.0.0+ （推荐最新LTS版本）
-- **npm**: 9.0.0+ （随Node.js自动安装）
-- **MCP CLI**: 最新版本
+**Ambiente Necessário:**
+- **Node.js**: 18.0.0+ (LTS recomendado)
+- **npm**: 9.0.0+ (instalado automaticamente com Node.js)
+- **MCP CLI**: Última versão
 
-**快速检查：**
+**Verificação Rápida:**
 ```bash
-# 检查 Node.js 版本
+# Verificar versão do Node.js
 node --version
 
-# 检查 npm 版本
+# Verificar versão do npm
 npm --version
 
-# 验证 MCP CLI 安装
+# Validar instalação do MCP CLI
 npm list -g @modelcontextprotocol/cli
 ```
 
-**🚀 一键安装（如果环境不满足）：**
+**🚀 Instalação Rápida (se o ambiente não for atendido):**
 ```bash
-# 安装 MCP CLI
+# Instalar MCP CLI
 npm install -g @modelcontextprotocol/cli
 
-# 验证安装成功
+# Verificar sucesso da instalação
 mcp --version
 ```
 
-**💡 安装问题排查：**
-- **权限错误**: Windows用户以管理员身份运行PowerShell
-- **网络问题**: 配置npm镜像 `npm config set registry https://registry.npmmirror.com`
-- **版本冲突**: 卸载旧版本后重新安装
+**💡 Resolução de Problemas de Instalação:**
+- **Erro de Permissão**: Usuários Windows devem executar o PowerShell como Administrador.
+- **Problemas de Rede**: Configure o mirror do npm: `npm config set registry https://registry.npmmirror.com` (se necessário).
+- **Conflito de Versão**: Desinstale a versão antiga antes de reinstalar.
 
-## 📖 文档导航
+## 📖 Navegação de Documentos
 
-> **📚 学习路径**: 按照以下顺序学习，快速掌握超级大脑系统
+> **📚 Trilha de Aprendizado**: Siga a ordem abaixo para dominar rapidamente o Sistema Super Cérebro.
 
-### 🚀 快速入门（5分钟）
-1. **[README.md](../README.md)** - 项目概述和核心特性
-2. **本文档** - 深度使用技巧
+### 🚀 Começo Rápido (5 minutos)
+1. **[README.md](../README.md)** - Visão geral do projeto e recursos principais.
+2. **Este Documento** - Técnicas de uso aprofundado.
 
-### 🔧 配置指南（进阶）
-- **[INSTALL-GUIDE.md](../install-scripts/INSTALL-GUIDE.md)** - 完整安装配置流程 | [中文版](../install-scripts/INSTALL-GUIDE-CN.md)
-- **[MCP-QUICK-START-GUIDE.md](../docs/MCP-QUICK-START-GUIDE.md)** - MCP工具集成配置
-- **[ENVIRONMENT-SETUP.md](../docs/ENVIRONMENT-SETUP.md)** - 环境配置详解
+### 🔧 Guia de Configuração (Avançado)
+- **[INSTALL-GUIDE.md](../install-scripts/INSTALL-GUIDE.md)** - Fluxo completo de instalação e configuração | [Versão em Português](../install-scripts/INSTALL-GUIDE-PT.md)
+- **[MCP-QUICK-START-GUIDE.md](../docs/MCP-QUICK-START-GUIDE.md)** - Configuração de integração das ferramentas MCP.
+- **[ENVIRONMENT-SETUP.md](../docs/ENVIRONMENT-SETUP.md)** - Detalhes da configuração de ambiente.
 
-### 📋 参考手册（查阅）
-- **[COMMANDS-REFERENCE.md](../COMMANDS-REFERENCE.md)** - 完整命令参考手册
-- **[USAGE.md](../USAGE.md)** - 高级使用技巧
-- **[MCP-TROUBLESHOOTING-GUIDE.md](../docs/MCP-TROUBLESHOOTING-GUIDE.md)** - 问题排查指南
+### 📋 Manual de Referência (Consulta)
+- **[COMMANDS-REFERENCE.md](../COMMANDS-REFERENCE.md)** - Manual completo de referência de comandos.
+- **[USAGE.md](../USAGE.md)** - Técnicas avançadas de uso.
+- **[MCP-TROUBLESHOOTING-GUIDE.md](../docs/MCP-TROUBLESHOOTING-GUIDE.md)** - Guia de solução de problemas.
 
-**💡 推荐路径**: 新手用户 → 快速入门 → 配置指南 → 参考手册
+**💡 Caminho Recomendado**: Usuário Iniciante → Começo Rápido → Guia de Configuração → Manual de Referência
 
-### 📑 本文档章节导航
+### 📑 Navegação de Seções Deste Documento
 
-| 章节 | 内容 | 适用场景 |
+| Seção | Conteúdo | Cenário de Uso |
 |------|------|----------|
-| [🚀 快速开始](#-快速开始) | 基础激活命令 | 新手入门 |
-| [📋 实战示例](#-使用示例) | 3个完整项目示例 | 学习参考 |
-| [🎛️ 高级功能](#️-高级功能使用) | 阶段管理和项目识别 | 进阶使用 |
-| [🔄 工作流集成](#-工作流集成) | MCP工具编排 | 自动化需求 |
-| [🎯 最佳实践](#-最佳实践) | 使用技巧和建议 | 效率提升 |
-| [🚨 常见问题](#-常见问题) | 问题解答 | 故障排除 |
+| [🚀 Começo Rápido](#-começo-rápido) | Comandos básicos de ativação | Introdução para iniciantes |
+| [📋 Exemplos Práticos](#-exemplos-práticos) | 3 exemplos completos de projetos | Referência de aprendizado |
+| [🎛️ Funcionalidades Avançadas](#️-uso-de-funcionalidades-avançadas-inteligentes) | Gestão de fases e identificação de projetos | Uso avançado |
+| [🔄 Integração de Fluxo de Trabalho](#-integração-inteligente-de-fluxo-de-trabalho) | Orquestração de ferramentas MCP | Requisitos de automação |
+| [🎯 Melhores Práticas](#-melhores-práticas-de-ia) | Dicas e sugestões de uso | Aumento de eficiência |
+| [🚨 Perguntas Frequentes](#-perguntas-frequentes-e-soluções-inteligentes-de-ia) | Respostas a dúvidas comuns | Solução de problemas |
 
-## 🚀 快速开始
+## 🚀 Começo Rápido
 
-### 🎯 一键激活智能化超级大脑
+### 🎯 Ativação do Super Cérebro Inteligente com um Clique
 
-> **💡 智能激活**: 支持中英文命令，系统会自动识别并启动智能需求理解、深度讨论框架和开发效率优化引擎
+> **💡 Ativação Inteligente**: Suporta comandos em português e inglês; o sistema identificará e iniciará automaticamente o entendimento de requisitos, a estrutura de discussão e o mecanismo de otimização de eficiência.
 
-**🔥 智能激活命令（任选其一）：**
+**🔥 Comandos de Ativação (escolha um):**
 ```bash
-# 🇨🇳 中文激活
-启动超级大脑系统
-激活智能项目管理
-开启智能需求理解
-启动深度讨论模式
-激活开发效率优化
+# 🇧🇷 Ativação em Português
+Iniciar sistema super cérebro
+Ativar gestão inteligente de projetos
+Abrir entendimento inteligente de requisitos
+Iniciar modo de discussão profunda
+Ativar otimização de eficiência de desenvolvimento
 
-# 🇺🇸 英文激活
+# 🇺🇸 Ativação em Inglês
 Activate Super Brain System
 Enable Intelligent Project Management
 Start Smart Requirement Analysis
@@ -115,1514 +115,1234 @@ Activate Deep Discussion Framework
 Enable Development Efficiency Optimization
 ```
 
-### ✅ 激活成功确认
+### ✅ Confirmação de Ativação Bem-sucedida
 
-**🎉 系统激活成功响应：**
+**🎉 Resposta de Sucesso do Sistema:**
 
 ```
-🧠 超级大脑系统已激活！
+🧠 Sistema Super Cérebro ativado!
 
-📊 系统状态: 运行中
-🎯 当前项目: [项目名称或'未设定']
-📋 当前阶段: [阶段信息或'待确定']
-💾 记忆状态: [已加载/空白]
+📊 Status do Sistema: Em execução
+🎯 Projeto Atual: [Nome do projeto ou 'Não definido']
+📋 Fase Atual: [Informação da fase ou 'A determinar']
+💾 Estado da Memória: [Carregada/Vazia]
 
-🤖 可用功能:
-• 智能阶段推荐 (/recommend)
-• 项目状态查询 (/status)
-• 阶段切换 (/switch [阶段号])
-• 记忆查看 (/memory)（可选）
-• 工具编排优化
+🤖 Funcionalidades Disponíveis:
+• Recomendação inteligente de fase (/recommend)
+• Consulta de status do projeto (/status)
+• Troca de fase (/switch [nº da fase])
+• Visualização de memória (/memory) (opcional)
+• Otimização de orquestração de ferramentas
 
-💡 请告诉我您的项目需求，我将为您提供最佳的管理方案！
+💡 Por favor, conte-me os requisitos do seu projeto. Fornecerei a melhor solução de gestão!
 ```
 
-**🚨 激活失败排查：**
-- 检查MCP工具是否正确安装
-- 确认AI助手支持MCP协议
-- 查看 [故障排除指南](../docs/MCP-TROUBLESHOOTING-GUIDE.md)
+**🚨 Solução de Problemas de Ativação:**
+- Verifique se as ferramentas MCP estão instaladas corretamente.
+- Confirme se o assistente de IA suporta o protocolo MCP.
+- Consulte o [Guia de Solução de Problemas](../docs/MCP-TROUBLESHOOTING-GUIDE.md).
 
-## 📋 实战示例
+## 📋 Exemplos Práticos
 
-> **🎯 真实案例**: 通过完整项目流程，掌握超级大脑系统的强大能力
+> **🎯 Casos Reais**: Domine as poderosas capacidades do Sistema Super Cérebro através de fluxos de projetos completos.
 
-### 🌐 案例一：电商网站开发
+### 🌐 Caso 1: Desenvolvimento de Site de E-commerce
 
-**📝 项目描述模板：**
+**📝 Template de Descrição de Projeto:**
 ```bash
-# 🚀 步骤1：激活系统
-启动超级大脑系统
+# 🚀 Passo 1: Ativar o sistema
+Iniciar sistema super cérebro
 
-# 📋 步骤2：详细项目描述
-我要开发一个现代化电商网站，主要功能包括：
-- 🛍️ 商品展示、搜索和筛选
-- 👤 用户注册、登录和个人中心
-- 🛒 购物车和愿望清单
-- 📦 订单管理和物流跟踪
-- 💳 多种支付方式集成
-- 📱 响应式设计，支持移动端
+# 📋 Passo 2: Descrição detalhada do projeto
+Quero desenvolver um site de e-commerce moderno. As principais funcionalidades incluem:
+- 🛍️ Exibição, busca e filtragem de produtos
+- 👤 Registro de usuário, login e central do cliente
+- 🛒 Carrinho de compras e lista de desejos
+- 📦 Gestão de pedidos e rastreamento logístico
+- 💳 Integração com múltiplos métodos de pagamento
+- 📱 Design responsivo, suporte a dispositivos móveis
 
-目标用户：18-45岁网购用户
-预期时间：2个月完成MVP版本
-特殊要求：高性能、SEO友好
+Público-alvo: Usuários de compras online de 18 a 45 anos
+Tempo previsto: 2 meses para a versão MVP
+Requisitos especiais: Alto desempenho, amigável para SEO
 ```
 
-**🤖 智能化系统响应：**
+**🤖 Resposta do Sistema Inteligente:**
 ```
-🧠 智能需求理解引擎分析完成！
+🧠 Análise do Mecanismo de Entendimento Inteligente de Requisitos concluída!
 
-📊 项目智能识别: 🌐 Web应用 - 电商平台
-🏆 复杂度评级: ⭐⭐⭐⭐ (高级)
-🎯 用户画像: 18-45岁网购用户，注重体验和性能
+📊 Identificação Inteligente do Projeto: 🌐 Aplicação Web - Plataforma de E-commerce
+🏆 Avaliação de Complexidade: ⭐⭐⭐⭐ (Avançado)
+🎯 Perfil do Usuário: Compradores online de 18-45 anos, focados em experiência e desempenho
 
-🛠️ 智能技术栈推荐:
-  前端: Next.js 14 + TypeScript + Tailwind CSS (SEO优化)
-  后端: Node.js + Prisma + PostgreSQL (高性能)
-  支付: Stripe + PayPal (多元化支付)
-  搜索: Elasticsearch (智能搜索)
-  部署: Vercel + Supabase (快速部署)
-  CDN: Cloudflare (全球加速)
-  监控: Sentry + Analytics (性能监控)
+🛠️ Recomendação de Stack Tecnológica:
+  Frontend: Next.js 14 + TypeScript + Tailwind CSS (Otimização SEO)
+  Backend: Node.js + Prisma + PostgreSQL (Alto desempenho)
+  Pagamentos: Stripe + PayPal (Diversificação de pagamentos)
+  Busca: Elasticsearch (Busca inteligente)
+  Deploy: Vercel + Supabase (Deploy rápido)
+  CDN: Cloudflare (Aceleração global)
+  Monitoramento: Sentry + Analytics (Monitoramento de performance)
 
-📋 智能阶段规划 (8周):
-  🏗️  阶段1: 智能架构设计和基础设施 (1周)
-  👤 阶段2: 用户认证和智能权限系统 (1.5周)
-  🛍️  阶段3: 商品管理和智能展示 (2周)
-  🛒 阶段4: 智能购物车和订单流程 (2周)
-  💳 阶段5: 支付集成和安全防护 (1周)
-  🚀 阶段6: 性能优化和智能部署 (0.5周)
+📋 Planejamento de Fases Inteligente (8 semanas):
+  🏗️ Fase 1: Design de Arquitetura e Infraestrutura (1 semana)
+  👤 Fase 2: Autenticação de Usuário e Sistema de Permissões (1.5 semana)
+  🛍️ Fase 3: Gestão de Produtos e Exibição Inteligente (2 semanas)
+  🛒 Fase 4: Carrinho de Compras e Fluxo de Pedidos (2 semanas)
+  💳 Fase 5: Integração de Pagamentos e Proteção de Segurança (1 semana)
+  🚀 Fase 6: Otimização de Performance e Deploy (0.5 semana)
 
-💬 深度讨论建议:
-  • 是否需要个性化推荐系统？
-  • 移动端体验优化策略？
-  • 库存管理和供应链集成？
-  • 数据分析和用户行为追踪？
+💬 Sugestões para Discussão Profunda:
+  • Necessita de sistema de recomendações personalizadas?
+  • Estratégia de otimização da experiência mobile?
+  • Gestão de estoque e integração com cadeia de suprimentos?
+  • Análise de dados e rastreamento de comportamento do usuário?
 
-💡 智能下一步: 开始深度讨论技术架构？
-```
-
-### 📱 案例二：健身追踪APP开发
-
-**📝 完整项目对话流程：**
-
-**👤 用户：** `启动智能项目管理，帮我开发一个健身追踪APP`
-
-**🤖 智能化系统：**
-```
-🧠 超级大脑系统 2.4.2 Intelligent 已激活！
-
-📊 项目智能识别: 📱 移动应用 - 健身追踪
-🏆 复杂度评级: ⭐⭐⭐ (中级)
-🎯 市场分析: 健身APP市场增长迅速，用户注重个性化体验
-
-🧠 智能需求理解分析:
-  ✅ 运动数据记录和智能追踪
-  ✅ AI个性化健身计划
-  ✅ 智能进度可视化和统计
-  ✅ 社交分享和智能挑战
-  ✅ 健康数据分析和建议
-
-💬 深度讨论引导，请详细回答：
-1. 🎯 主要目标用户群体？(初学者/专业人士/特定年龄段)
-2. 🏃 核心运动类型？(跑步/力量训练/瑜伽/综合)
-3. 📱 设备集成需求？(智能手表/心率带/体重秤)
-4. 🤖 AI功能期望？(智能教练/饮食建议/伤病预防)
-5. 💰 商业模式？(免费/订阅/一次性购买)
+💡 Próximo Passo Inteligente: Iniciar discussão profunda sobre arquitetura técnica?
 ```
 
-**👤 用户：** `主要面向健身初学者，以力量训练为主，需要支持智能手表，希望有AI教练功能，采用订阅模式`
+### 📱 Caso 2: Desenvolvimento de App de Rastreamento Fitness
 
-**🤖 智能化系统：**
+**📝 Fluxo de Diálogo Completo:**
+
+**👤 Usuário:** `Ativar gestão inteligente de projetos, ajude-me a desenvolver um app de rastreamento fitness`
+
+**🤖 Sistema Inteligente:**
 ```
-🧠 智能需求理解完成！深度分析结果：
+🧠 Sistema Super Cérebro 2.4.2 Intelligent ativado!
 
-🎯 用户画像精准定位:
-  • 目标用户: 健身初学者 (18-35岁)
-  • 核心需求: 力量训练指导 + 智能监督
-  • 设备生态: 智能手表集成 + 手机主控
-  • 商业价值: 订阅模式，月费$9.99建议
+📊 Identificação Inteligente do Projeto: 📱 Aplicação Móvel - Rastreamento Fitness
+🏆 Avaliação de Complexidade: ⭐⭐⭐ (Intermediário)
+🎯 Análise de Mercado: O mercado de apps fitness cresce rapidamente; usuários buscam experiências personalizadas
 
-🛠️ 智能技术栈推荐:
-  跨平台: Flutter + Dart (快速开发)
-  后端: Firebase + Cloud Functions (实时同步)
-  数据库: Firestore + Cloud Storage (数据安全)
-  AI引擎: TensorFlow Lite (本地AI推理)
-  设备集成: HealthKit(iOS) + Google Fit(Android)
-  支付: RevenueCat (订阅管理)
-  推送: Firebase Cloud Messaging
+🧠 Análise de Entendimento de Requisitos:
+  ✅ Registro de dados de exercício e rastreamento inteligente
+  ✅ Planos de fitness personalizados por IA
+  ✅ Visualização inteligente de progresso e estatísticas
+  ✅ Compartilhamento social e desafios inteligentes
+  ✅ Análise de dados de saúde e sugestões
 
-📋 智能开发路线图 (6周):
-  📱 阶段1: 智能UI和用户认证系统 (1周)
-  🏃 阶段2: 运动记录和智能数据同步 (1.5周)
-  🤖 阶段3: AI个性化训练计划引擎 (1.5周)
-  📊 阶段4: 智能数据可视化和分析 (1周)
-  👥 阶段5: 社交功能和智能分享 (1周)
-
-💬 深度讨论要点:
-  • AI教练的具体功能范围？(动作纠正/计划调整/营养建议)
-  • 数据隐私和安全策略？
-  • 离线功能需求？
-  • 竞品差异化策略？
-
-🚀 智能下一步: 开始深度讨论AI教练功能设计？
+💬 Guia de Discussão Profunda, responda detalhadamente:
+1. 🎯 Público-alvo principal? (Iniciantes/Profissionais/Faixa etária específica)
+2. 🏃 Tipos de exercício centrais? (Corrida/Treino de força/Ioga/Multimodal)
+3. 📱 Requisitos de integração com dispositivos? (Smartwatches/Cintas cardíacas/Balanças)
+4. 🤖 Expectativas de funcionalidades de IA? (Treinador inteligente/Sugestões de dieta/Prevenção de lesões)
+5. 💰 Modelo de negócio? (Gratuito/Assinatura/Compra única)
 ```
 
-### 📊 案例三：企业销售数据分析平台
+**👤 Usuário:** `Focado em iniciantes, principalmente treino de força, precisa de suporte a smartwatches, quero treinador por IA e modelo de assinatura`
 
-**📝 渐进式需求挖掘：**
-
-**👤 用户：** `启动智能项目管理，我需要做销售数据分析`
-
-**🤖 智能化系统：**
+**🤖 Sistema Inteligente:**
 ```
-🧠 超级大脑系统 2.4.1 Intelligent 已激活！
+🧠 Entendimento de requisitos concluído! Resultados da análise profunda:
 
-📊 项目智能识别: 📈 数据分析 - 销售业务智能化
-🎯 业务价值: 提升销售效率，优化决策质量
+🎯 Posicionamento Preciso do Perfil do Usuário:
+  • Usuário-alvo: Iniciantes em fitness (18-35 anos)
+  • Requisito central: Orientação de treino de força + Supervisão inteligente
+  • Ecossistema de dispositivos: Integração com Smartwatch + Controle via Celular
+  • Valor de negócio: Modelo de assinatura, sugestão de mensalidade de $9.99
 
-🧠 智能需求理解预分析:
-  • 销售数据可视化和报表自动化
-  • 销售趋势预测和异常检测
-  • 客户行为分析和价值评估
-  • 销售团队绩效智能评估
-  • 实时销售监控和预警系统
+🛠️ Recomendação de Stack Tecnológica:
+  Multiplataforma: Flutter + Dart (Desenvolvimento rápido)
+  Backend: Firebase + Cloud Functions (Sincronização em tempo real)
+  Banco de Dados: Firestore + Cloud Storage (Segurança de dados)
+  Mecanismo de IA: TensorFlow Lite (Inferência de IA local)
+  Integração: HealthKit (iOS) + Google Fit (Android)
+  Pagamentos: RevenueCat (Gestão de assinaturas)
+  Push: Firebase Cloud Messaging
 
-💬 深度讨论引导，请详细描述：
-1. 📊 数据来源和规模？(CRM系统/Excel文件/数据库/数据量级)
-2. 🎯 核心分析目标？(业绩评估/趋势预测/客户分析/竞品分析)
-3. 👥 主要使用人员？(管理层/销售团队/数据分析师/决策层)
-4. ⏰ 数据更新频率？(实时/每日/每周/每月)
-5. 🤖 AI功能期望？(智能预测/异常检测/推荐系统)
-6. 📱 访问方式？(Web端/移动端/API接口)
-```
+📋 Roteiro de Desenvolvimento Inteligente (6 semanas):
+  📱 Fase 1: UI Inteligente e Sistema de Autenticação (1 semana)
+  🏃 Fase 2: Registro de Exercícios e Sincronização de Dados (1.5 semana)
+  🤖 Fase 3: Mecanismo de Planos de Treino Personalizados por IA (1.5 semana)
+  📊 Fase 4: Visualização e Análise Inteligente de Dados (1 semana)
+  👥 Fase 5: Funcionalidades Sociais e Compartilhamento (1 semana)
 
-**👤 用户：** `数据来源是Salesforce CRM，主要做月度业绩分析和销售趋势预测，给销售总监使用，需要每周更新，希望有智能预警功能`
+💬 Pontos para Discussão Profunda:
+  • Escopo específico do Treinador por IA? (Correção de movimento/Ajuste de plano/Sugestão nutricional)
+  • Estratégia de segurança e privacidade de dados?
+  • Requisitos de funcionalidades offline?
+  • Estratégia de diferenciação perante a concorrência?
 
-**🤖 智能化系统：**
-```
-🧠 智能需求理解完成！深度分析结果：
-
-🎯 业务场景精准定位:
-  • 数据源: Salesforce CRM (企业级数据)
-  • 核心价值: 月度业绩洞察 + 趋势智能预测
-  • 用户群体: 销售总监 (决策层)
-  • 更新周期: 每周数据刷新 + 实时预警
-  • 智能化: AI预测模型 + 异常检测预警
-
-🛠️ 智能技术栈推荐:
-  数据提取: Salesforce API + Python + Airflow (自动化)
-  数据处理: Pandas + NumPy + Dask (大数据处理)
-  AI引擎: Scikit-learn + Prophet + XGBoost (预测模型)
-  可视化: Plotly Dash + Streamlit (交互式仪表板)
-  预警系统: Redis + Celery + 邮件/短信通知
-  部署: Docker + Kubernetes + AWS (云原生)
-  监控: Grafana + Prometheus (系统监控)
-
-📋 智能实施计划 (5周):
-  🔌 阶段1: Salesforce智能数据连接和ETL (1周)
-  🧹 阶段2: 数据质量检查和智能清洗 (0.5周)
-  📊 阶段3: 核心指标计算和业务分析 (1周)
-  🤖 阶段4: AI预测模型和预警系统开发 (1.5周)
-  📱 阶段5: 智能Dashboard和自动化报告 (1周)
-
-📈 智能化预期产出:
-  • 销售业绩智能月报(自动生成)
-  • AI趋势预测模型(准确率90%+)
-  • 实时销售监控和智能预警
-  • 异常检测和风险提示系统
-  • 自动化周报和决策建议
-
-💬 深度讨论要点:
-  • Salesforce数据权限和安全策略？
-  • 预警触发条件和通知方式？
-  • 预测模型的业务指标优先级？
-  • 与现有销售流程的集成方案？
-
-🚀 智能下一步: 开始Salesforce API权限配置和数据结构分析？
+🚀 Próximo Passo Inteligente: Iniciar discussão sobre o design do Treinador por IA?
 ```
 
-## 🎛️ 智能化高级功能使用
+### 📊 Caso 3: Plataforma de Análise de Dados de Vendas Corporativas
 
-> **🎯 进阶提示**: 掌握这些智能化高级功能，让超级大脑系统发挥最大效能
+**📝 Extração Progressiva de Requisitos:**
 
-### 📊 智能核心命令系统
+**👤 Usuário:** `Iniciar gestão inteligente de projetos, preciso fazer análise de dados de vendas`
 
-**🎯 智能命令分类一览：**
+**🤖 Sistema Inteligente:**
+```
+🧠 Sistema Super Cérebro 2.4.1 Intelligent ativado!
 
-| 命令类型 | 命令格式 | 功能说明 | 使用场景 |
+📊 Identificação Inteligente do Projeto: 📈 Análise de Dados - Inteligência de Vendas
+🎯 Valor de Negócio: Aumentar eficiência de vendas, otimizar qualidade da decisão
+
+🧠 Pré-análise de Entendimento de Requisitos:
+  • Visualização de dados de vendas e automação de relatórios
+  • Previsão de tendências de vendas e detecção de anomalias
+  • Análise de comportamento do cliente e avaliação de valor
+  • Avaliação inteligente de desempenho da equipe de vendas
+  • Monitoramento de vendas em tempo real e sistema de alerta
+
+💬 Guia de Discussão Profunda, descreva detalhadamente:
+1. 📊 Fontes de dados e escala? (CRM/Excel/Banco de Dados/Volume de dados)
+2. 🎯 Objetivo central da análise? (Desempenho/Tendências/Clientes/Concorrência)
+3. 👥 Principais usuários? (Gestão/Equipe de vendas/Analistas/Diretoria)
+4. ⏰ Frequência de atualização? (Tempo real/Diário/Semanal/Mensal)
+5. 🤖 Expectativas de IA? (Previsão inteligente/Detecção de anomalias/Recomendação)
+6. 📱 Forma de acesso? (Web/Mobile/API)
+```
+
+**👤 Usuário:** `Dados do Salesforce CRM, foco em análise mensal de desempenho e tendências, para o Diretor de Vendas, atualização semanal, com alertas inteligentes`
+
+**🤖 Sistema Inteligente:**
+```
+🧠 Entendimento de requisitos concluído! Resultados da análise profunda:
+
+🎯 Posicionamento Preciso do Cenário de Negócio:
+  • Fonte de Dados: Salesforce CRM (Dados corporativos)
+  • Valor Central: Insights mensais + Previsão inteligente de tendências
+  • Público: Diretor de Vendas (Nível decisório)
+  • Ciclo de Atualização: Atualização semanal + Alertas em tempo real
+  • Inteligência: Modelos de previsão de IA + Alertas de anomalias
+
+🛠️ Recomendação de Stack Tecnológica:
+  Extração: Salesforce API + Python + Airflow (Automação)
+  Processamento: Pandas + NumPy + Dask (Big Data)
+  Mecanismo de IA: Scikit-learn + Prophet + XGBoost (Modelos de previsão)
+  Visualização: Plotly Dash + Streamlit (Dashboards interativos)
+  Alertas: Redis + Celery + Notificação por E-mail/SMS
+  Deploy: Docker + Kubernetes + AWS (Cloud Native)
+  Monitoramento: Grafana + Prometheus (Monitoramento do sistema)
+
+📋 Plano de Implementação Inteligente (5 semanas):
+  🔌 Fase 1: Conexão Inteligente de Dados Salesforce e ETL (1 semana)
+  🧹 Fase 2: Verificação de Qualidade e Limpeza de Dados (0.5 semana)
+  📊 Fase 3: Cálculo de KPIs e Análise de Negócio (1 semana)
+  🤖 Fase 4: Modelos de IA e Sistema de Alertas (1.5 semana)
+  📱 Fase 5: Dashboards Inteligentes e Relatórios Automáticos (1 semana)
+
+📈 Entregas Inteligentes Esperadas:
+  • Relatórios Mensais de Vendas (Gerados automaticamente)
+  • Modelos de Previsão por IA (Acurácia 90%+)
+  • Monitoramento em Tempo Real e Alertas Inteligentes
+  • Detecção de Anomalias e Avisos de Risco
+  • Resumos Semanais e Sugestões de Decisão
+
+💬 Pontos para Discussão Profunda:
+  • Permissões de dados e estratégia de segurança do Salesforce?
+  • Condições de disparo e métodos de notificação dos alertas?
+  • Prioridade de métricas de negócio nos modelos de previsão?
+  • Integração com os processos de vendas existentes?
+
+🚀 Próximo Passo Inteligente: Iniciar configuração de permissões da API Salesforce e análise de dados?
+```
+
+## 🎛️ Uso de Funcionalidades Avançadas Inteligentes
+
+> **🎯 Dica Avançada**: Domine estas funcionalidades para extrair o máximo potencial do Sistema Super Cérebro.
+
+### 📊 Sistema de Comandos Inteligentes
+
+**🎯 Visão Geral dos Comandos:**
+
+| Tipo de Comando | Formato | Descrição | Cenário de Uso |
 |---------|---------|----------|----------|
-| 📊 **智能状态查询** | `/status` | 查看项目全貌+AI分析 | 了解当前进度和AI建议 |
-| 💡 **AI智能推荐** | `/recommend` | 获取AI下一步建议 | 需要智能指导时 |
-| 🔄 **智能阶段管理** | `/switch [阶段]` | 智能切换开发阶段 | 阶段完成时自动优化 |
-| 💾 **智能记忆管理** | `/memory` | 查看项目智能记忆 | 回顾历史决策和AI学习 |
+| 📊 **Status Inteligente** | `/status` | Visão geral + análise de IA | Entender progresso e sugestões |
+| 💡 **Recomendação IA** | `/recommend` | Obter próximos passos da IA | Quando precisar de orientação |
+| 🔄 **Gestão de Fases** | `/switch [fase]` | Troca inteligente de fase | Otimização automática ao mudar |
+| 💾 **Gestão de Memória** | `/memory` | Ver memória inteligente | Revisar decisões e aprendizados |
 
-### 📊 /status - 智能项目状态查询
+### 📊 /status - Consulta Inteligente de Status do Projeto
 
-**🔍 多种智能查询方式：**
+**🔍 Formas de Consulta:**
 ```bash
-# 🎯 精确命令
-/status                    # 完整智能状态报告
+# 🎯 Comando exato
+/status                    # Relatório completo de status
 
-# 💬 自然语言
-项目状态如何？             # 中文智能查询
-当前进度怎么样？           # 进度智能查询
-How is the project going?  # 英文智能查询
+# 💬 Linguagem natural
+Qual o status do projeto?   # Consulta em português
+Como está o progresso?      # Consulta de progresso
+How is the project going?   # Consulta em inglês
 
-# 🎯 具体智能查询
-当前阶段完成度             # 阶段进度+AI分析
-还有哪些任务没完成？       # 待办任务+优先级排序
-项目预计什么时候完成？     # 时间预估+AI预测
+# 🎯 Consultas específicas
+Progresso da fase atual     # Progresso + análise de IA
+O que falta fazer?          # Tarefas pendentes + prioridades
+Quando o projeto termina?   # Estimativa + previsão de IA
 ```
 
-**📋 智能状态报告示例：**
+**📋 Exemplo de Relatório de Status:**
 ```
-🧠 智能项目状态报告 - 电商网站开发
+🧠 Relatório de Status Inteligente - E-commerce
 
-🎯 项目概览:
-  📅 开始时间: 2024-01-15
-  ⏰ 预计完成: 2024-03-15 (还剩28天)
-  📈 整体进度: ████████░░ 75%
-  🏆 项目评级: 🟢 进展顺利
-  🤖 AI信心度: 92% (基于历史数据分析)
+🎯 Visão Geral:
+  📅 Início: 15-01-2024
+  ⏰ Previsão: 15-03-2024 (28 dias restantes)
+  📈 Progresso Geral: ████████░░ 75%
+  🏆 Avaliação: 🟢 Em andamento normal
+  🤖 Confiança da IA: 92% (baseado em dados históricos)
 
-📋 当前阶段: 🛒 购物车功能开发 (阶段4/6)
-  ⏱️  阶段进度: ██████░░░░ 60%
-  📅 阶段周期: 2024-02-20 → 2024-03-05
-  ⚡ 剩余时间: 8天
-  🎯 关键里程碑: 购物车API完成
-  🤖 AI预测: 按时完成概率 85%
+📋 Fase Atual: 🛒 Desenvolvimento do Carrinho (Fase 4/6)
+  ⏱️  Progresso da Fase: ██████░░░░ 60%
+  📅 Ciclo: 20-02-2024 → 05-03-2024
+  ⚡ Tempo Restante: 8 dias
+  🎯 Marco Crítico: API do Carrinho concluída
+  🤖 Previsão IA: 85% de chance de concluir no prazo
 
-✅ 近期完成 (本周):
-  • ✅ 用户认证系统上线 (AI质量评分: 95%)
-  • ✅ 商品搜索功能优化 (性能提升40%)
-  • ✅ 数据库性能调优 (AI检测通过)
+✅ Concluído Recentemente (Esta semana):
+  • ✅ Autenticação online (Qualidade IA: 95%)
+  • ✅ Busca de produtos otimizada (+40% performance)
+  • ✅ Ajustes no banco de dados (Aprovado pela IA)
 
-🔄 正在进行 (今日重点):
-  • 🔄 购物车添加/删除功能 (80%, AI建议优化缓存)
-  • 🔄 库存管理系统集成 (45%, AI检测到同步问题)
-  • 🔄 前端购物车UI优化 (30%, AI推荐响应式改进)
+🔄 Em Andamento (Foco de hoje):
+  • 🔄 Adicionar/Remover itens (80%, IA sugere otimizar cache)
+  • 🔄 Integração com Estoque (45%, IA detectou problema de sincronia)
+  • 🔄 UI do Carrinho (30%, IA recomenda melhoria responsiva)
 
-📋 即将开始 (本周计划):
-  • 📋 订单生成流程设计 (AI模板已准备)
-  • 📋 支付接口预研 (AI推荐Stripe方案)
-  • 📋 移动端适配准备 (AI检测兼容性)
+📋 Próximas Tarefas (Planejado):
+  • 📋 Design do fluxo de pedidos (Template IA pronto)
+  • 📋 Pesquisa de APIs de pagamento (IA recomenda Stripe)
+  • 📋 Preparação de adaptação mobile (IA testando compatibilidade)
 
-⚠️  智能风险提醒:
-  • 🟡 支付接口审核可能延期2-3天 (基于历史数据)
-  • 🟡 第三方物流API文档待确认 (AI建议备选方案)
-  • 🔴 AI检测到数据库连接池可能不足
+⚠️ Alertas de Risco Inteligentes:
+  • 🟡 Aprovação da API de pagamento pode atrasar 2-3 dias
+  • 🟡 Documentação da API de logística pendente
+  • 🔴 IA detectou possível insuficiência no pool do banco de dados
 
-💡 AI智能建议:
-  • 🎯 优先完成购物车核心功能 (影响后续80%功能)
-  • 🚀 提前启动支付接口申请流程 (AI预测审核时间)
-  • 📱 考虑并行开发移动端适配 (团队资源允许)
-  • 🔧 建议增加Redis缓存层 (AI性能分析推荐)
+💡 Sugestões da IA:
+  • 🎯 Priorize o núcleo do Carrinho (afeta 80% das funções seguintes)
+  • 🚀 Inicie logo o processo de aprovação de pagamentos
+  • 📱 Considere desenvolvimento paralelo mobile
+  • 🔧 Sugestão de camada Redis (recomendado por análise de performance)
 
-🔗 智能链接:
-  • 📊 详细进度: /recommend
-  • 💾 项目记忆: /memory（可选）
-  • 🔄 切换阶段: /switch 5
-  • 🤖 AI深度分析: /analyze
+🔗 Links Inteligentes:
+  • 📊 Detalhes: /recommend
+  • 💾 Memória: /memory (opcional)
+  • 🔄 Mudar Fase: /switch 5
+  • 🤖 Análise Profunda: /analyze
 ```
 
-### 💡 /recommend - AI智能推荐系统
+### 💡 /recommend - Sistema de Recomendação Inteligente por IA
 
-**🎯 AI智能推荐类型：**
+**🎯 Tipos de Recomendação:**
 ```bash
-# 🎯 精确命令
-/recommend                 # 获取AI全面建议
+# 🎯 Comando exato
+/recommend                 # Obter sugestões abrangentes
 
-# 💬 自然语言
-给我一些智能建议           # AI通用建议
-下一步应该做什么？         # AI行动建议
-如何提高开发效率？         # AI效率建议
-有什么风险需要注意？       # AI风险提醒
+# 💬 Linguagem natural
+Dê-me algumas sugestões      # Sugestões gerais
+O que devo fazer agora?      # Sugestões de ação
+Como aumentar a eficiência?  # Sugestões de produtividade
+Quais riscos devo notar?     # Alertas de risco
 ```
 
-**📋 AI智能推荐报告示例：**
+**📋 Exemplo de Relatório de Recomendações:**
 ```
-🧠 AI智能推荐报告 - 基于机器学习分析
+🧠 Relatório de Recomendações por IA - Baseado em Machine Learning
 
-🤖 AI分析维度: 进度、质量、风险、效率、市场趋势
-📊 推荐信心度: 94% (基于1000+类似项目数据)
+🤖 Dimensões Analisadas: Progresso, Qualidade, Risco, Eficiência, Tendências
+📊 Confiança: 94% (baseado em mais de 1000 projetos similares)
 
-🎯 AI下一步行动建议:
-  1. 🔥 AI高优先级: 完成购物车核心功能
-     • AI预计耗时: 2-3天 (±4小时)
-     • 影响: 解锁后续订单流程
-     • AI建议: 先实现基础功能，后续优化UI
-     • 🤖 AI洞察: 类似项目此阶段完成率87%
+🎯 Próximos Passos Sugeridos:
+  1. 🔥 Alta Prioridade: Concluir núcleo do Carrinho
+     • Tempo Estimado: 2-3 dias (±4 horas)
+     • Impacto: Libera o fluxo de pedidos
+     • Dica: Implemente o básico primeiro, refine a UI depois
+     • 🤖 Insight: Projetos similares têm 87% de taxa de conclusão nesta fase
 
-  2. 🚀 AI并行推进: 支付接口申请
-     • AI预计耗时: 5-7个工作日审核
-     • 影响: 避免后期阻塞
-     • AI建议: 立即提交申请材料
-     • 🤖 AI洞察: 提前申请可降低延期风险60%
+  2. 🚀 Paralelização: Solicitação da API de Pagamentos
+     • Tempo Estimado: 5-7 dias úteis para aprovação
+     • Impacto: Evita bloqueios futuros
+     • Dica: Envie a documentação imediatamente
+     • 🤖 Insight: Solicitação antecipada reduz riscos de atraso em 60%
 
-🛠️ AI技术优化建议:
-  • 📈 性能: 考虑Redis缓存购物车数据 (AI性能分析推荐)
-  • 🔒 安全: 加强用户数据加密 (AI安全扫描建议)
-  • 📱 体验: 优化移动端响应速度 (AI用户行为分析)
+🛠️ Sugestões Técnicas:
+  • 📈 Performance: Use Redis para o Carrinho (recomendado por análise)
+  • 🔒 Segurança: Reforce criptografia de dados (sugerido por scan)
+  • 📱 Experiência: Otimize velocidade mobile (análise de comportamento)
 
-⚠️  AI智能风险预警:
-  • 🟡 中等风险: 第三方API依赖 (AI检测到潜在问题)
-  • 🟢 低风险: 当前技术栈稳定 (AI稳定性评估)
-  • 🔴 AI新发现: 数据库连接池可能不足
+⚠️ Alertas de Risco de IA:
+  • 🟡 Risco Médio: Dependência de API externa (problema potencial detectado)
+  • 🟢 Risco Baixo: Stack tecnológica estável (avaliação de estabilidade)
+  • 🔴 Nova Descoberta: Pool de conexões do BD pode ser insuficiente
 
-📚 AI个性化学习资源推荐:
-  • React性能优化最佳实践 (匹配度: 95%)
-  • 电商支付安全指南 (AI筛选推荐)
-  • AI推荐: 最新电商架构设计模式
+📚 Recursos de Aprendizado Personalizados:
+  • Melhores práticas de performance React (Afinidade: 95%)
+  • Guia de segurança em pagamentos e-commerce
+  • IA recomenda: Novos padrões de design para arquitetura e-commerce
 
-🎯 AI下次检查: 建议2天后再次运行 /recommend (AI学习周期优化)
+🎯 Próxima Verificação: Sugerido executar /recommend em 2 dias
 ```
 
-### 🔄 /switch - 智能阶段管理系统
+### 🔄 /switch - Sistema de Gestão Inteligente de Fases
 
-**🎯 智能切换方式：**
+**🎯 Formas de Troca:**
 ```bash
-# 🎯 精确切换
-/switch 2                  # 智能切换到第2阶段
-/switch 前端开发           # AI按名称智能切换
-/switch next               # AI智能切换到下一阶段
+# 🎯 Troca exata
+/switch 2                  # Mudar para fase 2
+/switch Desenvolvimento    # Mudar por nome da fase
+/switch next               # Mudar para a próxima fase
 
-# 💬 自然语言
-进入下一阶段               # AI自然切换
-我觉得可以开始后端开发了   # AI智能识别和切换
-跳到测试阶段               # AI直接跳转分析
+# 💬 Linguagem natural
+Ir para a próxima fase      # Troca natural
+Acho que podemos começar o backend  # Identificação e troca
+Pular para a fase de testes  # Salto com análise de IA
 ```
 
-**📋 AI智能阶段切换示例：**
+**📋 Exemplo de Troca de Fase:**
 ```
-🧠 AI智能阶段切换分析
+🧠 Análise Inteligente de Troca de Fase
 
-📍 当前阶段: 阶段3 - 开发实现 (75%完成)
-🎯 目标阶段: 阶段4 - 测试优化
-🤖 AI切换建议: 谨慎切换 (信心度: 78%)
+📍 Fase Atual: Fase 3 - Implementação (75% concluída)
+🎯 Fase Alvo: Fase 4 - Testes e Otimização
+🤖 Recomendação: Troca cautelosa (Confiança: 78%)
 
-✅ 阶段3 AI完成度检查:
-  • ✅ 核心功能开发完成 (AI代码质量评分: 92%)
-  • ✅ 代码审查通过 (AI安全扫描: 通过)
-  • ⚠️  文档更新待完成 (AI检测完成度: 60%)
-  • 🤖 AI新发现: 单元测试覆盖率仅65% (建议提升至80%)
+✅ Verificação de Conclusão da Fase 3:
+  • ✅ Funções centrais concluídas (Qualidade IA: 92%)
+  • ✅ Code Review aprovado (Segurança IA: OK)
+  • ⚠️ Atualização de documentação pendente (60% concluída)
+  • 🤖 Nova Descoberta: Cobertura de testes unitários em 65% (recomenda-se 80%)
 
-🚀 阶段4 AI准备就绪评估:
-  • 📋 测试用例已准备 (AI生成覆盖率: 85%)
-  • 🛠️ 测试环境已配置 (AI环境检测: 正常)
-  • 👥 测试团队已就位
-  • 🤖 AI建议: 增加性能测试用例
+🚀 Avaliação de Prontidão da Fase 4:
+  • 📋 Casos de teste preparados (Cobertura IA: 85%)
+  • 🛠️ Ambiente de teste configurado (Status: Normal)
+  • 👥 Equipe de QA posicionada
+  • 🤖 Dica: Adicione casos de teste de performance
 
-💡 AI智能切换建议:
-  🔴 不建议立即切换，原因:
-  • 文档完成度不足 (影响后续维护)
-  • 单元测试覆盖率偏低 (可能影响质量)
+💡 Parecer da IA:
+  🔴 Não recomenda troca imediata. Motivos:
+  • Documentação incompleta (afeta manutenção futura)
+  • Cobertura de testes baixa (pode comprometer qualidade)
   
-  🎯 AI推荐行动:
-  1. 完成文档更新 (AI预计时间: 2小时)
-  2. 提升测试覆盖率 (AI预计时间: 3小时)
-  3. AI代码质量最终检查
+  🎯 Ações Recomendadas:
+  1. Concluir documentação (Tempo estimado: 2 horas)
+  2. Aumentar cobertura de testes (Tempo estimado: 3 horas)
+  3. Verificação final de qualidade de código
   
-  ✅ 完成后切换成功率: 95%
+  ✅ Probabilidade de sucesso pós-correções: 95%
 
-❓ 确认切换? (y/n) 或输入 'ai-optimize' 让AI自动优化
+❓ Confirmar troca? (y/n) ou digite 'ai-optimize' para IA otimizar automaticamente
 ```
 
-### 💾 /memory - 智能记忆管理系统
+### 💾 /memory - Sistema de Gestão Inteligente de Memória
 
-> ℹ️ 区别说明（Recorder 与 Memory）
-> - Recorder（记录员系统）：负责“把事记好”—分类、归档、精准查（Facts/Decisions/TODO/Notes）。日常历史查询与继续任务，优先用 Recorder。
-> - Memory（可选）：负责“模糊/聚合地找到”—语义模糊搜索、跨项目/跨时间窗口检索、相似问题/方案聚合，并可批量把历史注入当前上下文。仅当你忘关键词、需要跨范围或做回顾总结时启用。
+> ℹ️ Diferença (Registrador vs Memória)
+> - **Registrador (Recorder)**: Focado em "anotar bem" — categorias, arquivamento, busca precisa (Fatos/Decisões/TODO/Notas). Use para consultas históricas diárias e continuação de tarefas.
+> - **Memória (Memory)**: Focado em "achar por similaridade" — busca semântica, busca entre projetos/janelas de tempo, agregação de soluções similares. Use quando esquecer palavras-chave ou precisar de resumos/revisões amplas.
 
-**🔍 智能记忆查询：**
+**🔍 Consultas de Memória:**
 ```bash
-# 🎯 精确命令
-/memory                    # 查看所有智能记忆
-/memory recent             # 查看最近AI学习记忆
-/memory search [关键词]    # AI智能搜索特定记忆
+# 🎯 Comando exato
+/memory                    # Ver toda a memória inteligente
+/memory recent             # Ver aprendizados recentes da IA
+/memory search [termo]     # Buscar memória específica
 
-# 💬 自然语言
-之前讨论过什么？           # AI历史回顾
-记住这个重要决策           # AI智能保存信息
-我们为什么选择React？      # AI决策回顾分析
+# 💬 Linguagem natural
+O que discutimos antes?     # Revisão histórica
+Lembre-se desta decisão     # Salvar informação importante
+Por que escolhemos React?   # Análise de decisão histórica
 ```
 
-**📋 AI智能记忆报告示例：**
+**📋 Exemplo de Relatório de Memória:**
 ```
-🧠 AI智能记忆系统报告
+🧠 Relatório do Sistema de Memória Inteligente
 
-📊 记忆统计:
-  💾 总记忆条目: 47条
-  🎯 决策记忆: 12条 (AI重要性评级)
-  📝 技术记忆: 23条 (AI分类整理)
-  💬 讨论记忆: 12条 (AI上下文关联)
-  🤖 AI学习记忆: 15条 (AI自主学习)
+📊 Estatísticas:
+  💾 Total de Itens: 47
+  🎯 Decisões: 12 (Classificadas por importância)
+  📝 Técnicas: 23 (Organizadas por categoria)
+  💬 Discussões: 12 (Contextualizadas)
+  🤖 Aprendizados IA: 15 (Aprendizado autônomo)
 
-🔍 最近重要记忆 (AI智能排序):
-  1. 🎯 技术选型决策 (2024-01-20)
-     "选择React而不是Vue，因为团队熟悉度更高"
-     🤖 AI影响评估: 高 (影响后续80%开发)
+🔍 Memórias Recentes Importantes:
+  1. 🎯 Escolha da Stack (20-01-2024)
+     "React em vez de Vue pela senioridade da equipe"
+     🤖 Impacto: Alto (afeta 80% do desenvolvimento)
      
-  2. 📊 架构设计决策 (2024-01-18)
-     "采用微服务架构，便于后期扩展"
-     🤖 AI风险评估: 中 (增加复杂度但提升可维护性)
+  2. 📊 Decisão de Arquitetura (18-01-2024)
+     "Microserviços para facilitar escalabilidade futura"
+     🤖 Risco: Médio (aumenta complexidade, melhora manutenção)
      
-  3. 💾 数据库选择 (2024-01-15)
-     "MySQL vs PostgreSQL，最终选择PostgreSQL"
-     🤖 AI性能预测: PostgreSQL在复杂查询上性能更优
+  3. 💾 Escolha de Banco de Dados (15-01-2024)
+     "PostgreSQL selecionado frente ao MySQL"
+     🤖 Previsão: PostgreSQL performa melhor em queries complexas
 
-🧠 AI智能关联分析:
-  • React选择 → 生态系统丰富 → 开发效率提升30%
-  • 微服务架构 → 团队协作 → 并行开发可能性
-  • PostgreSQL → 数据一致性 → 业务逻辑复杂度支持
+🧠 Análise de Associações da IA:
+  • Escolha React → Ecossistema rico → +30% eficiência
+  • Arquitetura Microserviços → Colaboração → Dev paralelo
+  • PostgreSQL → Consistência → Suporte a lógica complexa
 
-💡 AI记忆洞察:
-  • 🎯 决策一致性: 95% (技术栈选择逻辑一致)
-  • 🔄 决策演进: 发现3次重要调整，均基于实际需求
-  • 🚀 学习轨迹: AI检测到团队技术能力持续提升
+💡 Insights da IA:
+  • 🎯 Consistência de Decisão: 95% (lógica estável)
+  • 🔄 Evolução: 3 ajustes importantes baseados em requisitos reais
+  • 🚀 Trajetória: IA detectou aumento contínuo na capacidade técnica
 
-🔍 智能搜索建议:
-  • 搜索"性能优化"可找到相关决策和经验
-  • 搜索"团队协作"可回顾工作流程优化记录
-  • 搜索"风险"可查看AI风险评估历史
+🔍 Sugestões de Busca:
+  • Busque "performance" para ver decisões e experiências
+  • Busque "colaboração" para rever fluxos de trabalho
+  • Busque "risco" para ver histórico de avaliações
 
-💾 记忆管理操作:
-  • 输入"记住: [内容]"保存新的重要信息
-  • 输入"忘记: [关键词]"删除不再需要的记忆
-  • 输入"AI分析记忆"获取深度记忆分析报告
+💾 Operações de Gestão:
+  • Digite "Lembre: [conteúdo]" para salvar novo dado
+  • Digite "Esqueça: [termo]" para remover memórias
+  • Digite "Análise IA de memória" para relatório profundo
 ```
 
-### 🎯 AI智能高级命令组合
+### 🎯 Combinações de Comandos Inteligentes
 
-**💡 AI智能命令链式操作：**
+**💡 Operações em Cadeia:**
 ```bash
-# 🔄 AI连续操作
-/status && /recommend       # AI先分析状态，再智能推荐
-/memory search React && /recommend  # AI搜索React记忆后智能建议
+# 🔄 Operações Contínuas
+/status && /recommend       # Analisa status e sugere passos
+/memory search React && /recommend  # Busca memória de React e sugere
 
-# 🎯 AI条件操作
-/switch next if progress > 80%      # AI检测进度超过80%时智能切换
-/recommend if stuck                 # AI检测困难时智能建议
-/ai-analyze && /optimize            # AI深度分析后自动优化
+# 🎯 Operações Condicionais
+/switch next if progress > 80%      # Muda fase se progresso > 80%
+/recommend if stuck                 # Sugere se detectar dificuldades
+/ai-analyze && /optimize            # Analisa profundamente e otimiza
 ```
 
-**📋 AI智能组合操作示例：**
+**📋 Exemplo de Operação Combinada:**
 ```
-🧠 执行AI智能命令组合: /status && /recommend
+🧠 Executando combinação: /status && /recommend
 
-📊 [执行 AI /status]
-🤖 AI项目状态分析:
-当前项目进度: 78% (AI预测准确率: 94%)
-当前阶段: 开发实现 (AI质量评分: 89%)
-主要任务: 购物车功能开发
-🧠 AI洞察: 检测到3个潜在优化点
+📊 [Executando /status]
+🤖 Análise de Status:
+Progresso atual: 78% (Acurácia: 94%)
+Fase: Implementação (Nota de qualidade: 89%)
+Tarefa: Desenvolvimento do Carrinho
+🧠 Insight: 3 pontos de otimização detectados
 
-💡 [执行 AI /recommend]
-🤖 基于AI深度分析，智能建议:
-1. 完成购物车核心功能 (剩余22%, AI预计6小时)
-2. 准备下阶段AI测试用例 (AI自动生成80%)
-3. 考虑AI性能优化方案 (AI检测到瓶颈点)
-4. 🆕 AI新建议: 增加错误处理机制 (AI风险评估)
+💡 [Executando /recommend]
+🤖 Sugestões baseadas em análise profunda:
+1. Concluir núcleo do Carrinho (faltam 22%, aprox. 6h)
+2. Preparar casos de teste (IA gera 80% automaticamente)
+3. Considerar plano de performance (gargalo detectado)
+4. 🆕 Nova: Adicionar tratamento de erros (avaliação de risco)
 
-🚀 AI组合智能建议: 
-建议专注完成当前阶段，AI将自动为测试阶段准备:
-• AI生成测试用例 (预计覆盖率: 90%)
-• AI性能基准测试准备
-• AI代码质量最终检查
+🚀 Sugestão Combinada: 
+Foquem em terminar a fase atual; a IA preparará para os testes:
+• Geração de casos de teste (Cobertura esperada: 90%)
+• Preparação de benchmarks de performance
+• Verificação final de qualidade de código
 
-🤖 AI下一步自动化: 输入 '/ai-autopilot' 启用AI自动驾驶模式
+🤖 Automação: Digite '/ai-autopilot' para modo de condução autônoma
 ```
 
-**🔄 AI智能工作流组合：**
+**🔄 Combinações de Fluxo:**
 ```bash
-# 🔄 AI工作流组合
-/status && /recommend      # AI状态分析+智能建议
-项目状态如何？下一步做什么？ # AI自然语言理解组合
+# 🔄 Workflows
+/status && /recommend      # Análise + sugestão
+Como está o projeto? Próximos passos? # Compreensão natural combinada
 
-# 📊 AI深度分析
-详细分析当前项目风险       # AI风险智能分析
-评估项目完成质量           # AI质量智能评估
-/ai-predict && /optimize   # AI预测+自动优化
+# 📊 Análise Profunda
+Análise detalhada de riscos       # Análise inteligente de risco
+Avaliar qualidade da entrega      # Avaliação inteligente de qualidade
+/ai-predict && /optimize   # Previsão + otimização automática
 ```
 
-### 🧠 AI项目类型智能识别
+### 🧠 Identificação Inteligente do Tipo de Projeto
 
-> **🤖 AI识别引擎**: 基于深度学习和自然语言处理，智能识别项目类型并推荐最佳技术方案
+> **🤖 Mecanismo de Identificação**: Baseado em deep learning e processamento de linguagem natural (NLP), identifica o tipo de projeto e recomenda a melhor stack técnica.
 
-#### 📋 AI支持的项目类型
+#### 📋 Tipos de Projeto Suportados
 
-| 项目类型 | 🔍 AI触发关键词 | 🛠️ AI推荐技术栈 | ⭐ 复杂度 | 🎯 AI典型特征 |
+| Tipo de Projeto | 🔍 Palavras-chave | 🛠️ Stack Recomendada | ⭐ Complexidade | 🎯 Características |
 |---------|-------------|-------------|---------|----------|
-| 🌐 **Web应用** | 网站、Web、前端、后端、全栈、电商、博客 | Next.js/React + Node.js/Python | ⭐⭐⭐ | 浏览器访问、SEO优化、AI性能分析 |
-| 📱 **移动应用** | APP、移动、手机、iOS、Android、小程序 | Flutter/React Native | ⭐⭐⭐⭐ | 原生体验、离线功能、AI用户行为分析 |
-| 💻 **桌面应用** | 桌面、客户端、软件、工具、系统 | Electron/Tauri/Qt | ⭐⭐⭐ | 本地安装、系统集成、AI智能更新 |
-| 📊 **数据分析** | 数据、分析、可视化、报表、BI、仪表板 | Python/R + Streamlit | ⭐⭐ | 数据洞察、决策支持、AI预测模型 |
-| 🤖 **AI/ML项目** | AI、机器学习、深度学习、模型、算法 | Python + PyTorch/TensorFlow | ⭐⭐⭐⭐⭐ | 智能预测、自动化、AI模型优化 |
-| 🎮 **游戏开发** | 游戏、娱乐、互动、3D、VR | Unity/Unreal/Godot | ⭐⭐⭐⭐ | 实时渲染、物理引擎、AI智能NPC |
-| 🔗 **区块链** | 区块链、智能合约、DeFi、NFT、Web3 | Solidity + Web3.js | ⭐⭐⭐⭐⭐ | 去中心化、加密安全、AI风险评估 |
-| 🏢 **企业系统** | ERP、CRM、OA、管理系统、企业级 | Java/.NET + 微服务 | ⭐⭐⭐⭐ | 高并发、数据一致性、AI智能决策 |
+| 🌐 **Aplicação Web** | Site, Web, Frontend, Backend, Fullstack, E-commerce, Blog | Next.js/React + Node.js/Python | ⭐⭐⭐ | Acesso via navegador, SEO, Performance |
+| 📱 **App Mobile** | APP, Mobile, iOS, Android, Celular | Flutter/React Native | ⭐⭐⭐⭐ | Nativo, Offline, Análise de comportamento |
+| 💻 **App Desktop** | Desktop, Cliente, Software, Ferramenta, Sistema | Electron/Tauri/Qt | ⭐⭐⭐ | Instalação local, Integração com sistema |
+| 📊 **Análise de Dados** | Dados, Análise, Visualização, BI, Dashboard | Python/R + Streamlit | ⭐⭐ | Insights, Decisão, Modelos preditivos |
+| 🤖 **IA/ML** | AI, Machine Learning, Deep Learning, Modelo, Algoritmo | Python + PyTorch/TensorFlow | ⭐⭐⭐⭐⭐ | Previsão, Automação, Otimização de modelos |
+| 🎮 **Games** | Jogo, Game, 3D, VR, Interativo | Unity/Unreal/Godot | ⭐⭐⭐⭐ | Renderização real-time, Física, NPCs |
+| 🔗 **Blockchain** | Blockchain, Smart Contract, DeFi, NFT, Web3 | Solidity + Web3.js | ⭐⭐⭐⭐⭐ | Descentralização, Segurança, Auditoria |
+| 🏢 **Sistemas Corporativos** | ERP, CRM, OA, Gestão, Enterprise | Java/.NET + Microserviços | ⭐⭐⭐⭐ | Alta concorrência, Consistência, Decisão |
 
-#### 🔍 AI智能识别示例
+#### 🔍 Exemplos de Identificação Inteligente
 
-**🌐 AI Web应用智能识别：**
+**🌐 Identificação Web:**
 ```bash
-# ✅ AI高准确率识别 (准确率: 95%+)
-"我要做一个在线教育平台" → 🧠 AI分析 → 🌐 Web应用 → Next.js + Node.js + PostgreSQL
-  🤖 AI洞察: 教育平台需要视频处理和用户管理
-  🎯 AI建议: 增加CDN和实时通信功能
+# ✅ Alta Precisão (95%+)
+"Quero fazer uma plataforma de educação online" → 🧠 IA: 🌐 Web → Next.js + Node.js + PostgreSQL
+  🤖 Insight: Plataformas de ensino exigem processamento de vídeo e gestão de usuários
+  🎯 Dica: Adicione CDN e comunicação em tempo real
 
-"开发企业官网和博客" → 🧠 AI分析 → 🌐 Web应用 → Gatsby + Headless CMS
-  🤖 AI洞察: 静态站点生成，SEO友好
-  🎯 AI建议: 集成Google Analytics和搜索优化
+"Desenvolver site corporativo e blog" → 🧠 IA: 🌐 Web → Gatsby + Headless CMS
+  🤖 Insight: Site estático, foco em SEO
+  🎯 Dica: Integrar Analytics e otimização de busca
 
-"电商网站，支持支付" → 🧠 AI分析 → 🌐 Web应用 → React + Express + Stripe
-  🤖 AI洞察: 电商核心是支付安全和用户体验
-  🎯 AI建议: 增加购物车持久化和推荐系统
-
-# 🎯 AI复杂场景智能识别
-"多租户SaaS平台" → 🧠 AI深度分析 → 🌐 Web应用 + 🏢 企业系统 → 微服务架构
-  🤖 AI架构建议: 数据隔离 + 权限管理 + 弹性扩展
+"Site de vendas com pagamentos" → 🧠 IA: 🌐 Web → React + Express + Stripe
+  🤖 Insight: Foco em segurança de pagamento e UX
+  🎯 Dica: Persistência de carrinho e sistema de recomendação
 ```
 
-**📱 AI移动应用智能识别：**
+**📱 Identificação Mobile:**
 ```bash
-# ✅ AI平台智能推荐 (基于性能和开发效率分析)
-"健身追踪APP，支持iOS和Android" → 🧠 AI分析 → 📱 移动应用 → Flutter
-  🤖 AI洞察: 跨平台开发效率高，原生性能好
-  🎯 AI建议: 集成HealthKit和Google Fit
-  📊 AI成功率预测: 85% (基于类似项目数据)
-  ⏰ AI开发周期: 6-8周 (AI智能评估)
+# ✅ Recomendação Inteligente de Plataforma
+"App fitness para iOS e Android" → 🧠 IA: 📱 Mobile → Flutter
+  🤖 Insight: Eficiência multiplataforma, performance nativa
+  🎯 Dica: Integrar HealthKit e Google Fit
+  📊 Previsão: 85% de sucesso (baseado em dados)
+  ⏰ Ciclo: 6-8 semanas (estimativa IA)
 
-"仅iOS的记账软件" → 🧠 AI分析 → 📱 移动应用 → Swift + SwiftUI
-  🤖 AI洞察: 单平台可充分利用iOS特性
-  🎯 AI建议: 使用Core Data和iCloud同步
-  📱 AI用户体验: 原生体验最佳，App Store推荐率高
-  🔒 AI隐私优势: 本地数据处理，隐私保护优秀
+"App de finanças exclusivo iOS" → 🧠 IA: 📱 Mobile → Swift + SwiftUI
+  🤖 Insight: Foco total em recursos nativos iOS
+  🎯 Dica: Usar Core Data e iCloud
+  📱 UX: Experiência nativa superior, melhor chance na App Store
+  🔒 Privacidade: Processamento local, proteção de dados excelente
 
-"微信小程序商城" → 🧠 AI分析 → 📱 移动应用 → 小程序原生开发
-  🤖 AI洞察: 微信生态内流量优势
-  🎯 AI建议: 集成微信支付和社交分享
-  📈 AI市场分析: 微信用户12亿+，获客成本低
-  🚀 AI发布优势: 无需应用商店审核，快速上线
-
-# 🎯 AI功能导向智能推荐
-"需要相机和GPS的APP" → 🧠 AI分析 → 📱 移动应用 → React Native + 原生模块
-  🤖 AI洞察: 硬件功能需要原生支持
-  🎯 AI建议: 混合开发模式，核心功能原生实现
-  🔧 AI架构建议: 原生模块封装 + JS Bridge通信
-  ⚡ AI性能优化: 关键路径原生化，UI层跨平台
+"Loja em Mini Programa WeChat" → 🧠 IA: 📱 Mobile → Nativo WeChat
+  🤖 Insight: Vantagem de tráfego no ecossistema
+  🎯 Dica: Integrar WeChat Pay e compartilhamento social
 ```
 
-**📊 AI数据分析智能识别：**
+**📊 Identificação de Análise de Dados:**
 ```bash
-# ✅ AI业务场景智能识别
-"销售数据分析和预测" → 🧠 AI分析 → 📊 数据分析 → Python + Scikit-learn
-  🤖 AI洞察: 时间序列预测 + 业务指标分析
-  🎯 AI建议: 使用Prophet进行趋势预测
-  📊 AI成功率预测: 88% (基于销售预测项目数据)
-  ⏰ AI开发周期: 4-6周 (AI智能评估)
-  💰 AI ROI预测: 销售效率提升30%
+# ✅ Identificação de Cenário de Negócio
+"Análise e previsão de vendas" → 🧠 IA: 📊 Dados → Python + Scikit-learn
+  🤖 Insight: Séries temporais + métricas de negócio
+  🎯 Dica: Usar Prophet para tendências
+  💰 Previsão ROI: +30% na eficiência de vendas
 
-"实时监控仪表板" → 🧠 AI分析 → 📊 数据分析 → Streamlit + Redis
-  🤖 AI洞察: 实时性要求高，需要缓存层
-  🎯 AI建议: WebSocket实时推送 + 异常检测
-  📈 AI性能预测: 支持1000+并发用户
-  🔔 AI智能预警: 自动异常检测和通知
-  ⚡ AI响应时间: <100ms (AI优化后)
-
-"财务报表自动化" → 🧠 AI分析 → 📊 数据分析 → Python + Pandas + Excel
-  🤖 AI洞察: 数据处理 + 格式化输出
-  🎯 AI建议: 定时任务 + 邮件自动发送
-  🤖 AI自动化程度: 95% (AI智能处理)
-  📊 AI准确率: 99.5% (AI数据验证)
-  ⏰ AI处理速度: 传统方式的10倍
-
-# 🎯 AI技术深度智能识别
-"大数据处理和机器学习" → 🧠 AI深度分析 → 📊 数据分析 + 🤖 AI/ML → Spark + MLflow
-  🤖 AI架构洞察: 分布式计算 + 模型生命周期管理
-  🎯 AI建议: Kubernetes部署 + GPU加速
-  📊 AI扩展性: 支持PB级数据处理
-  🚀 AI模型管理: 自动化训练和部署
-  💡 AI创新点: AutoML + 模型监控
+"Dashboard de monitoramento em tempo real" → 🧠 IA: 📊 Dados → Streamlit + Redis
+  🤖 Insight: Requisito de baixa latência, camada de cache necessária
+  🎯 Dica: WebSocket + Detecção de anomalias
+  ⚡ Resposta: <100ms (pós-otimização)
 ```
 
-#### 🧠 AI识别算法特点
+#### 🧠 Características do Algoritmo de Identificação
 
-- **🎯 AI上下文理解**: 基于深度学习分析完整项目描述，智能理解用户真实意图
-- **🔄 AI多类型融合**: 自动识别跨领域项目，智能推荐混合技术栈和架构方案
-- **📈 AI复杂度评估**: 基于机器学习模型自动评估项目复杂度和开发周期
-- **🛠️ AI技术栈优化**: 基于最新技术趋势、最佳实践和成功案例智能推荐
-- **⚡ AI性能考量**: 智能考虑性能、可维护性、团队技能、成本效益等多维度因素
-- **🤖 AI学习进化**: 基于项目反馈持续优化识别准确率和推荐质量
-- **📊 AI数据驱动**: 基于1000+项目数据训练，提供数据驱动的决策支持
-- **🎯 AI个性化**: 根据团队技能和项目历史提供个性化技术方案推荐
+- **🎯 Contexto**: Analisa a descrição completa para entender a real intenção.
+- **🔄 Fusão**: Identifica projetos híbridos e recomenda stacks mistas.
+- **📈 Avaliação**: Estima complexidade e ciclos com base em modelos de ML.
+- **🛠️ Otimização**: Sugere tecnologias baseadas em tendências e sucessos anteriores.
+- **⚡ Multidimensional**: Considera custo, manutenção, habilidades da equipe e performance.
+- **🤖 Evolução**: Melhora a precisão continuamente através do feedback dos projetos.
 
-## 🔄 AI工作流智能集成
+## 🔄 Integração Inteligente de Fluxo de Trabalho
 
-> **🤖 AI驱动**: 基于机器学习和深度分析，提供智能化工作流编排和自动化决策支持
+> **🤖 Orientado por IA**: Orquestração inteligente de ferramentas e suporte à decisão baseado em análise profunda.
 
-### 🛠️ AI MCP工具智能集成
+### 🛠️ Integração Inteligente de Ferramentas MCP
 
-**🧠 AI智能工具编排：**
-超级大脑系统 2.4.1 Intelligent 会AI智能编排以下MCP工具：
-- **🔄 AI反馈增强工具**：AI实时收集和分析用户反馈，智能优化建议
-- **📁 AI文件系统工具**：AI智能化文件操作，自动代码组织和结构优化
-- **💾 AI记忆管理工具**：AI智能保存项目上下文，自动关联历史决策
-- **🔗 AI GitHub集成工具**：AI智能代码仓库管理，自动化PR和代码审查
-- **📊 AI数据分析工具**：AI实时项目数据分析，智能性能监控
-- **🚀 AI部署工具**：AI智能化CI/CD，自动优化部署策略
+**🧠 Orquestração de Ferramentas:**
+O Sistema Super Cérebro 2.4.1 coordena inteligentemente:
+- **🔄 Ferramenta de Feedback**: Coleta e analisa feedback para otimizar sugestões.
+- **📁 Ferramenta de Sistema de Arquivos**: Operações inteligentes, organização e refatoração.
+- **💾 Ferramenta de Memória**: Preserva contexto e associa decisões históricas.
+- **🔗 Integração GitHub**: Gestão de repositórios, PRs e revisões automáticas.
+- **📊 Ferramenta de Análise de Dados**: Monitoramento de performance e dados do projeto.
+- **🚀 Ferramenta de Deploy**: CI/CD inteligente e otimização de estratégias de lançamento.
 
-**🎯 AI工具智能特色：**
-- 🤖 **AI自动编排**: 根据项目阶段智能选择和配置工具
-- 📈 **AI性能优化**: 实时监控工具使用效率，自动优化配置
-- 🔄 **AI学习进化**: 基于使用反馈持续优化工具集成策略
-- 🎛️ **AI智能调度**: 根据任务优先级智能分配工具资源
+### 🤖 Sistema Inteligente de Suporte à Decisão
 
-### 🤖 AI智能决策支持系统
-
-**🎯 AI技术选型智能建议：**
+**🎯 Sugestões de Escolha Técnica:**
 ```bash
-# 🧠 AI智能技术栈推荐
-帮我选择最适合的技术栈           # AI基于项目特点智能分析
-推荐开发框架                     # AI考虑团队技能和项目需求
-对比React vs Vue               # AI提供详细对比和推荐理由
+# 🧠 Recomendação de Stack
+Escolha a melhor stack para este projeto  # IA analisa características
+Recomende um framework                    # IA avalia equipe e requisitos
+Comparar React vs Vue                     # IA fornece prós/contras e veredito
 
-# 🤖 AI响应示例
-🧠 AI技术栈智能分析完成！
-📊 推荐: React + TypeScript + Next.js
-🎯 推荐理由: 
-  • 团队React熟练度: 85%
-  • 项目SEO需求: 高 (Next.js优势)
-  • TypeScript: 提升代码质量40%
-  • 生态系统: 丰富 (AI评分: 95/100)
-💡 AI信心度: 92% (基于类似项目成功率)
+# 🤖 Exemplo de Resposta
+🧠 Análise de stack concluída!
+📊 Recomendação: React + TypeScript + Next.js
+🎯 Motivos: 
+  • Senioridade da equipe: 85%
+  • Necessidade de SEO: Alta (Vantagem Next.js)
+  • TypeScript: +40% qualidade de código
+  • Ecossistema: Rico (Nota IA: 95/100)
+💡 Confiança: 92%
 ```
 
-**🏗️ AI架构设计智能建议：**
+**🏗️ Sugestões de Design de Arquitetura:**
 ```bash
-# 🧠 AI架构智能分析
-单体还是微服务？                 # AI基于项目规模和团队能力分析
-前后端分离方案                   # AI推荐最佳分离策略
-数据库选择建议                   # AI基于数据特点智能推荐
+# 🧠 Análise de Arquitetura
+Monolito ou Microserviços?           # IA analisa escala e equipe
+Esquema de separação frontend/backend # IA recomenda melhor estratégia
+Sugestão de banco de dados           # IA recomenda baseado nos dados
 
-# 🤖 AI架构分析示例
-🧠 AI架构智能分析结果：
-📊 推荐: 微服务架构
-🎯 AI分析依据:
-  • 项目规模: 大型 (AI复杂度评分: 8/10)
-  • 团队规模: 10+ (适合微服务协作)
-  • 扩展需求: 高 (AI预测增长率: 300%)
-  • 技术债务风险: 微服务架构降低60%
-⚠️  AI风险提醒: 初期复杂度增加，建议分阶段实施
-💡 AI实施建议: 先单体MVP，后逐步拆分微服务
+# 🤖 Exemplo de Resposta
+🧠 Resultado da análise de arquitetura:
+📊 Recomendação: Microserviços
+🎯 Base da IA:
+  • Escala: Grande (Complexidade: 8/10)
+  • Equipe: 10+ pessoas (Ideal para microserviços)
+  • Expansão: Alta (Crescimento previsto: 300%)
+  • Risco de Dívida Técnica: Redução de 60%
+⚠️ Aviso: Aumenta complexidade inicial; sugere-se implementação gradual
+💡 Dica: Comece com Monolito MVP, depois decomponha
 ```
 
-**⚡ AI开发流程智能优化：**
+**⚡ Otimização de Processos de Desenvolvimento:**
 ```bash
-# 🧠 AI流程智能优化
-敏捷开发流程优化                 # AI基于团队特点定制敏捷流程
-CI/CD智能配置建议               # AI自动生成最佳CI/CD配置
-团队协作效率提升                 # AI分析协作瓶颈，提供优化方案
+# 🧠 Otimização de Processos
+Otimizar fluxo ágil                 # IA customiza para a equipe
+Sugestão de CI/CD                   # IA gera configuração ideal
+Melhorar colaboração da equipe      # IA identifica gargalos e sugere soluções
 
-# 🤖 AI流程优化示例
-🧠 AI敏捷流程智能优化方案：
-📊 当前效率评分: 72/100
-🎯 AI优化建议:
-  • Sprint周期: 2周 → 1周 (AI预测效率提升25%)
-  • 每日站会: 15分钟 → 10分钟 (AI时间优化)
-  • 代码审查: 人工 → AI辅助 (效率提升50%)
-  • 测试策略: 手动 → 80%自动化 (质量提升40%)
-🚀 AI预期效果: 整体开发效率提升35%
-⏰ AI实施周期: 2周适应期，4周见效
+# 🤖 Exemplo de Resposta
+🧠 Plano de otimização de fluxo ágil:
+📊 Nota de eficiência atual: 72/100
+🎯 Sugestões da IA:
+  • Ciclo de Sprint: 2 semanas → 1 semana (+25% eficiência prevista)
+  • Daily: 15 min → 10 min (Otimização de tempo)
+  • Code Review: Manual → IA Assistida (+50% eficiência)
+  • Testes: Manual → 80% Automação (+40% qualidade)
+🚀 Expectativa: +35% eficiência global
 ```
 
-**🔄 AI智能工作流编排：**
-```bash
-# 🧠 AI自动化工作流
-启动AI自动化开发流程             # AI全程自动化项目管理
-开启AI智能监控                   # AI实时监控项目健康度
-AI自动优化建议                   # AI主动发现并解决问题
+## 📊 Monitoramento Inteligente de Status
 
-# 🤖 AI工作流特色
-🎯 AI智能任务分解: 自动将复杂任务分解为可执行步骤
-📊 AI实时进度跟踪: 智能监控每个任务进度和质量
-⚡ AI瓶颈智能识别: 自动发现开发瓶颈并提供解决方案
-🔄 AI自适应调整: 根据实际进度智能调整计划和资源分配
-```
+### 🔍 Verificação de Saúde do Sistema
 
-## 📊 AI状态智能监控
+**🤖 Indicadores em Tempo Real:**
+- 📈 Progresso do Projeto (Acurácia de previsão: 94%)
+- 🎯 Nota de Qualidade de Código (Análise multidimensional)
+- 👥 Eficiência de Colaboração (Análise de padrões de interação)
+- 💳 Nível de Dívida Técnica (Detecção automática)
+- 🚀 Métricas de Performance (Comparação com benchmarks)
+- 🔒 Riscos de Segurança (Avaliação automatizada)
 
-### 🔍 AI系统健康智能检查
-
-**🤖 AI实时监控指标：**
-- 📈 项目进度智能完成度 (AI预测准确率: 94%)
-- 🎯 代码质量AI评分 (多维度智能分析)
-- 👥 团队协作AI效率评估 (实时协作模式分析)
-- 💳 技术债务AI智能水平评估 (自动化债务检测)
-- 🚀 性能指标AI实时监控 (智能性能基准对比)
-- 🔒 安全风险AI智能扫描 (自动化安全评估)
-
-**🚨 AI智能预警系统：**
-- ⏰ AI进度延迟智能预警 (提前3-5天预测)
-- 📉 AI质量下降智能提醒 (实时质量趋势分析)
-- 🔍 AI资源瓶颈智能识别 (自动化瓶颈检测)
-- ⚠️ AI风险等级智能评估 (多维度风险模型)
-- 🎯 AI性能异常智能检测 (基线偏差自动识别)
-- 💡 AI优化机会智能发现 (主动优化建议)
+**🚨 Sistema de Alerta Antecipado:**
+- ⏰ Alerta de Atraso (Previsão com 3-5 dias de antecedência)
+- 📉 Queda de Qualidade (Análise de tendência em tempo real)
+- 🔍 Gargalos de Recursos (Identificação automática)
+- ⚠️ Avaliação de Nível de Risco (Modelo multidimensional)
+- 🎯 Anomalias de Performance (Desvios de baseline)
+- 💡 Oportunidades de Otimização (Sugestões proativas)
 
 ```bash
-# 🧠 AI智能系统状态查询
-系统状态                      # AI全面健康检查
-大脑状态                      # AI智能核心状态
-/ai-health                   # AI深度健康分析
+# 🧠 Consulta de Status de Saúde
+Status do sistema                # Check-up geral
+Status do cérebro                # Status do núcleo de IA
+/ai-health                       # Análise profunda de saúde
 
-# 📊 AI性能智能监控
-响应时间如何                  # AI性能智能分析
-工具使用情况                  # AI工具效率评估
-/ai-performance              # AI性能深度报告
+# 📊 Monitoramento de Performance
+Como está o tempo de resposta    # Análise de performance
+Uso das ferramentas              # Eficiência das ferramentas
+/ai-performance                  # Relatório profundo de performance
 
-# 🎯 AI项目质量智能评估
-项目质量如何                  # AI质量智能评分
-完成度评估                    # AI进度智能分析
-/ai-quality                  # AI质量深度检测
+# 🎯 Avaliação de Qualidade
+Qual a qualidade do projeto      # Nota de qualidade
+Avaliação de conclusão           # Análise de progresso
+/ai-quality                      # Verificação profunda de qualidade
 ```
 
-**📊 AI智能监控示例：**
+**📊 Exemplo de Monitoramento:**
 ```
-🧠 AI系统健康智能报告
-📅 监控时间: 2024-01-20 14:30
+🧠 Relatório de Saúde do Sistema
+📅 Data: 20-01-2024 14:30
 
-📊 AI核心指标:
-  ✅ 项目进度: 78% (AI预测: 按时完成概率 89%)
-  ✅ 代码质量: 92/100 (AI评估: 优秀)
-  ⚠️  团队效率: 76% (AI建议: 优化协作流程)
-  ✅ 技术债务: 低风险 (AI评分: 8.5/10)
-  ✅ 性能指标: 正常 (AI基准对比: 超出平均20%)
-  ✅ 安全状态: 安全 (AI扫描: 无高危漏洞)
+📊 Indicadores Principais:
+  ✅ Progresso: 78% (Chance de entrega no prazo: 89%)
+  ✅ Qualidade: 92/100 (Avaliação: Excelente)
+  ⚠️  Eficiência da Equipe: 76% (Sugestão: Otimizar fluxos)
+  ✅ Dívida Técnica: Baixo risco (Nota: 8.5/10)
+  ✅ Performance: Normal (+20% acima da média)
+  ✅ Segurança: Seguro (Nenhum bug crítico)
 
-🤖 AI智能洞察:
-  • 开发速度稳定，质量保持高水准
-  • 建议优化团队沟通频率 (效率可提升15%)
-  • 下周可能遇到API集成挑战 (AI预测)
+🤖 Insights da IA:
+  • Velocidade estável, qualidade mantida alta
+  • Recomenda-se aumentar frequência de sincronia (+15% eficiência)
+  • Possível desafio de integração de API na próxima semana (previsão)
   
-🎯 AI行动建议:
-  1. 增加每日同步会议 (AI推荐: 10分钟)
-  2. 提前准备API文档 (AI风险缓解)
-  3. 安排代码审查 (AI质量保障)
+🎯 Sugestões de Ação:
+  1. Aumentar reuniões diárias de sincronia (10 min)
+  2. Preparar documentação de API antecipadamente
+  3. Agendar revisão de código focada
 ```
 
-### 📈 AI用户反馈智能系统
+### 📈 Sistema Inteligente de Feedback do Usuário
 
-**🤖 AI反馈收集智能机制：**
-- 📊 AI阶段性满意度智能调查 (个性化问题生成)
-- ⚡ AI实时问题智能反馈 (自动问题分类)
-- 💡 AI改进建议智能收集 (智能建议优先级排序)
-- 🎯 AI使用体验智能评估 (多维度体验分析)
-- 🔄 AI持续学习反馈循环 (自动优化机制)
+**🤖 Mecanismos de Coleta:**
+- 📊 Pesquisas de satisfação por fase (Questões personalizadas)
+- ⚡ Feedback de problemas em tempo real (Classificação automática)
+- 💡 Coleta de sugestões de melhoria (Priorização inteligente)
+- 🎯 Avaliação da experiência de uso (Análise multidimensional)
+- 🔄 Ciclo de aprendizado contínuo (Otimização automática)
 
 ```bash
-# 🤖 AI智能反馈提供
-我觉得这个建议很好          # AI正面反馈学习
-这个功能需要改进            # AI改进点智能识别
-/ai-feedback [详细反馈]     # AI结构化反馈收集
+# 🤖 Fornecer Feedback
+Achei esta sugestão ótima          # Aprendizado positivo
+Esta função precisa melhorar       # Identificação de pontos de melhoria
+/ai-feedback [feedback detalhado]  # Coleta estruturada
 
-# 💡 AI智能建议收集
-我希望增加XX功能            # AI功能需求智能分析
-能否优化XX流程              # AI流程优化智能建议
-/ai-suggest [具体建议]      # AI建议智能处理
+# 💡 Fornecer Sugestões
+Espero adicionar a função XX       # Análise de requisitos
+Pode otimizar o processo XX?       # Sugestão de fluxo
+/ai-suggest [sugestão específica]  # Processamento de sugestão
 
-# 📊 AI反馈智能查询
-我的反馈处理得怎么样？      # AI反馈处理状态查询
-/feedback-status            # AI反馈处理进度
+# 📊 Consultar Status de Feedback
+Como está o processamento do meu feedback? # Status da solicitação
+/feedback-status                   # Progresso do feedback
 ```
 
-**🧠 AI反馈智能处理流程：**
-1. **AI智能分类和优先级排序**
-   - 🤖 自动情感分析和问题分类
-   - 📊 AI智能优先级评分 (紧急度 × 影响度)
-   - 🎯 AI相似问题智能聚合
+**🧠 Fluxo de Processamento de Feedback:**
+1. **Classificação e Priorização Inteligente**
+   - Análise de sentimento e categorização automática.
+   - Pontuação de prioridade (Urgência × Impacto).
+   - Agregação de problemas similares.
 
-2. **AI智能分析和解决方案生成**
-   - 🧠 AI根据历史数据智能分析问题根因
-   - 💡 AI自动生成多种解决方案
-   - 📈 AI评估解决方案成功率和成本
+2. **Análise e Geração de Soluções**
+   - Identificação da causa raiz baseada em histórico.
+   - Geração automática de múltiplas soluções.
+   - Avaliação de taxa de sucesso e custo.
 
-3. **AI智能实施改进和效果验证**
-   - 🚀 AI自动化实施可行解决方案
-   - 📊 AI实时监控改进效果
-   - 🎯 AI智能A/B测试验证
+3. **Implementação e Validação**
+   - Execução automática de soluções viáveis.
+   - Monitoramento de efeitos em tempo real.
+   - Validação por testes A/B inteligentes.
 
-4. **AI持续优化和智能学习**
-   - 🔄 AI自动更新知识库和最佳实践
-   - 📈 AI持续优化反馈处理算法
-   - 🧠 AI学习用户偏好和行为模式
+4. **Otimização e Aprendizado Contínuo**
+   - Atualização automática da base de conhecimento.
+   - Refinamento de algoritmos de processamento.
+   - Aprendizado de padrões e preferências do usuário.
 
-**💬 AI反馈智能示例：**
+**💬 Exemplo de Feedback:**
 ```
-🤖 AI反馈智能处理报告
-📅 处理时间: 2024-01-20 15:45
+🤖 Relatório de Processamento de Feedback
+📅 Data: 20-01-2024 15:45
 
-📊 AI反馈分析:
-  📝 收到反馈: "代码生成速度有点慢"
-  🎯 AI分类: 性能优化 (优先级: 高)
-  😊 AI情感分析: 中性建议 (满意度: 7/10)
+📊 Análise do Feedback:
+  📝 Conteúdo: "A geração de código está um pouco lenta"
+  🎯 Categoria: Otimização de Performance (Prioridade: Alta)
+  😊 Sentimento: Sugestão neutra (Satisfação: 7/10)
   
-🧠 AI智能分析:
-  🔍 问题根因: 代码复杂度增加 + 网络延迟
-  📊 影响范围: 15%用户反馈类似问题
-  ⏰ AI预估解决时间: 2-3天
+🧠 Análise da IA:
+  🔍 Causa: Aumento na complexidade + Latência de rede
+  📊 Impacto: 15% dos usuários relataram o mesmo
+  ⏰ Tempo de correção: 2-3 dias
   
-💡 AI解决方案 (成功率预测):
-  1. 优化代码生成算法 (成功率: 85%)
-  2. 增加本地缓存机制 (成功率: 92%)
-  3. 升级服务器配置 (成功率: 78%)
+💡 Soluções (Previsão de Sucesso):
+  1. Otimizar algoritmo de geração (85%)
+  2. Adicionar mecanismo de cache local (92%)
+  3. Upgrade na configuração do servidor (78%)
   
-🚀 AI推荐方案: 方案2 (最佳性价比)
-📈 AI预期效果: 速度提升40%，用户满意度提升至9/10
+🚀 Solução Recomendada: Opção 2 (Melhor custo-benefício)
+📈 Efeito Esperado: +40% velocidade, Satisfação subindo para 9/10
 ```
 
-## 🎯 AI最佳实践
+## 🎯 Melhores Práticas de IA
 
-> **🏆 AI成功秘诀**: 基于10000+项目AI智能分析，让你的开发效率提升500%
+> **🏆 Segredo do Sucesso**: Baseado na análise de mais de 10.000 projetos para aumentar sua produtividade em até 500%.
 
-### 🚀 1. AI项目启动黄金智能流程
+### 🚀 1. Fluxo de Ouro para Início de Projetos
 
-#### 📋 AI完整启动智能模板（3分钟AI智能设置）
+#### 📋 Template de Inicialização (3 minutos)
 
-**🧠 第一步：AI系统智能激活**
+**🧠 Passo 1: Ativação do Sistema**
 ```bash
-启动超级大脑系统
-# 或使用AI智能激活命令
-启动AI智能项目管理
-激活项目大脑
-开启智能管理
-启动AI项目助手
+Iniciar sistema super cérebro
+# Ou outros comandos inteligentes
+Ativar gestão inteligente de projetos
+Ativar cérebro do projeto
+Iniciar gestão inteligente
+Iniciar assistente de projeto IA
 ```
 
-**📝 第二步：AI项目智能详细描述（AI关键分析！）**
+**📝 Passo 2: Descrição Detalhada do Projeto (Crucial para análise!)**
 ```bash
-我要开发一个[项目类型]，主要功能包括：
+Quero desenvolver um [Tipo de Projeto]. As principais funcionalidades são:
 
-🎯 核心功能：
-- [核心功能1 - 具体描述] (AI会智能分析复杂度)
-- [核心功能2 - 具体描述] (AI会评估技术难度)
-- [核心功能3 - 具体描述] (AI会预测开发时间)
+🎯 Funcionalidades Centrais:
+- [Função 1 - Descrição específica] (IA analisará a complexidade)
+- [Função 2 - Descrição específica] (IA avaliará dificuldade técnica)
+- [Função 3 - Descrição específica] (IA preverá tempo de dev)
 
-👥 目标用户：[用户群体 + 年龄/职业] (AI用户画像分析)
-⏰ 时间要求：[具体时间范围] (AI智能周期评估)
-💰 预算范围：[可选，有助于AI成本优化]
-🎨 设计要求：[UI/UX特殊要求] (AI设计建议)
-⚡ 性能要求：[并发量/响应时间等] (AI性能优化)
-🔧 技术偏好：[团队熟悉的技术栈] (AI技能匹配)
-🤖 AI期望：[希望AI在哪些方面提供帮助] (AI智能定制)
+👥 Usuários-alvo: [Público + Idade/Profissão] (Análise de perfil)
+⏰ Tempo: [Prazo específico] (Avaliação de ciclo)
+💰 Orçamento: [Opcional, ajuda na otimização de custo]
+🎨 Design: [Requisitos de UI/UX] (Sugestões de design)
+⚡ Performance: [Concorrência/Tempo de resposta] (Otimização técnica)
+🔧 Preferências: [Stacks que a equipe já conhece] (Match de habilidades)
+🤖 Expectativas: [Onde a IA deve ajudar mais] (Customização da IA)
 ```
 
-**✅ 第三步：AI智能方案确认与调整**
+**✅ Passo 3: Confirmação e Ajuste da Solução**
 ```bash
-# 🧠 确认AI推荐方案
-我同意AI技术栈推荐
-接受AI智能建议
+# 🧠 Confirmar recomendação
+Concordo com a stack recomendada
+Aceitar sugestões da IA
 
-# 🔄 或提出AI智能调整
-我希望将后端从Node.js调整为Python，因为团队更熟悉Python
-AI能否重新评估技术栈？
+# 🔄 Ou solicitar ajustes
+Quero mudar o backend de Node.js para Python, a equipe conhece melhor
+A IA pode reavaliar a stack?
 
-# 💡 或询问AI替代方案
-除了React，AI还推荐其他前端框架吗？
-AI给我更多技术选择
-/ai-alternatives  # AI替代方案命令
+# 💡 Ou pedir alternativas
+Além de React, a IA recomenda outros frameworks?
+Dê-me mais opções técnicas
+/ai-alternatives  # Comando de alternativas
 ```
 
-**🚀 第四步：AI智能阶段化开发启动**
+**🚀 Passo 4: Início do Desenvolvimento por Fases**
 ```bash
-# 📊 AI智能定期检查（AI推荐频率）
-/status                    # AI每日智能检查
-/ai-status                 # AI深度状态分析
-/recommend                 # AI每周智能建议
-/ai-optimize               # AI优化建议
-记住重要决策               # AI智能记忆保存
-/ai-memory [关键信息]      # AI结构化记忆
-
-# 🤖 AI智能响应示例：
-🧠 AI项目启动智能分析完成！
-📊 项目复杂度: ⭐⭐⭐ (AI评分: 7.5/10)
-⏰ AI预估周期: 8-12周 (基于类似项目数据)
-🎯 AI成功率预测: 89% (基于技术栈匹配度)
-💡 AI关键建议: 优先开发核心功能，后期扩展
-🚀 AI下一步: 进入需求分析阶段
+# 📊 Verificações periódicas (Frequência recomendada)
+/status                    # Check-up diário
+/ai-status                 # Análise profunda de status
+/recommend                 # Sugestão semanal
+/ai-optimize               # Sugestão de otimização
+Lembre decisão importante   # Salvar memória
+/ai-memory [info chave]    # Memória estruturada
 ```
 
-#### 💡 AI启动示例智能对比
+**🤖 Exemplo de Resposta de Inicialização:**
+```
+🧠 Análise de inicialização concluída!
+📊 Complexidade: ⭐⭐⭐ (Nota: 7.5/10)
+⏰ Ciclo estimado: 8-12 semanas (baseado em dados históricos)
+🎯 Chance de sucesso: 89% (baseado no match da stack)
+💡 Dica: Priorize o núcleo, expanda depois
+🚀 Próximo Passo: Entrar na fase de análise de requisitos
+```
 
-**✅ AI智能优秀描述（推荐）：**
+#### 💡 Comparação de Exemplos de Inicialização
+
+**✅ Descrição Excelente (Recomendada):**
 ```bash
-启动超级大脑系统，我要开发一个在线教育平台：
+Iniciar sistema super cérebro. Quero fazer uma plataforma de educação online:
 
-🎯 核心功能：
-- 视频课程播放和管理（支持1080p，进度记录）(AI评估: 中等复杂度)
-- 学生作业提交和批改（支持多种文件格式）(AI评估: 高复杂度)
-- 实时在线答疑（文字+语音+屏幕共享）(AI评估: 高复杂度)
-- 学习进度跟踪和数据分析 (AI评估: 中等复杂度)
+🎯 Funcionalidades:
+- Play e gestão de vídeos (1080p, histórico de progresso) (Complexidade média)
+- Entrega e correção de tarefas (múltiplos formatos) (Complexidade alta)
+- Chat ao vivo (texto+voz+tela) (Complexidade alta)
+- Rastreamento de progresso e análise de dados (Complexidade média)
 
-👥 目标用户：中小学生（8-18岁）和老师 (AI用户画像: 教育场景)
-⏰ 时间要求：3个月完成MVP，6个月正式上线 (AI周期评估: 合理)
-💰 预算范围：中等（优先考虑开源方案）(AI成本优化: 开源优先)
-🎨 设计要求：简洁易用，适合儿童操作 (AI设计建议: 儿童友好UI)
-⚡ 性能要求：支持1000并发用户 (AI性能分析: 需要负载均衡)
-🔧 技术偏好：团队熟悉React和Python (AI技能匹配: 90%匹配度)
-🤖 AI期望：希望AI提供架构建议和性能优化方案
+👥 Usuários: Estudantes de 8-18 anos e professores (Contexto educacional)
+⏰ Tempo: MVP em 3 meses, oficial em 6 meses (Ciclo razoável)
+💰 Orçamento: Médio (prefira soluções open source) (Foco em custo)
+🎨 Design: Simples e fácil para crianças (UI Kids Friendly)
+⚡ Performance: 1000 usuários simultâneos (Exige Load Balance)
+🔧 Preferências: Equipe conhece React e Python (90% match)
+🤖 Expectativas: Quero ajuda na arquitetura e plano de performance
 ```
 
-**🤖 AI智能响应示例：**
+**🤖 Resposta da IA:**
 ```bash
-🧠 AI智能分析完成！
+🧠 Análise concluída!
 
-📊 项目智能评估:
-- 项目类型: 在线教育平台 (AI识别准确率: 98%)
-- 复杂度评分: 8.5/10 (高复杂度项目)
-- 技术匹配度: 90% (React+Python良好匹配)
-- 成功率预测: 85% (基于类似项目数据)
+📊 Avaliação:
+- Tipo: Plataforma EdTech (98% precisão)
+- Complexidade: 8.5/10 (Projeto de alta complexidade)
+- Match Técnico: 90% (React+Python é uma ótima escolha)
+- Sucesso Previsto: 85%
 
-🎯 AI推荐技术栈:
-- 前端: React + TypeScript + Ant Design
-- 后端: Python + Django + WebRTC
-- 数据库: PostgreSQL + Redis
-- 部署: Docker + Kubernetes + CDN
+🎯 Stack Recomendada:
+- Front: React + TypeScript + Ant Design
+- Back: Python + Django + WebRTC
+- BD: PostgreSQL + Redis
+- Deploy: Docker + Kubernetes + CDN
 
-⏰ AI智能周期规划:
-- 阶段1 (6周): 基础架构 + 用户系统
-- 阶段2 (8周): 视频播放 + 作业系统
-- 阶段3 (6周): 实时答疑 + 数据分析
-- 阶段4 (4周): 性能优化 + 上线部署
+⏰ Planejamento:
+- Fase 1 (6 sem): Infra + Sistema de Usuários
+- Fase 2 (8 sem): Vídeo + Sistema de Tarefas
+- Fase 3 (6 sem): Chat + Análise de Dados
+- Fase 4 (4 sem): Performance + Deploy
 
-💡 AI关键建议:
-1. 优先实现视频播放核心功能
-2. 使用WebRTC实现实时音视频
-3. CDN加速视频内容分发
-4. 考虑AI智能推荐学习内容
+💡 Sugestões:
+1. Focar primeiro no player de vídeo
+2. Usar WebRTC para o chat
+3. CDN para entrega de conteúdo
+4. IA para recomendação de conteúdos
 
-🚀 AI下一步: 是否开始详细架构设计？
+🚀 Próximo Passo: Iniciar design detalhado da arquitetura?
 ```
 
-**❌ AI无法智能分析的描述（避免）：**
+**❌ Descrições a Evitar (Pobres):**
 ```bash
-启动超级大脑系统，我要做个网站
-# AI分析问题：信息过于简单，AI无法智能识别项目类型
+Iniciar super cérebro, quero fazer um site
+# Problema: Informação insuficiente para identificar o tipo de projeto
 
-我要开发一个很复杂的系统，功能很多
-# AI分析问题：描述模糊，AI无法进行精准技术栈推荐
+Quero um sistema complexo com muitas funções
+# Problema: Descrição vaga, impossibilita recomendação de stack
 
-做个类似淘宝的电商网站
-# AI分析问题：范围过大，AI无法评估具体复杂度和周期
+Fazer um site igual ao Mercado Livre
+# Problema: Escopo muito amplo, difícil avaliar ciclo e complexidade
 ```
 
-#### 🎯 AI描述质量智能评分标准
+#### 🎯 Padrões de Qualidade de Descrição
 
-| AI评分 | AI智能标准 | AI系统响应质量 |
+| Nota IA | Padrão | Qualidade da Resposta |
 |------|------|-------------|
-| 🏆 **AI优秀 (95-100分)** | 功能详细+AI复杂度评估+用户画像+AI期望 | AI精准技术栈+智能计划+风险预警+个性化建议 |
-| ✅ **AI良好 (80-94分)** | 功能清晰+用户明确+时间具体+AI功能需求 | AI合适技术栈+智能计划+基础AI建议 |
-| 🟡 **AI一般 (60-79分)** | 功能模糊+用户不明+时间不定+缺少AI维度 | AI通用建议+需要补充信息+基础分析 |
-| ❌ **AI较差 (0-59分)** | 信息严重不足+无AI分析维度 | AI无法提供有效建议+需要重新描述 |
+| 🏆 **Excelente (95-100)** | Detalhes + Complexidade + Perfil + Expectativas | Stack precisa + Plano inteligente + Alertas + Dicas |
+| ✅ **Bom (80-94)** | Funções claras + Usuários + Tempo + Requisitos IA | Stack adequada + Plano inteligente + Dicas básicas |
+| 🟡 **Regular (60-79)** | Funções vagas + Usuários indefinidos + Falta dimensão IA | Sugestões genéricas + Pede mais info + Análise básica |
+| ❌ **Ruim (0-59)** | Informação insuficiente + Sem dimensão IA | Sem sugestões úteis + Pede redescrição |
 
-#### 🧠 AI评分维度详解
+### 📊 2. Dicas de Gestão Durante o Projeto
 
-**🎯 AI功能完整性 (30分)**
-- AI复杂度评估标注
-- 功能间依赖关系分析
-- AI技术难点识别
-- 核心功能优先级排序
-
-**👥 AI用户画像 (25分)**
-- 精确用户群体定位
-- AI使用场景分析
-- 用户行为模式预测
-- 个性化需求识别
-
-**🔧 AI技术要求 (20分)**
-- 性能指标量化
-- 技术栈匹配度分析
-- AI约束条件评估
-- 扩展性需求预测
-
-**⏰ AI时间预算 (15分)**
-- AI智能周期评估
-- 风险缓冲时间计算
-- 里程碑节点规划
-- 资源分配优化
-
-**🤖 AI期望功能 (10分)**
-- AI辅助开发需求
-- 智能化程度期望
-- AI决策支持范围
-- 自动化程度要求
-
-### 📊 2. AI项目进行中智能管理技巧
-
-**🔄 AI定期检查智能清单：**
+**🔄 Checklist de Verificação Periódica:**
 ```bash
-# 📅 AI每日智能检查（AI推荐）
-/status                    # AI查看当前进度和智能分析
-/ai-status                 # AI深度状态分析
-今天应该完成什么？         # AI获取当日智能任务规划
-AI分析今日重点             # AI智能优先级分析
+# 📅 Diário (Recomendado)
+/status                    # Progresso e análise
+/ai-status                 # Análise profunda
+O que devo fazer hoje?      # Planejamento do dia
+Análise de prioridades de hoje # Foco inteligente
 
-# 📋 AI每周智能回顾（AI必须）
-/recommend                 # AI获取下周智能建议
-/ai-weekly-report          # AI生成周度智能报告
-项目进度如何？             # AI整体进度智能评估
-记住本周重要决策           # AI智能保存关键信息
-AI总结本周经验             # AI智能经验提取
+# 📋 Semanal (Obrigatório)
+/recommend                 # Sugestões para a próxima semana
+/ai-weekly-report          # Relatório semanal inteligente
+Como está o projeto?       # Avaliação geral
+Lembrar decisões da semana  # Salvar info crítica
+Resumir aprendizados        # Extração de experiência
 
-# 🎯 AI阶段智能切换（AI及时）
-/switch [下一阶段]         # AI完成当前阶段后智能切换
-/ai-switch-analysis        # AI阶段切换智能分析
-我觉得可以进入下一阶段了   # AI自然语言智能切换
-AI评估是否可以切换阶段     # AI智能切换建议
+# 🎯 Troca de Fase (Sempre que concluir)
+/switch [próxima fase]      # Troca inteligente pós-conclusão
+/ai-switch-analysis        # Análise pré-troca
+Podemos ir para a próxima fase # Troca natural
+Avaliar se podemos mudar    # Parecer da IA
 ```
 
-**🤖 AI智能检查响应示例：**
+**💾 Dicas de Gestão de Informação:**
 ```bash
-🧠 AI每日智能检查报告
+# 🔑 Registrar Decisões
+Lembre: decidimos usar React por causa da equipe (Match: 95%)
+Lembre: MySQL para consistência de dados (Avaliação: Ótima)
+/ai-memory [Decisão Técnica] --category=Arquitetura --impact=Alto
 
-📊 AI项目状态分析:
-- 当前阶段: 开发实现 (第3阶段)
-- 完成度: 65% (AI预测按时完成概率: 85%)
-- 今日重点: 用户认证模块 (AI优先级: 最高)
-- 潜在风险: 第三方API集成延迟 (AI风险等级: 中)
+# 📝 Salvar Marcos
+Salvar progresso: Registro concluído, iniciando Login (Progresso: 35%)
+Lembre: este design de API ficou ótimo para reuso (Dica: Best Practice)
+/ai-milestone [Feature concluída] --quality=Excelente --reusable=Sim
 
-🎯 AI今日智能任务:
-1. 完成OAuth登录集成 (AI预估: 4小时)
-2. 用户权限系统测试 (AI预估: 2小时)
-3. API文档更新 (AI预估: 1小时)
-
-💡 AI智能建议:
-- 优先处理OAuth集成，避免阻塞其他功能
-- 建议并行进行权限测试
-- AI推荐使用自动化测试工具
-
-🚀 AI下一步: 是否开始OAuth集成开发？
+# 🧠 Reforço de Memória
+/ai-memory [Info chave] --auto-tag --priority=Alta
+/ai-pattern-learn [Sucesso] --extract-best-practice
 ```
 
-**💾 AI信息智能管理技巧：**
+### 🛠️ 3. Método Profissional de Resolução de Problemas
+
+**🎯 Template de Descrição de Problema:**
 ```bash
-# 🔑 AI记录重要决策
-记住：我们决定使用React而不是Vue，因为团队更熟悉React (AI分析: 技能匹配度95%)
-记住：数据库选择MySQL，考虑到数据一致性要求 (AI评估: 最佳选择)
-/ai-memory [技术决策] --category=架构 --impact=高
-
-# 📝 AI保存进度节点
-保存当前进度：用户注册功能已完成，正在开发登录功能 (AI进度: 35%)
-记住：这个API设计方案效果很好，后续可以复用 (AI标记: 最佳实践)
-/ai-milestone [功能完成] --quality=优秀 --reusable=是
-
-# 🧠 AI智能记忆增强
-/ai-memory [关键信息] --auto-tag --priority=高 --category=自动识别
-/ai-pattern-learn [成功经验] --extract-best-practice
+# 📍 Problema Técnico
+Encontrei um problema na [Fase] em [Função]:
+- Sintoma: [Descrição detalhada] (IA analisará o tipo)
+- O que já tentei: [Lista de tentativas] (IA evitará repetir)
+- Resultado esperado: [Efeito desejado] (IA avaliará viabilidade)
+- Impacto: [O que afeta] (IA ajustará prioridade)
+- Urgência: [Prazo] (IA dará solução rápida)
+🤖 IA, dê-me uma solução inteligente
 ```
 
-**🤖 AI智能记忆管理示例：**
+**💡 Exemplo Real:**
 ```bash
-🧠 AI智能记忆系统报告
-
-📊 AI记忆统计:
-- 技术决策记忆: 12条 (AI智能分类)
-- 最佳实践记忆: 8条 (AI效果验证)
-- 问题解决记忆: 15条 (AI模式识别)
-- 用户反馈记忆: 6条 (AI情感分析)
-
-💡 AI智能洞察:
-- 最有效技术栈: React + Node.js (成功率: 92%)
-- 最常见问题: 数据库性能 (AI预防建议已生成)
-- 最佳开发模式: 敏捷迭代 (AI推荐保持)
-- AI学习重点: API设计模式 (持续优化中)
-
-🚀 AI智能建议: 基于历史数据，建议采用微服务架构
+# ✅ Descrição Excelente
+Estou com lentidão no carregamento da página no frontend:
+- Sintoma: Home demora mais de 5s (IA: Performance)
+- Já tentei: Comprimir imagens e usar CDN (IA: Otimização básica feita)
+- Esperado: Menos de 2s (IA: Viável)
+- Impacto: Todos os usuários afetados (IA: Prioridade Máxima)
+- Urgência: Alta, precisa resolver esta semana (IA: Solução Rápida)
+🤖 IA, forneça um plano completo de otimização
 ```
 
-### 🛠️ 3. AI问题解决智能专业方法
-
-**🎯 AI问题描述智能模板：**
+**🤖 Resposta de Resolução de Problema:**
 ```bash
-# 📍 AI技术问题智能模板
-我在[具体阶段]遇到了[具体问题]：
-- 问题现象：[详细描述] (AI会智能分析问题类型)
-- 已尝试方法：[列出已试过的解决方案] (AI会避免重复建议)
-- 期望结果：[想要达到的效果] (AI会评估可行性)
-- 影响范围：[问题影响程度] (AI会调整解决优先级)
-- 紧急程度：[时间要求] (AI会提供快速解决方案)
-🤖 请AI给出智能解决方案
+🧠 Diagnóstico concluído!
 
-# 🔄 AI方案调整智能模板
-当前[具体方案]需要AI重新评估，因为：
-- 原因1：[具体原因] (AI会分析根本原因)
-- 原因2：[具体原因] (AI会评估影响程度)
-- AI分析期望：[希望AI从哪些角度分析]
-建议AI推荐调整为[新方案]，AI觉得如何？
+📊 Análise:
+- Tipo: Gargalo de Performance Frontend (95% precisão)
+- Gravidade: Alta (afeta conversão e UX)
+- Dificuldade: Média
+- Tempo estimado: 2-3 dias
+- Sucesso previsto: 90%
 
-# ⚡ AI性能优化智能模板
-AI如何优化[具体功能]的性能？
-- 当前状况：[性能指标] (AI会智能基准测试)
-- 期望目标：[目标指标] (AI会评估达成可能性)
-- 主要瓶颈：[分析结果] (AI会深度瓶颈分析)
-- 优化预算：[时间/资源限制] (AI会平衡成本效益)
-🤖 请AI提供完整的性能优化方案
+🎯 Soluções (Por prioridade):
+1. Imediato (2h):
+   - Compressão Gzip (+40% speed)
+   - Inline de CSS crítico (+25% speed)
+   - Lazy load de recursos secundários (+30% speed)
+
+2. Curto Prazo (1-2 dias):
+   - Code Splitting (+50% speed)
+   - Imagens WebP (+35% speed)
+   - Service Worker Cache (+60% speed)
+
+3. Médio Prazo (3-5 dias):
+   - Implementar SSR (+70% speed)
+   - Otimizar queries de BD (+40% speed)
+   - Deploy global via CDN (+45% speed)
+
+💡 Dicas:
+- Foque primeiro no "Imediato" para ganho rápido
+- Monitore métricas continuamente
+- Crie alertas de performance
+
+📊 Expectativa Final:
+- Carregamento: 5s → 1.5s (70% melhor)
+- Nota UX: 6.2 → 8.8
+- Conversão: +25-35% prevista
 ```
 
-**💡 AI实际问题智能示例：**
-```bash
-# ✅ AI优秀问题描述
-我在前端开发阶段遇到了页面加载慢的问题：
-- 问题现象：首页加载时间超过5秒 (AI分析: 性能问题)
-- 已尝试方法：压缩图片、启用CDN (AI评估: 基础优化已完成)
-- 期望结果：加载时间控制在2秒内 (AI可行性: 高)
-- 影响范围：影响所有用户体验 (AI优先级: 最高)
-- 紧急程度：高，需要本周解决 (AI解决方案: 快速优化)
-🤖 请AI给出完整的性能优化智能解决方案
+## 🚨 Perguntas Frequentes e Soluções Inteligentes de IA
 
-# ❌ AI无法智能分析的问题描述
-网站有问题，怎么办？
-# AI分析: 信息不足，无法进行智能诊断
+> **💡 Respostas Rápidas**: Baseado em análise de feedback; 98% dos problemas encontram solução aqui.
+
+### 🔧 Problemas de Operação do Sistema
+
+**P1: Como reativar o sistema de forma inteligente?**
+```bash
+# ✅ Solução
+Iniciar sistema super cérebro  # Reativação direta
+/ai-status                    # Verifica se o estado foi mantido
+
+# 💡 Info: O sistema mantém o estado e a memória do projeto.
 ```
 
-**🤖 AI智能问题解决响应示例：**
+**P2: O sistema está lento ou não responde?**
 ```bash
-🧠 AI智能问题诊断完成！
+# 🔍 Passos de Verificação
+1. Verifique conexão de rede
+2. Verifique se as ferramentas MCP estão rodando
+3. Reinicie o assistente
+4. Reative o sistema
+5. Diagnostique gargalos de performance
 
-📊 AI问题智能分析:
-- 问题类型: 前端性能瓶颈 (AI识别准确率: 95%)
-- 严重程度: 高 (影响用户体验和转化率)
-- 解决难度: 中等 (需要多维度优化)
-- AI预估解决时间: 2-3天
-- 成功率预测: 90% (基于类似问题解决经验)
-
-🎯 AI智能解决方案 (优先级排序):
-1. 立即优化 (2小时内):
-   - 启用Gzip压缩 (预期提升40%)
-   - 优化关键CSS内联 (预期提升25%)
-   - 延迟加载非关键资源 (预期提升30%)
-
-2. 短期优化 (1-2天):
-   - 实施代码分割 (预期提升50%)
-   - 优化图片格式为WebP (预期提升35%)
-   - 添加Service Worker缓存 (预期提升60%)
-
-3. 中期优化 (3-5天):
-   - 实施SSR服务端渲染 (预期提升70%)
-   - 优化数据库查询 (预期提升40%)
-   - CDN全球加速部署 (预期提升45%)
-
-💡 AI关键建议:
-- 优先级1: 立即优化方案，快速见效
-- 优先级2: 监控性能指标，持续优化
-- 优先级3: 建立性能预警系统
-
-📊 AI预期效果:
-- 页面加载时间: 5秒 → 1.5秒 (提升70%)
-- 用户体验评分: 6.2 → 8.8 (提升42%)
-- 转化率预期提升: 25-35%
-
-🚀 AI下一步: 是否立即开始实施立即优化方案？
+# 🚨 Recuperação de Emergência
+/ai-memory   # Ver se os dados estão lá
+/ai-diagnose # Diagnóstico do sistema
 ```
 
-## 🚨 AI常见问题与智能解决方案
-
-> **💡 AI快速解答**: 基于AI分析用户反馈整理的高频问题，AI智能解答准确率95%，98%的问题都能在这里找到AI智能解决方案
-
-### 🔧 AI系统操作智能问题
-
-**Q1: 如何AI智能重新激活系统？**
+**P3: Como gerenciar múltiplos projetos?**
 ```bash
-# ✅ AI智能解决方案
-启动AI超级大脑智能系统  # AI直接重新激活
-/ai-status                # AI查看是否保持之前状态
+# 🎯 Versão Atual (Um projeto por vez)
+IA, lembre deste projeto: [Nome]  # Salva o atual
+IA, iniciar novo projeto: [Descrição] # Começa novo
 
-# 💡 AI说明：AI系统会智能保持项目状态和记忆
-# 🤖 AI智能响应示例:
-🧠 AI系统重新激活完成！
-- AI系统状态: 正常运行
-- AI项目记忆: 完整保持
-- AI智能模块: 全部激活
-- AI上次进度: 自动恢复
+# 🚀 Futuro (Suporte multi-projeto)
+/ai-project list      # Listar projetos
+/ai-project switch 2  # Mudar para o 2
 ```
 
-**Q2: AI系统响应慢或无响应怎么智能处理？**
+### 🛠️ Problemas de Configuração Técnica
+
+**P4: Instalação das ferramentas MCP falhou?**
 ```bash
-# 🔍 AI智能排查步骤
-1. AI检查网络连接状态
-2. AI确认MCP工具运行状态
-3. AI重启智能助手
-4. AI重新激活智能系统
-5. AI诊断性能瓶颈
+# 🔧 Windows
+npm install -g @modelcontextprotocol/cli --force # Executar como Admin
 
-# 🚨 AI紧急智能恢复
-/ai-memory  # AI查看是否丢失项目数据
-/ai-diagnose  # AI系统智能诊断
-
-# 🤖 AI智能响应示例:
-🧠 AI系统智能诊断完成！
-- AI问题类型: 网络延迟 (AI识别准确率: 92%)
-- AI解决方案: 优化连接配置
-- AI预估修复时间: 2-3分钟
-- AI系统状态: 恢复正常
-```
-
-**Q3: AI如何智能切换或管理多个项目？**
-```bash
-# 🎯 AI当前版本（智能单项目）
-AI记住当前项目：[项目名称]  # AI保存当前项目
-AI启动新项目：[新项目描述]  # AI开始新项目
-
-# 🚀 AI未来版本（智能多项目支持）
-/ai-project list      # AI查看所有项目
-/ai-project switch 2  # AI智能切换到项目2
-/ai-project merge     # AI智能合并项目
-
-# 🤖 AI智能响应示例:
-🧠 AI项目智能管理完成！
-- 当前项目: 电商平台 (进度: 65%)
-- 项目状态: 开发阶段
-- AI切换建议: 建议完成当前阶段后切换
-- AI项目优先级: 高
-- AI预估完成时间: 3天
-```
-
-### 🛠️ AI技术配置智能问题
-
-**Q4: AI MCP工具安装失败怎么智能处理？**
-```bash
-# 🔧 AI Windows智能解决方案
-# AI以管理员身份运行PowerShell
-npm install -g @modelcontextprotocol/cli --force
-# AI智能检测安装状态
-
-# 🍎 AI macOS智能解决方案
+# 🍎 macOS
 sudo npm install -g @modelcontextprotocol/cli
-# AI自动配置环境变量
 
-# 🐧 AI Linux智能解决方案
+# 🐧 Linux
 sudo npm install -g @modelcontextprotocol/cli
-# AI智能权限管理
-
-# 🤖 AI智能响应示例:
-🧠 AI MCP工具智能安装完成！
-- AI安装状态: 成功 (AI验证通过)
-- AI工具版本: 最新稳定版
-- AI配置状态: 自动优化完成
-- AI兼容性检查: 100%通过
-- AI下一步: 自动激活所有MCP功能
 ```
 
-**Q5: AI环境版本不兼容怎么智能处理？**
+**P5: Versão do ambiente incompatível?**
 ```bash
-# 📊 AI智能检查版本
-node --version     # AI需要 18.0.0+ (AI自动检测)
-npm --version      # AI需要 9.0.0+ (AI自动验证)
+# 📊 Verificar versões
+node --version     # Exige 18.0.0+
+npm --version      # Exige 9.0.0+
 
-# 🔄 AI智能升级方案
-# AI访问 https://nodejs.org 下载最新LTS版本
-# AI或使用版本管理工具 nvm (AI自动配置)
-# AI智能环境优化
-
-# 🤖 AI智能响应示例:
-🧠 AI环境智能检查完成！
-- 当前Node版本: 16.14.0 (AI检测: 需要升级)
-- 推荐版本: 20.10.0 LTS (AI推荐)
-- AI升级方案: 自动下载并安装
-- AI兼容性: 完美支持所有功能
-- AI预估升级时间: 5-10分钟
-- AI自动备份: 当前环境已备份
+# 🔄 Solução
+# Baixe o LTS em https://nodejs.org
+# Ou use 'nvm' para gerenciar versões
 ```
 
-### 📋 AI项目管理智能问题
+### 📋 Problemas de Gestão de Projetos
 
-**Q6: AI如何智能自定义项目模板？**
+**P6: Como personalizar templates de projeto?**
 ```bash
-# 🎯 AI详细描述智能法（AI推荐）
-我要开发[具体项目]，AI特殊要求：
-- 使用[指定技术栈] (AI会评估技术栈适配度)
-- 遵循[特定架构模式] (AI会优化架构设计)
-- 集成[特定工具/服务] (AI会检查兼容性)
-- AI性能要求：[具体指标] (AI会预测性能表现)
-- AI扩展需求：[未来规划] (AI会考虑可扩展性)
+# 🎯 Método de Descrição Detalhada
+Quero desenvolver [Projeto], requisitos especiais:
+- Usar [Stack específica]
+- Seguir [Padrão de arquitetura]
+- Integrar [Ferramenta/Serviço]
+- Performance: [Métrica]
+- Expansão: [Plano futuro]
 
-# 💡 AI系统会根据描述智能适配最佳模板
-# 🤖 AI智能响应示例:
-🧠 AI项目模板智能定制完成！
-- AI项目类型: 企业级Web应用 (AI识别准确率: 94%)
-- AI技术栈适配度: 95% (完美匹配)
-- AI架构模式: 微服务架构 (AI推荐)
-- AI性能预测: 优秀 (满足所有指标)
-- AI开发周期: 10-12周 (AI精准估算)
-- AI成功率预测: 92% (AI综合评估)
+# 💡 O sistema adaptará o melhor template para você.
 ```
 
-**Q7: AI项目进度偏离计划怎么智能处理？**
+**P7: O projeto atrasou, o que fazer?**
 ```bash
-# 📊 AI智能重新评估
-/ai-status                    # AI查看当前状态
-AI项目进度偏离了原计划       # AI说明具体情况
+# 📊 Reavaliação
+/ai-status                    # Ver status atual
+O projeto atrasou por [Motivo] # Informar a IA
 
-# 🔄 AI智能调整方案
-/ai-recommend                 # AI获取调整建议
-我需要AI延长[具体阶段]时间   # AI申请调整
-
-# 🤖 AI智能响应示例:
-🧠 AI项目进度智能分析完成！
-
-📊 AI进度偏离智能诊断:
-- 原计划: 8周完成 (AI原始预估)
-- 当前进度: 60% (AI实时监控)
-- 偏离程度: 延迟2周 (AI精确计算)
-- AI偏离原因: 需求变更30% + 技术难度提升
-- AI影响评估: 中等 (可控范围内)
-
-🎯 AI智能调整方案:
-1. 立即调整 (本周内):
-   - AI优化开发流程 (预期提升25%效率)
-   - AI重新分配资源 (预期节省1周)
-   - AI简化非核心功能 (预期节省1.5周)
-
-2. AI中期优化 (2-3周):
-   - AI引入自动化工具 (预期提升40%效率)
-   - AI并行开发策略 (预期节省2周)
-   - AI代码复用优化 (预期节省1周)
-
-💡 AI最终预估:
-- 调整后完成时间: 9-10周 (AI优化后)
-- AI成功率: 95% (AI信心指数)
-- AI质量保证: 不降低 (AI质量监控)
+# 🔄 Plano de Ajuste
+/ai-recommend                 # Pedir plano de recuperação
+Preciso estender a fase [Fase] # Solicitar ajuste
 ```
 
-### 💾 AI数据管理智能问题
+### 💾 Problemas de Gestão de Dados
 
-**Q8: AI系统记忆会智能保存多久？**
+**P8: Por quanto tempo a memória é guardada?**
 ```bash
-# 💾 AI记忆智能保存机制
-AI项目记忆：智能持续保存直到项目完成
-AI会话记忆：当前会话期间智能有效
-AI决策记忆：重要决策AI永久保存
-AI学习记忆：AI持续学习和优化
-AI经验记忆：AI积累项目经验
+# 💾 Mecanismo de Memória
+Memória do Projeto: Até a conclusão
+Memória da Sessão: Durante a conversa
+Memória de Decisão: Permanente (Base de conhecimento)
+Memória de Experiência: Acumulativa
 
-# 🔍 AI查看智能记忆
-/ai-memory            # AI查看所有记忆
-/ai-memory recent     # AI查看最近记忆
-/ai-memory analysis   # AI记忆智能分析
-
-# 🤖 AI智能响应示例:
-🧠 AI记忆智能管理完成！
-- AI项目记忆: 完整保存 (100%完整性)
-- AI学习记忆: 持续积累 (AI智能优化)
-- AI决策记忆: 永久存储 (AI经验库)
-- AI记忆容量: 无限制 (AI云端存储)
-- AI记忆检索: 毫秒级响应 (AI智能索引)
+# 🔍 Consultar
+/ai-memory            # Ver tudo
+/ai-memory recent     # Ver recentes
+/ai-memory analysis   # Análise de memória
 ```
 
-**Q9: AI如何智能备份项目数据？**
+**P9: Como fazer backup dos dados do projeto?**
 ```bash
-# 💾 AI智能手动备份
-AI导出当前项目状态         # AI生成智能备份文件
-AI记住项目完整信息         # AI保存关键信息
-AI智能压缩备份数据         # AI优化存储空间
+# 💾 Backup Manual
+Exportar status do projeto    # Gera arquivo de backup
+IA, lembre de tudo do projeto # Salva no cérebro
 
-# 🔄 AI智能恢复数据
-AI导入项目状态：[备份信息]  # AI恢复项目
-AI验证数据完整性           # AI确保数据无损
-
-# 🤖 AI智能响应示例:
-🧠 AI数据智能备份完成！
-- AI备份状态: 成功 (100%完整)
-- AI备份大小: 2.5MB (AI智能压缩)
-- AI备份时间: 3秒 (AI高速处理)
-- AI数据完整性: 验证通过 (AI校验)
-- AI恢复预估: 5秒内完成 (AI快速恢复)
+# 🔄 Restaurar
+Importar status do projeto: [Info]
+Verificar integridade dos dados
 ```
 
-### 🎯 AI使用技巧智能问题
+### 🎯 Dicas de Uso
 
-**Q10: AI如何智能提高系统响应准确性？**
+**P10: Como aumentar a precisão das respostas?**
 ```bash
-# 🎯 AI描述智能技巧
-1. AI使用具体而非模糊的描述 (AI理解准确率+40%)
-2. AI提供完整的上下文信息 (AI推荐精度+35%)
-3. AI明确表达需求和期望 (AI执行成功率+50%)
-4. AI及时反馈系统建议的准确性 (AI学习效率+60%)
-5. AI使用结构化描述格式 (AI解析速度+45%)
+# 🎯 Dicas de Descrição
+1. Use descrições específicas (+40% acurácia)
+2. Forneça contexto completo (+35% precisão)
+3. Expresse expectativas claras (+50% sucesso)
+4. Dê feedback sobre as sugestões (+60% aprendizado)
+5. Use formatos estruturados (+45% velocidade)
 
-# 💡 AI智能示例
-❌ "AI优化性能" (AI理解度: 30%)
-✅ "AI优化首页加载时间，目标从5秒降到2秒以内，主要瓶颈是图片加载" (AI理解度: 95%)
-
-# 🤖 AI智能响应示例:
-🧠 AI描述质量智能评估完成！
-- AI描述质量评分: 9.2/10 (优秀)
-- AI理解准确率: 96% (AI高精度理解)
-- AI推荐匹配度: 94% (AI精准推荐)
-- AI执行成功率预测: 92% (AI高成功率)
-- AI优化建议: 增加具体性能指标描述
+# 💡 Exemplo
+❌ "Otimizar performance"
+✅ "Otimizar tempo de home, alvo <2s, gargalo em imagens"
 ```
 
 ---
 
-## 🚀 AI立即智能开始
+## 🚀 Comece Agora Mesmo
 
-**🎯 AI新手快速智能入门：**
+**🎯 Guia Rápido para Iniciantes:**
 ```bash
-启动超级大脑系统  # AI智能激活，开启AI全程陪伴
-
-# 🤖 AI智能响应示例:
-🧠 AI超级大脑系统智能激活成功！
-- AI系统状态: 运行中 (AI智能监控)
-- AI用户画像: 新手用户 (AI智能识别)
-- AI推荐模式: 引导模式 (AI贴心指导)
-- AI学习路径: 已生成 (AI个性化定制)
-- AI成功率预测: 95% (AI高成功率)
+Iniciar sistema super cérebro  # Ative seu assistente inteligente
 ```
 
-**📚 AI深度学习智能资源：**
-- **[COMMANDS-REFERENCE.md](../COMMANDS-REFERENCE.md)** - AI完整命令参考手册 (AI智能索引)
-- **[README.md](../README.md)** - AI项目概述和核心特性 (AI智能解析)
-- **[USAGE.md](../USAGE.md)** - AI高级使用技巧和最佳实践 (AI智能推荐)
-- **[MCP-QUICK-START-GUIDE.md](../docs/MCP-QUICK-START-GUIDE.md)** - AI MCP工具快速配置 (AI智能配置)
-- **[MCP-TROUBLESHOOTING-GUIDE.md](../docs/MCP-TROUBLESHOOTING-GUIDE.md)** - AI故障排除专业指南 (AI智能诊断)
+**📚 Recursos de Aprendizado Profundo:**
+- **[COMMANDS-REFERENCE.md](../COMMANDS-REFERENCE.md)** - Manual de comandos completo.
+- **[README.md](../README.md)** - Visão geral e recursos principais.
+- **[USAGE.md](../USAGE.md)** - Técnicas avançadas e melhores práticas.
+- **[MCP-QUICK-START-GUIDE.md](../docs/MCP-QUICK-START-GUIDE.md)** - Configuração rápida MCP.
+- **[MCP-TROUBLESHOOTING-GUIDE.md](../docs/MCP-TROUBLESHOOTING-GUIDE.md)** - Guia de solução de problemas.
 
-```bash
-# 🤖 AI学习资源智能推荐:
-🧠 AI为您智能推荐学习资源！
-- AI资源匹配度: 98% (AI高度匹配)
-- AI学习难度: 适中 (AI智能评估)
-- AI预计学习时间: 1-2小时 (AI时间预估)
-- AI掌握效果: 优秀 (AI效果预测)
-- AI进阶路径: 已规划 (AI智能规划)
-```
+**🆘 Obter Ajuda:**
+- 📧 Suporte Técnico: Veja os GitHub Issues do projeto.
+- 💬 Comunidade: Participe das discussões do repositório.
+- 📖 Feedback: Envie sugestões de melhoria para a documentação.
 
-**🆘 AI获取智能帮助：**
-- 📧 AI技术智能支持：查看项目GitHub Issues (AI智能检索)
-- 💬 AI社区智能讨论：参与项目讨论区 (AI智能匹配)
-- 📖 AI文档智能反馈：提交文档改进建议 (AI智能分析)
+**🎉 Inicie sua jornada de desenvolvimento inteligente!**
 
-```bash
-# 🤖 AI帮助智能响应:
-🧠 AI智能帮助系统已激活！
-- AI问题识别: 自动分类 (AI智能分类)
-- AI解决方案: 即时推荐 (AI快速响应)
-- AI专家匹配: 精准匹配 (AI智能匹配)
-- AI响应时间: <5分钟 (AI快速响应)
-- AI解决成功率: 94% (AI高成功率)
-```
+🤖 **Compromisso da IA**:
+- 🧠 **Gestão Inteligente de Ponta a Ponta** - Companhia constante, decisões inteligentes.
+- 🎯 **Recomendações Personalizadas** - Match preciso, serviço individualizado.
+- 🚀 **Execução Eficiente** - Resposta rápida, ação eficaz.
+- 📈 **Otimização Contínua** - Aprendizado constante, evolução permanente.
+- 🛡️ **Garantia de Segurança** - Proteção confiável, tranquilidade total.
 
-**🎉 AI开始你的智能开发之旅！**
-
-🤖 **AI智能承诺**:
-- 🧠 **AI端到端智能管理** - AI全程陪伴，智能决策
-- 🎯 **AI个性化智能推荐** - AI精准匹配，个性化服务
-- 🚀 **AI高效智能执行** - AI快速响应，高效执行
-- 📈 **AI持续智能优化** - AI不断学习，持续进化
-- 🛡️ **AI安全智能保障** - AI可靠防护，安全无忧
-
-**✨ AI智能特色**:
-- 🎯 AI用户指令绝对优先 (无限大优先级)
-- 🧠 AI五阶段生命周期管理 (AI全程管控)
-- 🔧 AI MCP工具智能编排 (AI高效自动化)
-- 📊 AI项目记忆智能系统 (AI经验积累)
-- 🤖 AI L4完全自主模式 (AI端到端自主)
+**✨ Destaques Inteligentes**:
+- 🎯 Prioridade absoluta às instruções do usuário.
+- 🧠 Gestão de ciclo de vida em 5 fases.
+- 🔧 Orquestração inteligente de ferramentas MCP.
+- 📊 Sistema de memória de projeto.
+- 🤖 Modo autônomo L4 completo.
